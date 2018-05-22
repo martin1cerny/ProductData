@@ -1,2 +1,2 @@
 $ cat .gitattributes
-*.ifcxml linguist-language=xml
+*.ifcXML linguist-language=XML
