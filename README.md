@@ -6,3 +6,5 @@ This official repository is maintained by the community around the ProductRoom o
 System to describe product data templates and product data sheets with IFD and IFC (ISO 16739).
 
 This is ongoing work within the working group of buildingSMART International. Please do not use in production yet.
+
+The repository is open for sharing other samples and discussing related questions.
