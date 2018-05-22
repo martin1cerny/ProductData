@@ -1,2 +1,5 @@
 $ cat .gitattributes
 **/*.ifcXML linguist-language=XML
+**/**/*.ifcXML linguist-language=XML
+**/**/**/*.ifcXML linguist-language=XML
+**/**/**/**/*.ifcXML linguist-language=XML
