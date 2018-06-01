@@ -13,7 +13,7 @@ script:
   - wget http://www.buildingsmart-tech.org/ifc/IFC4/Add2/IFC4_ADD2.xsd
   
   # Validate
-  - xmllint "${TRAVIS_BUILD_DIR}/SampleFiles/bSDD product room sample/bSDD product room sample.ifXML" --schema IFC4_ADD2.xsd
+  - xmllint "${TRAVIS_BUILD_DIR}/SampleFiles/bSDD product room sample/bSDD product room sample.ifcXML" --schema IFC4_ADD2.xsd
   - xmllint "${TRAVIS_BUILD_DIR}/SampleFiles/CAFM-Connect-ProductsSample/CAFM-Connect-ProductsSample.ifcXML" --schema ifcXML4.xsd
   - xmllint "${TRAVIS_BUILD_DIR}/SampleFiles/CE180_RED_06.17_Nextrema_G3_HFS_LLWC/CE180_RED_06.17_Nextrema_G3_HFS_LLWC.ifcXML" --schema IFC4_ADD2.xsd
     
