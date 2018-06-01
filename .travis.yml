@@ -12,11 +12,10 @@ script:
   - wget http://www.buildingsmart-tech.org/ifcXML/IFC4/Add1/IFC4_ADD1.xsd
   - wget http://www.buildingsmart-tech.org/ifc/IFC4/Add2/IFC4_ADD2.xsd
   
-   ls -d */
   # Validate
-  - xmllint "${TRAVIS_BUILD_DIR}/SampleFiles/bSDD product room sample/bSDD product room sample.ifcxml" --schema IFC4_ADD2.xsd --noout
-  - xmllint "${TRAVIS_BUILD_DIR}/SampleFiles/CAFM-Connect-ProductsSample/CAFM-Connect-ProductsSample.ifcxml" --schema ifcXML4.xsd --noout
-  - xmllint "${TRAVIS_BUILD_DIR}/SampleFiles/CE180_RED_06.17_Nextrema_G3_HFS_LLWC/CE180_RED_06.17_Nextrema_G3_HFS_LLWC.ifcxml" --schema IFC4_ADD2.xsd --noout
+  - xmllint "${TRAVIS_BUILD_DIR}/SampleFiles/bSDD product room sample/bSDD product room sample.ifXML" --schema IFC4_ADD2.xsd --noout
+  - xmllint "${TRAVIS_BUILD_DIR}/SampleFiles/CAFM-Connect-ProductsSample/CAFM-Connect-ProductsSample.ifcXML" --schema ifcXML4.xsd --noout
+  - xmllint "${TRAVIS_BUILD_DIR}/SampleFiles/CE180_RED_06.17_Nextrema_G3_HFS_LLWC/CE180_RED_06.17_Nextrema_G3_HFS_LLWC.ifcXML" --schema IFC4_ADD2.xsd --noout
     
   # Remove the official ifcxml schemes
   - rm ifcXML4.xsd 
