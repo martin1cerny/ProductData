@@ -13,9 +13,9 @@ script:
   - wget http://www.buildingsmart-tech.org/ifc/IFC4/Add2/IFC4_ADD2.xsd
   
   # Validate
-  - xmllint "bSDD product room sample/bSDD product room sample.ifcxml" --schema IFC4_ADD2.xsd --noout
-  - xmllint "CAFM-Connect-ProductsSample/CAFM-Connect-ProductsSample.ifcxml" --schema ifcXML4.xsd --noout
-  - xmllint "CE180_RED_06.17_Nextrema_G3_HFS_LLWC/CE180_RED_06.17_Nextrema_G3_HFS_LLWC.ifcxml" --schema IFC4_ADD2.xsd --noout
+  - xmllint "SampleFiles/bSDD product room sample/bSDD product room sample.ifcxml" --schema IFC4_ADD2.xsd --noout
+  - xmllint "SampleFiles/CAFM-Connect-ProductsSample/CAFM-Connect-ProductsSample.ifcxml" --schema ifcXML4.xsd --noout
+  - xmllint "SampleFiles/CE180_RED_06.17_Nextrema_G3_HFS_LLWC/CE180_RED_06.17_Nextrema_G3_HFS_LLWC.ifcxml" --schema IFC4_ADD2.xsd --noout
     
   # Remove the official ifcxml schemes
   - rm ifcXML4.xsd 
