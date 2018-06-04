@@ -16,7 +16,13 @@ script:
   - xmllint "${TRAVIS_BUILD_DIR}/SampleFiles/bSDD product room sample/bSDD product room sample.ifcXML" --schema IFC4_ADD2.xsd --noout
   - xmllint "${TRAVIS_BUILD_DIR}/SampleFiles/CAFM-Connect-ProductsSample/CAFM-Connect-ProductsSample.ifcXML" --schema ifcXML4.xsd --noout
   - xmllint "${TRAVIS_BUILD_DIR}/SampleFiles/CE180_RED_06.17_Nextrema_G3_HFS_LLWC/CE180_RED_06.17_Nextrema_G3_HFS_LLWC.ifcXML" --schema IFC4_ADD2.xsd --noout
-    
+  - xmllint "${TRAVIS_BUILD_DIR}/SampleFiles/EN ISO 10077/EN ISO 10077.ifcXML" --schema IFC4_ADD2.xsd --noout
+  - xmllint "${TRAVIS_BUILD_DIR}/SampleFiles/EULUMDAT_PDT_RH180508/EULUMDAT_PDT_RH180508.ifcXML" --schema IFC4_ADD2.xsd --noout
+  - xmllint "${TRAVIS_BUILD_DIR}/SampleFiles/Fireray 50100RV Linear Smoke Detectors/Fireray 50100RV Linear Smoke Detectors.ifcXML" --schema IFC4_ADD2.xsd --noout
+  - xmllint "${TRAVIS_BUILD_DIR}/SampleFiles/HC (Italy)/Sample PDT ifcXML/IFCXML4_TEMPLATE-brick.ifcXML" --schema IFC4_ADD2.xsd --noout  
+  
+  
+  
   # Remove the official ifcxml schemes
   - rm ifcXML4.xsd 
   - rm IFC4_ADD1.xsd

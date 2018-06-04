@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<ifcXML xmlns:ifc="http://www.buildingsmart-tech.org/ifcXML/IFC4/final" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" id="ifcXML4" xmlns="http://www.buildingsmart-tech.org/ifcXML/IFC4/Add2" xsi:schemaLocation="http://www.buildingsmart-tech.org/ifcXML/IFC4/Add2 ../IFC4_ADD2.xsd">
+<ifcXML xmlns:ifc="http://www.buildingsmart-tech.org/ifcXML/IFC4/Add2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" id="ifcXML4" xmlns="http://www.buildingsmart-tech.org/ifcXML/IFC4/Add2" xsi:schemaLocation="http://www.buildingsmart-tech.org/ifcXML/IFC4/Add2 ../IFC4_ADD2.xsd">
 	<header>
 		<name>CAFM-Connect Katalog 2014</name>
 		<time_stamp>2015-08-17T06:45:03</time_stamp>
