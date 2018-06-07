@@ -23,11 +23,13 @@ The sample should be one of the following serialization formats
 
 | Format        | file ending   |
 | ------------- |---------------| 
-| ifcXML        | .ifcXML     | 
-| Step          | .ifc      |   
-| Json          | .ifcJSON      |  
+| ifcXML        | .ifcXML       | 
+| Step          | .ifc          |   
+| Json          | .json         |  
 
 Please be aware, that the file endings are case sentitive.
 
+The file can be also in the compressed form as an ".ifcZIP". (Look [here](http://www.buildingsmart-tech.org/ifc) to get an overview of all possible file formats to transport IFC-compliant data.)
+
 ### Description
-Please add a readme.md in the folder and describe you sample. Please describe the use case and the specialities of your sample, so that everbody can easily undertand you sample.
+Please add a readme.md in the folder and describe you sample. Please describe the use case and the specialities of your sample, so that everbody can easily understand your sample.
