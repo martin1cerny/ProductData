@@ -37,9 +37,9 @@
 			<IfcRelDeclares>
 				<RelatedDefinitions>
 					<!-- Step 1: Define a PropertySetTemplate , That can be generated/imported from a PSet, the bSDD, IfcDoc or elsewhere - -->
-					<IfcPropertySetTemplate id="i105" GlobalId="2e_rZByaj3v9TmNwzXRpFy" Name="Company identification" TemplateType="pset_typedrivenoverride" ApplicableEntity="IfcLamp" pos="1">
+					<IfcPropertySetTemplate id="i105" GlobalId="3gmbhSjFD4JOPQZ7_I$HzY" Name="Company identification" TemplateType="pset_typedrivenoverride" ApplicableEntity="IFCLIGHTFIXTURETYPE" pos="1">
 						<HasPropertyTemplates>
-							<IfcComplexPropertyTemplate id="i106" GlobalId="26JruP9Sj6_QQl9T2nuC9N" Name="Manufacturer" pos="1">
+							<IfcComplexPropertyTemplate id="i106" GlobalId="3gmbhSjFD4JOPQZ7_I$HzY" Description="07-0002" Name="Manufacturer" pos="1">
 								<HasPropertyTemplates>
 									<IfcSimplePropertyTemplate id="i107" GlobalId="26JruP9Sj6_QQl9T2nuNCN" Name="company identification" Description="" Expression="" TemplateType="p_singlevalue" PrimaryMeasureType="IfcLabel" pos="1" AccessState="readonly"/>
 									<IfcSimplePropertyTemplate id="i108" GlobalId="26JruP9Sj6_QQl9T2nuNC2" Name="data bank" TemplateType="p_singlevalue" PrimaryMeasureType="IfcLabel" pos="1" AccessState="readonly"/>
@@ -49,9 +49,9 @@
 							</IfcComplexPropertyTemplate>
 						</HasPropertyTemplates>
 					</IfcPropertySetTemplate>
-					<IfcPropertySetTemplate id="i1011" GlobalId="2e_rZByaj3v9TmNwzX55Fy" Name="Ityp" Description="Property set of the header of a declaration of conformity" TemplateType="pset_typedrivenoverride" ApplicableEntity="IfcLamp" pos="1">
+					<IfcPropertySetTemplate id="i111" GlobalId="1lEpo0LO16FPpSj0jFwIOu" Name="Ityp" Description="Type indicator Ityp" TemplateType="pset_typedrivenoverride" ApplicableEntity="IFCLIGHTFIXTURETYPE" pos="1">
 						<HasPropertyTemplates>
-							<IfcSimplePropertyTemplate id="i112" GlobalId="26JruP9Sj6_QQl9T2nuNCN" Name="Point or linear source" Description="Number of the DoC document" TemplateType="p_enumeratedvalue" PrimaryMeasureType="IfcLabel" pos="1" AccessState="readonly">
+							<IfcSimplePropertyTemplate id="i112" GlobalId="1lEpo0LO16FPpSj0jFwIOu" Name="Point or linear source" Description="04-0001" TemplateType="p_enumeratedvalue" PrimaryMeasureType="IfcLabel" pos="1" AccessState="readonly">
 								<Enumerators>
 									<EnumerationValues>
 										<IfcLabel-wrapper pos="1">1</IfcLabel-wrapper>
@@ -59,6 +59,224 @@
 										<IfcLabel-wrapper pos="1">3</IfcLabel-wrapper>
 									</EnumerationValues>
 								</Enumerators>
+							</IfcSimplePropertyTemplate>
+						</HasPropertyTemplates>
+					</IfcPropertySetTemplate>
+					<IfcPropertySetTemplate id="i113" GlobalId="1lEpo0LO16FPpSj0jFwIOu" Name="Isym" Description="Symmetry indicator Isym" TemplateType="pset_typedrivenoverride" ApplicableEntity="IFCLIGHTFIXTURETYPE" pos="1">
+						<HasPropertyTemplates>
+							<IfcSimplePropertyTemplate id="i114" GlobalId="1lEpo0LO16FPpSj0jFwIOu" Name="LDC symmetry" Description="04-0001" TemplateType="p_enumeratedvalue" pos="1" AccessState="readonly">
+								<Enumerators>
+									<EnumerationValues>
+										<IfcLabel-wrapper pos="1">1</IfcLabel-wrapper>
+										<IfcLabel-wrapper pos="1">2</IfcLabel-wrapper>
+										<IfcLabel-wrapper pos="1">3</IfcLabel-wrapper>
+										<IfcLabel-wrapper pos="1">4</IfcLabel-wrapper>
+									</EnumerationValues>
+								</Enumerators>
+							</IfcSimplePropertyTemplate>
+						</HasPropertyTemplates>
+					</IfcPropertySetTemplate>
+					<IfcPropertySetTemplate id="i115" GlobalId="1lEpo0LO16FPpSj0jFwIOu" Name="Dc" Description="Distance Dc between C-planes " TemplateType="pset_typedrivenoverride" ApplicableEntity="IFCLIGHTFIXTURETYPE" pos="1">
+						<HasPropertyTemplates>
+							<IfcSimplePropertyTemplate id="i116" GlobalId="1lEpo0LO16FPpSj0jFwIOu" Name="C-planes distance" Description="04-0001" TemplateType="p_singlevalue" pos="1" AccessState="readonly">
+							</IfcSimplePropertyTemplate>
+						</HasPropertyTemplates>
+					</IfcPropertySetTemplate>
+					<IfcPropertySetTemplate id="i117" GlobalId="1lEpo0LO16FPpSj0jFwIOu" Name="Ng" Description="Number Ng of luminous intensities in each C-plane" TemplateType="pset_typedrivenoverride" ApplicableEntity="IFCLIGHTFIXTURETYPE" pos="1">
+						<HasPropertyTemplates>
+							<IfcSimplePropertyTemplate id="i118" GlobalId="1lEpo0LO16FPpSj0jFwIOu" Name="Intensities per C-plane" Description="04-0001" TemplateType="p_singlevalue" pos="1" AccessState="readonly">
+							</IfcSimplePropertyTemplate>
+						</HasPropertyTemplates>
+					</IfcPropertySetTemplate>
+					<IfcPropertySetTemplate id="i119" GlobalId="1lEpo0LO16FPpSj0jFwIOu" Name="Dg" Description="Distance Dg between luminous intensities per C-plane" TemplateType="pset_typedrivenoverride" ApplicableEntity="IFCLIGHTFIXTURETYPE" pos="1">
+						<HasPropertyTemplates>
+							<IfcSimplePropertyTemplate id="i120" GlobalId="1lEpo0LO16FPpSj0jFwIOu" Name="Intensities distance" Description="04-0001" TemplateType="p_singlevalue" pos="1" AccessState="readonly">
+							</IfcSimplePropertyTemplate>
+						</HasPropertyTemplates>
+					</IfcPropertySetTemplate>
+					<IfcPropertySetTemplate id="i121" GlobalId="1lEpo0LO16FPpSj0jFwIOu" Name="Measurement report number" Description="Measurement report number" TemplateType="pset_typedrivenoverride" ApplicableEntity="IFCLIGHTFIXTURETYPE" pos="1">
+						<HasPropertyTemplates>
+							<IfcSimplePropertyTemplate id="i122" GlobalId="1lEpo0LO16FPpSj0jFwIOu" Name="Measurement report number" Description="04-0001" TemplateType="p_singlevalue" pos="1" AccessState="readonly">
+							</IfcSimplePropertyTemplate>
+						</HasPropertyTemplates>
+					</IfcPropertySetTemplate>
+					<IfcPropertySetTemplate id="i123" GlobalId="3pijcXRsT9mAFfcOBnThIw" Name="Name" Description="Luminaire name" TemplateType="pset_typedrivenoverride" ApplicableEntity="IFCLIGHTFIXTURETYPE" pos="1">
+						<HasPropertyTemplates>
+							<IfcSimplePropertyTemplate id="i124" GlobalId="3pijcXRsT9mAFfcOBnThIw" Name="Product Name" Description="07-0001" TemplateType="p_singlevalue" pos="1" AccessState="readonly">
+							</IfcSimplePropertyTemplate>
+						</HasPropertyTemplates>
+					</IfcPropertySetTemplate>
+					<IfcPropertySetTemplate id="i125" GlobalId="29UfpgwX5Eyu$KCZIxfJZy" Name="Number" Description="Luminaire number" TemplateType="pset_typedrivenoverride" ApplicableEntity="IFCLIGHTFIXTURETYPE" pos="1">
+						<HasPropertyTemplates>
+							<IfcSimplePropertyTemplate id="i126" GlobalId="29UfpgwX5Eyu$KCZIxfJZy" Name="Item number" Description="07-0004" TemplateType="p_singlevalue" pos="1" AccessState="readonly">
+							</IfcSimplePropertyTemplate>
+						</HasPropertyTemplates>
+					</IfcPropertySetTemplate>
+					<IfcPropertySetTemplate id="i127" GlobalId="1lEpo0LO16FPpSj0jFwIOu" Name="Eulumdat File name" Description="File name" TemplateType="pset_typedrivenoverride" ApplicableEntity="IFCLIGHTFIXTURETYPE" pos="1">
+						<HasPropertyTemplates>
+							<IfcSimplePropertyTemplate id="i128" GlobalId="1lEpo0LO16FPpSj0jFwIOu" Name="LDT" Description="04-0001" TemplateType="p_singlevalue" pos="1" AccessState="readonly">
+							</IfcSimplePropertyTemplate>
+						</HasPropertyTemplates>
+					</IfcPropertySetTemplate>
+					<IfcPropertySetTemplate id="i129" GlobalId="1lEpo0LO16FPpSj0jFwIOu" Name="Date" Description="Date of Measurement" TemplateType="pset_typedrivenoverride" ApplicableEntity="IFCLIGHTFIXTURETYPE" pos="1">
+						<HasPropertyTemplates>
+							<IfcSimplePropertyTemplate id="i130" GlobalId="1lEpo0LO16FPpSj0jFwIOu" Name="Date" Description="04-0001" TemplateType="p_singlevalue" pos="1" AccessState="readonly">
+							</IfcSimplePropertyTemplate>
+						</HasPropertyTemplates>
+					</IfcPropertySetTemplate>
+					<IfcPropertySetTemplate id="i131" GlobalId="1lEpo0LO16FPpSj0jFwIOu" Name="User name" Description="User  of Measurement" TemplateType="pset_typedrivenoverride" ApplicableEntity="IFCLIGHTFIXTURETYPE" pos="1">
+						<HasPropertyTemplates>
+							<IfcSimplePropertyTemplate id="i132" GlobalId="1lEpo0LO16FPpSj0jFwIOu" Name="User" Description="04-0001" TemplateType="p_singlevalue" pos="1" AccessState="readonly">
+							</IfcSimplePropertyTemplate>
+						</HasPropertyTemplates>
+					</IfcPropertySetTemplate>
+					<IfcPropertySetTemplate id="i133" GlobalId="1uJglYpRnFpQ4tStHaR2Pf" Name="Lenght" Description="Length of luminaire" TemplateType="pset_typedrivenoverride" ApplicableEntity="IFCLIGHTFIXTURETYPE" pos="1">
+						<HasPropertyTemplates>
+							<IfcSimplePropertyTemplate id="i134" GlobalId="1uJglYpRnFpQ4tStHaR2Pf" Name="Lenght" Description="01-0003" TemplateType="p_singlevalue" pos="1" AccessState="readonly">
+							</IfcSimplePropertyTemplate>
+						</HasPropertyTemplates>
+					</IfcPropertySetTemplate>
+					<IfcPropertySetTemplate id="i135" GlobalId="2GZ1YB8enFVhDHOKgLc$BU" Name="Diameter" Description="Diameter of luminaire" TemplateType="pset_typedrivenoverride" ApplicableEntity="IFCLIGHTFIXTURETYPE" pos="1">
+						<HasPropertyTemplates>
+							<IfcSimplePropertyTemplate id="i136" GlobalId="2GZ1YB8enFVhDHOKgLc$BU" Name="Diameter" Description="01-0001" TemplateType="p_singlevalue" pos="1" AccessState="readonly">
+							</IfcSimplePropertyTemplate>
+						</HasPropertyTemplates>
+					</IfcPropertySetTemplate>
+					<IfcPropertySetTemplate id="i137" GlobalId="1dPvrZN3vEIB0n0vwYvDcX" Name="Width" Description="Width of luminaire b" TemplateType="pset_typedrivenoverride" ApplicableEntity="IFCLIGHTFIXTURETYPE" pos="1">
+						<HasPropertyTemplates>
+							<IfcSimplePropertyTemplate id="i138" GlobalId="1dPvrZN3vEIB0n0vwYvDcX" Name="Width" Description="01-0004" TemplateType="p_singlevalue" pos="1" AccessState="readonly">
+							</IfcSimplePropertyTemplate>
+						</HasPropertyTemplates>
+					</IfcPropertySetTemplate>
+					<IfcPropertySetTemplate id="i139" GlobalId="19Z9XKYDT4p8HR0ZbD$wO_" Name="Height" Description="Height of luminaire" TemplateType="pset_typedrivenoverride" ApplicableEntity="IFCLIGHTFIXTURETYPE" pos="1">
+						<HasPropertyTemplates>
+							<IfcSimplePropertyTemplate id="i140" GlobalId="19Z9XKYDT4p8HR0ZbD$wO_" Name="Height" Description="01-0002" TemplateType="p_singlevalue" pos="1" AccessState="readonly">
+							</IfcSimplePropertyTemplate>
+						</HasPropertyTemplates>
+					</IfcPropertySetTemplate>
+					<IfcPropertySetTemplate id="i141" GlobalId="1auIwSthrFvRTJgX6NfO9Z" Name="Length of the luminous area" Description="Length of the luminous area" TemplateType="pset_typedrivenoverride" ApplicableEntity="IFCLIGHTFIXTURETYPE" pos="1">
+						<HasPropertyTemplates>
+							<IfcSimplePropertyTemplate id="i142" GlobalId="1auIwSthrFvRTJgX6NfO9Z" Name="Length of the luminous area" Description="01-0022" TemplateType="p_singlevalue" pos="1" AccessState="readonly">
+							</IfcSimplePropertyTemplate>
+						</HasPropertyTemplates>
+					</IfcPropertySetTemplate>
+					<IfcPropertySetTemplate id="i143" GlobalId="1mHV_4yHLEFuxOaIDlNmNn" Name="Diameter of the luminous area" Description="Diameter of luminous area " TemplateType="pset_typedrivenoverride" ApplicableEntity="IFCLIGHTFIXTURETYPE" pos="1">
+						<HasPropertyTemplates>
+							<IfcSimplePropertyTemplate id="i144" GlobalId="1mHV_4yHLEFuxOaIDlNmNn" Name="Diameter of the luminous area" Description="01-0020" TemplateType="p_singlevalue" pos="1" AccessState="readonly">
+							</IfcSimplePropertyTemplate>
+						</HasPropertyTemplates>
+					</IfcPropertySetTemplate>
+					<IfcPropertySetTemplate id="i145" GlobalId="2SqBhDZKD1hBjGWsV4q_GQ" Name="Width of the luminous area" Description="Width of luminous area b1" TemplateType="pset_typedrivenoverride" ApplicableEntity="IFCLIGHTFIXTURETYPE" pos="1">
+						<HasPropertyTemplates>
+							<IfcSimplePropertyTemplate id="i146" GlobalId="2SqBhDZKD1hBjGWsV4q_GQ" Name="Width of the luminous area" Description="01-0023" TemplateType="p_singlevalue" pos="1" AccessState="readonly">
+							</IfcSimplePropertyTemplate>
+						</HasPropertyTemplates>
+					</IfcPropertySetTemplate>
+					<IfcPropertySetTemplate id="i147" GlobalId="0WXZRI6CD2KfL4xC1uuLBF" Name="Height of the luminous area" Description="Height of luminous area C0" TemplateType="pset_typedrivenoverride" ApplicableEntity="IFCLIGHTFIXTURETYPE" pos="1">
+						<HasPropertyTemplates>
+							<IfcSimplePropertyTemplate id="i148" GlobalId="0WXZRI6CD2KfL4xC1uuLBF" Name="Height of the luminous area" Description="01-0021" TemplateType="p_singlevalue" pos="1" AccessState="readonly">
+							</IfcSimplePropertyTemplate>
+						</HasPropertyTemplates>
+					</IfcPropertySetTemplate>
+					<IfcPropertySetTemplate id="i149" GlobalId="0WXZRI6CD2KfL4xC1uuLBF" Name="Height of the luminous area" Description="Height of luminous area C90" TemplateType="pset_typedrivenoverride" ApplicableEntity="IFCLIGHTFIXTURETYPE" pos="1">
+						<HasPropertyTemplates>
+							<IfcSimplePropertyTemplate id="i150" GlobalId="0WXZRI6CD2KfL4xC1uuLBF" Name="Height of the luminous area" Description="01-0021" TemplateType="p_singlevalue" pos="1" AccessState="readonly">
+							</IfcSimplePropertyTemplate>
+						</HasPropertyTemplates>
+					</IfcPropertySetTemplate>
+					<IfcPropertySetTemplate id="i151" GlobalId="0WXZRI6CD2KfL4xC1uuLBF" Name="Height of the luminous area" Description="Height of luminous area C180" TemplateType="pset_typedrivenoverride" ApplicableEntity="IFCLIGHTFIXTURETYPE" pos="1">
+						<HasPropertyTemplates>
+							<IfcSimplePropertyTemplate id="i152" GlobalId="0WXZRI6CD2KfL4xC1uuLBF" Name="Height of the luminous area" Description="01-0021" TemplateType="p_singlevalue" pos="1" AccessState="readonly">
+							</IfcSimplePropertyTemplate>
+						</HasPropertyTemplates>
+					</IfcPropertySetTemplate>
+					<IfcPropertySetTemplate id="i153" GlobalId="0WXZRI6CD2KfL4xC1uuLBF" Name="Height of the luminous area" Description="Height of luminous area C270" TemplateType="pset_typedrivenoverride" ApplicableEntity="IFCLIGHTFIXTURETYPE" pos="1">
+						<HasPropertyTemplates>
+							<IfcSimplePropertyTemplate id="i154" GlobalId="0WXZRI6CD2KfL4xC1uuLBF" Name="Height of the luminous area" Description="01-0021" TemplateType="p_singlevalue" pos="1" AccessState="readonly">
+							</IfcSimplePropertyTemplate>
+						</HasPropertyTemplates>
+					</IfcPropertySetTemplate>
+					<IfcPropertySetTemplate id="i155" GlobalId="3wGph6hnfEOuWEuOMDd9mz" Name="Downward flux fraction" Description="Downward flux fraction DFF" TemplateType="pset_typedrivenoverride" ApplicableEntity="IFCLIGHTFIXTURETYPE" pos="1">
+						<HasPropertyTemplates>
+							<IfcSimplePropertyTemplate id="i156" GlobalId="3wGph6hnfEOuWEuOMDd9mz" Name="Downward Light Ratio DLR" Description="04-0011" TemplateType="p_singlevalue" pos="1" AccessState="readonly">
+							</IfcSimplePropertyTemplate>
+						</HasPropertyTemplates>
+					</IfcPropertySetTemplate>
+					<IfcPropertySetTemplate id="i157" GlobalId="2gMYX1hkHEE8kQmgimay3h" Name="Light Output Ratio" Description="Light output ratio luminaire LORL" TemplateType="pset_typedrivenoverride" ApplicableEntity="IFCLIGHTFIXTURETYPE" pos="1">
+						<HasPropertyTemplates>
+							<IfcSimplePropertyTemplate id="i158" GlobalId="2gMYX1hkHEE8kQmgimay3h" Name="Light Output Ratio LOR" Description="04-0008" TemplateType="p_singlevalue" pos="1" AccessState="readonly">
+							</IfcSimplePropertyTemplate>
+						</HasPropertyTemplates>
+					</IfcPropertySetTemplate>
+					<IfcPropertySetTemplate id="i159" GlobalId="1lEpo0LO16FPpSj0jFwIOu" Name="Intensities Conversion factor" Description="Conversion factor for luminous intensities" TemplateType="pset_typedrivenoverride" ApplicableEntity="IFCLIGHTFIXTURETYPE" pos="1">
+						<HasPropertyTemplates>
+							<IfcSimplePropertyTemplate id="i160" GlobalId="1lEpo0LO16FPpSj0jFwIOu" Name="Conversion factor" Description="04-0001" TemplateType="p_singlevalue" pos="1" AccessState="readonly">
+							</IfcSimplePropertyTemplate>
+						</HasPropertyTemplates>
+					</IfcPropertySetTemplate>
+					<IfcPropertySetTemplate id="i161" GlobalId="0w56LObA94ivbaiikyEXf2" Name="Tilt" Description="Tilt of luminaire during measurement" TemplateType="pset_typedrivenoverride" ApplicableEntity="IFCLIGHTFIXTURETYPE" pos="1">
+						<HasPropertyTemplates>
+							<IfcSimplePropertyTemplate id="i162" GlobalId="0w56LObA94ivbaiikyEXf2" Name="Tilt angle default" Description="01-0043" TemplateType="p_singlevalue" pos="1" AccessState="readonly">
+							</IfcSimplePropertyTemplate>
+						</HasPropertyTemplates>
+					</IfcPropertySetTemplate>
+					<IfcPropertySetTemplate id="i163" GlobalId="1lEpo0LO16FPpSj0jFwIOu" Name="Lamp sets" Description="Number n of standard sets of lamps" TemplateType="pset_typedrivenoverride" ApplicableEntity="IFCLIGHTFIXTURETYPE" pos="1">
+						<HasPropertyTemplates>
+							<IfcSimplePropertyTemplate id="i164" GlobalId="1lEpo0LO16FPpSj0jFwIOu" Name="Numer of lamps sets" Description="04-0001" TemplateType="p_singlevalue" pos="1" AccessState="readonly">
+							</IfcSimplePropertyTemplate>
+						</HasPropertyTemplates>
+					</IfcPropertySetTemplate>
+					<IfcPropertySetTemplate id="i165" GlobalId="2UOOchRyr2eQDXabAwecx5" Name="Number of lamps" Description="Number of lamps" TemplateType="pset_typedrivenoverride" ApplicableEntity="IFCLIGHTFIXTURETYPE" pos="1">
+						<HasPropertyTemplates>
+							<IfcSimplePropertyTemplate id="i166" GlobalId="2UOOchRyr2eQDXabAwecx5" Name="Lamp Count" Description="02-0016" TemplateType="p_singlevalue" pos="1" AccessState="readonly">
+							</IfcSimplePropertyTemplate>
+						</HasPropertyTemplates>
+					</IfcPropertySetTemplate>
+					<IfcPropertySetTemplate id="i167" GlobalId="0G4TAennPD5gzRoG2rlZv_" Name="Lamp Type" Description="Type of lamps" TemplateType="pset_typedrivenoverride" ApplicableEntity="IFCLIGHTFIXTURETYPE" pos="1">
+						<HasPropertyTemplates>
+							<IfcSimplePropertyTemplate id="i168" GlobalId="0G4TAennPD5gzRoG2rlZv_" Name="ILCOS Lamp type" Description="02-0008" TemplateType="p_singlevalue" pos="1" AccessState="readonly">
+							</IfcSimplePropertyTemplate>
+						</HasPropertyTemplates>
+					</IfcPropertySetTemplate>
+					<IfcPropertySetTemplate id="i169" GlobalId="2gmo70bVX90uJh2YAvS62s" Name="Lamp luminous flux" Description="Total luminous flux of lamps" TemplateType="pset_typedrivenoverride" ApplicableEntity="IFCLIGHTFIXTURETYPE" pos="1">
+						<HasPropertyTemplates>
+							<IfcSimplePropertyTemplate id="i170" GlobalId="2gmo70bVX90uJh2YAvS62s" Name="Rated luminous flux of  the lamp" Description="04-0006" TemplateType="p_singlevalue" pos="1" AccessState="readonly">
+							</IfcSimplePropertyTemplate>
+						</HasPropertyTemplates>
+					</IfcPropertySetTemplate>
+					<IfcPropertySetTemplate id="i171" GlobalId="24nX7s16TBMe_Qfk$rKDn3" Name="Colour of light" Description="Color appearance of lamps" TemplateType="pset_typedrivenoverride" ApplicableEntity="IFCLIGHTFIXTURETYPE" pos="1">
+						<HasPropertyTemplates>
+							<IfcSimplePropertyTemplate id="i172" GlobalId="24nX7s16TBMe_Qfk$rKDn3" Name="Colour Appearance" Description="04-0022" TemplateType="p_singlevalue" pos="1" AccessState="readonly">
+							</IfcSimplePropertyTemplate>
+						</HasPropertyTemplates>
+					</IfcPropertySetTemplate>
+					<IfcPropertySetTemplate id="i173" GlobalId="0XeHsouWz8PxASJ4mpkdEY" Name="CCT" Description="Color temperature of lamps" TemplateType="pset_typedrivenoverride" ApplicableEntity="IFCLIGHTFIXTURETYPE" pos="1">
+						<HasPropertyTemplates>
+							<IfcSimplePropertyTemplate id="i174" GlobalId="0XeHsouWz8PxASJ4mpkdEY" Name="Correlated Colour Temperature (CCT)" Description="04-0024" TemplateType="p_singlevalue" pos="1" AccessState="readonly">
+							</IfcSimplePropertyTemplate>
+						</HasPropertyTemplates>
+					</IfcPropertySetTemplate>
+					<IfcPropertySetTemplate id="i175" GlobalId="28UYB1MD91NhF5F8uF6VCZ" Name="CRI" Description="Color rendering group / color rendering index" TemplateType="pset_typedrivenoverride" ApplicableEntity="IFCLIGHTFIXTURETYPE" pos="1">
+						<HasPropertyTemplates>
+							<IfcSimplePropertyTemplate id="i176" GlobalId="28UYB1MD91NhF5F8uF6VCZ" Name="Rated Colour Rendering Index (CRI)" Description="04-0023" TemplateType="p_singlevalue" pos="1" AccessState="readonly">
+							</IfcSimplePropertyTemplate>
+						</HasPropertyTemplates>
+					</IfcPropertySetTemplate>
+					<IfcPropertySetTemplate id="i177" GlobalId="17a067965CqhDelQ$Y3mcP" Name="Power" Description="Wattage including ballast" TemplateType="pset_typedrivenoverride" ApplicableEntity="IFCLIGHTFIXTURETYPE" pos="1">
+						<HasPropertyTemplates>
+							<IfcSimplePropertyTemplate id="i178" GlobalId="17a067965CqhDelQ$Y3mcP" Name="Rated input power" Description="02-0002" TemplateType="p_singlevalue" pos="1" AccessState="readonly">
+							</IfcSimplePropertyTemplate>
+						</HasPropertyTemplates>
+					</IfcPropertySetTemplate>
+					<IfcPropertySetTemplate id="i179" GlobalId="1lEpo0LO16FPpSj0jFwIOu" Name="Direct ratios" Description="Direct ratios DR for room indices k = 0.6 ... 5" TemplateType="pset_typedrivenoverride" ApplicableEntity="IFCLIGHTFIXTURETYPE" pos="1">
+						<HasPropertyTemplates>
+							<IfcSimplePropertyTemplate id="i180" GlobalId="1lEpo0LO16FPpSj0jFwIOu" Name="Direct ratios" Description="04-0001" TemplateType="p_singlevalue" pos="1" AccessState="readonly">
+							</IfcSimplePropertyTemplate>
+						</HasPropertyTemplates>
+					</IfcPropertySetTemplate>
+					<IfcPropertySetTemplate id="i181" GlobalId="1lEpo0LO16FPpSj0jFwIOu" Name="Luminous intensity " Description="Luminous intensity distribution" TemplateType="pset_typedrivenoverride" ApplicableEntity="IFCLIGHTFIXTURETYPE" pos="1">
+						<HasPropertyTemplates>
+							<IfcSimplePropertyTemplate id="i182" GlobalId="1lEpo0LO16FPpSj0jFwIOu" Name="Luminous intensity " Description="04-0001" TemplateType="p_singlevalue" pos="1" AccessState="readonly">
 							</IfcSimplePropertyTemplate>
 						</HasPropertyTemplates>
 					</IfcPropertySetTemplate>
@@ -80,12 +298,12 @@
 	<!--         The data must rely on a template, the template can rely on a dictionary; if the template relies on a dictionary the template shoul make clear on which dictionary it relies on; -->
 	<!--         and if the template relies on a dictionary, all GUID's from the dictionry must be stored also in the template to ensure the updatability of the template and the migratability of the data -->
 	<!--         See http://jira.buildingsmart.org/browse/IFR-1072 for the last remark -->
-	<IfcProject id="i200" GlobalId="23JruP9Sj6_QQl9T2nuNCG" Name="EC Declaration if Conformity">
+	<IfcProject id="i200" GlobalId="23JruP9Sj6_QQl9T2nuNCG" Name="EULUMDAT">
 		<!-- Step 7: Insert the tracking information for the PDS-->
-		<OwnerHistory id="i201" CreationDate="20171120" LastModifiedDate="20171120" ChangeAction="nochange" State="readonly">
+		<OwnerHistory id="i201" CreationDate="20180528" LastModifiedDate="20180528" ChangeAction="nochange" State="readonly">
 			<OwningUser>
 				<ThePerson FamilyName="Heinze" GivenName="Robert"/>
-				<TheOrganization Identification="Trilux" Name="Trilux GmbH &amp; Co. KG" Description="A company for ligthing products"/>
+				<TheOrganization Identification="Trilux" Name="Trilux GmbH &amp; Co. KG" Description="Light Fixture Manufacturer"/>
 				<Roles>
 					<IfcActorRole Role="manufacturer"/>
 				</Roles>
@@ -95,7 +313,7 @@
 			</OwningApplication>
 			<LastModifyingUser>
 				<ThePerson FamilyName="Heinze" GivenName="Robert"/>
-				<TheOrganization Identification="Trilux" Name="Trilux GmbH &amp; Co. KG" Description="A company for ligthing products"/>
+				<TheOrganization Identification="Trilux" Name="Trilux GmbH &amp; Co. KG" Description="Light Fixture Manufacturer"/>
 				<Roles>
 					<IfcActorRole Role="manufacturer"/>
 				</Roles>
