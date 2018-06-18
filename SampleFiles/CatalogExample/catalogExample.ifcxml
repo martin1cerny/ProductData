@@ -1,5 +1,5 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
-<ifcXML xmlns:schemaLocation="http://www.buildingsmart-tech.org/ifcXML/IFC4/Add1 IFC4_ADD1.xsd" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ifc="http://www.buildingsmart-tech.org/ifcXML/IFC4/Add1" xmlns="http://www.buildingsmart-tech.org/ifcXML/IFC4/Add1">
+<?xml version="1.0" encoding="utf-8"?>
+<ifcXML xmlns:ifc="http://www.buildingsmart-tech.org/ifcXML/IFC4/Add1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" id="ifcXML4" xmlns="http://www.buildingsmart-tech.org/ifcXML/IFC4/Add1" xsi:schemaLocation="http://www.buildingsmart-tech.org/ifcXML/IFC4/Add1 ../IFC4_ADD1.xsd">
 <IfcProject GlobalId="16FzQLyFXFOAco0hHmFZXB" Name="myProject">
  <RepresentationContexts>
   <IfcGeometricRepresentationContext id="i2" ContextIdentifier="3D" ContextType="Model" CoordinateSpaceDimension="3" Precision="1E-05">

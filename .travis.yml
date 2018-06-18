@@ -20,7 +20,7 @@ script:
   - xmllint "${TRAVIS_BUILD_DIR}/SampleFiles/EULUMDAT_PDT_RH180508/EULUMDAT_PDT_RH180508.ifcXML" --schema IFC4_ADD2.xsd --noout
   - xmllint "${TRAVIS_BUILD_DIR}/SampleFiles/Fireray 50100RV Linear Smoke Detectors/Fireray 50100RV Linear Smoke Detectors.ifcXML" --schema IFC4_ADD2.xsd --noout
   - xmllint "${TRAVIS_BUILD_DIR}/SampleFiles/HC (Italy)/Sample PDT ifcXML/IFCXML4_TEMPLATE-brick.ifcXML" --schema IFC4_ADD2.xsd --noout  
-  
+  - xmllint "${TRAVIS_BUILD_DIR}/SampleFiles/CatalogExample/CatalogExample.ifcXML" --schema IFC4_ADD1.xsd --noout   
   
   
   # Remove the official ifcxml schemes
