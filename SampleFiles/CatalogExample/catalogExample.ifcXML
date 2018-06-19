@@ -152,10 +152,10 @@
         </AppliedValue>
        </IfcAppliedValue>
       </DataValue>
-      <ReferencePath TypeIdentifier="IfcDoor" AttributeIdentifier="IsDefinedBy">
-       <InnerReference TypeIdentifier="IfcRelDefinesByProperties" AttributeIdentifier="RelatingPropertyDefinition" InstanceName="myPropertySet">
-        <InnerReference TypeIdentifier="IfcPropertySet" AttributeIdentifier="HasProperties" InstanceName="myProperty_01">
-         <InnerReference TypeIdentifier="IfcPropertySingleValue" AttributeIdentifier="NominalValue" />
+      <ReferencePath AttributeIdentifier="IsDefinedBy" TypeIdentifier="IfcDoor">
+       <InnerReference AttributeIdentifier="RelatingPropertyDefinition" TypeIdentifier="IfcRelDefinesByProperties" InstanceName="myPropertySet">
+        <InnerReference AttributeIdentifier="HasProperties" TypeIdentifier="IfcPropertySet" InstanceName="myProperty_01">
+         <InnerReference AttributeIdentifier="NominalValue" TypeIdentifier="IfcPropertySingleValue"/>
         </InnerReference>
        </InnerReference>
       </ReferencePath>
@@ -168,10 +168,10 @@
         </AppliedValue>
        </IfcAppliedValue>
       </DataValue>
-      <ReferencePath TypeIdentifier="IfcDoor" AttributeIdentifier="IsDefinedBy">
-       <InnerReference TypeIdentifier="IfcRelDefinesByProperties" AttributeIdentifier="RelatingPropertyDefinition" InstanceName="myPropertySet">
-        <InnerReference TypeIdentifier="IfcPropertySet" AttributeIdentifier="HasProperties" InstanceName="myProperty_01">
-         <InnerReference TypeIdentifier="IfcPropertySingleValue" AttributeIdentifier="NominalValue" />
+      <ReferencePath AttributeIdentifier="IsDefinedBy" TypeIdentifier="IfcDoor">
+       <InnerReference AttributeIdentifier="RelatingPropertyDefinition" TypeIdentifier="IfcRelDefinesByProperties" InstanceName="myPropertySet">
+        <InnerReference AttributeIdentifier="HasProperties" TypeIdentifier="IfcPropertySet" InstanceName="myProperty_01">
+         <InnerReference AttributeIdentifier="NominalValue" TypeIdentifier="IfcPropertySingleValue"/>
         </InnerReference>
        </InnerReference>
       </ReferencePath>
@@ -188,10 +188,10 @@
         </AppliedValue>
        </IfcAppliedValue>
       </DataValue>
-      <ReferencePath TypeIdentifier="IfcDoor" AttributeIdentifier="IsDefinedBy">
-       <InnerReference TypeIdentifier="IfcRelDefinesByProperties" AttributeIdentifier="RelatingPropertyDefinition" InstanceName="myPropertySet">
-        <InnerReference TypeIdentifier="IfcPropertySet" AttributeIdentifier="HasProperties" InstanceName="myProperty_02">
-         <InnerReference TypeIdentifier="IfcPropertySingleValue" AttributeIdentifier="NominalValue" />
+      <ReferencePath AttributeIdentifier="IsDefinedBy" TypeIdentifier="IfcDoor">
+       <InnerReference AttributeIdentifier="RelatingPropertyDefinition" TypeIdentifier="IfcRelDefinesByProperties" InstanceName="myPropertySet">
+        <InnerReference AttributeIdentifier="HasProperties" TypeIdentifier="IfcPropertySet" InstanceName="myProperty_02">
+         <InnerReference AttributeIdentifier="NominalValue" TypeIdentifier="IfcPropertySingleValue"/>
         </InnerReference>
        </InnerReference>
       </ReferencePath>
@@ -204,10 +204,10 @@
         </AppliedValue>
        </IfcAppliedValue>
       </DataValue>
-      <ReferencePath TypeIdentifier="IfcDoor" AttributeIdentifier="IsDefinedBy">
-       <InnerReference TypeIdentifier="IfcRelDefinesByProperties" AttributeIdentifier="RelatingPropertyDefinition" InstanceName="myPropertySet">
-        <InnerReference TypeIdentifier="IfcPropertySet" AttributeIdentifier="HasProperties" InstanceName="myProperty_02">
-         <InnerReference TypeIdentifier="IfcPropertySingleValue" AttributeIdentifier="NominalValue" />
+      <ReferencePath AttributeIdentifier="IsDefinedBy" TypeIdentifier="IfcDoor">
+       <InnerReference AttributeIdentifier="RelatingPropertyDefinition" TypeIdentifier="IfcRelDefinesByProperties" InstanceName="myPropertySet">
+        <InnerReference AttributeIdentifier="HasProperties" TypeIdentifier="IfcPropertySet" InstanceName="myProperty_02">
+         <InnerReference AttributeIdentifier="NominalValue" TypeIdentifier="IfcPropertySingleValue"/>
         </InnerReference>
        </InnerReference>
       </ReferencePath>
@@ -228,10 +228,10 @@
             </AppliedValue>
            </IfcAppliedValue>
           </DataValue>
-          <ReferencePath TypeIdentifier="IfcDoor" AttributeIdentifier="IsDefinedBy">
-           <InnerReference TypeIdentifier="IfcRelDefinesByProperties" AttributeIdentifier="RelatingPropertyDefinition" InstanceName="myPropertySet">
-            <InnerReference TypeIdentifier="IfcPropertySet" AttributeIdentifier="HasProperties" InstanceName="myProperty_02">
-             <InnerReference TypeIdentifier="IfcPropertySingleValue" AttributeIdentifier="NominalValue" />
+          <ReferencePath AttributeIdentifier="IsDefinedBy" TypeIdentifier="IfcDoor">
+           <InnerReference AttributeIdentifier="RelatingPropertyDefinition" TypeIdentifier="IfcRelDefinesByProperties" InstanceName="myPropertySet">
+            <InnerReference AttributeIdentifier="HasProperties" TypeIdentifier="IfcPropertySet" InstanceName="myProperty_02">
+             <InnerReference AttributeIdentifier="NominalValue" TypeIdentifier="IfcPropertySingleValue"/>
             </InnerReference>
            </InnerReference>
           </ReferencePath>
