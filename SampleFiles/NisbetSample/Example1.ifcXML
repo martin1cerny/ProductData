@@ -1,11 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!--Transform and Examples Copyright (C) AEC3 UK Ltd nn@aec3.com-->
-<ex:iso_10303_28 xsi:schemaLocation="http://www.iai-tech.org/ifcXML/IFC2x3/FINAL IFC2x3.xsd" version="2.0" xmlns:ex="urn:iso.org:standard:10303:part(28):version(2):xmlschema:common" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
-  <ex:iso_10303_28_header xmlns:ifc="http://www.iai-tech.org/ifcXML/IFC2x3/FINAL" xmlns="http://www.iai-tech.org/ifcXML/IFC2x3/FINAL">
-    <ex:name>Declarations Unknown _fromSmartCE.ifcxml.xsl source file name </ex:name> <ex:time_stamp>2018-06-22T12:00:00</ex:time_stamp> <ex:author>Nicholas Nisbet</ex:author> <ex:organization>AEC3 UK Ltd</ex:organization> <ex:preprocessor_version>_fromSmartCE.ifcxml.xsl v2018-06-22</ex:preprocessor_version> <ex:originating_system>_fromSmartCE.ifcxml.xsl v2018-06-22</ex:originating_system> <ex:authorization>Nicholas Nisbet</ex:authorization> <ex:documentation>nn@aec3.com</ex:documentation></ex:iso_10303_28_header>
-  <ifc:uos id="_0" xmlns:ifc="http://www.iai-tech.org/ifcXML/IFC2x3/FINAL">
+<ex:iso_10303_28 xsi:schemaLocation="http://www.buildingsmart-tech.org/ifcXML/IFC4/Add2 ../IFC4_ADD2.xsd" version="2.0" xmlns:ex="urn:iso.org:standard:10303:part(28):version(2):xmlschema:common" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<ex:iso_10303_28_header xmlns:ifc="http://www.buildingsmart-tech.org/ifcXML/IFC4/Add2" xmlns="http://www.buildingsmart-tech.org/ifcXML/IFC4/Add2">
+    <ex:name>Declarations Unknown _fromSmartCE.ifcxml.xsl source file name </ex:name>
+    <ex:time_stamp>2018-06-22T12:00:00</ex:time_stamp> <ex:author>Nicholas Nisbet</ex:author>
+    <ex:organization>AEC3 UK Ltd</ex:organization>
+    <ex:preprocessor_version>_fromSmartCE.ifcxml.xsl v2018-06-22</ex:preprocessor_version>
+    <ex:originating_system>_fromSmartCE.ifcxml.xsl v2018-06-22</ex:originating_system>
+    <ex:authorization>Nicholas Nisbet</ex:authorization>
+    <ex:documentation>nn@aec3.com</ex:documentation></ex:iso_10303_28_header>
+    <ifc:uos id="_0" xmlns:ifc="http://www.buildingsmart-tech.org/ifcXML/IFC4/Add2">
     <!--Project Context-->
-    <IfcProject id="Project1" xmlns="http://www.iai-tech.org/ifcXML/IFC2x3/FINAL">
+    <IfcProject id="Project1" xmlns="http://www.buildingsmart-tech.org/ifcXML/IFC4/Add2">
       <GlobalId>0topProject00000000000</GlobalId>
       <OwnerHistory>
         <IfcOwnerHistory xsi:nil="true" ref="oh1" />
@@ -60,7 +66,7 @@
         </IfcUnitAssignment>
       </UnitsInContext>
     </IfcProject>
-    <IfcRelAggregates xmlns="http://www.iai-tech.org/ifcXML/IFC2x3/FINAL">
+    <IfcRelAggregates xmlns="http://www.buildingsmart-tech.org/ifcXML/IFC4/Add2">
       <GlobalId>0topAggregates00000000</GlobalId>
       <OwnerHistory>
         <IfcOwnerHistory xsi:nil="true" ref="oh1" />
@@ -76,7 +82,7 @@
     </IfcRelAggregates>
     <!--End of Structure-->
     <!--Site Context-->
-    <IfcSite id="Site1" xmlns="http://www.iai-tech.org/ifcXML/IFC2x3/FINAL">
+    <IfcSite id="Site1" xmlns="http://www.buildingsmart-tech.org/ifcXML/IFC4/Add2">
       <GlobalId>0topSite00000000000000</GlobalId>
       <OwnerHistory>
         <IfcOwnerHistory xsi:nil="true" ref="oh1" />
@@ -92,7 +98,7 @@
       </ObjectPlacement>
       <CompositionType>element</CompositionType>
     </IfcSite>
-    <IfcRelAggregates xmlns="http://www.iai-tech.org/ifcXML/IFC2x3/FINAL">
+    <IfcRelAggregates xmlns="http://www.buildingsmart-tech.org/ifcXML/IFC4/Add2">
       <GlobalId>0topAggregates00000000</GlobalId>
       <OwnerHistory>
         <IfcOwnerHistory xsi:nil="true" ref="oh1" />
@@ -108,7 +114,7 @@
     </IfcRelAggregates>
     <!--End of Structure-->
     <!--Building Context-->
-    <IfcBuilding id="Building1" xmlns="http://www.iai-tech.org/ifcXML/IFC2x3/FINAL">
+    <IfcBuilding id="Building1" xmlns="http://www.buildingsmart-tech.org/ifcXML/IFC4/Add2">
       <GlobalId>0topBuilding0000000000</GlobalId>
       <OwnerHistory>
         <IfcOwnerHistory xsi:nil="true" ref="oh1" />
@@ -127,7 +133,7 @@
       </ObjectPlacement>
       <CompositionType>element</CompositionType>
     </IfcBuilding>
-    <IfcRelAggregates xmlns="http://www.iai-tech.org/ifcXML/IFC2x3/FINAL">
+    <IfcRelAggregates xmlns="http://www.buildingsmart-tech.org/ifcXML/IFC4/Add2">
       <GlobalId>0topAggregates00000000</GlobalId>
       <OwnerHistory>
         <IfcOwnerHistory xsi:nil="true" ref="oh1" />
@@ -143,7 +149,7 @@
     </IfcRelAggregates>
     <!--End of Structure-->
     <!--BuildingStorey Context-->
-    <IfcBuildingStorey id="BuildingStorey1" xmlns="http://www.iai-tech.org/ifcXML/IFC2x3/FINAL">
+    <IfcBuildingStorey id="BuildingStorey1" xmlns="http://www.buildingsmart-tech.org/ifcXML/IFC4/Add2">
       <GlobalId>0topBuildingStorey0000</GlobalId>
       <OwnerHistory>
         <IfcOwnerHistory xsi:nil="true" ref="oh1" />
@@ -162,7 +168,7 @@
       </ObjectPlacement>
       <CompositionType>element</CompositionType>
     </IfcBuildingStorey>
-    <IfcRelAggregates xmlns="http://www.iai-tech.org/ifcXML/IFC2x3/FINAL">
+    <IfcRelAggregates xmlns="http://www.buildingsmart-tech.org/ifcXML/IFC4/Add2">
       <GlobalId>0topAggregates00000000</GlobalId>
       <OwnerHistory>
         <IfcOwnerHistory xsi:nil="true" ref="oh1" />
@@ -178,7 +184,7 @@
     </IfcRelAggregates>
     <!--End of Structure-->
     <!--Space Context-->
-    <IfcSpace id="Space1" xmlns="http://www.iai-tech.org/ifcXML/IFC2x3/FINAL">
+    <IfcSpace id="Space1" xmlns="http://www.buildingsmart-tech.org/ifcXML/IFC4/Add2">
       <GlobalId>0topSpace0000000000000</GlobalId>
       <OwnerHistory>
         <IfcOwnerHistory xsi:nil="true" ref="oh1" />
@@ -198,7 +204,7 @@
       <CompositionType>element</CompositionType>
       <InteriorOrExteriorSpace>internal</InteriorOrExteriorSpace>
     </IfcSpace>
-    <IfcRelContainedInSpatialStructure xmlns="http://www.iai-tech.org/ifcXML/IFC2x3/FINAL">
+    <IfcRelContainedInSpatialStructure xmlns="http://www.buildingsmart-tech.org/ifcXML/IFC4/Add2">
       <GlobalId>0topContains0000000000</GlobalId>
       <OwnerHistory>
         <IfcOwnerHistory xsi:nil="true" ref="oh1" />
@@ -214,7 +220,7 @@
     </IfcRelContainedInSpatialStructure>
     <!--End of Structure-->
     <!--BuildingElementProxy Context-->
-    <IfcBuildingElementProxy id="BuildingElementProxy1" xmlns="http://www.iai-tech.org/ifcXML/IFC2x3/FINAL">
+    <IfcBuildingElementProxy id="BuildingElementProxy1" xmlns="http://www.buildingsmart-tech.org/ifcXML/IFC4/Add2">
       <GlobalId>0topBuildingElementPro</GlobalId>
       <OwnerHistory>
         <IfcOwnerHistory xsi:nil="true" ref="oh0" />
@@ -233,7 +239,7 @@
       </ObjectPlacement>
       <CompositionType>element</CompositionType>
     </IfcBuildingElementProxy>
-    <IfcRelDefinesByType xmlns="http://www.iai-tech.org/ifcXML/IFC2x3/FINAL">
+    <IfcRelDefinesByType xmlns="http://www.buildingsmart-tech.org/ifcXML/IFC4/Add2">
       <GlobalId>0topDefines00000000000</GlobalId>
       <OwnerHistory>
         <IfcOwnerHistory xsi:nil="true" ref="oh1" />
@@ -247,7 +253,7 @@
         <IfcBuildingElementProxyType ref="BuildingElementProxyType1" xsi:nil="true" />
       </RelatingType>
     </IfcRelDefinesByType>
-    <IfcRelDefinesByProperties xmlns="http://www.iai-tech.org/ifcXML/IFC2x3/FINAL">
+    <IfcRelDefinesByProperties xmlns="http://www.buildingsmart-tech.org/ifcXML/IFC4/Add2">
       <GlobalId>0topQuantifies00000000</GlobalId>
       <OwnerHistory>
         <IfcOwnerHistory xsi:nil="true" ref="oh1" />
@@ -263,7 +269,7 @@
     </IfcRelDefinesByProperties>
     <!--End of Structure-->
     <!--BuildingElementProxyType Context-->
-    <IfcBuildingElementProxyType id="BuildingElementProxyType1" xmlns="http://www.iai-tech.org/ifcXML/IFC2x3/FINAL">
+    <IfcBuildingElementProxyType id="BuildingElementProxyType1" xmlns="http://www.buildingsmart-tech.org/ifcXML/IFC4/Add2">
       <GlobalId>0topBuildingElementPro</GlobalId>
       <OwnerHistory>
         <IfcOwnerHistory xsi:nil="true" ref="oh0" />
@@ -2335,7 +2341,7 @@
     <!--REACHInformation : -->
     <!--DoPLink : -->
     <!--End of Structure-->
-    <IfcPropertyEnumeration id="pe_avcp" xmlns="http://www.iai-tech.org/ifcXML/IFC2x3/FINAL">
+    <IfcPropertyEnumeration id="pe_avcp" xmlns="http://www.buildingsmart-tech.org/ifcXML/IFC4/Add2">
       <Name>PEnum_AVCP</Name>
       <EnumerationValues>
         <IfcLabel pos="0">0</IfcLabel>
@@ -2347,28 +2353,28 @@
         <IfcLabel pos="6">unset</IfcLabel>
       </EnumerationValues>
     </IfcPropertyEnumeration>
-    <IfcSIUnit id="p" xmlns="http://www.iai-tech.org/ifcXML/IFC2x3/FINAL">
+    <IfcSIUnit id="p" xmlns="http://www.buildingsmart-tech.org/ifcXML/IFC4/Add2">
       <UnitType>lengthunit</UnitType>
       <Name>metre</Name>
     </IfcSIUnit>
-    <IfcSIUnit id="Nmm2" xmlns="http://www.iai-tech.org/ifcXML/IFC2x3/FINAL">
+    <IfcSIUnit id="Nmm2" xmlns="http://www.buildingsmart-tech.org/ifcXML/IFC4/Add2">
       <UnitType>lengthunit</UnitType>
       <Name>metre</Name>
     </IfcSIUnit>
-    <IfcSIUnit id="WmK" xmlns="http://www.iai-tech.org/ifcXML/IFC2x3/FINAL">
+    <IfcSIUnit id="WmK" xmlns="http://www.buildingsmart-tech.org/ifcXML/IFC4/Add2">
       <UnitType>lengthunit</UnitType>
       <Name>metre</Name>
     </IfcSIUnit>
-    <IfcSIUnit id="kgm3" xmlns="http://www.iai-tech.org/ifcXML/IFC2x3/FINAL">
+    <IfcSIUnit id="kgm3" xmlns="http://www.buildingsmart-tech.org/ifcXML/IFC4/Add2">
       <UnitType>lengthunit</UnitType>
       <Name>metre</Name>
     </IfcSIUnit>
     <!--Owner History-->
-    <IfcOrganization id="o1" xmlns="http://www.iai-tech.org/ifcXML/IFC2x3/FINAL">
+    <IfcOrganization id="o1" xmlns="http://www.buildingsmart-tech.org/ifcXML/IFC4/Add2">
       <Name>AEC3 UK Ltd</Name>
       <Description>BimServices provider</Description>
     </IfcOrganization>
-    <IfcOrganization id="o2" xmlns="http://www.iai-tech.org/ifcXML/IFC2x3/FINAL">
+    <IfcOrganization id="o2" xmlns="http://www.buildingsmart-tech.org/ifcXML/IFC4/Add2">
       <Name>Authorized representative</Name>
       <Description>http://www.construction-products.eu/logo.png</Description>
       <Roles>
@@ -2404,7 +2410,7 @@
         </IfcTelecomAddress>
       </Addresses>
     </IfcOrganization>
-    <IfcOrganization id="o0" xmlns="http://www.iai-tech.org/ifcXML/IFC2x3/FINAL">
+    <IfcOrganization id="o0" xmlns="http://www.buildingsmart-tech.org/ifcXML/IFC4/Add2">
       <Name>Manufacturer</Name>
       <Description>http://www.construction-products.eu/logo.png</Description>
       <Roles>
@@ -2440,27 +2446,27 @@
         </IfcTelecomAddress>
       </Addresses>
     </IfcOrganization>
-    <IfcPerson id="p1" xmlns="http://www.iai-tech.org/ifcXML/IFC2x3/FINAL">
+    <IfcPerson id="p1" xmlns="http://www.buildingsmart-tech.org/ifcXML/IFC4/Add2">
       <Id>nn@aec3.com</Id>
       <FamilyName>Nisbet</FamilyName>
       <GivenName>Nicholas</GivenName>
     </IfcPerson>
-    <IfcPerson id="p0" xmlns="http://www.iai-tech.org/ifcXML/IFC2x3/FINAL">
+    <IfcPerson id="p0" xmlns="http://www.buildingsmart-tech.org/ifcXML/IFC4/Add2">
       <Id>Joe Boss</Id>
       <FamilyName>Boss</FamilyName>
       <GivenName>Joe</GivenName>
     </IfcPerson>
-    <IfcPerson id="p2" xmlns="http://www.iai-tech.org/ifcXML/IFC2x3/FINAL">
+    <IfcPerson id="p2" xmlns="http://www.buildingsmart-tech.org/ifcXML/IFC4/Add2">
       <Id>Joe Boss</Id>
       <FamilyName>Boss</FamilyName>
       <GivenName>Joe</GivenName>
     </IfcPerson>
-    <IfcPerson id="p1" xmlns="http://www.iai-tech.org/ifcXML/IFC2x3/FINAL">
+    <IfcPerson id="p1" xmlns="http://www.buildingsmart-tech.org/ifcXML/IFC4/Add2">
       <Id>nn@aec3.com</Id>
       <FamilyName>Nisbet</FamilyName>
       <GivenName>Nicholas</GivenName>
     </IfcPerson>
-    <IfcApplication id="a1" xmlns="http://www.iai-tech.org/ifcXML/IFC2x3/FINAL">
+    <IfcApplication id="a1" xmlns="http://www.buildingsmart-tech.org/ifcXML/IFC4/Add2">
       <ApplicationDeveloper>
         <IfcOrganization xsi:nil="true" ref="o1" />
       </ApplicationDeveloper>
@@ -2468,7 +2474,7 @@
       <ApplicationFullName>SmartCE to IFC converter</ApplicationFullName>
       <ApplicationIdentifier>_fromSmartCE.ifcxml.xsl</ApplicationIdentifier>
     </IfcApplication>
-    <IfcOwnerHistory id="oh1" xmlns="http://www.iai-tech.org/ifcXML/IFC2x3/FINAL">
+    <IfcOwnerHistory id="oh1" xmlns="http://www.buildingsmart-tech.org/ifcXML/IFC4/Add2">
       <OwningUser>
         <IfcPersonAndOrganization>
           <ThePerson>
@@ -2486,7 +2492,7 @@
       <ChangeAction>nochange</ChangeAction>
       <CreationDate>1024516095</CreationDate>
     </IfcOwnerHistory>
-    <IfcOwnerHistory id="oh0" xmlns="http://www.iai-tech.org/ifcXML/IFC2x3/FINAL">
+    <IfcOwnerHistory id="oh0" xmlns="http://www.buildingsmart-tech.org/ifcXML/IFC4/Add2">
       <OwningUser>
         <IfcPersonAndOrganization>
           <ThePerson>
@@ -2504,7 +2510,7 @@
       <ChangeAction>nochange</ChangeAction>
       <CreationDate>1024516095</CreationDate>
     </IfcOwnerHistory>
-    <IfcOwnerHistory id="oh2" xmlns="http://www.iai-tech.org/ifcXML/IFC2x3/FINAL">
+    <IfcOwnerHistory id="oh2" xmlns="http://www.buildingsmart-tech.org/ifcXML/IFC4/Add2">
       <OwningUser>
         <IfcPersonAndOrganization>
           <ThePerson>
@@ -2523,7 +2529,7 @@
       <CreationDate>1024516095</CreationDate>
     </IfcOwnerHistory>
     <!--Resources-->
-    <IfcGeometricRepresentationContext id="grc1" xmlns="http://www.iai-tech.org/ifcXML/IFC2x3/FINAL">
+    <IfcGeometricRepresentationContext id="grc1" xmlns="http://www.buildingsmart-tech.org/ifcXML/IFC4/Add2">
       <ContextType>Model</ContextType>
       <CoordinateSpaceDimension>3</CoordinateSpaceDimension>
       <Precision>1.000000000E-5</Precision>
@@ -2531,7 +2537,7 @@
         <IfcAxis2Placement3D xsi:nil="true" ref="original_axis" />
       </WorldCoordinateSystem>
     </IfcGeometricRepresentationContext>
-    <IfcAxis2Placement3D id="original_axis" xmlns="http://www.iai-tech.org/ifcXML/IFC2x3/FINAL">
+    <IfcAxis2Placement3D id="original_axis" xmlns="http://www.buildingsmart-tech.org/ifcXML/IFC4/Add2">
       <Location>
         <IfcCartesianPoint xsi:nil="true" ref="zero" />
       </Location>
@@ -2542,28 +2548,28 @@
         <IfcDirection xsi:nil="true" ref="eastwards" />
       </RefDirection>
     </IfcAxis2Placement3D>
-    <IfcCartesianPoint id="zero" xmlns="http://www.iai-tech.org/ifcXML/IFC2x3/FINAL">
+    <IfcCartesianPoint id="zero" xmlns="http://www.buildingsmart-tech.org/ifcXML/IFC4/Add2">
       <Coordinates>
         <IfcLengthMeasure>0.0</IfcLengthMeasure>
         <IfcLengthMeasure>0.0</IfcLengthMeasure>
         <IfcLengthMeasure>0.0</IfcLengthMeasure>
       </Coordinates>
     </IfcCartesianPoint>
-    <IfcDirection id="upwards" xmlns="http://www.iai-tech.org/ifcXML/IFC2x3/FINAL">
+    <IfcDirection id="upwards" xmlns="http://www.buildingsmart-tech.org/ifcXML/IFC4/Add2">
       <DirectionRatios>
         <ex:double-wrapper>0.0</ex:double-wrapper>
         <ex:double-wrapper>0.0</ex:double-wrapper>
         <ex:double-wrapper>1.0</ex:double-wrapper>
       </DirectionRatios>
     </IfcDirection>
-    <IfcDirection id="eastwards" xmlns="http://www.iai-tech.org/ifcXML/IFC2x3/FINAL">
+    <IfcDirection id="eastwards" xmlns="http://www.buildingsmart-tech.org/ifcXML/IFC4/Add2">
       <DirectionRatios>
         <ex:double-wrapper>1.0</ex:double-wrapper>
         <ex:double-wrapper>0.0</ex:double-wrapper>
         <ex:double-wrapper>0.0</ex:double-wrapper>
       </DirectionRatios>
     </IfcDirection>
-    <IfcProductDefinitionShape id="point" xmlns="http://www.iai-tech.org/ifcXML/IFC2x3/FINAL">
+    <IfcProductDefinitionShape id="point" xmlns="http://www.buildingsmart-tech.org/ifcXML/IFC4/Add2">
       <Representations>
         <IfcShapeRepresentation>
           <ContextOfItems>
