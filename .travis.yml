@@ -11,6 +11,7 @@ script:
   - wget http://www.buildingsmart-tech.org/ifcXML/IFC4/final/ifcXML4.xsd  
   - wget http://www.buildingsmart-tech.org/ifcXML/IFC4/Add1/IFC4_ADD1.xsd
   - wget http://www.buildingsmart-tech.org/ifc/IFC4/Add2/IFC4_ADD2.xsd
+  - wget http://www.buildingsmart-tech.org/downloads/ifcxml/ifcxml4/cnf.xsd
   
   # Validate
   - xmllint "${TRAVIS_BUILD_DIR}/SampleFiles/bSDD product room sample/bSDD product room sample.ifcXML" --schema IFC4_ADD2.xsd --noout
