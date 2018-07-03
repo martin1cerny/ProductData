@@ -1,2600 +1,1388 @@
 <?xml version="1.0" encoding="utf-8"?>
-<!--Transform and Examples Copyright (C) AEC3 UK Ltd nn@aec3.com-->
-<ex:iso_10303_28 xsi:schemaLocation="http://www.buildingsmart-tech.org/ifcXML/IFC4/Add2 ../IFC4_ADD2.xsd" version="2.0" xmlns:ex="urn:iso.org:standard:10303:part(28):version(2):xmlschema:common" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
-	<ex:iso_10303_28_header xmlns:ifc="http://www.buildingsmart-tech.org/ifcXML/IFC4/Add2" xmlns="http://www.buildingsmart-tech.org/ifcXML/IFC4/Add2">
-    <ex:name>Declarations Unknown _fromSmartCE.ifcxml.xsl source file name </ex:name>
-    <ex:time_stamp>2018-06-22T12:00:00</ex:time_stamp> <ex:author>Nicholas Nisbet</ex:author>
-    <ex:organization>AEC3 UK Ltd</ex:organization>
-    <ex:preprocessor_version>_fromSmartCE.ifcxml.xsl v2018-06-22</ex:preprocessor_version>
-    <ex:originating_system>_fromSmartCE.ifcxml.xsl v2018-06-22</ex:originating_system>
-    <ex:authorization>Nicholas Nisbet</ex:authorization>
-    <ex:documentation>nn@aec3.com</ex:documentation></ex:iso_10303_28_header>
-    <ifc:uos id="_0" xmlns:ifc="http://www.buildingsmart-tech.org/ifcXML/IFC4/Add2">
-    <!--Project Context-->
-    <IfcProject id="Project1" xmlns="http://www.buildingsmart-tech.org/ifcXML/IFC4/Add2">
-      <GlobalId>0topProject00000000000</GlobalId>
-      <OwnerHistory>
-        <IfcOwnerHistory xsi:nil="true" ref="oh1" />
-      </OwnerHistory>
-      <Name>ProjectContext</Name>
-      <Description>Project Context</Description>
-      <RepresentationContexts>
-        <IfcGeometricRepresentationContext xsi:nil="true" ref="grc1" />
-      </RepresentationContexts>
-      <UnitsInContext>
-        <IfcUnitAssignment>
-          <Units>
-            <IfcSIUnit id="mm">
-              <UnitType>lengthunit</UnitType>
-              <Prefix>milli</Prefix>
-              <Name>metre</Name>
-            </IfcSIUnit>
-            <IfcSIUnit>
-              <UnitType>areaunit</UnitType>
-              <Name>square_metre</Name>
-            </IfcSIUnit>
-            <IfcSIUnit>
-              <UnitType>massunit</UnitType>
-              <Prefix>kilo</Prefix>
-              <Name>gram</Name>
-            </IfcSIUnit>
-            <IfcSIUnit>
-              <UnitType>volumeunit</UnitType>
-              <Name>cubic_metre</Name>
-            </IfcSIUnit>
-            <IfcSIUnit id="radian">
-              <UnitType>planeangleunit</UnitType>
-              <Name>radian</Name>
-            </IfcSIUnit>
-            <IfcSIUnit>
-              <UnitType>solidangleunit</UnitType>
-              <Name>steradian</Name>
-            </IfcSIUnit>
-            <IfcSIUnit>
-              <UnitType>timeunit</UnitType>
-              <Name>second</Name>
-            </IfcSIUnit>
-            <IfcSIUnit>
-              <UnitType>thermodynamictemperatureunit</UnitType>
-              <Name>degree_celsius</Name>
-            </IfcSIUnit>
-            <IfcSIUnit>
-              <UnitType>luminousintensityunit</UnitType>
-              <Name>lumen</Name>
-            </IfcSIUnit>
-          </Units>
-        </IfcUnitAssignment>
-      </UnitsInContext>
-    </IfcProject>
-    <IfcRelAggregates xmlns="http://www.buildingsmart-tech.org/ifcXML/IFC4/Add2">
-      <GlobalId>0topAggregates00000000</GlobalId>
-      <OwnerHistory>
-        <IfcOwnerHistory xsi:nil="true" ref="oh1" />
-      </OwnerHistory>
-      <Name>AggregatesContext</Name>
-      <Description>Aggregates Context</Description>
-      <RelatingObject>
-        <IfcProject ref="Project1" xsi:nil="true" />
-      </RelatingObject>
-      <RelatedObjects>
-        <IfcSite ref="Site1" xsi:nil="true" />
-      </RelatedObjects>
-    </IfcRelAggregates>
-    <!--End of Structure-->
-    <!--Site Context-->
-    <IfcSite id="Site1" xmlns="http://www.buildingsmart-tech.org/ifcXML/IFC4/Add2">
-      <GlobalId>0topSite00000000000000</GlobalId>
-      <OwnerHistory>
-        <IfcOwnerHistory xsi:nil="true" ref="oh1" />
-      </OwnerHistory>
-      <Name>SiteContext</Name>
-      <Description>Site Context</Description>
-      <ObjectPlacement>
-        <IfcLocalPlacement id="Site1_placement">
-          <RelativePlacement>
-            <IfcAxis2Placement3D xsi:nil="true" ref="original_axis" />
-          </RelativePlacement>
-        </IfcLocalPlacement>
-      </ObjectPlacement>
-      <CompositionType>element</CompositionType>
-    </IfcSite>
-    <IfcRelAggregates xmlns="http://www.buildingsmart-tech.org/ifcXML/IFC4/Add2">
-      <GlobalId>0topAggregates00000000</GlobalId>
-      <OwnerHistory>
-        <IfcOwnerHistory xsi:nil="true" ref="oh1" />
-      </OwnerHistory>
-      <Name>AggregatesContext</Name>
-      <Description>Aggregates Context</Description>
-      <RelatingObject>
-        <IfcSite ref="Site1" xsi:nil="true" />
-      </RelatingObject>
-      <RelatedObjects>
-        <IfcBuilding ref="Building1" xsi:nil="true" />
-      </RelatedObjects>
-    </IfcRelAggregates>
-    <!--End of Structure-->
-    <!--Building Context-->
-    <IfcBuilding id="Building1" xmlns="http://www.buildingsmart-tech.org/ifcXML/IFC4/Add2">
-      <GlobalId>0topBuilding0000000000</GlobalId>
-      <OwnerHistory>
-        <IfcOwnerHistory xsi:nil="true" ref="oh1" />
-      </OwnerHistory>
-      <Name>BuildingContext</Name>
-      <Description>Building Context</Description>
-      <ObjectPlacement>
-        <IfcLocalPlacement id="Building1_placement">
-          <PlacementRelTo>
-            <IfcLocalPlacement xsi:nil="true" ref="Site1_placement" />
-          </PlacementRelTo>
-          <RelativePlacement>
-            <IfcAxis2Placement3D xsi:nil="true" ref="original_axis" />
-          </RelativePlacement>
-        </IfcLocalPlacement>
-      </ObjectPlacement>
-      <CompositionType>element</CompositionType>
-    </IfcBuilding>
-    <IfcRelAggregates xmlns="http://www.buildingsmart-tech.org/ifcXML/IFC4/Add2">
-      <GlobalId>0topAggregates00000000</GlobalId>
-      <OwnerHistory>
-        <IfcOwnerHistory xsi:nil="true" ref="oh1" />
-      </OwnerHistory>
-      <Name>AggregatesContext</Name>
-      <Description>Aggregates Context</Description>
-      <RelatingObject>
-        <IfcBuilding ref="Building1" xsi:nil="true" />
-      </RelatingObject>
-      <RelatedObjects>
-        <IfcBuildingStorey ref="BuildingStorey1" xsi:nil="true" />
-      </RelatedObjects>
-    </IfcRelAggregates>
-    <!--End of Structure-->
-    <!--BuildingStorey Context-->
-    <IfcBuildingStorey id="BuildingStorey1" xmlns="http://www.buildingsmart-tech.org/ifcXML/IFC4/Add2">
-      <GlobalId>0topBuildingStorey0000</GlobalId>
-      <OwnerHistory>
-        <IfcOwnerHistory xsi:nil="true" ref="oh1" />
-      </OwnerHistory>
-      <Name>BuildingStoreyContext</Name>
-      <Description>BuildingStorey Context</Description>
-      <ObjectPlacement>
-        <IfcLocalPlacement id="BuildingStorey1_placement">
-          <PlacementRelTo>
-            <IfcLocalPlacement xsi:nil="true" ref="Building1_placement" />
-          </PlacementRelTo>
-          <RelativePlacement>
-            <IfcAxis2Placement3D xsi:nil="true" ref="original_axis" />
-          </RelativePlacement>
-        </IfcLocalPlacement>
-      </ObjectPlacement>
-      <CompositionType>element</CompositionType>
-    </IfcBuildingStorey>
-    <IfcRelAggregates xmlns="http://www.buildingsmart-tech.org/ifcXML/IFC4/Add2">
-      <GlobalId>0topAggregates00000000</GlobalId>
-      <OwnerHistory>
-        <IfcOwnerHistory xsi:nil="true" ref="oh1" />
-      </OwnerHistory>
-      <Name>AggregatesContext</Name>
-      <Description>Aggregates Context</Description>
-      <RelatingObject>
-        <IfcBuildingStorey ref="BuildingStorey1" xsi:nil="true" />
-      </RelatingObject>
-      <RelatedObjects>
-        <IfcSpace ref="Space1" xsi:nil="true" />
-      </RelatedObjects>
-    </IfcRelAggregates>
-    <!--End of Structure-->
-    <!--Space Context-->
-    <IfcSpace id="Space1" xmlns="http://www.buildingsmart-tech.org/ifcXML/IFC4/Add2">
-      <GlobalId>0topSpace0000000000000</GlobalId>
-      <OwnerHistory>
-        <IfcOwnerHistory xsi:nil="true" ref="oh1" />
-      </OwnerHistory>
-      <Name>SpaceContext</Name>
-      <Description>Space Context</Description>
-      <ObjectPlacement>
-        <IfcLocalPlacement id="Space1_placement">
-          <PlacementRelTo>
-            <IfcLocalPlacement xsi:nil="true" ref="BuildingStorey1_placement" />
-          </PlacementRelTo>
-          <RelativePlacement>
-            <IfcAxis2Placement3D xsi:nil="true" ref="original_axis" />
-          </RelativePlacement>
-        </IfcLocalPlacement>
-      </ObjectPlacement>
-      <CompositionType>element</CompositionType>
-      <InteriorOrExteriorSpace>internal</InteriorOrExteriorSpace>
-    </IfcSpace>
-    <IfcRelContainedInSpatialStructure xmlns="http://www.buildingsmart-tech.org/ifcXML/IFC4/Add2">
-      <GlobalId>0topContains0000000000</GlobalId>
-      <OwnerHistory>
-        <IfcOwnerHistory xsi:nil="true" ref="oh1" />
-      </OwnerHistory>
-      <Name>ContainsContext</Name>
-      <Description>Contains Context</Description>
-      <RelatedElements>
-        <IfcBuildingElementProxy ref="BuildingElementProxy1" xsi:nil="true" />
-      </RelatedElements>
-      <RelatingStructure>
-        <IfcSpace ref="Space1" xsi:nil="true" />
-      </RelatingStructure>
-    </IfcRelContainedInSpatialStructure>
-    <!--End of Structure-->
-    <!--BuildingElementProxy Context-->
-    <IfcBuildingElementProxy id="BuildingElementProxy1" xmlns="http://www.buildingsmart-tech.org/ifcXML/IFC4/Add2">
-      <GlobalId>0topBuildingElementPro</GlobalId>
-      <OwnerHistory>
-        <IfcOwnerHistory xsi:nil="true" ref="oh0" />
-      </OwnerHistory>
-      <Name>Manufacturer_BuildingElementProxy_ABC123</Name>
-      <Description>In protected masonry walls, columns and partitions</Description>
-      <ObjectPlacement>
-        <IfcLocalPlacement id="BuildingElementProxy1_placement">
-          <PlacementRelTo>
-            <IfcLocalPlacement xsi:nil="true" ref="Space1_placement" />
-          </PlacementRelTo>
-          <RelativePlacement>
-            <IfcAxis2Placement3D xsi:nil="true" ref="original_axis" />
-          </RelativePlacement>
-        </IfcLocalPlacement>
-      </ObjectPlacement>
-      <CompositionType>element</CompositionType>
-    </IfcBuildingElementProxy>
-    <IfcRelDefinesByType xmlns="http://www.buildingsmart-tech.org/ifcXML/IFC4/Add2">
-      <GlobalId>0topDefines00000000000</GlobalId>
-      <OwnerHistory>
-        <IfcOwnerHistory xsi:nil="true" ref="oh1" />
-      </OwnerHistory>
-      <Name>DefinesContext</Name>
-      <Description>Defines Context</Description>
-      <RelatedObjects>
-        <IfcBuildingElementProxy ref="BuildingElementProxy1" xsi:nil="true" />
-      </RelatedObjects>
-      <RelatingType>
-        <IfcBuildingElementProxyType ref="BuildingElementProxyType1" xsi:nil="true" />
-      </RelatingType>
-    </IfcRelDefinesByType>
-    <IfcRelDefinesByProperties xmlns="http://www.buildingsmart-tech.org/ifcXML/IFC4/Add2">
-      <GlobalId>0topQuantifies00000000</GlobalId>
-      <OwnerHistory>
-        <IfcOwnerHistory xsi:nil="true" ref="oh1" />
-      </OwnerHistory>
-      <Name>QuantifiesContext</Name>
-      <Description>Quantifies Context</Description>
-      <RelatedObjects ex:cType="set">
-        <IfcBuildingElementProxy ref="BuildingElementProxy1" xsi:nil="true" />
-      </RelatedObjects>
-      <RelatingPropertyDefinition>
-        <IfcElementQuantity xsi:nil="true" ref="quantities1" />
-      </RelatingPropertyDefinition>
-    </IfcRelDefinesByProperties>
-    <!--End of Structure-->
-    <!--BuildingElementProxyType Context-->
-    <IfcBuildingElementProxyType id="BuildingElementProxyType1" xmlns="http://www.buildingsmart-tech.org/ifcXML/IFC4/Add2">
-      <GlobalId>0topBuildingElementPro</GlobalId>
-      <OwnerHistory>
-        <IfcOwnerHistory xsi:nil="true" ref="oh0" />
-      </OwnerHistory>
-      <Name>Manufacturer_BuildingElementProxy_ABC123</Name>
-      <Description>In protected masonry walls, columns and partitions</Description>
-      <ApplicableOccurrence>unset</ApplicableOccurrence>
-      <HasPropertySets>
-        <IfcElementQuantity id="quantities1">
-          <GlobalId>0topElementQuantity000</GlobalId>
-          <OwnerHistory>
-            <IfcOwnerHistory xsi:nil="true" ref="oh0" />
-          </OwnerHistory>
-          <Name>BaseQuantities</Name>
-          <Description>Base Quantities</Description>
-          <Quantities ex:cType="set">
-            <IfcQuantityLength>
-              <Name>Length</Name>
-              <Description>length measured in geometry</Description>
-              <LengthValue>240</LengthValue>
-            </IfcQuantityLength>
-            <IfcQuantityLength>
-              <Name>Width</Name>
-              <Description>width measured in geometry</Description>
-              <LengthValue>115</LengthValue>
-            </IfcQuantityLength>
-            <IfcQuantityLength>
-              <Name>Height</Name>
-              <Description>height measured in geometry</Description>
-              <LengthValue>113</LengthValue>
-            </IfcQuantityLength>
-            <IfcQuantityVolume>
-              <Name>GrossVolume</Name>
-              <Description>Volume measured in geometry</Description>
-              <VolumeValue>0.0031188</VolumeValue>
-            </IfcQuantityVolume>
-            <IfcQuantityWeight>
-              <Name>GrossWeight</Name>
-              <Description>Weight measured in geometry</Description>
-              <WeightValue>4.693794</WeightValue>
-            </IfcQuantityWeight>
-          </Quantities>
-        </IfcElementQuantity>
-        <!--DeclarationOfPerformance : Joe Boss : -->
-        <IfcPropertySet>
-          <GlobalId>0topPropertySet0000000</GlobalId>
-          <OwnerHistory>
-            <IfcOwnerHistory xsi:nil="true" ref="oh2" />
-          </OwnerHistory>
-          <Name>CPR_</Name>
-          <Description>Essential Characteristic </Description>
-          <HasProperties>
-            <!--TemplateId :  : -->
-            <IfcPropertySingleValue>
-              <Name>TemplateId</Name>
-              <Description>TemplateId singleton</Description>
-              <NominalValue>
-                <IfcText>EN_771-2:2011+A1:2015</IfcText>
-              </NominalValue>
-            </IfcPropertySingleValue>
-            <!--DoPNumber :  : -->
-            <IfcPropertySingleValue>
-              <Name>DoPNumber</Name>
-              <Description>DoPNumber singleton</Description>
-              <NominalValue>
-                <IfcText>ABC123</IfcText>
-              </NominalValue>
-            </IfcPropertySingleValue>
-            <!--SystemsOfAVCP :  : -->
-            <IfcComplexProperty>
-              <Name>SystemsOfAVCP</Name>
-              <Description>SystemsOfAVCP otherwise</Description>
-              <UsageName>SystemsOfAVCP</UsageName>
-              <HasProperties>
-                <!--AVCP :  : -->
-                <IfcPropertyEnumeratedValue>
-                  <Name>AVCP</Name>
-                  <Description>AVCP attestation</Description>
-                  <EnumerationValues>
-                    <IfcLabel>2+</IfcLabel>
-                  </EnumerationValues>
-                  <EnumerationReference>
-                    <IfcPropertyEnumeration ref="pe_avcp" xsi:nil="true" />
-                  </EnumerationReference>
-                </IfcPropertyEnumeratedValue>
-              </HasProperties>
-            </IfcComplexProperty>
-            <!--HarmonisedStandard :  : -->
-            <IfcPropertySingleValue>
-              <Name>HarmonisedStandard</Name>
-              <Description>HarmonisedStandard singleton</Description>
-              <NominalValue>
-                <IfcText>EN 771-2:2011+A1:2015</IfcText>
-              </NominalValue>
-            </IfcPropertySingleValue>
-            <!--EuropeanAssessmentDocument :  : -->
-            <!--EuropeanTechnicalAssessment :  : -->
-            <!--TechnicalAssessmentBody :  : -->
-            <!--NotifiedBodies :  : -->
-            <IfcComplexProperty>
-              <Name>NotifiedBodies</Name>
-              <Description>NotifiedBodies otherwise</Description>
-              <UsageName>NotifiedBodies</UsageName>
-              <HasProperties>
-                <!--NB :  : -->
-                <IfcComplexProperty>
-                  <Name>NB</Name>
-                  <Description>NB otherwise</Description>
-                  <UsageName>NB</UsageName>
-                  <HasProperties>
-                    <!--NBName :  : -->
-                    <IfcPropertySingleValue>
-                      <Name>NBName</Name>
-                      <Description>NBName singleton</Description>
-                      <NominalValue>
-                        <IfcText>NB1 name</IfcText>
-                      </NominalValue>
-                    </IfcPropertySingleValue>
-                    <!--NBNumber :  : -->
-                    <IfcPropertySingleValue>
-                      <Name>NBNumber</Name>
-                      <Description>NBNumber singleton</Description>
-                      <NominalValue>
-                        <IfcText>NB1 number</IfcText>
-                      </NominalValue>
-                    </IfcPropertySingleValue>
-                  </HasProperties>
-                </IfcComplexProperty>
-              </HasProperties>
-            </IfcComplexProperty>
-            <!--AppropriateTechnicalDocumentation :  : -->
-            <IfcComplexProperty>
-              <Name>AppropriateTechnicalDocumentation</Name>
-              <Description>AppropriateTechnicalDocumentation otherwise</Description>
-              <UsageName>AppropriateTechnicalDocumentation</UsageName>
-              <HasProperties>
-                <!--ATD :  : -->
-                <IfcComplexProperty>
-                  <Name>ATD</Name>
-                  <Description>ATD otherwise</Description>
-                  <UsageName>ATD</UsageName>
-                  <HasProperties>
-                    <!--ATDReferenceNumber :  : -->
-                    <IfcPropertySingleValue>
-                      <Name>ATDReferenceNumber</Name>
-                      <Description>ATDReferenceNumber singleton</Description>
-                      <NominalValue>
-                        <IfcText>999</IfcText>
-                      </NominalValue>
-                    </IfcPropertySingleValue>
-                    <!--ATDRequirements :  : -->
-                    <IfcPropertySingleValue>
-                      <Name>ATDRequirements</Name>
-                      <Description>ATDRequirements singleton</Description>
-                      <NominalValue>
-                        <IfcText>ATD.pdf</IfcText>
-                      </NominalValue>
-                    </IfcPropertySingleValue>
-                  </HasProperties>
-                </IfcComplexProperty>
-              </HasProperties>
-            </IfcComplexProperty>
-            <!--SpecificTechnicalDocumentation :  : -->
-            <IfcComplexProperty>
-              <Name>SpecificTechnicalDocumentation</Name>
-              <Description>SpecificTechnicalDocumentation otherwise</Description>
-              <UsageName>SpecificTechnicalDocumentation</UsageName>
-              <HasProperties>
-                <!--STD :  : -->
-                <IfcComplexProperty>
-                  <Name>STD</Name>
-                  <Description>STD otherwise</Description>
-                  <UsageName>STD</UsageName>
-                  <HasProperties>
-                    <!--STDReferenceNumber :  : -->
-                    <IfcPropertySingleValue>
-                      <Name>STDReferenceNumber</Name>
-                      <Description>STDReferenceNumber singleton</Description>
-                      <NominalValue>
-                        <IfcText>888</IfcText>
-                      </NominalValue>
-                    </IfcPropertySingleValue>
-                    <!--STDRequirements :  : -->
-                    <IfcPropertySingleValue>
-                      <Name>STDRequirements</Name>
-                      <Description>STDRequirements singleton</Description>
-                      <NominalValue>
-                        <IfcText>STD.pdf</IfcText>
-                      </NominalValue>
-                    </IfcPropertySingleValue>
-                  </HasProperties>
-                </IfcComplexProperty>
-              </HasProperties>
-            </IfcComplexProperty>
-            <!--Statement :  : -->
-            <IfcPropertySingleValue>
-              <Name>Statement</Name>
-              <Description>Statement singleton</Description>
-              <NominalValue>
-                <IfcText>The performance of the product identified above is in conformity with the set of declared performance/s. This declaration of performance is issued, in accordance with Regulation (EU) No 305/2011, under the sole responsibility of the manufacturer identified above. </IfcText>
-              </NominalValue>
-            </IfcPropertySingleValue>
-            <!--Name :  : -->
-            <IfcPropertySingleValue>
-              <Name>Name</Name>
-              <Description>Name singleton</Description>
-              <NominalValue>
-                <IfcText>Joe Boss</IfcText>
-              </NominalValue>
-            </IfcPropertySingleValue>
-            <!--Place :  : -->
-            <IfcPropertySingleValue>
-              <Name>Place</Name>
-              <Description>Place singleton</Description>
-              <NominalValue>
-                <IfcText>Brussels</IfcText>
-              </NominalValue>
-            </IfcPropertySingleValue>
-            <!--Date :  : -->
-            <IfcPropertySingleValue>
-              <Name>Date</Name>
-              <Description>Date singleton</Description>
-              <NominalValue>
-                <IfcText>2018-06-22</IfcText>
-              </NominalValue>
-            </IfcPropertySingleValue>
-            <!--Signature :  : -->
-            <IfcPropertySingleValue>
-              <Name>Signature</Name>
-              <Description>Signature singleton</Description>
-              <NominalValue>
-                <IfcText>JB</IfcText>
-              </NominalValue>
-            </IfcPropertySingleValue>
-            <!--InstructionsAndSafetyInformation :  : -->
-            <IfcComplexProperty>
-              <Name>InstructionsAndSafetyInformation</Name>
-              <Description>InstructionsAndSafetyInformation otherwise</Description>
-              <UsageName>InstructionsAndSafetyInformation</UsageName>
-              <HasProperties>
-                <!--Link :  : -->
-                <IfcPropertySingleValue>
-                  <Name>Link</Name>
-                  <Description>Link singleton</Description>
-                  <NominalValue>
-                    <IfcText>ISI.pdf</IfcText>
-                  </NominalValue>
-                </IfcPropertySingleValue>
-              </HasProperties>
-            </IfcComplexProperty>
-            <!--DoPLink :  : -->
-            <IfcPropertySingleValue>
-              <Name>DoPLink</Name>
-              <Description>DoPLink singleton</Description>
-              <NominalValue>
-                <IfcText>DoP.pdf</IfcText>
-              </NominalValue>
-            </IfcPropertySingleValue>
-          </HasProperties>
-        </IfcPropertySet>
-        <!--EssentialCharacteristic : Dimensions and dimensional tolerances : -->
-        <IfcPropertySet>
-          <GlobalId>0topPropertySet0000000</GlobalId>
-          <OwnerHistory>
-            <IfcOwnerHistory xsi:nil="true" ref="oh2" />
-          </OwnerHistory>
-          <Name>CPR_Dimensions_and_dimensional_tolerances</Name>
-          <Description>Essential Characteristic Dimensions and dimensional tolerances</Description>
-          <HasProperties>
-            <!--Property : Dimensions : -->
-            <IfcComplexProperty>
-              <Name>Dimensions</Name>
-              <Description>Dimensions</Description>
-              <UsageName>Dimensions</UsageName>
-              <HasProperties>
-                <!--Property : length : -->
-                <IfcComplexProperty>
-                  <Name>length</Name>
-                  <Description>length</Description>
-                  <UsageName>length</UsageName>
-                  <HasProperties>
-                    <!--Declaration : value : 240-->
-                    <IfcPropertySingleValue>
-                      <Name>length</Name>
-                      <Description>length value</Description>
-                      <NominalValue>
-                        <IfcLengthMeasure>240</IfcLengthMeasure>
-                      </NominalValue>
-                      <Unit>
-                        <IfcSIUnit xsi:nil="true" ref="mm" />
-                      </Unit>
-                    </IfcPropertySingleValue>
-                    <IfcPropertySingleValue>
-                      <Name>Relation</Name>
-                      <Description>Value Relation</Description>
-                      <NominalValue>
-                        <IfcLabel>equal to</IfcLabel>
-                      </NominalValue>
-                    </IfcPropertySingleValue>
-                    <IfcPropertySingleValue>
-                      <Name>ReferenceDocument</Name>
-                      <Description>reference Document</Description>
-                      <NominalValue>
-                        <IfcLabel>EN 772-16</IfcLabel>
-                      </NominalValue>
-                    </IfcPropertySingleValue>
-                  </HasProperties>
-                </IfcComplexProperty>
-                <!--Property : height : -->
-                <IfcComplexProperty>
-                  <Name>height</Name>
-                  <Description>height</Description>
-                  <UsageName>height</UsageName>
-                  <HasProperties>
-                    <!--Declaration : value : 113-->
-                    <IfcPropertySingleValue>
-                      <Name>height</Name>
-                      <Description>height value</Description>
-                      <NominalValue>
-                        <IfcLengthMeasure>113</IfcLengthMeasure>
-                      </NominalValue>
-                      <Unit>
-                        <IfcSIUnit xsi:nil="true" ref="mm" />
-                      </Unit>
-                    </IfcPropertySingleValue>
-                    <IfcPropertySingleValue>
-                      <Name>Relation</Name>
-                      <Description>Value Relation</Description>
-                      <NominalValue>
-                        <IfcLabel>equal to</IfcLabel>
-                      </NominalValue>
-                    </IfcPropertySingleValue>
-                    <IfcPropertySingleValue>
-                      <Name>ReferenceDocument</Name>
-                      <Description>reference Document</Description>
-                      <NominalValue>
-                        <IfcLabel>EN 772-16</IfcLabel>
-                      </NominalValue>
-                    </IfcPropertySingleValue>
-                  </HasProperties>
-                </IfcComplexProperty>
-                <!--Property : width : -->
-                <IfcComplexProperty>
-                  <Name>width</Name>
-                  <Description>width</Description>
-                  <UsageName>width</UsageName>
-                  <HasProperties>
-                    <!--Declaration : value : 115-->
-                    <IfcPropertySingleValue>
-                      <Name>width</Name>
-                      <Description>width value</Description>
-                      <NominalValue>
-                        <IfcLengthMeasure>115</IfcLengthMeasure>
-                      </NominalValue>
-                      <Unit>
-                        <IfcSIUnit xsi:nil="true" ref="mm" />
-                      </Unit>
-                    </IfcPropertySingleValue>
-                    <IfcPropertySingleValue>
-                      <Name>Relation</Name>
-                      <Description>Value Relation</Description>
-                      <NominalValue>
-                        <IfcLabel>equal to</IfcLabel>
-                      </NominalValue>
-                    </IfcPropertySingleValue>
-                    <IfcPropertySingleValue>
-                      <Name>ReferenceDocument</Name>
-                      <Description>reference Document</Description>
-                      <NominalValue>
-                        <IfcLabel>EN 772-16</IfcLabel>
-                      </NominalValue>
-                    </IfcPropertySingleValue>
-                  </HasProperties>
-                </IfcComplexProperty>
-                <!--Property : AVCP : -->
-                <!--Declaration : system : 2+-->
-                <IfcPropertyEnumeratedValue>
-                  <Name>AVCP</Name>
-                  <Description>AVCP attestation</Description>
-                  <EnumerationValues>
-                    <IfcLabel>2+</IfcLabel>
-                  </EnumerationValues>
-                  <EnumerationReference>
-                    <IfcPropertyEnumeration ref="pe_avcp" xsi:nil="true" />
-                  </EnumerationReference>
-                </IfcPropertyEnumeratedValue>
-              </HasProperties>
-            </IfcComplexProperty>
-            <!--Property : Dimensional tolerances : -->
-            <IfcComplexProperty>
-              <Name>Dimensional tolerances</Name>
-              <Description>Dimensional tolerances</Description>
-              <UsageName>Dimensional tolerances</UsageName>
-              <HasProperties>
-                <!--Property : tolerance category : -->
-                <IfcComplexProperty>
-                  <Name>tolerance category</Name>
-                  <Description>tolerance category</Description>
-                  <UsageName>tolerance category</UsageName>
-                  <HasProperties>
-                    <!--Declaration : category : T1-->
-                    <IfcPropertySingleValue>
-                      <Name>tolerance category</Name>
-                      <Description>tolerance category category</Description>
-                      <NominalValue>
-                        <IfcText>T1</IfcText>
-                      </NominalValue>
-                    </IfcPropertySingleValue>
-                    <IfcPropertySingleValue>
-                      <Name>Relation</Name>
-                      <Description>Value Relation</Description>
-                      <NominalValue>
-                        <IfcLabel>category</IfcLabel>
-                      </NominalValue>
-                    </IfcPropertySingleValue>
-                    <IfcPropertySingleValue>
-                      <Name>ReferenceDocument</Name>
-                      <Description>reference Document</Description>
-                      <NominalValue>
-                        <IfcLabel>EN 772-1</IfcLabel>
-                      </NominalValue>
-                    </IfcPropertySingleValue>
-                  </HasProperties>
-                </IfcComplexProperty>
-                <!--Property : mean height of sample : -->
-                <IfcComplexProperty>
-                  <Name>mean height of sample</Name>
-                  <Description>mean height of sample</Description>
-                  <UsageName>mean height of sample</UsageName>
-                  <HasProperties>
-                    <!--Declaration : value : -->
-                    <IfcPropertySingleValue>
-                      <Name>mean height of sample</Name>
-                      <Description>mean height of sample value</Description>
-                      <NominalValue>
-                        <IfcText>NPD</IfcText>
-                      </NominalValue>
-                    </IfcPropertySingleValue>
-                    <IfcPropertySingleValue>
-                      <Name>Relation</Name>
-                      <Description>Value Relation</Description>
-                      <NominalValue>
-                        <IfcLabel>plus minus</IfcLabel>
-                      </NominalValue>
-                    </IfcPropertySingleValue>
-                    <IfcPropertySingleValue>
-                      <Name>ReferenceDocument</Name>
-                      <Description>reference Document</Description>
-                      <NominalValue>
-                        <IfcLabel>EN 772-16</IfcLabel>
-                      </NominalValue>
-                    </IfcPropertySingleValue>
-                  </HasProperties>
-                </IfcComplexProperty>
-                <!--Property : mean length of sample : -->
-                <IfcComplexProperty>
-                  <Name>mean length of sample</Name>
-                  <Description>mean length of sample</Description>
-                  <UsageName>mean length of sample</UsageName>
-                  <HasProperties>
-                    <!--Declaration : value : -->
-                    <IfcPropertySingleValue>
-                      <Name>mean length of sample</Name>
-                      <Description>mean length of sample value</Description>
-                      <NominalValue>
-                        <IfcText>NPD</IfcText>
-                      </NominalValue>
-                    </IfcPropertySingleValue>
-                    <IfcPropertySingleValue>
-                      <Name>Relation</Name>
-                      <Description>Value Relation</Description>
-                      <NominalValue>
-                        <IfcLabel>plus minus</IfcLabel>
-                      </NominalValue>
-                    </IfcPropertySingleValue>
-                    <IfcPropertySingleValue>
-                      <Name>ReferenceDocument</Name>
-                      <Description>reference Document</Description>
-                      <NominalValue>
-                        <IfcLabel>EN 772-16</IfcLabel>
-                      </NominalValue>
-                    </IfcPropertySingleValue>
-                  </HasProperties>
-                </IfcComplexProperty>
-                <!--Property : mean width of sample : -->
-                <IfcComplexProperty>
-                  <Name>mean width of sample</Name>
-                  <Description>mean width of sample</Description>
-                  <UsageName>mean width of sample</UsageName>
-                  <HasProperties>
-                    <!--Declaration : value : -->
-                    <IfcPropertySingleValue>
-                      <Name>mean width of sample</Name>
-                      <Description>mean width of sample value</Description>
-                      <NominalValue>
-                        <IfcText>NPD</IfcText>
-                      </NominalValue>
-                    </IfcPropertySingleValue>
-                    <IfcPropertySingleValue>
-                      <Name>Relation</Name>
-                      <Description>Value Relation</Description>
-                      <NominalValue>
-                        <IfcLabel>plus minus</IfcLabel>
-                      </NominalValue>
-                    </IfcPropertySingleValue>
-                    <IfcPropertySingleValue>
-                      <Name>ReferenceDocument</Name>
-                      <Description>reference Document</Description>
-                      <NominalValue>
-                        <IfcLabel>EN 772-16</IfcLabel>
-                      </NominalValue>
-                    </IfcPropertySingleValue>
-                  </HasProperties>
-                </IfcComplexProperty>
-                <!--Property : individual height : -->
-                <IfcComplexProperty>
-                  <Name>individual height</Name>
-                  <Description>individual height</Description>
-                  <UsageName>individual height</UsageName>
-                  <HasProperties>
-                    <!--Declaration : value : -->
-                    <IfcPropertySingleValue>
-                      <Name>individual height</Name>
-                      <Description>individual height value</Description>
-                      <NominalValue>
-                        <IfcText>NPD</IfcText>
-                      </NominalValue>
-                    </IfcPropertySingleValue>
-                    <IfcPropertySingleValue>
-                      <Name>Relation</Name>
-                      <Description>Value Relation</Description>
-                      <NominalValue>
-                        <IfcLabel>plus minus</IfcLabel>
-                      </NominalValue>
-                    </IfcPropertySingleValue>
-                    <IfcPropertySingleValue>
-                      <Name>ReferenceDocument</Name>
-                      <Description>reference Document</Description>
-                      <NominalValue>
-                        <IfcLabel>EN 772-16</IfcLabel>
-                      </NominalValue>
-                    </IfcPropertySingleValue>
-                  </HasProperties>
-                </IfcComplexProperty>
-                <!--Property : individual length : -->
-                <IfcComplexProperty>
-                  <Name>individual length</Name>
-                  <Description>individual length</Description>
-                  <UsageName>individual length</UsageName>
-                  <HasProperties>
-                    <!--Declaration : value : -->
-                    <IfcPropertySingleValue>
-                      <Name>individual length</Name>
-                      <Description>individual length value</Description>
-                      <NominalValue>
-                        <IfcText>NPD</IfcText>
-                      </NominalValue>
-                    </IfcPropertySingleValue>
-                    <IfcPropertySingleValue>
-                      <Name>Relation</Name>
-                      <Description>Value Relation</Description>
-                      <NominalValue>
-                        <IfcLabel>plus minus</IfcLabel>
-                      </NominalValue>
-                    </IfcPropertySingleValue>
-                    <IfcPropertySingleValue>
-                      <Name>ReferenceDocument</Name>
-                      <Description>reference Document</Description>
-                      <NominalValue>
-                        <IfcLabel>EN 772-16</IfcLabel>
-                      </NominalValue>
-                    </IfcPropertySingleValue>
-                  </HasProperties>
-                </IfcComplexProperty>
-                <!--Property : individual width : -->
-                <IfcComplexProperty>
-                  <Name>individual width</Name>
-                  <Description>individual width</Description>
-                  <UsageName>individual width</UsageName>
-                  <HasProperties>
-                    <!--Declaration : value : -->
-                    <IfcPropertySingleValue>
-                      <Name>individual width</Name>
-                      <Description>individual width value</Description>
-                      <NominalValue>
-                        <IfcText>NPD</IfcText>
-                      </NominalValue>
-                    </IfcPropertySingleValue>
-                    <IfcPropertySingleValue>
-                      <Name>Relation</Name>
-                      <Description>Value Relation</Description>
-                      <NominalValue>
-                        <IfcLabel>plus minus</IfcLabel>
-                      </NominalValue>
-                    </IfcPropertySingleValue>
-                    <IfcPropertySingleValue>
-                      <Name>ReferenceDocument</Name>
-                      <Description>reference Document</Description>
-                      <NominalValue>
-                        <IfcLabel>EN 772-16</IfcLabel>
-                      </NominalValue>
-                    </IfcPropertySingleValue>
-                  </HasProperties>
-                </IfcComplexProperty>
-                <!--Property : flatness of bed faces : -->
-                <IfcComplexProperty>
-                  <Name>flatness of bed faces</Name>
-                  <Description>flatness of bed faces</Description>
-                  <UsageName>flatness of bed faces</UsageName>
-                  <HasProperties>
-                    <!--Declaration : value : -->
-                    <IfcPropertySingleValue>
-                      <Name>flatness of bed faces</Name>
-                      <Description>flatness of bed faces value</Description>
-                      <NominalValue>
-                        <IfcText>NPD</IfcText>
-                      </NominalValue>
-                    </IfcPropertySingleValue>
-                    <IfcPropertySingleValue>
-                      <Name>Relation</Name>
-                      <Description>Value Relation</Description>
-                      <NominalValue>
-                        <IfcLabel>less than or equal to</IfcLabel>
-                      </NominalValue>
-                    </IfcPropertySingleValue>
-                    <IfcPropertySingleValue>
-                      <Name>ReferenceDocument</Name>
-                      <Description>reference Document</Description>
-                      <NominalValue>
-                        <IfcLabel>EN 772-20</IfcLabel>
-                      </NominalValue>
-                    </IfcPropertySingleValue>
-                  </HasProperties>
-                </IfcComplexProperty>
-                <!--Property : plane parallelism of bed face : -->
-                <IfcComplexProperty>
-                  <Name>plane parallelism of bed face</Name>
-                  <Description>plane parallelism of bed face</Description>
-                  <UsageName>plane parallelism of bed face</UsageName>
-                  <HasProperties>
-                    <!--Declaration : value : -->
-                    <IfcPropertySingleValue>
-                      <Name>plane parallelism of bed face</Name>
-                      <Description>plane parallelism of bed face value</Description>
-                      <NominalValue>
-                        <IfcText>NPD</IfcText>
-                      </NominalValue>
-                    </IfcPropertySingleValue>
-                    <IfcPropertySingleValue>
-                      <Name>Relation</Name>
-                      <Description>Value Relation</Description>
-                      <NominalValue>
-                        <IfcLabel>less than or equal to</IfcLabel>
-                      </NominalValue>
-                    </IfcPropertySingleValue>
-                    <IfcPropertySingleValue>
-                      <Name>ReferenceDocument</Name>
-                      <Description>reference Document</Description>
-                      <NominalValue>
-                        <IfcLabel>EN 772-16</IfcLabel>
-                      </NominalValue>
-                    </IfcPropertySingleValue>
-                  </HasProperties>
-                </IfcComplexProperty>
-                <!--Property : AVCP : -->
-                <!--Declaration : system : 2+-->
-                <IfcPropertyEnumeratedValue>
-                  <Name>AVCP</Name>
-                  <Description>AVCP attestation</Description>
-                  <EnumerationValues>
-                    <IfcLabel>2+</IfcLabel>
-                  </EnumerationValues>
-                  <EnumerationReference>
-                    <IfcPropertyEnumeration ref="pe_avcp" xsi:nil="true" />
-                  </EnumerationReference>
-                </IfcPropertyEnumeratedValue>
-              </HasProperties>
-            </IfcComplexProperty>
-          </HasProperties>
-        </IfcPropertySet>
-        <!--EssentialCharacteristic : Configuration : -->
-        <IfcPropertySet>
-          <GlobalId>0topPropertySet0000000</GlobalId>
-          <OwnerHistory>
-            <IfcOwnerHistory xsi:nil="true" ref="oh2" />
-          </OwnerHistory>
-          <Name>CPR_Configuration</Name>
-          <Description>Essential Characteristic Configuration</Description>
-          <HasProperties>
-            <!--Property : Group according to Eurocodes : -->
-            <IfcComplexProperty>
-              <Name>Group according to Eurocodes</Name>
-              <Description>Group according to Eurocodes</Description>
-              <UsageName>Group according to Eurocodes</UsageName>
-              <HasProperties>
-                <!--Property : group according to eurocodes : -->
-                <IfcComplexProperty>
-                  <Name>group according to eurocodes</Name>
-                  <Description>group according to eurocodes</Description>
-                  <UsageName>group according to eurocodes</UsageName>
-                  <HasProperties>
-                    <!--Declaration : group : 1-->
-                    <IfcPropertySingleValue>
-                      <Name>group according to eurocodes</Name>
-                      <Description>group according to eurocodes group</Description>
-                      <NominalValue>
-                        <IfcText>1</IfcText>
-                      </NominalValue>
-                    </IfcPropertySingleValue>
-                    <IfcPropertySingleValue>
-                      <Name>Relation</Name>
-                      <Description>Value Relation</Description>
-                      <NominalValue>
-                        <IfcLabel>category</IfcLabel>
-                      </NominalValue>
-                    </IfcPropertySingleValue>
-                    <IfcPropertySingleValue>
-                      <Name>ReferenceDocument</Name>
-                      <Description>reference Document</Description>
-                      <NominalValue>
-                        <IfcLabel>EN 1996-1-1</IfcLabel>
-                      </NominalValue>
-                    </IfcPropertySingleValue>
-                  </HasProperties>
-                </IfcComplexProperty>
-                <!--Property : AVCP : -->
-                <!--Declaration : system : 2+-->
-                <IfcPropertyEnumeratedValue>
-                  <Name>AVCP</Name>
-                  <Description>AVCP attestation</Description>
-                  <EnumerationValues>
-                    <IfcLabel>2+</IfcLabel>
-                  </EnumerationValues>
-                  <EnumerationReference>
-                    <IfcPropertyEnumeration ref="pe_avcp" xsi:nil="true" />
-                  </EnumerationReference>
-                </IfcPropertyEnumeratedValue>
-              </HasProperties>
-            </IfcComplexProperty>
-            <!--Property : Drawing : -->
-            <IfcComplexProperty>
-              <Name>Drawing</Name>
-              <Description>Drawing</Description>
-              <UsageName>Drawing</UsageName>
-              <HasProperties>
-                <!--Property : drawing : -->
-                <IfcComplexProperty>
-                  <Name>drawing</Name>
-                  <Description>drawing</Description>
-                  <UsageName>drawing</UsageName>
-                  <HasProperties>
-                    <!--Declaration : file : http://.../diagram.jpg-->
-                    <IfcPropertySingleValue>
-                      <Name>drawing</Name>
-                      <Description>drawing file</Description>
-                      <NominalValue>
-                        <IfcText>http://.../diagram.jpg</IfcText>
-                      </NominalValue>
-                    </IfcPropertySingleValue>
-                    <IfcPropertySingleValue>
-                      <Name>Relation</Name>
-                      <Description>Value Relation</Description>
-                      <NominalValue>
-                        <IfcLabel>file</IfcLabel>
-                      </NominalValue>
-                    </IfcPropertySingleValue>
-                    <IfcPropertySingleValue>
-                      <Name>ReferenceDocument</Name>
-                      <Description>reference Document</Description>
-                      <NominalValue>
-                        <IfcLabel>EN 771-2</IfcLabel>
-                      </NominalValue>
-                    </IfcPropertySingleValue>
-                  </HasProperties>
-                </IfcComplexProperty>
-                <!--Property : AVCP : -->
-                <!--Declaration : system : 2+-->
-                <IfcPropertyEnumeratedValue>
-                  <Name>AVCP</Name>
-                  <Description>AVCP attestation</Description>
-                  <EnumerationValues>
-                    <IfcLabel>2+</IfcLabel>
-                  </EnumerationValues>
-                  <EnumerationReference>
-                    <IfcPropertyEnumeration ref="pe_avcp" xsi:nil="true" />
-                  </EnumerationReference>
-                </IfcPropertyEnumeratedValue>
-              </HasProperties>
-            </IfcComplexProperty>
-            <!--Property :  : -->
-            <IfcPropertySingleValue>
-              <Name>Property</Name>
-              <Description>Property singleton</Description>
-              <NominalValue>
-                <IfcText> … </IfcText>
-              </NominalValue>
-            </IfcPropertySingleValue>
-          </HasProperties>
-        </IfcPropertySet>
-        <!--EssentialCharacteristic : Compressive strength : -->
-        <IfcPropertySet>
-          <GlobalId>0topPropertySet0000000</GlobalId>
-          <OwnerHistory>
-            <IfcOwnerHistory xsi:nil="true" ref="oh2" />
-          </OwnerHistory>
-          <Name>CPR_Compressive_strength</Name>
-          <Description>Essential Characteristic Compressive strength</Description>
-          <HasProperties>
-            <!--Property : Perpendicular to bed faces : -->
-            <IfcComplexProperty>
-              <Name>Perpendicular to bed faces</Name>
-              <Description>Perpendicular to bed faces</Description>
-              <UsageName>Perpendicular to bed faces</UsageName>
-              <HasProperties>
-                <!--Property : type of specimen : -->
-                <IfcComplexProperty>
-                  <Name>type of specimen</Name>
-                  <Description>type of specimen</Description>
-                  <UsageName>type of specimen</UsageName>
-                  <HasProperties>
-                    <!--Declaration : type : whole unit-->
-                    <IfcPropertySingleValue>
-                      <Name>type of specimen</Name>
-                      <Description>type of specimen type</Description>
-                      <NominalValue>
-                        <IfcText>whole unit</IfcText>
-                      </NominalValue>
-                    </IfcPropertySingleValue>
-                    <IfcPropertySingleValue>
-                      <Name>Relation</Name>
-                      <Description>Value Relation</Description>
-                      <NominalValue>
-                        <IfcLabel>category</IfcLabel>
-                      </NominalValue>
-                    </IfcPropertySingleValue>
-                    <IfcPropertySingleValue>
-                      <Name>ReferenceDocument</Name>
-                      <Description>reference Document</Description>
-                      <NominalValue>
-                        <IfcLabel>EN 771-2</IfcLabel>
-                      </NominalValue>
-                    </IfcPropertySingleValue>
-                  </HasProperties>
-                </IfcComplexProperty>
-                <!--Property : category : -->
-                <IfcComplexProperty>
-                  <Name>category</Name>
-                  <Description>category</Description>
-                  <UsageName>category</UsageName>
-                  <HasProperties>
-                    <!--Declaration : category : I-->
-                    <IfcPropertySingleValue>
-                      <Name>category</Name>
-                      <Description>category category</Description>
-                      <NominalValue>
-                        <IfcText>I</IfcText>
-                      </NominalValue>
-                    </IfcPropertySingleValue>
-                    <IfcPropertySingleValue>
-                      <Name>Relation</Name>
-                      <Description>Value Relation</Description>
-                      <NominalValue>
-                        <IfcLabel>category</IfcLabel>
-                      </NominalValue>
-                    </IfcPropertySingleValue>
-                    <IfcPropertySingleValue>
-                      <Name>ReferenceDocument</Name>
-                      <Description>reference Document</Description>
-                      <NominalValue>
-                        <IfcLabel>EN 771-2</IfcLabel>
-                      </NominalValue>
-                    </IfcPropertySingleValue>
-                  </HasProperties>
-                </IfcComplexProperty>
-                <!--Property : mean : -->
-                <IfcComplexProperty>
-                  <Name>mean</Name>
-                  <Description>mean</Description>
-                  <UsageName>mean</UsageName>
-                  <HasProperties>
-                    <!--Declaration : value : 18.75-->
-                    <IfcPropertySingleValue>
-                      <Name>mean</Name>
-                      <Description>mean value</Description>
-                      <NominalValue>
-                        <IfcText>18.75</IfcText>
-                      </NominalValue>
-                    </IfcPropertySingleValue>
-                    <IfcPropertySingleValue>
-                      <Name>Relation</Name>
-                      <Description>Value Relation</Description>
-                      <NominalValue>
-                        <IfcLabel>greater than or equal to</IfcLabel>
-                      </NominalValue>
-                    </IfcPropertySingleValue>
-                    <IfcPropertySingleValue>
-                      <Name>ReferenceDocument</Name>
-                      <Description>reference Document</Description>
-                      <NominalValue>
-                        <IfcLabel>EN 772-1</IfcLabel>
-                      </NominalValue>
-                    </IfcPropertySingleValue>
-                  </HasProperties>
-                </IfcComplexProperty>
-                <!--Property : normalised : -->
-                <IfcComplexProperty>
-                  <Name>normalised</Name>
-                  <Description>normalised</Description>
-                  <UsageName>normalised</UsageName>
-                  <HasProperties>
-                    <!--Declaration : value : 15.33-->
-                    <IfcPropertySingleValue>
-                      <Name>normalised</Name>
-                      <Description>normalised value</Description>
-                      <NominalValue>
-                        <IfcText>15.33</IfcText>
-                      </NominalValue>
-                    </IfcPropertySingleValue>
-                    <IfcPropertySingleValue>
-                      <Name>Relation</Name>
-                      <Description>Value Relation</Description>
-                      <NominalValue>
-                        <IfcLabel>greater than or equal to</IfcLabel>
-                      </NominalValue>
-                    </IfcPropertySingleValue>
-                    <IfcPropertySingleValue>
-                      <Name>ReferenceDocument</Name>
-                      <Description>reference Document</Description>
-                      <NominalValue>
-                        <IfcLabel>EN 772-1</IfcLabel>
-                      </NominalValue>
-                    </IfcPropertySingleValue>
-                  </HasProperties>
-                </IfcComplexProperty>
-                <!--Property : AVCP : -->
-                <!--Declaration : system : 2+-->
-                <IfcPropertyEnumeratedValue>
-                  <Name>AVCP</Name>
-                  <Description>AVCP attestation</Description>
-                  <EnumerationValues>
-                    <IfcLabel>2+</IfcLabel>
-                  </EnumerationValues>
-                  <EnumerationReference>
-                    <IfcPropertyEnumeration ref="pe_avcp" xsi:nil="true" />
-                  </EnumerationReference>
-                </IfcPropertyEnumeratedValue>
-              </HasProperties>
-            </IfcComplexProperty>
-            <!--Property : Perpendicular to header : -->
-            <IfcComplexProperty>
-              <Name>Perpendicular to header</Name>
-              <Description>Perpendicular to header</Description>
-              <UsageName>Perpendicular to header</UsageName>
-              <HasProperties>
-                <!--Property : type of specimen : -->
-                <IfcComplexProperty>
-                  <Name>type of specimen</Name>
-                  <Description>type of specimen</Description>
-                  <UsageName>type of specimen</UsageName>
-                  <HasProperties>
-                    <!--Declaration : type : -->
-                    <IfcPropertySingleValue>
-                      <Name>type of specimen</Name>
-                      <Description>type of specimen type</Description>
-                      <NominalValue>
-                        <IfcText>NPD</IfcText>
-                      </NominalValue>
-                    </IfcPropertySingleValue>
-                    <IfcPropertySingleValue>
-                      <Name>Relation</Name>
-                      <Description>Value Relation</Description>
-                      <NominalValue>
-                        <IfcLabel>category</IfcLabel>
-                      </NominalValue>
-                    </IfcPropertySingleValue>
-                    <IfcPropertySingleValue>
-                      <Name>ReferenceDocument</Name>
-                      <Description>reference Document</Description>
-                      <NominalValue>
-                        <IfcLabel>EN 771-2</IfcLabel>
-                      </NominalValue>
-                    </IfcPropertySingleValue>
-                  </HasProperties>
-                </IfcComplexProperty>
-                <!--Property : category : -->
-                <IfcComplexProperty>
-                  <Name>category</Name>
-                  <Description>category</Description>
-                  <UsageName>category</UsageName>
-                  <HasProperties>
-                    <!--Declaration : category : -->
-                    <IfcPropertySingleValue>
-                      <Name>category</Name>
-                      <Description>category category</Description>
-                      <NominalValue>
-                        <IfcText>NPD</IfcText>
-                      </NominalValue>
-                    </IfcPropertySingleValue>
-                    <IfcPropertySingleValue>
-                      <Name>Relation</Name>
-                      <Description>Value Relation</Description>
-                      <NominalValue>
-                        <IfcLabel>category</IfcLabel>
-                      </NominalValue>
-                    </IfcPropertySingleValue>
-                    <IfcPropertySingleValue>
-                      <Name>ReferenceDocument</Name>
-                      <Description>reference Document</Description>
-                      <NominalValue>
-                        <IfcLabel>EN 771-2</IfcLabel>
-                      </NominalValue>
-                    </IfcPropertySingleValue>
-                  </HasProperties>
-                </IfcComplexProperty>
-                <!--Property : mean : -->
-                <IfcComplexProperty>
-                  <Name>mean</Name>
-                  <Description>mean</Description>
-                  <UsageName>mean</UsageName>
-                  <HasProperties>
-                    <!--Declaration : value : -->
-                    <IfcPropertySingleValue>
-                      <Name>mean</Name>
-                      <Description>mean value</Description>
-                      <NominalValue>
-                        <IfcText>NPD</IfcText>
-                      </NominalValue>
-                    </IfcPropertySingleValue>
-                    <IfcPropertySingleValue>
-                      <Name>Relation</Name>
-                      <Description>Value Relation</Description>
-                      <NominalValue>
-                        <IfcLabel>greater than or equal to</IfcLabel>
-                      </NominalValue>
-                    </IfcPropertySingleValue>
-                    <IfcPropertySingleValue>
-                      <Name>ReferenceDocument</Name>
-                      <Description>reference Document</Description>
-                      <NominalValue>
-                        <IfcLabel>EN 772-1</IfcLabel>
-                      </NominalValue>
-                    </IfcPropertySingleValue>
-                  </HasProperties>
-                </IfcComplexProperty>
-                <!--Property : normalised : -->
-                <IfcComplexProperty>
-                  <Name>normalised</Name>
-                  <Description>normalised</Description>
-                  <UsageName>normalised</UsageName>
-                  <HasProperties>
-                    <!--Declaration : value : -->
-                    <IfcPropertySingleValue>
-                      <Name>normalised</Name>
-                      <Description>normalised value</Description>
-                      <NominalValue>
-                        <IfcText>NPD</IfcText>
-                      </NominalValue>
-                    </IfcPropertySingleValue>
-                    <IfcPropertySingleValue>
-                      <Name>Relation</Name>
-                      <Description>Value Relation</Description>
-                      <NominalValue>
-                        <IfcLabel>greater than or equal to</IfcLabel>
-                      </NominalValue>
-                    </IfcPropertySingleValue>
-                    <IfcPropertySingleValue>
-                      <Name>ReferenceDocument</Name>
-                      <Description>reference Document</Description>
-                      <NominalValue>
-                        <IfcLabel>EN 772-1</IfcLabel>
-                      </NominalValue>
-                    </IfcPropertySingleValue>
-                  </HasProperties>
-                </IfcComplexProperty>
-                <!--Property : AVCP : -->
-                <!--Declaration : system : 2+-->
-                <IfcPropertyEnumeratedValue>
-                  <Name>AVCP</Name>
-                  <Description>AVCP attestation</Description>
-                  <EnumerationValues>
-                    <IfcLabel>2+</IfcLabel>
-                  </EnumerationValues>
-                  <EnumerationReference>
-                    <IfcPropertyEnumeration ref="pe_avcp" xsi:nil="true" />
-                  </EnumerationReference>
-                </IfcPropertyEnumeratedValue>
-              </HasProperties>
-            </IfcComplexProperty>
-            <!--Property : Perpendicular to face : -->
-            <IfcComplexProperty>
-              <Name>Perpendicular to face</Name>
-              <Description>Perpendicular to face</Description>
-              <UsageName>Perpendicular to face</UsageName>
-              <HasProperties>
-                <!--Property : type of specimen : -->
-                <IfcComplexProperty>
-                  <Name>type of specimen</Name>
-                  <Description>type of specimen</Description>
-                  <UsageName>type of specimen</UsageName>
-                  <HasProperties>
-                    <!--Declaration : type : -->
-                    <IfcPropertySingleValue>
-                      <Name>type of specimen</Name>
-                      <Description>type of specimen type</Description>
-                      <NominalValue>
-                        <IfcText>NPD</IfcText>
-                      </NominalValue>
-                    </IfcPropertySingleValue>
-                    <IfcPropertySingleValue>
-                      <Name>Relation</Name>
-                      <Description>Value Relation</Description>
-                      <NominalValue>
-                        <IfcLabel>category</IfcLabel>
-                      </NominalValue>
-                    </IfcPropertySingleValue>
-                    <IfcPropertySingleValue>
-                      <Name>ReferenceDocument</Name>
-                      <Description>reference Document</Description>
-                      <NominalValue>
-                        <IfcLabel>EN 771-2</IfcLabel>
-                      </NominalValue>
-                    </IfcPropertySingleValue>
-                  </HasProperties>
-                </IfcComplexProperty>
-                <!--Property : category : -->
-                <IfcComplexProperty>
-                  <Name>category</Name>
-                  <Description>category</Description>
-                  <UsageName>category</UsageName>
-                  <HasProperties>
-                    <!--Declaration : category : -->
-                    <IfcPropertySingleValue>
-                      <Name>category</Name>
-                      <Description>category category</Description>
-                      <NominalValue>
-                        <IfcText>NPD</IfcText>
-                      </NominalValue>
-                    </IfcPropertySingleValue>
-                    <IfcPropertySingleValue>
-                      <Name>Relation</Name>
-                      <Description>Value Relation</Description>
-                      <NominalValue>
-                        <IfcLabel>category</IfcLabel>
-                      </NominalValue>
-                    </IfcPropertySingleValue>
-                    <IfcPropertySingleValue>
-                      <Name>ReferenceDocument</Name>
-                      <Description>reference Document</Description>
-                      <NominalValue>
-                        <IfcLabel>EN 771-2</IfcLabel>
-                      </NominalValue>
-                    </IfcPropertySingleValue>
-                  </HasProperties>
-                </IfcComplexProperty>
-                <!--Property : mean : -->
-                <IfcComplexProperty>
-                  <Name>mean</Name>
-                  <Description>mean</Description>
-                  <UsageName>mean</UsageName>
-                  <HasProperties>
-                    <!--Declaration : value : -->
-                    <IfcPropertySingleValue>
-                      <Name>mean</Name>
-                      <Description>mean value</Description>
-                      <NominalValue>
-                        <IfcText>NPD</IfcText>
-                      </NominalValue>
-                    </IfcPropertySingleValue>
-                    <IfcPropertySingleValue>
-                      <Name>Relation</Name>
-                      <Description>Value Relation</Description>
-                      <NominalValue>
-                        <IfcLabel>greater than or equal to</IfcLabel>
-                      </NominalValue>
-                    </IfcPropertySingleValue>
-                    <IfcPropertySingleValue>
-                      <Name>ReferenceDocument</Name>
-                      <Description>reference Document</Description>
-                      <NominalValue>
-                        <IfcLabel>EN 772-1</IfcLabel>
-                      </NominalValue>
-                    </IfcPropertySingleValue>
-                  </HasProperties>
-                </IfcComplexProperty>
-                <!--Property : normalised : -->
-                <IfcComplexProperty>
-                  <Name>normalised</Name>
-                  <Description>normalised</Description>
-                  <UsageName>normalised</UsageName>
-                  <HasProperties>
-                    <!--Declaration : value : NPD-->
-                    <IfcPropertySingleValue>
-                      <Name>normalised</Name>
-                      <Description>normalised value</Description>
-                      <NominalValue>
-                        <IfcText>NPD</IfcText>
-                      </NominalValue>
-                    </IfcPropertySingleValue>
-                    <IfcPropertySingleValue>
-                      <Name>Relation</Name>
-                      <Description>Value Relation</Description>
-                      <NominalValue>
-                        <IfcLabel>greater than or equal to</IfcLabel>
-                      </NominalValue>
-                    </IfcPropertySingleValue>
-                    <IfcPropertySingleValue>
-                      <Name>ReferenceDocument</Name>
-                      <Description>reference Document</Description>
-                      <NominalValue>
-                        <IfcLabel>EN 772-1</IfcLabel>
-                      </NominalValue>
-                    </IfcPropertySingleValue>
-                  </HasProperties>
-                </IfcComplexProperty>
-                <!--Property : AVCP : -->
-                <!--Declaration : system : 2+-->
-                <IfcPropertyEnumeratedValue>
-                  <Name>AVCP</Name>
-                  <Description>AVCP attestation</Description>
-                  <EnumerationValues>
-                    <IfcLabel>2+</IfcLabel>
-                  </EnumerationValues>
-                  <EnumerationReference>
-                    <IfcPropertyEnumeration ref="pe_avcp" xsi:nil="true" />
-                  </EnumerationReference>
-                </IfcPropertyEnumeratedValue>
-              </HasProperties>
-            </IfcComplexProperty>
-          </HasProperties>
-        </IfcPropertySet>
-        <!--EssentialCharacteristic : Bond strength  : -->
-        <IfcPropertySet>
-          <GlobalId>0topPropertySet00000AC</GlobalId>
-          <OwnerHistory>
-            <IfcOwnerHistory xsi:nil="true" ref="oh2" />
-          </OwnerHistory>
-          <Name>CPR_Bond_strength_</Name>
-          <Description>Essential Characteristic Bond strength </Description>
-          <HasProperties>
-            <!--Property : Characteristic initial shear strength : -->
-            <IfcComplexProperty>
-              <Name>Characteristic initial shear strength</Name>
-              <Description>Characteristic initial shear strength</Description>
-              <UsageName>Characteristic initial shear strength</UsageName>
-              <HasProperties>
-                <!--Property : characteristic initial shear strength : -->
-                <IfcComplexProperty>
-                  <Name>characteristic initial shear strength</Name>
-                  <Description>characteristic initial shear strength</Description>
-                  <UsageName>characteristic initial shear strength</UsageName>
-                  <HasProperties>
-                    <!--Declaration : value : 0.15-->
-                    <IfcPropertySingleValue>
-                      <Name>characteristic initial shear strength</Name>
-                      <Description>characteristic initial shear strength value</Description>
-                      <NominalValue>
-                        <IfcText>0.15</IfcText>
-                      </NominalValue>
-                    </IfcPropertySingleValue>
-                    <IfcPropertySingleValue>
-                      <Name>Relation</Name>
-                      <Description>Value Relation</Description>
-                      <NominalValue>
-                        <IfcLabel>greater than or equal to</IfcLabel>
-                      </NominalValue>
-                    </IfcPropertySingleValue>
-                    <IfcPropertySingleValue>
-                      <Name>ReferenceDocument</Name>
-                      <Description>reference Document</Description>
-                      <NominalValue>
-                        <IfcLabel>EN 1052-3</IfcLabel>
-                      </NominalValue>
-                    </IfcPropertySingleValue>
-                  </HasProperties>
-                </IfcComplexProperty>
-                <!--Property : mortar type : -->
-                <IfcComplexProperty>
-                  <Name>mortar type</Name>
-                  <Description>mortar type</Description>
-                  <UsageName>mortar type</UsageName>
-                  <HasProperties>
-                    <!--Declaration : type : general purpose-->
-                    <IfcPropertySingleValue>
-                      <Name>mortar type</Name>
-                      <Description>mortar type type</Description>
-                      <NominalValue>
-                        <IfcText>general purpose</IfcText>
-                      </NominalValue>
-                    </IfcPropertySingleValue>
-                    <IfcPropertySingleValue>
-                      <Name>Relation</Name>
-                      <Description>Value Relation</Description>
-                      <NominalValue>
-                        <IfcLabel>description</IfcLabel>
-                      </NominalValue>
-                    </IfcPropertySingleValue>
-                  </HasProperties>
-                </IfcComplexProperty>
-                <!--Property : mortar manufacturer : -->
-                <IfcComplexProperty>
-                  <Name>mortar manufacturer</Name>
-                  <Description>mortar manufacturer</Description>
-                  <UsageName>mortar manufacturer</UsageName>
-                  <HasProperties>
-                    <!--Declaration : name : AnyCo-->
-                    <IfcPropertySingleValue>
-                      <Name>mortar manufacturer</Name>
-                      <Description>mortar manufacturer name</Description>
-                      <NominalValue>
-                        <IfcText>AnyCo</IfcText>
-                      </NominalValue>
-                    </IfcPropertySingleValue>
-                    <IfcPropertySingleValue>
-                      <Name>Relation</Name>
-                      <Description>Value Relation</Description>
-                      <NominalValue>
-                        <IfcLabel>description</IfcLabel>
-                      </NominalValue>
-                    </IfcPropertySingleValue>
-                  </HasProperties>
-                </IfcComplexProperty>
-                <!--Property : mortar DoP : -->
-                <IfcComplexProperty>
-                  <Name>mortar DoP</Name>
-                  <Description>mortar DoP</Description>
-                  <UsageName>mortar DoP</UsageName>
-                  <HasProperties>
-                    <!--Declaration : DoP number : ABC-123-2018-->
-                    <IfcPropertySingleValue>
-                      <Name>mortar DoP</Name>
-                      <Description>mortar DoP DoP number</Description>
-                      <NominalValue>
-                        <IfcText>ABC-123-2018</IfcText>
-                      </NominalValue>
-                    </IfcPropertySingleValue>
-                    <IfcPropertySingleValue>
-                      <Name>Relation</Name>
-                      <Description>Value Relation</Description>
-                      <NominalValue>
-                        <IfcLabel>description</IfcLabel>
-                      </NominalValue>
-                    </IfcPropertySingleValue>
-                  </HasProperties>
-                </IfcComplexProperty>
-                <!--Property : AVCP : -->
-                <!--Declaration : system : 2+-->
-                <IfcPropertyEnumeratedValue>
-                  <Name>AVCP</Name>
-                  <Description>AVCP attestation</Description>
-                  <EnumerationValues>
-                    <IfcLabel>2+</IfcLabel>
-                  </EnumerationValues>
-                  <EnumerationReference>
-                    <IfcPropertyEnumeration ref="pe_avcp" xsi:nil="true" />
-                  </EnumerationReference>
-                </IfcPropertyEnumeratedValue>
-              </HasProperties>
-            </IfcComplexProperty>
-            <!--Property : Characteristic initial shear strength : -->
-            <IfcComplexProperty>
-              <Name>Characteristic initial shear strength</Name>
-              <Description>Characteristic initial shear strength</Description>
-              <UsageName>Characteristic initial shear strength</UsageName>
-              <HasProperties>
-                <!--Property : characteristic initial shear strength : -->
-                <IfcComplexProperty>
-                  <Name>characteristic initial shear strength</Name>
-                  <Description>characteristic initial shear strength</Description>
-                  <UsageName>characteristic initial shear strength</UsageName>
-                  <HasProperties>
-                    <!--Declaration : value : 0.12-->
-                    <IfcPropertySingleValue>
-                      <Name>characteristic initial shear strength</Name>
-                      <Description>characteristic initial shear strength value</Description>
-                      <NominalValue>
-                        <IfcText>0.12</IfcText>
-                      </NominalValue>
-                    </IfcPropertySingleValue>
-                    <IfcPropertySingleValue>
-                      <Name>Relation</Name>
-                      <Description>Value Relation</Description>
-                      <NominalValue>
-                        <IfcLabel>greater than or equal to</IfcLabel>
-                      </NominalValue>
-                    </IfcPropertySingleValue>
-                    <IfcPropertySingleValue>
-                      <Name>ReferenceDocument</Name>
-                      <Description>reference Document</Description>
-                      <NominalValue>
-                        <IfcLabel>EN 1052-3</IfcLabel>
-                      </NominalValue>
-                    </IfcPropertySingleValue>
-                  </HasProperties>
-                </IfcComplexProperty>
-                <!--Property : mortar type : -->
-                <IfcComplexProperty>
-                  <Name>mortar type</Name>
-                  <Description>mortar type</Description>
-                  <UsageName>mortar type</UsageName>
-                  <HasProperties>
-                    <!--Declaration : type : lightweight-->
-                    <IfcPropertySingleValue>
-                      <Name>mortar type</Name>
-                      <Description>mortar type type</Description>
-                      <NominalValue>
-                        <IfcText>lightweight</IfcText>
-                      </NominalValue>
-                    </IfcPropertySingleValue>
-                    <IfcPropertySingleValue>
-                      <Name>Relation</Name>
-                      <Description>Value Relation</Description>
-                      <NominalValue>
-                        <IfcLabel>description</IfcLabel>
-                      </NominalValue>
-                    </IfcPropertySingleValue>
-                  </HasProperties>
-                </IfcComplexProperty>
-                <!--Property : mortar manufacturer : -->
-                <IfcComplexProperty>
-                  <Name>mortar manufacturer</Name>
-                  <Description>mortar manufacturer</Description>
-                  <UsageName>mortar manufacturer</UsageName>
-                  <HasProperties>
-                    <!--Declaration : name : AnyCo-->
-                    <IfcPropertySingleValue>
-                      <Name>mortar manufacturer</Name>
-                      <Description>mortar manufacturer name</Description>
-                      <NominalValue>
-                        <IfcText>AnyCo</IfcText>
-                      </NominalValue>
-                    </IfcPropertySingleValue>
-                    <IfcPropertySingleValue>
-                      <Name>Relation</Name>
-                      <Description>Value Relation</Description>
-                      <NominalValue>
-                        <IfcLabel>description</IfcLabel>
-                      </NominalValue>
-                    </IfcPropertySingleValue>
-                  </HasProperties>
-                </IfcComplexProperty>
-                <!--Property : mortar DoP : -->
-                <IfcComplexProperty>
-                  <Name>mortar DoP</Name>
-                  <Description>mortar DoP</Description>
-                  <UsageName>mortar DoP</UsageName>
-                  <HasProperties>
-                    <!--Declaration : DoP number : ABC-321-2018-->
-                    <IfcPropertySingleValue>
-                      <Name>mortar DoP</Name>
-                      <Description>mortar DoP DoP number</Description>
-                      <NominalValue>
-                        <IfcText>ABC-321-2018</IfcText>
-                      </NominalValue>
-                    </IfcPropertySingleValue>
-                    <IfcPropertySingleValue>
-                      <Name>Relation</Name>
-                      <Description>Value Relation</Description>
-                      <NominalValue>
-                        <IfcLabel>description</IfcLabel>
-                      </NominalValue>
-                    </IfcPropertySingleValue>
-                  </HasProperties>
-                </IfcComplexProperty>
-                <!--Property : AVCP : -->
-                <!--Declaration : system : 2+-->
-                <IfcPropertyEnumeratedValue>
-                  <Name>AVCP</Name>
-                  <Description>AVCP attestation</Description>
-                  <EnumerationValues>
-                    <IfcLabel>2+</IfcLabel>
-                  </EnumerationValues>
-                  <EnumerationReference>
-                    <IfcPropertyEnumeration ref="pe_avcp" xsi:nil="true" />
-                  </EnumerationReference>
-                </IfcPropertyEnumeratedValue>
-              </HasProperties>
-            </IfcComplexProperty>
-          </HasProperties>
-        </IfcPropertySet>
-        <!--EssentialCharacteristic : Reaction to fire : -->
-        <IfcPropertySet>
-          <GlobalId>0topPropertySet00000AC</GlobalId>
-          <OwnerHistory>
-            <IfcOwnerHistory xsi:nil="true" ref="oh2" />
-          </OwnerHistory>
-          <Name>CPR_Reaction_to_fire</Name>
-          <Description>Essential Characteristic Reaction to fire</Description>
-          <HasProperties>
-            <!--Property : Reaction to fire : -->
-            <IfcComplexProperty>
-              <Name>Reaction to fire</Name>
-              <Description>Reaction to fire</Description>
-              <UsageName>Reaction to fire</UsageName>
-              <HasProperties>
-                <!--Property : reaction to fire : -->
-                <IfcComplexProperty>
-                  <Name>reaction to fire</Name>
-                  <Description>reaction to fire</Description>
-                  <UsageName>reaction to fire</UsageName>
-                  <HasProperties>
-                    <!--Declaration : class : A1-->
-                    <IfcPropertySingleValue>
-                      <Name>reaction to fire</Name>
-                      <Description>reaction to fire class</Description>
-                      <NominalValue>
-                        <IfcText>A1</IfcText>
-                      </NominalValue>
-                    </IfcPropertySingleValue>
-                    <IfcPropertySingleValue>
-                      <Name>Relation</Name>
-                      <Description>Value Relation</Description>
-                      <NominalValue>
-                        <IfcLabel>class</IfcLabel>
-                      </NominalValue>
-                    </IfcPropertySingleValue>
-                    <IfcPropertySingleValue>
-                      <Name>ReferenceDocument</Name>
-                      <Description>reference Document</Description>
-                      <NominalValue>
-                        <IfcLabel>Commission Decision 2000/605/EC</IfcLabel>
-                      </NominalValue>
-                    </IfcPropertySingleValue>
-                  </HasProperties>
-                </IfcComplexProperty>
-                <!--Property : AVCP : -->
-                <!--Declaration : system : 2+-->
-                <IfcPropertyEnumeratedValue>
-                  <Name>AVCP</Name>
-                  <Description>AVCP attestation</Description>
-                  <EnumerationValues>
-                    <IfcLabel>2+</IfcLabel>
-                  </EnumerationValues>
-                  <EnumerationReference>
-                    <IfcPropertyEnumeration ref="pe_avcp" xsi:nil="true" />
-                  </EnumerationReference>
-                </IfcPropertyEnumeratedValue>
-              </HasProperties>
-            </IfcComplexProperty>
-          </HasProperties>
-        </IfcPropertySet>
-        <!--EssentialCharacteristic : Water absorption : -->
-        <IfcPropertySet>
-          <GlobalId>0topPropertySet00000AC</GlobalId>
-          <OwnerHistory>
-            <IfcOwnerHistory xsi:nil="true" ref="oh2" />
-          </OwnerHistory>
-          <Name>CPR_Water_absorption</Name>
-          <Description>Essential Characteristic Water absorption</Description>
-          <HasProperties>
-            <!--Property : Water absorption : -->
-            <IfcComplexProperty>
-              <Name>Water absorption</Name>
-              <Description>Water absorption</Description>
-              <UsageName>Water absorption</UsageName>
-              <HasProperties>
-                <!--Property : water absorption : -->
-                <IfcComplexProperty>
-                  <Name>water absorption</Name>
-                  <Description>water absorption</Description>
-                  <UsageName>water absorption</UsageName>
-                  <HasProperties>
-                    <!--Declaration : value : NPD-->
-                    <IfcPropertySingleValue>
-                      <Name>water absorption</Name>
-                      <Description>water absorption value</Description>
-                      <NominalValue>
-                        <IfcRatioMeasure>NaN</IfcRatioMeasure>
-                      </NominalValue>
-                    </IfcPropertySingleValue>
-                    <IfcPropertySingleValue>
-                      <Name>Relation</Name>
-                      <Description>Value Relation</Description>
-                      <NominalValue>
-                        <IfcLabel>less than or equal to</IfcLabel>
-                      </NominalValue>
-                    </IfcPropertySingleValue>
-                    <IfcPropertySingleValue>
-                      <Name>ReferenceDocument</Name>
-                      <Description>reference Document</Description>
-                      <NominalValue>
-                        <IfcLabel>EN 772-21</IfcLabel>
-                      </NominalValue>
-                    </IfcPropertySingleValue>
-                  </HasProperties>
-                </IfcComplexProperty>
-                <!--Property : AVCP : -->
-                <!--Declaration : system : 2+-->
-                <IfcPropertyEnumeratedValue>
-                  <Name>AVCP</Name>
-                  <Description>AVCP attestation</Description>
-                  <EnumerationValues>
-                    <IfcLabel>2+</IfcLabel>
-                  </EnumerationValues>
-                  <EnumerationReference>
-                    <IfcPropertyEnumeration ref="pe_avcp" xsi:nil="true" />
-                  </EnumerationReference>
-                </IfcPropertyEnumeratedValue>
-              </HasProperties>
-            </IfcComplexProperty>
-          </HasProperties>
-        </IfcPropertySet>
-        <!--EssentialCharacteristic : Water vapour permeability : -->
-        <IfcPropertySet>
-          <GlobalId>0topPropertySet00000AC</GlobalId>
-          <OwnerHistory>
-            <IfcOwnerHistory xsi:nil="true" ref="oh2" />
-          </OwnerHistory>
-          <Name>CPR_Water_vapour_permeability</Name>
-          <Description>Essential Characteristic Water vapour permeability</Description>
-          <HasProperties>
-            <!--Property : Water vapour permeability : -->
-            <IfcComplexProperty>
-              <Name>Water vapour permeability</Name>
-              <Description>Water vapour permeability</Description>
-              <UsageName>Water vapour permeability</UsageName>
-              <HasProperties>
-                <!--Property : water vapour diffusion coefficient (μ) : -->
-                <IfcComplexProperty>
-                  <Name>water vapour diffusion coefficient (μ)</Name>
-                  <Description>water vapour diffusion coefficient (μ)</Description>
-                  <UsageName>water vapour diffusion coefficient (μ)</UsageName>
-                  <HasProperties>
-                    <!--Declaration : value : NPD-->
-                    <IfcPropertySingleValue>
-                      <Name>water vapour diffusion coefficient (μ)</Name>
-                      <Description>water vapour diffusion coefficient (μ) value</Description>
-                      <NominalValue>
-                        <IfcText>NPD</IfcText>
-                      </NominalValue>
-                    </IfcPropertySingleValue>
-                    <IfcPropertySingleValue>
-                      <Name>Relation</Name>
-                      <Description>Value Relation</Description>
-                      <NominalValue>
-                        <IfcLabel>equal to</IfcLabel>
-                      </NominalValue>
-                    </IfcPropertySingleValue>
-                    <IfcPropertySingleValue>
-                      <Name>ReferenceDocument</Name>
-                      <Description>reference Document</Description>
-                      <NominalValue>
-                        <IfcLabel>EN 1745</IfcLabel>
-                      </NominalValue>
-                    </IfcPropertySingleValue>
-                  </HasProperties>
-                </IfcComplexProperty>
-                <!--Property : AVCP : -->
-                <!--Declaration : system : 2+-->
-                <IfcPropertyEnumeratedValue>
-                  <Name>AVCP</Name>
-                  <Description>AVCP attestation</Description>
-                  <EnumerationValues>
-                    <IfcLabel>2+</IfcLabel>
-                  </EnumerationValues>
-                  <EnumerationReference>
-                    <IfcPropertyEnumeration ref="pe_avcp" xsi:nil="true" />
-                  </EnumerationReference>
-                </IfcPropertyEnumeratedValue>
-              </HasProperties>
-            </IfcComplexProperty>
-          </HasProperties>
-        </IfcPropertySet>
-        <!--EssentialCharacteristic : Direct airborne sound insulation : -->
-        <IfcPropertySet>
-          <GlobalId>0topPropertySet00000AC</GlobalId>
-          <OwnerHistory>
-            <IfcOwnerHistory xsi:nil="true" ref="oh2" />
-          </OwnerHistory>
-          <Name>CPR_Direct_airborne_sound_insulation</Name>
-          <Description>Essential Characteristic Direct airborne sound insulation</Description>
-          <HasProperties>
-            <!--Property : Gross dry density : -->
-            <IfcComplexProperty>
-              <Name>Gross dry density</Name>
-              <Description>Gross dry density</Description>
-              <UsageName>Gross dry density</UsageName>
-              <HasProperties>
-                <!--Property : minimum mean gross dry density : -->
-                <IfcComplexProperty>
-                  <Name>minimum mean gross dry density</Name>
-                  <Description>minimum mean gross dry density</Description>
-                  <UsageName>minimum mean gross dry density</UsageName>
-                  <HasProperties>
-                    <!--Declaration : value : 1410-->
-                    <IfcPropertySingleValue>
-                      <Name>minimum mean gross dry density</Name>
-                      <Description>minimum mean gross dry density value</Description>
-                      <NominalValue>
-                        <IfcText>1410</IfcText>
-                      </NominalValue>
-                    </IfcPropertySingleValue>
-                    <IfcPropertySingleValue>
-                      <Name>Relation</Name>
-                      <Description>Value Relation</Description>
-                      <NominalValue>
-                        <IfcLabel>greater than or equal to</IfcLabel>
-                      </NominalValue>
-                    </IfcPropertySingleValue>
-                    <IfcPropertySingleValue>
-                      <Name>ReferenceDocument</Name>
-                      <Description>reference Document</Description>
-                      <NominalValue>
-                        <IfcLabel>EN 772-13</IfcLabel>
-                      </NominalValue>
-                    </IfcPropertySingleValue>
-                  </HasProperties>
-                </IfcComplexProperty>
-                <!--Property : maximum mean gross dry density : -->
-                <IfcComplexProperty>
-                  <Name>maximum mean gross dry density</Name>
-                  <Description>maximum mean gross dry density</Description>
-                  <UsageName>maximum mean gross dry density</UsageName>
-                  <HasProperties>
-                    <!--Declaration : value : 1600-->
-                    <IfcPropertySingleValue>
-                      <Name>maximum mean gross dry density</Name>
-                      <Description>maximum mean gross dry density value</Description>
-                      <NominalValue>
-                        <IfcText>1600</IfcText>
-                      </NominalValue>
-                    </IfcPropertySingleValue>
-                    <IfcPropertySingleValue>
-                      <Name>Relation</Name>
-                      <Description>Value Relation</Description>
-                      <NominalValue>
-                        <IfcLabel>less than or equal to</IfcLabel>
-                      </NominalValue>
-                    </IfcPropertySingleValue>
-                    <IfcPropertySingleValue>
-                      <Name>ReferenceDocument</Name>
-                      <Description>reference Document</Description>
-                      <NominalValue>
-                        <IfcLabel>EN 772-13</IfcLabel>
-                      </NominalValue>
-                    </IfcPropertySingleValue>
-                  </HasProperties>
-                </IfcComplexProperty>
-                <!--Property : AVCP : -->
-                <!--Declaration : system : 2+-->
-                <IfcPropertyEnumeratedValue>
-                  <Name>AVCP</Name>
-                  <Description>AVCP attestation</Description>
-                  <EnumerationValues>
-                    <IfcLabel>2+</IfcLabel>
-                  </EnumerationValues>
-                  <EnumerationReference>
-                    <IfcPropertyEnumeration ref="pe_avcp" xsi:nil="true" />
-                  </EnumerationReference>
-                </IfcPropertyEnumeratedValue>
-              </HasProperties>
-            </IfcComplexProperty>
-          </HasProperties>
-        </IfcPropertySet>
-        <!--EssentialCharacteristic : Thermal resistance : -->
-        <IfcPropertySet>
-          <GlobalId>0topPropertySet00000AC</GlobalId>
-          <OwnerHistory>
-            <IfcOwnerHistory xsi:nil="true" ref="oh2" />
-          </OwnerHistory>
-          <Name>CPR_Thermal_resistance</Name>
-          <Description>Essential Characteristic Thermal resistance</Description>
-          <HasProperties>
-            <!--Property : Thermal conductivity : -->
-            <IfcComplexProperty>
-              <Name>Thermal conductivity</Name>
-              <Description>Thermal conductivity</Description>
-              <UsageName>Thermal conductivity</UsageName>
-              <HasProperties>
-                <!--Property : mean thermal conductivity : -->
-                <IfcComplexProperty>
-                  <Name>mean thermal conductivity</Name>
-                  <Description>mean thermal conductivity</Description>
-                  <UsageName>mean thermal conductivity</UsageName>
-                  <HasProperties>
-                    <!--Declaration : value : NPD-->
-                    <IfcPropertySingleValue>
-                      <Name>mean thermal conductivity</Name>
-                      <Description>mean thermal conductivity value</Description>
-                      <NominalValue>
-                        <IfcText>NPD</IfcText>
-                      </NominalValue>
-                    </IfcPropertySingleValue>
-                    <IfcPropertySingleValue>
-                      <Name>Relation</Name>
-                      <Description>Value Relation</Description>
-                      <NominalValue>
-                        <IfcLabel>less than or equal to</IfcLabel>
-                      </NominalValue>
-                    </IfcPropertySingleValue>
-                    <IfcPropertySingleValue>
-                      <Name>ReferenceDocument</Name>
-                      <Description>reference Document</Description>
-                      <NominalValue>
-                        <IfcLabel>EN 1745</IfcLabel>
-                      </NominalValue>
-                    </IfcPropertySingleValue>
-                  </HasProperties>
-                </IfcComplexProperty>
-                <!--Property : Determination model : -->
-                <IfcComplexProperty>
-                  <Name>Determination model</Name>
-                  <Description>Determination model</Description>
-                  <UsageName>Determination model</UsageName>
-                  <HasProperties>
-                    <!--Declaration : method : S2-->
-                    <IfcPropertySingleValue>
-                      <Name>Determination model</Name>
-                      <Description>Determination model method</Description>
-                      <NominalValue>
-                        <IfcText>S2</IfcText>
-                      </NominalValue>
-                    </IfcPropertySingleValue>
-                    <IfcPropertySingleValue>
-                      <Name>Relation</Name>
-                      <Description>Value Relation</Description>
-                      <NominalValue>
-                        <IfcLabel>class</IfcLabel>
-                      </NominalValue>
-                    </IfcPropertySingleValue>
-                    <IfcPropertySingleValue>
-                      <Name>ReferenceDocument</Name>
-                      <Description>reference Document</Description>
-                      <NominalValue>
-                        <IfcLabel>EN 1745</IfcLabel>
-                      </NominalValue>
-                    </IfcPropertySingleValue>
-                  </HasProperties>
-                </IfcComplexProperty>
-                <!--Property : AVCP : -->
-                <!--Declaration : system : 2+-->
-                <IfcPropertyEnumeratedValue>
-                  <Name>AVCP</Name>
-                  <Description>AVCP attestation</Description>
-                  <EnumerationValues>
-                    <IfcLabel>2+</IfcLabel>
-                  </EnumerationValues>
-                  <EnumerationReference>
-                    <IfcPropertyEnumeration ref="pe_avcp" xsi:nil="true" />
-                  </EnumerationReference>
-                </IfcPropertyEnumeratedValue>
-              </HasProperties>
-            </IfcComplexProperty>
-            <!--Property : Thermal conductivity (λ[sub]10, dry, unit (X/Y)[/sub]) : -->
-            <IfcComplexProperty>
-              <Name>Thermal conductivity (λ[sub]10, dry, unit (X/Y)[/sub])</Name>
-              <Description>Thermal conductivity (λ[sub]10, dry, unit (X/Y)[/sub])</Description>
-              <UsageName>Thermal conductivity (λ[sub]10, dry, unit (X/Y)[/sub])</UsageName>
-              <HasProperties>
-                <!--Property : thermal conductivity : -->
-                <IfcComplexProperty>
-                  <Name>thermal conductivity</Name>
-                  <Description>thermal conductivity</Description>
-                  <UsageName>thermal conductivity</UsageName>
-                  <HasProperties>
-                    <!--Declaration : value : -->
-                    <IfcPropertySingleValue>
-                      <Name>thermal conductivity</Name>
-                      <Description>thermal conductivity value</Description>
-                      <NominalValue>
-                        <IfcText>NPD</IfcText>
-                      </NominalValue>
-                    </IfcPropertySingleValue>
-                    <IfcPropertySingleValue>
-                      <Name>Relation</Name>
-                      <Description>Value Relation</Description>
-                      <NominalValue>
-                        <IfcLabel>less than or equal to</IfcLabel>
-                      </NominalValue>
-                    </IfcPropertySingleValue>
-                    <IfcPropertySingleValue>
-                      <Name>ReferenceDocument</Name>
-                      <Description>reference Document</Description>
-                      <NominalValue>
-                        <IfcLabel>EN 1745</IfcLabel>
-                      </NominalValue>
-                    </IfcPropertySingleValue>
-                  </HasProperties>
-                </IfcComplexProperty>
-                <!--Property : fractile X : -->
-                <IfcComplexProperty>
-                  <Name>fractile X</Name>
-                  <Description>fractile X</Description>
-                  <UsageName>fractile X</UsageName>
-                  <HasProperties>
-                    <!--Declaration : value : -->
-                    <IfcPropertySingleValue>
-                      <Name>fractile X</Name>
-                      <Description>fractile X value</Description>
-                      <NominalValue>
-                        <IfcText>NPD</IfcText>
-                      </NominalValue>
-                    </IfcPropertySingleValue>
-                    <IfcPropertySingleValue>
-                      <Name>Relation</Name>
-                      <Description>Value Relation</Description>
-                      <NominalValue>
-                        <IfcLabel>equal to</IfcLabel>
-                      </NominalValue>
-                    </IfcPropertySingleValue>
-                    <IfcPropertySingleValue>
-                      <Name>ReferenceDocument</Name>
-                      <Description>reference Document</Description>
-                      <NominalValue>
-                        <IfcLabel>EN 1745</IfcLabel>
-                      </NominalValue>
-                    </IfcPropertySingleValue>
-                  </HasProperties>
-                </IfcComplexProperty>
-                <!--Property :  confidence level Y  : -->
-                <IfcComplexProperty>
-                  <Name> confidence level Y </Name>
-                  <Description> confidence level Y </Description>
-                  <UsageName> confidence level Y </UsageName>
-                  <HasProperties>
-                    <!--Declaration : value : -->
-                    <IfcPropertySingleValue>
-                      <Name> confidence level Y </Name>
-                      <Description> confidence level Y  value</Description>
-                      <NominalValue>
-                        <IfcText>NPD</IfcText>
-                      </NominalValue>
-                    </IfcPropertySingleValue>
-                    <IfcPropertySingleValue>
-                      <Name>Relation</Name>
-                      <Description>Value Relation</Description>
-                      <NominalValue>
-                        <IfcLabel>equal to</IfcLabel>
-                      </NominalValue>
-                    </IfcPropertySingleValue>
-                    <IfcPropertySingleValue>
-                      <Name>ReferenceDocument</Name>
-                      <Description>reference Document</Description>
-                      <NominalValue>
-                        <IfcLabel>EN 1745</IfcLabel>
-                      </NominalValue>
-                    </IfcPropertySingleValue>
-                  </HasProperties>
-                </IfcComplexProperty>
-                <!--Property : AVCP : -->
-                <!--Declaration : system : 2+-->
-                <IfcPropertyEnumeratedValue>
-                  <Name>AVCP</Name>
-                  <Description>AVCP attestation</Description>
-                  <EnumerationValues>
-                    <IfcLabel>2+</IfcLabel>
-                  </EnumerationValues>
-                  <EnumerationReference>
-                    <IfcPropertyEnumeration ref="pe_avcp" xsi:nil="true" />
-                  </EnumerationReference>
-                </IfcPropertyEnumeratedValue>
-              </HasProperties>
-            </IfcComplexProperty>
-          </HasProperties>
-        </IfcPropertySet>
-        <!--EssentialCharacteristic : Durability against freeze/thaw : -->
-        <IfcPropertySet>
-          <GlobalId>0topPropertySet00000AC</GlobalId>
-          <OwnerHistory>
-            <IfcOwnerHistory xsi:nil="true" ref="oh2" />
-          </OwnerHistory>
-          <Name>CPR_Durability_against_freeze/thaw</Name>
-          <Description>Essential Characteristic Durability against freeze/thaw</Description>
-          <HasProperties>
-            <!--Property : Freeze-thaw resistance : -->
-            <IfcComplexProperty>
-              <Name>Freeze-thaw resistance</Name>
-              <Description>Freeze-thaw resistance</Description>
-              <UsageName>Freeze-thaw resistance</UsageName>
-              <HasProperties>
-                <!--Property : Freeze-thaw resistance category : -->
-                <IfcComplexProperty>
-                  <Name>Freeze-thaw resistance category</Name>
-                  <Description>Freeze-thaw resistance category</Description>
-                  <UsageName>Freeze-thaw resistance category</UsageName>
-                  <HasProperties>
-                    <!--Declaration : category : F1-->
-                    <IfcPropertySingleValue>
-                      <Name>Freeze-thaw resistance category</Name>
-                      <Description>Freeze-thaw resistance category category</Description>
-                      <NominalValue>
-                        <IfcText>F1</IfcText>
-                      </NominalValue>
-                    </IfcPropertySingleValue>
-                    <IfcPropertySingleValue>
-                      <Name>Relation</Name>
-                      <Description>Value Relation</Description>
-                      <NominalValue>
-                        <IfcLabel>class</IfcLabel>
-                      </NominalValue>
-                    </IfcPropertySingleValue>
-                    <IfcPropertySingleValue>
-                      <Name>ReferenceDocument</Name>
-                      <Description>reference Document</Description>
-                      <NominalValue>
-                        <IfcLabel>EN 772-18</IfcLabel>
-                      </NominalValue>
-                    </IfcPropertySingleValue>
-                  </HasProperties>
-                </IfcComplexProperty>
-                <!--Property : AVCP : -->
-                <!--Declaration : system : 2+-->
-                <IfcPropertyEnumeratedValue>
-                  <Name>AVCP</Name>
-                  <Description>AVCP attestation</Description>
-                  <EnumerationValues>
-                    <IfcLabel>2+</IfcLabel>
-                  </EnumerationValues>
-                  <EnumerationReference>
-                    <IfcPropertyEnumeration ref="pe_avcp" xsi:nil="true" />
-                  </EnumerationReference>
-                </IfcPropertyEnumeratedValue>
-              </HasProperties>
-            </IfcComplexProperty>
-          </HasProperties>
-        </IfcPropertySet>
-        <!--EssentialCharacteristic : Dangerous substances : -->
-        <IfcPropertySet>
-          <GlobalId>0topPropertySet00000AC</GlobalId>
-          <OwnerHistory>
-            <IfcOwnerHistory xsi:nil="true" ref="oh2" />
-          </OwnerHistory>
-          <Name>CPR_Dangerous_substances</Name>
-          <Description>Essential Characteristic Dangerous substances</Description>
-          <HasProperties>
-            <!--Property : Dangerous substances : -->
-            <IfcComplexProperty>
-              <Name>Dangerous substances</Name>
-              <Description>Dangerous substances</Description>
-              <UsageName>Dangerous substances</UsageName>
-              <HasProperties>
-                <!--Property : Dangerous substances : -->
-                <IfcComplexProperty>
-                  <Name>Dangerous substances</Name>
-                  <Description>Dangerous substances</Description>
-                  <UsageName>Dangerous substances</UsageName>
-                  <HasProperties>
-                    <!--Declaration : dangerous substances : NPD-->
-                    <IfcPropertySingleValue>
-                      <Name>Dangerous substances</Name>
-                      <Description>Dangerous substances dangerous substances</Description>
-                      <NominalValue>
-                        <IfcText>NPD</IfcText>
-                      </NominalValue>
-                    </IfcPropertySingleValue>
-                  </HasProperties>
-                </IfcComplexProperty>
-                <!--Property : AVCP : -->
-                <!--Declaration : system : 2+-->
-                <IfcPropertyEnumeratedValue>
-                  <Name>AVCP</Name>
-                  <Description>AVCP attestation</Description>
-                  <EnumerationValues>
-                    <IfcLabel>2+</IfcLabel>
-                  </EnumerationValues>
-                  <EnumerationReference>
-                    <IfcPropertyEnumeration ref="pe_avcp" xsi:nil="true" />
-                  </EnumerationReference>
-                </IfcPropertyEnumeratedValue>
-              </HasProperties>
-            </IfcComplexProperty>
-          </HasProperties>
-        </IfcPropertySet>
-      </HasPropertySets>
-      <PredefinedType>notdefined</PredefinedType>
-    </IfcBuildingElementProxyType>
-    <!--AppropriateTechnicalDocumentation : -->
-    <!--SpecificTechnicalDocumentation : -->
-    <!--InstructionsAndSafetyInformation : -->
-    <!--REACHInformation : -->
-    <!--DoPLink : -->
-    <!--End of Structure-->
-    <IfcPropertyEnumeration id="pe_avcp" xmlns="http://www.buildingsmart-tech.org/ifcXML/IFC4/Add2">
-      <Name>PEnum_AVCP</Name>
-      <EnumerationValues>
-        <IfcLabel pos="0">0</IfcLabel>
-        <IfcLabel pos="1">1</IfcLabel>
-        <IfcLabel pos="2">2</IfcLabel>
-        <IfcLabel pos="3">2+</IfcLabel>
-        <IfcLabel pos="4">3</IfcLabel>
-        <IfcLabel pos="5">4</IfcLabel>
-        <IfcLabel pos="6">unset</IfcLabel>
-      </EnumerationValues>
-    </IfcPropertyEnumeration>
-    <IfcSIUnit id="p" xmlns="http://www.buildingsmart-tech.org/ifcXML/IFC4/Add2">
-      <UnitType>lengthunit</UnitType>
-      <Name>metre</Name>
-    </IfcSIUnit>
-    <IfcSIUnit id="Nmm2" xmlns="http://www.buildingsmart-tech.org/ifcXML/IFC4/Add2">
-      <UnitType>lengthunit</UnitType>
-      <Name>metre</Name>
-    </IfcSIUnit>
-    <IfcSIUnit id="WmK" xmlns="http://www.buildingsmart-tech.org/ifcXML/IFC4/Add2">
-      <UnitType>lengthunit</UnitType>
-      <Name>metre</Name>
-    </IfcSIUnit>
-    <IfcSIUnit id="kgm3" xmlns="http://www.buildingsmart-tech.org/ifcXML/IFC4/Add2">
-      <UnitType>lengthunit</UnitType>
-      <Name>metre</Name>
-    </IfcSIUnit>
-    <!--Owner History-->
-    <IfcOrganization id="o1" xmlns="http://www.buildingsmart-tech.org/ifcXML/IFC4/Add2">
-      <Name>AEC3 UK Ltd</Name>
-      <Description>BimServices provider</Description>
-    </IfcOrganization>
-    <IfcOrganization id="o2" xmlns="http://www.buildingsmart-tech.org/ifcXML/IFC4/Add2">
-      <Name>Authorized representative</Name>
-      <Description>http://www.construction-products.eu/logo.png</Description>
-      <Roles>
-        <IfcActorRole>
-          <Role>userdefined</Role>
-          <UserDefinedRole>AuthorisedRepresentative</UserDefinedRole>
-          <Description>Authorised Representative</Description>
-        </IfcActorRole>
-      </Roles>
-      <Addresses>
-        <IfcPostalAddress>
-          <Purpose>office</Purpose>
-          <Description>Postal address</Description>
-          <UserDefinedPurpose>office address</UserDefinedPurpose>
-          <AddressLines>
-            <IfcLabel>C/ Muro 16</IfcLabel>
-          </AddressLines>
-          <Town>Madrid</Town>
-          <PostalCode>28080</PostalCode>
-          <Country>Spain</Country>
-        </IfcPostalAddress>
-        <IfcTelecomAddress>
-          <Purpose>office</Purpose>
-          <Description>Telecom address</Description>
-          <UserDefinedPurpose>office address</UserDefinedPurpose>
-          <TelephoneNumbers>
-            <IfcLabel>+324977299</IfcLabel>
-          </TelephoneNumbers>
-          <ElectronicMailAddresses>
-            <IfcLabel>info@construction-products.eu</IfcLabel>
-          </ElectronicMailAddresses>
-          <WWWHomePageURL>https://www.construction-products.eu/</WWWHomePageURL>
-        </IfcTelecomAddress>
-      </Addresses>
-    </IfcOrganization>
-    <IfcOrganization id="o0" xmlns="http://www.buildingsmart-tech.org/ifcXML/IFC4/Add2">
-      <Name>Manufacturer</Name>
-      <Description>http://www.construction-products.eu/logo.png</Description>
-      <Roles>
-        <IfcActorRole>
-          <Role>manufacturer</Role>
-          <UserDefinedRole>Manufacturer</UserDefinedRole>
-          <Description>Manufacturer</Description>
-        </IfcActorRole>
-      </Roles>
-      <Addresses>
-        <IfcPostalAddress>
-          <Purpose>office</Purpose>
-          <Description>Postal address</Description>
-          <UserDefinedPurpose>office address</UserDefinedPurpose>
-          <AddressLines>
-            <IfcLabel>Bld du Souverain 68</IfcLabel>
-          </AddressLines>
-          <Town>Brussels</Town>
-          <PostalCode>1170</PostalCode>
-          <Country>Belgium</Country>
-        </IfcPostalAddress>
-        <IfcTelecomAddress>
-          <Purpose>office</Purpose>
-          <Description>Telecom address</Description>
-          <UserDefinedPurpose>office address</UserDefinedPurpose>
-          <TelephoneNumbers>
-            <IfcLabel>+32(0)24634957</IfcLabel>
-          </TelephoneNumbers>
-          <ElectronicMailAddresses>
-            <IfcLabel>info@construction-products.eu</IfcLabel>
-          </ElectronicMailAddresses>
-          <WWWHomePageURL>https://www.construction-products.eu/</WWWHomePageURL>
-        </IfcTelecomAddress>
-      </Addresses>
-    </IfcOrganization>
-    <IfcPerson id="p1" xmlns="http://www.buildingsmart-tech.org/ifcXML/IFC4/Add2">
-      <Id>nn@aec3.com</Id>
-      <FamilyName>Nisbet</FamilyName>
-      <GivenName>Nicholas</GivenName>
-    </IfcPerson>
-    <IfcPerson id="p0" xmlns="http://www.buildingsmart-tech.org/ifcXML/IFC4/Add2">
-      <Id>Joe Boss</Id>
-      <FamilyName>Boss</FamilyName>
-      <GivenName>Joe</GivenName>
-    </IfcPerson>
-    <IfcPerson id="p2" xmlns="http://www.buildingsmart-tech.org/ifcXML/IFC4/Add2">
-      <Id>Joe Boss</Id>
-      <FamilyName>Boss</FamilyName>
-      <GivenName>Joe</GivenName>
-    </IfcPerson>
-    <IfcPerson id="p1" xmlns="http://www.buildingsmart-tech.org/ifcXML/IFC4/Add2">
-      <Id>nn@aec3.com</Id>
-      <FamilyName>Nisbet</FamilyName>
-      <GivenName>Nicholas</GivenName>
-    </IfcPerson>
-    <IfcApplication id="a1" xmlns="http://www.buildingsmart-tech.org/ifcXML/IFC4/Add2">
-      <ApplicationDeveloper>
-        <IfcOrganization xsi:nil="true" ref="o1" />
-      </ApplicationDeveloper>
-      <Version>v2018-06-22</Version>
-      <ApplicationFullName>SmartCE to IFC converter</ApplicationFullName>
-      <ApplicationIdentifier>_fromSmartCE.ifcxml.xsl</ApplicationIdentifier>
-    </IfcApplication>
-    <IfcOwnerHistory id="oh1" xmlns="http://www.buildingsmart-tech.org/ifcXML/IFC4/Add2">
-      <OwningUser>
-        <IfcPersonAndOrganization>
-          <ThePerson>
-            <IfcPerson xsi:nil="true" ref="p1" />
-          </ThePerson>
-          <TheOrganization>
-            <IfcOrganization xsi:nil="true" ref="o1" />
-          </TheOrganization>
-        </IfcPersonAndOrganization>
-      </OwningUser>
-      <OwningApplication>
-        <IfcApplication xsi:nil="true" ref="a1" />
-      </OwningApplication>
-      <State>readonly</State>
-      <ChangeAction>nochange</ChangeAction>
-      <CreationDate>1024516095</CreationDate>
-    </IfcOwnerHistory>
-    <IfcOwnerHistory id="oh0" xmlns="http://www.buildingsmart-tech.org/ifcXML/IFC4/Add2">
-      <OwningUser>
-        <IfcPersonAndOrganization>
-          <ThePerson>
-            <IfcPerson xsi:nil="true" ref="p0" />
-          </ThePerson>
-          <TheOrganization>
-            <IfcOrganization xsi:nil="true" ref="o0" />
-          </TheOrganization>
-        </IfcPersonAndOrganization>
-      </OwningUser>
-      <OwningApplication>
-        <IfcApplication xsi:nil="true" ref="a1" />
-      </OwningApplication>
-      <State>readonly</State>
-      <ChangeAction>nochange</ChangeAction>
-      <CreationDate>1024516095</CreationDate>
-    </IfcOwnerHistory>
-    <IfcOwnerHistory id="oh2" xmlns="http://www.buildingsmart-tech.org/ifcXML/IFC4/Add2">
-      <OwningUser>
-        <IfcPersonAndOrganization>
-          <ThePerson>
-            <IfcPerson xsi:nil="true" ref="p0" />
-          </ThePerson>
-          <TheOrganization>
-            <IfcOrganization xsi:nil="true" ref="o2" />
-          </TheOrganization>
-        </IfcPersonAndOrganization>
-      </OwningUser>
-      <OwningApplication>
-        <IfcApplication xsi:nil="true" ref="a1" />
-      </OwningApplication>
-      <State>readonly</State>
-      <ChangeAction>nochange</ChangeAction>
-      <CreationDate>1024516095</CreationDate>
-    </IfcOwnerHistory>
-    <!--Resources-->
-    <IfcGeometricRepresentationContext id="grc1" xmlns="http://www.buildingsmart-tech.org/ifcXML/IFC4/Add2">
-      <ContextType>Model</ContextType>
-      <CoordinateSpaceDimension>3</CoordinateSpaceDimension>
-      <Precision>1.000000000E-5</Precision>
-      <WorldCoordinateSystem>
-        <IfcAxis2Placement3D xsi:nil="true" ref="original_axis" />
-      </WorldCoordinateSystem>
-    </IfcGeometricRepresentationContext>
-    <IfcAxis2Placement3D id="original_axis" xmlns="http://www.buildingsmart-tech.org/ifcXML/IFC4/Add2">
-      <Location>
-        <IfcCartesianPoint xsi:nil="true" ref="zero" />
-      </Location>
-      <Axis>
-        <IfcDirection xsi:nil="true" ref="upwards" />
-      </Axis>
-      <RefDirection>
-        <IfcDirection xsi:nil="true" ref="eastwards" />
-      </RefDirection>
-    </IfcAxis2Placement3D>
-    <IfcCartesianPoint id="zero" xmlns="http://www.buildingsmart-tech.org/ifcXML/IFC4/Add2">
-      <Coordinates>
-        <IfcLengthMeasure>0.0</IfcLengthMeasure>
-        <IfcLengthMeasure>0.0</IfcLengthMeasure>
-        <IfcLengthMeasure>0.0</IfcLengthMeasure>
-      </Coordinates>
-    </IfcCartesianPoint>
-    <IfcDirection id="upwards" xmlns="http://www.buildingsmart-tech.org/ifcXML/IFC4/Add2">
-      <DirectionRatios>
-        <ex:double-wrapper>0.0</ex:double-wrapper>
-        <ex:double-wrapper>0.0</ex:double-wrapper>
-        <ex:double-wrapper>1.0</ex:double-wrapper>
-      </DirectionRatios>
-    </IfcDirection>
-    <IfcDirection id="eastwards" xmlns="http://www.buildingsmart-tech.org/ifcXML/IFC4/Add2">
-      <DirectionRatios>
-        <ex:double-wrapper>1.0</ex:double-wrapper>
-        <ex:double-wrapper>0.0</ex:double-wrapper>
-        <ex:double-wrapper>0.0</ex:double-wrapper>
-      </DirectionRatios>
-    </IfcDirection>
-    <IfcProductDefinitionShape id="point" xmlns="http://www.buildingsmart-tech.org/ifcXML/IFC4/Add2">
-      <Representations>
-        <IfcShapeRepresentation>
-          <ContextOfItems>
-            <IfcGeometricRepresentationContext xsi:nil="true" ref="grc1" />
-          </ContextOfItems>
-          <RepresentationIdentifier />
-          <RepresentationType>BoundingBox</RepresentationType>
-          <Items>
-            <IfcBoundingBox>
-              <Corner>
-                <IfcCartesianPoint>
-                  <Coordinates>
-                    <IfcLengthMeasure>-0.05</IfcLengthMeasure>
-                    <IfcLengthMeasure>-0.05</IfcLengthMeasure>
-                    <IfcLengthMeasure>0</IfcLengthMeasure>
-                  </Coordinates>
-                </IfcCartesianPoint>
-              </Corner>
-              <XDim>0.1</XDim>
-              <YDim>0.1</YDim>
-              <ZDim>0.1</ZDim>
-            </IfcBoundingBox>
-          </Items>
-        </IfcShapeRepresentation>
-      </Representations>
-    </IfcProductDefinitionShape>
-  </ifc:uos>
-</ex:iso_10303_28>
+<ifcXML xmlns:ifc="http://www.buildingsmart-tech.org/ifcXML/IFC4/Add1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" id="ifcXML4" xmlns="http://www.buildingsmart-tech.org/ifcXML/IFC4/Add1" xsi:schemaLocation="http://www.buildingsmart-tech.org/ifcXML/IFC4/Add1 ../IFC4_ADD1.xsd">
+	<IfcProject GlobalId="0topProject00000000000" Name="ProjectContext" Description="Project Context">
+		<OwnerHistory id="i2" State="readonly" ChangeAction="nochange" CreationDate="1024516095">
+			<OwningUser>
+				<ThePerson Identification="nn@aec3.com" FamilyName="Nisbet" GivenName="Nicholas"/>
+				<TheOrganization id="i1" Name="AEC3 UK Ltd" Description="BimServices provider"/>
+			</OwningUser>
+			<OwningApplication id="i4" Version="v2018-06-22" ApplicationFullName="SmartCE to IFC converter" ApplicationIdentifier="_fromSmartCE.ifcxml.xsl">
+				<ApplicationDeveloper xsi:nil="true" href="i1"/>
+			</OwningApplication>
+		</OwnerHistory>
+		<IsDecomposedBy>
+			<IfcRelAggregates GlobalId="0topAggregates00000000" Name="AggregatesContext" Description="Aggregates Context">
+				<OwnerHistory xsi:nil="true" href="i2"/>
+				<RelatedObjects>
+					<IfcSite GlobalId="0topSite00000000000000" Name="SiteContext" Description="Site Context" CompositionType="element">
+						<OwnerHistory xsi:nil="true" href="i2"/>
+						<IsDecomposedBy>
+							<IfcRelAggregates GlobalId="0topAggregates00000000" Name="AggregatesContext" Description="Aggregates Context">
+								<OwnerHistory xsi:nil="true" href="i2"/>
+								<RelatedObjects>
+									<IfcBuilding GlobalId="0topBuilding0000000000" Name="BuildingContext" Description="Building Context" CompositionType="element">
+										<OwnerHistory xsi:nil="true" href="i2"/>
+										<IsDecomposedBy>
+											<IfcRelAggregates GlobalId="0topAggregates00000000" Name="AggregatesContext" Description="Aggregates Context">
+												<OwnerHistory xsi:nil="true" href="i2"/>
+												<RelatedObjects>
+													<IfcBuildingStorey GlobalId="0topBuildingStorey0000" Name="BuildingStoreyContext" Description="BuildingStorey Context" CompositionType="element">
+														<OwnerHistory xsi:nil="true" href="i2"/>
+														<IsDecomposedBy>
+															<IfcRelAggregates GlobalId="0topAggregates00000000" Name="AggregatesContext" Description="Aggregates Context">
+																<OwnerHistory xsi:nil="true" href="i2"/>
+																<RelatedObjects>
+																	<IfcSpace GlobalId="0topSpace0000000000000" Name="SpaceContext" Description="Space Context" CompositionType="element" PredefinedType="internal">
+																		<OwnerHistory xsi:nil="true" href="i2"/>
+																		<ObjectPlacement xsi:type="IfcLocalPlacement" id="i6">
+																			<PlacementRelTo xsi:type="IfcLocalPlacement" id="i7">
+																				<PlacementRelTo xsi:type="IfcLocalPlacement" id="i8">
+																					<PlacementRelTo xsi:type="IfcLocalPlacement" id="i9">
+																						<RelativePlacement>
+																							<IfcAxis2Placement3D id="i3">
+																								<Location Coordinates="0 0 0"/>
+																								<Axis DirectionRatios="0 0 1"/>
+																								<RefDirection DirectionRatios="1 0 0"/>
+																							</IfcAxis2Placement3D>
+																						</RelativePlacement>
+																					</PlacementRelTo>
+																					<RelativePlacement>
+																						<IfcAxis2Placement3D xsi:nil="true" href="i3"/>
+																					</RelativePlacement>
+																				</PlacementRelTo>
+																				<RelativePlacement>
+																					<IfcAxis2Placement3D xsi:nil="true" href="i3"/>
+																				</RelativePlacement>
+																			</PlacementRelTo>
+																			<RelativePlacement>
+																				<IfcAxis2Placement3D xsi:nil="true" href="i3"/>
+																			</RelativePlacement>
+																		</ObjectPlacement>
+																		<ContainsElements>
+																			<IfcRelContainedInSpatialStructure GlobalId="0topContains0000000000" Name="ContainsContext" Description="Contains Context">
+																				<OwnerHistory xsi:nil="true" href="i2"/>
+																				<RelatedElements>
+																					<IfcBuildingElementProxy id="i10" GlobalId="0topBuildingElementPro" Name="Manufacturer_BuildingElementProxy_ABC123" Description="In protected masonry walls, columns and partitions" PredefinedType="element">
+																						<OwnerHistory id="i5" State="readonly" ChangeAction="nochange" CreationDate="1024516095">
+																							<OwningUser>
+																								<ThePerson id="i12" Identification="Joe Boss" FamilyName="Boss" GivenName="Joe"/>
+																								<TheOrganization Name="Manufacturer" Description="http://www.construction-products.eu/logo.png">
+																									<Roles>
+																										<IfcActorRole Role="manufacturer" UserDefinedRole="Manufacturer" Description="Manufacturer"/>
+																									</Roles>
+																									<Addresses>
+																										<IfcPostalAddress Purpose="office" Description="Postal address" UserDefinedPurpose="office address" Town="Brussels" PostalCode="1170" Country="Belgium">
+																											<AddressLines>
+																												<IfcLabel-wrapper>Bld du Souverain 68</IfcLabel-wrapper>
+																											</AddressLines>
+																										</IfcPostalAddress>
+																										<IfcTelecomAddress Purpose="office" Description="Telecom address" UserDefinedPurpose="office address" TelephoneNumbers="+32(0)24634957" ElectronicMailAddresses="info@construction-products.eu" WWWHomePageURL="https://www.construction-products.eu/"/>
+																									</Addresses>
+																								</TheOrganization>
+																							</OwningUser>
+																							<OwningApplication xsi:nil="true" href="i4"/>
+																						</OwnerHistory>
+																						<IsDefinedBy>
+																							<IfcRelDefinesByProperties GlobalId="0topQuantifies00000000" Name="QuantifiesContext" Description="Quantifies Context">
+																								<OwnerHistory xsi:nil="true" href="i2"/>
+																								<RelatingPropertyDefinition>
+																									<IfcElementQuantity id="i11" GlobalId="0topElementQuantity000" Name="BaseQuantities" Description="Base Quantities">
+																										<OwnerHistory xsi:nil="true" href="i5"/>
+																										<Quantities>
+																											<IfcQuantityLength Name="Length" Description="length measured in geometry" LengthValue="240"/>
+																											<IfcQuantityLength Name="Width" Description="width measured in geometry" LengthValue="115"/>
+																											<IfcQuantityLength Name="Height" Description="height measured in geometry" LengthValue="113"/>
+																											<IfcQuantityVolume Name="GrossVolume" Description="Volume measured in geometry" VolumeValue="0.0031188"/>
+																											<IfcQuantityWeight Name="GrossWeight" Description="Weight measured in geometry" WeightValue="4.693794"/>
+																										</Quantities>
+																									</IfcElementQuantity>
+																								</RelatingPropertyDefinition>
+																							</IfcRelDefinesByProperties>
+																						</IsDefinedBy>
+																						<ObjectPlacement xsi:type="IfcLocalPlacement">
+																							<PlacementRelTo xsi:type="IfcLocalPlacement" xsi:nil="true" href="i6"/>
+																							<RelativePlacement>
+																								<IfcAxis2Placement3D xsi:nil="true" href="i3"/>
+																							</RelativePlacement>
+																						</ObjectPlacement>
+																					</IfcBuildingElementProxy>
+																				</RelatedElements>
+																			</IfcRelContainedInSpatialStructure>
+																		</ContainsElements>
+																	</IfcSpace>
+																</RelatedObjects>
+															</IfcRelAggregates>
+														</IsDecomposedBy>
+														<ObjectPlacement xsi:type="IfcLocalPlacement" xsi:nil="true" href="i7"/>
+													</IfcBuildingStorey>
+												</RelatedObjects>
+											</IfcRelAggregates>
+										</IsDecomposedBy>
+										<ObjectPlacement xsi:type="IfcLocalPlacement" xsi:nil="true" href="i8"/>
+									</IfcBuilding>
+								</RelatedObjects>
+							</IfcRelAggregates>
+						</IsDecomposedBy>
+						<ObjectPlacement xsi:type="IfcLocalPlacement" xsi:nil="true" href="i9"/>
+					</IfcSite>
+				</RelatedObjects>
+			</IfcRelAggregates>
+		</IsDecomposedBy>
+		<RepresentationContexts>
+			<IfcGeometricRepresentationContext ContextType="Model" CoordinateSpaceDimension="3" Precision="1E-05">
+				<WorldCoordinateSystem>
+					<IfcAxis2Placement3D xsi:nil="true" href="i3"/>
+				</WorldCoordinateSystem>
+			</IfcGeometricRepresentationContext>
+		</RepresentationContexts>
+		<UnitsInContext>
+			<Units>
+				<IfcSIUnit id="i14" UnitType="lengthunit" Prefix="milli" Name="metre"/>
+				<IfcSIUnit UnitType="areaunit" Name="square_metre"/>
+				<IfcSIUnit UnitType="massunit" Prefix="kilo" Name="gram"/>
+				<IfcSIUnit UnitType="volumeunit" Name="cubic_metre"/>
+				<IfcSIUnit UnitType="planeangleunit" Name="radian"/>
+				<IfcSIUnit UnitType="solidangleunit" Name="steradian"/>
+				<IfcSIUnit UnitType="timeunit" Name="second"/>
+				<IfcSIUnit UnitType="thermodynamictemperatureunit" Name="degree_celsius"/>
+				<IfcSIUnit UnitType="luminousintensityunit" Name="lumen"/>
+			</Units>
+		</UnitsInContext>
+	</IfcProject>
+	<IfcRelDefinesByType GlobalId="0topDefines00000000000" Name="DefinesContext" Description="Defines Context">
+		<OwnerHistory xsi:nil="true" href="i2"/>
+		<RelatedObjects>
+			<IfcBuildingElementProxy xsi:nil="true" href="i10"/>
+		</RelatedObjects>
+		<RelatingType xsi:type="IfcBuildingElementProxyType" GlobalId="0topBuildingElementPro" Name="Manufacturer_BuildingElementProxy_ABC123" Description="In protected masonry walls, columns and partitions" ApplicableOccurrence="unset" PredefinedType="notdefined">
+			<OwnerHistory xsi:nil="true" href="i5"/>
+			<HasPropertySets>
+				<IfcElementQuantity xsi:nil="true" href="i11"/>
+				<IfcPropertySet GlobalId="0topPropertySet0000000" Name="CPR_" Description="Essential Characteristic ">
+					<OwnerHistory id="i13" State="readonly" ChangeAction="nochange" CreationDate="1024516095">
+						<OwningUser>
+							<ThePerson xsi:nil="true" href="i12"/>
+							<TheOrganization Name="Authorized representative" Description="http://www.construction-products.eu/logo.png">
+								<Roles>
+									<IfcActorRole Role="userdefined" UserDefinedRole="AuthorisedRepresentative" Description="Authorised Representative"/>
+								</Roles>
+								<Addresses>
+									<IfcPostalAddress Purpose="office" Description="Postal address" UserDefinedPurpose="office address" Town="Madrid" PostalCode="28080" Country="Spain">
+										<AddressLines>
+											<IfcLabel-wrapper>C/ Muro 16</IfcLabel-wrapper>
+										</AddressLines>
+									</IfcPostalAddress>
+									<IfcTelecomAddress Purpose="office" Description="Telecom address" UserDefinedPurpose="office address" TelephoneNumbers="+324977299" ElectronicMailAddresses="info@construction-products.eu" WWWHomePageURL="https://www.construction-products.eu/"/>
+								</Addresses>
+							</TheOrganization>
+						</OwningUser>
+						<OwningApplication xsi:nil="true" href="i4"/>
+					</OwnerHistory>
+					<HasProperties>
+						<IfcPropertySingleValue Name="TemplateId" Description="TemplateId singleton">
+							<NominalValue>
+								<IfcText-wrapper>EN_771-2:2011+A1:2015</IfcText-wrapper>
+							</NominalValue>
+						</IfcPropertySingleValue>
+						<IfcPropertySingleValue Name="DoPNumber" Description="DoPNumber singleton">
+							<NominalValue>
+								<IfcText-wrapper>ABC123</IfcText-wrapper>
+							</NominalValue>
+						</IfcPropertySingleValue>
+						<IfcComplexProperty Name="SystemsOfAVCP" Description="SystemsOfAVCP otherwise" UsageName="SystemsOfAVCP">
+							<HasProperties>
+								<IfcPropertyEnumeratedValue Name="AVCP" Description="AVCP attestation">
+									<EnumerationValues>
+										<IfcLabel-wrapper>2+</IfcLabel-wrapper>
+									</EnumerationValues>
+									<EnumerationReference id="i15" Name="PEnum_AVCP">
+										<EnumerationValues>
+											<IfcLabel-wrapper>0</IfcLabel-wrapper>
+											<IfcLabel-wrapper>1</IfcLabel-wrapper>
+											<IfcLabel-wrapper>2</IfcLabel-wrapper>
+											<IfcLabel-wrapper>2+</IfcLabel-wrapper>
+											<IfcLabel-wrapper>3</IfcLabel-wrapper>
+											<IfcLabel-wrapper>4</IfcLabel-wrapper>
+											<IfcLabel-wrapper>unset</IfcLabel-wrapper>
+										</EnumerationValues>
+									</EnumerationReference>
+								</IfcPropertyEnumeratedValue>
+							</HasProperties>
+						</IfcComplexProperty>
+						<IfcPropertySingleValue Name="HarmonisedStandard" Description="HarmonisedStandard singleton">
+							<NominalValue>
+								<IfcText-wrapper>EN 771-2:2011+A1:2015</IfcText-wrapper>
+							</NominalValue>
+						</IfcPropertySingleValue>
+						<IfcComplexProperty Name="NotifiedBodies" Description="NotifiedBodies otherwise" UsageName="NotifiedBodies">
+							<HasProperties>
+								<IfcComplexProperty Name="NB" Description="NB otherwise" UsageName="NB">
+									<HasProperties>
+										<IfcPropertySingleValue Name="NBName" Description="NBName singleton">
+											<NominalValue>
+												<IfcText-wrapper>NB1 name</IfcText-wrapper>
+											</NominalValue>
+										</IfcPropertySingleValue>
+										<IfcPropertySingleValue Name="NBNumber" Description="NBNumber singleton">
+											<NominalValue>
+												<IfcText-wrapper>NB1 number</IfcText-wrapper>
+											</NominalValue>
+										</IfcPropertySingleValue>
+									</HasProperties>
+								</IfcComplexProperty>
+							</HasProperties>
+						</IfcComplexProperty>
+						<IfcComplexProperty Name="AppropriateTechnicalDocumentation" Description="AppropriateTechnicalDocumentation otherwise" UsageName="AppropriateTechnicalDocumentation">
+							<HasProperties>
+								<IfcComplexProperty Name="ATD" Description="ATD otherwise" UsageName="ATD">
+									<HasProperties>
+										<IfcPropertySingleValue Name="ATDReferenceNumber" Description="ATDReferenceNumber singleton">
+											<NominalValue>
+												<IfcText-wrapper>999</IfcText-wrapper>
+											</NominalValue>
+										</IfcPropertySingleValue>
+										<IfcPropertySingleValue Name="ATDRequirements" Description="ATDRequirements singleton">
+											<NominalValue>
+												<IfcText-wrapper>ATD.pdf</IfcText-wrapper>
+											</NominalValue>
+										</IfcPropertySingleValue>
+									</HasProperties>
+								</IfcComplexProperty>
+							</HasProperties>
+						</IfcComplexProperty>
+						<IfcComplexProperty Name="SpecificTechnicalDocumentation" Description="SpecificTechnicalDocumentation otherwise" UsageName="SpecificTechnicalDocumentation">
+							<HasProperties>
+								<IfcComplexProperty Name="STD" Description="STD otherwise" UsageName="STD">
+									<HasProperties>
+										<IfcPropertySingleValue Name="STDReferenceNumber" Description="STDReferenceNumber singleton">
+											<NominalValue>
+												<IfcText-wrapper>888</IfcText-wrapper>
+											</NominalValue>
+										</IfcPropertySingleValue>
+										<IfcPropertySingleValue Name="STDRequirements" Description="STDRequirements singleton">
+											<NominalValue>
+												<IfcText-wrapper>STD.pdf</IfcText-wrapper>
+											</NominalValue>
+										</IfcPropertySingleValue>
+									</HasProperties>
+								</IfcComplexProperty>
+							</HasProperties>
+						</IfcComplexProperty>
+						<IfcPropertySingleValue Name="Statement" Description="Statement singleton">
+							<NominalValue>
+								<IfcText-wrapper>The performance of the product identified above is in conformity with the set of declared performance/s. This declaration of performance is issued, in accordance with Regulation (EU) No 305/2011, under the sole responsibility of the manufacturer identified above. </IfcText-wrapper>
+							</NominalValue>
+						</IfcPropertySingleValue>
+						<IfcPropertySingleValue Name="Name" Description="Name singleton">
+							<NominalValue>
+								<IfcText-wrapper>Joe Boss</IfcText-wrapper>
+							</NominalValue>
+						</IfcPropertySingleValue>
+						<IfcPropertySingleValue Name="Place" Description="Place singleton">
+							<NominalValue>
+								<IfcText-wrapper>Brussels</IfcText-wrapper>
+							</NominalValue>
+						</IfcPropertySingleValue>
+						<IfcPropertySingleValue Name="Date" Description="Date singleton">
+							<NominalValue>
+								<IfcText-wrapper>2018-06-22</IfcText-wrapper>
+							</NominalValue>
+						</IfcPropertySingleValue>
+						<IfcPropertySingleValue Name="Signature" Description="Signature singleton">
+							<NominalValue>
+								<IfcText-wrapper>JB</IfcText-wrapper>
+							</NominalValue>
+						</IfcPropertySingleValue>
+						<IfcComplexProperty Name="InstructionsAndSafetyInformation" Description="InstructionsAndSafetyInformation otherwise" UsageName="InstructionsAndSafetyInformation">
+							<HasProperties>
+								<IfcPropertySingleValue Name="Link" Description="Link singleton">
+									<NominalValue>
+										<IfcText-wrapper>ISI.pdf</IfcText-wrapper>
+									</NominalValue>
+								</IfcPropertySingleValue>
+							</HasProperties>
+						</IfcComplexProperty>
+						<IfcPropertySingleValue Name="DoPLink" Description="DoPLink singleton">
+							<NominalValue>
+								<IfcText-wrapper>DoP.pdf</IfcText-wrapper>
+							</NominalValue>
+						</IfcPropertySingleValue>
+					</HasProperties>
+				</IfcPropertySet>
+				<IfcPropertySet GlobalId="0topPropertySet0000000" Name="CPR_Dimensions_and_dimensional_tolerances" Description="Essential Characteristic Dimensions and dimensional tolerances">
+					<OwnerHistory xsi:nil="true" href="i13"/>
+					<HasProperties>
+						<IfcComplexProperty Name="Dimensions" Description="Dimensions" UsageName="Dimensions">
+							<HasProperties>
+								<IfcComplexProperty Name="length" Description="length" UsageName="length">
+									<HasProperties>
+										<IfcPropertySingleValue Name="length" Description="length value">
+											<NominalValue>
+												<IfcLengthMeasure-wrapper>240</IfcLengthMeasure-wrapper>
+											</NominalValue>
+											<Unit>
+												<IfcSIUnit xsi:nil="true" href="i14"/>
+											</Unit>
+										</IfcPropertySingleValue>
+										<IfcPropertySingleValue Name="Relation" Description="Value Relation">
+											<NominalValue>
+												<IfcLabel-wrapper>equal to</IfcLabel-wrapper>
+											</NominalValue>
+										</IfcPropertySingleValue>
+										<IfcPropertySingleValue Name="ReferenceDocument" Description="reference Document">
+											<NominalValue>
+												<IfcLabel-wrapper>EN 772-16</IfcLabel-wrapper>
+											</NominalValue>
+										</IfcPropertySingleValue>
+									</HasProperties>
+								</IfcComplexProperty>
+								<IfcComplexProperty Name="height" Description="height" UsageName="height">
+									<HasProperties>
+										<IfcPropertySingleValue Name="height" Description="height value">
+											<NominalValue>
+												<IfcLengthMeasure-wrapper>113</IfcLengthMeasure-wrapper>
+											</NominalValue>
+											<Unit>
+												<IfcSIUnit xsi:nil="true" href="i14"/>
+											</Unit>
+										</IfcPropertySingleValue>
+										<IfcPropertySingleValue Name="Relation" Description="Value Relation">
+											<NominalValue>
+												<IfcLabel-wrapper>equal to</IfcLabel-wrapper>
+											</NominalValue>
+										</IfcPropertySingleValue>
+										<IfcPropertySingleValue Name="ReferenceDocument" Description="reference Document">
+											<NominalValue>
+												<IfcLabel-wrapper>EN 772-16</IfcLabel-wrapper>
+											</NominalValue>
+										</IfcPropertySingleValue>
+									</HasProperties>
+								</IfcComplexProperty>
+								<IfcComplexProperty Name="width" Description="width" UsageName="width">
+									<HasProperties>
+										<IfcPropertySingleValue Name="width" Description="width value">
+											<NominalValue>
+												<IfcLengthMeasure-wrapper>115</IfcLengthMeasure-wrapper>
+											</NominalValue>
+											<Unit>
+												<IfcSIUnit xsi:nil="true" href="i14"/>
+											</Unit>
+										</IfcPropertySingleValue>
+										<IfcPropertySingleValue Name="Relation" Description="Value Relation">
+											<NominalValue>
+												<IfcLabel-wrapper>equal to</IfcLabel-wrapper>
+											</NominalValue>
+										</IfcPropertySingleValue>
+										<IfcPropertySingleValue Name="ReferenceDocument" Description="reference Document">
+											<NominalValue>
+												<IfcLabel-wrapper>EN 772-16</IfcLabel-wrapper>
+											</NominalValue>
+										</IfcPropertySingleValue>
+									</HasProperties>
+								</IfcComplexProperty>
+								<IfcPropertyEnumeratedValue Name="AVCP" Description="AVCP attestation">
+									<EnumerationValues>
+										<IfcLabel-wrapper>2+</IfcLabel-wrapper>
+									</EnumerationValues>
+									<EnumerationReference xsi:nil="true" href="i15"/>
+								</IfcPropertyEnumeratedValue>
+							</HasProperties>
+						</IfcComplexProperty>
+						<IfcComplexProperty Name="Dimensional tolerances" Description="Dimensional tolerances" UsageName="Dimensional tolerances">
+							<HasProperties>
+								<IfcComplexProperty Name="tolerance category" Description="tolerance category" UsageName="tolerance category">
+									<HasProperties>
+										<IfcPropertySingleValue Name="tolerance category" Description="tolerance category category">
+											<NominalValue>
+												<IfcText-wrapper>T1</IfcText-wrapper>
+											</NominalValue>
+										</IfcPropertySingleValue>
+										<IfcPropertySingleValue Name="Relation" Description="Value Relation">
+											<NominalValue>
+												<IfcLabel-wrapper>category</IfcLabel-wrapper>
+											</NominalValue>
+										</IfcPropertySingleValue>
+										<IfcPropertySingleValue Name="ReferenceDocument" Description="reference Document">
+											<NominalValue>
+												<IfcLabel-wrapper>EN 772-1</IfcLabel-wrapper>
+											</NominalValue>
+										</IfcPropertySingleValue>
+									</HasProperties>
+								</IfcComplexProperty>
+								<IfcComplexProperty Name="mean height of sample" Description="mean height of sample" UsageName="mean height of sample">
+									<HasProperties>
+										<IfcPropertySingleValue Name="mean height of sample" Description="mean height of sample value">
+											<NominalValue>
+												<IfcText-wrapper>NPD</IfcText-wrapper>
+											</NominalValue>
+										</IfcPropertySingleValue>
+										<IfcPropertySingleValue Name="Relation" Description="Value Relation">
+											<NominalValue>
+												<IfcLabel-wrapper>plus minus</IfcLabel-wrapper>
+											</NominalValue>
+										</IfcPropertySingleValue>
+										<IfcPropertySingleValue Name="ReferenceDocument" Description="reference Document">
+											<NominalValue>
+												<IfcLabel-wrapper>EN 772-16</IfcLabel-wrapper>
+											</NominalValue>
+										</IfcPropertySingleValue>
+									</HasProperties>
+								</IfcComplexProperty>
+								<IfcComplexProperty Name="mean length of sample" Description="mean length of sample" UsageName="mean length of sample">
+									<HasProperties>
+										<IfcPropertySingleValue Name="mean length of sample" Description="mean length of sample value">
+											<NominalValue>
+												<IfcText-wrapper>NPD</IfcText-wrapper>
+											</NominalValue>
+										</IfcPropertySingleValue>
+										<IfcPropertySingleValue Name="Relation" Description="Value Relation">
+											<NominalValue>
+												<IfcLabel-wrapper>plus minus</IfcLabel-wrapper>
+											</NominalValue>
+										</IfcPropertySingleValue>
+										<IfcPropertySingleValue Name="ReferenceDocument" Description="reference Document">
+											<NominalValue>
+												<IfcLabel-wrapper>EN 772-16</IfcLabel-wrapper>
+											</NominalValue>
+										</IfcPropertySingleValue>
+									</HasProperties>
+								</IfcComplexProperty>
+								<IfcComplexProperty Name="mean width of sample" Description="mean width of sample" UsageName="mean width of sample">
+									<HasProperties>
+										<IfcPropertySingleValue Name="mean width of sample" Description="mean width of sample value">
+											<NominalValue>
+												<IfcText-wrapper>NPD</IfcText-wrapper>
+											</NominalValue>
+										</IfcPropertySingleValue>
+										<IfcPropertySingleValue Name="Relation" Description="Value Relation">
+											<NominalValue>
+												<IfcLabel-wrapper>plus minus</IfcLabel-wrapper>
+											</NominalValue>
+										</IfcPropertySingleValue>
+										<IfcPropertySingleValue Name="ReferenceDocument" Description="reference Document">
+											<NominalValue>
+												<IfcLabel-wrapper>EN 772-16</IfcLabel-wrapper>
+											</NominalValue>
+										</IfcPropertySingleValue>
+									</HasProperties>
+								</IfcComplexProperty>
+								<IfcComplexProperty Name="individual height" Description="individual height" UsageName="individual height">
+									<HasProperties>
+										<IfcPropertySingleValue Name="individual height" Description="individual height value">
+											<NominalValue>
+												<IfcText-wrapper>NPD</IfcText-wrapper>
+											</NominalValue>
+										</IfcPropertySingleValue>
+										<IfcPropertySingleValue Name="Relation" Description="Value Relation">
+											<NominalValue>
+												<IfcLabel-wrapper>plus minus</IfcLabel-wrapper>
+											</NominalValue>
+										</IfcPropertySingleValue>
+										<IfcPropertySingleValue Name="ReferenceDocument" Description="reference Document">
+											<NominalValue>
+												<IfcLabel-wrapper>EN 772-16</IfcLabel-wrapper>
+											</NominalValue>
+										</IfcPropertySingleValue>
+									</HasProperties>
+								</IfcComplexProperty>
+								<IfcComplexProperty Name="individual length" Description="individual length" UsageName="individual length">
+									<HasProperties>
+										<IfcPropertySingleValue Name="individual length" Description="individual length value">
+											<NominalValue>
+												<IfcText-wrapper>NPD</IfcText-wrapper>
+											</NominalValue>
+										</IfcPropertySingleValue>
+										<IfcPropertySingleValue Name="Relation" Description="Value Relation">
+											<NominalValue>
+												<IfcLabel-wrapper>plus minus</IfcLabel-wrapper>
+											</NominalValue>
+										</IfcPropertySingleValue>
+										<IfcPropertySingleValue Name="ReferenceDocument" Description="reference Document">
+											<NominalValue>
+												<IfcLabel-wrapper>EN 772-16</IfcLabel-wrapper>
+											</NominalValue>
+										</IfcPropertySingleValue>
+									</HasProperties>
+								</IfcComplexProperty>
+								<IfcComplexProperty Name="individual width" Description="individual width" UsageName="individual width">
+									<HasProperties>
+										<IfcPropertySingleValue Name="individual width" Description="individual width value">
+											<NominalValue>
+												<IfcText-wrapper>NPD</IfcText-wrapper>
+											</NominalValue>
+										</IfcPropertySingleValue>
+										<IfcPropertySingleValue Name="Relation" Description="Value Relation">
+											<NominalValue>
+												<IfcLabel-wrapper>plus minus</IfcLabel-wrapper>
+											</NominalValue>
+										</IfcPropertySingleValue>
+										<IfcPropertySingleValue Name="ReferenceDocument" Description="reference Document">
+											<NominalValue>
+												<IfcLabel-wrapper>EN 772-16</IfcLabel-wrapper>
+											</NominalValue>
+										</IfcPropertySingleValue>
+									</HasProperties>
+								</IfcComplexProperty>
+								<IfcComplexProperty Name="flatness of bed faces" Description="flatness of bed faces" UsageName="flatness of bed faces">
+									<HasProperties>
+										<IfcPropertySingleValue Name="flatness of bed faces" Description="flatness of bed faces value">
+											<NominalValue>
+												<IfcText-wrapper>NPD</IfcText-wrapper>
+											</NominalValue>
+										</IfcPropertySingleValue>
+										<IfcPropertySingleValue Name="Relation" Description="Value Relation">
+											<NominalValue>
+												<IfcLabel-wrapper>less than or equal to</IfcLabel-wrapper>
+											</NominalValue>
+										</IfcPropertySingleValue>
+										<IfcPropertySingleValue Name="ReferenceDocument" Description="reference Document">
+											<NominalValue>
+												<IfcLabel-wrapper>EN 772-20</IfcLabel-wrapper>
+											</NominalValue>
+										</IfcPropertySingleValue>
+									</HasProperties>
+								</IfcComplexProperty>
+								<IfcComplexProperty Name="plane parallelism of bed face" Description="plane parallelism of bed face" UsageName="plane parallelism of bed face">
+									<HasProperties>
+										<IfcPropertySingleValue Name="plane parallelism of bed face" Description="plane parallelism of bed face value">
+											<NominalValue>
+												<IfcText-wrapper>NPD</IfcText-wrapper>
+											</NominalValue>
+										</IfcPropertySingleValue>
+										<IfcPropertySingleValue Name="Relation" Description="Value Relation">
+											<NominalValue>
+												<IfcLabel-wrapper>less than or equal to</IfcLabel-wrapper>
+											</NominalValue>
+										</IfcPropertySingleValue>
+										<IfcPropertySingleValue Name="ReferenceDocument" Description="reference Document">
+											<NominalValue>
+												<IfcLabel-wrapper>EN 772-16</IfcLabel-wrapper>
+											</NominalValue>
+										</IfcPropertySingleValue>
+									</HasProperties>
+								</IfcComplexProperty>
+								<IfcPropertyEnumeratedValue Name="AVCP" Description="AVCP attestation">
+									<EnumerationValues>
+										<IfcLabel-wrapper>2+</IfcLabel-wrapper>
+									</EnumerationValues>
+									<EnumerationReference xsi:nil="true" href="i15"/>
+								</IfcPropertyEnumeratedValue>
+							</HasProperties>
+						</IfcComplexProperty>
+					</HasProperties>
+				</IfcPropertySet>
+				<IfcPropertySet GlobalId="0topPropertySet0000000" Name="CPR_Configuration" Description="Essential Characteristic Configuration">
+					<OwnerHistory xsi:nil="true" href="i13"/>
+					<HasProperties>
+						<IfcComplexProperty Name="Group according to Eurocodes" Description="Group according to Eurocodes" UsageName="Group according to Eurocodes">
+							<HasProperties>
+								<IfcComplexProperty Name="group according to eurocodes" Description="group according to eurocodes" UsageName="group according to eurocodes">
+									<HasProperties>
+										<IfcPropertySingleValue Name="group according to eurocodes" Description="group according to eurocodes group">
+											<NominalValue>
+												<IfcText-wrapper>1</IfcText-wrapper>
+											</NominalValue>
+										</IfcPropertySingleValue>
+										<IfcPropertySingleValue Name="Relation" Description="Value Relation">
+											<NominalValue>
+												<IfcLabel-wrapper>category</IfcLabel-wrapper>
+											</NominalValue>
+										</IfcPropertySingleValue>
+										<IfcPropertySingleValue Name="ReferenceDocument" Description="reference Document">
+											<NominalValue>
+												<IfcLabel-wrapper>EN 1996-1-1</IfcLabel-wrapper>
+											</NominalValue>
+										</IfcPropertySingleValue>
+									</HasProperties>
+								</IfcComplexProperty>
+								<IfcPropertyEnumeratedValue Name="AVCP" Description="AVCP attestation">
+									<EnumerationValues>
+										<IfcLabel-wrapper>2+</IfcLabel-wrapper>
+									</EnumerationValues>
+									<EnumerationReference xsi:nil="true" href="i15"/>
+								</IfcPropertyEnumeratedValue>
+							</HasProperties>
+						</IfcComplexProperty>
+						<IfcComplexProperty Name="Drawing" Description="Drawing" UsageName="Drawing">
+							<HasProperties>
+								<IfcComplexProperty Name="drawing" Description="drawing" UsageName="drawing">
+									<HasProperties>
+										<IfcPropertySingleValue Name="drawing" Description="drawing file">
+											<NominalValue>
+												<IfcText-wrapper>http://.../diagram.jpg</IfcText-wrapper>
+											</NominalValue>
+										</IfcPropertySingleValue>
+										<IfcPropertySingleValue Name="Relation" Description="Value Relation">
+											<NominalValue>
+												<IfcLabel-wrapper>file</IfcLabel-wrapper>
+											</NominalValue>
+										</IfcPropertySingleValue>
+										<IfcPropertySingleValue Name="ReferenceDocument" Description="reference Document">
+											<NominalValue>
+												<IfcLabel-wrapper>EN 771-2</IfcLabel-wrapper>
+											</NominalValue>
+										</IfcPropertySingleValue>
+									</HasProperties>
+								</IfcComplexProperty>
+								<IfcPropertyEnumeratedValue Name="AVCP" Description="AVCP attestation">
+									<EnumerationValues>
+										<IfcLabel-wrapper>2+</IfcLabel-wrapper>
+									</EnumerationValues>
+									<EnumerationReference xsi:nil="true" href="i15"/>
+								</IfcPropertyEnumeratedValue>
+							</HasProperties>
+						</IfcComplexProperty>
+						<IfcPropertySingleValue Name="Property" Description="Property singleton">
+							<NominalValue>
+								<IfcText-wrapper> … </IfcText-wrapper>
+							</NominalValue>
+						</IfcPropertySingleValue>
+					</HasProperties>
+				</IfcPropertySet>
+				<IfcPropertySet GlobalId="0topPropertySet0000000" Name="CPR_Compressive_strength" Description="Essential Characteristic Compressive strength">
+					<OwnerHistory xsi:nil="true" href="i13"/>
+					<HasProperties>
+						<IfcComplexProperty Name="Perpendicular to bed faces" Description="Perpendicular to bed faces" UsageName="Perpendicular to bed faces">
+							<HasProperties>
+								<IfcComplexProperty Name="type of specimen" Description="type of specimen" UsageName="type of specimen">
+									<HasProperties>
+										<IfcPropertySingleValue Name="type of specimen" Description="type of specimen type">
+											<NominalValue>
+												<IfcText-wrapper>whole unit</IfcText-wrapper>
+											</NominalValue>
+										</IfcPropertySingleValue>
+										<IfcPropertySingleValue Name="Relation" Description="Value Relation">
+											<NominalValue>
+												<IfcLabel-wrapper>category</IfcLabel-wrapper>
+											</NominalValue>
+										</IfcPropertySingleValue>
+										<IfcPropertySingleValue Name="ReferenceDocument" Description="reference Document">
+											<NominalValue>
+												<IfcLabel-wrapper>EN 771-2</IfcLabel-wrapper>
+											</NominalValue>
+										</IfcPropertySingleValue>
+									</HasProperties>
+								</IfcComplexProperty>
+								<IfcComplexProperty Name="category" Description="category" UsageName="category">
+									<HasProperties>
+										<IfcPropertySingleValue Name="category" Description="category category">
+											<NominalValue>
+												<IfcText-wrapper>I</IfcText-wrapper>
+											</NominalValue>
+										</IfcPropertySingleValue>
+										<IfcPropertySingleValue Name="Relation" Description="Value Relation">
+											<NominalValue>
+												<IfcLabel-wrapper>category</IfcLabel-wrapper>
+											</NominalValue>
+										</IfcPropertySingleValue>
+										<IfcPropertySingleValue Name="ReferenceDocument" Description="reference Document">
+											<NominalValue>
+												<IfcLabel-wrapper>EN 771-2</IfcLabel-wrapper>
+											</NominalValue>
+										</IfcPropertySingleValue>
+									</HasProperties>
+								</IfcComplexProperty>
+								<IfcComplexProperty Name="mean" Description="mean" UsageName="mean">
+									<HasProperties>
+										<IfcPropertySingleValue Name="mean" Description="mean value">
+											<NominalValue>
+												<IfcText-wrapper>18.75</IfcText-wrapper>
+											</NominalValue>
+										</IfcPropertySingleValue>
+										<IfcPropertySingleValue Name="Relation" Description="Value Relation">
+											<NominalValue>
+												<IfcLabel-wrapper>greater than or equal to</IfcLabel-wrapper>
+											</NominalValue>
+										</IfcPropertySingleValue>
+										<IfcPropertySingleValue Name="ReferenceDocument" Description="reference Document">
+											<NominalValue>
+												<IfcLabel-wrapper>EN 772-1</IfcLabel-wrapper>
+											</NominalValue>
+										</IfcPropertySingleValue>
+									</HasProperties>
+								</IfcComplexProperty>
+								<IfcComplexProperty Name="normalised" Description="normalised" UsageName="normalised">
+									<HasProperties>
+										<IfcPropertySingleValue Name="normalised" Description="normalised value">
+											<NominalValue>
+												<IfcText-wrapper>15.33</IfcText-wrapper>
+											</NominalValue>
+										</IfcPropertySingleValue>
+										<IfcPropertySingleValue Name="Relation" Description="Value Relation">
+											<NominalValue>
+												<IfcLabel-wrapper>greater than or equal to</IfcLabel-wrapper>
+											</NominalValue>
+										</IfcPropertySingleValue>
+										<IfcPropertySingleValue Name="ReferenceDocument" Description="reference Document">
+											<NominalValue>
+												<IfcLabel-wrapper>EN 772-1</IfcLabel-wrapper>
+											</NominalValue>
+										</IfcPropertySingleValue>
+									</HasProperties>
+								</IfcComplexProperty>
+								<IfcPropertyEnumeratedValue Name="AVCP" Description="AVCP attestation">
+									<EnumerationValues>
+										<IfcLabel-wrapper>2+</IfcLabel-wrapper>
+									</EnumerationValues>
+									<EnumerationReference xsi:nil="true" href="i15"/>
+								</IfcPropertyEnumeratedValue>
+							</HasProperties>
+						</IfcComplexProperty>
+						<IfcComplexProperty Name="Perpendicular to header" Description="Perpendicular to header" UsageName="Perpendicular to header">
+							<HasProperties>
+								<IfcComplexProperty Name="type of specimen" Description="type of specimen" UsageName="type of specimen">
+									<HasProperties>
+										<IfcPropertySingleValue Name="type of specimen" Description="type of specimen type">
+											<NominalValue>
+												<IfcText-wrapper>NPD</IfcText-wrapper>
+											</NominalValue>
+										</IfcPropertySingleValue>
+										<IfcPropertySingleValue Name="Relation" Description="Value Relation">
+											<NominalValue>
+												<IfcLabel-wrapper>category</IfcLabel-wrapper>
+											</NominalValue>
+										</IfcPropertySingleValue>
+										<IfcPropertySingleValue Name="ReferenceDocument" Description="reference Document">
+											<NominalValue>
+												<IfcLabel-wrapper>EN 771-2</IfcLabel-wrapper>
+											</NominalValue>
+										</IfcPropertySingleValue>
+									</HasProperties>
+								</IfcComplexProperty>
+								<IfcComplexProperty Name="category" Description="category" UsageName="category">
+									<HasProperties>
+										<IfcPropertySingleValue Name="category" Description="category category">
+											<NominalValue>
+												<IfcText-wrapper>NPD</IfcText-wrapper>
+											</NominalValue>
+										</IfcPropertySingleValue>
+										<IfcPropertySingleValue Name="Relation" Description="Value Relation">
+											<NominalValue>
+												<IfcLabel-wrapper>category</IfcLabel-wrapper>
+											</NominalValue>
+										</IfcPropertySingleValue>
+										<IfcPropertySingleValue Name="ReferenceDocument" Description="reference Document">
+											<NominalValue>
+												<IfcLabel-wrapper>EN 771-2</IfcLabel-wrapper>
+											</NominalValue>
+										</IfcPropertySingleValue>
+									</HasProperties>
+								</IfcComplexProperty>
+								<IfcComplexProperty Name="mean" Description="mean" UsageName="mean">
+									<HasProperties>
+										<IfcPropertySingleValue Name="mean" Description="mean value">
+											<NominalValue>
+												<IfcText-wrapper>NPD</IfcText-wrapper>
+											</NominalValue>
+										</IfcPropertySingleValue>
+										<IfcPropertySingleValue Name="Relation" Description="Value Relation">
+											<NominalValue>
+												<IfcLabel-wrapper>greater than or equal to</IfcLabel-wrapper>
+											</NominalValue>
+										</IfcPropertySingleValue>
+										<IfcPropertySingleValue Name="ReferenceDocument" Description="reference Document">
+											<NominalValue>
+												<IfcLabel-wrapper>EN 772-1</IfcLabel-wrapper>
+											</NominalValue>
+										</IfcPropertySingleValue>
+									</HasProperties>
+								</IfcComplexProperty>
+								<IfcComplexProperty Name="normalised" Description="normalised" UsageName="normalised">
+									<HasProperties>
+										<IfcPropertySingleValue Name="normalised" Description="normalised value">
+											<NominalValue>
+												<IfcText-wrapper>NPD</IfcText-wrapper>
+											</NominalValue>
+										</IfcPropertySingleValue>
+										<IfcPropertySingleValue Name="Relation" Description="Value Relation">
+											<NominalValue>
+												<IfcLabel-wrapper>greater than or equal to</IfcLabel-wrapper>
+											</NominalValue>
+										</IfcPropertySingleValue>
+										<IfcPropertySingleValue Name="ReferenceDocument" Description="reference Document">
+											<NominalValue>
+												<IfcLabel-wrapper>EN 772-1</IfcLabel-wrapper>
+											</NominalValue>
+										</IfcPropertySingleValue>
+									</HasProperties>
+								</IfcComplexProperty>
+								<IfcPropertyEnumeratedValue Name="AVCP" Description="AVCP attestation">
+									<EnumerationValues>
+										<IfcLabel-wrapper>2+</IfcLabel-wrapper>
+									</EnumerationValues>
+									<EnumerationReference xsi:nil="true" href="i15"/>
+								</IfcPropertyEnumeratedValue>
+							</HasProperties>
+						</IfcComplexProperty>
+						<IfcComplexProperty Name="Perpendicular to face" Description="Perpendicular to face" UsageName="Perpendicular to face">
+							<HasProperties>
+								<IfcComplexProperty Name="type of specimen" Description="type of specimen" UsageName="type of specimen">
+									<HasProperties>
+										<IfcPropertySingleValue Name="type of specimen" Description="type of specimen type">
+											<NominalValue>
+												<IfcText-wrapper>NPD</IfcText-wrapper>
+											</NominalValue>
+										</IfcPropertySingleValue>
+										<IfcPropertySingleValue Name="Relation" Description="Value Relation">
+											<NominalValue>
+												<IfcLabel-wrapper>category</IfcLabel-wrapper>
+											</NominalValue>
+										</IfcPropertySingleValue>
+										<IfcPropertySingleValue Name="ReferenceDocument" Description="reference Document">
+											<NominalValue>
+												<IfcLabel-wrapper>EN 771-2</IfcLabel-wrapper>
+											</NominalValue>
+										</IfcPropertySingleValue>
+									</HasProperties>
+								</IfcComplexProperty>
+								<IfcComplexProperty Name="category" Description="category" UsageName="category">
+									<HasProperties>
+										<IfcPropertySingleValue Name="category" Description="category category">
+											<NominalValue>
+												<IfcText-wrapper>NPD</IfcText-wrapper>
+											</NominalValue>
+										</IfcPropertySingleValue>
+										<IfcPropertySingleValue Name="Relation" Description="Value Relation">
+											<NominalValue>
+												<IfcLabel-wrapper>category</IfcLabel-wrapper>
+											</NominalValue>
+										</IfcPropertySingleValue>
+										<IfcPropertySingleValue Name="ReferenceDocument" Description="reference Document">
+											<NominalValue>
+												<IfcLabel-wrapper>EN 771-2</IfcLabel-wrapper>
+											</NominalValue>
+										</IfcPropertySingleValue>
+									</HasProperties>
+								</IfcComplexProperty>
+								<IfcComplexProperty Name="mean" Description="mean" UsageName="mean">
+									<HasProperties>
+										<IfcPropertySingleValue Name="mean" Description="mean value">
+											<NominalValue>
+												<IfcText-wrapper>NPD</IfcText-wrapper>
+											</NominalValue>
+										</IfcPropertySingleValue>
+										<IfcPropertySingleValue Name="Relation" Description="Value Relation">
+											<NominalValue>
+												<IfcLabel-wrapper>greater than or equal to</IfcLabel-wrapper>
+											</NominalValue>
+										</IfcPropertySingleValue>
+										<IfcPropertySingleValue Name="ReferenceDocument" Description="reference Document">
+											<NominalValue>
+												<IfcLabel-wrapper>EN 772-1</IfcLabel-wrapper>
+											</NominalValue>
+										</IfcPropertySingleValue>
+									</HasProperties>
+								</IfcComplexProperty>
+								<IfcComplexProperty Name="normalised" Description="normalised" UsageName="normalised">
+									<HasProperties>
+										<IfcPropertySingleValue Name="normalised" Description="normalised value">
+											<NominalValue>
+												<IfcText-wrapper>NPD</IfcText-wrapper>
+											</NominalValue>
+										</IfcPropertySingleValue>
+										<IfcPropertySingleValue Name="Relation" Description="Value Relation">
+											<NominalValue>
+												<IfcLabel-wrapper>greater than or equal to</IfcLabel-wrapper>
+											</NominalValue>
+										</IfcPropertySingleValue>
+										<IfcPropertySingleValue Name="ReferenceDocument" Description="reference Document">
+											<NominalValue>
+												<IfcLabel-wrapper>EN 772-1</IfcLabel-wrapper>
+											</NominalValue>
+										</IfcPropertySingleValue>
+									</HasProperties>
+								</IfcComplexProperty>
+								<IfcPropertyEnumeratedValue Name="AVCP" Description="AVCP attestation">
+									<EnumerationValues>
+										<IfcLabel-wrapper>2+</IfcLabel-wrapper>
+									</EnumerationValues>
+									<EnumerationReference xsi:nil="true" href="i15"/>
+								</IfcPropertyEnumeratedValue>
+							</HasProperties>
+						</IfcComplexProperty>
+					</HasProperties>
+				</IfcPropertySet>
+				<IfcPropertySet GlobalId="0topPropertySet00000AC" Name="CPR_Bond_strength_" Description="Essential Characteristic Bond strength ">
+					<OwnerHistory xsi:nil="true" href="i13"/>
+					<HasProperties>
+						<IfcComplexProperty Name="Characteristic initial shear strength" Description="Characteristic initial shear strength" UsageName="Characteristic initial shear strength">
+							<HasProperties>
+								<IfcComplexProperty Name="characteristic initial shear strength" Description="characteristic initial shear strength" UsageName="characteristic initial shear strength">
+									<HasProperties>
+										<IfcPropertySingleValue Name="characteristic initial shear strength" Description="characteristic initial shear strength value">
+											<NominalValue>
+												<IfcText-wrapper>0.15</IfcText-wrapper>
+											</NominalValue>
+										</IfcPropertySingleValue>
+										<IfcPropertySingleValue Name="Relation" Description="Value Relation">
+											<NominalValue>
+												<IfcLabel-wrapper>greater than or equal to</IfcLabel-wrapper>
+											</NominalValue>
+										</IfcPropertySingleValue>
+										<IfcPropertySingleValue Name="ReferenceDocument" Description="reference Document">
+											<NominalValue>
+												<IfcLabel-wrapper>EN 1052-3</IfcLabel-wrapper>
+											</NominalValue>
+										</IfcPropertySingleValue>
+									</HasProperties>
+								</IfcComplexProperty>
+								<IfcComplexProperty Name="mortar type" Description="mortar type" UsageName="mortar type">
+									<HasProperties>
+										<IfcPropertySingleValue Name="mortar type" Description="mortar type type">
+											<NominalValue>
+												<IfcText-wrapper>general purpose</IfcText-wrapper>
+											</NominalValue>
+										</IfcPropertySingleValue>
+										<IfcPropertySingleValue Name="Relation" Description="Value Relation">
+											<NominalValue>
+												<IfcLabel-wrapper>description</IfcLabel-wrapper>
+											</NominalValue>
+										</IfcPropertySingleValue>
+									</HasProperties>
+								</IfcComplexProperty>
+								<IfcComplexProperty Name="mortar manufacturer" Description="mortar manufacturer" UsageName="mortar manufacturer">
+									<HasProperties>
+										<IfcPropertySingleValue Name="mortar manufacturer" Description="mortar manufacturer name">
+											<NominalValue>
+												<IfcText-wrapper>AnyCo</IfcText-wrapper>
+											</NominalValue>
+										</IfcPropertySingleValue>
+										<IfcPropertySingleValue Name="Relation" Description="Value Relation">
+											<NominalValue>
+												<IfcLabel-wrapper>description</IfcLabel-wrapper>
+											</NominalValue>
+										</IfcPropertySingleValue>
+									</HasProperties>
+								</IfcComplexProperty>
+								<IfcComplexProperty Name="mortar DoP" Description="mortar DoP" UsageName="mortar DoP">
+									<HasProperties>
+										<IfcPropertySingleValue Name="mortar DoP" Description="mortar DoP DoP number">
+											<NominalValue>
+												<IfcText-wrapper>ABC-123-2018</IfcText-wrapper>
+											</NominalValue>
+										</IfcPropertySingleValue>
+										<IfcPropertySingleValue Name="Relation" Description="Value Relation">
+											<NominalValue>
+												<IfcLabel-wrapper>description</IfcLabel-wrapper>
+											</NominalValue>
+										</IfcPropertySingleValue>
+									</HasProperties>
+								</IfcComplexProperty>
+								<IfcPropertyEnumeratedValue Name="AVCP" Description="AVCP attestation">
+									<EnumerationValues>
+										<IfcLabel-wrapper>2+</IfcLabel-wrapper>
+									</EnumerationValues>
+									<EnumerationReference xsi:nil="true" href="i15"/>
+								</IfcPropertyEnumeratedValue>
+							</HasProperties>
+						</IfcComplexProperty>
+						<IfcComplexProperty Name="Characteristic initial shear strength" Description="Characteristic initial shear strength" UsageName="Characteristic initial shear strength">
+							<HasProperties>
+								<IfcComplexProperty Name="characteristic initial shear strength" Description="characteristic initial shear strength" UsageName="characteristic initial shear strength">
+									<HasProperties>
+										<IfcPropertySingleValue Name="characteristic initial shear strength" Description="characteristic initial shear strength value">
+											<NominalValue>
+												<IfcText-wrapper>0.12</IfcText-wrapper>
+											</NominalValue>
+										</IfcPropertySingleValue>
+										<IfcPropertySingleValue Name="Relation" Description="Value Relation">
+											<NominalValue>
+												<IfcLabel-wrapper>greater than or equal to</IfcLabel-wrapper>
+											</NominalValue>
+										</IfcPropertySingleValue>
+										<IfcPropertySingleValue Name="ReferenceDocument" Description="reference Document">
+											<NominalValue>
+												<IfcLabel-wrapper>EN 1052-3</IfcLabel-wrapper>
+											</NominalValue>
+										</IfcPropertySingleValue>
+									</HasProperties>
+								</IfcComplexProperty>
+								<IfcComplexProperty Name="mortar type" Description="mortar type" UsageName="mortar type">
+									<HasProperties>
+										<IfcPropertySingleValue Name="mortar type" Description="mortar type type">
+											<NominalValue>
+												<IfcText-wrapper>lightweight</IfcText-wrapper>
+											</NominalValue>
+										</IfcPropertySingleValue>
+										<IfcPropertySingleValue Name="Relation" Description="Value Relation">
+											<NominalValue>
+												<IfcLabel-wrapper>description</IfcLabel-wrapper>
+											</NominalValue>
+										</IfcPropertySingleValue>
+									</HasProperties>
+								</IfcComplexProperty>
+								<IfcComplexProperty Name="mortar manufacturer" Description="mortar manufacturer" UsageName="mortar manufacturer">
+									<HasProperties>
+										<IfcPropertySingleValue Name="mortar manufacturer" Description="mortar manufacturer name">
+											<NominalValue>
+												<IfcText-wrapper>AnyCo</IfcText-wrapper>
+											</NominalValue>
+										</IfcPropertySingleValue>
+										<IfcPropertySingleValue Name="Relation" Description="Value Relation">
+											<NominalValue>
+												<IfcLabel-wrapper>description</IfcLabel-wrapper>
+											</NominalValue>
+										</IfcPropertySingleValue>
+									</HasProperties>
+								</IfcComplexProperty>
+								<IfcComplexProperty Name="mortar DoP" Description="mortar DoP" UsageName="mortar DoP">
+									<HasProperties>
+										<IfcPropertySingleValue Name="mortar DoP" Description="mortar DoP DoP number">
+											<NominalValue>
+												<IfcText-wrapper>ABC-321-2018</IfcText-wrapper>
+											</NominalValue>
+										</IfcPropertySingleValue>
+										<IfcPropertySingleValue Name="Relation" Description="Value Relation">
+											<NominalValue>
+												<IfcLabel-wrapper>description</IfcLabel-wrapper>
+											</NominalValue>
+										</IfcPropertySingleValue>
+									</HasProperties>
+								</IfcComplexProperty>
+								<IfcPropertyEnumeratedValue Name="AVCP" Description="AVCP attestation">
+									<EnumerationValues>
+										<IfcLabel-wrapper>2+</IfcLabel-wrapper>
+									</EnumerationValues>
+									<EnumerationReference xsi:nil="true" href="i15"/>
+								</IfcPropertyEnumeratedValue>
+							</HasProperties>
+						</IfcComplexProperty>
+					</HasProperties>
+				</IfcPropertySet>
+				<IfcPropertySet GlobalId="0topPropertySet00000AC" Name="CPR_Reaction_to_fire" Description="Essential Characteristic Reaction to fire">
+					<OwnerHistory xsi:nil="true" href="i13"/>
+					<HasProperties>
+						<IfcComplexProperty Name="Reaction to fire" Description="Reaction to fire" UsageName="Reaction to fire">
+							<HasProperties>
+								<IfcComplexProperty Name="reaction to fire" Description="reaction to fire" UsageName="reaction to fire">
+									<HasProperties>
+										<IfcPropertySingleValue Name="reaction to fire" Description="reaction to fire class">
+											<NominalValue>
+												<IfcText-wrapper>A1</IfcText-wrapper>
+											</NominalValue>
+										</IfcPropertySingleValue>
+										<IfcPropertySingleValue Name="Relation" Description="Value Relation">
+											<NominalValue>
+												<IfcLabel-wrapper>class</IfcLabel-wrapper>
+											</NominalValue>
+										</IfcPropertySingleValue>
+										<IfcPropertySingleValue Name="ReferenceDocument" Description="reference Document">
+											<NominalValue>
+												<IfcLabel-wrapper>Commission Decision 2000/605/EC</IfcLabel-wrapper>
+											</NominalValue>
+										</IfcPropertySingleValue>
+									</HasProperties>
+								</IfcComplexProperty>
+								<IfcPropertyEnumeratedValue Name="AVCP" Description="AVCP attestation">
+									<EnumerationValues>
+										<IfcLabel-wrapper>2+</IfcLabel-wrapper>
+									</EnumerationValues>
+									<EnumerationReference xsi:nil="true" href="i15"/>
+								</IfcPropertyEnumeratedValue>
+							</HasProperties>
+						</IfcComplexProperty>
+					</HasProperties>
+				</IfcPropertySet>
+				<IfcPropertySet GlobalId="0topPropertySet00000AC" Name="CPR_Water_absorption" Description="Essential Characteristic Water absorption">
+					<OwnerHistory xsi:nil="true" href="i13"/>
+					<HasProperties>
+						<IfcComplexProperty Name="Water absorption" Description="Water absorption" UsageName="Water absorption">
+							<HasProperties>
+								<IfcComplexProperty Name="water absorption" Description="water absorption" UsageName="water absorption">
+									<HasProperties>
+										<IfcPropertySingleValue Name="water absorption" Description="water absorption value">
+											<NominalValue>
+												<IfcRatioMeasure-wrapper>0</IfcRatioMeasure-wrapper>
+											</NominalValue>
+										</IfcPropertySingleValue>
+										<IfcPropertySingleValue Name="Relation" Description="Value Relation">
+											<NominalValue>
+												<IfcLabel-wrapper>less than or equal to</IfcLabel-wrapper>
+											</NominalValue>
+										</IfcPropertySingleValue>
+										<IfcPropertySingleValue Name="ReferenceDocument" Description="reference Document">
+											<NominalValue>
+												<IfcLabel-wrapper>EN 772-21</IfcLabel-wrapper>
+											</NominalValue>
+										</IfcPropertySingleValue>
+									</HasProperties>
+								</IfcComplexProperty>
+								<IfcPropertyEnumeratedValue Name="AVCP" Description="AVCP attestation">
+									<EnumerationValues>
+										<IfcLabel-wrapper>2+</IfcLabel-wrapper>
+									</EnumerationValues>
+									<EnumerationReference xsi:nil="true" href="i15"/>
+								</IfcPropertyEnumeratedValue>
+							</HasProperties>
+						</IfcComplexProperty>
+					</HasProperties>
+				</IfcPropertySet>
+				<IfcPropertySet GlobalId="0topPropertySet00000AC" Name="CPR_Water_vapour_permeability" Description="Essential Characteristic Water vapour permeability">
+					<OwnerHistory xsi:nil="true" href="i13"/>
+					<HasProperties>
+						<IfcComplexProperty Name="Water vapour permeability" Description="Water vapour permeability" UsageName="Water vapour permeability">
+							<HasProperties>
+								<IfcComplexProperty Name="water vapour diffusion coefficient (μ)" Description="water vapour diffusion coefficient (μ)" UsageName="water vapour diffusion coefficient (μ)">
+									<HasProperties>
+										<IfcPropertySingleValue Name="water vapour diffusion coefficient (μ)" Description="water vapour diffusion coefficient (μ) value">
+											<NominalValue>
+												<IfcText-wrapper>NPD</IfcText-wrapper>
+											</NominalValue>
+										</IfcPropertySingleValue>
+										<IfcPropertySingleValue Name="Relation" Description="Value Relation">
+											<NominalValue>
+												<IfcLabel-wrapper>equal to</IfcLabel-wrapper>
+											</NominalValue>
+										</IfcPropertySingleValue>
+										<IfcPropertySingleValue Name="ReferenceDocument" Description="reference Document">
+											<NominalValue>
+												<IfcLabel-wrapper>EN 1745</IfcLabel-wrapper>
+											</NominalValue>
+										</IfcPropertySingleValue>
+									</HasProperties>
+								</IfcComplexProperty>
+								<IfcPropertyEnumeratedValue Name="AVCP" Description="AVCP attestation">
+									<EnumerationValues>
+										<IfcLabel-wrapper>2+</IfcLabel-wrapper>
+									</EnumerationValues>
+									<EnumerationReference xsi:nil="true" href="i15"/>
+								</IfcPropertyEnumeratedValue>
+							</HasProperties>
+						</IfcComplexProperty>
+					</HasProperties>
+				</IfcPropertySet>
+				<IfcPropertySet GlobalId="0topPropertySet00000AC" Name="CPR_Direct_airborne_sound_insulation" Description="Essential Characteristic Direct airborne sound insulation">
+					<OwnerHistory xsi:nil="true" href="i13"/>
+					<HasProperties>
+						<IfcComplexProperty Name="Gross dry density" Description="Gross dry density" UsageName="Gross dry density">
+							<HasProperties>
+								<IfcComplexProperty Name="minimum mean gross dry density" Description="minimum mean gross dry density" UsageName="minimum mean gross dry density">
+									<HasProperties>
+										<IfcPropertySingleValue Name="minimum mean gross dry density" Description="minimum mean gross dry density value">
+											<NominalValue>
+												<IfcText-wrapper>1410</IfcText-wrapper>
+											</NominalValue>
+										</IfcPropertySingleValue>
+										<IfcPropertySingleValue Name="Relation" Description="Value Relation">
+											<NominalValue>
+												<IfcLabel-wrapper>greater than or equal to</IfcLabel-wrapper>
+											</NominalValue>
+										</IfcPropertySingleValue>
+										<IfcPropertySingleValue Name="ReferenceDocument" Description="reference Document">
+											<NominalValue>
+												<IfcLabel-wrapper>EN 772-13</IfcLabel-wrapper>
+											</NominalValue>
+										</IfcPropertySingleValue>
+									</HasProperties>
+								</IfcComplexProperty>
+								<IfcComplexProperty Name="maximum mean gross dry density" Description="maximum mean gross dry density" UsageName="maximum mean gross dry density">
+									<HasProperties>
+										<IfcPropertySingleValue Name="maximum mean gross dry density" Description="maximum mean gross dry density value">
+											<NominalValue>
+												<IfcText-wrapper>1600</IfcText-wrapper>
+											</NominalValue>
+										</IfcPropertySingleValue>
+										<IfcPropertySingleValue Name="Relation" Description="Value Relation">
+											<NominalValue>
+												<IfcLabel-wrapper>less than or equal to</IfcLabel-wrapper>
+											</NominalValue>
+										</IfcPropertySingleValue>
+										<IfcPropertySingleValue Name="ReferenceDocument" Description="reference Document">
+											<NominalValue>
+												<IfcLabel-wrapper>EN 772-13</IfcLabel-wrapper>
+											</NominalValue>
+										</IfcPropertySingleValue>
+									</HasProperties>
+								</IfcComplexProperty>
+								<IfcPropertyEnumeratedValue Name="AVCP" Description="AVCP attestation">
+									<EnumerationValues>
+										<IfcLabel-wrapper>2+</IfcLabel-wrapper>
+									</EnumerationValues>
+									<EnumerationReference xsi:nil="true" href="i15"/>
+								</IfcPropertyEnumeratedValue>
+							</HasProperties>
+						</IfcComplexProperty>
+					</HasProperties>
+				</IfcPropertySet>
+				<IfcPropertySet GlobalId="0topPropertySet00000AC" Name="CPR_Thermal_resistance" Description="Essential Characteristic Thermal resistance">
+					<OwnerHistory xsi:nil="true" href="i13"/>
+					<HasProperties>
+						<IfcComplexProperty Name="Thermal conductivity" Description="Thermal conductivity" UsageName="Thermal conductivity">
+							<HasProperties>
+								<IfcComplexProperty Name="mean thermal conductivity" Description="mean thermal conductivity" UsageName="mean thermal conductivity">
+									<HasProperties>
+										<IfcPropertySingleValue Name="mean thermal conductivity" Description="mean thermal conductivity value">
+											<NominalValue>
+												<IfcText-wrapper>NPD</IfcText-wrapper>
+											</NominalValue>
+										</IfcPropertySingleValue>
+										<IfcPropertySingleValue Name="Relation" Description="Value Relation">
+											<NominalValue>
+												<IfcLabel-wrapper>less than or equal to</IfcLabel-wrapper>
+											</NominalValue>
+										</IfcPropertySingleValue>
+										<IfcPropertySingleValue Name="ReferenceDocument" Description="reference Document">
+											<NominalValue>
+												<IfcLabel-wrapper>EN 1745</IfcLabel-wrapper>
+											</NominalValue>
+										</IfcPropertySingleValue>
+									</HasProperties>
+								</IfcComplexProperty>
+								<IfcComplexProperty Name="Determination model" Description="Determination model" UsageName="Determination model">
+									<HasProperties>
+										<IfcPropertySingleValue Name="Determination model" Description="Determination model method">
+											<NominalValue>
+												<IfcText-wrapper>S2</IfcText-wrapper>
+											</NominalValue>
+										</IfcPropertySingleValue>
+										<IfcPropertySingleValue Name="Relation" Description="Value Relation">
+											<NominalValue>
+												<IfcLabel-wrapper>class</IfcLabel-wrapper>
+											</NominalValue>
+										</IfcPropertySingleValue>
+										<IfcPropertySingleValue Name="ReferenceDocument" Description="reference Document">
+											<NominalValue>
+												<IfcLabel-wrapper>EN 1745</IfcLabel-wrapper>
+											</NominalValue>
+										</IfcPropertySingleValue>
+									</HasProperties>
+								</IfcComplexProperty>
+								<IfcPropertyEnumeratedValue Name="AVCP" Description="AVCP attestation">
+									<EnumerationValues>
+										<IfcLabel-wrapper>2+</IfcLabel-wrapper>
+									</EnumerationValues>
+									<EnumerationReference xsi:nil="true" href="i15"/>
+								</IfcPropertyEnumeratedValue>
+							</HasProperties>
+						</IfcComplexProperty>
+						<IfcComplexProperty Name="Thermal conductivity (λ[sub]10, dry, unit (X/Y)[/sub])" Description="Thermal conductivity (λ[sub]10, dry, unit (X/Y)[/sub])" UsageName="Thermal conductivity (λ[sub]10, dry, unit (X/Y)[/sub])">
+							<HasProperties>
+								<IfcComplexProperty Name="thermal conductivity" Description="thermal conductivity" UsageName="thermal conductivity">
+									<HasProperties>
+										<IfcPropertySingleValue Name="thermal conductivity" Description="thermal conductivity value">
+											<NominalValue>
+												<IfcText-wrapper>NPD</IfcText-wrapper>
+											</NominalValue>
+										</IfcPropertySingleValue>
+										<IfcPropertySingleValue Name="Relation" Description="Value Relation">
+											<NominalValue>
+												<IfcLabel-wrapper>less than or equal to</IfcLabel-wrapper>
+											</NominalValue>
+										</IfcPropertySingleValue>
+										<IfcPropertySingleValue Name="ReferenceDocument" Description="reference Document">
+											<NominalValue>
+												<IfcLabel-wrapper>EN 1745</IfcLabel-wrapper>
+											</NominalValue>
+										</IfcPropertySingleValue>
+									</HasProperties>
+								</IfcComplexProperty>
+								<IfcComplexProperty Name="fractile X" Description="fractile X" UsageName="fractile X">
+									<HasProperties>
+										<IfcPropertySingleValue Name="fractile X" Description="fractile X value">
+											<NominalValue>
+												<IfcText-wrapper>NPD</IfcText-wrapper>
+											</NominalValue>
+										</IfcPropertySingleValue>
+										<IfcPropertySingleValue Name="Relation" Description="Value Relation">
+											<NominalValue>
+												<IfcLabel-wrapper>equal to</IfcLabel-wrapper>
+											</NominalValue>
+										</IfcPropertySingleValue>
+										<IfcPropertySingleValue Name="ReferenceDocument" Description="reference Document">
+											<NominalValue>
+												<IfcLabel-wrapper>EN 1745</IfcLabel-wrapper>
+											</NominalValue>
+										</IfcPropertySingleValue>
+									</HasProperties>
+								</IfcComplexProperty>
+								<IfcComplexProperty Name=" confidence level Y " Description=" confidence level Y " UsageName=" confidence level Y ">
+									<HasProperties>
+										<IfcPropertySingleValue Name=" confidence level Y " Description=" confidence level Y  value">
+											<NominalValue>
+												<IfcText-wrapper>NPD</IfcText-wrapper>
+											</NominalValue>
+										</IfcPropertySingleValue>
+										<IfcPropertySingleValue Name="Relation" Description="Value Relation">
+											<NominalValue>
+												<IfcLabel-wrapper>equal to</IfcLabel-wrapper>
+											</NominalValue>
+										</IfcPropertySingleValue>
+										<IfcPropertySingleValue Name="ReferenceDocument" Description="reference Document">
+											<NominalValue>
+												<IfcLabel-wrapper>EN 1745</IfcLabel-wrapper>
+											</NominalValue>
+										</IfcPropertySingleValue>
+									</HasProperties>
+								</IfcComplexProperty>
+								<IfcPropertyEnumeratedValue Name="AVCP" Description="AVCP attestation">
+									<EnumerationValues>
+										<IfcLabel-wrapper>2+</IfcLabel-wrapper>
+									</EnumerationValues>
+									<EnumerationReference xsi:nil="true" href="i15"/>
+								</IfcPropertyEnumeratedValue>
+							</HasProperties>
+						</IfcComplexProperty>
+					</HasProperties>
+				</IfcPropertySet>
+				<IfcPropertySet GlobalId="0topPropertySet00000AC" Name="CPR_Durability_against_freeze/thaw" Description="Essential Characteristic Durability against freeze/thaw">
+					<OwnerHistory xsi:nil="true" href="i13"/>
+					<HasProperties>
+						<IfcComplexProperty Name="Freeze-thaw resistance" Description="Freeze-thaw resistance" UsageName="Freeze-thaw resistance">
+							<HasProperties>
+								<IfcComplexProperty Name="Freeze-thaw resistance category" Description="Freeze-thaw resistance category" UsageName="Freeze-thaw resistance category">
+									<HasProperties>
+										<IfcPropertySingleValue Name="Freeze-thaw resistance category" Description="Freeze-thaw resistance category category">
+											<NominalValue>
+												<IfcText-wrapper>F1</IfcText-wrapper>
+											</NominalValue>
+										</IfcPropertySingleValue>
+										<IfcPropertySingleValue Name="Relation" Description="Value Relation">
+											<NominalValue>
+												<IfcLabel-wrapper>class</IfcLabel-wrapper>
+											</NominalValue>
+										</IfcPropertySingleValue>
+										<IfcPropertySingleValue Name="ReferenceDocument" Description="reference Document">
+											<NominalValue>
+												<IfcLabel-wrapper>EN 772-18</IfcLabel-wrapper>
+											</NominalValue>
+										</IfcPropertySingleValue>
+									</HasProperties>
+								</IfcComplexProperty>
+								<IfcPropertyEnumeratedValue Name="AVCP" Description="AVCP attestation">
+									<EnumerationValues>
+										<IfcLabel-wrapper>2+</IfcLabel-wrapper>
+									</EnumerationValues>
+									<EnumerationReference xsi:nil="true" href="i15"/>
+								</IfcPropertyEnumeratedValue>
+							</HasProperties>
+						</IfcComplexProperty>
+					</HasProperties>
+				</IfcPropertySet>
+				<IfcPropertySet GlobalId="0topPropertySet00000AC" Name="CPR_Dangerous_substances" Description="Essential Characteristic Dangerous substances">
+					<OwnerHistory xsi:nil="true" href="i13"/>
+					<HasProperties>
+						<IfcComplexProperty Name="Dangerous substances" Description="Dangerous substances" UsageName="Dangerous substances">
+							<HasProperties>
+								<IfcComplexProperty Name="Dangerous substances" Description="Dangerous substances" UsageName="Dangerous substances">
+									<HasProperties>
+										<IfcPropertySingleValue Name="Dangerous substances" Description="Dangerous substances dangerous substances">
+											<NominalValue>
+												<IfcText-wrapper>NPD</IfcText-wrapper>
+											</NominalValue>
+										</IfcPropertySingleValue>
+									</HasProperties>
+								</IfcComplexProperty>
+								<IfcPropertyEnumeratedValue Name="AVCP" Description="AVCP attestation">
+									<EnumerationValues>
+										<IfcLabel-wrapper>2+</IfcLabel-wrapper>
+									</EnumerationValues>
+									<EnumerationReference xsi:nil="true" href="i15"/>
+								</IfcPropertyEnumeratedValue>
+							</HasProperties>
+						</IfcComplexProperty>
+					</HasProperties>
+				</IfcPropertySet>
+			</HasPropertySets>
+		</RelatingType>
+	</IfcRelDefinesByType>
+</ifcXML>
