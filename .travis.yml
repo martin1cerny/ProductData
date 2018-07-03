@@ -22,7 +22,8 @@ script:
   - xmllint "${TRAVIS_BUILD_DIR}/SampleFiles/Fireray 50100RV Linear Smoke Detectors/Fireray 50100RV Linear Smoke Detectors.ifcXML" --schema IFC4_ADD2.xsd --noout
   - xmllint "${TRAVIS_BUILD_DIR}/SampleFiles/HC (Italy)/Sample PDT ifcXML/IFCXML4_TEMPLATE-brick.ifcXML" --schema IFC4_ADD2.xsd --noout  
   - xmllint "${TRAVIS_BUILD_DIR}/SampleFiles/CatalogExample/catalogExample.ifcXML" --schema IFC4_ADD1.xsd --noout   
-  - xmllint "${TRAVIS_BUILD_DIR}/SampleFiles/NisbetSample/Example1.ifcXML" --schema IFC4_ADD2.xsd --noout    
+  - xmllint "${TRAVIS_BUILD_DIR}/SampleFiles/ConstraintExample/constraintExample.ifcXML" --schema IFC4_ADD1.xsd --noout   
+  #- xmllint "${TRAVIS_BUILD_DIR}/SampleFiles/NisbetSample/Example1.ifcXML" --schema IFC4_ADD2.xsd --noout    
   
   # Remove the official ifcxml schemes
   - rm ifcXML4.xsd 
