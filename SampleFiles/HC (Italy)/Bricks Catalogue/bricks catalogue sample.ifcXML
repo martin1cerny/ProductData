@@ -1,0 +1,275 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ifcXML xmlns:xlink="http://www.w3.org/1999/xlink"
+ xmlns="http://www.buildingsmart-tech.org/ifcXML/IFC4/Add2"
+ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+ xsi:schemaLocation="http://www.buildingsmart-tech.org/ifcXML/IFC4/Add2 http://www.buildingsmart-tech.org/ifc/IFC4/Add2/IFC4_ADD2.xsd">
+    <header>
+        <name/>
+        <author/>
+        <organization/>
+        <preprocessor_version/>
+        <originating_system/>
+        <authorization/>
+        <documentation/>
+    </header>
+    
+    <IfcProjectLibrary Name="Armalater brick Set Property Templates">
+        <Declares>
+            <IfcRelDeclares>
+                <RelatedDefinitions>
+                    <IfcTypeProduct Name="Armalater Brick 1"  Description="Description of an Armalater Brick 1" id="Tid_ProductType1"/>
+                    <IfcPropertySetTemplate Name="geometic data" id="Tid_ps0">
+                        <HasPropertyTemplates>
+                            <IfcComplexPropertyTemplate GlobalId="1DbshTzGD71ejuZQqQcxab" Name="dimension" id="Tid_cp0">
+                                <HasPropertyTemplates>
+                                    <IfcSimplePropertyTemplate GlobalId="1DbshTzGD71ejuZQqQcxan" Name="lenght" id="Tid_l" PrimaryMeasureType="lenght" TemplateType="p_singlevalue"/> 
+                                    <IfcSimplePropertyTemplate GlobalId="1DbshTzGD71ejuZQqQcxao" Name="width" id="Tid_w"/>  
+                                    <IfcSimplePropertyTemplate GlobalId="1DbshTzGD71ejuZQqQcxap" Name="height" id="Tid_h"/>   
+                                </HasPropertyTemplates>
+                            </IfcComplexPropertyTemplate>
+                        </HasPropertyTemplates>
+                    </IfcPropertySetTemplate>
+                </RelatedDefinitions>
+            </IfcRelDeclares>
+        </Declares>
+    </IfcProjectLibrary>     
+    
+    <IfcProjectLibrary Name="Armalater brick Set">
+        <Declares>
+            <IfcRelDeclares>
+                <RelatedDefinitions>
+                    <IfcTypeProduct Name="Armalater Brick 1" id="id_ProductType1"> 
+                        <HasPropertySets>
+                            <IfcPropertySet Name="geometic data" id="id_ps0">
+                                <HasProperties>
+                                    <IfcComplexProperty Name="dimensions" id="id_cp0">
+                                        <HasProperties>
+                                            <IfcPropertySingleValue Name="lenght" Description="Lenght of the brick" id="id_l">
+                                                <NominalValue>
+                                                    <IfcLengthMeasure-wrapper>20</IfcLengthMeasure-wrapper>
+                                                </NominalValue>
+                                            </IfcPropertySingleValue>
+                                            <IfcPropertySingleValue Name="width" id="id_w">
+                                                <NominalValue>
+                                                    <IfcLengthMeasure-wrapper>10</IfcLengthMeasure-wrapper>
+                                                </NominalValue>
+                                            </IfcPropertySingleValue>
+                                            <IfcPropertySingleValue Name="height" id="id_h">
+                                                <NominalValue>
+                                                    <IfcLengthMeasure-wrapper>5</IfcLengthMeasure-wrapper>
+                                                </NominalValue>
+                                            </IfcPropertySingleValue>
+                                        </HasProperties>
+                                    </IfcComplexProperty>
+                                </HasProperties>
+                            </IfcPropertySet>
+                        </HasPropertySets>
+                    </IfcTypeProduct>
+                </RelatedDefinitions>
+            </IfcRelDeclares>
+        </Declares>   
+    </IfcProjectLibrary>   
+    
+
+  <IfcRelDefinesByTemplate>
+    <RelatedPropertySets>
+      <IfcPropertySet xsi:nil="true" ref="id_ps0" />
+    </RelatedPropertySets>
+    <RelatingTemplate xsi:nil="true" ref="Tid_ps0" />
+  </IfcRelDefinesByTemplate>
+
+      
+    <IfcRelAssociatesConstraint>
+        <RelatedObjects>
+            <IfcTypeProduct ref="id_ProductType1"/>
+        </RelatedObjects>
+        <RelatingConstraint xsi:type="IfcObjective" id="id_c1" Name="constraint_1"
+            Description="lists of possible bricks in different zones" ConstraintGrade="hard" LogicalAggregator="logicalor" ObjectiveQualifier="parameter">
+            <BenchmarkValues>
+                <IfcObjective Name="Piemonte" Description="Bricks' production zone"
+                    ObjectiveQualifier="parameter" ConstraintGrade="hard" LogicalAggregator="logicalor">
+                    <BenchmarkValues>
+                        <IfcMetric Name="Piemonte_lenght" Benchmark="equalto" ConstraintGrade="hard" ConstraintSource="list of possible values" Description="lenght constraint" ValueSource="IfcSimplePropertyTemplate" >
+                            <DataValue>
+                                <IfcAppliedValue Name="Piemonte lenghts">
+                                    <Components>
+                                        <IfcAppliedValue pos="0">
+                                            <AppliedValue>
+                                                <IfcLengthMeasure-wrapper>24</IfcLengthMeasure-wrapper>
+                                            </AppliedValue>
+                                        </IfcAppliedValue>
+                                        <IfcAppliedValue pos="1">
+                                            <AppliedValue>
+                                                <IfcLengthMeasure-wrapper>24</IfcLengthMeasure-wrapper>
+                                            </AppliedValue>
+                                        </IfcAppliedValue>
+                                    </Components>
+                                </IfcAppliedValue>
+                            </DataValue>
+                            <ReferencePath TypeIdentifier="IfcTypeProduct" AttributeIdentifier="HasProperties" href="#id_ProductType1">
+                                <InnerReference TypeIdentifier="IfcPropertySet" AttributeIdentifier="HasProperties" href="#id_ps0" >
+                                    <InnerReference TypeIdentifier="IfcComplexProperty" AttributeIdentifier="HasProperties" href="#id_cp0">
+                                        <InnerReference AttributeIdentifier="NominalValue" TypeIdentifier="IfcPropertySingleValue" InstanceName="lenght" href="#id_l">
+                                        </InnerReference>
+                                    </InnerReference>
+                                </InnerReference>
+                            </ReferencePath>
+                        </IfcMetric>
+                        <IfcMetric Name="Piemonte_widht" Benchmark="equalto" ConstraintGrade="hard" ConstraintSource="list of possible values" Description="width constraint" ValueSource="IfcSimplePropertyTemplate" >
+                            <DataValue>
+                                <IfcAppliedValue Name="Piemonte widths">
+                                    <Components>
+                                        <IfcAppliedValue pos="0">
+                                            <AppliedValue>
+                                                <IfcLengthMeasure-wrapper>12</IfcLengthMeasure-wrapper>
+                                            </AppliedValue>
+                                        </IfcAppliedValue>
+                                        <IfcAppliedValue pos="1">
+                                            <AppliedValue>
+                                                <IfcLengthMeasure-wrapper>11.5</IfcLengthMeasure-wrapper>
+                                            </AppliedValue>
+                                        </IfcAppliedValue>
+                                    </Components>
+                                </IfcAppliedValue>
+                            </DataValue>
+                            <ReferencePath TypeIdentifier="IfcTypeProduct" AttributeIdentifier="HasProperties" href="#id_ProductType1">
+                                <InnerReference TypeIdentifier="IfcPropertySet" AttributeIdentifier="HasProperties" href="#id_ps0" >
+                                    <InnerReference TypeIdentifier="IfcComplexProperty" AttributeIdentifier="HasProperties" href="#id_cp0">
+                                        <InnerReference AttributeIdentifier="NominalValue" TypeIdentifier="IfcPropertySingleValue" InstanceName="width" href="#id_w">
+                                        </InnerReference>
+                                    </InnerReference>
+                                </InnerReference>
+                            </ReferencePath>
+                        </IfcMetric>
+                        <IfcMetric Name="Piemonte_height" Benchmark="equalto" ConstraintGrade="hard" ConstraintSource="list of possible values" Description="height constraint" ValueSource="IfcSimplePropertyTemplate" >
+                            <DataValue>
+                                <IfcAppliedValue Name="Piemonte heights">
+                                    <Components>
+                                        <IfcAppliedValue pos="0">
+                                            <AppliedValue>
+                                                <IfcLengthMeasure-wrapper>6</IfcLengthMeasure-wrapper>
+                                            </AppliedValue>
+                                        </IfcAppliedValue>
+                                        <IfcAppliedValue pos="1">
+                                            <AppliedValue>
+                                                <IfcLengthMeasure-wrapper>5</IfcLengthMeasure-wrapper>
+                                            </AppliedValue>
+                                        </IfcAppliedValue>
+                                    </Components>
+                                </IfcAppliedValue>
+                            </DataValue>
+                            <ReferencePath TypeIdentifier="IfcTypeProduct" AttributeIdentifier="HasProperties" href="#id_ProductType1">
+                                <InnerReference TypeIdentifier="IfcPropertySet" AttributeIdentifier="HasProperties" href="#id_ps0" >
+                                    <InnerReference TypeIdentifier="IfcComplexProperty" AttributeIdentifier="HasProperties" href="#id_cp0">
+                                        <InnerReference AttributeIdentifier="NominalValue" TypeIdentifier="IfcPropertySingleValue" InstanceName="height" href="#id_h">
+                                        </InnerReference>
+                                    </InnerReference>
+                                </InnerReference>
+                            </ReferencePath>
+                        </IfcMetric>
+                    </BenchmarkValues>
+                </IfcObjective>
+                <IfcObjective Name="Lombardia" Description="Bricks' production zone"
+                    ObjectiveQualifier="parameter" ConstraintGrade="hard" LogicalAggregator="logicalor">
+                    <BenchmarkValues>
+                        <IfcMetric Name="Lombardia_lenght" Benchmark="equalto" ConstraintGrade="hard" ConstraintSource="list of possible values" Description="lenght constraint" ValueSource="IfcSimplePropertyTemplate" >
+                            <DataValue>
+                                <IfcAppliedValue Name="Lombardia lenghts">
+                                    <Components>
+                                        <IfcAppliedValue pos="0">
+                                            <AppliedValue>
+                                                <IfcLengthMeasure-wrapper>23</IfcLengthMeasure-wrapper>
+                                            </AppliedValue>
+                                        </IfcAppliedValue>
+                                        <IfcAppliedValue pos="1">
+                                            <AppliedValue>
+                                                <IfcLengthMeasure-wrapper>22.5</IfcLengthMeasure-wrapper>
+                                            </AppliedValue>
+                                        </IfcAppliedValue>
+                                        <IfcAppliedValue pos="2">
+                                            <AppliedValue>
+                                                <IfcLengthMeasure-wrapper>25</IfcLengthMeasure-wrapper>
+                                            </AppliedValue>
+                                        </IfcAppliedValue>
+                                    </Components>
+                                </IfcAppliedValue>
+                            </DataValue>
+                            <ReferencePath TypeIdentifier="IfcTypeProduct" AttributeIdentifier="HasProperties" href="#id_ProductType1">
+                                <InnerReference TypeIdentifier="IfcPropertySet" AttributeIdentifier="HasProperties" href="#id_ps0" >
+                                    <InnerReference TypeIdentifier="IfcComplexProperty" AttributeIdentifier="HasProperties" href="#id_cp0">
+                                        <InnerReference AttributeIdentifier="NominalValue" TypeIdentifier="IfcPropertySingleValue" InstanceName="lenght" href="#id_l">
+                                        </InnerReference>
+                                    </InnerReference>
+                                </InnerReference>
+                            </ReferencePath>
+                        </IfcMetric>
+                        <IfcMetric Name="Lombardia_widht" Benchmark="equalto" ConstraintGrade="hard" ConstraintSource="list of possible values" Description="width constraint" ValueSource="IfcSimplePropertyTemplate" >
+                            <DataValue>
+                                <IfcAppliedValue Name="Lombardia widths">
+                                    <Components>
+                                        <IfcAppliedValue pos="0">
+                                            <AppliedValue>
+                                                <IfcLengthMeasure-wrapper>12.5</IfcLengthMeasure-wrapper>
+                                            </AppliedValue>
+                                        </IfcAppliedValue>
+                                        <IfcAppliedValue pos="1">
+                                            <AppliedValue>
+                                                <IfcLengthMeasure-wrapper>13</IfcLengthMeasure-wrapper>
+                                            </AppliedValue>
+                                        </IfcAppliedValue>
+                                        <IfcAppliedValue pos="2">
+                                            <AppliedValue>
+                                                <IfcLengthMeasure-wrapper>12</IfcLengthMeasure-wrapper>
+                                            </AppliedValue>
+                                        </IfcAppliedValue>
+                                    </Components>
+                                </IfcAppliedValue>
+                            </DataValue>
+                            <ReferencePath TypeIdentifier="IfcTypeProduct" AttributeIdentifier="HasProperties" href="#id_ProductType1">
+                                <InnerReference TypeIdentifier="IfcPropertySet" AttributeIdentifier="HasProperties" href="#id_ps0" >
+                                    <InnerReference TypeIdentifier="IfcComplexProperty" AttributeIdentifier="HasProperties" href="#id_cp0">
+                                        <InnerReference AttributeIdentifier="NominalValue" TypeIdentifier="IfcPropertySingleValue" InstanceName="width" href="#id_w">
+                                        </InnerReference>
+                                    </InnerReference>
+                                </InnerReference>
+                            </ReferencePath>
+                        </IfcMetric>
+                        <IfcMetric Name="Lombardia_height" Benchmark="equalto" ConstraintGrade="hard" ConstraintSource="list of possible values" Description="height constraint" ValueSource="IfcSimplePropertyTemplate" >
+                            <DataValue>
+                                <IfcAppliedValue Name="Lombardia heights">
+                                    <Components>
+                                        <IfcAppliedValue pos="0">
+                                            <AppliedValue>
+                                                <IfcLengthMeasure-wrapper>6</IfcLengthMeasure-wrapper>
+                                            </AppliedValue>
+                                        </IfcAppliedValue>
+                                        <IfcAppliedValue pos="1">
+                                            <AppliedValue>
+                                                <IfcLengthMeasure-wrapper>6</IfcLengthMeasure-wrapper>
+                                            </AppliedValue>
+                                        </IfcAppliedValue>
+                                        <IfcAppliedValue pos="2">
+                                            <AppliedValue>
+                                                <IfcLengthMeasure-wrapper>5.5</IfcLengthMeasure-wrapper>
+                                            </AppliedValue>
+                                        </IfcAppliedValue>
+                                    </Components>
+                                </IfcAppliedValue>
+                            </DataValue>
+                            <ReferencePath TypeIdentifier="IfcTypeProduct" AttributeIdentifier="HasProperties" href="#id_ProductType1">
+                                <InnerReference TypeIdentifier="IfcPropertySet" AttributeIdentifier="HasProperties" href="#id_ps0" >
+                                    <InnerReference TypeIdentifier="IfcComplexProperty" AttributeIdentifier="HasProperties" href="#id_cp0">
+                                        <InnerReference AttributeIdentifier="NominalValue" TypeIdentifier="IfcPropertySingleValue" InstanceName="height" href="#id_h">
+                                        </InnerReference>
+                                    </InnerReference>
+                                </InnerReference>
+                            </ReferencePath>
+                        </IfcMetric>
+                    </BenchmarkValues>
+                </IfcObjective>
+            </BenchmarkValues>
+        </RelatingConstraint>
+    </IfcRelAssociatesConstraint>
+    <!-- test -->
+    
+</ifcXML>
