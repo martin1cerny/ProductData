@@ -1,0 +1,1067 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ifcXML xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ifc="http://www.buildingsmart-tech.org/ifcXML/IFC4/final" id="ifcXML4" xsi:schemaLocation="http://www.buildingsmart-tech.org/ifcXML/IFC4/final http://www.buildingsmart-tech.org/ifcXML/IFC4/final/ifcXML4.xsd" xmlns="http://www.buildingsmart-tech.org/ifcXML/IFC4/final">
+	<header>
+		<name>Product data file</name>
+		<time_stamp>2018-09-06T08:08:24.258818+02:00</time_stamp>
+		<author>Ugo</author>
+		<organization>HC Italy</organization>
+		<preprocessor_version>IFC4.NET</preprocessor_version>
+		<originating_system>CEN-TC442-WG2-TG3-Writer</originating_system>
+		<authorization>CEN-TC442-WG2-TG3</authorization>
+		<documentation>https://www.cafm-connect.org</documentation>
+	</header>
+	<IfcProject id="i100"/>
+	<IfcProjectLibrary id="i102" GlobalId="1DbshdzGD71ejurQqQcxbw" Name="brick product data templates" Description="" Phase=""/>
+	<IfcRelDeclares id="i103">
+		<RelatingContext xsi:nil="true" ref="i102" xsi:type="IfcProjectLibrary"/>
+		<RelatedDefinitions>
+			<IfcTypeProduct id="i104" GlobalId="1DbshTzGD71ejurQqQcxbw" Name="Brick Product" Description="Description of Brick Product" ApplicableOccurrence="IfcWall" Tag="MyProductTypeNumber"/>
+			<IfcPropertySetTemplate id="i105" GlobalId="1DbshTzGD71ejuZQqQcxbw" Name="Group of properties for Brick Product" Description="" ApplicableEntity="IfcWall/USERDEFINED">
+				<HasPropertyTemplates>
+					<IfcSimplePropertyTemplate id="i106" GlobalId="1DbshTzGD71ejuZQqQcxba" Name="zone" Description="" PrimaryMeasureType="IfcLabel" AccessState="locked"/>
+					<IfcSimplePropertyTemplate id="i107" GlobalId="1DbshTzGD71ejuZQqQkxad" Name="height" Description="" PrimaryMeasureType="IfcReal" AccessState="locked">
+						<PrimaryUnit>
+							<IfcSIUnit id="i108" UnitType="lengthunit" Prefix="milli" Name="metre"/>
+						</PrimaryUnit>
+					</IfcSimplePropertyTemplate>
+					<IfcSimplePropertyTemplate id="i109" GlobalId="1DbshTzGD71ejuZQqQcxac" Name="width" Description="" PrimaryMeasureType="IfcReal" AccessState="locked">
+						<PrimaryUnit>
+							<IfcSIUnit id="i110" UnitType="lengthunit" Prefix="milli" Name="metre"/>
+						</PrimaryUnit>
+					</IfcSimplePropertyTemplate>
+					<IfcSimplePropertyTemplate id="i111" GlobalId="1DbshTzGD71ejuZQqQcxab" Name="length" Description="" PrimaryMeasureType="IfcReal" AccessState="locked">
+						<PrimaryUnit>
+							<IfcSIUnit id="i112" UnitType="lengthunit" Prefix="milli" Name="metre"/>
+						</PrimaryUnit>
+					</IfcSimplePropertyTemplate>
+				</HasPropertyTemplates>
+			</IfcPropertySetTemplate>
+		</RelatedDefinitions>
+	</IfcRelDeclares>
+	<IfcProjectLibrary id="i114" GlobalId="1cNmLkRwD1X9OIYSEpvavF" Name="brick product data" Description=""/>
+	<IfcRelDeclares id="i115">
+		<RelatingContext xsi:nil="true" ref="i102" xsi:type="IfcProjectLibrary"/>
+		<RelatedDefinitions>
+			<IfcTypeProduct id="i116" GlobalId="0cQNoiuyfEBQ1OXEJUplyy" Name="Brick Product variant #1" Description="Description of Brick Product variant #1" ApplicableOccurrence="IfcWall" Tag="1">
+				<HasPropertySets>
+					<IfcPropertySet id="i117" GlobalId="1vgI6vB0P92eOREbscewBI" Name="" Description="">
+						<HasProperties>
+							<IfcPropertySingleValue id="i119" Name="zone" Description="">
+								<NominalValue>
+									<IfcLabel-wrapper>Piemonte</IfcLabel-wrapper>
+								</NominalValue>
+							</IfcPropertySingleValue>
+							<IfcPropertySingleValue id="i120" Name="height" Description="">
+								<NominalValue>
+									<IfcLengthMeasure-wrapper>6</IfcLengthMeasure-wrapper>
+								</NominalValue>
+							</IfcPropertySingleValue>
+							<IfcPropertySingleValue id="i121" Name="width" Description="">
+								<NominalValue>
+									<IfcLengthMeasure-wrapper>12</IfcLengthMeasure-wrapper>
+								</NominalValue>
+							</IfcPropertySingleValue>
+							<IfcPropertySingleValue id="i122" Name="lenght" Description="">
+								<NominalValue>
+									<IfcLengthMeasure-wrapper>24</IfcLengthMeasure-wrapper>
+								</NominalValue>
+							</IfcPropertySingleValue>
+						</HasProperties>
+					</IfcPropertySet>
+				</HasPropertySets>
+			</IfcTypeProduct>
+			<IfcTypeProduct id="i123" GlobalId="0OfQMuvZ1FTxJUbUFC9adf" Name="Brick Product variant #2" Description="Description of Brick Product variant #2" ApplicableOccurrence="IfcWall" Tag="2">
+				<HasPropertySets>
+					<IfcPropertySet id="i124" GlobalId="29dndANET43OaiCR9SC09k" Name="" Description="">
+						<HasProperties>
+							<IfcPropertySingleValue id="i126" Name="zone" Description="">
+								<NominalValue>
+									<IfcLabel-wrapper>Piemonte</IfcLabel-wrapper>
+								</NominalValue>
+							</IfcPropertySingleValue>
+							<IfcPropertySingleValue id="i127" Name="height" Description="">
+								<NominalValue>
+									<IfcLengthMeasure-wrapper>5</IfcLengthMeasure-wrapper>
+								</NominalValue>
+							</IfcPropertySingleValue>
+							<IfcPropertySingleValue id="i128" Name="width" Description="">
+								<NominalValue>
+									<IfcLengthMeasure-wrapper>11.5</IfcLengthMeasure-wrapper>
+								</NominalValue>
+							</IfcPropertySingleValue>
+							<IfcPropertySingleValue id="i129" Name="lenght" Description="">
+								<NominalValue>
+									<IfcLengthMeasure-wrapper>24</IfcLengthMeasure-wrapper>
+								</NominalValue>
+							</IfcPropertySingleValue>
+						</HasProperties>
+					</IfcPropertySet>
+				</HasPropertySets>
+			</IfcTypeProduct>
+			<IfcTypeProduct id="i130" GlobalId="1iwUbyzAb2Mfx3SgOY15Ec" Name="Brick Product variant #3" Description="Description of Brick Product variant #3" ApplicableOccurrence="IfcWall" Tag="3">
+				<HasPropertySets>
+					<IfcPropertySet id="i131" GlobalId="2RAhq8qcv3qf$DgMGk0r5z" Name="" Description="">
+						<HasProperties>
+							<IfcPropertySingleValue id="i133" Name="zone" Description="">
+								<NominalValue>
+									<IfcLabel-wrapper>Lombardia</IfcLabel-wrapper>
+								</NominalValue>
+							</IfcPropertySingleValue>
+							<IfcPropertySingleValue id="i134" Name="height" Description="">
+								<NominalValue>
+									<IfcLengthMeasure-wrapper>6</IfcLengthMeasure-wrapper>
+								</NominalValue>
+							</IfcPropertySingleValue>
+							<IfcPropertySingleValue id="i135" Name="width" Description="">
+								<NominalValue>
+									<IfcLengthMeasure-wrapper>11</IfcLengthMeasure-wrapper>
+								</NominalValue>
+							</IfcPropertySingleValue>
+							<IfcPropertySingleValue id="i136" Name="lenght" Description="">
+								<NominalValue>
+									<IfcLengthMeasure-wrapper>23</IfcLengthMeasure-wrapper>
+								</NominalValue>
+							</IfcPropertySingleValue>
+						</HasProperties>
+					</IfcPropertySet>
+				</HasPropertySets>
+			</IfcTypeProduct>
+			<IfcTypeProduct id="i137" GlobalId="2H8GKE4DP6wQL5A6H9Yu7b" Name="Brick Product variant #4" Description="Description of Brick Product variant #4" ApplicableOccurrence="IfcWall" Tag="4">
+				<HasPropertySets>
+					<IfcPropertySet id="i138" GlobalId="1_oXp8NP5ETf28cTFTXbTj" Name="" Description="">
+						<HasProperties>
+							<IfcPropertySingleValue id="i140" Name="zone" Description="">
+								<NominalValue>
+									<IfcLabel-wrapper>Lombardia</IfcLabel-wrapper>
+								</NominalValue>
+							</IfcPropertySingleValue>
+							<IfcPropertySingleValue id="i141" Name="height" Description="">
+								<NominalValue>
+									<IfcLengthMeasure-wrapper>6</IfcLengthMeasure-wrapper>
+								</NominalValue>
+							</IfcPropertySingleValue>
+							<IfcPropertySingleValue id="i142" Name="width" Description="">
+								<NominalValue>
+									<IfcLengthMeasure-wrapper>10.5</IfcLengthMeasure-wrapper>
+								</NominalValue>
+							</IfcPropertySingleValue>
+							<IfcPropertySingleValue id="i143" Name="lenght" Description="">
+								<NominalValue>
+									<IfcLengthMeasure-wrapper>22.5</IfcLengthMeasure-wrapper>
+								</NominalValue>
+							</IfcPropertySingleValue>
+						</HasProperties>
+					</IfcPropertySet>
+				</HasPropertySets>
+			</IfcTypeProduct>
+			<IfcTypeProduct id="i144" GlobalId="3yYRkb35z2hwI2EYzp5eRp" Name="Brick Product variant #5" Description="Description of Brick Product variant #5" ApplicableOccurrence="IfcWall" Tag="5">
+				<HasPropertySets>
+					<IfcPropertySet id="i145" GlobalId="2lWo7osej9ZupujwFMBXSg" Name="" Description="">
+						<HasProperties>
+							<IfcPropertySingleValue id="i147" Name="zone" Description="">
+								<NominalValue>
+									<IfcLabel-wrapper>Lombardia</IfcLabel-wrapper>
+								</NominalValue>
+							</IfcPropertySingleValue>
+							<IfcPropertySingleValue id="i148" Name="height" Description="">
+								<NominalValue>
+									<IfcLengthMeasure-wrapper>5.5</IfcLengthMeasure-wrapper>
+								</NominalValue>
+							</IfcPropertySingleValue>
+							<IfcPropertySingleValue id="i149" Name="width" Description="">
+								<NominalValue>
+									<IfcLengthMeasure-wrapper>12</IfcLengthMeasure-wrapper>
+								</NominalValue>
+							</IfcPropertySingleValue>
+							<IfcPropertySingleValue id="i150" Name="lenght" Description="">
+								<NominalValue>
+									<IfcLengthMeasure-wrapper>25</IfcLengthMeasure-wrapper>
+								</NominalValue>
+							</IfcPropertySingleValue>
+						</HasProperties>
+					</IfcPropertySet>
+				</HasPropertySets>
+			</IfcTypeProduct>
+			<IfcTypeProduct id="i151" GlobalId="2s7FaRqQPDOxSlolzWM74y" Name="Brick Product variant #6" Description="Description of Brick Product variant #6" ApplicableOccurrence="IfcWall" Tag="6">
+				<HasPropertySets>
+					<IfcPropertySet id="i152" GlobalId="2oTtUhjYL6HPVS5E6SCDsX" Name="" Description="">
+						<HasProperties>
+							<IfcPropertySingleValue id="i154" Name="zone" Description="">
+								<NominalValue>
+									<IfcLabel-wrapper>Veneto</IfcLabel-wrapper>
+								</NominalValue>
+							</IfcPropertySingleValue>
+							<IfcPropertySingleValue id="i155" Name="height" Description="">
+								<NominalValue>
+									<IfcLengthMeasure-wrapper>6</IfcLengthMeasure-wrapper>
+								</NominalValue>
+							</IfcPropertySingleValue>
+							<IfcPropertySingleValue id="i156" Name="width" Description="">
+								<NominalValue>
+									<IfcLengthMeasure-wrapper>12.5</IfcLengthMeasure-wrapper>
+								</NominalValue>
+							</IfcPropertySingleValue>
+							<IfcPropertySingleValue id="i157" Name="lenght" Description="">
+								<NominalValue>
+									<IfcLengthMeasure-wrapper>26</IfcLengthMeasure-wrapper>
+								</NominalValue>
+							</IfcPropertySingleValue>
+						</HasProperties>
+					</IfcPropertySet>
+				</HasPropertySets>
+			</IfcTypeProduct>
+			<IfcTypeProduct id="i158" GlobalId="10lecBdwTCxhXjC_Uu$7Cn" Name="Brick Product variant #7" Description="Description of Brick Product variant #7" ApplicableOccurrence="IfcWall" Tag="7">
+				<HasPropertySets>
+					<IfcPropertySet id="i159" GlobalId="22uO_zGjH74gK3ANxHAC_7" Name="" Description="">
+						<HasProperties>
+							<IfcPropertySingleValue id="i161" Name="zone" Description="">
+								<NominalValue>
+									<IfcLabel-wrapper>Veneto</IfcLabel-wrapper>
+								</NominalValue>
+							</IfcPropertySingleValue>
+							<IfcPropertySingleValue id="i162" Name="height" Description="">
+								<NominalValue>
+									<IfcLengthMeasure-wrapper>6</IfcLengthMeasure-wrapper>
+								</NominalValue>
+							</IfcPropertySingleValue>
+							<IfcPropertySingleValue id="i163" Name="width" Description="">
+								<NominalValue>
+									<IfcLengthMeasure-wrapper>13</IfcLengthMeasure-wrapper>
+								</NominalValue>
+							</IfcPropertySingleValue>
+							<IfcPropertySingleValue id="i164" Name="lenght" Description="">
+								<NominalValue>
+									<IfcLengthMeasure-wrapper>26</IfcLengthMeasure-wrapper>
+								</NominalValue>
+							</IfcPropertySingleValue>
+						</HasProperties>
+					</IfcPropertySet>
+				</HasPropertySets>
+			</IfcTypeProduct>
+			<IfcTypeProduct id="i165" GlobalId="0lLA1ygMD9bft7Jn0aqrq0" Name="Brick Product variant #8" Description="Description of Brick Product variant #8" ApplicableOccurrence="IfcWall" Tag="8">
+				<HasPropertySets>
+					<IfcPropertySet id="i166" GlobalId="067wXBMHvAkxoRM0kwxSJ9" Name="" Description="">
+						<HasProperties>
+							<IfcPropertySingleValue id="i168" Name="zone" Description="">
+								<NominalValue>
+									<IfcLabel-wrapper>Venetor</IfcLabel-wrapper>
+								</NominalValue>
+							</IfcPropertySingleValue>
+							<IfcPropertySingleValue id="i169" Name="height" Description="">
+								<NominalValue>
+									<IfcLengthMeasure-wrapper>5.5</IfcLengthMeasure-wrapper>
+								</NominalValue>
+							</IfcPropertySingleValue>
+							<IfcPropertySingleValue id="i170" Name="width" Description="">
+								<NominalValue>
+									<IfcLengthMeasure-wrapper>12</IfcLengthMeasure-wrapper>
+								</NominalValue>
+							</IfcPropertySingleValue>
+							<IfcPropertySingleValue id="i171" Name="lenght" Description="">
+								<NominalValue>
+									<IfcLengthMeasure-wrapper>25</IfcLengthMeasure-wrapper>
+								</NominalValue>
+							</IfcPropertySingleValue>
+						</HasProperties>
+					</IfcPropertySet>
+				</HasPropertySets>
+			</IfcTypeProduct>
+			<IfcTypeProduct id="i172" GlobalId="1fy1JKz0XF8R2ELUgTJchq" Name="Brick Product variant #9" Description="Description of Brick Product variant #9" ApplicableOccurrence="IfcWall" Tag="9">
+				<HasPropertySets>
+					<IfcPropertySet id="i173" GlobalId="3Wg1ZvL4L7TgceQFsT16mi" Name="" Description="">
+						<HasProperties>
+							<IfcPropertySingleValue id="i175" Name="zone" Description="">
+								<NominalValue>
+									<IfcLabel-wrapper>Liguria</IfcLabel-wrapper>
+								</NominalValue>
+							</IfcPropertySingleValue>
+							<IfcPropertySingleValue id="i176" Name="height" Description="">
+								<NominalValue>
+									<IfcLengthMeasure-wrapper>6</IfcLengthMeasure-wrapper>
+								</NominalValue>
+							</IfcPropertySingleValue>
+							<IfcPropertySingleValue id="i177" Name="width" Description="">
+								<NominalValue>
+									<IfcLengthMeasure-wrapper>12</IfcLengthMeasure-wrapper>
+								</NominalValue>
+							</IfcPropertySingleValue>
+							<IfcPropertySingleValue id="i178" Name="lenght" Description="">
+								<NominalValue>
+									<IfcLengthMeasure-wrapper>24</IfcLengthMeasure-wrapper>
+								</NominalValue>
+							</IfcPropertySingleValue>
+						</HasProperties>
+					</IfcPropertySet>
+				</HasPropertySets>
+			</IfcTypeProduct>
+			<IfcTypeProduct id="i179" GlobalId="31cvMjTyH0vOcM4ZgFM7KI" Name="Brick Product variant #10" Description="Description of Brick Product variant #10" ApplicableOccurrence="IfcWall" Tag="10">
+				<HasPropertySets>
+					<IfcPropertySet id="i180" GlobalId="1bdUoaxCf8TubGWiBOmwBt" Name="" Description="">
+						<HasProperties>
+							<IfcPropertySingleValue id="i182" Name="zone" Description="">
+								<NominalValue>
+									<IfcLabel-wrapper>Emilia Romagna</IfcLabel-wrapper>
+								</NominalValue>
+							</IfcPropertySingleValue>
+							<IfcPropertySingleValue id="i183" Name="height" Description="">
+								<NominalValue>
+									<IfcLengthMeasure-wrapper>5.5</IfcLengthMeasure-wrapper>
+								</NominalValue>
+							</IfcPropertySingleValue>
+							<IfcPropertySingleValue id="i184" Name="width" Description="">
+								<NominalValue>
+									<IfcLengthMeasure-wrapper>12</IfcLengthMeasure-wrapper>
+								</NominalValue>
+							</IfcPropertySingleValue>
+							<IfcPropertySingleValue id="i185" Name="lenght" Description="">
+								<NominalValue>
+									<IfcLengthMeasure-wrapper>28</IfcLengthMeasure-wrapper>
+								</NominalValue>
+							</IfcPropertySingleValue>
+						</HasProperties>
+					</IfcPropertySet>
+				</HasPropertySets>
+			</IfcTypeProduct>
+			<IfcTypeProduct id="i186" GlobalId="0DSirz$Q1BmPM4ri_fT8gL" Name="Brick Product variant #11" Description="Description of Brick Product variant #11" ApplicableOccurrence="IfcWall" Tag="11">
+				<HasPropertySets>
+					<IfcPropertySet id="i187" GlobalId="2my_zmJpXFqAcjzn9LbzWp" Name="" Description="">
+						<HasProperties>
+							<IfcPropertySingleValue id="i189" Name="zone" Description="">
+								<NominalValue>
+									<IfcLabel-wrapper>Emilia Romagna</IfcLabel-wrapper>
+								</NominalValue>
+							</IfcPropertySingleValue>
+							<IfcPropertySingleValue id="i190" Name="height" Description="">
+								<NominalValue>
+									<IfcLengthMeasure-wrapper>6</IfcLengthMeasure-wrapper>
+								</NominalValue>
+							</IfcPropertySingleValue>
+							<IfcPropertySingleValue id="i191" Name="width" Description="">
+								<NominalValue>
+									<IfcLengthMeasure-wrapper>13</IfcLengthMeasure-wrapper>
+								</NominalValue>
+							</IfcPropertySingleValue>
+							<IfcPropertySingleValue id="i192" Name="lenght" Description="">
+								<NominalValue>
+									<IfcLengthMeasure-wrapper>26</IfcLengthMeasure-wrapper>
+								</NominalValue>
+							</IfcPropertySingleValue>
+						</HasProperties>
+					</IfcPropertySet>
+				</HasPropertySets>
+			</IfcTypeProduct>
+			<IfcTypeProduct id="i193" GlobalId="1lQCYT4VD3sgmFkt$kC1vC" Name="Brick Product variant #12" Description="Description of Brick Product variant #12" ApplicableOccurrence="IfcWall" Tag="12">
+				<HasPropertySets>
+					<IfcPropertySet id="i194" GlobalId="0tQEztjE1438g3mESXv2JN" Name="" Description="">
+						<HasProperties>
+							<IfcPropertySingleValue id="i196" Name="zone" Description="">
+								<NominalValue>
+									<IfcLabel-wrapper>Emilia Romagna</IfcLabel-wrapper>
+								</NominalValue>
+							</IfcPropertySingleValue>
+							<IfcPropertySingleValue id="i197" Name="height" Description="">
+								<NominalValue>
+									<IfcLengthMeasure-wrapper>5.8</IfcLengthMeasure-wrapper>
+								</NominalValue>
+							</IfcPropertySingleValue>
+							<IfcPropertySingleValue id="i198" Name="width" Description="">
+								<NominalValue>
+									<IfcLengthMeasure-wrapper>14</IfcLengthMeasure-wrapper>
+								</NominalValue>
+							</IfcPropertySingleValue>
+							<IfcPropertySingleValue id="i199" Name="lenght" Description="">
+								<NominalValue>
+									<IfcLengthMeasure-wrapper>28</IfcLengthMeasure-wrapper>
+								</NominalValue>
+							</IfcPropertySingleValue>
+						</HasProperties>
+					</IfcPropertySet>
+				</HasPropertySets>
+			</IfcTypeProduct>
+			<IfcTypeProduct id="i200" GlobalId="3MQJhgVIHCR886peHtNV3L" Name="Brick Product variant #13" Description="Description of Brick Product variant #13" ApplicableOccurrence="IfcWall" Tag="13">
+				<HasPropertySets>
+					<IfcPropertySet id="i201" GlobalId="1DbGHnScLEmBfeLyevrNN4" Name="" Description="">
+						<HasProperties>
+							<IfcPropertySingleValue id="i203" Name="zone" Description="">
+								<NominalValue>
+									<IfcLabel-wrapper>Toscana</IfcLabel-wrapper>
+								</NominalValue>
+							</IfcPropertySingleValue>
+							<IfcPropertySingleValue id="i204" Name="height" Description="">
+								<NominalValue>
+									<IfcLengthMeasure-wrapper>5.5</IfcLengthMeasure-wrapper>
+								</NominalValue>
+							</IfcPropertySingleValue>
+							<IfcPropertySingleValue id="i205" Name="width" Description="">
+								<NominalValue>
+									<IfcLengthMeasure-wrapper>12</IfcLengthMeasure-wrapper>
+								</NominalValue>
+							</IfcPropertySingleValue>
+							<IfcPropertySingleValue id="i206" Name="lenght" Description="">
+								<NominalValue>
+									<IfcLengthMeasure-wrapper>25</IfcLengthMeasure-wrapper>
+								</NominalValue>
+							</IfcPropertySingleValue>
+						</HasProperties>
+					</IfcPropertySet>
+				</HasPropertySets>
+			</IfcTypeProduct>
+			<IfcTypeProduct id="i207" GlobalId="2N6aaqcQDDAeauuVGVAtQe" Name="Brick Product variant #14" Description="Description of Brick Product variant #14" ApplicableOccurrence="IfcWall" Tag="14">
+				<HasPropertySets>
+					<IfcPropertySet id="i208" GlobalId="1dleMi5oP6uPXFeJTJKUDE" Name="" Description="">
+						<HasProperties>
+							<IfcPropertySingleValue id="i210" Name="zone" Description="">
+								<NominalValue>
+									<IfcLabel-wrapper>Toscana</IfcLabel-wrapper>
+								</NominalValue>
+							</IfcPropertySingleValue>
+							<IfcPropertySingleValue id="i211" Name="height" Description="">
+								<NominalValue>
+									<IfcLengthMeasure-wrapper>6</IfcLengthMeasure-wrapper>
+								</NominalValue>
+							</IfcPropertySingleValue>
+							<IfcPropertySingleValue id="i212" Name="width" Description="">
+								<NominalValue>
+									<IfcLengthMeasure-wrapper>13</IfcLengthMeasure-wrapper>
+								</NominalValue>
+							</IfcPropertySingleValue>
+							<IfcPropertySingleValue id="i213" Name="lenght" Description="">
+								<NominalValue>
+									<IfcLengthMeasure-wrapper>26</IfcLengthMeasure-wrapper>
+								</NominalValue>
+							</IfcPropertySingleValue>
+						</HasProperties>
+					</IfcPropertySet>
+				</HasPropertySets>
+			</IfcTypeProduct>
+			<IfcTypeProduct id="i214" GlobalId="3n4kcUN51CgBOboUOqbln4" Name="Brick Product variant #15" Description="Description of Brick Product variant #15" ApplicableOccurrence="IfcWall" Tag="15">
+				<HasPropertySets>
+					<IfcPropertySet id="i215" GlobalId="0G9spPj$L5pv71X3Qlp7CE" Name="" Description="">
+						<HasProperties>
+							<IfcPropertySingleValue id="i217" Name="zone" Description="">
+								<NominalValue>
+									<IfcLabel-wrapper>Marche</IfcLabel-wrapper>
+								</NominalValue>
+							</IfcPropertySingleValue>
+							<IfcPropertySingleValue id="i218" Name="height" Description="">
+								<NominalValue>
+									<IfcLengthMeasure-wrapper>6</IfcLengthMeasure-wrapper>
+								</NominalValue>
+							</IfcPropertySingleValue>
+							<IfcPropertySingleValue id="i219" Name="width" Description="">
+								<NominalValue>
+									<IfcLengthMeasure-wrapper>13</IfcLengthMeasure-wrapper>
+								</NominalValue>
+							</IfcPropertySingleValue>
+							<IfcPropertySingleValue id="i220" Name="lenght" Description="">
+								<NominalValue>
+									<IfcLengthMeasure-wrapper>26</IfcLengthMeasure-wrapper>
+								</NominalValue>
+							</IfcPropertySingleValue>
+						</HasProperties>
+					</IfcPropertySet>
+				</HasPropertySets>
+			</IfcTypeProduct>
+			<IfcTypeProduct id="i221" GlobalId="1AEE2SBK9DBB2vj3XZ5cJh" Name="Brick Product variant #16" Description="Description of Brick Product variant #16" ApplicableOccurrence="IfcWall" Tag="16">
+				<HasPropertySets>
+					<IfcPropertySet id="i222" GlobalId="19mxdRCPP9ng9Ctpst2HBA" Name="" Description="">
+						<HasProperties>
+							<IfcPropertySingleValue id="i224" Name="zone" Description="">
+								<NominalValue>
+									<IfcLabel-wrapper>Marche</IfcLabel-wrapper>
+								</NominalValue>
+							</IfcPropertySingleValue>
+							<IfcPropertySingleValue id="i225" Name="height" Description="">
+								<NominalValue>
+									<IfcLengthMeasure-wrapper>6</IfcLengthMeasure-wrapper>
+								</NominalValue>
+							</IfcPropertySingleValue>
+							<IfcPropertySingleValue id="i226" Name="width" Description="">
+								<NominalValue>
+									<IfcLengthMeasure-wrapper>13</IfcLengthMeasure-wrapper>
+								</NominalValue>
+							</IfcPropertySingleValue>
+							<IfcPropertySingleValue id="i227" Name="lenght" Description="">
+								<NominalValue>
+									<IfcLengthMeasure-wrapper>28</IfcLengthMeasure-wrapper>
+								</NominalValue>
+							</IfcPropertySingleValue>
+						</HasProperties>
+					</IfcPropertySet>
+				</HasPropertySets>
+			</IfcTypeProduct>
+			<IfcTypeProduct id="i228" GlobalId="1ikcmPJ9X13unv1PolIlU9" Name="Brick Product variant #17" Description="Description of Brick Product variant #17" ApplicableOccurrence="IfcWall" Tag="17">
+				<HasPropertySets>
+					<IfcPropertySet id="i229" GlobalId="2m0tW4p0r94QbKV9p6LcrX" Name="" Description="">
+						<HasProperties>
+							<IfcPropertySingleValue id="i231" Name="zone" Description="">
+								<NominalValue>
+									<IfcLabel-wrapper>Umbria</IfcLabel-wrapper>
+								</NominalValue>
+							</IfcPropertySingleValue>
+							<IfcPropertySingleValue id="i232" Name="height" Description="">
+								<NominalValue>
+									<IfcLengthMeasure-wrapper>5.5</IfcLengthMeasure-wrapper>
+								</NominalValue>
+							</IfcPropertySingleValue>
+							<IfcPropertySingleValue id="i233" Name="width" Description="">
+								<NominalValue>
+									<IfcLengthMeasure-wrapper>13</IfcLengthMeasure-wrapper>
+								</NominalValue>
+							</IfcPropertySingleValue>
+							<IfcPropertySingleValue id="i234" Name="lenght" Description="">
+								<NominalValue>
+									<IfcLengthMeasure-wrapper>26</IfcLengthMeasure-wrapper>
+								</NominalValue>
+							</IfcPropertySingleValue>
+						</HasProperties>
+					</IfcPropertySet>
+				</HasPropertySets>
+			</IfcTypeProduct>
+			<IfcTypeProduct id="i235" GlobalId="1Qm7Xv31XBFBb1eX__d3lE" Name="Brick Product variant #18" Description="Description of Brick Product variant #18" ApplicableOccurrence="IfcWall" Tag="18">
+				<HasPropertySets>
+					<IfcPropertySet id="i236" GlobalId="0NOa6IXdX27fOcu5KdzKM4" Name="" Description="">
+						<HasProperties>
+							<IfcPropertySingleValue id="i238" Name="zone" Description="">
+								<NominalValue>
+									<IfcLabel-wrapper>Umbria</IfcLabel-wrapper>
+								</NominalValue>
+							</IfcPropertySingleValue>
+							<IfcPropertySingleValue id="i239" Name="height" Description="">
+								<NominalValue>
+									<IfcLengthMeasure-wrapper>6</IfcLengthMeasure-wrapper>
+								</NominalValue>
+							</IfcPropertySingleValue>
+							<IfcPropertySingleValue id="i240" Name="width" Description="">
+								<NominalValue>
+									<IfcLengthMeasure-wrapper>13</IfcLengthMeasure-wrapper>
+								</NominalValue>
+							</IfcPropertySingleValue>
+							<IfcPropertySingleValue id="i241" Name="lenght" Description="">
+								<NominalValue>
+									<IfcLengthMeasure-wrapper>26</IfcLengthMeasure-wrapper>
+								</NominalValue>
+							</IfcPropertySingleValue>
+						</HasProperties>
+					</IfcPropertySet>
+				</HasPropertySets>
+			</IfcTypeProduct>
+			<IfcTypeProduct id="i242" GlobalId="2dIOxHj1j9gOBoTnlsel3s" Name="Brick Product variant #19" Description="Description of Brick Product variant #19" ApplicableOccurrence="IfcWall" Tag="19">
+				<HasPropertySets>
+					<IfcPropertySet id="i243" GlobalId="3a3AAWC9D2XO9HFmiMmWMt" Name="" Description="">
+						<HasProperties>
+							<IfcPropertySingleValue id="i245" Name="zone" Description="">
+								<NominalValue>
+									<IfcLabel-wrapper>Lazio</IfcLabel-wrapper>
+								</NominalValue>
+							</IfcPropertySingleValue>
+							<IfcPropertySingleValue id="i246" Name="height" Description="">
+								<NominalValue>
+									<IfcLengthMeasure-wrapper>4</IfcLengthMeasure-wrapper>
+								</NominalValue>
+							</IfcPropertySingleValue>
+							<IfcPropertySingleValue id="i247" Name="width" Description="">
+								<NominalValue>
+									<IfcLengthMeasure-wrapper>14</IfcLengthMeasure-wrapper>
+								</NominalValue>
+							</IfcPropertySingleValue>
+							<IfcPropertySingleValue id="i248" Name="lenght" Description="">
+								<NominalValue>
+									<IfcLengthMeasure-wrapper>28</IfcLengthMeasure-wrapper>
+								</NominalValue>
+							</IfcPropertySingleValue>
+						</HasProperties>
+					</IfcPropertySet>
+				</HasPropertySets>
+			</IfcTypeProduct>
+			<IfcTypeProduct id="i249" GlobalId="0Rqd7gItT4IuqpZu$a1yce" Name="Brick Product variant #20" Description="Description of Brick Product variant #20" ApplicableOccurrence="IfcWall" Tag="20">
+				<HasPropertySets>
+					<IfcPropertySet id="i250" GlobalId="1hyWbss5v2YR4nDBY9N8Am" Name="" Description="">
+						<HasProperties>
+							<IfcPropertySingleValue id="i252" Name="zone" Description="">
+								<NominalValue>
+									<IfcLabel-wrapper>Lazio</IfcLabel-wrapper>
+								</NominalValue>
+							</IfcPropertySingleValue>
+							<IfcPropertySingleValue id="i253" Name="height" Description="">
+								<NominalValue>
+									<IfcLengthMeasure-wrapper>5</IfcLengthMeasure-wrapper>
+								</NominalValue>
+							</IfcPropertySingleValue>
+							<IfcPropertySingleValue id="i254" Name="width" Description="">
+								<NominalValue>
+									<IfcLengthMeasure-wrapper>14</IfcLengthMeasure-wrapper>
+								</NominalValue>
+							</IfcPropertySingleValue>
+							<IfcPropertySingleValue id="i255" Name="lenght" Description="">
+								<NominalValue>
+									<IfcLengthMeasure-wrapper>28</IfcLengthMeasure-wrapper>
+								</NominalValue>
+							</IfcPropertySingleValue>
+						</HasProperties>
+					</IfcPropertySet>
+				</HasPropertySets>
+			</IfcTypeProduct>
+			<IfcTypeProduct id="i256" GlobalId="1RPf8DCub8XPKbCUYCt6Um" Name="Brick Product variant #21" Description="Description of Brick Product variant #21" ApplicableOccurrence="IfcWall" Tag="21">
+				<HasPropertySets>
+					<IfcPropertySet id="i257" GlobalId="3aQ2J4kqL9k9I7ToNkgqWR" Name="" Description="">
+						<HasProperties>
+							<IfcPropertySingleValue id="i259" Name="zone" Description="">
+								<NominalValue>
+									<IfcLabel-wrapper>Abruzzo e Molise</IfcLabel-wrapper>
+								</NominalValue>
+							</IfcPropertySingleValue>
+							<IfcPropertySingleValue id="i260" Name="height" Description="">
+								<NominalValue>
+									<IfcLengthMeasure-wrapper>6</IfcLengthMeasure-wrapper>
+								</NominalValue>
+							</IfcPropertySingleValue>
+							<IfcPropertySingleValue id="i261" Name="width" Description="">
+								<NominalValue>
+									<IfcLengthMeasure-wrapper>13</IfcLengthMeasure-wrapper>
+								</NominalValue>
+							</IfcPropertySingleValue>
+							<IfcPropertySingleValue id="i262" Name="lenght" Description="">
+								<NominalValue>
+									<IfcLengthMeasure-wrapper>26</IfcLengthMeasure-wrapper>
+								</NominalValue>
+							</IfcPropertySingleValue>
+						</HasProperties>
+					</IfcPropertySet>
+				</HasPropertySets>
+			</IfcTypeProduct>
+			<IfcTypeProduct id="i263" GlobalId="1ChG_yoJ52Nh$IJt0pDVSG" Name="Brick Product variant #22" Description="Description of Brick Product variant #22" ApplicableOccurrence="IfcWall" Tag="22">
+				<HasPropertySets>
+					<IfcPropertySet id="i264" GlobalId="08zgWKLjP259qu0R8N2fv8" Name="" Description="">
+						<HasProperties>
+							<IfcPropertySingleValue id="i266" Name="zone" Description="">
+								<NominalValue>
+									<IfcLabel-wrapper>Abruzzo e Molise</IfcLabel-wrapper>
+								</NominalValue>
+							</IfcPropertySingleValue>
+							<IfcPropertySingleValue id="i267" Name="height" Description="">
+								<NominalValue>
+									<IfcLengthMeasure-wrapper>6</IfcLengthMeasure-wrapper>
+								</NominalValue>
+							</IfcPropertySingleValue>
+							<IfcPropertySingleValue id="i268" Name="width" Description="">
+								<NominalValue>
+									<IfcLengthMeasure-wrapper>13</IfcLengthMeasure-wrapper>
+								</NominalValue>
+							</IfcPropertySingleValue>
+							<IfcPropertySingleValue id="i269" Name="lenght" Description="">
+								<NominalValue>
+									<IfcLengthMeasure-wrapper>27</IfcLengthMeasure-wrapper>
+								</NominalValue>
+							</IfcPropertySingleValue>
+						</HasProperties>
+					</IfcPropertySet>
+				</HasPropertySets>
+			</IfcTypeProduct>
+			<IfcTypeProduct id="i270" GlobalId="2$Y5RdsdL6vgoH5ylPg0yY" Name="Brick Product variant #23" Description="Description of Brick Product variant #23" ApplicableOccurrence="IfcWall" Tag="23">
+				<HasPropertySets>
+					<IfcPropertySet id="i271" GlobalId="2gbnipFqH5kxHz91AsK$1D" Name="" Description="">
+						<HasProperties>
+							<IfcPropertySingleValue id="i273" Name="zone" Description="">
+								<NominalValue>
+									<IfcLabel-wrapper>Campania</IfcLabel-wrapper>
+								</NominalValue>
+							</IfcPropertySingleValue>
+							<IfcPropertySingleValue id="i274" Name="height" Description="">
+								<NominalValue>
+									<IfcLengthMeasure-wrapper>6</IfcLengthMeasure-wrapper>
+								</NominalValue>
+							</IfcPropertySingleValue>
+							<IfcPropertySingleValue id="i275" Name="width" Description="">
+								<NominalValue>
+									<IfcLengthMeasure-wrapper>13</IfcLengthMeasure-wrapper>
+								</NominalValue>
+							</IfcPropertySingleValue>
+							<IfcPropertySingleValue id="i276" Name="lenght" Description="">
+								<NominalValue>
+									<IfcLengthMeasure-wrapper>26</IfcLengthMeasure-wrapper>
+								</NominalValue>
+							</IfcPropertySingleValue>
+						</HasProperties>
+					</IfcPropertySet>
+				</HasPropertySets>
+			</IfcTypeProduct>
+			<IfcTypeProduct id="i277" GlobalId="3D9iHegjn34g$kVukjtV0A" Name="Brick Product variant #24" Description="Description of Brick Product variant #24" ApplicableOccurrence="IfcWall" Tag="24">
+				<HasPropertySets>
+					<IfcPropertySet id="i278" GlobalId="2qzjBEr2b6_fk6PHEVyfpz" Name="" Description="">
+						<HasProperties>
+							<IfcPropertySingleValue id="i280" Name="zone" Description="">
+								<NominalValue>
+									<IfcLabel-wrapper>Puglia</IfcLabel-wrapper>
+								</NominalValue>
+							</IfcPropertySingleValue>
+							<IfcPropertySingleValue id="i281" Name="height" Description="">
+								<NominalValue>
+									<IfcLengthMeasure-wrapper>6</IfcLengthMeasure-wrapper>
+								</NominalValue>
+							</IfcPropertySingleValue>
+							<IfcPropertySingleValue id="i282" Name="width" Description="">
+								<NominalValue>
+									<IfcLengthMeasure-wrapper>13</IfcLengthMeasure-wrapper>
+								</NominalValue>
+							</IfcPropertySingleValue>
+							<IfcPropertySingleValue id="i283" Name="lenght" Description="">
+								<NominalValue>
+									<IfcLengthMeasure-wrapper>26</IfcLengthMeasure-wrapper>
+								</NominalValue>
+							</IfcPropertySingleValue>
+						</HasProperties>
+					</IfcPropertySet>
+				</HasPropertySets>
+			</IfcTypeProduct>
+			<IfcTypeProduct id="i284" GlobalId="2pKthc4lT5lxTijIi20bAT" Name="Brick Product variant #25" Description="Description of Brick Product variant #25" ApplicableOccurrence="IfcWall" Tag="25">
+				<HasPropertySets>
+					<IfcPropertySet id="i285" GlobalId="0b8e1jPg94Kh1FwIFCfzAQ" Name="" Description="">
+						<HasProperties>
+							<IfcPropertySingleValue id="i287" Name="zone" Description="">
+								<NominalValue>
+									<IfcLabel-wrapper>Lucania e Calabria</IfcLabel-wrapper>
+								</NominalValue>
+							</IfcPropertySingleValue>
+							<IfcPropertySingleValue id="i288" Name="height" Description="">
+								<NominalValue>
+									<IfcLengthMeasure-wrapper>6</IfcLengthMeasure-wrapper>
+								</NominalValue>
+							</IfcPropertySingleValue>
+							<IfcPropertySingleValue id="i289" Name="width" Description="">
+								<NominalValue>
+									<IfcLengthMeasure-wrapper>13</IfcLengthMeasure-wrapper>
+								</NominalValue>
+							</IfcPropertySingleValue>
+							<IfcPropertySingleValue id="i290" Name="lenght" Description="">
+								<NominalValue>
+									<IfcLengthMeasure-wrapper>26</IfcLengthMeasure-wrapper>
+								</NominalValue>
+							</IfcPropertySingleValue>
+						</HasProperties>
+					</IfcPropertySet>
+				</HasPropertySets>
+			</IfcTypeProduct>
+			<IfcTypeProduct id="i291" GlobalId="2ENnfFXbjEpvvD1hxP$PGP" Name="Brick Product variant #26" Description="Description of Brick Product variant #26" ApplicableOccurrence="IfcWall" Tag="26">
+				<HasPropertySets>
+					<IfcPropertySet id="i292" GlobalId="1WRuQLm7L6QgTAhyxjhFMs" Name="" Description="">
+						<HasProperties>
+							<IfcPropertySingleValue id="i294" Name="zone" Description="">
+								<NominalValue>
+									<IfcLabel-wrapper>Lucania e Calabria</IfcLabel-wrapper>
+								</NominalValue>
+							</IfcPropertySingleValue>
+							<IfcPropertySingleValue id="i295" Name="height" Description="">
+								<NominalValue>
+									<IfcLengthMeasure-wrapper>5.5</IfcLengthMeasure-wrapper>
+								</NominalValue>
+							</IfcPropertySingleValue>
+							<IfcPropertySingleValue id="i296" Name="width" Description="">
+								<NominalValue>
+									<IfcLengthMeasure-wrapper>12.8</IfcLengthMeasure-wrapper>
+								</NominalValue>
+							</IfcPropertySingleValue>
+							<IfcPropertySingleValue id="i297" Name="lenght" Description="">
+								<NominalValue>
+									<IfcLengthMeasure-wrapper>26</IfcLengthMeasure-wrapper>
+								</NominalValue>
+							</IfcPropertySingleValue>
+						</HasProperties>
+					</IfcPropertySet>
+				</HasPropertySets>
+			</IfcTypeProduct>
+			<IfcTypeProduct id="i298" GlobalId="17eDspdLbD4exLay6BKcFw" Name="Brick Product variant #27" Description="Description of Brick Product variant #27" ApplicableOccurrence="IfcWall" Tag="27">
+				<HasPropertySets>
+					<IfcPropertySet id="i299" GlobalId="00TPppd3f9FBcZCDiVHG6m" Name="" Description="">
+						<HasProperties>
+							<IfcPropertySingleValue id="i301" Name="zone" Description="">
+								<NominalValue>
+									<IfcLabel-wrapper>Sicilia</IfcLabel-wrapper>
+								</NominalValue>
+							</IfcPropertySingleValue>
+							<IfcPropertySingleValue id="i302" Name="height" Description="">
+								<NominalValue>
+									<IfcLengthMeasure-wrapper>6</IfcLengthMeasure-wrapper>
+								</NominalValue>
+							</IfcPropertySingleValue>
+							<IfcPropertySingleValue id="i303" Name="width" Description="">
+								<NominalValue>
+									<IfcLengthMeasure-wrapper>13</IfcLengthMeasure-wrapper>
+								</NominalValue>
+							</IfcPropertySingleValue>
+							<IfcPropertySingleValue id="i304" Name="lenght" Description="">
+								<NominalValue>
+									<IfcLengthMeasure-wrapper>26</IfcLengthMeasure-wrapper>
+								</NominalValue>
+							</IfcPropertySingleValue>
+						</HasProperties>
+					</IfcPropertySet>
+				</HasPropertySets>
+			</IfcTypeProduct>
+			<IfcTypeProduct id="i305" GlobalId="0rXG9qKSPCmh8L4IQy7jMf" Name="Brick Product variant #28" Description="Description of Brick Product variant #28" ApplicableOccurrence="IfcWall" Tag="28">
+				<HasPropertySets>
+					<IfcPropertySet id="i306" GlobalId="0jyoaNMa1BWA$Iv9g$lBHb" Name="" Description="">
+						<HasProperties>
+							<IfcPropertySingleValue id="i308" Name="zone" Description="">
+								<NominalValue>
+									<IfcLabel-wrapper>Sicilia</IfcLabel-wrapper>
+								</NominalValue>
+							</IfcPropertySingleValue>
+							<IfcPropertySingleValue id="i309" Name="height" Description="">
+								<NominalValue>
+									<IfcLengthMeasure-wrapper>5</IfcLengthMeasure-wrapper>
+								</NominalValue>
+							</IfcPropertySingleValue>
+							<IfcPropertySingleValue id="i310" Name="width" Description="">
+								<NominalValue>
+									<IfcLengthMeasure-wrapper>12</IfcLengthMeasure-wrapper>
+								</NominalValue>
+							</IfcPropertySingleValue>
+							<IfcPropertySingleValue id="i311" Name="lenght" Description="">
+								<NominalValue>
+									<IfcLengthMeasure-wrapper>25</IfcLengthMeasure-wrapper>
+								</NominalValue>
+							</IfcPropertySingleValue>
+						</HasProperties>
+					</IfcPropertySet>
+				</HasPropertySets>
+			</IfcTypeProduct>
+			<IfcTypeProduct id="i312" GlobalId="2tuax0G2r64xBxVDoBFTc6" Name="Brick Product variant #29" Description="Description of Brick Product variant #29" ApplicableOccurrence="IfcWall" Tag="29">
+				<HasPropertySets>
+					<IfcPropertySet id="i313" GlobalId="1WB99oWAT9GhG7wRWH7Vt2" Name="" Description="">
+						<HasProperties>
+							<IfcPropertySingleValue id="i315" Name="zone" Description="">
+								<NominalValue>
+									<IfcLabel-wrapper>Sardegna</IfcLabel-wrapper>
+								</NominalValue>
+							</IfcPropertySingleValue>
+							<IfcPropertySingleValue id="i316" Name="height" Description="">
+								<NominalValue>
+									<IfcLengthMeasure-wrapper>6</IfcLengthMeasure-wrapper>
+								</NominalValue>
+							</IfcPropertySingleValue>
+							<IfcPropertySingleValue id="i317" Name="width" Description="">
+								<NominalValue>
+									<IfcLengthMeasure-wrapper>12</IfcLengthMeasure-wrapper>
+								</NominalValue>
+							</IfcPropertySingleValue>
+							<IfcPropertySingleValue id="i318" Name="lenght" Description="">
+								<NominalValue>
+									<IfcLengthMeasure-wrapper>25</IfcLengthMeasure-wrapper>
+								</NominalValue>
+							</IfcPropertySingleValue>
+						</HasProperties>
+					</IfcPropertySet>
+				</HasPropertySets>
+			</IfcTypeProduct>
+			<IfcTypeProduct id="i319" GlobalId="3JT4BpNY538vL1f5eAcV3z" Name="Brick Product variant #30" Description="Description of Brick Product variant #30" ApplicableOccurrence="IfcWall" Tag="30">
+				<HasPropertySets>
+					<IfcPropertySet id="i320" GlobalId="284CfjxcL8m88oMT36LKHb" Name="" Description="">
+						<HasProperties>
+							<IfcPropertySingleValue id="i322" Name="zone" Description="">
+								<NominalValue>
+									<IfcLabel-wrapper>Sardegna</IfcLabel-wrapper>
+								</NominalValue>
+							</IfcPropertySingleValue>
+							<IfcPropertySingleValue id="i323" Name="height" Description="">
+								<NominalValue>
+									<IfcLengthMeasure-wrapper>5</IfcLengthMeasure-wrapper>
+								</NominalValue>
+							</IfcPropertySingleValue>
+							<IfcPropertySingleValue id="i324" Name="width" Description="">
+								<NominalValue>
+									<IfcLengthMeasure-wrapper>12</IfcLengthMeasure-wrapper>
+								</NominalValue>
+							</IfcPropertySingleValue>
+							<IfcPropertySingleValue id="i325" Name="lenght" Description="">
+								<NominalValue>
+									<IfcLengthMeasure-wrapper>24</IfcLengthMeasure-wrapper>
+								</NominalValue>
+							</IfcPropertySingleValue>
+						</HasProperties>
+					</IfcPropertySet>
+				</HasPropertySets>
+			</IfcTypeProduct>
+		</RelatedDefinitions>
+	</IfcRelDeclares>
+	<IfcRelDefinesByTemplate id="i118">
+		<RelatedPropertySets>
+			<IfcPropertySet xsi:nil="true" ref="i117"/>
+		</RelatedPropertySets>
+		<RelatingTemplate xsi:nil="true" ref="i105"/>
+	</IfcRelDefinesByTemplate>
+	<IfcRelDefinesByTemplate id="i125">
+		<RelatedPropertySets>
+			<IfcPropertySet xsi:nil="true" ref="i124"/>
+		</RelatedPropertySets>
+		<RelatingTemplate xsi:nil="true" ref="i105"/>
+	</IfcRelDefinesByTemplate>
+	<IfcRelDefinesByTemplate id="i132">
+		<RelatedPropertySets>
+			<IfcPropertySet xsi:nil="true" ref="i131"/>
+		</RelatedPropertySets>
+		<RelatingTemplate xsi:nil="true" ref="i105"/>
+	</IfcRelDefinesByTemplate>
+	<IfcRelDefinesByTemplate id="i139">
+		<RelatedPropertySets>
+			<IfcPropertySet xsi:nil="true" ref="i138"/>
+		</RelatedPropertySets>
+		<RelatingTemplate xsi:nil="true" ref="i105"/>
+	</IfcRelDefinesByTemplate>
+	<IfcRelDefinesByTemplate id="i146">
+		<RelatedPropertySets>
+			<IfcPropertySet xsi:nil="true" ref="i145"/>
+		</RelatedPropertySets>
+		<RelatingTemplate xsi:nil="true" ref="i105"/>
+	</IfcRelDefinesByTemplate>
+	<IfcRelDefinesByTemplate id="i153">
+		<RelatedPropertySets>
+			<IfcPropertySet xsi:nil="true" ref="i152"/>
+		</RelatedPropertySets>
+		<RelatingTemplate xsi:nil="true" ref="i105"/>
+	</IfcRelDefinesByTemplate>
+	<IfcRelDefinesByTemplate id="i160">
+		<RelatedPropertySets>
+			<IfcPropertySet xsi:nil="true" ref="i159"/>
+		</RelatedPropertySets>
+		<RelatingTemplate xsi:nil="true" ref="i105"/>
+	</IfcRelDefinesByTemplate>
+	<IfcRelDefinesByTemplate id="i167">
+		<RelatedPropertySets>
+			<IfcPropertySet xsi:nil="true" ref="i166"/>
+		</RelatedPropertySets>
+		<RelatingTemplate xsi:nil="true" ref="i105"/>
+	</IfcRelDefinesByTemplate>
+	<IfcRelDefinesByTemplate id="i174">
+		<RelatedPropertySets>
+			<IfcPropertySet xsi:nil="true" ref="i173"/>
+		</RelatedPropertySets>
+		<RelatingTemplate xsi:nil="true" ref="i105"/>
+	</IfcRelDefinesByTemplate>
+	<IfcRelDefinesByTemplate id="i181">
+		<RelatedPropertySets>
+			<IfcPropertySet xsi:nil="true" ref="i180"/>
+		</RelatedPropertySets>
+		<RelatingTemplate xsi:nil="true" ref="i105"/>
+	</IfcRelDefinesByTemplate>
+	<IfcRelDefinesByTemplate id="i188">
+		<RelatedPropertySets>
+			<IfcPropertySet xsi:nil="true" ref="i187"/>
+		</RelatedPropertySets>
+		<RelatingTemplate xsi:nil="true" ref="i105"/>
+	</IfcRelDefinesByTemplate>
+	<IfcRelDefinesByTemplate id="i195">
+		<RelatedPropertySets>
+			<IfcPropertySet xsi:nil="true" ref="i194"/>
+		</RelatedPropertySets>
+		<RelatingTemplate xsi:nil="true" ref="i105"/>
+	</IfcRelDefinesByTemplate>
+	<IfcRelDefinesByTemplate id="i202">
+		<RelatedPropertySets>
+			<IfcPropertySet xsi:nil="true" ref="i201"/>
+		</RelatedPropertySets>
+		<RelatingTemplate xsi:nil="true" ref="i105"/>
+	</IfcRelDefinesByTemplate>
+	<IfcRelDefinesByTemplate id="i209">
+		<RelatedPropertySets>
+			<IfcPropertySet xsi:nil="true" ref="i208"/>
+		</RelatedPropertySets>
+		<RelatingTemplate xsi:nil="true" ref="i105"/>
+	</IfcRelDefinesByTemplate>
+	<IfcRelDefinesByTemplate id="i216">
+		<RelatedPropertySets>
+			<IfcPropertySet xsi:nil="true" ref="i215"/>
+		</RelatedPropertySets>
+		<RelatingTemplate xsi:nil="true" ref="i105"/>
+	</IfcRelDefinesByTemplate>
+	<IfcRelDefinesByTemplate id="i223">
+		<RelatedPropertySets>
+			<IfcPropertySet xsi:nil="true" ref="i222"/>
+		</RelatedPropertySets>
+		<RelatingTemplate xsi:nil="true" ref="i105"/>
+	</IfcRelDefinesByTemplate>
+	<IfcRelDefinesByTemplate id="i230">
+		<RelatedPropertySets>
+			<IfcPropertySet xsi:nil="true" ref="i229"/>
+		</RelatedPropertySets>
+		<RelatingTemplate xsi:nil="true" ref="i105"/>
+	</IfcRelDefinesByTemplate>
+	<IfcRelDefinesByTemplate id="i237">
+		<RelatedPropertySets>
+			<IfcPropertySet xsi:nil="true" ref="i236"/>
+		</RelatedPropertySets>
+		<RelatingTemplate xsi:nil="true" ref="i105"/>
+	</IfcRelDefinesByTemplate>
+	<IfcRelDefinesByTemplate id="i244">
+		<RelatedPropertySets>
+			<IfcPropertySet xsi:nil="true" ref="i243"/>
+		</RelatedPropertySets>
+		<RelatingTemplate xsi:nil="true" ref="i105"/>
+	</IfcRelDefinesByTemplate>
+	<IfcRelDefinesByTemplate id="i251">
+		<RelatedPropertySets>
+			<IfcPropertySet xsi:nil="true" ref="i250"/>
+		</RelatedPropertySets>
+		<RelatingTemplate xsi:nil="true" ref="i105"/>
+	</IfcRelDefinesByTemplate>
+	<IfcRelDefinesByTemplate id="i258">
+		<RelatedPropertySets>
+			<IfcPropertySet xsi:nil="true" ref="i257"/>
+		</RelatedPropertySets>
+		<RelatingTemplate xsi:nil="true" ref="i105"/>
+	</IfcRelDefinesByTemplate>
+	<IfcRelDefinesByTemplate id="i265">
+		<RelatedPropertySets>
+			<IfcPropertySet xsi:nil="true" ref="i264"/>
+		</RelatedPropertySets>
+		<RelatingTemplate xsi:nil="true" ref="i105"/>
+	</IfcRelDefinesByTemplate>
+	<IfcRelDefinesByTemplate id="i272">
+		<RelatedPropertySets>
+			<IfcPropertySet xsi:nil="true" ref="i271"/>
+		</RelatedPropertySets>
+		<RelatingTemplate xsi:nil="true" ref="i105"/>
+	</IfcRelDefinesByTemplate>
+	<IfcRelDefinesByTemplate id="i279">
+		<RelatedPropertySets>
+			<IfcPropertySet xsi:nil="true" ref="i278"/>
+		</RelatedPropertySets>
+		<RelatingTemplate xsi:nil="true" ref="i105"/>
+	</IfcRelDefinesByTemplate>
+	<IfcRelDefinesByTemplate id="i286">
+		<RelatedPropertySets>
+			<IfcPropertySet xsi:nil="true" ref="i285"/>
+		</RelatedPropertySets>
+		<RelatingTemplate xsi:nil="true" ref="i105"/>
+	</IfcRelDefinesByTemplate>
+	<IfcRelDefinesByTemplate id="i293">
+		<RelatedPropertySets>
+			<IfcPropertySet xsi:nil="true" ref="i292"/>
+		</RelatedPropertySets>
+		<RelatingTemplate xsi:nil="true" ref="i105"/>
+	</IfcRelDefinesByTemplate>
+	<IfcRelDefinesByTemplate id="i300">
+		<RelatedPropertySets>
+			<IfcPropertySet xsi:nil="true" ref="i299"/>
+		</RelatedPropertySets>
+		<RelatingTemplate xsi:nil="true" ref="i105"/>
+	</IfcRelDefinesByTemplate>
+	<IfcRelDefinesByTemplate id="i307">
+		<RelatedPropertySets>
+			<IfcPropertySet xsi:nil="true" ref="i306"/>
+		</RelatedPropertySets>
+		<RelatingTemplate xsi:nil="true" ref="i105"/>
+	</IfcRelDefinesByTemplate>
+	<IfcRelDefinesByTemplate id="i314">
+		<RelatedPropertySets>
+			<IfcPropertySet xsi:nil="true" ref="i313"/>
+		</RelatedPropertySets>
+		<RelatingTemplate xsi:nil="true" ref="i105"/>
+	</IfcRelDefinesByTemplate>
+	<IfcRelDefinesByTemplate id="i321">
+		<RelatedPropertySets>
+			<IfcPropertySet xsi:nil="true" ref="i320"/>
+		</RelatedPropertySets>
+		<RelatingTemplate xsi:nil="true" ref="i105"/>
+	</IfcRelDefinesByTemplate>
+</ifcXML>
