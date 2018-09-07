@@ -1,5 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<ifcXML xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.buildingsmart-tech.org/ifcXML/IFC4/Add2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.buildingsmart-tech.org/ifcXML/IFC4/Add2 http://www.buildingsmart-tech.org/ifc/IFC4/Add2/IFC4_ADD2.xsd">
+<ifcXML xmlns:xlink="http://www.w3.org/1999/xlink" 
+		xmlns="http://www.buildingsmart-tech.org/ifcXML/IFC4/Add2" 
+		xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+		xsi:schemaLocation="http://www.buildingsmart-tech.org/ifcXML/IFC4/Add2 http://www.buildingsmart-tech.org/ifc/IFC4/Add2/IFC4_ADD2.xsd">
 	<header>
 		<name>IFC Parametric Product Type Example</name>
 		<author>Tim Chipman</author>
@@ -221,7 +224,7 @@
 						</IfcTable>
 					</DataValue>
 				</IfcMetric>
-				<IfcMetric Name="Article">
+				<IfcMetric Name="Article" Description="table with values for all configuration samples. The property 'article' keeps the individual 'Stock Keeping Unit' (SKU). For each product and each product variant is given a unique number with which it can be assigned." ValueSource="Ikea catalogue">
 					<DataValue>
 						<IfcTable>
 							<Rows>
@@ -353,7 +356,11 @@
 							</Components>
 						</IfcAppliedValue>
 					</DataValue>
-					<ReferencePath TypeIdentifier="RepresentationMap.MappedRepresentation['Body'].Items[3].XLength"/>
+					<ReferencePath TypeIdentifier="RepresentationMap" AttributeIdentifier="MappedRepresentation['Body']">
+						<InnerReference AttributeIdentifier="Items[3]">
+							<InnerReference AttributeIdentifier="XLength"/>
+						</InnerReference>										
+					</ReferencePath>	
 				</IfcMetric>
 				<IfcMetric Name="Parametric calculation of geometry Top front beam" Description="LengthX=Size-0.75">
 					<DataValue>
@@ -361,7 +368,11 @@
 							<Components>
 								<IfcAppliedValue>
 									<AppliedValue>
-										<IfcReference TypeIdentifier="RepresentationMaps.MappedRepresentation['BoundingBox'].Items[1].XDim"/>
+										<IfcReference TypeIdentifier="RepresentationMaps" AttributeIdentifier="MappedRepresentation['BoundingBox']">
+											<InnerReference AttributeIdentifier="Items[1]">
+												<InnerReference AttributeIdentifier="XDim"/>	
+											</InnerReference>									
+										</IfcReference>
 									</AppliedValue>
 								</IfcAppliedValue>
 								<IfcAppliedValue>
@@ -372,7 +383,11 @@
 							</Components>
 						</IfcAppliedValue>
 					</DataValue>
-					<ReferencePath TypeIdentifier="RepresentationMap.MappedRepresentation[‘Body’].Items[4].XLength"/>
+					<ReferencePath TypeIdentifier="RepresentationMap" AttributeIdentifier="MappedRepresentation['Body']">
+						<InnerReference AttributeIdentifier="Items[4]">
+							<InnerReference AttributeIdentifier="XLength"/>
+						</InnerReference>										
+					</ReferencePath>					
 				</IfcMetric>
 				<IfcMetric Name="Parametric calculation of geometry Top back beam" Description="LengthX=Size-0.75">
 					<DataValue>
@@ -380,7 +395,11 @@
 							<Components>
 								<IfcAppliedValue>
 									<AppliedValue>
-										<IfcReference TypeIdentifier="RepresentationMaps.MappedRepresentation['BoundingBox'].Items[1].XDim"/>
+										<IfcReference TypeIdentifier="RepresentationMaps" AttributeIdentifier="MappedRepresentation['BoundingBox']">
+											<InnerReference AttributeIdentifier="Items[1]">
+												<InnerReference AttributeIdentifier="XDim"/>
+											</InnerReference>
+										</IfcReference>
 									</AppliedValue>
 								</IfcAppliedValue>
 								<IfcAppliedValue>
@@ -391,7 +410,11 @@
 							</Components>
 						</IfcAppliedValue>
 					</DataValue>
-					<ReferencePath TypeIdentifier="RepresentationMap.MappedRepresentation[‘Body’].Items[5].XLength"/>
+					<ReferencePath TypeIdentifier="RepresentationMap" AttributeIdentifier="MappedRepresentation['Body']">
+						<InnerReference AttributeIdentifier="Items[5]">
+							<InnerReference AttributeIdentifier="XLength"/>
+						</InnerReference>										
+					</ReferencePath>
 				</IfcMetric>
 				<IfcMetric Name="Parametric calculation of geometry Back covering" Description="LengthX=Size">
 					<DataValue>
@@ -399,13 +422,21 @@
 							<Components>
 								<IfcAppliedValue>
 									<AppliedValue>
-										<IfcReference TypeIdentifier="RepresentationMaps.MappedRepresentation['BoundingBox'].Items[1].XDim"/>
+										<IfcReference TypeIdentifier="RepresentationMaps" AttributeIdentifier="MappedRepresentation['BoundingBox']">
+											<InnerReference AttributeIdentifier="Items[1]">
+												<InnerReference AttributeIdentifier="XDim"/>
+											</InnerReference>										
+										</IfcReference>
 									</AppliedValue>
 								</IfcAppliedValue>
 							</Components>
 						</IfcAppliedValue>
 					</DataValue>
-					<ReferencePath TypeIdentifier="RepresentationMap.MappedRepresentation[‘Body’].Items[6].XLength"/>
+					<ReferencePath TypeIdentifier="RepresentationMap" AttributeIdentifier="MappedRepresentation['Body']">
+						<InnerReference AttributeIdentifier="Items[6]">
+							<InnerReference AttributeIdentifier="XLength"/>
+						</InnerReference>										
+					</ReferencePath>
 				</IfcMetric>
 			</BenchmarkValues>
 		</RelatingConstraint>
