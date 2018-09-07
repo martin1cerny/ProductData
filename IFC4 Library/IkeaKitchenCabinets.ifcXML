@@ -104,12 +104,6 @@
 							<Rows>
 								<IfcTableRow>
 									<RowCells>
-										<IfcIdentifier-wrapper>Size</IfcIdentifier-wrapper>
-										<IfcIdentifier-wrapper id="i99">Length</IfcIdentifier-wrapper>
-									</RowCells>
-								</IfcTableRow>
-								<IfcTableRow>
-									<RowCells>
 										<IfcLabel-wrapper>12</IfcLabel-wrapper>
 										<IfcPositiveLengthMeasure-wrapper>11.875</IfcPositiveLengthMeasure-wrapper>
 									</RowCells>
@@ -160,10 +154,13 @@
 							<Columns>
 								<IfcTableColumn Name="Size" Identifier="FrameSize"/>
 								<IfcTableColumn Name="Length">
+									<Unit>
+										<IfcSIUnit Name="metre" Prefix="milli" UnitType="lengthunit"/>
+									</Unit>
 									<ReferencePath TypeIdentifier="IfcSystemFurnitureElementType" AttributeIdentifier="RepresentationMaps" InstanceName="AKURUM" ListPositions="">
 										<InnerReference TypeIdentifier="IfcRepresentationMap" AttributeIdentifier="MappedRepresentation" InstanceName="" ListPositions="">
 											<InnerReference TypeIdentifier="IfcShapeRepresentation" AttributeIdentifier="Items" InstanceName="" ListPositions="1">
-												<InnerReference TypeIdentifier="“IfcBlock”" AttributeIdentifier="XLength" InstanceName="" ListPositions="">
+												<InnerReference TypeIdentifier="IfcBlock" AttributeIdentifier="XLength" InstanceName="" ListPositions="">
 													<InnerReference TypeIdentifier="IfcPositiveLengthMeasure" AttributeIdentifier="" InstanceName="" ListPositions=""/>
 												</InnerReference>
 											</InnerReference>
@@ -174,14 +171,107 @@
 						</IfcTable>
 					</DataValue>
 				</IfcMetric>
+				<IfcMetric Name="Color">
+					<DataValue>
+						<IfcTable>
+							<Rows>
+								<IfcTableRow>
+									<RowCells>
+										<IfcIdentifier-wrapper>white</IfcIdentifier-wrapper>
+										<IfcText-wrapper>http://www.ikea.com/us/en/images/products/perfekt-cover-panel-for-basecabinet__0084008_PE210282_S4.JPG</IfcText-wrapper>
+									</RowCells>
+								</IfcTableRow>
+								<IfcTableRow>
+									<RowCells>
+										<IfcIdentifier-wrapper>birch effect</IfcIdentifier-wrapper>
+										<IfcText-wrapper>http://www.ikea.com/us/en/images/products/perfekt-orsa-cover-panel-forbase-cabinet__0183273_PE334435_S4.JPG</IfcText-wrapper>
+									</RowCells>
+								</IfcTableRow>
+							</Rows>
+							<Columns>
+								<IfcTableColumn Name="Color" Identifier="FrameColor"/>
+								<IfcTableColumn Name="Texture">
+									<ReferencePath TypeIdentifier="IfcRepresentationMap" AttributeIdentifier="MappedRepresentation" InstanceName="Body" ListPositions="">
+										<InnerReference TypeIdentifier="StyledByItem" AttributeIdentifier="Styles" InstanceName="" ListPositions="">
+											<InnerReference TypeIdentifier="IfcSurfaceStyle" AttributeIdentifier="Styles" InstanceName="" ListPositions="">
+												<InnerReference TypeIdentifier="IfcSurfaceStyleWithTextures" AttributeIdentifier="XLength" InstanceName="" ListPositions=""/>
+											</InnerReference>
+										</InnerReference>
+									</ReferencePath>
+								</IfcTableColumn>
+							</Columns>
+						</IfcTable>
+					</DataValue>
+				</IfcMetric>
+				<IfcMetric Name="Article">
+					<DataValue>
+						<IfcTable>
+							<Rows>
+								<IfcTableRow>
+									<RowCells>
+										<IfcLabel-wrapper>543.817.10</IfcLabel-wrapper>
+										<IfcLabel-wrapper>white</IfcLabel-wrapper>
+										<IfcPositiveLengthMeasure-wrapper>12</IfcPositiveLengthMeasure-wrapper>
+										<IfcMonetaryMeasure-wrapper>28</IfcMonetaryMeasure-wrapper>
+										<IfcText-wrapper>http://www.ikea.com/us/en/images/products/akurum-base-cabinet-frame__35804_PE126721_S4.jpg</IfcText-wrapper>
+									</RowCells>
+								</IfcTableRow>
+							</Rows>
+							<Columns>
+								<IfcTableColumn Name="Article"/>
+								<IfcTableColumn Name="Color" Identifier="FrameColor"/>
+								<IfcTableColumn Name="Size" Identifier="FrameSize"/>
+								<IfcTableColumn Name="Price">
+									<ReferencePath TypeIdentifier="Types[*]" AttributeIdentifier="RelatedObjects[*]">
+										<InnerReference TypeIdentifier="IfcProduct.HasAssignments" AttributeIdentifier="HasAssignments">
+											<InnerReference TypeIdentifier="IfcRelAssignsToControl" AttributeIdentifier="RelatingControl">
+												<InnerReference TypeIdentifier="IfcCostItem" AttributeIdentifier="CostValues['MSRP']" InstanceName="AppliedValue">
+													<InnerReference AttributeIdentifier="IfcMonetaryMeasure"/>
+												</InnerReference>
+											</InnerReference>
+										</InnerReference>
+									</ReferencePath>
+								</IfcTableColumn>
+								<IfcTableColumn Name="Image">
+									<ReferencePath TypeIdentifier="Types[*]" AttributeIdentifier="RelatedObjects[*]" InstanceName="HasAssociations['Icon']">
+										<InnerReference TypeIdentifier="IfcRelAssociatesDocument" AttributeIdentifier="RelatingDocument">
+											<InnerReference TypeIdentifier="IfcDocumentInformation" AttributeIdentifier="Location">
+												<InnerReference AttributeIdentifier="IfcUriReference"/>
+											</InnerReference>
+										</InnerReference>
+									</ReferencePath>
+								</IfcTableColumn>
+							</Columns>
+						</IfcTable>
+					</DataValue>
+					<ReferencePath AttributeIdentifier="Tag"/>
+				</IfcMetric>
 			</BenchmarkValues>
 		</RelatingConstraint>
 	</IfcRelAssociatesConstraint>
-	<IfcProject id="p1" Name="MyProject" LongName=" ">
-		<Declares>
-			<!--My Request starts here-->
-			<!--My Request stops here-->
-		</Declares>
-	</IfcProject>
-	<!--My Expression of the list of bricks in Italy-->
+	<IfcProject id="p1" Name="MyProject" LongName=" "/>
+	<IfcRelAssociatesConstraint>
+		<RelatedObjects>
+			<IfcSystemFurnitureElement Name="BaseCabinetFrame1"/>
+		</RelatedObjects>
+		<RelatingConstraint xsi:type="IfcObjective" Name="Parameters" ObjectiveQualifier="parameter">
+			<BenchmarkValues>
+				<IfcMetric Name="Article">
+					<DataValue>
+						<IfcIdentifier-wrapper>743.821.10</IfcIdentifier-wrapper>
+					</DataValue>
+				</IfcMetric>
+				<IfcMetric Name="Size">
+					<DataValue>
+						<IfcPositiveLengthMeasure-wrapper>24</IfcPositiveLengthMeasure-wrapper>
+					</DataValue>
+				</IfcMetric>
+				<IfcMetric Name="Color">
+					<DataValue>
+						<IfcLabel-wrapper>white</IfcLabel-wrapper>
+					</DataValue>
+				</IfcMetric>
+			</BenchmarkValues>
+		</RelatingConstraint>
+	</IfcRelAssociatesConstraint>
 </ifcXML>
