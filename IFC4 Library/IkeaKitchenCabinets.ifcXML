@@ -10,16 +10,19 @@
 		<documentation>https://github.com/buildingSMART/ProductData/tree/master/IFC4%20Library</documentation>
 	</header>
 	<!--Define Property Templates, e.g. from a dictionary server-->
-	<IfcProjectLibrary id="myLib1" Name="Armalater brick Set Property Templates" Description="">
+	<IfcProjectLibrary id="templateLib" Name="Template library for a IFC parametric product type library" Description="">
 		<Declares>
 			<IfcRelDeclares>
 				<RelatedDefinitions>
-					<IfcTypeProduct id="Tid_ProductType1" Name="Armalater Brick 1" Description="Description of an Armalater Brick 1"/>
+					<IfcTypeProduct id="Tid_ProductType1" Name="cabinet" Description="Description of a cabinet"/>
 					<IfcPropertySetTemplate Name="geometic data" id="id_pset1_template">
 						<HasPropertyTemplates>
 							<IfcComplexPropertyTemplate GlobalId="1DbshTzGD71ejuZQqQcxab" Name="dimension" id="Tid_cp0">
 								<HasPropertyTemplates>
-									<IfcSimplePropertyTemplate id="id_propt_Description" GlobalId="1DbshTzGD71eOuZQqQcxan" Name="description" Description="" TemplateType="p_singlevalue" PrimaryMeasureType="IfcText"/>
+									<IfcSimplePropertyTemplate id="id_propt_a_" GlobalId="1DbshTzGD71eOuZQqQcxan" Name="article" Description="SKU" TemplateType="p_singlevalue" PrimaryMeasureType="IfcLabel"/>
+									<IfcSimplePropertyTemplate id="id_propt_c_" GlobalId="1DbshTzGD71eOuZQqQcxan" Name="color" Description="" TemplateType="p_singlevalue" PrimaryMeasureType="IfcLabel"/>
+									<IfcSimplePropertyTemplate id="id_propt_s_" GlobalId="1DbshTzGD71eOuZQqQcxan" Name="size" Description="" TemplateType="p_singlevalue" PrimaryMeasureType="IfcLabel"/>
+									<IfcSimplePropertyTemplate id="id_propt_p_" GlobalId="1DbshTzGD71eOuZQqQcxan" Name="prize" Description="" TemplateType="p_singlevalue" PrimaryMeasureType="IfcLabel"/>
 									<IfcSimplePropertyTemplate id="id_propt_l" GlobalId="1DbshTzGD71ejuZQqQcxan" Name="lenght" Description="" TemplateType="p_singlevalue" PrimaryMeasureType="IfcReal"/>
 									<IfcSimplePropertyTemplate id="id_propt_w" GlobalId="1DbshTzGD71ejuZQqQcxao" Name="width" Description="" TemplateType="p_singlevalue" PrimaryMeasureType="IfcReal"/>
 									<IfcSimplePropertyTemplate id="id_propt_h" GlobalId="1DbshTzGD71ejuZQqQcxap" Name="height" Description="" TemplateType="p_singlevalue" PrimaryMeasureType="IfcReal"/>
@@ -32,7 +35,7 @@
 		</Declares>
 	</IfcProjectLibrary>
 	<!--List with products-->
-	<IfcProjectLibrary id="lib1" GlobalId="1DbztTzGD71ejuZQqQcxab" Name="Brick product date (real life data)" LongName="" Description="" Phase="">
+	<IfcProjectLibrary id="typeLib" GlobalId="1DbztTzGD71ejuZQqQcxab" Name="IFC parametric product type library" LongName="" Description="" Phase="">
 		<Declares>
 			<IfcRelDeclares>
 				<RelatedDefinitions>
