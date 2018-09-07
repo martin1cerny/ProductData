@@ -1,0 +1,187 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ifcXML xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.buildingsmart-tech.org/ifcXML/IFC4/Add2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.buildingsmart-tech.org/ifcXML/IFC4/Add2 http://www.buildingsmart-tech.org/ifc/IFC4/Add2/IFC4_ADD2.xsd">
+	<header>
+		<name>IFC Parametric Product Type Example</name>
+		<author>Tim Chipman</author>
+		<organization>Constructivity</organization>
+		<preprocessor_version/>
+		<originating_system/>
+		<authorization/>
+		<documentation>https://github.com/buildingSMART/ProductData/tree/master/IFC4%20Library</documentation>
+	</header>
+	<!--Define Property Templates, e.g. from a dictionary server-->
+	<IfcProjectLibrary id="myLib1" Name="Armalater brick Set Property Templates" Description="">
+		<Declares>
+			<IfcRelDeclares>
+				<RelatedDefinitions>
+					<IfcTypeProduct id="Tid_ProductType1" Name="Armalater Brick 1" Description="Description of an Armalater Brick 1"/>
+					<IfcPropertySetTemplate Name="geometic data" id="id_pset1_template">
+						<HasPropertyTemplates>
+							<IfcComplexPropertyTemplate GlobalId="1DbshTzGD71ejuZQqQcxab" Name="dimension" id="Tid_cp0">
+								<HasPropertyTemplates>
+									<IfcSimplePropertyTemplate id="id_propt_Description" GlobalId="1DbshTzGD71eOuZQqQcxan" Name="description" Description="" TemplateType="p_singlevalue" PrimaryMeasureType="IfcText"/>
+									<IfcSimplePropertyTemplate id="id_propt_l" GlobalId="1DbshTzGD71ejuZQqQcxan" Name="lenght" Description="" TemplateType="p_singlevalue" PrimaryMeasureType="IfcReal"/>
+									<IfcSimplePropertyTemplate id="id_propt_w" GlobalId="1DbshTzGD71ejuZQqQcxao" Name="width" Description="" TemplateType="p_singlevalue" PrimaryMeasureType="IfcReal"/>
+									<IfcSimplePropertyTemplate id="id_propt_h" GlobalId="1DbshTzGD71ejuZQqQcxap" Name="height" Description="" TemplateType="p_singlevalue" PrimaryMeasureType="IfcReal"/>
+								</HasPropertyTemplates>
+							</IfcComplexPropertyTemplate>
+						</HasPropertyTemplates>
+					</IfcPropertySetTemplate>
+				</RelatedDefinitions>
+			</IfcRelDeclares>
+		</Declares>
+	</IfcProjectLibrary>
+	<!--List with products-->
+	<IfcProjectLibrary id="lib1" GlobalId="1DbztTzGD71ejuZQqQcxab" Name="Brick product date (real life data)" LongName="" Description="" Phase="">
+		<Declares>
+			<IfcRelDeclares>
+				<RelatedDefinitions>
+					<IfcSystemFurnitureElementType id="i01" GlobalId="1DbztTzGD71ejuZQqQcxah" Name="AKURUM" Description="Base cabinet frame">
+						<RepresentationMaps>
+							<IfcRepresentationMap>
+								<MappingOrigin>
+									<IfcAxis2Placement2D>
+										<Location/>
+									</IfcAxis2Placement2D>
+								</MappingOrigin>
+								<MappedRepresentation xsi:type="IfcShapeRepresentation" RepresentationIdentifier="Body" RepresentationType="CSG">
+									<ContextOfItems xsi:type="IfcGeometricRepresentationContext"/>
+									<Items>
+										<IfcBlock XLength="0.75" YLength="24.125" ZLength="30.375">
+											<!-- Left plate -->
+											<Position xsi:type="IfcAxis2Placement3D">
+												<Location xsi:type="IfcCartesianPoint" Coordinates="0 0 0"/>
+											</Position>
+										</IfcBlock>
+										<IfcBlock XLength="0.75" YLength="24.125" ZLength="30.375">
+											<!-- Right plate -->
+											<Position xsi:type="IfcAxis2Placement3D">
+												<Location xsi:type="IfcCartesianPoint" Coordinates="11.25 0 0"/>
+											</Position>
+										</IfcBlock>
+										<IfcBlock XLength="22.5" YLength="24.125" ZLength="0.75">
+											<!-- Bottom plate -->
+											<Position xsi:type="IfcAxis2Placement3D">
+												<Location xsi:type="IfcCartesianPoint" Coordinates="0.75 0 0"/>
+											</Position>
+										</IfcBlock>
+										<IfcBlock XLength="22.5" YLength="3" ZLength="0.75">
+											<!-- Top front beam -->
+											<Position xsi:type="IfcAxis2Placement3D">
+												<Location xsi:type="IfcCartesianPoint" Coordinates="0.75 0 29.625"/>
+											</Position>
+										</IfcBlock>
+										<IfcBlock XLength="22.5" YLength="3" ZLength="0.75">
+											<!-- Top back beam -->
+											<Position xsi:type="IfcAxis2Placement3D">
+												<Location xsi:type="IfcCartesianPoint" Coordinates="0.75 0 29.625"/>
+											</Position>
+										</IfcBlock>
+										<IfcBlock XLength="24" YLength="0.125" ZLength="30.375">
+											<!-- Back covering -->
+											<Position xsi:type="IfcAxis2Placement3D">
+												<Location xsi:type="IfcCartesianPoint" Coordinates="0 0 0"/>
+											</Position>
+										</IfcBlock>
+									</Items>
+								</MappedRepresentation>
+							</IfcRepresentationMap>
+						</RepresentationMaps>
+					</IfcSystemFurnitureElementType>
+				</RelatedDefinitions>
+			</IfcRelDeclares>
+		</Declares>
+	</IfcProjectLibrary>
+	<IfcRelAssociatesConstraint>
+		<RelatedObjects>
+			<IfcSystemFurnitureElementType ref="i01"/>
+		</RelatedObjects>
+		<RelatingConstraint xsi:type="IfcObjective" Name="Parameters" ObjectiveQualifier="parameter" LogicalAggregator="logicaland">
+			<BenchmarkValues>
+				<IfcMetric Name="Size">
+					<DataValue>
+						<IfcTable>
+							<Rows>
+								<IfcTableRow>
+									<RowCells>
+										<IfcIdentifier-wrapper>Size</IfcIdentifier-wrapper>
+										<IfcIdentifier-wrapper id="i99">Length</IfcIdentifier-wrapper>
+									</RowCells>
+								</IfcTableRow>
+								<IfcTableRow>
+									<RowCells>
+										<IfcLabel-wrapper>12</IfcLabel-wrapper>
+										<IfcPositiveLengthMeasure-wrapper>11.875</IfcPositiveLengthMeasure-wrapper>
+									</RowCells>
+								</IfcTableRow>
+								<IfcTableRow>
+									<RowCells>
+										<IfcLabel-wrapper>12</IfcLabel-wrapper>
+										<IfcPositiveLengthMeasure-wrapper>11.875</IfcPositiveLengthMeasure-wrapper>
+									</RowCells>
+								</IfcTableRow>
+								<IfcTableRow>
+									<RowCells>
+										<IfcLabel-wrapper>15</IfcLabel-wrapper>
+										<IfcPositiveLengthMeasure-wrapper>14.875</IfcPositiveLengthMeasure-wrapper>
+									</RowCells>
+								</IfcTableRow>
+								<IfcTableRow>
+									<RowCells>
+										<IfcLabel-wrapper>18</IfcLabel-wrapper>
+										<IfcPositiveLengthMeasure-wrapper>17.875</IfcPositiveLengthMeasure-wrapper>
+									</RowCells>
+								</IfcTableRow>
+								<IfcTableRow>
+									<RowCells>
+										<IfcLabel-wrapper>21</IfcLabel-wrapper>
+										<IfcPositiveLengthMeasure-wrapper>20.875</IfcPositiveLengthMeasure-wrapper>
+									</RowCells>
+								</IfcTableRow>
+								<IfcTableRow>
+									<RowCells>
+										<IfcLabel-wrapper>24</IfcLabel-wrapper>
+										<IfcPositiveLengthMeasure-wrapper>23.875</IfcPositiveLengthMeasure-wrapper>
+									</RowCells>
+								</IfcTableRow>
+								<IfcTableRow>
+									<RowCells>
+										<IfcLabel-wrapper>30</IfcLabel-wrapper>
+										<IfcPositiveLengthMeasure-wrapper>29.875</IfcPositiveLengthMeasure-wrapper>
+									</RowCells>
+								</IfcTableRow>
+								<IfcTableRow>
+									<RowCells>
+										<IfcLabel-wrapper>36</IfcLabel-wrapper>
+										<IfcPositiveLengthMeasure-wrapper>35.875</IfcPositiveLengthMeasure-wrapper>
+									</RowCells>
+								</IfcTableRow>
+							</Rows>
+							<Columns>
+								<IfcTableColumn Name="Size" Identifier="FrameSize"/>
+								<IfcTableColumn Name="Length">
+									<ReferencePath TypeIdentifier="IfcSystemFurnitureElementType" AttributeIdentifier="RepresentationMaps" InstanceName="AKURUM" ListPositions="">
+										<InnerReference TypeIdentifier="IfcRepresentationMap" AttributeIdentifier="MappedRepresentation" InstanceName="" ListPositions="">
+											<InnerReference TypeIdentifier="IfcShapeRepresentation" AttributeIdentifier="Items" InstanceName="" ListPositions="1">
+												<InnerReference TypeIdentifier="“IfcBlock”" AttributeIdentifier="XLength" InstanceName="" ListPositions="">
+													<InnerReference TypeIdentifier="IfcPositiveLengthMeasure" AttributeIdentifier="" InstanceName="" ListPositions=""/>
+												</InnerReference>
+											</InnerReference>
+										</InnerReference>
+									</ReferencePath>
+								</IfcTableColumn>
+							</Columns>
+						</IfcTable>
+					</DataValue>
+				</IfcMetric>
+			</BenchmarkValues>
+		</RelatingConstraint>
+	</IfcRelAssociatesConstraint>
+	<IfcProject id="p1" Name="MyProject" LongName=" ">
+		<Declares>
+			<!--My Request starts here-->
+			<!--My Request stops here-->
+		</Declares>
+	</IfcProject>
+	<!--My Expression of the list of bricks in Italy-->
+</ifcXML>
