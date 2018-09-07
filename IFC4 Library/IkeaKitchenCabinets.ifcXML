@@ -89,6 +89,21 @@
 									</Items>
 								</MappedRepresentation>
 							</IfcRepresentationMap>
+							<IfcRepresentationMap>
+								<MappingOrigin>
+									<IfcAxis2Placement2D>
+										<Location/>
+									</IfcAxis2Placement2D>
+								</MappingOrigin>
+								<MappedRepresentation xsi:type="IfcShapeRepresentation" RepresentationIdentifier="Body" RepresentationType="CSG">
+									<ContextOfItems xsi:type="IfcGeometricRepresentationContext"/>
+									<Items>
+										<IfcBoundingBox XDim="24" YDim="24" ZDim="30.375">
+											<Corner Coordinates="0 0 0"/>
+										</IfcBoundingBox>
+									</Items>
+								</MappedRepresentation>
+							</IfcRepresentationMap>
 						</RepresentationMaps>
 					</IfcSystemFurnitureElementType>
 				</RelatedDefinitions>
@@ -219,6 +234,51 @@
 										<IfcText-wrapper>http://www.ikea.com/us/en/images/products/akurum-base-cabinet-frame__35804_PE126721_S4.jpg</IfcText-wrapper>
 									</RowCells>
 								</IfcTableRow>
+								<IfcTableRow>
+									<RowCells>
+										<IfcLabel-wrapper>343.818.10</IfcLabel-wrapper>
+										<IfcLabel-wrapper>white</IfcLabel-wrapper>
+										<IfcPositiveLengthMeasure-wrapper>15</IfcPositiveLengthMeasure-wrapper>
+										<IfcMonetaryMeasure-wrapper>30</IfcMonetaryMeasure-wrapper>
+										<IfcText-wrapper>https://www.ikea.com/us/en/images/products/akurum-base-cabinet-frame__35807_PE126724_S4.jpg</IfcText-wrapper>
+									</RowCells>
+								</IfcTableRow>
+								<IfcTableRow>
+									<RowCells>
+										<IfcLabel-wrapper>132.819.10</IfcLabel-wrapper>
+										<IfcLabel-wrapper>white</IfcLabel-wrapper>
+										<IfcPositiveLengthMeasure-wrapper>18</IfcPositiveLengthMeasure-wrapper>
+										<IfcMonetaryMeasure-wrapper>31</IfcMonetaryMeasure-wrapper>
+										<IfcText-wrapper>https://www.ikea.com/us/en/images/products/akurum-base-cabinet-frame__35867_PE126797_S4.jpg</IfcText-wrapper>
+									</RowCells>
+								</IfcTableRow>
+								<IfcTableRow>
+									<RowCells>
+										<IfcLabel-wrapper>943.820.10</IfcLabel-wrapper>
+										<IfcLabel-wrapper>white</IfcLabel-wrapper>
+										<IfcPositiveLengthMeasure-wrapper>21</IfcPositiveLengthMeasure-wrapper>
+										<IfcMonetaryMeasure-wrapper>33</IfcMonetaryMeasure-wrapper>
+										<IfcText-wrapper>https://www.ikea.com/us/en/images/products/akurum-base-cabinet-frame__35805_PE126722_S4.jpg</IfcText-wrapper>
+									</RowCells>
+								</IfcTableRow>
+								<IfcTableRow>
+									<RowCells>
+										<IfcLabel-wrapper>743.821.10</IfcLabel-wrapper>
+										<IfcLabel-wrapper>white</IfcLabel-wrapper>
+										<IfcPositiveLengthMeasure-wrapper>24</IfcPositiveLengthMeasure-wrapper>
+										<IfcMonetaryMeasure-wrapper>36</IfcMonetaryMeasure-wrapper>
+										<IfcText-wrapper>http://www.ikea.com/us/en/images/products/akurum-base-cabinet-frame__35804_PE126721_S4.jpg</IfcText-wrapper>
+									</RowCells>
+								</IfcTableRow>
+								<IfcTableRow>
+									<RowCells>
+										<IfcLabel-wrapper>700.493.43</IfcLabel-wrapper>
+										<IfcLabel-wrapper>birch effect</IfcLabel-wrapper>
+										<IfcPositiveLengthMeasure-wrapper>12</IfcPositiveLengthMeasure-wrapper>
+										<IfcMonetaryMeasure-wrapper>28</IfcMonetaryMeasure-wrapper>
+										<IfcText-wrapper>https://www.ikea.com/us/en/images/products/akurum-base-cabinet-frame__35800_PE126717_S4.jpg</IfcText-wrapper>
+									</RowCells>
+								</IfcTableRow>
 							</Rows>
 							<Columns>
 								<IfcTableColumn Name="Article"/>
@@ -249,13 +309,111 @@
 					</DataValue>
 					<ReferencePath AttributeIdentifier="Tag"/>
 				</IfcMetric>
+				<IfcMetric Name="Parametric calculation of geometry Right plate" Description="PositionX=Size-0.75">
+					<DataValue>
+						<IfcAppliedValue ArithmeticOperator="subtract">
+							<Components>
+								<IfcAppliedValue>
+									<AppliedValue>
+										<IfcReference TypeIdentifier="RepresentationMaps" AttributeIdentifier="MappedRepresentation['BoundingBox']">
+											<InnerReference AttributeIdentifier=".Items[1]">
+												<InnerReference AttributeIdentifier=".XDim"/>
+											</InnerReference>
+										</IfcReference>
+									</AppliedValue>
+								</IfcAppliedValue>
+								<IfcAppliedValue>
+									<AppliedValue>
+										<IfcLengthMeasure-wrapper>.75</IfcLengthMeasure-wrapper>
+									</AppliedValue>
+								</IfcAppliedValue>
+							</Components>
+						</IfcAppliedValue>
+					</DataValue>
+					<ReferencePath TypeIdentifier="RepresentationMap" AttributeIdentifier="MappedRepresentation['Body']" InstanceName="Items[2]">
+						<InnerReference TypeIdentifier="Position" AttributeIdentifier="Location">
+							<InnerReference AttributeIdentifier="Points[1]"/>
+						</InnerReference>
+					</ReferencePath>
+				</IfcMetric>
+				<IfcMetric Name="Parametric calculation of geometry Bottom plate" Description="LengthX=Size-0.75">
+					<DataValue>
+						<IfcAppliedValue ArithmeticOperator="subtract">
+							<Components>
+								<IfcAppliedValue>
+									<AppliedValue>
+										<IfcReference TypeIdentifier="RepresentationMaps.MappedRepresentation['BoundingBox'].Items[1].XDim"/>
+									</AppliedValue>
+								</IfcAppliedValue>
+								<IfcAppliedValue>
+									<AppliedValue>
+										<IfcLengthMeasure-wrapper>1.5</IfcLengthMeasure-wrapper>
+									</AppliedValue>
+								</IfcAppliedValue>
+							</Components>
+						</IfcAppliedValue>
+					</DataValue>
+					<ReferencePath TypeIdentifier="RepresentationMap.MappedRepresentation['Body'].Items[3].XLength"/>
+				</IfcMetric>
+				<IfcMetric Name="Parametric calculation of geometry Top front beam" Description="LengthX=Size-0.75">
+					<DataValue>
+						<IfcAppliedValue ArithmeticOperator="subtract">
+							<Components>
+								<IfcAppliedValue>
+									<AppliedValue>
+										<IfcReference TypeIdentifier="RepresentationMaps.MappedRepresentation['BoundingBox'].Items[1].XDim"/>
+									</AppliedValue>
+								</IfcAppliedValue>
+								<IfcAppliedValue>
+									<AppliedValue>
+										<IfcLengthMeasure-wrapper>1.5</IfcLengthMeasure-wrapper>
+									</AppliedValue>
+								</IfcAppliedValue>
+							</Components>
+						</IfcAppliedValue>
+					</DataValue>
+					<ReferencePath TypeIdentifier="RepresentationMap.MappedRepresentation[‘Body’].Items[4].XLength"/>
+				</IfcMetric>
+				<IfcMetric Name="Parametric calculation of geometry Top back beam" Description="LengthX=Size-0.75">
+					<DataValue>
+						<IfcAppliedValue ArithmeticOperator="subtract">
+							<Components>
+								<IfcAppliedValue>
+									<AppliedValue>
+										<IfcReference TypeIdentifier="RepresentationMaps.MappedRepresentation['BoundingBox'].Items[1].XDim"/>
+									</AppliedValue>
+								</IfcAppliedValue>
+								<IfcAppliedValue>
+									<AppliedValue>
+										<IfcLengthMeasure-wrapper>1.5</IfcLengthMeasure-wrapper>
+									</AppliedValue>
+								</IfcAppliedValue>
+							</Components>
+						</IfcAppliedValue>
+					</DataValue>
+					<ReferencePath TypeIdentifier="RepresentationMap.MappedRepresentation[‘Body’].Items[5].XLength"/>
+				</IfcMetric>
+				<IfcMetric Name="Parametric calculation of geometry Back covering" Description="LengthX=Size">
+					<DataValue>
+						<IfcAppliedValue ArithmeticOperator="subtract">
+							<Components>
+								<IfcAppliedValue>
+									<AppliedValue>
+										<IfcReference TypeIdentifier="RepresentationMaps.MappedRepresentation['BoundingBox'].Items[1].XDim"/>
+									</AppliedValue>
+								</IfcAppliedValue>
+							</Components>
+						</IfcAppliedValue>
+					</DataValue>
+					<ReferencePath TypeIdentifier="RepresentationMap.MappedRepresentation[‘Body’].Items[6].XLength"/>
+				</IfcMetric>
 			</BenchmarkValues>
 		</RelatingConstraint>
 	</IfcRelAssociatesConstraint>
 	<IfcProject id="p1" Name="MyProject" LongName=" "/>
 	<IfcRelAssociatesConstraint>
 		<RelatedObjects>
-			<IfcSystemFurnitureElement Name="BaseCabinetFrame1"/>
+			<IfcSystemFurnitureElement id="i91" Name="BaseCabinetFrame"/>
 		</RelatedObjects>
 		<RelatingConstraint xsi:type="IfcObjective" Name="Parameters" ObjectiveQualifier="parameter">
 			<BenchmarkValues>
@@ -277,4 +435,17 @@
 			</BenchmarkValues>
 		</RelatingConstraint>
 	</IfcRelAssociatesConstraint>
+	<IfcElementAssemblyType id="i345" GlobalId="1DbshTzGD71ejfZQqQcxab" Name="IKEA Cabinet" Description="This is an occurring real life cabinet, build as preassembled product, containing the frame, the door, and other parts" PredefinedType="userdefined">
+		<IsDecomposedBy>
+			<IfcRelAggregates>
+				<RelatedObjects>
+					<IfcSystemFurnitureElement Name="Frame">
+						<IsTypedBy>
+							<RelatingType ref="i91"/>
+						</IsTypedBy>
+					</IfcSystemFurnitureElement>
+				</RelatedObjects>
+			</IfcRelAggregates>
+		</IsDecomposedBy>
+	</IfcElementAssemblyType>
 </ifcXML>
