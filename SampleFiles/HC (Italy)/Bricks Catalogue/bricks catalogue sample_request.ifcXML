@@ -14,11 +14,12 @@
 		<Declares>
 			<IfcRelDeclares>
 				<RelatedDefinitions>
-					<IfcTypeProduct id="Tid_ProductType1" Name="Armalater Brick 1" Description="Description of an Armalater Brick 1"/>
-					<IfcPropertySetTemplate Name="geometic data" id="Tid_ps0">
+					<IfcWallType id="Tid_ProductType1" Name="Armalater Brick 1" Description="Description of an Armalater Brick 1"/>
+					<IfcPropertySetTemplate Name="geometic data" id="id_pset1_template">
 						<HasPropertyTemplates>
 							<IfcComplexPropertyTemplate GlobalId="1DbshTzGD71ejuZQqQcxab" Name="dimension" id="Tid_cp0">
 								<HasPropertyTemplates>
+									<IfcSimplePropertyTemplate id="id_propt_Description" GlobalId="1DbshTzGD71eOuZQqQcxan" Name="description" Description="" TemplateType="p_singlevalue" PrimaryMeasureType="IfcText"/>
 									<IfcSimplePropertyTemplate id="id_propt_l" GlobalId="1DbshTzGD71ejuZQqQcxan" Name="lenght" Description="" TemplateType="p_singlevalue" PrimaryMeasureType="IfcReal"/>
 									<IfcSimplePropertyTemplate id="id_propt_w" GlobalId="1DbshTzGD71ejuZQqQcxao" Name="width" Description="" TemplateType="p_singlevalue" PrimaryMeasureType="IfcReal"/>
 									<IfcSimplePropertyTemplate id="id_propt_h" GlobalId="1DbshTzGD71ejuZQqQcxap" Name="height" Description="" TemplateType="p_singlevalue" PrimaryMeasureType="IfcReal"/>
@@ -37,11 +38,22 @@
 				<RelatedDefinitions>
 					<IfcTypeProduct Name="Brick Type 1" id="id_BrickType1">
 						<HasPropertySets>
-							<IfcPropertySet Name="geometic data" id="id_ps0">
+							<IfcPropertySet Name="geometic data" id="id_pset1">
 								<HasProperties>
-									<IfcPropertySingleValue id="id_prop_l" Name="lenght" Description="Lenght of the brick"/>
-									<IfcPropertySingleValue id="id_prop_w" Name="width" Description="Width of the brick"/>
-									<IfcPropertySingleValue id="id_prop_h" Name="height" Description=" Height of the brick"/>
+									<IfcPropertySingleValue id="id_prop_l" Name="lenght" Description="Lenght of the brick" ref="id_propt_l"/>
+									<IfcPropertySingleValue id="id_prop_w" Name="width" Description="Width of the brick" ref="id_propt_w"/>
+									<IfcPropertySingleValue id="id_prop_h" Name="height" Description=" Height of the brick" ref="id_propt_h"/>
+								</HasProperties>
+							</IfcPropertySet>
+						</HasPropertySets>
+					</IfcTypeProduct>
+					<IfcTypeProduct Name="Brick Type 2" id="id_BrickType2">
+						<HasPropertySets>
+							<IfcPropertySet Name="geometic data" id="id_pset2">
+								<HasProperties>
+									<IfcPropertySingleValue id="id_prop2_l" Name="lenght" Description="Lenght of the brick" ref="id_propt_l"/>
+									<IfcPropertySingleValue id="id_prop2_w" Name="width" Description="Width of the brick" ref="id_propt_w"/>
+									<IfcPropertySingleValue id="id_prop2_h" Name="height" Description=" Height of the brick" ref="id_propt_h"/>
 								</HasProperties>
 							</IfcPropertySet>
 						</HasPropertySets>
@@ -53,21 +65,79 @@
 	<!--Relate PropertySet with ProperpertySetTemplate (and indirectly with the property definition in the property server)-->
 	<IfcRelDefinesByTemplate>
 		<RelatedPropertySets>
-			<IfcPropertySet xsi:nil="true" ref="id_ps0"/>
+			<IfcPropertySet xsi:nil="true" ref="id_pset1"/>
 		</RelatedPropertySets>
-		<RelatingTemplate xsi:nil="true" ref="Tid_ps0"/>
+		<RelatingTemplate xsi:nil="true" ref="id_pset1_template"/>
 	</IfcRelDefinesByTemplate>
 	<!--My Expression of the list of bricks in Italy-->
 	<!--Define constraints for propery values-->
-	<IfcObjective id="Objective01">
+	<IfcObjective id="objective_length" Name="ConstraintLength" Description="The value of length can have one of the values for the product type 1" ConstraintGrade="hard" LogicalAggregator="logicalor" ObjectiveQualifier="userdefined" UserDefinedQualifier="productdata">
+		<CreatingActor>
+			<IfcOrganization Name="product manufacturer of product type 1"/>
+		</CreatingActor>
 		<BenchmarkValues>
-			<IfcMetric>
+			<IfcMetric id="objective_length_metric01" ConstraintGrade="hard" ConstraintSource="manufacturer" Benchmark="equalto">
 				<DataValue>
-					<IfcLengthMeasure-wrapper id="mym1">23</IfcLengthMeasure-wrapper>
+					<IfcLengthMeasure-wrapper id="dv_metric01_01">22.5</IfcLengthMeasure-wrapper>
 				</DataValue>
-				<ReferencePath>
-					<InnerReference>
-						<InnerReference/>
+				<ReferencePath TypeIdentifier="IfcTypeProduct" AttributeIdentifier="HasProperties" ref="id_BrickType1">
+					<InnerReference TypeIdentifier="IfcPropertySet" AttributeIdentifier="HasProperties" ref="id_pset1">
+						<InnerReference AttributeIdentifier="NominalValue" TypeIdentifier="IfcPropertySingleValue" InstanceName="lenght" ref="id_propt_l"/>
+					</InnerReference>
+				</ReferencePath>
+			</IfcMetric>
+			<IfcMetric id="objective_length_metric02" ConstraintGrade="hard" ConstraintSource="manufacturer" Benchmark="equalto">
+				<DataValue>
+					<IfcLengthMeasure-wrapper id="dv_metric01_02">23</IfcLengthMeasure-wrapper>
+				</DataValue>
+				<ReferencePath TypeIdentifier="IfcTypeProduct" AttributeIdentifier="HasProperties" ref="id_BrickType1">
+					<InnerReference TypeIdentifier="IfcPropertySet" AttributeIdentifier="HasProperties" ref="id_pset1">
+						<InnerReference AttributeIdentifier="NominalValue" TypeIdentifier="IfcPropertySingleValue" InstanceName="lenght" ref="id_propt_l"/>
+					</InnerReference>
+				</ReferencePath>
+			</IfcMetric>
+			<IfcMetric id="objective_length_metric03" ConstraintGrade="hard" ConstraintSource="manufacturer" Benchmark="equalto">
+				<DataValue>
+					<IfcLengthMeasure-wrapper id="dv_metric03_02">24</IfcLengthMeasure-wrapper>
+				</DataValue>
+				<ReferencePath TypeIdentifier="IfcTypeProduct" AttributeIdentifier="HasProperties" ref="id_BrickType1">
+					<InnerReference TypeIdentifier="IfcPropertySet" AttributeIdentifier="HasProperties" ref="id_pset1">
+						<InnerReference AttributeIdentifier="NominalValue" TypeIdentifier="IfcPropertySingleValue" InstanceName="lenght" ref="id_propt_l"/>
+					</InnerReference>
+				</ReferencePath>
+			</IfcMetric>
+			<IfcMetric id="objective_length_metric04" ConstraintGrade="hard" ConstraintSource="manufacturer" Benchmark="equalto">
+				<DataValue>
+					<IfcLengthMeasure-wrapper id="dv_metric04_02">25</IfcLengthMeasure-wrapper>
+				</DataValue>
+			</IfcMetric>
+			<IfcMetric id="objective_length_metric05" ConstraintGrade="hard" ConstraintSource="manufacturer" Benchmark="includes">
+				<DataValue>
+					<IfcLengthMeasure-wrapper id="dv_metric05_02">26</IfcLengthMeasure-wrapper>
+				</DataValue>
+				<ReferencePath TypeIdentifier="IfcTypeProduct" AttributeIdentifier="HasProperties" ref="id_BrickType1">
+					<InnerReference TypeIdentifier="IfcPropertySet" AttributeIdentifier="HasProperties" ref="id_pset1">
+						<InnerReference AttributeIdentifier="NominalValue" TypeIdentifier="IfcPropertySingleValue" InstanceName="lenght" ref="id_propt_l"/>
+					</InnerReference>
+				</ReferencePath>
+			</IfcMetric>
+			<IfcMetric id="objective_length_metric06" ConstraintGrade="hard" ConstraintSource="manufacturer" Benchmark="includes">
+				<DataValue>
+					<IfcLengthMeasure-wrapper id="dv_metric06_02">27</IfcLengthMeasure-wrapper>
+				</DataValue>
+				<ReferencePath TypeIdentifier="IfcTypeProduct" AttributeIdentifier="HasProperties" ref="id_BrickType1">
+					<InnerReference TypeIdentifier="IfcPropertySet" AttributeIdentifier="HasProperties" ref="id_pset1">
+						<InnerReference AttributeIdentifier="NominalValue" TypeIdentifier="IfcPropertySingleValue" InstanceName="lenght" ref="id_propt_l"/>
+					</InnerReference>
+				</ReferencePath>
+			</IfcMetric>
+			<IfcMetric id="objective_length_metric07" ConstraintGrade="hard" ConstraintSource="manufacturer" Benchmark="includes">
+				<DataValue>
+					<IfcLengthMeasure-wrapper id="dv_metric07_02">28</IfcLengthMeasure-wrapper>
+				</DataValue>
+				<ReferencePath TypeIdentifier="IfcTypeProduct" AttributeIdentifier="HasProperties" ref="id_BrickType1">
+					<InnerReference TypeIdentifier="IfcPropertySet" AttributeIdentifier="HasProperties" ref="id_pset1">
+						<InnerReference AttributeIdentifier="NominalValue" TypeIdentifier="IfcPropertySingleValue" InstanceName="lenght" ref="id_propt_l"/>
 					</InnerReference>
 				</ReferencePath>
 			</IfcMetric>
@@ -77,10 +147,10 @@
 		<RelatedObjects>
 			<IfcTypeProduct ref="id_BrickType1"/>
 		</RelatedObjects>
-		<RelatingConstraint xsi:type="IfcObjective" ref="Objective01"/>
+		<RelatingConstraint xsi:type="IfcObjective" ref="objective_length"/>
 	</IfcRelAssociatesConstraint>
 	<IfcResourceConstraintRelationship>
-		<RelatingConstraint xsi:type="IfcObjective" ref="Objective01"/>
+		<RelatingConstraint xsi:type="IfcObjective" ref="objective_length"/>
 		<RelatedResourceObjects>
 			<IfcPropertySingleValue ref="id_prop_l"/>
 		</RelatedResourceObjects>
@@ -107,10 +177,10 @@
 							</IfcAppliedValue>
 						</DataValue>
 						<ReferencePath TypeIdentifier="IfcTypeProduct" AttributeIdentifier="HasProperties" ref="id_BrickType1">
-							<InnerReference TypeIdentifier="IfcPropertySet" AttributeIdentifier="HasProperties" ref="id_ps0">
-									<InnerReference AttributeIdentifier="NominalValue" TypeIdentifier="IfcPropertySingleValue" InstanceName="lenght" ref="id_propt_l">
-									</InnerReference>
+							<InnerReference TypeIdentifier="IfcPropertySet" AttributeIdentifier="HasProperties" ref="id_pset1">
+								<InnerReference AttributeIdentifier="NominalValue" TypeIdentifier="IfcPropertySingleValue" InstanceName="lenght" ref="id_propt_l">
 								</InnerReference>
+							</InnerReference>
 						</ReferencePath>
 					</IfcMetric>
 					<IfcMetric Name="Piemonte_widht" Benchmark="equalto" ConstraintGrade="hard" ConstraintSource="list of possible values" Description="width constraint" ValueSource="IfcSimplePropertyTemplate">
@@ -131,10 +201,8 @@
 							</IfcAppliedValue>
 						</DataValue>
 						<ReferencePath TypeIdentifier="IfcTypeProduct" AttributeIdentifier="HasProperties" ref="id_BrickType1">
-							<InnerReference TypeIdentifier="IfcPropertySet" AttributeIdentifier="HasProperties" ref="id_ps0">
-								<InnerReference TypeIdentifier="IfcComplexProperty" AttributeIdentifier="HasProperties" ref="id_cp0">
-									<InnerReference AttributeIdentifier="NominalValue" TypeIdentifier="IfcPropertySingleValue" InstanceName="width" ref="id_prop_w">
-									</InnerReference>
+							<InnerReference TypeIdentifier="IfcPropertySet" AttributeIdentifier="HasProperties" ref="id_pset1">
+								<InnerReference AttributeIdentifier="NominalValue" TypeIdentifier="IfcPropertySingleValue" InstanceName="width" ref="id_prop_w">
 								</InnerReference>
 							</InnerReference>
 						</ReferencePath>
@@ -157,10 +225,8 @@
 							</IfcAppliedValue>
 						</DataValue>
 						<ReferencePath TypeIdentifier="IfcTypeProduct" AttributeIdentifier="HasProperties" ref="id_BrickType1">
-							<InnerReference TypeIdentifier="IfcPropertySet" AttributeIdentifier="HasProperties" ref="id_ps0">
-								<InnerReference TypeIdentifier="IfcComplexProperty" AttributeIdentifier="HasProperties" ref="id_cp0">
-									<InnerReference AttributeIdentifier="NominalValue" TypeIdentifier="IfcPropertySingleValue" InstanceName="height" ref="id_prop_h">
-									</InnerReference>
+							<InnerReference TypeIdentifier="IfcPropertySet" AttributeIdentifier="HasProperties" ref="id_pset1">
+								<InnerReference AttributeIdentifier="NominalValue" TypeIdentifier="IfcPropertySingleValue" InstanceName="height" ref="id_prop_h">
 								</InnerReference>
 							</InnerReference>
 						</ReferencePath>
@@ -192,10 +258,8 @@
 							</IfcAppliedValue>
 						</DataValue>
 						<ReferencePath TypeIdentifier="IfcTypeProduct" AttributeIdentifier="HasProperties" ref="id_BrickType1">
-							<InnerReference TypeIdentifier="IfcPropertySet" AttributeIdentifier="HasProperties" ref="id_ps0">
-								<InnerReference TypeIdentifier="IfcComplexProperty" AttributeIdentifier="HasProperties" ref="id_cp0">
-									<InnerReference AttributeIdentifier="NominalValue" TypeIdentifier="IfcPropertySingleValue" InstanceName="lenght" ref="id_prop_l">
-									</InnerReference>
+							<InnerReference TypeIdentifier="IfcPropertySet" AttributeIdentifier="HasProperties" ref="id_pset1">
+								<InnerReference AttributeIdentifier="NominalValue" TypeIdentifier="IfcPropertySingleValue" InstanceName="lenght" ref="id_prop_l">
 								</InnerReference>
 							</InnerReference>
 						</ReferencePath>
@@ -223,10 +287,8 @@
 							</IfcAppliedValue>
 						</DataValue>
 						<ReferencePath TypeIdentifier="IfcTypeProduct" AttributeIdentifier="HasProperties" ref="id_BrickType1">
-							<InnerReference TypeIdentifier="IfcPropertySet" AttributeIdentifier="HasProperties" ref="id_ps0">
-								<InnerReference TypeIdentifier="IfcComplexProperty" AttributeIdentifier="HasProperties" ref="id_cp0">
-									<InnerReference AttributeIdentifier="NominalValue" TypeIdentifier="IfcPropertySingleValue" InstanceName="width" ref="id_prop_w">
-									</InnerReference>
+							<InnerReference TypeIdentifier="IfcPropertySet" AttributeIdentifier="HasProperties" ref="id_pset1">
+								<InnerReference AttributeIdentifier="NominalValue" TypeIdentifier="IfcPropertySingleValue" InstanceName="width" ref="id_prop_w">
 								</InnerReference>
 							</InnerReference>
 						</ReferencePath>
@@ -254,10 +316,8 @@
 							</IfcAppliedValue>
 						</DataValue>
 						<ReferencePath TypeIdentifier="IfcTypeProduct" AttributeIdentifier="HasProperties" ref="id_BrickType1">
-							<InnerReference TypeIdentifier="IfcPropertySet" AttributeIdentifier="HasProperties" ref="id_ps0">
-								<InnerReference TypeIdentifier="IfcComplexProperty" AttributeIdentifier="HasProperties" ref="id_cp0">
-									<InnerReference AttributeIdentifier="NominalValue" TypeIdentifier="IfcPropertySingleValue" InstanceName="height" ref="id_prop_h">
-									</InnerReference>
+							<InnerReference TypeIdentifier="IfcPropertySet" AttributeIdentifier="HasProperties" ref="id_pset1">
+								<InnerReference AttributeIdentifier="NominalValue" TypeIdentifier="IfcPropertySingleValue" InstanceName="height" ref="id_prop_h">
 								</InnerReference>
 							</InnerReference>
 						</ReferencePath>
@@ -292,10 +352,8 @@
 								</IfcAppliedValue>
 							</DataValue>
 							<ReferencePath TypeIdentifier="IfcTypeProduct" AttributeIdentifier="HasProperties" ref="id_BrickType1">
-								<InnerReference TypeIdentifier="IfcPropertySet" AttributeIdentifier="HasProperties" ref="id_ps0">
-									<InnerReference TypeIdentifier="IfcComplexProperty" AttributeIdentifier="HasProperties" ref="id_cp0">
-										<InnerReference AttributeIdentifier="NominalValue" TypeIdentifier="IfcPropertySingleValue" InstanceName="lenght" ref="id_propt_l">
-										</InnerReference>
+								<InnerReference TypeIdentifier="IfcPropertySet" AttributeIdentifier="HasProperties" ref="id_pset1">
+									<InnerReference AttributeIdentifier="NominalValue" TypeIdentifier="IfcPropertySingleValue" InstanceName="lenght" ref="id_propt_l">
 									</InnerReference>
 								</InnerReference>
 							</ReferencePath>
@@ -318,10 +376,8 @@
 								</IfcAppliedValue>
 							</DataValue>
 							<ReferencePath TypeIdentifier="IfcTypeProduct" AttributeIdentifier="HasProperties" ref="id_BrickType1">
-								<InnerReference TypeIdentifier="IfcPropertySet" AttributeIdentifier="HasProperties" ref="id_ps0">
-									<InnerReference TypeIdentifier="IfcComplexProperty" AttributeIdentifier="HasProperties" ref="id_cp0">
-										<InnerReference AttributeIdentifier="NominalValue" TypeIdentifier="IfcPropertySingleValue" InstanceName="width" ref="id_prop_w">
-										</InnerReference>
+								<InnerReference TypeIdentifier="IfcPropertySet" AttributeIdentifier="HasProperties" ref="id_pset1">
+									<InnerReference AttributeIdentifier="NominalValue" TypeIdentifier="IfcPropertySingleValue" InstanceName="width" ref="id_prop_w">
 									</InnerReference>
 								</InnerReference>
 							</ReferencePath>
@@ -344,10 +400,8 @@
 								</IfcAppliedValue>
 							</DataValue>
 							<ReferencePath TypeIdentifier="IfcTypeProduct" AttributeIdentifier="HasProperties" ref="id_BrickType1">
-								<InnerReference TypeIdentifier="IfcPropertySet" AttributeIdentifier="HasProperties" ref="id_ps0">
-									<InnerReference TypeIdentifier="IfcComplexProperty" AttributeIdentifier="HasProperties" ref="id_cp0">
-										<InnerReference AttributeIdentifier="NominalValue" TypeIdentifier="IfcPropertySingleValue" InstanceName="height" ref="id_prop_h">
-										</InnerReference>
+								<InnerReference TypeIdentifier="IfcPropertySet" AttributeIdentifier="HasProperties" ref="id_pset1">
+									<InnerReference AttributeIdentifier="NominalValue" TypeIdentifier="IfcPropertySingleValue" InstanceName="height" ref="id_prop_h">
 									</InnerReference>
 								</InnerReference>
 							</ReferencePath>
@@ -379,10 +433,8 @@
 								</IfcAppliedValue>
 							</DataValue>
 							<ReferencePath TypeIdentifier="IfcTypeProduct" AttributeIdentifier="HasProperties" ref="id_BrickType1">
-								<InnerReference TypeIdentifier="IfcPropertySet" AttributeIdentifier="HasProperties" ref="id_ps0">
-									<InnerReference TypeIdentifier="IfcComplexProperty" AttributeIdentifier="HasProperties" ref="id_cp0">
-										<InnerReference AttributeIdentifier="NominalValue" TypeIdentifier="IfcPropertySingleValue" InstanceName="lenght" ref="id_prop_l">
-										</InnerReference>
+								<InnerReference TypeIdentifier="IfcPropertySet" AttributeIdentifier="HasProperties" ref="id_pset1">
+									<InnerReference AttributeIdentifier="NominalValue" TypeIdentifier="IfcPropertySingleValue" InstanceName="lenght" ref="id_prop_l">
 									</InnerReference>
 								</InnerReference>
 							</ReferencePath>
@@ -410,10 +462,8 @@
 								</IfcAppliedValue>
 							</DataValue>
 							<ReferencePath TypeIdentifier="IfcTypeProduct" AttributeIdentifier="HasProperties" ref="id_BrickType1">
-								<InnerReference TypeIdentifier="IfcPropertySet" AttributeIdentifier="HasProperties" ref="id_ps0">
-									<InnerReference TypeIdentifier="IfcComplexProperty" AttributeIdentifier="HasProperties" ref="id_cp0">
-										<InnerReference AttributeIdentifier="NominalValue" TypeIdentifier="IfcPropertySingleValue" InstanceName="width" ref="id_prop_w">
-										</InnerReference>
+								<InnerReference TypeIdentifier="IfcPropertySet" AttributeIdentifier="HasProperties" ref="id_pset1">
+									<InnerReference AttributeIdentifier="NominalValue" TypeIdentifier="IfcPropertySingleValue" InstanceName="width" ref="id_prop_w">
 									</InnerReference>
 								</InnerReference>
 							</ReferencePath>
@@ -441,10 +491,8 @@
 								</IfcAppliedValue>
 							</DataValue>
 							<ReferencePath TypeIdentifier="IfcTypeProduct" AttributeIdentifier="HasProperties" ref="id_BrickType1">
-								<InnerReference TypeIdentifier="IfcPropertySet" AttributeIdentifier="HasProperties" ref="id_ps0">
-									<InnerReference TypeIdentifier="IfcComplexProperty" AttributeIdentifier="HasProperties" ref="id_cp0">
-										<InnerReference AttributeIdentifier="NominalValue" TypeIdentifier="IfcPropertySingleValue" InstanceName="height" ref="id_prop_h">
-										</InnerReference>
+								<InnerReference TypeIdentifier="IfcPropertySet" AttributeIdentifier="HasProperties" ref="id_pset1">
+									<InnerReference AttributeIdentifier="NominalValue" TypeIdentifier="IfcPropertySingleValue" InstanceName="height" ref="id_prop_h">
 									</InnerReference>
 								</InnerReference>
 							</ReferencePath>
@@ -454,11 +502,47 @@
 			</BenchmarkValues>
 		</RelatingConstraint>
 	</IfcRelAssociatesConstraint>
-	<IfcProject id="p1" Name="MyProject" LongName=" ">
+	<IfcProject id="p1" GlobalId="1DbshTzGD71ejuZQqQuxab" Name="The construction project" LongName="">
 		<Declares>
 			<!--My Request starts here-->
 			<!--My Request stops here-->
 		</Declares>
 	</IfcProject>
-	<!--My Expression of the list of bricks in Italy-->
+	<IfcRelAssociatesConstraint id="ip11" GlobalId="1DbshUzGD71ejuZQqQuxab" Name="Request for product selection" Description="This is a sample request from a planner for product selection based on the realted constraints" Intent="REQUESTED PERFORMANCE">
+		<RelatedObjects>
+			<IfcWallType id="i91" GlobalId="1HbshTzGD71ejuZQqQuxab" ref="Tid_ProductType1" PredefinedType="userdefined"/>
+		</RelatedObjects>
+		<RelatingConstraint xsi:type="IfcObjective" Name="Parameters" ObjectiveQualifier="parameter">
+			<BenchmarkValues>
+				<IfcMetric Name="Article">
+					<DataValue>
+						<IfcIdentifier-wrapper>743.821.10</IfcIdentifier-wrapper>
+					</DataValue>
+				</IfcMetric>
+				<IfcMetric Name="Size">
+					<DataValue>
+						<IfcPositiveLengthMeasure-wrapper>24</IfcPositiveLengthMeasure-wrapper>
+					</DataValue>
+				</IfcMetric>
+				<IfcMetric Name="Color">
+					<DataValue>
+						<IfcLabel-wrapper>white</IfcLabel-wrapper>
+					</DataValue>
+				</IfcMetric>
+			</BenchmarkValues>
+		</RelatingConstraint>
+	</IfcRelAssociatesConstraint>
+	<IfcWall id="i345" GlobalId="1DbshTzGD71ejfZQqQcxab" Name="A planned wall" Description="This is an wall, that shoul be built containing bricks (Yes, for todays BIM projects it is unrealistic to manage individual bricks, It is just for the sake of the example)" PredefinedType="userdefined">
+		<IsDecomposedBy>
+			<IfcRelAggregates>
+				<RelatedObjects>
+					<IfcWall id="i346" GlobalId="1DbshTzGD71ejfZQqQcxaz" Tag="14567890" Name="Brick1" Description="This is an occurring real life brick, or representation of many bricks of the same quality" PredefinedType="userdefined">
+						<IsTypedBy>
+							<RelatingType ref="i91"/>
+						</IsTypedBy>
+					</IfcWall>
+				</RelatedObjects>
+			</IfcRelAggregates>
+		</IsDecomposedBy>
+	</IfcWall>
 </ifcXML>
