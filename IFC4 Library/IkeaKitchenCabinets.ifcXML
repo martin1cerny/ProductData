@@ -444,7 +444,7 @@
 	<IfcProject id="p1" Name="MyProject" LongName=" "/>
 	<IfcRelAssociatesConstraint>
 		<RelatedObjects>
-			<IfcSystemFurnitureElement id="i91" Name="BaseCabinetFrame"/>
+			<IfcSystemFurnitureElementType id="i91" Name="BaseCabinetFrame"/>
 		</RelatedObjects>
 		<RelatingConstraint xsi:type="IfcObjective" Name="Parameters" ObjectiveQualifier="parameter">
 			<BenchmarkValues>
@@ -470,7 +470,7 @@
 		<IsDecomposedBy>
 			<IfcRelAggregates>
 				<RelatedObjects>
-					<IfcSystemFurnitureElement Name="Frame">
+					<IfcSystemFurnitureElement id="i346" GlobalId="1DbshTzGD71ejfZQqQcxaz" Tag="14567890" Name="Frame" Description="This is an occurring real life frame"  PredefinedType="userdefined">
 						<IsTypedBy>
 							<RelatingType ref="i91"/>
 						</IsTypedBy>
