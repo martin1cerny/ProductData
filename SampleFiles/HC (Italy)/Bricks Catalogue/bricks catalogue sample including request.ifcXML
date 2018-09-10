@@ -512,14 +512,9 @@
 		<RelatedObjects>
 			<IfcWallType id="i91" GlobalId="1HbshTzGD71ejuZQqQuxab" ref="Tid_ProductType1" PredefinedType="userdefined"/>
 		</RelatedObjects>
-		<RelatingConstraint xsi:type="IfcObjective" Name="Parameters" ObjectiveQualifier="parameter">
+		<RelatingConstraint xsi:type="IfcObjective" Name="Parameters" ObjectiveQualifier="parameter" LogicalAggregator="logicaland">
 			<BenchmarkValues>
-				<IfcMetric Name="Article">
-					<DataValue>
-						<IfcIdentifier-wrapper>743.821.10</IfcIdentifier-wrapper>
-					</DataValue>
-				</IfcMetric>
-				<IfcMetric Name="Size">
+				<IfcMetric Name="Size" ConstraintGrade="hard" >
 					<DataValue>
 						<IfcPositiveLengthMeasure-wrapper>24</IfcPositiveLengthMeasure-wrapper>
 					</DataValue>
