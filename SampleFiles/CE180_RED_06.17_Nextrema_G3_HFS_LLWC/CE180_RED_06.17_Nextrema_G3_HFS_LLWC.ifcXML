@@ -50,7 +50,7 @@
 	<!-- Step 3: Insert a classification of standards as base for the reference of elements to the standard documents (perhaps not needed)- -->
 	<!-- Step 4: Relate the specical PropertyTemplate to  the classification node, that links to the document concept in the dictionary- -->
 	<!-- Step 5: Insert a table, that contains the references to a dictionary for those IFC elements who do not have an own attribute "GlobalId". These are IfcClassificationReference and EnumerationValues/IfcLabel-wrapper-->
-	<!-- THE TEMPLATE STOPPS HERE - PDT END - -->
+	<!-- THE TEMPLATE STOPS HERE - PDT END - -->
 	<!-- THE DATA SHEET STARTS HERE - PDS START -->
 	<!-- Step 6: Insert a Data sheet -->
 	<!--         The "DATA" in the file contains the instances, the product data sheet (PDS) - the data itself based on the embedded product data template-->

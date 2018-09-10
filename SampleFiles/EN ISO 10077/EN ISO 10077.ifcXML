@@ -17,7 +17,7 @@
 				<TheOrganization Identification="CEN-TC442-WG4-TG2" Description="A group of specialists for BIM products"/>
 			</OwningUser>
 			<OwningApplication>
-				<ApplicationDeveloper Identification="myPreferredDictServer" Description="My preffered Dictionary running according to CEN-TC442" path="api.myPreferredDictServer.org"/>
+				<ApplicationDeveloper Identification="myPreferredDictServer" Description="My preferred Dictionary running according to CEN-TC442" path="api.myPreferredDictServer.org"/>
 			</OwningApplication>
 		</OwnerHistory>
 		<Declares>
@@ -77,7 +77,7 @@
 									</EnumerationValues>
 								</Enumerators>
 							</IfcSimplePropertyTemplate>
-							<IfcSimplePropertyTemplate id="i999918" GlobalId="10x58_dMjCtv6QMVLNUbjG" Name="Harmonised standard" Description="Empty,If System/s of AVCP was 4;to be fille my manufactuer if System/s of AVCP was not 4" TemplateType="p_singlevalue" PrimaryMeasureType="IfcText" pos="7"/>
+							<IfcSimplePropertyTemplate id="i999918" GlobalId="10x58_dMjCtv6QMVLNUbjG" Name="Harmonised standard" Description="Empty,If System/s of AVCP was 4;to be filled by manufactuer if System/s of AVCP was not 4" TemplateType="p_singlevalue" PrimaryMeasureType="IfcText" pos="7"/>
 							<IfcSimplePropertyTemplate id="i999919" GlobalId="10x58_dMjCtv6QMVLNUbjH" Name="Notified bodies" Description="" TemplateType="p_singlevalue" PrimaryMeasureType="IfcText" pos="8"/>
 						</HasPropertyTemplates>
 					</IfcPropertySetTemplate>
@@ -215,7 +215,7 @@
 	<!--  and if the template relies on a dictionary, all GUID's from the dictionry must be stored also in the template to ensure the updatability of the template and the migratability of the data -->
 	<!-- See http://jira.buildingsmart.org/browse/IFR-1072 for the last remark -->
 	<!-- CPR - SAMPLE - CPR - SAMPLE - CPR - SAMPLE - CPR - SAMPLE - CPR - SAMPLE - CPR - SAMPLE -CPR - SAMPLE - CPR - SAMPLE - -->
-	<!-- THE TEMPLATE STOPPS HERE - PDT END - -->
+	<!-- THE TEMPLATE STOPS HERE - PDT END - -->
 	<!--  Start DATA-->
 	<!--  Sample element with included propertyset-->
 	<IfcProject id="i6885" Description="DataProject"/>

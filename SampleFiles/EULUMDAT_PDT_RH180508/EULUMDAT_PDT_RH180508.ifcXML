@@ -130,9 +130,9 @@
 							</IfcSimplePropertyTemplate>
 						</HasPropertyTemplates>
 					</IfcPropertySetTemplate>
-					<IfcPropertySetTemplate id="i133" GlobalId="1uJglYpRnFpQ4tStHaR2Pf" Name="Lenght" Description="Length of luminaire" TemplateType="pset_typedrivenoverride" ApplicableEntity="IFCLIGHTFIXTURETYPE" pos="1">
+					<IfcPropertySetTemplate id="i133" GlobalId="1uJglYpRnFpQ4tStHaR2Pf" Name="Length" Description="Length of luminaire" TemplateType="pset_typedrivenoverride" ApplicableEntity="IFCLIGHTFIXTURETYPE" pos="1">
 						<HasPropertyTemplates>
-							<IfcSimplePropertyTemplate id="i134" GlobalId="1uJglYpRnFpQ4tStHaR2Pf" Name="Lenght" Description="01-0003" TemplateType="p_singlevalue" pos="1" AccessState="readonly">
+							<IfcSimplePropertyTemplate id="i134" GlobalId="1uJglYpRnFpQ4tStHaR2Pf" Name="Length" Description="01-0003" TemplateType="p_singlevalue" pos="1" AccessState="readonly">
 							</IfcSimplePropertyTemplate>
 						</HasPropertyTemplates>
 					</IfcPropertySetTemplate>
@@ -222,7 +222,7 @@
 					</IfcPropertySetTemplate>
 					<IfcPropertySetTemplate id="i163" GlobalId="1lEpo0LO16FPpSj0jFwIOu" Name="Lamp sets" Description="Number n of standard sets of lamps" TemplateType="pset_typedrivenoverride" ApplicableEntity="IFCLIGHTFIXTURETYPE" pos="1">
 						<HasPropertyTemplates>
-							<IfcSimplePropertyTemplate id="i164" GlobalId="1lEpo0LO16FPpSj0jFwIOu" Name="Numer of lamps sets" Description="04-0001" TemplateType="p_singlevalue" pos="1" AccessState="readonly">
+							<IfcSimplePropertyTemplate id="i164" GlobalId="1lEpo0LO16FPpSj0jFwIOu" Name="Number of lamps sets" Description="04-0001" TemplateType="p_singlevalue" pos="1" AccessState="readonly">
 							</IfcSimplePropertyTemplate>
 						</HasPropertyTemplates>
 					</IfcPropertySetTemplate>
@@ -289,7 +289,7 @@
 	<!-- Step 3: Insert a classification of standards as base for the reference of elements to the standard documents (perhaps not needed)- -->
 	<!-- Step 4: Relate the specical PropertyTemplate to  the classification node, that links to the document concept in the dictionary- -->
 	<!-- Step 5: Insert a table, that contains the references to a dictionary for those IFC elements who do not have an own attribute "GlobalId". These are IfcClassificationReference and EnumerationValues/IfcLabel-wrapper-->
-	<!-- THE TEMPLATE STOPPS HERE - PDT END - -->
+	<!-- THE TEMPLATE STOPS HERE - PDT END - -->
 	<!-- THE DATA SHEET STARTS HERE - PDS START -->
 	<!-- Step 6: Insert a Data sheet -->
 	<!--         The "DATA" in the file contains the instances, the product data sheet (PDS) - the data itself based on the embedded product data template-->
