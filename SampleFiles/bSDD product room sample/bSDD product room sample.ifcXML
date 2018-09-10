@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <ifcXML xmlns:ifc="http://www.buildingsmart-tech.org/ifcXML/IFC4/Add2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" id="ifcXML4" xmlns="http://www.buildingsmart-tech.org/ifcXML/IFC4/Add2" xsi:schemaLocation="http://www.buildingsmart-tech.org/ifcXML/IFC4/Add2 ../IFC4_ADD2.xsd">
 	<header>
-		<name>Comparison of different approaches for a generic product data containe</name>
+		<name>Comparison of different approaches for a generic product data container</name>
 		<time_stamp>2017-03-24T09:45:03</time_stamp>
 		<author>Klaus Aengenvoort</author>
 		<organization>www.etask.de</organization>
@@ -16,7 +16,7 @@
 				<TheOrganization Identification="buildingSMART product room" Description="A group of specialists for BIM products"/>
 			</OwningUser>
 			<OwningApplication>
-				<ApplicationDeveloper Identification="myPreferredDictServer" Description="My preffered Dictionary running according to CEN-TC442" path="api.myPreferredDictServer.org"/>
+				<ApplicationDeveloper Identification="myPreferredDictServer" Description="My preferred Dictionary running according to CEN-TC442" path="api.myPreferredDictServer.org"/>
 			</OwningApplication>
 		</OwnerHistory>
 		<UnitsInContext>
@@ -144,7 +144,7 @@
 					<IfcPropertySetTemplate id="i33467" GlobalId="2e_rZByaj3v9TmNwzXRpFy" Name="Unique Product identification code" Description="Sample Property for a Unique Product identification code" ApplicableEntity="IfcPipeSegment" TemplateType="pset_typedrivenonly" pos="1">
 						<HasPropertyTemplates>
 							<IfcSimplePropertyTemplate id="i33668" GlobalId="26JruP9Sj6_QQl9T2nuNCN" Name="Unique Product identification code" Description="Description of Property" TemplateType="p_enumeratedvalue" PrimaryMeasureType="IfcText" pos="1"/>
-							<IfcSimplePropertyTemplate id="i33669" GlobalId="26JruP9Sj6_QQl9T2nuNCQ" Name="Type according Articel 11-4" Description="Description of Property" TemplateType="p_enumeratedvalue" PrimaryMeasureType="IfcText" pos="2"/>
+							<IfcSimplePropertyTemplate id="i33669" GlobalId="26JruP9Sj6_QQl9T2nuNCQ" Name="Type according Article 11-4" Description="Description of Property" TemplateType="p_enumeratedvalue" PrimaryMeasureType="IfcText" pos="2"/>
 							<IfcSimplePropertyTemplate id="i33670" GlobalId="2gWUvQ3HT2FfUkpq4QgzE3" Name="Name of Property3" Description="Description of Property3" TemplateType="p_enumeratedvalue" PrimaryMeasureType="IfcText" pos="3">
 								<Enumerators>
 									<EnumerationValues>
@@ -195,7 +195,7 @@
 									</EnumerationValues>
 								</Enumerators>
 							</IfcSimplePropertyTemplate>
-							<IfcSimplePropertyTemplate id="i999918" GlobalId="10x58_dMjCtv6QMVLNUbjG" Name="Harmonised standard" Description="Empty,If System/s of AVCP was 4;to be fille my manufactuer if System/s of AVCP was not 4" TemplateType="p_singlevalue" PrimaryMeasureType="IfcText" pos="7"/>
+							<IfcSimplePropertyTemplate id="i999918" GlobalId="10x58_dMjCtv6QMVLNUbjG" Name="Harmonised standard" Description="Empty,If System/s of AVCP was 4;to be filled by manufactuer if System/s of AVCP was not 4" TemplateType="p_singlevalue" PrimaryMeasureType="IfcText" pos="7"/>
 							<IfcSimplePropertyTemplate id="i999919" GlobalId="10x58_dMjCtv6QMVLNUbjH" Name="Notified bodies" Description="" TemplateType="p_singlevalue" PrimaryMeasureType="IfcText" pos="8"/>
 						</HasPropertyTemplates>
 					</IfcPropertySetTemplate>
@@ -530,14 +530,14 @@
 				<RelatingPropertyDefinition>
 					<IfcPropertySet ref="i33467">
 						<HasProperties>
-							<IfcComplexProperty id="i33468" Name="My Complex Propery (Essential Characteristics)" Description="The description of my ComplexProperty" UsageName="What is the UsageName?" pos="0">
+							<IfcComplexProperty id="i33468" Name="My Complex Property (Essential Characteristics)" Description="The description of my ComplexProperty" UsageName="What is the UsageName?" pos="0">
 								<HasProperties>
 									<IfcPropertySingleValue id="i71301" Name="Unique Product identification code" Description="Description of my Single value property" pos="0">
 										<NominalValue>
 											<IfcLabel-wrapper id="i33469" pos="1">Fireray50/100RV</IfcLabel-wrapper>
 										</NominalValue>
 									</IfcPropertySingleValue>
-									<IfcPropertySingleValue id="i71302" Name="Type according Articel 11-4" Description="Description of my Single value property" pos="1">
+									<IfcPropertySingleValue id="i71302" Name="Type according Article 11-4" Description="Description of my Single value property" pos="1">
 										<NominalValue>
 											<IfcLabel-wrapper id="i33470">Fireray 50 RV and Fireray 100RV</IfcLabel-wrapper>
 										</NominalValue>

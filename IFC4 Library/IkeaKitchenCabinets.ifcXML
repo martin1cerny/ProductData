@@ -26,7 +26,7 @@
 									<IfcSimplePropertyTemplate id="id_propt_c_" GlobalId="1DbshTzGD71eOuZQqQcxan" Name="color" Description="" TemplateType="p_singlevalue" PrimaryMeasureType="IfcLabel"/>
 									<IfcSimplePropertyTemplate id="id_propt_s_" GlobalId="1DbshTzGD71eOuZQqQcxan" Name="size" Description="" TemplateType="p_singlevalue" PrimaryMeasureType="IfcLabel"/>
 									<IfcSimplePropertyTemplate id="id_propt_p_" GlobalId="1DbshTzGD71eOuZQqQcxan" Name="prize" Description="" TemplateType="p_singlevalue" PrimaryMeasureType="IfcLabel"/>
-									<IfcSimplePropertyTemplate id="id_propt_l" GlobalId="1DbshTzGD71ejuZQqQcxan" Name="lenght" Description="" TemplateType="p_singlevalue" PrimaryMeasureType="IfcReal"/>
+									<IfcSimplePropertyTemplate id="id_propt_l" GlobalId="1DbshTzGD71ejuZQqQcxan" Name="length" Description="" TemplateType="p_singlevalue" PrimaryMeasureType="IfcReal"/>
 									<IfcSimplePropertyTemplate id="id_propt_w" GlobalId="1DbshTzGD71ejuZQqQcxao" Name="width" Description="" TemplateType="p_singlevalue" PrimaryMeasureType="IfcReal"/>
 									<IfcSimplePropertyTemplate id="id_propt_h" GlobalId="1DbshTzGD71ejuZQqQcxap" Name="height" Description="" TemplateType="p_singlevalue" PrimaryMeasureType="IfcReal"/>
 								</HasPropertyTemplates>

@@ -7576,8 +7576,8 @@
 		<HasPropertyTemplates>
 			<!--  Properties required by CPR (e.g. for a DoP)-->
 			<IfcSimplePropertyTemplate id="i7130" GlobalId="1SVMNTZ0nB9vKaEQOKsfuF" Name="Unique Product identification code" Description="Here is my description, please fill me" TemplateType="p_singlevalue" PrimaryMeasureType="IfcText" pos="0"/>
-			<IfcSimplePropertyTemplate id="i7131" GlobalId="1SVMNTZ0nB9vKaEQOKshuF" Name="Type according Articel 11-4" Description="Type, bacth or serial number or any other element allowing identification of the construction product as required pursuant to Articel 11(4)" TemplateType="p_singlevalue" PrimaryMeasureType="IfcText" pos="0"/>
-			<IfcSimplePropertyTemplate id="i7132" GlobalId="1SVMNTZ0nX9vKaEQOKshuF" Name="Intended use" Description="Intended use or uses of the construction product in accordance withe the applicable harmonized technical specification, as foreseen by the manufacturer" TemplateType="p_singlevalue" PrimaryMeasureType="IfcText" pos="0"/>
+			<IfcSimplePropertyTemplate id="i7131" GlobalId="1SVMNTZ0nB9vKaEQOKshuF" Name="Type according Article 11-4" Description="Type, bacth or serial number or any other element allowing identification of the construction product as required pursuant to Article 11(4)" TemplateType="p_singlevalue" PrimaryMeasureType="IfcText" pos="0"/>
+			<IfcSimplePropertyTemplate id="i7132" GlobalId="1SVMNTZ0nX9vKaEQOKshuF" Name="Intended use" Description="Intended use or uses of the construction product in accordance with the applicable harmonized technical specification, as foreseen by the manufacturer" TemplateType="p_singlevalue" PrimaryMeasureType="IfcText" pos="0"/>
 			<!--  .... -->
 			<!--  Other technical Properties for other domains / views-->
 			<IfcSimplePropertyTemplate id="i2223" GlobalId="3VYD7hS$T1ugFpW8gVJKzJ" Name="Beschreibung" Description="Freitextfeld zur allgemeinen Beschreibung von Objektinformationen" TemplateType="p_singlevalue" PrimaryMeasureType="IfcText" pos="0"/>
@@ -12158,7 +12158,7 @@
 											<IfcLabel-wrapper>Fireray50/100RV</IfcLabel-wrapper>
 										</NominalValue>
 									</IfcPropertySingleValue>
-									<IfcPropertySingleValue id="i71302" Name="Type according Articel 11-4">
+									<IfcPropertySingleValue id="i71302" Name="Type according Article 11-4">
 										<NominalValue>
 											<IfcLabel-wrapper>Fireray 50 RV and Fireray 100RV</IfcLabel-wrapper>
 										</NominalValue>

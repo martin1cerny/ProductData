@@ -13052,14 +13052,14 @@ of the material. The information contained in this document is subject to change
 	<xs:simpleType name="IfcWarpingMomentMeasure">
 		<xs:restriction base="xs:double"/>
 	</xs:simpleType>
-	<!-- base entity and entity attribute declaration (for embeded base schema definitions) -->
+	<!-- base entity and entity attribute declaration (for embedded base schema definitions) -->
 	<xs:element name="Entity" type="ifc:Entity" abstract="true" nillable="true"/>
 	<xs:complexType name="Entity" abstract="true">
 		<xs:attribute name="href" type="xs:anyURI" use="optional"/>
 		<xs:attribute name="ref" type="xs:IDREF" use="optional"/>
 		<xs:attributeGroup ref="ifc:instanceAttributes"/>
 	</xs:complexType>
-	<!-- base global attribute declaration (for embeded base schema definitions) -->
+	<!-- base global attribute declaration (for embedded base schema definitions) -->
 	<xs:attributeGroup name="instanceAttributes">
 		<xs:attribute name="id" type="xs:ID" use="optional"/>
 		<xs:attribute name="path" type="xs:NMTOKENS" use="optional"/>
@@ -13106,7 +13106,7 @@ of the material. The information contained in this document is subject to change
 			<xs:enumeration value="list-unique"/>
 		</xs:restriction>
 	</xs:simpleType>
-	<!-- base global simple type declaration (for embeded base schema definitions) -->
+	<!-- base global simple type declaration (for embedded base schema definitions) -->
 	<xs:complexType name="hexBinary">
 		<xs:simpleContent>
 			<xs:extension base="xs:hexBinary">
@@ -13121,7 +13121,7 @@ of the material. The information contained in this document is subject to change
 			<xs:enumeration value="unknown"/>
 		</xs:restriction>
 	</xs:simpleType>
-	<!-- base global wrapper declaration for atomic simple types (for embeded base schema definitions) -->
+	<!-- base global wrapper declaration for atomic simple types (for embedded base schema definitions) -->
 	<xs:element name="IfcAbsorbedDoseMeasure-wrapper" nillable="true">
 		<xs:complexType>
 			<xs:simpleContent>

@@ -19,7 +19,7 @@
 						<HasPropertyTemplates>
 							<IfcComplexPropertyTemplate GlobalId="1DbshTzGD71ejuZQqQcxab" Name="dimension" id="Tid_cp0">
 								<HasPropertyTemplates>
-									<IfcSimplePropertyTemplate id="id_propt_l" GlobalId="1DbshTzGD71ejuZQqQcxan" Name="lenght" Description="" TemplateType="p_singlevalue" PrimaryMeasureType="IfcReal"/>
+									<IfcSimplePropertyTemplate id="id_propt_l" GlobalId="1DbshTzGD71ejuZQqQcxan" Name="length" Description="" TemplateType="p_singlevalue" PrimaryMeasureType="IfcReal"/>
 									<IfcSimplePropertyTemplate id="id_propt_w" GlobalId="1DbshTzGD71ejuZQqQcxao" Name="width" Description="" TemplateType="p_singlevalue" PrimaryMeasureType="IfcReal"/>
 									<IfcSimplePropertyTemplate id="id_propt_h" GlobalId="1DbshTzGD71ejuZQqQcxap" Name="height" Description="" TemplateType="p_singlevalue" PrimaryMeasureType="IfcReal"/>
 								</HasPropertyTemplates>
@@ -39,7 +39,7 @@
 						<HasPropertySets>
 							<IfcPropertySet Name="geometic data" id="id_ps0">
 								<HasProperties>
-									<IfcPropertySingleValue id="id_prop_l" Name="lenght" Description="Lenght of the brick"/>
+									<IfcPropertySingleValue id="id_prop_l" Name="length" Description="Length of the brick"/>
 									<IfcPropertySingleValue id="id_prop_w" Name="width" Description="Width of the brick"/>
 									<IfcPropertySingleValue id="id_prop_h" Name="height" Description=" Height of the brick"/>
 								</HasProperties>
@@ -58,7 +58,7 @@
 		<RelatingTemplate xsi:nil="true" ref="Tid_ps0"/>
 	</IfcRelDefinesByTemplate>
 	<!--My Expression of the list of bricks in Italy-->
-	<!--Define constraints for propery values-->
+	<!--Define constraints for property values-->
 	<IfcObjective id="Objective01">
 		<BenchmarkValues>
 			<IfcMetric>
@@ -89,9 +89,9 @@
 		<BenchmarkValues>
 			<IfcObjective Name="Piemonte" Description="Bricks' production zone" ObjectiveQualifier="parameter" ConstraintGrade="hard" LogicalAggregator="logicalor">
 				<BenchmarkValues>
-					<IfcMetric Name="Piemonte_lenght" Benchmark="equalto" ConstraintGrade="hard" ConstraintSource="list of possible values" Description="lenght constraint" ValueSource="IfcSimplePropertyTemplate">
+					<IfcMetric Name="Piemonte_length" Benchmark="equalto" ConstraintGrade="hard" ConstraintSource="list of possible values" Description="length constraint" ValueSource="IfcSimplePropertyTemplate">
 						<DataValue>
-							<IfcAppliedValue id="av01" Name="Piemonte lenghts" Description="" ApplicableDate="" ArithmeticOperator="add" Condition="" Category="" FixedUntilDate="">
+							<IfcAppliedValue id="av01" Name="Piemonte lengths" Description="" ApplicableDate="" ArithmeticOperator="add" Condition="" Category="" FixedUntilDate="">
 								<Components>
 									<IfcAppliedValue pos="0">
 										<AppliedValue>
@@ -108,7 +108,7 @@
 						</DataValue>
 						<ReferencePath TypeIdentifier="IfcTypeProduct" AttributeIdentifier="HasProperties" ref="id_BrickType1">
 							<InnerReference TypeIdentifier="IfcPropertySet" AttributeIdentifier="HasProperties" ref="id_ps0">
-									<InnerReference AttributeIdentifier="NominalValue" TypeIdentifier="IfcPropertySingleValue" InstanceName="lenght" ref="id_propt_l">
+									<InnerReference AttributeIdentifier="NominalValue" TypeIdentifier="IfcPropertySingleValue" InstanceName="length" ref="id_propt_l">
 									</InnerReference>
 								</InnerReference>
 						</ReferencePath>
@@ -169,9 +169,9 @@
 			</IfcObjective>
 			<IfcObjective Name="Lombardia" Description="Bricks' production zone" ObjectiveQualifier="parameter" ConstraintGrade="hard" LogicalAggregator="logicalor">
 				<BenchmarkValues>
-					<IfcMetric Name="Lombardia_lenght" Benchmark="equalto" ConstraintGrade="hard" ConstraintSource="list of possible values" Description="lenght constraint" ValueSource="IfcSimplePropertyTemplate">
+					<IfcMetric Name="Lombardia_length" Benchmark="equalto" ConstraintGrade="hard" ConstraintSource="list of possible values" Description="length constraint" ValueSource="IfcSimplePropertyTemplate">
 						<DataValue>
-							<IfcAppliedValue Name="Lombardia lenghts">
+							<IfcAppliedValue Name="Lombardia lengths">
 								<Components>
 									<IfcAppliedValue pos="0">
 										<AppliedValue>
@@ -194,7 +194,7 @@
 						<ReferencePath TypeIdentifier="IfcTypeProduct" AttributeIdentifier="HasProperties" ref="id_BrickType1">
 							<InnerReference TypeIdentifier="IfcPropertySet" AttributeIdentifier="HasProperties" ref="id_ps0">
 								<InnerReference TypeIdentifier="IfcComplexProperty" AttributeIdentifier="HasProperties" ref="id_cp0">
-									<InnerReference AttributeIdentifier="NominalValue" TypeIdentifier="IfcPropertySingleValue" InstanceName="lenght" ref="id_prop_l">
+									<InnerReference AttributeIdentifier="NominalValue" TypeIdentifier="IfcPropertySingleValue" InstanceName="length" ref="id_prop_l">
 									</InnerReference>
 								</InnerReference>
 							</InnerReference>
@@ -274,9 +274,9 @@
 			<BenchmarkValues>
 				<IfcObjective Name="Piemonte" Description="Bricks' production zone" ObjectiveQualifier="parameter" ConstraintGrade="hard" LogicalAggregator="logicalor">
 					<BenchmarkValues>
-						<IfcMetric Name="Piemonte_lenght" Benchmark="equalto" ConstraintGrade="hard" ConstraintSource="list of possible values" Description="lenght constraint" ValueSource="IfcSimplePropertyTemplate">
+						<IfcMetric Name="Piemonte_length" Benchmark="equalto" ConstraintGrade="hard" ConstraintSource="list of possible values" Description="length constraint" ValueSource="IfcSimplePropertyTemplate">
 							<DataValue>
-								<IfcAppliedValue Name="Piemonte lenghts">
+								<IfcAppliedValue Name="Piemonte lengths">
 									<Components>
 										<IfcAppliedValue pos="0">
 											<AppliedValue>
@@ -294,7 +294,7 @@
 							<ReferencePath TypeIdentifier="IfcTypeProduct" AttributeIdentifier="HasProperties" ref="id_BrickType1">
 								<InnerReference TypeIdentifier="IfcPropertySet" AttributeIdentifier="HasProperties" ref="id_ps0">
 									<InnerReference TypeIdentifier="IfcComplexProperty" AttributeIdentifier="HasProperties" ref="id_cp0">
-										<InnerReference AttributeIdentifier="NominalValue" TypeIdentifier="IfcPropertySingleValue" InstanceName="lenght" ref="id_propt_l">
+										<InnerReference AttributeIdentifier="NominalValue" TypeIdentifier="IfcPropertySingleValue" InstanceName="length" ref="id_propt_l">
 										</InnerReference>
 									</InnerReference>
 								</InnerReference>
@@ -356,9 +356,9 @@
 				</IfcObjective>
 				<IfcObjective Name="Lombardia" Description="Bricks' production zone" ObjectiveQualifier="parameter" ConstraintGrade="hard" LogicalAggregator="logicalor">
 					<BenchmarkValues>
-						<IfcMetric Name="Lombardia_lenght" Benchmark="equalto" ConstraintGrade="hard" ConstraintSource="list of possible values" Description="lenght constraint" ValueSource="IfcSimplePropertyTemplate">
+						<IfcMetric Name="Lombardia_length" Benchmark="equalto" ConstraintGrade="hard" ConstraintSource="list of possible values" Description="length constraint" ValueSource="IfcSimplePropertyTemplate">
 							<DataValue>
-								<IfcAppliedValue Name="Lombardia lenghts">
+								<IfcAppliedValue Name="Lombardia lengths">
 									<Components>
 										<IfcAppliedValue pos="0">
 											<AppliedValue>
@@ -381,7 +381,7 @@
 							<ReferencePath TypeIdentifier="IfcTypeProduct" AttributeIdentifier="HasProperties" ref="id_BrickType1">
 								<InnerReference TypeIdentifier="IfcPropertySet" AttributeIdentifier="HasProperties" ref="id_ps0">
 									<InnerReference TypeIdentifier="IfcComplexProperty" AttributeIdentifier="HasProperties" ref="id_cp0">
-										<InnerReference AttributeIdentifier="NominalValue" TypeIdentifier="IfcPropertySingleValue" InstanceName="lenght" ref="id_prop_l">
+										<InnerReference AttributeIdentifier="NominalValue" TypeIdentifier="IfcPropertySingleValue" InstanceName="length" ref="id_prop_l">
 										</InnerReference>
 									</InnerReference>
 								</InnerReference>

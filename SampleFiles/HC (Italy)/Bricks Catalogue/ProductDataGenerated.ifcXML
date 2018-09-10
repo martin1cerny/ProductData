@@ -61,7 +61,7 @@
 									<IfcLengthMeasure-wrapper>12</IfcLengthMeasure-wrapper>
 								</NominalValue>
 							</IfcPropertySingleValue>
-							<IfcPropertySingleValue id="i122" Name="lenght" Description="">
+							<IfcPropertySingleValue id="i122" Name="length" Description="">
 								<NominalValue>
 									<IfcLengthMeasure-wrapper>24</IfcLengthMeasure-wrapper>
 								</NominalValue>
@@ -89,7 +89,7 @@
 									<IfcLengthMeasure-wrapper>11.5</IfcLengthMeasure-wrapper>
 								</NominalValue>
 							</IfcPropertySingleValue>
-							<IfcPropertySingleValue id="i129" Name="lenght" Description="">
+							<IfcPropertySingleValue id="i129" Name="length" Description="">
 								<NominalValue>
 									<IfcLengthMeasure-wrapper>24</IfcLengthMeasure-wrapper>
 								</NominalValue>
@@ -117,7 +117,7 @@
 									<IfcLengthMeasure-wrapper>11</IfcLengthMeasure-wrapper>
 								</NominalValue>
 							</IfcPropertySingleValue>
-							<IfcPropertySingleValue id="i136" Name="lenght" Description="">
+							<IfcPropertySingleValue id="i136" Name="length" Description="">
 								<NominalValue>
 									<IfcLengthMeasure-wrapper>23</IfcLengthMeasure-wrapper>
 								</NominalValue>
@@ -145,7 +145,7 @@
 									<IfcLengthMeasure-wrapper>10.5</IfcLengthMeasure-wrapper>
 								</NominalValue>
 							</IfcPropertySingleValue>
-							<IfcPropertySingleValue id="i143" Name="lenght" Description="">
+							<IfcPropertySingleValue id="i143" Name="length" Description="">
 								<NominalValue>
 									<IfcLengthMeasure-wrapper>22.5</IfcLengthMeasure-wrapper>
 								</NominalValue>
@@ -173,7 +173,7 @@
 									<IfcLengthMeasure-wrapper>12</IfcLengthMeasure-wrapper>
 								</NominalValue>
 							</IfcPropertySingleValue>
-							<IfcPropertySingleValue id="i150" Name="lenght" Description="">
+							<IfcPropertySingleValue id="i150" Name="length" Description="">
 								<NominalValue>
 									<IfcLengthMeasure-wrapper>25</IfcLengthMeasure-wrapper>
 								</NominalValue>
@@ -201,7 +201,7 @@
 									<IfcLengthMeasure-wrapper>12.5</IfcLengthMeasure-wrapper>
 								</NominalValue>
 							</IfcPropertySingleValue>
-							<IfcPropertySingleValue id="i157" Name="lenght" Description="">
+							<IfcPropertySingleValue id="i157" Name="length" Description="">
 								<NominalValue>
 									<IfcLengthMeasure-wrapper>26</IfcLengthMeasure-wrapper>
 								</NominalValue>
@@ -229,7 +229,7 @@
 									<IfcLengthMeasure-wrapper>13</IfcLengthMeasure-wrapper>
 								</NominalValue>
 							</IfcPropertySingleValue>
-							<IfcPropertySingleValue id="i164" Name="lenght" Description="">
+							<IfcPropertySingleValue id="i164" Name="length" Description="">
 								<NominalValue>
 									<IfcLengthMeasure-wrapper>26</IfcLengthMeasure-wrapper>
 								</NominalValue>
@@ -257,7 +257,7 @@
 									<IfcLengthMeasure-wrapper>12</IfcLengthMeasure-wrapper>
 								</NominalValue>
 							</IfcPropertySingleValue>
-							<IfcPropertySingleValue id="i171" Name="lenght" Description="">
+							<IfcPropertySingleValue id="i171" Name="length" Description="">
 								<NominalValue>
 									<IfcLengthMeasure-wrapper>25</IfcLengthMeasure-wrapper>
 								</NominalValue>
@@ -285,7 +285,7 @@
 									<IfcLengthMeasure-wrapper>12</IfcLengthMeasure-wrapper>
 								</NominalValue>
 							</IfcPropertySingleValue>
-							<IfcPropertySingleValue id="i178" Name="lenght" Description="">
+							<IfcPropertySingleValue id="i178" Name="length" Description="">
 								<NominalValue>
 									<IfcLengthMeasure-wrapper>24</IfcLengthMeasure-wrapper>
 								</NominalValue>
@@ -313,7 +313,7 @@
 									<IfcLengthMeasure-wrapper>12</IfcLengthMeasure-wrapper>
 								</NominalValue>
 							</IfcPropertySingleValue>
-							<IfcPropertySingleValue id="i185" Name="lenght" Description="">
+							<IfcPropertySingleValue id="i185" Name="length" Description="">
 								<NominalValue>
 									<IfcLengthMeasure-wrapper>28</IfcLengthMeasure-wrapper>
 								</NominalValue>
@@ -341,7 +341,7 @@
 									<IfcLengthMeasure-wrapper>13</IfcLengthMeasure-wrapper>
 								</NominalValue>
 							</IfcPropertySingleValue>
-							<IfcPropertySingleValue id="i192" Name="lenght" Description="">
+							<IfcPropertySingleValue id="i192" Name="length" Description="">
 								<NominalValue>
 									<IfcLengthMeasure-wrapper>26</IfcLengthMeasure-wrapper>
 								</NominalValue>
@@ -369,7 +369,7 @@
 									<IfcLengthMeasure-wrapper>14</IfcLengthMeasure-wrapper>
 								</NominalValue>
 							</IfcPropertySingleValue>
-							<IfcPropertySingleValue id="i199" Name="lenght" Description="">
+							<IfcPropertySingleValue id="i199" Name="length" Description="">
 								<NominalValue>
 									<IfcLengthMeasure-wrapper>28</IfcLengthMeasure-wrapper>
 								</NominalValue>
@@ -397,7 +397,7 @@
 									<IfcLengthMeasure-wrapper>12</IfcLengthMeasure-wrapper>
 								</NominalValue>
 							</IfcPropertySingleValue>
-							<IfcPropertySingleValue id="i206" Name="lenght" Description="">
+							<IfcPropertySingleValue id="i206" Name="length" Description="">
 								<NominalValue>
 									<IfcLengthMeasure-wrapper>25</IfcLengthMeasure-wrapper>
 								</NominalValue>
@@ -425,7 +425,7 @@
 									<IfcLengthMeasure-wrapper>13</IfcLengthMeasure-wrapper>
 								</NominalValue>
 							</IfcPropertySingleValue>
-							<IfcPropertySingleValue id="i213" Name="lenght" Description="">
+							<IfcPropertySingleValue id="i213" Name="length" Description="">
 								<NominalValue>
 									<IfcLengthMeasure-wrapper>26</IfcLengthMeasure-wrapper>
 								</NominalValue>
@@ -453,7 +453,7 @@
 									<IfcLengthMeasure-wrapper>13</IfcLengthMeasure-wrapper>
 								</NominalValue>
 							</IfcPropertySingleValue>
-							<IfcPropertySingleValue id="i220" Name="lenght" Description="">
+							<IfcPropertySingleValue id="i220" Name="length" Description="">
 								<NominalValue>
 									<IfcLengthMeasure-wrapper>26</IfcLengthMeasure-wrapper>
 								</NominalValue>
@@ -481,7 +481,7 @@
 									<IfcLengthMeasure-wrapper>13</IfcLengthMeasure-wrapper>
 								</NominalValue>
 							</IfcPropertySingleValue>
-							<IfcPropertySingleValue id="i227" Name="lenght" Description="">
+							<IfcPropertySingleValue id="i227" Name="length" Description="">
 								<NominalValue>
 									<IfcLengthMeasure-wrapper>28</IfcLengthMeasure-wrapper>
 								</NominalValue>
@@ -509,7 +509,7 @@
 									<IfcLengthMeasure-wrapper>13</IfcLengthMeasure-wrapper>
 								</NominalValue>
 							</IfcPropertySingleValue>
-							<IfcPropertySingleValue id="i234" Name="lenght" Description="">
+							<IfcPropertySingleValue id="i234" Name="length" Description="">
 								<NominalValue>
 									<IfcLengthMeasure-wrapper>26</IfcLengthMeasure-wrapper>
 								</NominalValue>
@@ -537,7 +537,7 @@
 									<IfcLengthMeasure-wrapper>13</IfcLengthMeasure-wrapper>
 								</NominalValue>
 							</IfcPropertySingleValue>
-							<IfcPropertySingleValue id="i241" Name="lenght" Description="">
+							<IfcPropertySingleValue id="i241" Name="length" Description="">
 								<NominalValue>
 									<IfcLengthMeasure-wrapper>26</IfcLengthMeasure-wrapper>
 								</NominalValue>
@@ -565,7 +565,7 @@
 									<IfcLengthMeasure-wrapper>14</IfcLengthMeasure-wrapper>
 								</NominalValue>
 							</IfcPropertySingleValue>
-							<IfcPropertySingleValue id="i248" Name="lenght" Description="">
+							<IfcPropertySingleValue id="i248" Name="length" Description="">
 								<NominalValue>
 									<IfcLengthMeasure-wrapper>28</IfcLengthMeasure-wrapper>
 								</NominalValue>
@@ -593,7 +593,7 @@
 									<IfcLengthMeasure-wrapper>14</IfcLengthMeasure-wrapper>
 								</NominalValue>
 							</IfcPropertySingleValue>
-							<IfcPropertySingleValue id="i255" Name="lenght" Description="">
+							<IfcPropertySingleValue id="i255" Name="length" Description="">
 								<NominalValue>
 									<IfcLengthMeasure-wrapper>28</IfcLengthMeasure-wrapper>
 								</NominalValue>
@@ -621,7 +621,7 @@
 									<IfcLengthMeasure-wrapper>13</IfcLengthMeasure-wrapper>
 								</NominalValue>
 							</IfcPropertySingleValue>
-							<IfcPropertySingleValue id="i262" Name="lenght" Description="">
+							<IfcPropertySingleValue id="i262" Name="length" Description="">
 								<NominalValue>
 									<IfcLengthMeasure-wrapper>26</IfcLengthMeasure-wrapper>
 								</NominalValue>
@@ -649,7 +649,7 @@
 									<IfcLengthMeasure-wrapper>13</IfcLengthMeasure-wrapper>
 								</NominalValue>
 							</IfcPropertySingleValue>
-							<IfcPropertySingleValue id="i269" Name="lenght" Description="">
+							<IfcPropertySingleValue id="i269" Name="length" Description="">
 								<NominalValue>
 									<IfcLengthMeasure-wrapper>27</IfcLengthMeasure-wrapper>
 								</NominalValue>
@@ -677,7 +677,7 @@
 									<IfcLengthMeasure-wrapper>13</IfcLengthMeasure-wrapper>
 								</NominalValue>
 							</IfcPropertySingleValue>
-							<IfcPropertySingleValue id="i276" Name="lenght" Description="">
+							<IfcPropertySingleValue id="i276" Name="length" Description="">
 								<NominalValue>
 									<IfcLengthMeasure-wrapper>26</IfcLengthMeasure-wrapper>
 								</NominalValue>
@@ -705,7 +705,7 @@
 									<IfcLengthMeasure-wrapper>13</IfcLengthMeasure-wrapper>
 								</NominalValue>
 							</IfcPropertySingleValue>
-							<IfcPropertySingleValue id="i283" Name="lenght" Description="">
+							<IfcPropertySingleValue id="i283" Name="length" Description="">
 								<NominalValue>
 									<IfcLengthMeasure-wrapper>26</IfcLengthMeasure-wrapper>
 								</NominalValue>
@@ -733,7 +733,7 @@
 									<IfcLengthMeasure-wrapper>13</IfcLengthMeasure-wrapper>
 								</NominalValue>
 							</IfcPropertySingleValue>
-							<IfcPropertySingleValue id="i290" Name="lenght" Description="">
+							<IfcPropertySingleValue id="i290" Name="length" Description="">
 								<NominalValue>
 									<IfcLengthMeasure-wrapper>26</IfcLengthMeasure-wrapper>
 								</NominalValue>
@@ -761,7 +761,7 @@
 									<IfcLengthMeasure-wrapper>12.8</IfcLengthMeasure-wrapper>
 								</NominalValue>
 							</IfcPropertySingleValue>
-							<IfcPropertySingleValue id="i297" Name="lenght" Description="">
+							<IfcPropertySingleValue id="i297" Name="length" Description="">
 								<NominalValue>
 									<IfcLengthMeasure-wrapper>26</IfcLengthMeasure-wrapper>
 								</NominalValue>
@@ -789,7 +789,7 @@
 									<IfcLengthMeasure-wrapper>13</IfcLengthMeasure-wrapper>
 								</NominalValue>
 							</IfcPropertySingleValue>
-							<IfcPropertySingleValue id="i304" Name="lenght" Description="">
+							<IfcPropertySingleValue id="i304" Name="length" Description="">
 								<NominalValue>
 									<IfcLengthMeasure-wrapper>26</IfcLengthMeasure-wrapper>
 								</NominalValue>
@@ -817,7 +817,7 @@
 									<IfcLengthMeasure-wrapper>12</IfcLengthMeasure-wrapper>
 								</NominalValue>
 							</IfcPropertySingleValue>
-							<IfcPropertySingleValue id="i311" Name="lenght" Description="">
+							<IfcPropertySingleValue id="i311" Name="length" Description="">
 								<NominalValue>
 									<IfcLengthMeasure-wrapper>25</IfcLengthMeasure-wrapper>
 								</NominalValue>
@@ -845,7 +845,7 @@
 									<IfcLengthMeasure-wrapper>12</IfcLengthMeasure-wrapper>
 								</NominalValue>
 							</IfcPropertySingleValue>
-							<IfcPropertySingleValue id="i318" Name="lenght" Description="">
+							<IfcPropertySingleValue id="i318" Name="length" Description="">
 								<NominalValue>
 									<IfcLengthMeasure-wrapper>25</IfcLengthMeasure-wrapper>
 								</NominalValue>
@@ -873,7 +873,7 @@
 									<IfcLengthMeasure-wrapper>12</IfcLengthMeasure-wrapper>
 								</NominalValue>
 							</IfcPropertySingleValue>
-							<IfcPropertySingleValue id="i325" Name="lenght" Description="">
+							<IfcPropertySingleValue id="i325" Name="length" Description="">
 								<NominalValue>
 									<IfcLengthMeasure-wrapper>24</IfcLengthMeasure-wrapper>
 								</NominalValue>
