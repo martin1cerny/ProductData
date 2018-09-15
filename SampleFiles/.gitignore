@@ -1,0 +1,3 @@
+## Exclude all logs from model validation
+*.log
+*.log.*

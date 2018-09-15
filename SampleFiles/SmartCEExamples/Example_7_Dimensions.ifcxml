@@ -1,0 +1,89 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ifcXML xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:ifc="http://www.buildingsmart-tech.org/ifcXML/IFC4/Add2" xsi:schemaLocation="http://www.buildingsmart-tech.org/ifcXML/IFC4/Add2 http://www.buildingsmart-tech.org/ifc/IFC4/Add2/IFC4_ADD2.xsd" id="uos_1" express="http://www.buildingsmart-tech.org/ifc/IFC4/Add2/IFC4_ADD2.exp" configuration="http://www.buildingsmart-tech.org/ifc/IFC4/Add2/IFC4_ADD2_config.xml" xmlns="http://www.buildingsmart-tech.org/ifcXML/IFC4/Add2">
+  <header>
+    <time_stamp>2018-09-15T14:11:32</time_stamp>
+    <preprocessor_version>Xbim File Processor version 4.0.0.0</preprocessor_version>
+    <originating_system>Xbim version 4.0.0.0</originating_system>
+  </header>
+  <IfcProjectLibrary id="i1" GlobalId="1S8Q1f29PEZemSPqVjHB_W" Name="Declaration of Performance">
+    <OwnerHistory id="i2" xsi:type="IfcOwnerHistory" ChangeAction="added" LastModifiedDate="1537020693" CreationDate="0">
+      <OwningUser id="i5" xsi:type="IfcPersonAndOrganization">
+        <ThePerson id="i3" xsi:type="IfcPerson" FamilyName="Cerny" GivenName="Martin" MiddleNames="" PrefixTitles="" SuffixTitles="" />
+        <TheOrganization id="i4" xsi:type="IfcOrganization" Name="UNMZ" />
+      </OwningUser>
+      <OwningApplication id="i6" xsi:type="IfcApplication" Version="4.0" ApplicationFullName="xBIM Toolkit" ApplicationIdentifier="xBIM">
+        <ApplicationDeveloper ref="i4" xsi:type="IfcOrganization" xsi:nil="true" />
+      </OwningApplication>
+    </OwnerHistory>
+    <UnitsInContext id="i8" xsi:type="IfcUnitAssignment">
+      <Units>
+        <IfcSIUnit id="i7" pos="0" UnitType="lengthunit" Prefix="milli" Name="metre" />
+      </Units>
+    </UnitsInContext>
+    <Declares>
+      <IfcRelDeclares id="i9" pos="0" GlobalId="04f3txR995RhSJ80qPjVt_">
+        <OwnerHistory ref="i2" xsi:type="IfcOwnerHistory" xsi:nil="true" />
+        <RelatedDefinitions>
+          <IfcPropertySetTemplate id="i10" pos="0" GlobalId="0s1Pz_Kw9E8uYdqhQV3_jt" Name="dimensions" ApplicableEntity="IfcElement">
+            <OwnerHistory ref="i2" xsi:type="IfcOwnerHistory" xsi:nil="true" />
+            <HasPropertyTemplates>
+              <IfcComplexPropertyTemplate id="i11" pos="0" GlobalId="02JBL8XkvBmf9uL2F_BbjS" Name="length" UsageName="length">
+                <OwnerHistory ref="i2" xsi:type="IfcOwnerHistory" xsi:nil="true" />
+                <HasPropertyTemplates>
+                  <IfcSimplePropertyTemplate id="i12" pos="0" GlobalId="2ZSXantSv4HfPe18EkBSS8" Name="Value" TemplateType="p_singlevalue" PrimaryMeasureType="IfcLengthMeasure">
+                    <OwnerHistory ref="i2" xsi:type="IfcOwnerHistory" xsi:nil="true" />
+                    <PrimaryUnit>
+                      <IfcSIUnit ref="i7" xsi:nil="true" />
+                    </PrimaryUnit>
+                  </IfcSimplePropertyTemplate>
+                  <IfcSimplePropertyTemplate id="i13" pos="1" GlobalId="2dL7zts6X7T9fLgmAVapDS" Name="ReferenceDocument" TemplateType="p_referencevalue" PrimaryMeasureType="IfcDocumentReference">
+                    <OwnerHistory ref="i2" xsi:type="IfcOwnerHistory" xsi:nil="true" />
+                  </IfcSimplePropertyTemplate>
+                </HasPropertyTemplates>
+              </IfcComplexPropertyTemplate>
+            </HasPropertyTemplates>
+          </IfcPropertySetTemplate>
+          <IfcBuildingElementPart id="i14" pos="1" GlobalId="2U7HybUov8NQk4HEqpcQU0" Name="Porotherm 50 EKO+ Profi R" ObjectType="BRICK" PredefinedType="userdefined">
+            <OwnerHistory ref="i2" xsi:type="IfcOwnerHistory" xsi:nil="true" />
+            <IsDefinedBy>
+              <IfcRelDefinesByProperties id="i21" pos="0" GlobalId="1fHlan5DLCWeSZxHXmi4U3">
+                <OwnerHistory ref="i2" xsi:type="IfcOwnerHistory" xsi:nil="true" />
+                <RelatingPropertyDefinition>
+                  <IfcPropertySet id="i15" GlobalId="0eYh5XVO52mArFPQsNfg9x" Name="dimensions">
+                    <OwnerHistory ref="i2" xsi:type="IfcOwnerHistory" xsi:nil="true" />
+                    <HasProperties>
+                      <IfcComplexProperty id="i16" pos="0" Name="length" UsageName="length">
+                        <HasProperties>
+                          <IfcPropertySingleValue id="i17" pos="0" Name="Value">
+                            <NominalValue>
+                              <IfcLengthMeasure-wrapper>300</IfcLengthMeasure-wrapper>
+                            </NominalValue>
+                            <Unit>
+                              <IfcSIUnit ref="i7" xsi:nil="true" />
+                            </Unit>
+                          </IfcPropertySingleValue>
+                          <IfcPropertyReferenceValue id="i18" pos="1" Name="ReferenceDocument">
+                            <PropertyReference>
+                              <IfcDocumentReference id="i19" Name="EN 772-1" />
+                            </PropertyReference>
+                          </IfcPropertyReferenceValue>
+                        </HasProperties>
+                      </IfcComplexProperty>
+                    </HasProperties>
+                  </IfcPropertySet>
+                </RelatingPropertyDefinition>
+              </IfcRelDefinesByProperties>
+            </IsDefinedBy>
+          </IfcBuildingElementPart>
+        </RelatedDefinitions>
+      </IfcRelDeclares>
+    </Declares>
+  </IfcProjectLibrary>
+  <IfcRelDefinesByTemplate id="i20" GlobalId="31yu8VwfjDTvqeX6oXwAqm">
+    <OwnerHistory ref="i2" xsi:type="IfcOwnerHistory" xsi:nil="true" />
+    <RelatedPropertySets>
+      <IfcPropertySet ref="i15" pos="0" xsi:nil="true" />
+    </RelatedPropertySets>
+    <RelatingTemplate ref="i10" xsi:type="IfcPropertySetTemplate" xsi:nil="true" />
+  </IfcRelDefinesByTemplate>
+</ifcXML>
