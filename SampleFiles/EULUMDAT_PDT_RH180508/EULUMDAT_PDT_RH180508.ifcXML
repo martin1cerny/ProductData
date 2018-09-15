@@ -383,27 +383,92 @@ Nextrema G3 TB 8000-840 ETDD +LLWC
 						</NominalValue>
 					</IfcPropertySingleValue>
 					<IfcPropertySingleValue id="i219" Name="Width of the luminous area" Description="The 'Width of the luminous area' is defined by a related constraint"/>
+					<IfcPropertySingleValue id="i220" Name="Lamp Count" Description="The 'Lamp Count' is defined by a related constraint"/>
 				</HasProperties>
 			</IfcPropertySet>
 		</HasPropertySets>
 	</IfcLampType>
-	<IfcResourceConstraintRelationship id="i220" Name="Constraint on the values of 'Width of the luminous area'" Description="The value of width for the produkt is between 100 and 200">
-		<RelatingConstraint id="i218" xsi:type="IfcObjective" ConstraintGrade="hard" LogicalAggregator="logicaland" ConstraintSource="" ObjectiveQualifier="parameter">
+	<IfcResourceConstraintRelationship id="i221" Name="Constraint on the values of 'Width of the luminous area'" Description="The value of width for the produkt is between 100 and 200 with no definition of steps (discrete value)">
+		<RelatingConstraint id="i218" xsi:type="IfcObjective" ConstraintGrade="hard" LogicalAggregator="logicaland" ObjectiveQualifier="parameter">
 			<ifc:BenchmarkValues>
-				<IfcMetric ConstraintGrade="hard" ConstraintSource="" Benchmark="greaterthanorequalto">
+				<IfcMetric id="i222" ConstraintGrade="hard" Benchmark="greaterthanorequalto">
 					<DataValue>
-						<IfcReal-wrapper>100</IfcReal-wrapper>
+						<IfcMeasureWithUnit>
+							<ValueComponent>
+								<IfcReal-wrapper>100</IfcReal-wrapper>
+							</ValueComponent>
+							<UnitComponent>
+								<IfcSIUnit ref="i8"/>
+							</UnitComponent>
+						</IfcMeasureWithUnit>
 					</DataValue>
 				</IfcMetric>
-				<IfcMetric ConstraintGrade="hard" ConstraintSource="" Benchmark="lessthanorequalto">
+				<IfcMetric id="i223" ConstraintGrade="hard" Benchmark="lessthanorequalto">
 					<DataValue>
-						<IfcReal-wrapper>120</IfcReal-wrapper>
+						<IfcMeasureWithUnit>
+							<ValueComponent>
+								<IfcReal-wrapper>120</IfcReal-wrapper>
+							</ValueComponent>
+							<UnitComponent>
+								<IfcSIUnit ref="i8"/>
+							</UnitComponent>
+						</IfcMeasureWithUnit>
 					</DataValue>
 				</IfcMetric>
 			</ifc:BenchmarkValues>
 		</RelatingConstraint>
 		<RelatedResourceObjects>
 			<IfcPropertySingleValue ref="i219" Name="Constrain on value of 'Width of the luminous area'"/>
+		</RelatedResourceObjects>
+	</IfcResourceConstraintRelationship>
+	<IfcResourceConstraintRelationship id="i231" Name="Constraint on the values of 'Lamp Count'" Description="The value of 'Lamp Count' one of [1,2,3,4,5,6] (distinct value)">
+		<RelatingConstraint id="i232" xsi:type="IfcObjective" ConstraintGrade="hard" LogicalAggregator="logicaland" ObjectiveQualifier="parameter">
+			<ifc:BenchmarkValues>
+				<IfcMetric id="i233" ConstraintGrade="hard" Benchmark="equalto" ValueSource="Value">
+					<DataValue>
+						<IfcTable>
+							<Rows>
+								<IfcTableRow>
+									<RowCells>
+										<IfcInteger-wrapper>1</IfcInteger-wrapper>
+									</RowCells>
+								</IfcTableRow>
+								<IfcTableRow>
+									<RowCells>
+										<IfcInteger-wrapper>2</IfcInteger-wrapper>
+									</RowCells>
+								</IfcTableRow>
+								<IfcTableRow>
+									<RowCells>
+										<IfcInteger-wrapper>3</IfcInteger-wrapper>
+									</RowCells>
+								</IfcTableRow>
+								<IfcTableRow>
+									<RowCells>
+										<IfcInteger-wrapper>4</IfcInteger-wrapper>
+									</RowCells>
+								</IfcTableRow>
+								<IfcTableRow>
+									<RowCells>
+										<IfcInteger-wrapper>5</IfcInteger-wrapper>
+									</RowCells>
+								</IfcTableRow>
+								<IfcTableRow>
+									<RowCells>
+										<IfcInteger-wrapper>6</IfcInteger-wrapper>
+									</RowCells>
+								</IfcTableRow>
+							</Rows>
+							<Columns>
+								<IfcTableColumn Name="Value" Identifier="Value"/>
+							</Columns>
+						</IfcTable>
+					</DataValue>
+				</IfcMetric>
+			</ifc:BenchmarkValues>
+		</RelatingConstraint>
+		<RelatedResourceObjects>
+			<IfcPropertySingleValue ref="i220" Name="Constrain on value of 'Width of the luminous area'"/>
 		</RelatedResourceObjects>
 	</IfcResourceConstraintRelationship>
 	<IfcRelDefinesByTemplate>
