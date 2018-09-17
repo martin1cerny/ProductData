@@ -55,10 +55,10 @@ namespace SchemaValidator
             return !errors.Any();
         }
 
-        public bool Check(IModel model)
+        public bool Check(IModel model, string logFile = null)
         {
             // set up error logger handler to get errors from parser
-            appender = Logger.Setup(null);
+            appender = Logger.Setup(logFile);
             log = LogManager.GetLogger("Validator");
 
             return CheckInternal(model);

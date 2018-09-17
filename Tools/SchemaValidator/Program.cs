@@ -10,13 +10,6 @@ namespace SchemaValidator
 
         static int Main(string[] args)
         {
-
-            var v = new Validator();
-            v.Check(@"c:\Users\Martin\Source\WG2_ProductData\SampleFiles\SmartCEExamples\Example_7_Dimensions.ifcxml");
-            v.Check(@"c:\Users\Martin\Source\WG2_ProductData\SampleFiles\SmartCEExamples\Example_7_Dimensions.ifc");
-
-            return 0;
-
             if (args.Length < 1)
             {
                 Console.WriteLine("No file specified for the check");

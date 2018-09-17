@@ -5,7 +5,7 @@ VisualStudioVersion = 15.0.27703.2042
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SchemaValidator", "SchemaValidator\SchemaValidator.csproj", "{25DE284D-60AD-44D3-B320-A244D781AC20}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Example_7_Dimensions", "Example_7_Dimensions\Example_7_Dimensions.csproj", "{72641B12-ABEE-4D79-B626-6F001B945081}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Examples", "Examples\Examples.csproj", "{72641B12-ABEE-4D79-B626-6F001B945081}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
