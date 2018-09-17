@@ -18,6 +18,8 @@ to store dynamic data in form of table, function or documentation reference.";
         {
             using (var txn = model.BeginTransaction("Example"))
             {
+                ModelViews.Add("ProductDataView");
+
                 var lib = New<IfcProjectLibrary>(l => l.Name = "Air Terminal Library");
                 var hz = New<IfcSIUnit>(u =>
                 {
