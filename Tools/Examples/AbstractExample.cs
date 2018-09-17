@@ -127,6 +127,18 @@ namespace Examples
             AddCommentsToXml(xml);
         }
 
+        private string GetMetadata()
+        {
+            using (var w = new StringWriter())
+            {
+                w.WriteLine();
+                w.WriteLine();
+                w.WriteLine($"Created: {DateTime.UtcNow.ToString("s")} (UTC)");
+
+                return w.ToString();
+            }
+        }
+
         private static readonly Regex idExp = new Regex("^#(?<id>[0-9]+)");
 
         private void AddCommentsToStep21(string path)
@@ -142,9 +154,9 @@ namespace Examples
                 if (!string.IsNullOrWhiteSpace(Annotation))
                 {
                     w.WriteLine("/****************************************************************");
-                    var r = new StringReader(Annotation);
+                    var r = new StringReader(Annotation + GetMetadata());
                     var commentLine = "";
-                    while (!string.IsNullOrWhiteSpace(commentLine = r.ReadLine()))
+                    while ((commentLine = r.ReadLine()) != null)
                         w.WriteLine($" * {commentLine}");
                     w.WriteLine(" ****************************************************************/");
                 }
@@ -188,9 +200,9 @@ namespace Examples
             // annotation
             if (!string.IsNullOrWhiteSpace(Annotation))
             {
-                var r = new StringReader(Annotation);
+                var r = new StringReader(Annotation + GetMetadata());
                 var commentLine = "";
-                while (!string.IsNullOrWhiteSpace(commentLine = r.ReadLine()))
+                while ((commentLine = r.ReadLine()) != null)
                 {
                     var xCom = new XComment($" {commentLine} ");
                     doc.Root.AddBeforeSelf(xCom);
