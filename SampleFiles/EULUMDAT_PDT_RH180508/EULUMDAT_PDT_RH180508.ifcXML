@@ -426,7 +426,7 @@ Nextrema G3 TB 8000-840 ETDD +LLWC
 			<ifc:BenchmarkValues>
 				<IfcMetric id="i233" ConstraintGrade="hard" Benchmark="equalto" ValueSource="Value">
 					<DataValue>
-						<IfcTable>
+						<IfcTable id="i234" Name="Valuetable 'Lamp Count'">
 							<Rows>
 								<IfcTableRow>
 									<RowCells>

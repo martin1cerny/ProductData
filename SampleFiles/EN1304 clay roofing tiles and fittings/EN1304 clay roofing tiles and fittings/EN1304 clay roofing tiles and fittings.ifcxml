@@ -12149,7 +12149,7 @@
 		<IsDefinedBy>
 			<IfcRelDefinesByProperties id="i6896976">
 				<RelatingPropertyDefinition>
-					<IfcPropertySet ref="i33467">
+					<IfcPropertySet id="i6896977">
 						<HasProperties>
 							<IfcComplexProperty>
 								<HasProperties>
@@ -12176,6 +12176,12 @@
 			</IfcRelDefinesByProperties>
 		</IsDefinedBy>
 	</IfcAlarm>
+	<IfcRelDefinesByTemplate>
+		<RelatedPropertySets>
+			<IfcPropertySet ref="i6896977" pos="0" xsi:nil="true"/>
+		</RelatedPropertySets>
+		<RelatingTemplate ref="i2222" xsi:type="IfcPropertySetTemplate" xsi:nil="true"/>
+	</IfcRelDefinesByTemplate>	
 	<IfcAlarmType id="i9999" GlobalId="26JruP9Sj6_QQl9T2nuNCN" Name="Fireray Type 1" Description="Description of Fireray Type 1" PredefinedType="userdefined"/>
 	<!--  Sample reference to classification DINSPEC 91400 outside of XML structure of the element-->
 	<IfcRelAssociatesClassification id="i12799999999999" GlobalId="1fbJ0AXVj7qQIdiMHqoMyI" Name="PSet2CPR">

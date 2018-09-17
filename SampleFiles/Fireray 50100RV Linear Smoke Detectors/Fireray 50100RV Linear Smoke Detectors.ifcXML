@@ -434,8 +434,7 @@
 			</IfcSimplePropertyTemplate>
 		</HasPropertyTemplates>
 	</IfcPropertySetTemplate>
-
-   <!-- Step 2b: Define a PropertySetTemplate that includes a ComplexProperty (can be called "SuperProperty"), That can be generated/imported from a PSet, the bSDD, IfcDoc or elsewhere - -->
+	<!-- Step 2b: Define a PropertySetTemplate that includes a ComplexProperty (can be called "SuperProperty"), That can be generated/imported from a PSet, the bSDD, IfcDoc or elsewhere - -->
 	<IfcPropertySetTemplate id="i979942" GlobalId="1cbJaB0Uf0f8QbEnIhzd8b" Name="Discussion on methods of measurement and properties" Description="" ApplicableEntity="IfcWall">
 		<HasPropertyTemplates>
 			<IfcComplexPropertyTemplate id="i979943" GlobalId="10x58_dMjCtv6QMVLNUbj0" Name="Heat transmission (U-Value)" Description="This is an example of the ONE CLASSIFIED PROPERTYTEMPLATE FOR ALL TESTMETHODS WITH THE SAME UNIT solution. See Step 4 in this example!!!" pos="1">
@@ -454,7 +453,6 @@
 			</IfcComplexPropertyTemplate>
 		</HasPropertyTemplates>
 	</IfcPropertySetTemplate>
-
 	<!-- Step 3: Relate the PropertySetTemplate to  the classification node, that specifies the test method for all Properties in this PropertySet- -->
 	<!-- If there is no thestmethod for this propertyset, do not insert this reference  -->
 	<IfcRelAssociatesClassification id="i33520" GlobalId="2mVNBe4$L75ejegqXTQllf" Name="Set a reference  from a PropertySetTemplate to Testmethod 1">
@@ -12429,7 +12427,7 @@
 		<IsDefinedBy>
 			<IfcRelDefinesByProperties id="i6896976">
 				<RelatingPropertyDefinition>
-					<IfcPropertySet ref="i33467">
+					<IfcPropertySet id="i6896977">
 						<HasProperties>
 							<IfcComplexProperty>
 								<HasProperties>
@@ -12456,6 +12454,12 @@
 			</IfcRelDefinesByProperties>
 		</IsDefinedBy>
 	</IfcAlarm>
+	<IfcRelDefinesByTemplate>
+		<RelatedPropertySets>
+			<IfcPropertySet ref="i6896977" pos="0" xsi:nil="true"/>
+		</RelatedPropertySets>
+		<RelatingTemplate ref="i2222" xsi:type="IfcPropertySetTemplate" xsi:nil="true"/>
+	</IfcRelDefinesByTemplate>
 	<IfcAlarmType id="i9999" GlobalId="26JruP9Sj6_QQl9T2nuNCN" Name="Fireray Type 1" Description="Description of Fireray Type 1" PredefinedType="userdefined"/>
 	<!--  Sample reference to classification DINSPEC 91400 outside of XML structure of the element-->
 	<IfcRelAssociatesClassification id="i12799999999999" GlobalId="1fbJ0AXVj7qQIdiMHqoMyI" Name="PSet2CPR">

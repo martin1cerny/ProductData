@@ -139,7 +139,7 @@
 		<Declares>
 			<IfcRelDeclares>
 				<RelatedDefinitions>
-					<IfcAlarmType id="i9999876" GlobalId="1fbJ0AXVj7QQIdiMHqoMyK" PredefinedType="bell" ElementType="SystemNameOfMySpecialBellAlarm" Name="User name of my special bell alarm" Description="Definition of my special bell alarm"  />
+					<IfcAlarmType id="i9999876" GlobalId="1fbJ0AXVj7QQIdiMHqoMyK" PredefinedType="bell" ElementType="SystemNameOfMySpecialBellAlarm" Name="User name of my special bell alarm" Description="Definition of my special bell alarm"/>
 					<!-- Step 2: Define a PropertySetTemplate , That can be generated/imported from a PSet, the bSDD, IfcDoc or elsewhere - -->
 					<IfcPropertySetTemplate id="i33467" GlobalId="2e_rZByaj3v9TmNwzXRpFy" Name="Unique Product identification code" Description="Sample Property for a Unique Product identification code" ApplicableEntity="IfcPipeSegment" TemplateType="pset_typedrivenonly" pos="1">
 						<HasPropertyTemplates>
@@ -524,11 +524,11 @@
 	<!-- CPR - SAMPLE - CPR - SAMPLE - CPR - SAMPLE - CPR - SAMPLE - CPR - SAMPLE - CPR - SAMPLE -CPR - SAMPLE - CPR - SAMPLE - -->
 	<!--  Start DATA-->
 	<!--  Sample element with included propertyset-->
-	<IfcAlarm id="i6886" GlobalId="26JruP9Sj6_QQl9T2nuNCN" Tag="78463" PredefinedType="userdefined" ObjectType="SystemNameOfMySpecialBellAlarm" Name="430.41" Description="Bosch Fireray 50/100RV Linear Smoke Detectors" >
+	<IfcAlarm id="i6886" GlobalId="26JruP9Sj6_QQl9T2nuNCN" Tag="78463" PredefinedType="userdefined" ObjectType="SystemNameOfMySpecialBellAlarm" Name="430.41" Description="Bosch Fireray 50/100RV Linear Smoke Detectors">
 		<IsDefinedBy>
-			<IfcRelDefinesByProperties id="i6896976">
+			<IfcRelDefinesByProperties>
 				<RelatingPropertyDefinition>
-					<IfcPropertySet ref="i33467">
+					<IfcPropertySet id="i6887">
 						<HasProperties>
 							<IfcComplexProperty id="i33468" Name="My Complex Property (Essential Characteristics)" Description="The description of my ComplexProperty" UsageName="What is the UsageName?" pos="0">
 								<HasProperties>
@@ -561,6 +561,12 @@
 			</IfcRelDefinesByProperties>
 		</IsDefinedBy>
 	</IfcAlarm>
+	<IfcRelDefinesByTemplate>
+		<RelatedPropertySets>
+			<IfcPropertySet ref="i6887" pos="0" xsi:nil="true"/>
+		</RelatedPropertySets>
+		<RelatingTemplate ref="i33467" xsi:type="IfcPropertySetTemplate" xsi:nil="true"/>
+	</IfcRelDefinesByTemplate>
 	<IfcDocumentInformation id="i6690" Identification="d96295cf779240e9a204105627ec00be" Name="Data_sheet_enUS_1281214987.pdf" Location="Documents\Data_sheet_enUS_1281214987.pdf" CreationTime="25.10.2016 09:47:48" LastRevisionTime="25.10.2016 09:47:52" ElectronicFormat="application/pdf"/>
 	<IfcRelAssociatesDocument GlobalId="3EGlhekFT4z96nW7gmGyfS">
 		<RelatedObjects>
