@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.27703.2042
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SchemaValidator", "SchemaValidator\SchemaValidator.csproj", "{25DE284D-60AD-44D3-B320-A244D781AC20}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Examples", "Examples\Examples.csproj", "{72641B12-ABEE-4D79-B626-6F001B945081}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{25DE284D-60AD-44D3-B320-A244D781AC20}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{25DE284D-60AD-44D3-B320-A244D781AC20}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{25DE284D-60AD-44D3-B320-A244D781AC20}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{25DE284D-60AD-44D3-B320-A244D781AC20}.Release|Any CPU.Build.0 = Release|Any CPU
+		{72641B12-ABEE-4D79-B626-6F001B945081}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{72641B12-ABEE-4D79-B626-6F001B945081}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{72641B12-ABEE-4D79-B626-6F001B945081}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{72641B12-ABEE-4D79-B626-6F001B945081}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {39BD604C-6548-4900-8EC6-C1B4F9753DC1}
+	EndGlobalSection
+EndGlobal

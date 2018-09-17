@@ -1,0 +1,79 @@
+<EssentialCharacteristic>
+<Name>Thermal resistance</Name>
+<Property>
+<Name>Thermal conductivity</Name>
+<Property>
+<Name>mean thermal conductivity</Name>
+<ReferenceDocument>EN 1745</ReferenceDocument>
+<Declaration>
+<Name>value</Name>
+<Value>NPD</Value>
+<Unit>W/m·K</Unit>
+<Relation>less than or equal to</Relation>
+</Declaration>
+</Property>
+<Property>
+<Name>Determination model</Name>
+<ReferenceDocument>EN 1745</ReferenceDocument>
+<Declaration>
+<Name>method</Name>
+<Value>S2</Value>
+<Unit>unitless</Unit>
+<Relation>class</Relation>
+</Declaration>
+</Property>
+<Property>
+<Name>AVCP</Name>
+<ReferenceDocument></ReferenceDocument>
+<Declaration>
+<Name>system</Name>
+<Value>2+</Value>
+<Unit>unitless</Unit>
+<Relation>category</Relation>
+</Declaration>
+</Property>
+</Property>
+<Property>
+<Name>Thermal conductivity (λ[sub]10, dry, unit (X/Y)[/sub])</Name>
+<Property>
+<Name>thermal conductivity</Name>
+<ReferenceDocument>EN 1745</ReferenceDocument>
+<Declaration>
+<Name>value</Name>
+<Value></Value>
+<Unit>W/m·K</Unit>
+<Relation>less than or equal to</Relation>
+</Declaration>
+</Property>
+<Property>
+<Name>fractile X</Name>
+<ReferenceDocument>EN 1745</ReferenceDocument>
+<Declaration>
+<Name>value</Name>
+<Value></Value>
+<Unit>%</Unit>
+<Relation>equal to</Relation>
+</Declaration>
+</Property>
+<Property>
+<Name> confidence level Y </Name>
+<ReferenceDocument>EN 1745</ReferenceDocument>
+<Declaration>
+<Name>value</Name>
+<Value></Value>
+<Unit>%</Unit>
+<Relation>equal to</Relation>
+</Declaration>
+</Property>
+<Property>
+<Name>AVCP</Name>
+<ReferenceDocument></ReferenceDocument>
+<Declaration>
+<Name>system</Name>
+<Value>2+</Value>
+<Unit>unitless</Unit>
+<Relation>category</Relation>
+</Declaration>
+</Property>
+</Property>
+</EssentialCharacteristic>
