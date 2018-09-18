@@ -1,16 +1,16 @@
 <?xml version="1.0" encoding="utf-8"?>
 <ifcXML xmlns:ifc="http://www.buildingsmart-tech.org/ifcXML/IFC4/final" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" id="ifcXML4" xsi:schemaLocation="http://www.buildingsmart-tech.org/ifcXML/IFC4/final http://www.buildingsmart-tech.org/ifcXML/IFC4/final/ifcXML4.xsd" xmlns="http://www.buildingsmart-tech.org/ifcXML/IFC4/final">
   <header>
-    <name>CAFM-Connect  products</name>
+    <name>CAFM-Connect products</name>
     <time_stamp>2016-08-25T11:50:44.6683136+02:00</time_stamp>
     <author>Aengenvoort</author>
-    <organization>eTASK Service-Management GmbH</organization>
+    <organization>eTASK Immobilien Software GmbH</organization>
     <preprocessor_version>.NET API etask.ifc</preprocessor_version>
     <originating_system>.NET API etask.ifc</originating_system>
     <authorization>file created with .NET API etask.ifc</authorization>
     <documentation>ViewDefinition [notYetAssigned]</documentation>
   </header>
-  <IfcProject id="i100" GlobalId="3W_wCy4R58hgkAO0WsiUkm">
+  <IfcProject id="i100" GlobalId="3W_wCy4R58hgkAO0WsiUkm" Name="CAFM-Connect product file">
     <UnitsInContext>
       <Units>
         <IfcSIUnit id="i101" UnitType="lengthunit" Name="metre" />
@@ -29,6 +29,7 @@
             </IfcDerivedUnitElement>
             <IfcDerivedUnitElement id="i112" Exponent="-1">
               <Unit xsi:type="IfcConversionBasedUnit" UnitType="timeunit" Name="Hour">
+				<Dimensions></Dimensions>
                 <ConversionFactor>
                   <ValueComponent>
                     <IfcTimeMeasure-wrapper>3600</IfcTimeMeasure-wrapper>
@@ -50,6 +51,7 @@
             </IfcDerivedUnitElement>
             <IfcDerivedUnitElement id="i117" Exponent="-1">
               <Unit xsi:type="IfcConversionBasedUnit" UnitType="timeunit" Name="Hour">
+                <Dimensions></Dimensions>
                 <ConversionFactor>
                   <ValueComponent>
                     <IfcTimeMeasure-wrapper>3600</IfcTimeMeasure-wrapper>
@@ -233,7 +235,7 @@
       <IfcSimplePropertyTemplate id="i159" pos="0" GlobalId="0qRvdT3abDKfNj3EtPset7" Name="Beschreibung" Description="Freitextfeld zur allgemeinen Beschreibung von Objektinformationen" TemplateType="p_singlevalue" PrimaryMeasureType="IfcText" />
       <IfcSimplePropertyTemplate id="i160" pos="1" GlobalId="0mb$wPzVL4Lw29xSsZI9gm" Name="Automatischer Antrieb" Description="Angabe, ob dieses Bauteil einen automatischen Antrieb (kraftbetärtigt) zum Öffnen und Schließen besitzt (JA) oder nicht (NEIN)." TemplateType="p_singlevalue" PrimaryMeasureType="IfcBoolean" />
       <IfcSimplePropertyTemplate id="i161" pos="2" GlobalId="0TsTShWprBqBATZkBjo22i" Name="Öffnungsart" Description="" TemplateType="p_enumeratedvalue" PrimaryMeasureType="IfcText">
-        <Enumerators>
+        <Enumerators Name="">
           <EnumerationValues>
             <IfcLabel-wrapper pos="0">Drehtür</IfcLabel-wrapper>
             <IfcLabel-wrapper pos="1">Falttür</IfcLabel-wrapper>
@@ -246,7 +248,7 @@
         </Enumerators>
       </IfcSimplePropertyTemplate>
       <IfcSimplePropertyTemplate id="i162" pos="3" GlobalId="2cWZvwu0fEfhvTXia$PbSM" Name="Anschlag" Description="" TemplateType="p_enumeratedvalue" PrimaryMeasureType="IfcText">
-        <Enumerators>
+        <Enumerators Name="">
           <EnumerationValues>
             <IfcLabel-wrapper pos="0">Din R</IfcLabel-wrapper>
             <IfcLabel-wrapper pos="1">Din L</IfcLabel-wrapper>
@@ -257,7 +259,7 @@
       <IfcSimplePropertyTemplate id="i164" pos="6" GlobalId="0$nuh8r1z36A5bVGxS82ZW" Name="Baujahr" Description="" TemplateType="p_singlevalue" PrimaryMeasureType="IfcReal" />
       <IfcSimplePropertyTemplate id="i165" pos="7" GlobalId="0FERfAvWX2kOL7PUua3mJm" Name="DiBT Zulassungsnummer" Description="" TemplateType="p_singlevalue" PrimaryMeasureType="IfcReal" />
       <IfcSimplePropertyTemplate id="i166" pos="8" GlobalId="2WOPKelFT7R9Pq6IXcjLx0" Name="Schutzanforderung Tür" Description="" TemplateType="p_enumeratedvalue" PrimaryMeasureType="IfcText">
-        <Enumerators>
+        <Enumerators Name="">
           <EnumerationValues>
             <IfcLabel-wrapper pos="0">ohne besondere Schutzanforderung</IfcLabel-wrapper>
             <IfcLabel-wrapper pos="1">Brandschutztür</IfcLabel-wrapper>
@@ -270,7 +272,7 @@
       <IfcSimplePropertyTemplate id="i167" pos="9" GlobalId="19DurUNXLEQ8Eddt$Ruw8o" Name="Fluchttür" Description="" TemplateType="p_singlevalue" PrimaryMeasureType="IfcBoolean" />
       <IfcSimplePropertyTemplate id="i168" pos="11" GlobalId="1Qq3hTkQf3Rx1rVSGSfRwX" Name="Obertürschließer" Description="" TemplateType="p_singlevalue" PrimaryMeasureType="IfcBoolean" />
       <IfcSimplePropertyTemplate id="i169" pos="12" GlobalId="1hUbBImKz6ge2S_MY$7y4I" Name="Feststellanlage" Description="" TemplateType="p_enumeratedvalue" PrimaryMeasureType="IfcText">
-        <Enumerators>
+        <Enumerators Name="">
           <EnumerationValues>
             <IfcLabel-wrapper pos="0">nein</IfcLabel-wrapper>
             <IfcLabel-wrapper pos="1">manuell</IfcLabel-wrapper>
@@ -279,7 +281,7 @@
         </Enumerators>
       </IfcSimplePropertyTemplate>
       <IfcSimplePropertyTemplate id="i170" pos="14" GlobalId="2xf958RPLA4hXB2nsA1jnB" Name="Feuerwiderstandsklasse" Description="" TemplateType="p_enumeratedvalue" PrimaryMeasureType="IfcText">
-        <Enumerators>
+        <Enumerators Name="">
           <EnumerationValues>
             <IfcLabel-wrapper pos="0">T 30-1</IfcLabel-wrapper>
             <IfcLabel-wrapper pos="1">T 30-2</IfcLabel-wrapper>
@@ -289,7 +291,7 @@
         </Enumerators>
       </IfcSimplePropertyTemplate>
       <IfcSimplePropertyTemplate id="i171" pos="16" GlobalId="0ctwDbCbvCTxKEyvl_RJTm" Name="Anzahl Flügel" Description="" TemplateType="p_enumeratedvalue" PrimaryMeasureType="IfcText">
-        <Enumerators>
+        <Enumerators Name="">
           <EnumerationValues>
             <IfcLabel-wrapper pos="0">einflügelig</IfcLabel-wrapper>
             <IfcLabel-wrapper pos="1">2-flügelig</IfcLabel-wrapper>
@@ -318,7 +320,7 @@
       <IfcSimplePropertyTemplate id="i176" pos="0" GlobalId="1hD40uc3vEVRq3o56ASk4g" Name="Beschreibung" Description="Freitextfeld zur allgemeinen Beschreibung von Objektinformationen" TemplateType="p_singlevalue" PrimaryMeasureType="IfcText" />
       <IfcSimplePropertyTemplate id="i177" pos="1" GlobalId="39M8YJ1nr3CxRjzlWJGsbv" Name="Automatischer Antrieb" Description="Angabe, ob dieses Bauteil einen automatischen Antrieb (kraftbetärtigt) zum Öffnen und Schließen besitzt (JA) oder nicht (NEIN)." TemplateType="p_singlevalue" PrimaryMeasureType="IfcBoolean" />
       <IfcSimplePropertyTemplate id="i178" pos="2" GlobalId="1V9OVxEx9CPvCU$XFY_tXh" Name="Art des Tors" Description="" TemplateType="p_enumeratedvalue" PrimaryMeasureType="IfcText">
-        <Enumerators>
+        <Enumerators Name="">
           <EnumerationValues>
             <IfcLabel-wrapper pos="0">Kipptor</IfcLabel-wrapper>
             <IfcLabel-wrapper pos="1">Rolltor</IfcLabel-wrapper>
@@ -332,7 +334,7 @@
       <IfcSimplePropertyTemplate id="i179" pos="3" GlobalId="2YW2vZSBLE1xUJ4nR9y9Ac" Name="Baujahr" Description="" TemplateType="p_singlevalue" PrimaryMeasureType="IfcReal" />
       <IfcSimplePropertyTemplate id="i180" pos="4" GlobalId="1vcuBrCyz8weiDM77Hgo_p" Name="Hersteller" Description="" TemplateType="p_singlevalue" PrimaryMeasureType="IfcText" />
       <IfcSimplePropertyTemplate id="i181" pos="5" GlobalId="1ZVQ8vIvb1Zg36BEze1I_w" Name="Feuerwiderstandsklasse" Description="" TemplateType="p_enumeratedvalue" PrimaryMeasureType="IfcText">
-        <Enumerators>
+        <Enumerators Name="">
           <EnumerationValues>
             <IfcLabel-wrapper pos="0">T 30-1</IfcLabel-wrapper>
             <IfcLabel-wrapper pos="1">T 30-2</IfcLabel-wrapper>
@@ -342,7 +344,7 @@
         </Enumerators>
       </IfcSimplePropertyTemplate>
       <IfcSimplePropertyTemplate id="i182" pos="6" GlobalId="18jULr3cvCTesF08LS$M_Z" Name="Schutzanforderung Tor" Description="" TemplateType="p_enumeratedvalue" PrimaryMeasureType="IfcText">
-        <Enumerators>
+        <Enumerators Name="">
           <EnumerationValues>
             <IfcLabel-wrapper pos="0">ohne besondere Schutzanforderung</IfcLabel-wrapper>
             <IfcLabel-wrapper pos="1">Brandschutztor</IfcLabel-wrapper>
@@ -362,7 +364,7 @@
         </PrimaryUnit>
       </IfcSimplePropertyTemplate>
       <IfcSimplePropertyTemplate id="i185" pos="9" GlobalId="2Nq0Hsk6H84QD47nXmacP9" Name="Art der Steuerung Tor" Description="" TemplateType="p_enumeratedvalue" PrimaryMeasureType="IfcText">
-        <Enumerators>
+        <Enumerators Name="">
           <EnumerationValues>
             <IfcLabel-wrapper pos="0">Automatik</IfcLabel-wrapper>
             <IfcLabel-wrapper pos="1">Totmann</IfcLabel-wrapper>
@@ -370,7 +372,7 @@
         </Enumerators>
       </IfcSimplePropertyTemplate>
       <IfcSimplePropertyTemplate id="i186" pos="10" GlobalId="3Vl_568pn8YRuUDDFtwqzV" Name="Schließrichtung" Description="" TemplateType="p_enumeratedvalue" PrimaryMeasureType="IfcText">
-        <Enumerators>
+        <Enumerators Name="">
           <EnumerationValues>
             <IfcLabel-wrapper pos="0">vertikal</IfcLabel-wrapper>
             <IfcLabel-wrapper pos="1">horizontal</IfcLabel-wrapper>
@@ -405,7 +407,7 @@
         </PrimaryUnit>
       </IfcSimplePropertyTemplate>
       <IfcSimplePropertyTemplate id="i196" pos="6" GlobalId="2EAcFC3ufCh8cgQuXTnTlS" Name="Material" Description="" TemplateType="p_enumeratedvalue" PrimaryMeasureType="IfcText">
-        <Enumerators>
+        <Enumerators Name="">
           <EnumerationValues>
             <IfcLabel-wrapper pos="0">Kunststoff</IfcLabel-wrapper>
             <IfcLabel-wrapper pos="1">Holz</IfcLabel-wrapper>
@@ -624,7 +626,7 @@
       <IfcSimplePropertyTemplate id="i246" pos="0" GlobalId="1IvsL8adL6$vFK5jr69opM" Name="Beschreibung" Description="Freitextfeld zur allgemeinen Beschreibung von Objektinformationen" TemplateType="p_singlevalue" PrimaryMeasureType="IfcText" />
       <IfcSimplePropertyTemplate id="i247" pos="1" GlobalId="0WleYApOv53upeDVGmQIOV" Name="Brandwand" Description="" TemplateType="p_singlevalue" PrimaryMeasureType="IfcBoolean" />
       <IfcSimplePropertyTemplate id="i248" pos="2" GlobalId="2IzasYBqXCi8w6Bll2$iM7" Name="Feuerwiderstandsklasse" Description="" TemplateType="p_enumeratedvalue" PrimaryMeasureType="IfcText">
-        <Enumerators>
+        <Enumerators Name="">
           <EnumerationValues>
             <IfcLabel-wrapper pos="0">F 30</IfcLabel-wrapper>
             <IfcLabel-wrapper pos="1">F 60</IfcLabel-wrapper>
@@ -638,7 +640,7 @@
       <IfcSimplePropertyTemplate id="i250" pos="4" GlobalId="1TiifhgY55T9Y43l3LQJk0" Name="Wandstärke" Description="" TemplateType="p_singlevalue" PrimaryMeasureType="IfcReal" />
       <IfcSimplePropertyTemplate id="i251" pos="5" GlobalId="2llEeOrEX0WRaB$F_OYq43" Name="Wandaufbau" Description="" TemplateType="p_singlevalue" PrimaryMeasureType="IfcText" />
       <IfcSimplePropertyTemplate id="i252" pos="6" GlobalId="36deq51szEvhGwWRp4use9" Name="Art der Wandoberfläche" Description="" TemplateType="p_enumeratedvalue" PrimaryMeasureType="IfcText">
-        <Enumerators>
+        <Enumerators Name="">
           <EnumerationValues>
             <IfcLabel-wrapper pos="0">Putz</IfcLabel-wrapper>
             <IfcLabel-wrapper pos="1">Beschichtung</IfcLabel-wrapper>
@@ -677,7 +679,7 @@
       <IfcSimplePropertyTemplate id="i257" pos="0" GlobalId="00Yb_LcU17M9JFt_McG1aG" Name="Beschreibung" Description="Freitextfeld zur allgemeinen Beschreibung von Objektinformationen" TemplateType="p_singlevalue" PrimaryMeasureType="IfcText" />
       <IfcSimplePropertyTemplate id="i258" pos="1" GlobalId="3b97$J3nnBmQUvPzXgNwg8" Name="Brandwand" Description="" TemplateType="p_singlevalue" PrimaryMeasureType="IfcBoolean" />
       <IfcSimplePropertyTemplate id="i259" pos="2" GlobalId="3burtEmO920wUD7401W24X" Name="Feuerwiderstandsklasse" Description="" TemplateType="p_enumeratedvalue" PrimaryMeasureType="IfcText">
-        <Enumerators>
+        <Enumerators Name="">
           <EnumerationValues>
             <IfcLabel-wrapper pos="0">F 30</IfcLabel-wrapper>
             <IfcLabel-wrapper pos="1">F 60</IfcLabel-wrapper>
@@ -691,7 +693,7 @@
       <IfcSimplePropertyTemplate id="i261" pos="4" GlobalId="2DSZ1zKZX9LADcyZgbG$BQ" Name="Wandstärke" Description="" TemplateType="p_singlevalue" PrimaryMeasureType="IfcReal" />
       <IfcSimplePropertyTemplate id="i262" pos="5" GlobalId="0FNladA3D4HQRW47CTYtJd" Name="Wandaufbau" Description="" TemplateType="p_singlevalue" PrimaryMeasureType="IfcText" />
       <IfcSimplePropertyTemplate id="i263" pos="6" GlobalId="3eP_Ki5mTCbuIKhcERZgrr" Name="Art der Wandoberfläche" Description="" TemplateType="p_enumeratedvalue" PrimaryMeasureType="IfcText">
-        <Enumerators>
+        <Enumerators Name="">
           <EnumerationValues>
             <IfcLabel-wrapper pos="0">Putz</IfcLabel-wrapper>
             <IfcLabel-wrapper pos="1">Beschichtung</IfcLabel-wrapper>
@@ -766,7 +768,7 @@
       <IfcSimplePropertyTemplate id="i276" pos="0" GlobalId="3iVGd7mlP9X91X5G8lBKXO" Name="Beschreibung" Description="Freitextfeld zur allgemeinen Beschreibung von Objektinformationen" TemplateType="p_singlevalue" PrimaryMeasureType="IfcText" />
       <IfcSimplePropertyTemplate id="i277" pos="1" GlobalId="3rmvVEN7L6EeQdT6Gqsz5B" Name="Automatischer Antrieb" Description="Angabe, ob dieses Bauteil einen automatischen Antrieb (kraftbetärtigt) zum Öffnen und Schließen besitzt (JA) oder nicht (NEIN)." TemplateType="p_singlevalue" PrimaryMeasureType="IfcBoolean" />
       <IfcSimplePropertyTemplate id="i278" pos="2" GlobalId="2SEvX8BhX058jWC1mKEKHA" Name="Öffnungsart" Description="" TemplateType="p_enumeratedvalue" PrimaryMeasureType="IfcText">
-        <Enumerators>
+        <Enumerators Name="">
           <EnumerationValues>
             <IfcLabel-wrapper pos="0">Drehtür</IfcLabel-wrapper>
             <IfcLabel-wrapper pos="1">Falttür</IfcLabel-wrapper>
@@ -779,7 +781,7 @@
         </Enumerators>
       </IfcSimplePropertyTemplate>
       <IfcSimplePropertyTemplate id="i279" pos="3" GlobalId="0eLM1ktfT2E8x$$WGq8PoL" Name="Anschlag" Description="" TemplateType="p_enumeratedvalue" PrimaryMeasureType="IfcText">
-        <Enumerators>
+        <Enumerators Name="">
           <EnumerationValues>
             <IfcLabel-wrapper pos="0">Din R</IfcLabel-wrapper>
             <IfcLabel-wrapper pos="1">Din L</IfcLabel-wrapper>
@@ -790,7 +792,7 @@
       <IfcSimplePropertyTemplate id="i281" pos="6" GlobalId="1bO35rBRz5UOCO9PFyTZbA" Name="Baujahr" Description="" TemplateType="p_singlevalue" PrimaryMeasureType="IfcReal" />
       <IfcSimplePropertyTemplate id="i282" pos="7" GlobalId="02FE782bPAORY0pk3LYuhP" Name="DiBT Zulassungsnummer" Description="" TemplateType="p_singlevalue" PrimaryMeasureType="IfcReal" />
       <IfcSimplePropertyTemplate id="i283" pos="8" GlobalId="03yzCDI_vCU84eOzJFNtEN" Name="Schutzanforderung Tür" Description="" TemplateType="p_enumeratedvalue" PrimaryMeasureType="IfcText">
-        <Enumerators>
+        <Enumerators Name="">
           <EnumerationValues>
             <IfcLabel-wrapper pos="0">ohne besondere Schutzanforderung</IfcLabel-wrapper>
             <IfcLabel-wrapper pos="1">Brandschutztür</IfcLabel-wrapper>
@@ -803,7 +805,7 @@
       <IfcSimplePropertyTemplate id="i284" pos="9" GlobalId="0HTFNpSG9FNQ9g3STQUE05" Name="Fluchttür" Description="" TemplateType="p_singlevalue" PrimaryMeasureType="IfcBoolean" />
       <IfcSimplePropertyTemplate id="i285" pos="11" GlobalId="0iQV4KfVvBzxuDr2g08vzr" Name="Obertürschließer" Description="" TemplateType="p_singlevalue" PrimaryMeasureType="IfcBoolean" />
       <IfcSimplePropertyTemplate id="i286" pos="12" GlobalId="2vhzt9hQz4kPKsftxxKpbT" Name="Feststellanlage" Description="" TemplateType="p_enumeratedvalue" PrimaryMeasureType="IfcText">
-        <Enumerators>
+        <Enumerators Name="">
           <EnumerationValues>
             <IfcLabel-wrapper pos="0">nein</IfcLabel-wrapper>
             <IfcLabel-wrapper pos="1">manuell</IfcLabel-wrapper>
@@ -812,7 +814,7 @@
         </Enumerators>
       </IfcSimplePropertyTemplate>
       <IfcSimplePropertyTemplate id="i287" pos="14" GlobalId="2Mzl1pm_jA9QCCgNYstudX" Name="Feuerwiderstandsklasse" Description="" TemplateType="p_enumeratedvalue" PrimaryMeasureType="IfcText">
-        <Enumerators>
+        <Enumerators Name="">
           <EnumerationValues>
             <IfcLabel-wrapper pos="0">T 30-1</IfcLabel-wrapper>
             <IfcLabel-wrapper pos="1">T 30-2</IfcLabel-wrapper>
@@ -822,7 +824,7 @@
         </Enumerators>
       </IfcSimplePropertyTemplate>
       <IfcSimplePropertyTemplate id="i288" pos="16" GlobalId="2JaxcN5Hn4vQIS_IjaYhPh" Name="Anzahl Flügel" Description="" TemplateType="p_enumeratedvalue" PrimaryMeasureType="IfcText">
-        <Enumerators>
+        <Enumerators Name="">
           <EnumerationValues>
             <IfcLabel-wrapper pos="0">einflügelig</IfcLabel-wrapper>
             <IfcLabel-wrapper pos="1">2-flügelig</IfcLabel-wrapper>
@@ -851,7 +853,7 @@
       <IfcSimplePropertyTemplate id="i293" pos="0" GlobalId="0E5l_hjif8XwSOshWFeW$q" Name="Beschreibung" Description="Freitextfeld zur allgemeinen Beschreibung von Objektinformationen" TemplateType="p_singlevalue" PrimaryMeasureType="IfcText" />
       <IfcSimplePropertyTemplate id="i294" pos="1" GlobalId="0JqOhdpkn6tAB456gDx_DA" Name="Automatischer Antrieb" Description="Angabe, ob dieses Bauteil einen automatischen Antrieb (kraftbetärtigt) zum Öffnen und Schließen besitzt (JA) oder nicht (NEIN)." TemplateType="p_singlevalue" PrimaryMeasureType="IfcBoolean" />
       <IfcSimplePropertyTemplate id="i295" pos="2" GlobalId="2cSeLNCxnCRArf84KWDSN9" Name="Art des Tors" Description="" TemplateType="p_enumeratedvalue" PrimaryMeasureType="IfcText">
-        <Enumerators>
+        <Enumerators Name="">
           <EnumerationValues>
             <IfcLabel-wrapper pos="0">Kipptor</IfcLabel-wrapper>
             <IfcLabel-wrapper pos="1">Rolltor</IfcLabel-wrapper>
@@ -865,7 +867,7 @@
       <IfcSimplePropertyTemplate id="i296" pos="3" GlobalId="0pwOarDIL1GRHyOw48C3k$" Name="Baujahr" Description="" TemplateType="p_singlevalue" PrimaryMeasureType="IfcReal" />
       <IfcSimplePropertyTemplate id="i297" pos="4" GlobalId="3sk0eSLh9BT9p7iJUzXb8v" Name="Hersteller" Description="" TemplateType="p_singlevalue" PrimaryMeasureType="IfcText" />
       <IfcSimplePropertyTemplate id="i298" pos="5" GlobalId="2VTUl83XnFfh9CvKAhLMTc" Name="Feuerwiderstandsklasse" Description="" TemplateType="p_enumeratedvalue" PrimaryMeasureType="IfcText">
-        <Enumerators>
+        <Enumerators Name="">
           <EnumerationValues>
             <IfcLabel-wrapper pos="0">T 30-1</IfcLabel-wrapper>
             <IfcLabel-wrapper pos="1">T 30-2</IfcLabel-wrapper>
@@ -875,7 +877,7 @@
         </Enumerators>
       </IfcSimplePropertyTemplate>
       <IfcSimplePropertyTemplate id="i299" pos="6" GlobalId="11Am9ojMP8KQUUAHiyPbLn" Name="Schutzanforderung Tor" Description="" TemplateType="p_enumeratedvalue" PrimaryMeasureType="IfcText">
-        <Enumerators>
+        <Enumerators Name="">
           <EnumerationValues>
             <IfcLabel-wrapper pos="0">ohne besondere Schutzanforderung</IfcLabel-wrapper>
             <IfcLabel-wrapper pos="1">Brandschutztor</IfcLabel-wrapper>
@@ -895,7 +897,7 @@
         </PrimaryUnit>
       </IfcSimplePropertyTemplate>
       <IfcSimplePropertyTemplate id="i302" pos="9" GlobalId="3UQmiAx698TAXs41FWi27u" Name="Art der Steuerung Tor" Description="" TemplateType="p_enumeratedvalue" PrimaryMeasureType="IfcText">
-        <Enumerators>
+        <Enumerators Name="">
           <EnumerationValues>
             <IfcLabel-wrapper pos="0">Automatik</IfcLabel-wrapper>
             <IfcLabel-wrapper pos="1">Totmann</IfcLabel-wrapper>
@@ -903,7 +905,7 @@
         </Enumerators>
       </IfcSimplePropertyTemplate>
       <IfcSimplePropertyTemplate id="i303" pos="10" GlobalId="3nA6ItU_5EVwJY6yTBNKpl" Name="Schließrichtung" Description="" TemplateType="p_enumeratedvalue" PrimaryMeasureType="IfcText">
-        <Enumerators>
+        <Enumerators Name="">
           <EnumerationValues>
             <IfcLabel-wrapper pos="0">vertikal</IfcLabel-wrapper>
             <IfcLabel-wrapper pos="1">horizontal</IfcLabel-wrapper>
@@ -938,7 +940,7 @@
         </PrimaryUnit>
       </IfcSimplePropertyTemplate>
       <IfcSimplePropertyTemplate id="i313" pos="6" GlobalId="0jdlmzuf1DmRGXB468VY7h" Name="Material" Description="" TemplateType="p_enumeratedvalue" PrimaryMeasureType="IfcText">
-        <Enumerators>
+        <Enumerators Name="">
           <EnumerationValues>
             <IfcLabel-wrapper pos="0">Kunststoff</IfcLabel-wrapper>
             <IfcLabel-wrapper pos="1">Holz</IfcLabel-wrapper>
@@ -991,7 +993,7 @@
       <IfcSimplePropertyTemplate id="i323" pos="1" GlobalId="2tLwuKqB14bguTjItfmyuA" Name="Automatischer Antrieb" Description="Angabe, ob dieses Bauteil einen automatischen Antrieb (kraftbetärtigt) zum Öffnen und Schließen besitzt (JA) oder nicht (NEIN)." TemplateType="p_singlevalue" PrimaryMeasureType="IfcBoolean" />
       <IfcSimplePropertyTemplate id="i324" pos="2" GlobalId="0J14jOl01039QqKB3AsR8I" Name="Baujahr" Description="" TemplateType="p_singlevalue" PrimaryMeasureType="IfcText" />
       <IfcSimplePropertyTemplate id="i325" pos="3" GlobalId="0SuHw6_pf2yA9jh5EJ7Uze" Name="Bauart" Description="" TemplateType="p_enumeratedvalue" PrimaryMeasureType="IfcText">
-        <Enumerators>
+        <Enumerators Name="">
           <EnumerationValues>
             <IfcLabel-wrapper pos="0">Schiebewand</IfcLabel-wrapper>
             <IfcLabel-wrapper pos="1">Faltwand</IfcLabel-wrapper>
@@ -1000,7 +1002,7 @@
         </Enumerators>
       </IfcSimplePropertyTemplate>
       <IfcSimplePropertyTemplate id="i326" pos="4" GlobalId="3G1zYxtQ97VhdxyyfLLxHg" Name="Material" Description="" TemplateType="p_enumeratedvalue" PrimaryMeasureType="IfcText">
-        <Enumerators>
+        <Enumerators Name="">
           <EnumerationValues>
             <IfcLabel-wrapper pos="0">Glas</IfcLabel-wrapper>
             <IfcLabel-wrapper pos="1">Holz</IfcLabel-wrapper>
@@ -1069,7 +1071,7 @@
         </PrimaryUnit>
       </IfcSimplePropertyTemplate>
       <IfcSimplePropertyTemplate id="i340" pos="2" GlobalId="2rhWVsXZz5IuLK61009sPV" Name="Geländerart" Description="" TemplateType="p_enumeratedvalue" PrimaryMeasureType="IfcText">
-        <Enumerators>
+        <Enumerators Name="">
           <EnumerationValues>
             <IfcLabel-wrapper pos="0">Treppengeländer</IfcLabel-wrapper>
             <IfcLabel-wrapper pos="1">Galerie oder Podest</IfcLabel-wrapper>
@@ -1233,7 +1235,7 @@
       <IfcSimplePropertyTemplate id="i376" pos="1" GlobalId="16Ql5gMLb2IOjsA$B2$hL0" Name="RWA" Description="Ist das Objekt Bestandteil einer natürlichen RWA-Anlage?" TemplateType="p_singlevalue" PrimaryMeasureType="IfcBoolean" />
       <IfcSimplePropertyTemplate id="i377" pos="2" GlobalId="2Z7qYGiFP1YBQA7DAp8LY_" Name="Baujahr" Description="" TemplateType="p_singlevalue" PrimaryMeasureType="IfcReal" />
       <IfcSimplePropertyTemplate id="i378" pos="3" GlobalId="0TjiJIBVr5qeDNoLnP3Ccj" Name="Art Öffnungen" Description="" TemplateType="p_enumeratedvalue" PrimaryMeasureType="IfcText">
-        <Enumerators>
+        <Enumerators Name="">
           <EnumerationValues>
             <IfcLabel-wrapper pos="0">elektrisch</IfcLabel-wrapper>
             <IfcLabel-wrapper pos="1">pneumatisch</IfcLabel-wrapper>
@@ -1396,7 +1398,7 @@
       <IfcSimplePropertyTemplate id="i416" pos="2" GlobalId="374TUOmUf8Jf7$UVQOJ$Ig" Name="Systemhersteller" Description="Name der Hersteller des im Brandschott verbauten Schottsystems" TemplateType="p_singlevalue" PrimaryMeasureType="IfcText" />
       <IfcSimplePropertyTemplate id="i417" pos="3" GlobalId="2S8EEjapX0SxmGL5yaBfVe" Name="Typ" Description="Typenbezeichnung des Systemherstellers" TemplateType="p_singlevalue" PrimaryMeasureType="IfcText" />
       <IfcSimplePropertyTemplate id="i418" pos="4" GlobalId="1WoWm06yz6VAXJEuS2BPl2" Name="Feuerwiderstandsklasse" Description="Feuerwiderstandsklasse des Brandschotts" TemplateType="p_enumeratedvalue" PrimaryMeasureType="IfcText">
-        <Enumerators>
+        <Enumerators Name="">
           <EnumerationValues>
             <IfcLabel-wrapper pos="0">F30</IfcLabel-wrapper>
             <IfcLabel-wrapper pos="1">F60</IfcLabel-wrapper>
@@ -1482,7 +1484,7 @@
       <IfcSimplePropertyTemplate id="i436" pos="0" GlobalId="1QeCzvoGTBgwIKyYRGaSUm" Name="Beschreibung" Description="Freitextfeld zur allgemeinen Beschreibung von Objektinformationen" TemplateType="p_singlevalue" PrimaryMeasureType="IfcText" />
       <IfcSimplePropertyTemplate id="i437" pos="1" GlobalId="0wzP8dHIL5mAXG4Gkfi1QH" Name="Baujahr" Description="" TemplateType="p_singlevalue" PrimaryMeasureType="IfcReal" />
       <IfcSimplePropertyTemplate id="i438" pos="2" GlobalId="1FgVHTwzLAXBEAKF_MszgQ" Name="Bauart" Description="" TemplateType="p_enumeratedvalue" PrimaryMeasureType="IfcText">
-        <Enumerators>
+        <Enumerators Name="">
           <EnumerationValues>
             <IfcLabel-wrapper pos="0">einschalig</IfcLabel-wrapper>
             <IfcLabel-wrapper pos="1">mehrschalig (mit Dämmung)</IfcLabel-wrapper>
@@ -1490,7 +1492,7 @@
         </Enumerators>
       </IfcSimplePropertyTemplate>
       <IfcSimplePropertyTemplate id="i439" pos="3" GlobalId="1S7sOgiTX20fYD4iSQ1vsW" Name="Material" Description="" TemplateType="p_enumeratedvalue" PrimaryMeasureType="IfcText">
-        <Enumerators>
+        <Enumerators Name="">
           <EnumerationValues>
             <IfcLabel-wrapper pos="0">Grauguss (SML-Rohre)</IfcLabel-wrapper>
             <IfcLabel-wrapper pos="1">Kupfer</IfcLabel-wrapper>
@@ -1523,7 +1525,7 @@
       <IfcSimplePropertyTemplate id="i445" pos="1" GlobalId="2v0xGD$iD3nvrUsXeIYbC9" Name="Hersteller" Description="" TemplateType="p_singlevalue" PrimaryMeasureType="IfcText" />
       <IfcSimplePropertyTemplate id="i446" pos="2" GlobalId="1R3aapiNrBpOOlEDQJFCg8" Name="Anzahl in-/Abläufe" Description="" TemplateType="p_singlevalue" PrimaryMeasureType="IfcReal" />
       <IfcSimplePropertyTemplate id="i447" pos="3" GlobalId="1K5odz9vj7sQfxqPq47FNS" Name="Bauart" Description="" TemplateType="p_enumeratedvalue" PrimaryMeasureType="IfcText">
-        <Enumerators>
+        <Enumerators Name="">
           <EnumerationValues>
             <IfcLabel-wrapper pos="0">mit Rückstauverschluss</IfcLabel-wrapper>
             <IfcLabel-wrapper pos="1">ohne Rückstauverschluss</IfcLabel-wrapper>
@@ -1532,7 +1534,7 @@
       </IfcSimplePropertyTemplate>
       <IfcSimplePropertyTemplate id="i448" pos="5" GlobalId="0zxZGDb4T14h4F96IrIgRG" Name="Brandschutzgeeignet" Description="" TemplateType="p_singlevalue" PrimaryMeasureType="IfcBoolean" />
       <IfcSimplePropertyTemplate id="i449" pos="6" GlobalId="0tJiUUOhbAihqMJ$Pxil4C" Name="Rosttyp" Description="" TemplateType="p_enumeratedvalue" PrimaryMeasureType="IfcText">
-        <Enumerators>
+        <Enumerators Name="">
           <EnumerationValues>
             <IfcLabel-wrapper pos="0">Gitterrost</IfcLabel-wrapper>
             <IfcLabel-wrapper pos="1">Schlitzrost</IfcLabel-wrapper>
@@ -1582,7 +1584,7 @@
       <IfcSimplePropertyTemplate id="i462" pos="1" GlobalId="3rw$Cg3BT3$wdNTK68kM_y" Name="Hersteller" Description="" TemplateType="p_singlevalue" PrimaryMeasureType="IfcText" />
       <IfcSimplePropertyTemplate id="i463" pos="2" GlobalId="1GZgz6irXAXuglSQl6dLs7" Name="Hersteller-Typ" Description="" TemplateType="p_singlevalue" PrimaryMeasureType="IfcText" />
       <IfcSimplePropertyTemplate id="i464" pos="3" GlobalId="1D_62dyNL1XAsuMKuAdYkz" Name="Auffangbehälter" Description="" TemplateType="p_enumeratedvalue" PrimaryMeasureType="IfcText">
-        <Enumerators>
+        <Enumerators Name="">
           <EnumerationValues>
             <IfcLabel-wrapper pos="0">offen</IfcLabel-wrapper>
             <IfcLabel-wrapper pos="1">geschlossen</IfcLabel-wrapper>
@@ -1592,7 +1594,7 @@
       <IfcSimplePropertyTemplate id="i465" pos="4" GlobalId="1XZPEhlFr9w8u4fLsLmgoZ" Name="Fäkalienhaltig" Description="" TemplateType="p_singlevalue" PrimaryMeasureType="IfcBoolean" />
       <IfcSimplePropertyTemplate id="i466" pos="5" GlobalId="2mzZBErdr809Wh$ltMUMoT" Name="Baujahr" Description="" TemplateType="p_singlevalue" PrimaryMeasureType="IfcReal" />
       <IfcSimplePropertyTemplate id="i467" pos="6" GlobalId="12vUqYfk5Br9pSkyv2CQld" Name="Bauart" Description="" TemplateType="p_enumeratedvalue" PrimaryMeasureType="IfcText">
-        <Enumerators>
+        <Enumerators Name="">
           <EnumerationValues>
             <IfcLabel-wrapper pos="0">Einpumpenanlage</IfcLabel-wrapper>
             <IfcLabel-wrapper pos="1">Doppelpumpenanlage (parallel)</IfcLabel-wrapper>
@@ -1636,7 +1638,7 @@
       <IfcSimplePropertyTemplate id="i475" pos="1" GlobalId="2LiIw$xm15lPODgaKPM$7O" Name="Baujahr" Description="" TemplateType="p_singlevalue" PrimaryMeasureType="IfcReal" />
       <IfcSimplePropertyTemplate id="i476" pos="2" GlobalId="0wVanZMej4W9CIgVZz44Zs" Name="Hersteller" Description="" TemplateType="p_singlevalue" PrimaryMeasureType="IfcText" />
       <IfcSimplePropertyTemplate id="i477" pos="3" GlobalId="2DD4VkcHPDPuVfv3xZxSjQ" Name="Bauart" Description="" TemplateType="p_enumeratedvalue" PrimaryMeasureType="IfcText">
-        <Enumerators>
+        <Enumerators Name="">
           <EnumerationValues>
             <IfcLabel-wrapper pos="0">Fettabscheider</IfcLabel-wrapper>
             <IfcLabel-wrapper pos="1">Stärkeabscheider</IfcLabel-wrapper>
@@ -1647,7 +1649,7 @@
         </Enumerators>
       </IfcSimplePropertyTemplate>
       <IfcSimplePropertyTemplate id="i478" pos="4" GlobalId="37zm4uOWP7ewwJzlvGYf3x" Name="Aufstellung" Description="" TemplateType="p_enumeratedvalue" PrimaryMeasureType="IfcText">
-        <Enumerators>
+        <Enumerators Name="">
           <EnumerationValues>
             <IfcLabel-wrapper pos="0">Erdeinbau</IfcLabel-wrapper>
             <IfcLabel-wrapper pos="1">Freiaufstellung</IfcLabel-wrapper>
@@ -1677,7 +1679,7 @@
       <IfcSimplePropertyTemplate id="i485" pos="2" GlobalId="1oj2xVmNrDc89ERnl65OPT" Name="Hersteller" Description="" TemplateType="p_singlevalue" PrimaryMeasureType="IfcText" />
       <IfcSimplePropertyTemplate id="i486" pos="3" GlobalId="2p1FTy3H1FAQicEGwJUWKU" Name="Typ" Description="" TemplateType="p_singlevalue" PrimaryMeasureType="IfcText" />
       <IfcSimplePropertyTemplate id="i487" pos="4" GlobalId="2vEDtAfBzApORRWAUHjdaq" Name="Aufstellung" Description="" TemplateType="p_enumeratedvalue" PrimaryMeasureType="IfcText">
-        <Enumerators>
+        <Enumerators Name="">
           <EnumerationValues>
             <IfcLabel-wrapper pos="0">Erdeinbau</IfcLabel-wrapper>
             <IfcLabel-wrapper pos="1">Freiaufstellung</IfcLabel-wrapper>
@@ -1685,7 +1687,7 @@
         </Enumerators>
       </IfcSimplePropertyTemplate>
       <IfcSimplePropertyTemplate id="i488" pos="5" GlobalId="0OvbaPFIr4quvjwOP4PqkM" Name="Material" Description="" TemplateType="p_enumeratedvalue" PrimaryMeasureType="IfcText">
-        <Enumerators>
+        <Enumerators Name="">
           <EnumerationValues>
             <IfcLabel-wrapper pos="0">Edelstahl (nicht rostender Stahl)</IfcLabel-wrapper>
             <IfcLabel-wrapper pos="1">Kunststoff</IfcLabel-wrapper>
@@ -1714,7 +1716,7 @@
       <IfcSimplePropertyTemplate id="i493" pos="1" GlobalId="1QLo5bbfP5JebTaV4RPpki" Name="Baujahr" Description="" TemplateType="p_singlevalue" PrimaryMeasureType="IfcReal" />
       <IfcSimplePropertyTemplate id="i494" pos="2" GlobalId="27G67YdqP3nwj_Z8J10nuj" Name="Hersteller" Description="" TemplateType="p_singlevalue" PrimaryMeasureType="IfcText" />
       <IfcSimplePropertyTemplate id="i495" pos="4" GlobalId="0_Tb6wY6v2dOUYS7wBAYgE" Name="Aufstellung" Description="" TemplateType="p_enumeratedvalue" PrimaryMeasureType="IfcText">
-        <Enumerators>
+        <Enumerators Name="">
           <EnumerationValues>
             <IfcLabel-wrapper pos="0">Erdeinbau</IfcLabel-wrapper>
             <IfcLabel-wrapper pos="1">Freiaufstellung</IfcLabel-wrapper>
@@ -1785,7 +1787,7 @@
       <IfcSimplePropertyTemplate id="i511" pos="2" GlobalId="2M04uFffHAvALbLe$_edy$" Name="Begleitheizung" Description="" TemplateType="p_singlevalue" PrimaryMeasureType="IfcBoolean" />
       <IfcSimplePropertyTemplate id="i512" pos="3" GlobalId="0B3qylJwv4XwA9U2hatpsW" Name="Anzahl Pumpen Zirkulation" Description="" TemplateType="p_singlevalue" PrimaryMeasureType="IfcReal" />
       <IfcSimplePropertyTemplate id="i513" pos="4" GlobalId="23_qtiN5DDhgwQ1proYgAe" Name="Material" Description="" TemplateType="p_enumeratedvalue" PrimaryMeasureType="IfcText">
-        <Enumerators>
+        <Enumerators Name="">
           <EnumerationValues>
             <IfcLabel-wrapper pos="0">Kupfer</IfcLabel-wrapper>
             <IfcLabel-wrapper pos="1">Kunststoff</IfcLabel-wrapper>
@@ -1816,7 +1818,7 @@
       <IfcSimplePropertyTemplate id="i518" pos="1" GlobalId="1RQpQjoUL4tA3fuCKNCnmF" Name="Baujahr" Description="" TemplateType="p_singlevalue" PrimaryMeasureType="IfcReal" />
       <IfcSimplePropertyTemplate id="i519" pos="2" GlobalId="1_4Y12VtLBVuFuLTCDlXJj" Name="Hersteller" Description="" TemplateType="p_singlevalue" PrimaryMeasureType="IfcText" />
       <IfcSimplePropertyTemplate id="i520" pos="3" GlobalId="27cQDo7eTCYQBvibzu29ui" Name="Armaturentyp" Description="" TemplateType="p_enumeratedvalue" PrimaryMeasureType="IfcText">
-        <Enumerators>
+        <Enumerators Name="">
           <EnumerationValues>
             <IfcLabel-wrapper pos="0">Absperrarmatur</IfcLabel-wrapper>
             <IfcLabel-wrapper pos="1">Regelarmatur</IfcLabel-wrapper>
@@ -1847,7 +1849,7 @@
       <IfcSimplePropertyTemplate id="i524" pos="0" GlobalId="0i2saBjbDCKRorlTQUynWW" Name="Beschreibung" Description="Freitextfeld zur allgemeinen Beschreibung von Objektinformationen" TemplateType="p_singlevalue" PrimaryMeasureType="IfcText" />
       <IfcSimplePropertyTemplate id="i525" pos="1" GlobalId="0FZRxO4cPCgRZvPg328G_R" Name="Baujahr" Description="" TemplateType="p_singlevalue" PrimaryMeasureType="IfcReal" />
       <IfcSimplePropertyTemplate id="i526" pos="2" GlobalId="3C$UZkbpn0DfoThDG1Gz3U" Name="Anwendungsbereich" Description="" TemplateType="p_enumeratedvalue" PrimaryMeasureType="IfcText">
-        <Enumerators>
+        <Enumerators Name="">
           <EnumerationValues>
             <IfcLabel-wrapper pos="0">Trinkwasser</IfcLabel-wrapper>
             <IfcLabel-wrapper pos="1">Löschwasser</IfcLabel-wrapper>
@@ -1880,7 +1882,7 @@
       <IfcSimplePropertyTemplate id="i536" pos="2" GlobalId="0k0zJ4UMX0fe7Rdi8QGIbG" Name="Hersteller-Typ" Description="" TemplateType="p_singlevalue" PrimaryMeasureType="IfcText" />
       <IfcSimplePropertyTemplate id="i537" pos="3" GlobalId="0HfBusXpr4dQEDB4a2yo4j" Name="Baujahr" Description="" TemplateType="p_singlevalue" PrimaryMeasureType="IfcDate" />
       <IfcSimplePropertyTemplate id="i538" pos="4" GlobalId="2MXmF7kYz3RRZq_BLo8SzN" Name="Bauart" Description="" TemplateType="p_enumeratedvalue" PrimaryMeasureType="IfcText">
-        <Enumerators>
+        <Enumerators Name="">
           <EnumerationValues>
             <IfcLabel-wrapper pos="0">Einpumpenanlage</IfcLabel-wrapper>
             <IfcLabel-wrapper pos="1">Doppelpumpenanlage (parallel)</IfcLabel-wrapper>
@@ -1944,7 +1946,7 @@
       <IfcSimplePropertyTemplate id="i552" pos="1" GlobalId="1HZAuZUO93tuHOa66q5qPQ" Name="Baujahr" Description="" TemplateType="p_singlevalue" PrimaryMeasureType="IfcReal" />
       <IfcSimplePropertyTemplate id="i553" pos="2" GlobalId="3Sg9SKovb0gub9r6P6Pt74" Name="Hersteller" Description="" TemplateType="p_singlevalue" PrimaryMeasureType="IfcText" />
       <IfcSimplePropertyTemplate id="i554" pos="3" GlobalId="3$Id5FnSvCfwDxnX92Axys" Name="Rückspülbar" Description="" TemplateType="p_enumeratedvalue" PrimaryMeasureType="IfcText">
-        <Enumerators>
+        <Enumerators Name="">
           <EnumerationValues>
             <IfcLabel-wrapper pos="0">ja</IfcLabel-wrapper>
             <IfcLabel-wrapper pos="1">nein</IfcLabel-wrapper>
@@ -2010,7 +2012,7 @@
       <IfcSimplePropertyTemplate id="i568" pos="0" GlobalId="26QRzSGgz5ffJo6CktoF4T" Name="Beschreibung" Description="Freitextfeld zur allgemeinen Beschreibung von Objektinformationen" TemplateType="p_singlevalue" PrimaryMeasureType="IfcText" />
       <IfcSimplePropertyTemplate id="i569" pos="1" GlobalId="27nzVqwVLFpg5H16KGatpt" Name="Hersteller" Description="" TemplateType="p_singlevalue" PrimaryMeasureType="IfcText" />
       <IfcSimplePropertyTemplate id="i570" pos="3" GlobalId="0Ja2S3YITCPRmq5xedmLUU" Name="Bauart" Description="" TemplateType="p_enumeratedvalue" PrimaryMeasureType="IfcText">
-        <Enumerators>
+        <Enumerators Name="">
           <EnumerationValues>
             <IfcLabel-wrapper pos="0">WC</IfcLabel-wrapper>
             <IfcLabel-wrapper pos="1">Waschtisch</IfcLabel-wrapper>
@@ -2024,7 +2026,7 @@
       </IfcSimplePropertyTemplate>
       <IfcSimplePropertyTemplate id="i571" pos="4" GlobalId="3XROFPVJX8FxEnTja3JjQl" Name="Modelreihe" Description="" TemplateType="p_singlevalue" PrimaryMeasureType="IfcText" />
       <IfcSimplePropertyTemplate id="i572" pos="5" GlobalId="2uKNhBqUb8OBC6ytid_pgc" Name="Ausführung" Description="" TemplateType="p_enumeratedvalue" PrimaryMeasureType="IfcText">
-        <Enumerators>
+        <Enumerators Name="">
           <EnumerationValues>
             <IfcLabel-wrapper pos="0">barrierefrei</IfcLabel-wrapper>
             <IfcLabel-wrapper pos="1">höhenverstellbar</IfcLabel-wrapper>
@@ -2054,7 +2056,7 @@
       <IfcSimplePropertyTemplate id="i577" pos="0" GlobalId="1_d936Lb15UfzniYAyigtK" Name="Beschreibung" Description="Freitextfeld zur allgemeinen Beschreibung von Objektinformationen" TemplateType="p_singlevalue" PrimaryMeasureType="IfcText" />
       <IfcSimplePropertyTemplate id="i578" pos="1" GlobalId="0Mm4beTL1BrxNmx0iUg_O0" Name="Hersteller" Description="" TemplateType="p_singlevalue" PrimaryMeasureType="IfcText" />
       <IfcSimplePropertyTemplate id="i579" pos="3" GlobalId="0Cvg3PaRn9Xu9iJYIxXxMS" Name="Bauart" Description="" TemplateType="p_enumeratedvalue" PrimaryMeasureType="IfcText">
-        <Enumerators>
+        <Enumerators Name="">
           <EnumerationValues>
             <IfcLabel-wrapper pos="0">Aufputz</IfcLabel-wrapper>
             <IfcLabel-wrapper pos="1">Unterputz</IfcLabel-wrapper>
@@ -2064,7 +2066,7 @@
       <IfcSimplePropertyTemplate id="i580" pos="4" GlobalId="2At4p6aWjDHRTuvHAyAUQw" Name="Ausführung höhenverstellbar" Description="" TemplateType="p_singlevalue" PrimaryMeasureType="IfcBoolean" />
       <IfcSimplePropertyTemplate id="i581" pos="5" GlobalId="10yBwKCz55LROFncSVigvJ" Name="Vandalensicherheit" Description="" TemplateType="p_singlevalue" PrimaryMeasureType="IfcBoolean" />
       <IfcSimplePropertyTemplate id="i582" pos="9" GlobalId="1zmSWBdx50E8RX7YNGlo_M" Name="Betätigungsauslösung" Description="" TemplateType="p_enumeratedvalue" PrimaryMeasureType="IfcText">
-        <Enumerators>
+        <Enumerators Name="">
           <EnumerationValues>
             <IfcLabel-wrapper pos="0">manuelle</IfcLabel-wrapper>
             <IfcLabel-wrapper pos="1">elektronisch (Netz)</IfcLabel-wrapper>
@@ -2095,7 +2097,7 @@
       <IfcSimplePropertyTemplate id="i587" pos="0" GlobalId="2ZHMQk_0b41RzUDmCwBZtq" Name="Beschreibung" Description="Freitextfeld zur allgemeinen Beschreibung von Objektinformationen" TemplateType="p_singlevalue" PrimaryMeasureType="IfcText" />
       <IfcSimplePropertyTemplate id="i588" pos="1" GlobalId="1QWElZEHr87RBEClKpSAAb" Name="Hersteller" Description="" TemplateType="p_singlevalue" PrimaryMeasureType="IfcText" />
       <IfcSimplePropertyTemplate id="i589" pos="3" GlobalId="0Ck01qsAH9hPSJu4CdRzcg" Name="Bauart" Description="" TemplateType="p_enumeratedvalue" PrimaryMeasureType="IfcText">
-        <Enumerators>
+        <Enumerators Name="">
           <EnumerationValues>
             <IfcLabel-wrapper pos="0">WC</IfcLabel-wrapper>
             <IfcLabel-wrapper pos="1">Urinal</IfcLabel-wrapper>
@@ -2104,7 +2106,7 @@
       </IfcSimplePropertyTemplate>
       <IfcSimplePropertyTemplate id="i590" pos="4" GlobalId="3yxsWNaNH5JBVB2Lcb2o0p" Name="Vandalensicherheit" Description="" TemplateType="p_singlevalue" PrimaryMeasureType="IfcBoolean" />
       <IfcSimplePropertyTemplate id="i591" pos="5" GlobalId="2Qp3sK41PE7B0Y1C1m47Vu" Name="Betätigungsauslösung" Description="" TemplateType="p_enumeratedvalue" PrimaryMeasureType="IfcText">
-        <Enumerators>
+        <Enumerators Name="">
           <EnumerationValues>
             <IfcLabel-wrapper pos="0">manuelle</IfcLabel-wrapper>
             <IfcLabel-wrapper pos="1">elektronisch (Netz)</IfcLabel-wrapper>
@@ -2143,7 +2145,7 @@
       <IfcSimplePropertyTemplate id="i600" pos="3" GlobalId="3wl3yz9fT8_8GRPnzCzqMC" Name="Elektrisch" Description="" TemplateType="p_singlevalue" PrimaryMeasureType="IfcBoolean" />
       <IfcSimplePropertyTemplate id="i601" pos="4" GlobalId="3woO24YW95qvtsULebD1HF" Name="Hersteller" Description="" TemplateType="p_singlevalue" PrimaryMeasureType="IfcText" />
       <IfcSimplePropertyTemplate id="i602" pos="5" GlobalId="3Gn59Jmeb22P6gfSUg4AZ7" Name="Bauart" Description="" TemplateType="p_enumeratedvalue" PrimaryMeasureType="IfcText">
-        <Enumerators>
+        <Enumerators Name="">
           <EnumerationValues>
             <IfcLabel-wrapper pos="0">geschlossen/druckfest</IfcLabel-wrapper>
             <IfcLabel-wrapper pos="1">offen/drucklos</IfcLabel-wrapper>
@@ -2188,7 +2190,7 @@
       <IfcSimplePropertyTemplate id="i611" pos="2" GlobalId="02jZozwm12VwCWP0HXM6jD" Name="Hersteller" Description="" TemplateType="p_singlevalue" PrimaryMeasureType="IfcText" />
       <IfcSimplePropertyTemplate id="i612" pos="3" GlobalId="2d7XSRM5XEh93ZaODaqNHP" Name="Hersteller-Typ" Description="" TemplateType="p_singlevalue" PrimaryMeasureType="IfcText" />
       <IfcSimplePropertyTemplate id="i613" pos="4" GlobalId="1GKJS3dmv4lQJnB7_KflJY" Name="Art Wasseraufbereitung" Description="" TemplateType="p_enumeratedvalue" PrimaryMeasureType="IfcText">
-        <Enumerators>
+        <Enumerators Name="">
           <EnumerationValues>
             <IfcLabel-wrapper pos="0">Entsalzung</IfcLabel-wrapper>
             <IfcLabel-wrapper pos="1">Enthärtung</IfcLabel-wrapper>
@@ -2199,7 +2201,7 @@
         </Enumerators>
       </IfcSimplePropertyTemplate>
       <IfcSimplePropertyTemplate id="i614" pos="5" GlobalId="2gWUvQ3HT2FfUkpq4QgzE3" Name="Typ Wasseraufbereitung" Description="" TemplateType="p_enumeratedvalue" PrimaryMeasureType="IfcText">
-        <Enumerators>
+        <Enumerators Name="">
           <EnumerationValues>
             <IfcLabel-wrapper pos="0">physikalisch</IfcLabel-wrapper>
             <IfcLabel-wrapper pos="1">chemisch</IfcLabel-wrapper>
@@ -2265,7 +2267,7 @@
     <HasPropertyTemplates>
       <IfcSimplePropertyTemplate id="i628" pos="0" GlobalId="2T$wjSqL19KOUmC1eTGB9x" Name="Beschreibung" Description="Freitextfeld zur allgemeinen Beschreibung von Objektinformationen" TemplateType="p_singlevalue" PrimaryMeasureType="IfcText" />
       <IfcSimplePropertyTemplate id="i629" pos="1" GlobalId="2rFhMqn2f3C92k4_f3_mLU" Name="Bauart" Description="" TemplateType="p_enumeratedvalue" PrimaryMeasureType="IfcText">
-        <Enumerators>
+        <Enumerators Name="">
           <EnumerationValues>
             <IfcLabel-wrapper pos="0">einschalig</IfcLabel-wrapper>
             <IfcLabel-wrapper pos="1">mehrschalig (mit Dämmung)</IfcLabel-wrapper>
@@ -2274,7 +2276,7 @@
       </IfcSimplePropertyTemplate>
       <IfcSimplePropertyTemplate id="i630" pos="2" GlobalId="1S4pt1VNXB8ggAs28aXJ_p" Name="Begleitheizung" Description="" TemplateType="p_singlevalue" PrimaryMeasureType="IfcBoolean" />
       <IfcSimplePropertyTemplate id="i631" pos="3" GlobalId="2TQzTsmyn4NOf3Fh55gW5i" Name="Material" Description="" TemplateType="p_enumeratedvalue" PrimaryMeasureType="IfcText">
-        <Enumerators>
+        <Enumerators Name="">
           <EnumerationValues>
             <IfcLabel-wrapper pos="0">Grauguss (SML-Rohre)</IfcLabel-wrapper>
             <IfcLabel-wrapper pos="1">Kupfer</IfcLabel-wrapper>
@@ -2286,7 +2288,7 @@
         </Enumerators>
       </IfcSimplePropertyTemplate>
       <IfcSimplePropertyTemplate id="i632" pos="4" GlobalId="3bQVe27U59dPmxKno7clJZ" Name="Bauart" Description="" TemplateType="p_enumeratedvalue" PrimaryMeasureType="IfcText">
-        <Enumerators>
+        <Enumerators Name="">
           <EnumerationValues>
             <IfcLabel-wrapper pos="0">einschalig</IfcLabel-wrapper>
             <IfcLabel-wrapper pos="1">mehrschalig (mit Dämmung)</IfcLabel-wrapper>
@@ -2314,7 +2316,7 @@
       <IfcSimplePropertyTemplate id="i637" pos="1" GlobalId="1gxpDtasb7xuP3GIuZvXXT" Name="Baujahr" Description="" TemplateType="p_singlevalue" PrimaryMeasureType="IfcReal" />
       <IfcSimplePropertyTemplate id="i638" pos="2" GlobalId="1neAmkHLn69BFqD7DJflEn" Name="Hersteller" Description="" TemplateType="p_singlevalue" PrimaryMeasureType="IfcText" />
       <IfcSimplePropertyTemplate id="i639" pos="3" GlobalId="1KE4kGpYr0SRmjJ7hqqLQ0" Name="Armaturentyp" Description="" TemplateType="p_enumeratedvalue" PrimaryMeasureType="IfcText">
-        <Enumerators>
+        <Enumerators Name="">
           <EnumerationValues>
             <IfcLabel-wrapper pos="0">Absperrarmatur</IfcLabel-wrapper>
             <IfcLabel-wrapper pos="1">Regelarmatur</IfcLabel-wrapper>
@@ -2371,7 +2373,7 @@
       <IfcSimplePropertyTemplate id="i651" pos="0" GlobalId="0aC46DGiP5EPotSt0fS5wJ" Name="Beschreibung" Description="Freitextfeld zur allgemeinen Beschreibung von Objektinformationen" TemplateType="p_singlevalue" PrimaryMeasureType="IfcText" />
       <IfcSimplePropertyTemplate id="i652" pos="1" GlobalId="3cb95eS8D7_ea2BN$VwsRJ" Name="Hersteller" Description="" TemplateType="p_singlevalue" PrimaryMeasureType="IfcText" />
       <IfcSimplePropertyTemplate id="i653" pos="3" GlobalId="0ohph8quL37RHxnkN$3oeW" Name="Bauart" Description="" TemplateType="p_enumeratedvalue" PrimaryMeasureType="IfcText">
-        <Enumerators>
+        <Enumerators Name="">
           <EnumerationValues>
             <IfcLabel-wrapper pos="0">mit Wasseranschluss</IfcLabel-wrapper>
             <IfcLabel-wrapper pos="1">ohne Wasseranschluss</IfcLabel-wrapper>
@@ -2379,7 +2381,7 @@
         </Enumerators>
       </IfcSimplePropertyTemplate>
       <IfcSimplePropertyTemplate id="i654" pos="4" GlobalId="1zHWW1LOnCrwu2vTkwrWEr" Name="Aufstellung" Description="" TemplateType="p_enumeratedvalue" PrimaryMeasureType="IfcText">
-        <Enumerators>
+        <Enumerators Name="">
           <EnumerationValues>
             <IfcLabel-wrapper pos="0">innen</IfcLabel-wrapper>
             <IfcLabel-wrapper pos="1">außen</IfcLabel-wrapper>
@@ -2463,7 +2465,7 @@
       <IfcSimplePropertyTemplate id="i675" pos="1" GlobalId="1bwZDeAwj3vfvBj1S3cr10" Name="Baujahr" Description="" TemplateType="p_singlevalue" PrimaryMeasureType="IfcDate" />
       <IfcSimplePropertyTemplate id="i676" pos="2" GlobalId="0nymet1Dn2YBxDrqiuUGsu" Name="Gasbevorratung" Description="Bevorratung mit Tank?" TemplateType="p_singlevalue" PrimaryMeasureType="IfcBoolean" />
       <IfcSimplePropertyTemplate id="i677" pos="3" GlobalId="1yyv4uadb0aeboRb5Ql6rq" Name="Typ Gasanlage" Description="" TemplateType="p_enumeratedvalue" PrimaryMeasureType="IfcText">
-        <Enumerators>
+        <Enumerators Name="">
           <EnumerationValues>
             <IfcLabel-wrapper pos="0">nur Kochen</IfcLabel-wrapper>
             <IfcLabel-wrapper pos="1">nur Heizen</IfcLabel-wrapper>
@@ -2492,7 +2494,7 @@
       <IfcSimplePropertyTemplate id="i681" pos="0" GlobalId="3ZPFbZfp1ENRnsSPoxldsV" Name="Beschreibung" Description="Freitextfeld zur allgemeinen Beschreibung von Objektinformationen" TemplateType="p_singlevalue" PrimaryMeasureType="IfcText" />
       <IfcSimplePropertyTemplate id="i682" pos="1" GlobalId="01qfrHLb96xelc8ybFPWuJ" Name="Baujahr" Description="" TemplateType="p_singlevalue" PrimaryMeasureType="IfcReal" />
       <IfcSimplePropertyTemplate id="i683" pos="2" GlobalId="0gDEt4KL16ruGKg$T1bRjL" Name="Material" Description="" TemplateType="p_enumeratedvalue" PrimaryMeasureType="IfcText">
-        <Enumerators>
+        <Enumerators Name="">
           <EnumerationValues>
             <IfcLabel-wrapper pos="0">Grauguss (SML-Rohre)</IfcLabel-wrapper>
             <IfcLabel-wrapper pos="1">Kupfer</IfcLabel-wrapper>
@@ -2524,7 +2526,7 @@
       <IfcSimplePropertyTemplate id="i688" pos="1" GlobalId="2XIai_uX98URV25hp6nC1X" Name="Baujahr" Description="" TemplateType="p_singlevalue" PrimaryMeasureType="IfcReal" />
       <IfcSimplePropertyTemplate id="i689" pos="2" GlobalId="0UyBI5_WfFPAsJDGe4$WWY" Name="Hersteller" Description="" TemplateType="p_singlevalue" PrimaryMeasureType="IfcText" />
       <IfcSimplePropertyTemplate id="i690" pos="4" GlobalId="3ygtUkwCvBtxhv$k$o5hZh" Name="Armaturentypen" Description="" TemplateType="p_enumeratedvalue" PrimaryMeasureType="IfcText">
-        <Enumerators>
+        <Enumerators Name="">
           <EnumerationValues>
             <IfcLabel-wrapper pos="0">Absperrarmatur</IfcLabel-wrapper>
             <IfcLabel-wrapper pos="1">Regelarmatur</IfcLabel-wrapper>
@@ -2556,7 +2558,7 @@
       <IfcSimplePropertyTemplate id="i695" pos="1" GlobalId="2vNZ0q4Lb0YQFeUoD2BvbQ" Name="Baujahr" Description="" TemplateType="p_singlevalue" PrimaryMeasureType="IfcReal" />
       <IfcSimplePropertyTemplate id="i696" pos="2" GlobalId="2nAqVvGxP3uxFeYlxPpwx4" Name="Hersteller" Description="" TemplateType="p_singlevalue" PrimaryMeasureType="IfcText" />
       <IfcSimplePropertyTemplate id="i697" pos="6" GlobalId="2osIJnQ0TFaB5TAtYAR1YM" Name="Aufstellung" Description="" TemplateType="p_enumeratedvalue" PrimaryMeasureType="IfcText">
-        <Enumerators>
+        <Enumerators Name="">
           <EnumerationValues>
             <IfcLabel-wrapper pos="0">Erdeinbau</IfcLabel-wrapper>
             <IfcLabel-wrapper pos="1">Freiaufstellung</IfcLabel-wrapper>
@@ -2645,7 +2647,7 @@
       <IfcSimplePropertyTemplate id="i717" pos="1" GlobalId="37GbCDTZnF6fN2QH9pQL4h" Name="Baujahr" Description="" TemplateType="p_singlevalue" PrimaryMeasureType="IfcReal" />
       <IfcSimplePropertyTemplate id="i718" pos="2" GlobalId="3luG2TROT96OTnbavDncs1" Name="Hersteller" Description="" TemplateType="p_singlevalue" PrimaryMeasureType="IfcText" />
       <IfcSimplePropertyTemplate id="i719" pos="4" GlobalId="2Jnlg5fCP6GvmrmqW7dmhI" Name="Armaturentyp" Description="" TemplateType="p_enumeratedvalue" PrimaryMeasureType="IfcText">
-        <Enumerators>
+        <Enumerators Name="">
           <EnumerationValues>
             <IfcLabel-wrapper pos="0">Absperrarmatur</IfcLabel-wrapper>
             <IfcLabel-wrapper pos="1">Regelarmatur</IfcLabel-wrapper>
@@ -2698,7 +2700,7 @@
       <IfcSimplePropertyTemplate id="i731" pos="2" GlobalId="1Tm6zGUrr4SuES2NR0Qd4I" Name="Hersteller" Description="" TemplateType="p_singlevalue" PrimaryMeasureType="IfcText" />
       <IfcSimplePropertyTemplate id="i732" pos="3" GlobalId="1gLJsL1pXBRRE_xZmo7pWw" Name="Hersteller-Typ" Description="" TemplateType="p_singlevalue" PrimaryMeasureType="IfcText" />
       <IfcSimplePropertyTemplate id="i733" pos="4" GlobalId="0Ta_4mCZDBAhsffLunMnkw" Name="Art Desinfektion" Description="" TemplateType="p_enumeratedvalue" PrimaryMeasureType="IfcText">
-        <Enumerators>
+        <Enumerators Name="">
           <EnumerationValues>
             <IfcLabel-wrapper pos="0">UV</IfcLabel-wrapper>
             <IfcLabel-wrapper pos="1">Elektrolytisch</IfcLabel-wrapper>
@@ -2899,7 +2901,7 @@
       <IfcSimplePropertyTemplate id="i780" pos="0" GlobalId="1$PJpuCmf8b8R1Fp93OlFz" Name="Beschreibung" Description="Freitextfeld zur allgemeinen Beschreibung von Objektinformationen" TemplateType="p_singlevalue" PrimaryMeasureType="IfcText" />
       <IfcSimplePropertyTemplate id="i781" pos="1" GlobalId="2vJ7m$3Lb94RlwKU2n9R6v" Name="Hersteller" Description="" TemplateType="p_singlevalue" PrimaryMeasureType="IfcText" />
       <IfcSimplePropertyTemplate id="i782" pos="3" GlobalId="1NWnlDq0bFLRlXJvYCqTyF" Name="Betätigungsauslösung" Description="" TemplateType="p_enumeratedvalue" PrimaryMeasureType="IfcText">
-        <Enumerators>
+        <Enumerators Name="">
           <EnumerationValues>
             <IfcLabel-wrapper pos="0">manuelle</IfcLabel-wrapper>
             <IfcLabel-wrapper pos="1">elektronisch (Netz)</IfcLabel-wrapper>
@@ -3005,7 +3007,7 @@
       <IfcSimplePropertyTemplate id="i806" pos="0" GlobalId="36rbc25ZXApfgWMJRMbSDi" Name="Beschreibung" Description="Freitextfeld zur allgemeinen Beschreibung von Objektinformationen" TemplateType="p_singlevalue" PrimaryMeasureType="IfcText" />
       <IfcSimplePropertyTemplate id="i807" pos="1" GlobalId="1bLN6CPazCGwNhBnBrXJJH" Name="Baujahr" Description="" TemplateType="p_singlevalue" PrimaryMeasureType="IfcReal" />
       <IfcSimplePropertyTemplate id="i808" pos="2" GlobalId="1_TU_2H1L8$ggb81wu_CNo" Name="Art der Wärmeerzeugung" Description="" TemplateType="p_enumeratedvalue" PrimaryMeasureType="IfcText">
-        <Enumerators>
+        <Enumerators Name="">
           <EnumerationValues>
             <IfcLabel-wrapper pos="0">Warmwasser</IfcLabel-wrapper>
             <IfcLabel-wrapper pos="1">Dampf</IfcLabel-wrapper>
@@ -3041,7 +3043,7 @@
       <IfcSimplePropertyTemplate id="i817" pos="0" GlobalId="2bXnYQYzz9eRdGT_Hwrz4h" Name="Beschreibung" Description="Freitextfeld zur allgemeinen Beschreibung von Objektinformationen" TemplateType="p_singlevalue" PrimaryMeasureType="IfcText" />
       <IfcSimplePropertyTemplate id="i818" pos="1" GlobalId="2m_8NUGyrBJxphuCFGsqzg" Name="Baujahr" Description="" TemplateType="p_singlevalue" PrimaryMeasureType="IfcReal" />
       <IfcSimplePropertyTemplate id="i819" pos="2" GlobalId="3UCwiRA_L5f9RyEFhXTyNT" Name="Aufstellungsort" Description="" TemplateType="p_enumeratedvalue" PrimaryMeasureType="IfcText">
-        <Enumerators>
+        <Enumerators Name="">
           <EnumerationValues>
             <IfcLabel-wrapper pos="0">wandhängend</IfcLabel-wrapper>
             <IfcLabel-wrapper pos="1">bodenstehend</IfcLabel-wrapper>
@@ -3070,7 +3072,7 @@
       <IfcSimplePropertyTemplate id="i825" pos="2" GlobalId="0Oad6AKwfFEuZU4OHVcxd1" Name="Hersteller" Description="" TemplateType="p_singlevalue" PrimaryMeasureType="IfcText" />
       <IfcSimplePropertyTemplate id="i826" pos="3" GlobalId="1Mx0fMjwT6nAS1IEFYeKSJ" Name="Hersteller-Typ" Description="" TemplateType="p_singlevalue" PrimaryMeasureType="IfcText" />
       <IfcSimplePropertyTemplate id="i827" pos="4" GlobalId="3qylKbzUH8ffCCUeyfPuut" Name="Bauart" Description="" TemplateType="p_enumeratedvalue" PrimaryMeasureType="IfcText">
-        <Enumerators>
+        <Enumerators Name="">
           <EnumerationValues>
             <IfcLabel-wrapper pos="0">Standard-Kessel</IfcLabel-wrapper>
             <IfcLabel-wrapper pos="1">Niedertemperatur-Kessel</IfcLabel-wrapper>
@@ -3085,7 +3087,7 @@
         </Enumerators>
       </IfcSimplePropertyTemplate>
       <IfcSimplePropertyTemplate id="i828" pos="5" GlobalId="3fq4QDXt1Ar9LDD7yEZYkw" Name="Brennstoff" Description="" TemplateType="p_enumeratedvalue" PrimaryMeasureType="IfcText">
-        <Enumerators>
+        <Enumerators Name="">
           <EnumerationValues>
             <IfcLabel-wrapper pos="0">Gas</IfcLabel-wrapper>
             <IfcLabel-wrapper pos="1">Öl</IfcLabel-wrapper>
@@ -3122,7 +3124,7 @@
       <IfcSimplePropertyTemplate id="i835" pos="2" GlobalId="3Q2roDXfj5iBpu2S5iFGhU" Name="Hersteller" Description="" TemplateType="p_singlevalue" PrimaryMeasureType="IfcText" />
       <IfcSimplePropertyTemplate id="i836" pos="3" GlobalId="2KhV0tlwDBBfCnem2ayTOl" Name="Hersteller-Typ" Description="" TemplateType="p_singlevalue" PrimaryMeasureType="IfcText" />
       <IfcSimplePropertyTemplate id="i837" pos="4" GlobalId="3szcETJ9jAk8oNTM09CV7H" Name="Bauart" Description="" TemplateType="p_enumeratedvalue" PrimaryMeasureType="IfcText">
-        <Enumerators>
+        <Enumerators Name="">
           <EnumerationValues>
             <IfcLabel-wrapper pos="0">Niederdruck-Dampferzeuger (NDD)</IfcLabel-wrapper>
             <IfcLabel-wrapper pos="1">Hochdruck-Dampferzeuger (HDD)</IfcLabel-wrapper>
@@ -3130,7 +3132,7 @@
         </Enumerators>
       </IfcSimplePropertyTemplate>
       <IfcSimplePropertyTemplate id="i838" pos="5" GlobalId="2GD$QVQkz27RmdTcYePLNE" Name="Brennstoff" Description="" TemplateType="p_enumeratedvalue" PrimaryMeasureType="IfcText">
-        <Enumerators>
+        <Enumerators Name="">
           <EnumerationValues>
             <IfcLabel-wrapper pos="0">Gas</IfcLabel-wrapper>
             <IfcLabel-wrapper pos="1">Öl</IfcLabel-wrapper>
@@ -3164,7 +3166,7 @@
     <HasPropertyTemplates>
       <IfcSimplePropertyTemplate id="i843" pos="0" GlobalId="21SCvzGRTCKRgZJI3un55A" Name="Beschreibung" Description="Freitextfeld zur allgemeinen Beschreibung von Objektinformationen" TemplateType="p_singlevalue" PrimaryMeasureType="IfcText" />
       <IfcSimplePropertyTemplate id="i844" pos="1" GlobalId="1rx3$4ePr31vP82jBlSGvy" Name="Bauart" Description="" TemplateType="p_enumeratedvalue" PrimaryMeasureType="IfcText">
-        <Enumerators>
+        <Enumerators Name="">
           <EnumerationValues>
             <IfcLabel-wrapper pos="0">Kompakt</IfcLabel-wrapper>
             <IfcLabel-wrapper pos="1">Split</IfcLabel-wrapper>
@@ -3172,7 +3174,7 @@
         </Enumerators>
       </IfcSimplePropertyTemplate>
       <IfcSimplePropertyTemplate id="i845" pos="2" GlobalId="2bQR2MyVPAahPkhGE4Abq2" Name="Bautyp" Description="" TemplateType="p_enumeratedvalue" PrimaryMeasureType="IfcText">
-        <Enumerators>
+        <Enumerators Name="">
           <EnumerationValues>
             <IfcLabel-wrapper pos="0">Sole-Wasser</IfcLabel-wrapper>
             <IfcLabel-wrapper pos="1">Wasser-Wasser</IfcLabel-wrapper>
@@ -3183,7 +3185,7 @@
         </Enumerators>
       </IfcSimplePropertyTemplate>
       <IfcSimplePropertyTemplate id="i846" pos="3" GlobalId="3KcJnBWWvBfOmXkADIBl8G" Name="Antriebsenergie" Description="" TemplateType="p_enumeratedvalue" PrimaryMeasureType="IfcText">
-        <Enumerators>
+        <Enumerators Name="">
           <EnumerationValues>
             <IfcLabel-wrapper pos="0">Strom</IfcLabel-wrapper>
             <IfcLabel-wrapper pos="1">Gas</IfcLabel-wrapper>
@@ -3218,7 +3220,7 @@
     <HasPropertyTemplates>
       <IfcSimplePropertyTemplate id="i854" pos="0" GlobalId="0Vgh7jsQf8teT8WSgtTWRZ" Name="Beschreibung" Description="Freitextfeld zur allgemeinen Beschreibung von Objektinformationen" TemplateType="p_singlevalue" PrimaryMeasureType="IfcText" />
       <IfcSimplePropertyTemplate id="i855" pos="1" GlobalId="1bypqMZs1FSeE12gWk_dWs" Name="Art der Nutzung Solaranlage" Description="" TemplateType="p_enumeratedvalue" PrimaryMeasureType="IfcText">
-        <Enumerators>
+        <Enumerators Name="">
           <EnumerationValues>
             <IfcLabel-wrapper pos="0">Heizung</IfcLabel-wrapper>
             <IfcLabel-wrapper pos="1">Warmwasser</IfcLabel-wrapper>
@@ -3239,7 +3241,7 @@
         </PrimaryUnit>
       </IfcSimplePropertyTemplate>
       <IfcSimplePropertyTemplate id="i859" pos="5" GlobalId="3ImrkadlP3quFesdls8DcX" Name="Bauart" Description="" TemplateType="p_enumeratedvalue" PrimaryMeasureType="IfcText">
-        <Enumerators>
+        <Enumerators Name="">
           <EnumerationValues>
             <IfcLabel-wrapper pos="0">Aufdach</IfcLabel-wrapper>
             <IfcLabel-wrapper pos="1">Indach</IfcLabel-wrapper>
@@ -3252,7 +3254,7 @@
       </IfcSimplePropertyTemplate>
       <IfcSimplePropertyTemplate id="i860" pos="6" GlobalId="3PSp6HX0DCcRVCyazKYwvz" Name="Bezeichnung des Kollektors" Description="" TemplateType="p_singlevalue" PrimaryMeasureType="IfcText" />
       <IfcSimplePropertyTemplate id="i861" pos="7" GlobalId="3nawmpsxT89uOkAJyBfbTv" Name="Typ Kollektor" Description="" TemplateType="p_enumeratedvalue" PrimaryMeasureType="IfcText">
-        <Enumerators>
+        <Enumerators Name="">
           <EnumerationValues>
             <IfcLabel-wrapper pos="0">Flachkollektor</IfcLabel-wrapper>
             <IfcLabel-wrapper pos="1">Röhrenkollektor</IfcLabel-wrapper>
@@ -3281,7 +3283,7 @@
       <IfcSimplePropertyTemplate id="i865" pos="0" GlobalId="0_WWG5n5f5aRE2jKaMarMw" Name="Beschreibung" Description="Freitextfeld zur allgemeinen Beschreibung von Objektinformationen" TemplateType="p_singlevalue" PrimaryMeasureType="IfcText" />
       <IfcSimplePropertyTemplate id="i866" pos="1" GlobalId="3fi_sYnQvEf93KuBEXhBBZ" Name="Baujahr" Description="" TemplateType="p_singlevalue" PrimaryMeasureType="IfcReal" />
       <IfcSimplePropertyTemplate id="i867" pos="2" GlobalId="29PZkI5HP0$8Yk32bAr9CH" Name="Brennstoff" Description="" TemplateType="p_enumeratedvalue" PrimaryMeasureType="IfcText">
-        <Enumerators>
+        <Enumerators Name="">
           <EnumerationValues>
             <IfcLabel-wrapper pos="0">Gas</IfcLabel-wrapper>
             <IfcLabel-wrapper pos="1">Öl</IfcLabel-wrapper>
@@ -3336,7 +3338,7 @@
       <IfcSimplePropertyTemplate id="i880" pos="7" GlobalId="1NpiUSj7z2iwscHujT9JRB" Name="Hersteller" Description="" TemplateType="p_singlevalue" PrimaryMeasureType="IfcText" />
       <IfcSimplePropertyTemplate id="i881" pos="8" GlobalId="1B7Zp9f91E99snYlabG_AD" Name="Hersteller-Typ" Description="" TemplateType="p_singlevalue" PrimaryMeasureType="IfcText" />
       <IfcSimplePropertyTemplate id="i882" pos="9" GlobalId="1_rYNUycXErAfpjBtAXIte" Name="Zugeführtes Medium" Description="" TemplateType="p_enumeratedvalue" PrimaryMeasureType="IfcText">
-        <Enumerators>
+        <Enumerators Name="">
           <EnumerationValues>
             <IfcLabel-wrapper pos="0">Erdgas</IfcLabel-wrapper>
             <IfcLabel-wrapper pos="1">Wasser</IfcLabel-wrapper>
@@ -3402,7 +3404,7 @@
         </PrimaryUnit>
       </IfcSimplePropertyTemplate>
       <IfcSimplePropertyTemplate id="i901" pos="5" GlobalId="3fFiKrccHD2hxgYXxTsEF_" Name="Bauart Wärmetauscher" Description="" TemplateType="p_enumeratedvalue" PrimaryMeasureType="IfcText">
-        <Enumerators>
+        <Enumerators Name="">
           <EnumerationValues>
             <IfcLabel-wrapper pos="0">Rohrbündelwärmetauscher</IfcLabel-wrapper>
             <IfcLabel-wrapper pos="1">Plattenwärmetauscher</IfcLabel-wrapper>
@@ -3410,7 +3412,7 @@
         </Enumerators>
       </IfcSimplePropertyTemplate>
       <IfcSimplePropertyTemplate id="i902" pos="6" GlobalId="0dPc7QpND1YAwu$dyEOiUl" Name="Betriebsart" Description="" TemplateType="p_enumeratedvalue" PrimaryMeasureType="IfcText">
-        <Enumerators>
+        <Enumerators Name="">
           <EnumerationValues>
             <IfcLabel-wrapper pos="0">Wasser</IfcLabel-wrapper>
             <IfcLabel-wrapper pos="1">Sole</IfcLabel-wrapper>
@@ -3421,7 +3423,7 @@
         </Enumerators>
       </IfcSimplePropertyTemplate>
       <IfcSimplePropertyTemplate id="i903" pos="7" GlobalId="0_KJ1tfa57C8Jo8cJU$wnL" Name="Betriebsweise" Description="" TemplateType="p_enumeratedvalue" PrimaryMeasureType="IfcText">
-        <Enumerators>
+        <Enumerators Name="">
           <EnumerationValues>
             <IfcLabel-wrapper pos="0">Kreuzstrom</IfcLabel-wrapper>
             <IfcLabel-wrapper pos="1">Gegenstrom</IfcLabel-wrapper>
@@ -3459,7 +3461,7 @@
         </PrimaryUnit>
       </IfcSimplePropertyTemplate>
       <IfcSimplePropertyTemplate id="i911" pos="3" GlobalId="0JmuljwsrFMfHwxbNIQgK8" Name="Typ Wärmetauscher" Description="" TemplateType="p_enumeratedvalue" PrimaryMeasureType="IfcText">
-        <Enumerators>
+        <Enumerators Name="">
           <EnumerationValues>
             <IfcLabel-wrapper pos="0">Rohrbündelwärmetauscher</IfcLabel-wrapper>
             <IfcLabel-wrapper pos="1">Plattenwärmetauscher</IfcLabel-wrapper>
@@ -3467,7 +3469,7 @@
         </Enumerators>
       </IfcSimplePropertyTemplate>
       <IfcSimplePropertyTemplate id="i912" pos="4" GlobalId="0LMki40dTBuRB12n5BL2YJ" Name="Anschluss an Sekundärkreislauf" Description="" TemplateType="p_enumeratedvalue" PrimaryMeasureType="IfcText">
-        <Enumerators>
+        <Enumerators Name="">
           <EnumerationValues>
             <IfcLabel-wrapper pos="0">direkt</IfcLabel-wrapper>
             <IfcLabel-wrapper pos="1">indirekt</IfcLabel-wrapper>
@@ -3634,7 +3636,7 @@
       <IfcSimplePropertyTemplate id="i960" pos="2" GlobalId="1UXwfaQJf2rxgCFXU1C61L" Name="Hersteller-Typ" Description="" TemplateType="p_singlevalue" PrimaryMeasureType="IfcText" />
       <IfcSimplePropertyTemplate id="i961" pos="4" GlobalId="0hZCkrmirAiOlgljQq0Jvg" Name="Baujahr" Description="" TemplateType="p_singlevalue" PrimaryMeasureType="IfcReal" />
       <IfcSimplePropertyTemplate id="i962" pos="5" GlobalId="1DweznDQv0NvDWNlsBhgQE" Name="Bauart" Description="" TemplateType="p_enumeratedvalue" PrimaryMeasureType="IfcText">
-        <Enumerators>
+        <Enumerators Name="">
           <EnumerationValues>
             <IfcLabel-wrapper pos="0">Ölbrenner</IfcLabel-wrapper>
             <IfcLabel-wrapper pos="1">Gasbrenner</IfcLabel-wrapper>
@@ -3644,7 +3646,7 @@
         </Enumerators>
       </IfcSimplePropertyTemplate>
       <IfcSimplePropertyTemplate id="i963" pos="6" GlobalId="2aq4z7uLX3SQa$2V07W1Q2" Name="Brennstoff" Description="" TemplateType="p_enumeratedvalue" PrimaryMeasureType="IfcText">
-        <Enumerators>
+        <Enumerators Name="">
           <EnumerationValues>
             <IfcLabel-wrapper pos="0">Gas</IfcLabel-wrapper>
             <IfcLabel-wrapper pos="1">Öl</IfcLabel-wrapper>
@@ -3685,7 +3687,7 @@
       <IfcSimplePropertyTemplate id="i971" pos="1" GlobalId="0oxx1KOgPFMAUxLbDnMktA" Name="Hersteller" Description="" TemplateType="p_singlevalue" PrimaryMeasureType="IfcText" />
       <IfcSimplePropertyTemplate id="i972" pos="3" GlobalId="34zcR42aDFV8M$NRnoS9_c" Name="Baujahr" Description="" TemplateType="p_singlevalue" PrimaryMeasureType="IfcReal" />
       <IfcSimplePropertyTemplate id="i973" pos="4" GlobalId="2dyj9UEG97hf29tQ1OK6JG" Name="Bauart (Befestigung)" Description="" TemplateType="p_enumeratedvalue" PrimaryMeasureType="IfcText">
-        <Enumerators>
+        <Enumerators Name="">
           <EnumerationValues>
             <IfcLabel-wrapper pos="0">Wand</IfcLabel-wrapper>
             <IfcLabel-wrapper pos="1">Decke</IfcLabel-wrapper>
@@ -3693,7 +3695,7 @@
         </Enumerators>
       </IfcSimplePropertyTemplate>
       <IfcSimplePropertyTemplate id="i974" pos="5" GlobalId="35652fTsj3WAsrY1eVCne9" Name="Brennstoff" Description="" TemplateType="p_enumeratedvalue" PrimaryMeasureType="IfcText">
-        <Enumerators>
+        <Enumerators Name="">
           <EnumerationValues>
             <IfcLabel-wrapper pos="0">Gas</IfcLabel-wrapper>
             <IfcLabel-wrapper pos="1">Öl</IfcLabel-wrapper>
@@ -3742,7 +3744,7 @@
     <HasPropertyTemplates>
       <IfcSimplePropertyTemplate id="i983" pos="0" GlobalId="0$tlunB4X0Du_y569CQ7PV" Name="Beschreibung" Description="Freitextfeld zur allgemeinen Beschreibung von Objektinformationen" TemplateType="p_singlevalue" PrimaryMeasureType="IfcText" />
       <IfcSimplePropertyTemplate id="i984" pos="1" GlobalId="1yGvUai_1BmOK47JPtX9Ea" Name="Bauart" Description="" TemplateType="p_enumeratedvalue" PrimaryMeasureType="IfcText">
-        <Enumerators>
+        <Enumerators Name="">
           <EnumerationValues>
             <IfcLabel-wrapper pos="0">Einschalig</IfcLabel-wrapper>
             <IfcLabel-wrapper pos="1">Mehrschalig </IfcLabel-wrapper>
@@ -3750,7 +3752,7 @@
         </Enumerators>
       </IfcSimplePropertyTemplate>
       <IfcSimplePropertyTemplate id="i985" pos="2" GlobalId="39vciJ56D3LwXI1Y_ulzSa" Name="Material" Description="" TemplateType="p_enumeratedvalue" PrimaryMeasureType="IfcText">
-        <Enumerators>
+        <Enumerators Name="">
           <EnumerationValues>
             <IfcLabel-wrapper pos="0">Kunststoff</IfcLabel-wrapper>
             <IfcLabel-wrapper pos="1">Stahl</IfcLabel-wrapper>
@@ -3879,7 +3881,7 @@
       <IfcSimplePropertyTemplate id="i1016" pos="0" GlobalId="1aJ$iv10fAwxvl4ElLY6Gn" Name="Beschreibung" Description="Freitextfeld zur allgemeinen Beschreibung von Objektinformationen" TemplateType="p_singlevalue" PrimaryMeasureType="IfcText" />
       <IfcSimplePropertyTemplate id="i1017" pos="1" GlobalId="1aMr4yhsXDePmIP8O9D3_e" Name="Baujahr" Description="" TemplateType="p_singlevalue" PrimaryMeasureType="IfcReal" />
       <IfcSimplePropertyTemplate id="i1018" pos="3" GlobalId="1Vtr2BAOT2_8SMmcmfKCUJ" Name="Bauart" Description="" TemplateType="p_enumeratedvalue" PrimaryMeasureType="IfcText">
-        <Enumerators>
+        <Enumerators Name="">
           <EnumerationValues>
             <IfcLabel-wrapper pos="0">dreischalige Schornsteine (Mantelstein, Dämmung u. Innenrohr)</IfcLabel-wrapper>
             <IfcLabel-wrapper pos="1">zweischalige Schornsteine (Schacht mit Innenrohr)</IfcLabel-wrapper>
@@ -3948,7 +3950,7 @@
       <IfcSimplePropertyTemplate id="i1034" pos="2" GlobalId="2pGtiHNZT4UBOPq31qZbH6" Name="Hersteller" Description="" TemplateType="p_singlevalue" PrimaryMeasureType="IfcText" />
       <IfcSimplePropertyTemplate id="i1035" pos="3" GlobalId="3Cf6txtrX2ef0eFmlRsPue" Name="Hersteller-Typ" Description="" TemplateType="p_singlevalue" PrimaryMeasureType="IfcText" />
       <IfcSimplePropertyTemplate id="i1036" pos="4" GlobalId="3WsLQIUT9EgQhA1tCp8RUX" Name="Speicherart" Description="" TemplateType="p_enumeratedvalue" PrimaryMeasureType="IfcText">
-        <Enumerators>
+        <Enumerators Name="">
           <EnumerationValues>
             <IfcLabel-wrapper pos="0">Trinkwasser</IfcLabel-wrapper>
             <IfcLabel-wrapper pos="1">Heizungswasser</IfcLabel-wrapper>
@@ -3960,7 +3962,7 @@
         </Enumerators>
       </IfcSimplePropertyTemplate>
       <IfcSimplePropertyTemplate id="i1037" pos="5" GlobalId="0bMFF1X_H2Jh$W0QEL__1E" Name="Beheizungsart" Description="" TemplateType="p_enumeratedvalue" PrimaryMeasureType="IfcText">
-        <Enumerators>
+        <Enumerators Name="">
           <EnumerationValues>
             <IfcLabel-wrapper pos="0">Rohrbündel innenliegend</IfcLabel-wrapper>
             <IfcLabel-wrapper pos="1">Speicher-/ Ladesystem</IfcLabel-wrapper>
@@ -4153,7 +4155,7 @@
     <HasPropertyTemplates>
       <IfcSimplePropertyTemplate id="i1083" pos="0" GlobalId="3eMmkeP15E5ACMkhdNSKJg" Name="Beschreibung" Description="Freitextfeld zur allgemeinen Beschreibung von Objektinformationen" TemplateType="p_singlevalue" PrimaryMeasureType="IfcText" />
       <IfcSimplePropertyTemplate id="i1084" pos="1" GlobalId="2npS3db0bEMe46occfAPk6" Name="Lagermenge" Description="" TemplateType="p_enumeratedvalue" PrimaryMeasureType="IfcText">
-        <Enumerators>
+        <Enumerators Name="">
           <EnumerationValues>
             <IfcLabel-wrapper pos="0">Heizölläger ≤ 10.000 l</IfcLabel-wrapper>
             <IfcLabel-wrapper pos="1">Heizölläger &gt;10.000 l</IfcLabel-wrapper>
@@ -4162,7 +4164,7 @@
       </IfcSimplePropertyTemplate>
       <IfcSimplePropertyTemplate id="i1085" pos="2" GlobalId="0kMf6WQAf8aPYZZN_56WcH" Name="Anzahl der Behälter" Description="" TemplateType="p_singlevalue" PrimaryMeasureType="IfcReal" />
       <IfcSimplePropertyTemplate id="i1086" pos="3" GlobalId="1jJ4U5PqH6Dx_NCFU7aTsZ" Name="Aufstellung" Description="" TemplateType="p_enumeratedvalue" PrimaryMeasureType="IfcText">
-        <Enumerators>
+        <Enumerators Name="">
           <EnumerationValues>
             <IfcLabel-wrapper pos="0">Erdeinbau</IfcLabel-wrapper>
             <IfcLabel-wrapper pos="1">Freiaufstellung</IfcLabel-wrapper>
@@ -4231,7 +4233,7 @@
       <IfcSimplePropertyTemplate id="i1100" pos="1" GlobalId="1_HuTQyPDARxCxcubC5fl0" Name="Hersteller" Description="" TemplateType="p_singlevalue" PrimaryMeasureType="IfcText" />
       <IfcSimplePropertyTemplate id="i1101" pos="3" GlobalId="1n1sZ16wr5nx05bpzi5cWW" Name="Baujahr" Description="" TemplateType="p_singlevalue" PrimaryMeasureType="IfcReal" />
       <IfcSimplePropertyTemplate id="i1102" pos="4" GlobalId="3TcWjjQxj7nAoYaJrIVVJF" Name="Bauart" Description="" TemplateType="p_enumeratedvalue" PrimaryMeasureType="IfcText">
-        <Enumerators>
+        <Enumerators Name="">
           <EnumerationValues>
             <IfcLabel-wrapper pos="0">Einpumpenanlage</IfcLabel-wrapper>
             <IfcLabel-wrapper pos="1">Doppelpumpenanlage (parallel)</IfcLabel-wrapper>
@@ -4275,7 +4277,7 @@
       <IfcSimplePropertyTemplate id="i1110" pos="1" GlobalId="0IUFYVNqjA2Rmbm23igUav" Name="Hersteller" Description="" TemplateType="p_singlevalue" PrimaryMeasureType="IfcText" />
       <IfcSimplePropertyTemplate id="i1111" pos="3" GlobalId="21ezKo_8X7IhkoBBeebv$w" Name="Baujahr" Description="" TemplateType="p_singlevalue" PrimaryMeasureType="IfcReal" />
       <IfcSimplePropertyTemplate id="i1112" pos="4" GlobalId="3wc9S2nbz7jf72VANr9vpk" Name="Armaturentyp" Description="" TemplateType="p_enumeratedvalue" PrimaryMeasureType="IfcText">
-        <Enumerators>
+        <Enumerators Name="">
           <EnumerationValues>
             <IfcLabel-wrapper pos="0">Absperr- und Regelarmaturen</IfcLabel-wrapper>
             <IfcLabel-wrapper pos="1">Sicherungs- und Sicherheitsarmaturen</IfcLabel-wrapper>
@@ -4322,7 +4324,7 @@
       <IfcSimplePropertyTemplate id="i1122" pos="0" GlobalId="15MvAIzsP6GfNNztRGKXmz" Name="Beschreibung" Description="Freitextfeld zur allgemeinen Beschreibung von Objektinformationen" TemplateType="p_singlevalue" PrimaryMeasureType="IfcText" />
       <IfcSimplePropertyTemplate id="i1123" pos="1" GlobalId="2m9qfQoc9D_vVIJ1jSassn" Name="Baujahr" Description="" TemplateType="p_singlevalue" PrimaryMeasureType="IfcReal" />
       <IfcSimplePropertyTemplate id="i1124" pos="2" GlobalId="0jxa_Gnz5DuP2AyGtxfDDW" Name="Material" Description="" TemplateType="p_enumeratedvalue" PrimaryMeasureType="IfcText">
-        <Enumerators>
+        <Enumerators Name="">
           <EnumerationValues>
             <IfcLabel-wrapper pos="0">Grauguss</IfcLabel-wrapper>
             <IfcLabel-wrapper pos="1">Kupfer</IfcLabel-wrapper>
@@ -4392,7 +4394,7 @@
       <IfcSimplePropertyTemplate id="i1139" pos="1" GlobalId="2$CiVArn16mBBs6$tdxK3f" Name="Baujahr" Description="" TemplateType="p_singlevalue" PrimaryMeasureType="IfcReal" />
       <IfcSimplePropertyTemplate id="i1140" pos="2" GlobalId="1pStMXlCP2vxCH1RpJKZfo" Name="Bautyp" Description="" TemplateType="p_singlevalue" PrimaryMeasureType="IfcText" />
       <IfcSimplePropertyTemplate id="i1141" pos="3" GlobalId="1ejNOV5vrBGhNFgEGUoQIo" Name="Heizkörperart" Description="" TemplateType="p_enumeratedvalue" PrimaryMeasureType="IfcText">
-        <Enumerators>
+        <Enumerators Name="">
           <EnumerationValues>
             <IfcLabel-wrapper pos="0">Flachheizkörper</IfcLabel-wrapper>
             <IfcLabel-wrapper pos="1">Bad-Heizkörper</IfcLabel-wrapper>
@@ -4406,7 +4408,7 @@
         </Enumerators>
       </IfcSimplePropertyTemplate>
       <IfcSimplePropertyTemplate id="i1142" pos="4" GlobalId="1Hlto9JhrEyOUD7ubtdCHR" Name="Ausführung" Description="" TemplateType="p_enumeratedvalue" PrimaryMeasureType="IfcText">
-        <Enumerators>
+        <Enumerators Name="">
           <EnumerationValues>
             <IfcLabel-wrapper pos="0">Überflur</IfcLabel-wrapper>
             <IfcLabel-wrapper pos="1">Unterflur</IfcLabel-wrapper>
@@ -4432,7 +4434,7 @@
     <HasPropertyTemplates>
       <IfcSimplePropertyTemplate id="i1146" pos="0" GlobalId="2DH8nIRoX6keCkPXXeZXVm" Name="Beschreibung" Description="Freitextfeld zur allgemeinen Beschreibung von Objektinformationen" TemplateType="p_singlevalue" PrimaryMeasureType="IfcText" />
       <IfcSimplePropertyTemplate id="i1147" pos="1" GlobalId="1y$7epvc9EuApDvuCYs$X$" Name="Bauart" Description="" TemplateType="p_enumeratedvalue" PrimaryMeasureType="IfcText">
-        <Enumerators>
+        <Enumerators Name="">
           <EnumerationValues>
             <IfcLabel-wrapper pos="0">Bodenheizung</IfcLabel-wrapper>
             <IfcLabel-wrapper pos="1">Wandheizung</IfcLabel-wrapper>
@@ -4521,7 +4523,7 @@
     <HasPropertyTemplates>
       <IfcSimplePropertyTemplate id="i1166" pos="0" GlobalId="1TnBQwtYzFB9HPmQ1lD00d" Name="Beschreibung" Description="Freitextfeld zur allgemeinen Beschreibung von Objektinformationen" TemplateType="p_singlevalue" PrimaryMeasureType="IfcText" />
       <IfcSimplePropertyTemplate id="i1167" pos="4" GlobalId="0xZAL64Hf8hRqgwEdk6zL$" Name="Ventilator-Baureihe" Description="" TemplateType="p_enumeratedvalue" PrimaryMeasureType="IfcText">
-        <Enumerators>
+        <Enumerators Name="">
           <EnumerationValues>
             <IfcLabel-wrapper pos="0">Radialventilator</IfcLabel-wrapper>
             <IfcLabel-wrapper pos="1">Axialventilator</IfcLabel-wrapper>
@@ -4718,7 +4720,7 @@
       <IfcSimplePropertyTemplate id="i1215" pos="0" GlobalId="2ACjvMY3z8zeP2OjMKm1yi" Name="Beschreibung" Description="Freitextfeld zur allgemeinen Beschreibung von Objektinformationen" TemplateType="p_singlevalue" PrimaryMeasureType="IfcText" />
       <IfcSimplePropertyTemplate id="i1216" pos="1" GlobalId="1_kAZ5VuXFH9z5g7O83jWT" Name="Hersteller" Description="" TemplateType="p_singlevalue" PrimaryMeasureType="IfcText" />
       <IfcSimplePropertyTemplate id="i1217" pos="2" GlobalId="2QY$gubYr7EQQQOcSXaHr1" Name="Luftfilterart" Description="" TemplateType="p_enumeratedvalue" PrimaryMeasureType="IfcText">
-        <Enumerators>
+        <Enumerators Name="">
           <EnumerationValues>
             <IfcLabel-wrapper pos="0">Rollbandfilter</IfcLabel-wrapper>
             <IfcLabel-wrapper pos="1">Trockenschichtfilter</IfcLabel-wrapper>
@@ -4957,7 +4959,7 @@
       <IfcSimplePropertyTemplate id="i1275" pos="3" GlobalId="0BzXPdpnj6PgkZAoHSCshO" Name="Hersteller" Description="" TemplateType="p_singlevalue" PrimaryMeasureType="IfcText" />
       <IfcSimplePropertyTemplate id="i1276" pos="5" GlobalId="25A7LD0cbCOPYv$FQe4zvV" Name="Verwendbarkeitsnachweis Nr." Description="" TemplateType="p_singlevalue" PrimaryMeasureType="IfcText" />
       <IfcSimplePropertyTemplate id="i1277" pos="6" GlobalId="0A1y_sPR58avTxRAnvy$MW" Name="Verwendbarkeitsnachweis Typ" Description="" TemplateType="p_enumeratedvalue" PrimaryMeasureType="IfcText">
-        <Enumerators>
+        <Enumerators Name="">
           <EnumerationValues>
             <IfcLabel-wrapper pos="0">Z-41.3</IfcLabel-wrapper>
             <IfcLabel-wrapper pos="1">PA-X</IfcLabel-wrapper>
@@ -4965,7 +4967,7 @@
         </Enumerators>
       </IfcSimplePropertyTemplate>
       <IfcSimplePropertyTemplate id="i1278" pos="7" GlobalId="0TQ8T1zd5Eag0C_MgAQwP0" Name="Einbausituation" Description="" TemplateType="p_enumeratedvalue" PrimaryMeasureType="IfcText">
-        <Enumerators>
+        <Enumerators Name="">
           <EnumerationValues>
             <IfcLabel-wrapper pos="0">Massivwand</IfcLabel-wrapper>
             <IfcLabel-wrapper pos="1">Massivdecke</IfcLabel-wrapper>
@@ -5017,7 +5019,7 @@
     <HasPropertyTemplates>
       <IfcSimplePropertyTemplate id="i1288" pos="0" GlobalId="0AWvWob$r7K8qMrRuoS$Eg" Name="Beschreibung" Description="Freitextfeld zur allgemeinen Beschreibung von Objektinformationen" TemplateType="p_singlevalue" PrimaryMeasureType="IfcText" />
       <IfcSimplePropertyTemplate id="i1289" pos="1" GlobalId="0gqhFhazb81vjH4scSXRyG" Name="Bauart" Description="" TemplateType="p_enumeratedvalue" PrimaryMeasureType="IfcText">
-        <Enumerators>
+        <Enumerators Name="">
           <EnumerationValues>
             <IfcLabel-wrapper pos="0">rund</IfcLabel-wrapper>
             <IfcLabel-wrapper pos="1">eckig</IfcLabel-wrapper>
@@ -5026,7 +5028,7 @@
         </Enumerators>
       </IfcSimplePropertyTemplate>
       <IfcSimplePropertyTemplate id="i1290" pos="3" GlobalId="2$6XK$MtnCyR2lCpOTAehq" Name="Luftdichtheitsklasse Luftleitung" Description="" TemplateType="p_enumeratedvalue" PrimaryMeasureType="IfcText">
-        <Enumerators>
+        <Enumerators Name="">
           <EnumerationValues>
             <IfcLabel-wrapper pos="0">A</IfcLabel-wrapper>
             <IfcLabel-wrapper pos="1">B</IfcLabel-wrapper>
@@ -5259,7 +5261,7 @@
       <IfcSimplePropertyTemplate id="i1346" pos="0" GlobalId="0r92_5wlzF5A0KQql$NW2B" Name="Beschreibung" Description="Freitextfeld zur allgemeinen Beschreibung von Objektinformationen" TemplateType="p_singlevalue" PrimaryMeasureType="IfcText" />
       <IfcSimplePropertyTemplate id="i1347" pos="1" GlobalId="0LmSYyFJD9IhtdwUCmOEWW" Name="Baujahr" Description="" TemplateType="p_singlevalue" PrimaryMeasureType="IfcReal" />
       <IfcSimplePropertyTemplate id="i1348" pos="2" GlobalId="1KVg1aicL5CPti0sttOCSj" Name="Art der Luft" Description="" TemplateType="p_enumeratedvalue" PrimaryMeasureType="IfcText">
-        <Enumerators>
+        <Enumerators Name="">
           <EnumerationValues>
             <IfcLabel-wrapper pos="0">Abluft</IfcLabel-wrapper>
             <IfcLabel-wrapper pos="1">Umluft</IfcLabel-wrapper>
@@ -5273,7 +5275,7 @@
         </Enumerators>
       </IfcSimplePropertyTemplate>
       <IfcSimplePropertyTemplate id="i1349" pos="3" GlobalId="0Qxfqx2JP9_QckwZwIXBfb" Name="Art der Wärmerückgewinnung" Description="" TemplateType="p_enumeratedvalue" PrimaryMeasureType="IfcText">
-        <Enumerators>
+        <Enumerators Name="">
           <EnumerationValues>
             <IfcLabel-wrapper pos="0">keine</IfcLabel-wrapper>
             <IfcLabel-wrapper pos="1">Kreislaufverbundsystem</IfcLabel-wrapper>
@@ -5297,7 +5299,7 @@
         </PrimaryUnit>
       </IfcSimplePropertyTemplate>
       <IfcSimplePropertyTemplate id="i1355" pos="9" GlobalId="2GdXvVSC9CkQTri8ARx8hR" Name="Befeuchtung" Description="" TemplateType="p_enumeratedvalue" PrimaryMeasureType="IfcText">
-        <Enumerators>
+        <Enumerators Name="">
           <EnumerationValues>
             <IfcLabel-wrapper pos="0">keine</IfcLabel-wrapper>
             <IfcLabel-wrapper pos="1">Dampf</IfcLabel-wrapper>
@@ -5308,7 +5310,7 @@
       <IfcSimplePropertyTemplate id="i1356" pos="10" GlobalId="0Og1xaCwT7pBDGMZYYdKSh" Name="Entfeuchtung" Description="" TemplateType="p_singlevalue" PrimaryMeasureType="IfcBoolean" />
       <IfcSimplePropertyTemplate id="i1357" pos="11" GlobalId="11mGMeMjX0LB4$Iti3Yn$B" Name="UV-Behandlung" Description="" TemplateType="p_singlevalue" PrimaryMeasureType="IfcBoolean" />
       <IfcSimplePropertyTemplate id="i1358" pos="12" GlobalId="3tRbgvtl99$Qe_tsKaO_AY" Name="Thermische Behandlungsfunktionen" Description="" TemplateType="p_enumeratedvalue" PrimaryMeasureType="IfcText">
-        <Enumerators>
+        <Enumerators Name="">
           <EnumerationValues>
             <IfcLabel-wrapper pos="0">keine</IfcLabel-wrapper>
             <IfcLabel-wrapper pos="1">Heizen</IfcLabel-wrapper>
@@ -5514,7 +5516,7 @@
         </PrimaryUnit>
       </IfcSimplePropertyTemplate>
       <IfcSimplePropertyTemplate id="i1415" pos="5" GlobalId="3fZEfZJRz6MwGjyo0SaZkB" Name="Verdichterart" Description="" TemplateType="p_enumeratedvalue" PrimaryMeasureType="IfcText">
-        <Enumerators>
+        <Enumerators Name="">
           <EnumerationValues>
             <IfcLabel-wrapper pos="0">Kolbenverdichter</IfcLabel-wrapper>
             <IfcLabel-wrapper pos="1">Schraubenverdichter</IfcLabel-wrapper>
@@ -5523,7 +5525,7 @@
         </Enumerators>
       </IfcSimplePropertyTemplate>
       <IfcSimplePropertyTemplate id="i1416" pos="6" GlobalId="0bcTSr2hXDKfEnw_rdO$_6" Name="Art der Kälteerzeugung" Description="" TemplateType="p_enumeratedvalue" PrimaryMeasureType="IfcText">
-        <Enumerators>
+        <Enumerators Name="">
           <EnumerationValues>
             <IfcLabel-wrapper pos="0">Kompression</IfcLabel-wrapper>
             <IfcLabel-wrapper pos="1">Absorption</IfcLabel-wrapper>
@@ -5558,7 +5560,7 @@
       <IfcSimplePropertyTemplate id="i1426" pos="2" GlobalId="3thFuada97_QXzO_mTW_18" Name="Hersteller" Description="" TemplateType="p_singlevalue" PrimaryMeasureType="IfcText" />
       <IfcSimplePropertyTemplate id="i1427" pos="3" GlobalId="2wq48o7c99nuMrwLKwnttg" Name="Hersteller-Typ" Description="" TemplateType="p_singlevalue" PrimaryMeasureType="IfcText" />
       <IfcSimplePropertyTemplate id="i1428" pos="4" GlobalId="0P0UG6rPr9Ohf8B_HklH6V" Name="Bauart" Description="" TemplateType="p_enumeratedvalue" PrimaryMeasureType="IfcText">
-        <Enumerators>
+        <Enumerators Name="">
           <EnumerationValues>
             <IfcLabel-wrapper pos="0">Wassergekühlter Verflüssiger</IfcLabel-wrapper>
             <IfcLabel-wrapper pos="1">Luftgekühlter Verflüssiger</IfcLabel-wrapper>
@@ -5574,7 +5576,7 @@
         </PrimaryUnit>
       </IfcSimplePropertyTemplate>
       <IfcSimplePropertyTemplate id="i1430" pos="6" GlobalId="3RJl4HIU15ZQNHFgwz9peH" Name="Bauart Wärmetauscher" Description="" TemplateType="p_enumeratedvalue" PrimaryMeasureType="IfcText">
-        <Enumerators>
+        <Enumerators Name="">
           <EnumerationValues>
             <IfcLabel-wrapper pos="0">Rohrbündelwärmetauscher</IfcLabel-wrapper>
             <IfcLabel-wrapper pos="1">Plattenwärmetauscher</IfcLabel-wrapper>
@@ -5620,7 +5622,7 @@
       <IfcSimplePropertyTemplate id="i1439" pos="1" GlobalId="2eFtL1lY1EHQQEPE6WfTqW" Name="Hersteller" Description="" TemplateType="p_singlevalue" PrimaryMeasureType="IfcText" />
       <IfcSimplePropertyTemplate id="i1440" pos="3" GlobalId="3PYmC8rYjCJOPrNQaF1EYI" Name="Baujahr" Description="" TemplateType="p_singlevalue" PrimaryMeasureType="IfcReal" />
       <IfcSimplePropertyTemplate id="i1441" pos="4" GlobalId="1jh0e$nmH9BAGjsJUKVWxU" Name="Bauart" Description="" TemplateType="p_enumeratedvalue" PrimaryMeasureType="IfcText">
-        <Enumerators>
+        <Enumerators Name="">
           <EnumerationValues>
             <IfcLabel-wrapper pos="0">Einpumpenanlage</IfcLabel-wrapper>
             <IfcLabel-wrapper pos="1">Doppelpumpenanlage (parallel)</IfcLabel-wrapper>
@@ -5664,7 +5666,7 @@
       <IfcSimplePropertyTemplate id="i1449" pos="1" GlobalId="2e0BkIepn0gxHLz$hKfciE" Name="Hersteller" Description="" TemplateType="p_singlevalue" PrimaryMeasureType="IfcText" />
       <IfcSimplePropertyTemplate id="i1450" pos="3" GlobalId="3r8ELL7HHAhxzt8fTTmEzu" Name="Baujahr" Description="" TemplateType="p_singlevalue" PrimaryMeasureType="IfcReal" />
       <IfcSimplePropertyTemplate id="i1451" pos="4" GlobalId="1KBlzhEhj3RhlYVz281ErF" Name="Armaturentyp" Description="" TemplateType="p_enumeratedvalue" PrimaryMeasureType="IfcText">
-        <Enumerators>
+        <Enumerators Name="">
           <EnumerationValues>
             <IfcLabel-wrapper pos="0">Absperr- und Regelarmaturen</IfcLabel-wrapper>
             <IfcLabel-wrapper pos="1">Sicherungs- und Sicherheitsarmaturen</IfcLabel-wrapper>
@@ -5761,7 +5763,7 @@
     <HasPropertyTemplates>
       <IfcSimplePropertyTemplate id="i1476" pos="0" GlobalId="3NRtW3pN11pvHB3iTwTmz3" Name="Beschreibung" Description="Freitextfeld zur allgemeinen Beschreibung von Objektinformationen" TemplateType="p_singlevalue" PrimaryMeasureType="IfcText" />
       <IfcSimplePropertyTemplate id="i1477" pos="1" GlobalId="0CKWCJdiD1owwXfobeHYvs" Name="Material" Description="" TemplateType="p_enumeratedvalue" PrimaryMeasureType="IfcText">
-        <Enumerators>
+        <Enumerators Name="">
           <EnumerationValues>
             <IfcLabel-wrapper pos="0">Grauguss (SML-Rohre)</IfcLabel-wrapper>
             <IfcLabel-wrapper pos="1">Kupfer</IfcLabel-wrapper>
@@ -5799,7 +5801,7 @@
         </PrimaryUnit>
       </IfcSimplePropertyTemplate>
       <IfcSimplePropertyTemplate id="i1486" pos="5" GlobalId="1JVtbwbGf85u4H0mqTNdfm" Name="Bauart Rückkühler" Description="" TemplateType="p_enumeratedvalue" PrimaryMeasureType="IfcText">
-        <Enumerators>
+        <Enumerators Name="">
           <EnumerationValues>
             <IfcLabel-wrapper pos="0">offen</IfcLabel-wrapper>
             <IfcLabel-wrapper pos="1">geschlossen</IfcLabel-wrapper>
@@ -5807,7 +5809,7 @@
         </Enumerators>
       </IfcSimplePropertyTemplate>
       <IfcSimplePropertyTemplate id="i1487" pos="6" GlobalId="32zt3l_Z9FNAC09PQTQ8px" Name="Typ Rückkühlanlage" Description="" TemplateType="p_enumeratedvalue" PrimaryMeasureType="IfcText">
-        <Enumerators>
+        <Enumerators Name="">
           <EnumerationValues>
             <IfcLabel-wrapper pos="0">Verdunstungsrückkühlanlagen (Kühltürme)</IfcLabel-wrapper>
             <IfcLabel-wrapper pos="1">Trockenrückkühlanlagen</IfcLabel-wrapper>
@@ -5963,7 +5965,7 @@
       <IfcSimplePropertyTemplate id="i1524" pos="1" GlobalId="2jVOxx_3jAhv4BPtBEvk9P" Name="Hersteller" Description="" TemplateType="p_singlevalue" PrimaryMeasureType="IfcText" />
       <IfcSimplePropertyTemplate id="i1525" pos="3" GlobalId="0WikjfgK9EweHRZ$44tRUa" Name="Baujahr" Description="" TemplateType="p_singlevalue" PrimaryMeasureType="IfcReal" />
       <IfcSimplePropertyTemplate id="i1526" pos="4" GlobalId="3TkCO96zX7UR0313TJ1JOu" Name="Bauart" Description="" TemplateType="p_enumeratedvalue" PrimaryMeasureType="IfcText">
-        <Enumerators>
+        <Enumerators Name="">
           <EnumerationValues>
             <IfcLabel-wrapper pos="0">Einpumpenanlage</IfcLabel-wrapper>
             <IfcLabel-wrapper pos="1">Doppelpumpenanlage (parallel)</IfcLabel-wrapper>
@@ -6007,7 +6009,7 @@
       <IfcSimplePropertyTemplate id="i1534" pos="1" GlobalId="3vpJE7oZD37vFeL_GK3XYj" Name="Hersteller" Description="" TemplateType="p_singlevalue" PrimaryMeasureType="IfcText" />
       <IfcSimplePropertyTemplate id="i1535" pos="3" GlobalId="0wyFNgyG10$PohA13Yutfk" Name="Baujahr" Description="" TemplateType="p_singlevalue" PrimaryMeasureType="IfcReal" />
       <IfcSimplePropertyTemplate id="i1536" pos="4" GlobalId="0lAkyLs9z2FxOgfrR4Kooj" Name="Armaturentyp" Description="" TemplateType="p_enumeratedvalue" PrimaryMeasureType="IfcText">
-        <Enumerators>
+        <Enumerators Name="">
           <EnumerationValues>
             <IfcLabel-wrapper pos="0">Absperr- und Regelarmaturen</IfcLabel-wrapper>
             <IfcLabel-wrapper pos="1">Sicherungs- und Sicherheitsarmaturen</IfcLabel-wrapper>
@@ -6053,7 +6055,7 @@
     <HasPropertyTemplates>
       <IfcSimplePropertyTemplate id="i1546" pos="0" GlobalId="3J7ru8dJP2uOkY7Ohp3tNU" Name="Beschreibung" Description="Freitextfeld zur allgemeinen Beschreibung von Objektinformationen" TemplateType="p_singlevalue" PrimaryMeasureType="IfcText" />
       <IfcSimplePropertyTemplate id="i1547" pos="1" GlobalId="3toivODyL9Q99mltd_Qkhl" Name="Material" Description="" TemplateType="p_enumeratedvalue" PrimaryMeasureType="IfcText">
-        <Enumerators>
+        <Enumerators Name="">
           <EnumerationValues>
             <IfcLabel-wrapper pos="0">Grauguss (SML-Rohre)</IfcLabel-wrapper>
             <IfcLabel-wrapper pos="1">Kupfer</IfcLabel-wrapper>
@@ -6129,7 +6131,7 @@
     <HasPropertyTemplates>
       <IfcSimplePropertyTemplate id="i1565" pos="0" GlobalId="1hwsnokED9UANz4pnet2eC" Name="Beschreibung" Description="Freitextfeld zur allgemeinen Beschreibung von Objektinformationen" TemplateType="p_singlevalue" PrimaryMeasureType="IfcText" />
       <IfcSimplePropertyTemplate id="i1566" pos="1" GlobalId="1_L73sbtP38QbhNX0NrAT9" Name="Bauart" Description="" TemplateType="p_enumeratedvalue" PrimaryMeasureType="IfcText">
-        <Enumerators>
+        <Enumerators Name="">
           <EnumerationValues>
             <IfcLabel-wrapper pos="0">Bodenkühlung</IfcLabel-wrapper>
             <IfcLabel-wrapper pos="1">Wandkühlung</IfcLabel-wrapper>
@@ -6158,7 +6160,7 @@
     <HasPropertyTemplates>
       <IfcSimplePropertyTemplate id="i1571" pos="0" GlobalId="3mE4fuRCf7dB6VkBgSZ5Ym" Name="Beschreibung" Description="Freitextfeld zur allgemeinen Beschreibung von Objektinformationen" TemplateType="p_singlevalue" PrimaryMeasureType="IfcText" />
       <IfcSimplePropertyTemplate id="i1572" pos="1" GlobalId="3wnjOOdbj30vRHQOiO5Ssb" Name="Art der Nutzung" Description="" TemplateType="p_enumeratedvalue" PrimaryMeasureType="IfcText">
-        <Enumerators>
+        <Enumerators Name="">
           <EnumerationValues>
             <IfcLabel-wrapper pos="0">Kühlen</IfcLabel-wrapper>
             <IfcLabel-wrapper pos="1">Pufferspeicher</IfcLabel-wrapper>
@@ -6178,7 +6180,7 @@
         </PrimaryUnit>
       </IfcSimplePropertyTemplate>
       <IfcSimplePropertyTemplate id="i1576" pos="5" GlobalId="3BCA2AU79EFAfXWNtOYYbl" Name="Bauart" Description="" TemplateType="p_enumeratedvalue" PrimaryMeasureType="IfcText">
-        <Enumerators>
+        <Enumerators Name="">
           <EnumerationValues>
             <IfcLabel-wrapper pos="0">Aufdach</IfcLabel-wrapper>
             <IfcLabel-wrapper pos="1">Indach</IfcLabel-wrapper>
@@ -6268,7 +6270,7 @@
       <IfcSimplePropertyTemplate id="i1597" pos="2" GlobalId="33XGOZrePBVf0Xxe6yAHmi" Name="Hersteller" Description="" TemplateType="p_singlevalue" PrimaryMeasureType="IfcText" />
       <IfcSimplePropertyTemplate id="i1598" pos="3" GlobalId="2reqDzZWbDzA2hGHNaJgus" Name="Hersteller-Typ" Description="" TemplateType="p_singlevalue" PrimaryMeasureType="IfcText" />
       <IfcSimplePropertyTemplate id="i1599" pos="4" GlobalId="26j01IKuP9whoRF8a$mzyl" Name="Typ Kälteanlage" Description="" TemplateType="p_enumeratedvalue" PrimaryMeasureType="IfcText">
-        <Enumerators>
+        <Enumerators Name="">
           <EnumerationValues>
             <IfcLabel-wrapper pos="0">Umluftkühler</IfcLabel-wrapper>
             <IfcLabel-wrapper pos="1">Klimatruhe</IfcLabel-wrapper>
@@ -6278,7 +6280,7 @@
         </Enumerators>
       </IfcSimplePropertyTemplate>
       <IfcSimplePropertyTemplate id="i1600" pos="5" GlobalId="32pKoGMnX9dBI3CV3Ot3j0" Name="Kältemittel" Description="" TemplateType="p_enumeratedvalue" PrimaryMeasureType="IfcText">
-        <Enumerators>
+        <Enumerators Name="">
           <EnumerationValues>
             <IfcLabel-wrapper pos="0">R 1234yf </IfcLabel-wrapper>
             <IfcLabel-wrapper pos="1">R 22 - aufbereitet </IfcLabel-wrapper>
@@ -6320,7 +6322,7 @@
         </Enumerators>
       </IfcSimplePropertyTemplate>
       <IfcSimplePropertyTemplate id="i1601" pos="6" GlobalId="2qwGByngvANQ9vh3oPCq19" Name="Anlagenaufbau" Description="" TemplateType="p_enumeratedvalue" PrimaryMeasureType="IfcText">
-        <Enumerators>
+        <Enumerators Name="">
           <EnumerationValues>
             <IfcLabel-wrapper pos="0">Kompaktbauweise </IfcLabel-wrapper>
             <IfcLabel-wrapper pos="1">
@@ -6362,7 +6364,7 @@ Splitbauweise</IfcLabel-wrapper>
       <IfcSimplePropertyTemplate id="i1611" pos="4" GlobalId="2b2usaXZfAUg5Rx4foQULu" Name="Anzahl Außeneinheiten" Description="" TemplateType="p_singlevalue" PrimaryMeasureType="IfcReal" />
       <IfcSimplePropertyTemplate id="i1612" pos="5" GlobalId="068fPQyIHF3942L8eBWQML" Name="Anzahl Inneneinheiten" Description="" TemplateType="p_singlevalue" PrimaryMeasureType="IfcReal" />
       <IfcSimplePropertyTemplate id="i1613" pos="6" GlobalId="0fujpc9Xj8LxmT3UHVLViY" Name="Kältemittel" Description="" TemplateType="p_enumeratedvalue" PrimaryMeasureType="IfcText">
-        <Enumerators>
+        <Enumerators Name="">
           <EnumerationValues>
             <IfcLabel-wrapper pos="0">R 1234yf</IfcLabel-wrapper>
             <IfcLabel-wrapper pos="1">R 22 - aufbereitet</IfcLabel-wrapper>
@@ -6489,7 +6491,7 @@ Splitbauweise</IfcLabel-wrapper>
       <IfcSimplePropertyTemplate id="i1634" pos="3" GlobalId="0CP9REBTnEuxRvcTqGCpnm" Name="Hersteller" Description="" TemplateType="p_singlevalue" PrimaryMeasureType="IfcText" />
       <IfcSimplePropertyTemplate id="i1635" pos="4" GlobalId="0l$lUYOI9EIRaXgB9CxC5N" Name="Anzahl Schaltfelder" Description="" TemplateType="p_singlevalue" PrimaryMeasureType="IfcReal" />
       <IfcSimplePropertyTemplate id="i1636" pos="5" GlobalId="28MKeY1qX4mx_aoWvbL0Ws" Name="Spannung" Description="" TemplateType="p_enumeratedvalue" PrimaryMeasureType="IfcText">
-        <Enumerators>
+        <Enumerators Name="">
           <EnumerationValues>
             <IfcLabel-wrapper pos="0">10000</IfcLabel-wrapper>
             <IfcLabel-wrapper pos="1">20000</IfcLabel-wrapper>
@@ -6805,7 +6807,7 @@ Splitbauweise</IfcLabel-wrapper>
       </IfcSimplePropertyTemplate>
       <IfcSimplePropertyTemplate id="i1731" pos="8" GlobalId="2cINr1ynb4Cxbd1hcTyOfz" Name="Anzahl Wechselrichter" Description="" TemplateType="p_singlevalue" PrimaryMeasureType="IfcReal" />
       <IfcSimplePropertyTemplate id="i1732" pos="9" GlobalId="0IacEogWb9qR2Z68k$TCs2" Name="Typ Anlage" Description="" TemplateType="p_enumeratedvalue" PrimaryMeasureType="IfcText">
-        <Enumerators>
+        <Enumerators Name="">
           <EnumerationValues>
             <IfcLabel-wrapper pos="0">Netzeinspeisung</IfcLabel-wrapper>
             <IfcLabel-wrapper pos="1">Eigenverbrauch</IfcLabel-wrapper>
@@ -6881,7 +6883,7 @@ Splitbauweise</IfcLabel-wrapper>
         </PrimaryUnit>
       </IfcSimplePropertyTemplate>
       <IfcSimplePropertyTemplate id="i1753" pos="10" GlobalId="3Y3nJdn8XAhhcUP7Psd4E2" Name="Betriebsart" Description="" TemplateType="p_enumeratedvalue" PrimaryMeasureType="IfcText">
-        <Enumerators>
+        <Enumerators Name="">
           <EnumerationValues>
             <IfcLabel-wrapper pos="0">Einzelbetrieb</IfcLabel-wrapper>
             <IfcLabel-wrapper pos="1">Netzparallelbetrieb</IfcLabel-wrapper>
@@ -6890,7 +6892,7 @@ Splitbauweise</IfcLabel-wrapper>
         </Enumerators>
       </IfcSimplePropertyTemplate>
       <IfcSimplePropertyTemplate id="i1754" pos="11" GlobalId="3MaKHgNx16VhDL48X0GHyK" Name="Brennstoff" Description="" TemplateType="p_enumeratedvalue" PrimaryMeasureType="IfcText">
-        <Enumerators>
+        <Enumerators Name="">
           <EnumerationValues>
             <IfcLabel-wrapper pos="0">Gas</IfcLabel-wrapper>
             <IfcLabel-wrapper pos="1">Öl</IfcLabel-wrapper>
@@ -7180,7 +7182,7 @@ Splitbauweise</IfcLabel-wrapper>
     <HasPropertyTemplates>
       <IfcSimplePropertyTemplate id="i1841" pos="0" GlobalId="1MVhdrJXfAXBAver$YTu8Q" Name="Beschreibung" Description="Freitextfeld zur allgemeinen Beschreibung von Objektinformationen" TemplateType="p_singlevalue" PrimaryMeasureType="IfcText" />
       <IfcSimplePropertyTemplate id="i1842" pos="1" GlobalId="0lMe8knwPCoQdjk0xKuMm0" Name="Bauart" Description="" TemplateType="p_enumeratedvalue" PrimaryMeasureType="IfcText">
-        <Enumerators>
+        <Enumerators Name="">
           <EnumerationValues>
             <IfcLabel-wrapper pos="0">Strahler</IfcLabel-wrapper>
             <IfcLabel-wrapper pos="1">Downlight</IfcLabel-wrapper>
@@ -7200,7 +7202,7 @@ Splitbauweise</IfcLabel-wrapper>
       <IfcSimplePropertyTemplate id="i1847" pos="6" GlobalId="1BF65PGdvEZR7U9tt2PG48" Name="Leistung Leuchtmittel" Description="" TemplateType="p_singlevalue" PrimaryMeasureType="IfcReal" />
       <IfcSimplePropertyTemplate id="i1848" pos="7" GlobalId="3lzG9GO9bDMfQ2SeagWUKr" Name="Lichtfarbe" Description="" TemplateType="p_singlevalue" PrimaryMeasureType="IfcText" />
       <IfcSimplePropertyTemplate id="i1849" pos="8" GlobalId="38CBV2tHD6Jw1cmTMMbO6y" Name="Art Leuchtmittel" Description="" TemplateType="p_enumeratedvalue" PrimaryMeasureType="IfcText">
-        <Enumerators>
+        <Enumerators Name="">
           <EnumerationValues>
             <IfcLabel-wrapper pos="0">Leuchtstoffröhren</IfcLabel-wrapper>
             <IfcLabel-wrapper pos="1">Energiesparlampen</IfcLabel-wrapper>
@@ -7237,7 +7239,7 @@ Splitbauweise</IfcLabel-wrapper>
       <IfcSimplePropertyTemplate id="i1859" pos="6" GlobalId="0vXYeJF1H4YOkF79Mbefu4" Name="Leuchtmittel Bestückung " Description="" TemplateType="p_singlevalue" PrimaryMeasureType="IfcReal" />
       <IfcSimplePropertyTemplate id="i1860" pos="7" GlobalId="0CKRd0UHn1kxf3Qcx6eTvO" Name="Leistung Leuchtmittel" Description="" TemplateType="p_singlevalue" PrimaryMeasureType="IfcReal" />
       <IfcSimplePropertyTemplate id="i1861" pos="8" GlobalId="2aG3WGsLfBn8RoyfZ6fAm6" Name="Stromversorgung" Description="" TemplateType="p_enumeratedvalue" PrimaryMeasureType="IfcText">
-        <Enumerators>
+        <Enumerators Name="">
           <EnumerationValues>
             <IfcLabel-wrapper pos="0">Eigenversorgung</IfcLabel-wrapper>
             <IfcLabel-wrapper pos="1">Zentralversorgung</IfcLabel-wrapper>
@@ -7246,7 +7248,7 @@ Splitbauweise</IfcLabel-wrapper>
         </Enumerators>
       </IfcSimplePropertyTemplate>
       <IfcSimplePropertyTemplate id="i1862" pos="9" GlobalId="2wLfMMPjL24Q3b8Rn52CH4" Name="Schaltung" Description="" TemplateType="p_enumeratedvalue" PrimaryMeasureType="IfcText">
-        <Enumerators>
+        <Enumerators Name="">
           <EnumerationValues>
             <IfcLabel-wrapper pos="0">Dauerschaltung</IfcLabel-wrapper>
             <IfcLabel-wrapper pos="1">Bereitschaftsschaltung</IfcLabel-wrapper>
@@ -7308,7 +7310,7 @@ Splitbauweise</IfcLabel-wrapper>
       <IfcSimplePropertyTemplate id="i1883" pos="4" GlobalId="1f3Rs79pH9PQcAK4W1ooW5" Name="Anzahl Trennstellen" Description="" TemplateType="p_singlevalue" PrimaryMeasureType="IfcReal" />
       <IfcSimplePropertyTemplate id="i1884" pos="5" GlobalId="0IkVmotZ1E7Qfm97vPDxtj" Name="Fangeinrichtungen" Description="" TemplateType="p_singlevalue" PrimaryMeasureType="IfcReal" />
       <IfcSimplePropertyTemplate id="i1885" pos="6" GlobalId="2mBf19fVP269pZ5CxDtQl5" Name="Blitzschutzklasse" Description="" TemplateType="p_enumeratedvalue" PrimaryMeasureType="IfcText">
-        <Enumerators>
+        <Enumerators Name="">
           <EnumerationValues>
             <IfcLabel-wrapper pos="0">1</IfcLabel-wrapper>
             <IfcLabel-wrapper pos="1">2</IfcLabel-wrapper>
@@ -7393,7 +7395,7 @@ Splitbauweise</IfcLabel-wrapper>
     <HasPropertyTemplates>
       <IfcSimplePropertyTemplate id="i1904" pos="0" GlobalId="211qDBWanBwO1GYtBzTMlW" Name="Beschreibung" Description="Freitextfeld zur allgemeinen Beschreibung von Objektinformationen" TemplateType="p_singlevalue" PrimaryMeasureType="IfcText" />
       <IfcSimplePropertyTemplate id="i1905" pos="1" GlobalId="1RTbmUNi9A2u7ClH8Rf$bb" Name="Bauart" Description="" TemplateType="p_enumeratedvalue" PrimaryMeasureType="IfcText">
-        <Enumerators>
+        <Enumerators Name="">
           <EnumerationValues>
             <IfcLabel-wrapper pos="0">analog</IfcLabel-wrapper>
             <IfcLabel-wrapper pos="1">digital</IfcLabel-wrapper>
@@ -7426,7 +7428,7 @@ Splitbauweise</IfcLabel-wrapper>
     <HasPropertyTemplates>
       <IfcSimplePropertyTemplate id="i1913" pos="0" GlobalId="1wCIiER8nEc9H5lIEceRlg" Name="Beschreibung" Description="Freitextfeld zur allgemeinen Beschreibung von Objektinformationen" TemplateType="p_singlevalue" PrimaryMeasureType="IfcText" />
       <IfcSimplePropertyTemplate id="i1914" pos="1" GlobalId="0P3Yc8sHbEP9EMrOx9Ps4N" Name="Bauart" Description="" TemplateType="p_enumeratedvalue" PrimaryMeasureType="IfcText">
-        <Enumerators>
+        <Enumerators Name="">
           <EnumerationValues>
             <IfcLabel-wrapper pos="0">Telefon</IfcLabel-wrapper>
             <IfcLabel-wrapper pos="1">Telefax</IfcLabel-wrapper>
@@ -7436,7 +7438,7 @@ Splitbauweise</IfcLabel-wrapper>
         </Enumerators>
       </IfcSimplePropertyTemplate>
       <IfcSimplePropertyTemplate id="i1915" pos="2" GlobalId="1qIJ16zMH69gcvNstjqcBU" Name="Anschlussart" Description="" TemplateType="p_enumeratedvalue" PrimaryMeasureType="IfcText">
-        <Enumerators>
+        <Enumerators Name="">
           <EnumerationValues>
             <IfcLabel-wrapper pos="0">Kabelgebunden</IfcLabel-wrapper>
             <IfcLabel-wrapper pos="1">Schnurlos</IfcLabel-wrapper>
@@ -7467,7 +7469,7 @@ Splitbauweise</IfcLabel-wrapper>
     <HasPropertyTemplates>
       <IfcSimplePropertyTemplate id="i1923" pos="0" GlobalId="3sMsDm$VD27ehmflC_DPrx" Name="Beschreibung" Description="Freitextfeld zur allgemeinen Beschreibung von Objektinformationen" TemplateType="p_singlevalue" PrimaryMeasureType="IfcText" />
       <IfcSimplePropertyTemplate id="i1924" pos="1" GlobalId="2gY7lFWWX4n9PjsIrmE9hq" Name="Bauart" Description="" TemplateType="p_enumeratedvalue" PrimaryMeasureType="IfcText">
-        <Enumerators>
+        <Enumerators Name="">
           <EnumerationValues>
             <IfcLabel-wrapper pos="0">Personenrufanlagen</IfcLabel-wrapper>
             <IfcLabel-wrapper pos="1">Lichtruf- und Klingelanlagen</IfcLabel-wrapper>
@@ -7515,7 +7517,7 @@ Splitbauweise</IfcLabel-wrapper>
     <HasPropertyTemplates>
       <IfcSimplePropertyTemplate id="i1934" pos="0" GlobalId="1UIHOrB8rEDP07ctiqLjGl" Name="Beschreibung" Description="Freitextfeld zur allgemeinen Beschreibung von Objektinformationen" TemplateType="p_singlevalue" PrimaryMeasureType="IfcText" />
       <IfcSimplePropertyTemplate id="i1935" pos="1" GlobalId="2jJSlky4bEbvcQeEnqZiD6" Name="Bauart" Description="" TemplateType="p_enumeratedvalue" PrimaryMeasureType="IfcText">
-        <Enumerators>
+        <Enumerators Name="">
           <EnumerationValues>
             <IfcLabel-wrapper pos="0">Systemzentrale</IfcLabel-wrapper>
             <IfcLabel-wrapper pos="1">Software</IfcLabel-wrapper>
@@ -7544,7 +7546,7 @@ Splitbauweise</IfcLabel-wrapper>
     <HasPropertyTemplates>
       <IfcSimplePropertyTemplate id="i1942" pos="0" GlobalId="1VLR9Xo9TC7QeCkv42OJoj" Name="Beschreibung" Description="Freitextfeld zur allgemeinen Beschreibung von Objektinformationen" TemplateType="p_singlevalue" PrimaryMeasureType="IfcText" />
       <IfcSimplePropertyTemplate id="i1943" pos="1" GlobalId="1mLnfBdArAheKliW7_3eoM" Name="Bauart" Description="" TemplateType="p_enumeratedvalue" PrimaryMeasureType="IfcText">
-        <Enumerators>
+        <Enumerators Name="">
           <EnumerationValues>
             <IfcLabel-wrapper pos="0">Magnetkarte</IfcLabel-wrapper>
             <IfcLabel-wrapper pos="1">Biometrisch</IfcLabel-wrapper>
@@ -7600,7 +7602,7 @@ Splitbauweise</IfcLabel-wrapper>
       <IfcSimplePropertyTemplate id="i1959" pos="3" GlobalId="18zRlt63L4DQrfUxvPpKLK" Name="Hersteller" Description="" TemplateType="p_singlevalue" PrimaryMeasureType="IfcText" />
       <IfcSimplePropertyTemplate id="i1960" pos="4" GlobalId="3E7wKLaw97WwQFHzaqKnLf" Name="Hersteller-Typ" Description="" TemplateType="p_singlevalue" PrimaryMeasureType="IfcText" />
       <IfcSimplePropertyTemplate id="i1961" pos="5" GlobalId="2W32kx04f69O6GKI8SUeyA" Name="Sicherheitsstufe" Description="nach VDE 0833-4/C" TemplateType="p_enumeratedvalue" PrimaryMeasureType="IfcText">
-        <Enumerators>
+        <Enumerators Name="">
           <EnumerationValues>
             <IfcLabel-wrapper pos="0">Sicherheitsstufe I</IfcLabel-wrapper>
             <IfcLabel-wrapper pos="1">Sicherheitsstufe II</IfcLabel-wrapper>
@@ -7667,7 +7669,7 @@ Splitbauweise</IfcLabel-wrapper>
     <HasPropertyTemplates>
       <IfcSimplePropertyTemplate id="i1977" pos="0" GlobalId="3shs20UTH8Ox6QkMBRNrQm" Name="Beschreibung" Description="Freitextfeld zur allgemeinen Beschreibung von Objektinformationen" TemplateType="p_singlevalue" PrimaryMeasureType="IfcText" />
       <IfcSimplePropertyTemplate id="i1978" pos="1" GlobalId="2gqDeOzj59L9Fa0rBlpLuV" Name="Bauart" Description="" TemplateType="p_enumeratedvalue" PrimaryMeasureType="IfcText">
-        <Enumerators>
+        <Enumerators Name="">
           <EnumerationValues>
             <IfcLabel-wrapper pos="0">Satellit (S)</IfcLabel-wrapper>
             <IfcLabel-wrapper pos="1">Kabel (C)</IfcLabel-wrapper>
@@ -7696,7 +7698,7 @@ Splitbauweise</IfcLabel-wrapper>
     <HasPropertyTemplates>
       <IfcSimplePropertyTemplate id="i1984" pos="0" GlobalId="3RNadsa1n3Nhaf$Gm5V2kY" Name="Beschreibung" Description="Freitextfeld zur allgemeinen Beschreibung von Objektinformationen" TemplateType="p_singlevalue" PrimaryMeasureType="IfcText" />
       <IfcSimplePropertyTemplate id="i1985" pos="1" GlobalId="0OPS3jmyT4gvPfvoeLiMRF" Name="Bauart" Description="" TemplateType="p_enumeratedvalue" PrimaryMeasureType="IfcText">
-        <Enumerators>
+        <Enumerators Name="">
           <EnumerationValues>
             <IfcLabel-wrapper pos="0">Fernseher</IfcLabel-wrapper>
             <IfcLabel-wrapper pos="1">Receiver</IfcLabel-wrapper>
@@ -7931,7 +7933,7 @@ Splitbauweise</IfcLabel-wrapper>
     <HasPropertyTemplates>
       <IfcSimplePropertyTemplate id="i2070" pos="0" GlobalId="3VYD7hS$T1ugFpW8gVJKzJ" Name="Beschreibung" Description="Freitextfeld zur allgemeinen Beschreibung von Objektinformationen" TemplateType="p_singlevalue" PrimaryMeasureType="IfcText" />
       <IfcSimplePropertyTemplate id="i2071" pos="1" GlobalId="2E5JHL4Tj7CPOnPqNuiCrl" Name="Bauart" Description="" TemplateType="p_enumeratedvalue" PrimaryMeasureType="IfcText">
-        <Enumerators>
+        <Enumerators Name="">
           <EnumerationValues>
             <IfcLabel-wrapper pos="0">einzeln</IfcLabel-wrapper>
             <IfcLabel-wrapper pos="1">vernetz</IfcLabel-wrapper>
@@ -7939,7 +7941,7 @@ Splitbauweise</IfcLabel-wrapper>
         </Enumerators>
       </IfcSimplePropertyTemplate>
       <IfcSimplePropertyTemplate id="i2072" pos="2" GlobalId="0rEgk2N_L9w9EHvj6Ne4Oy" Name="Stromversorgung" Description="" TemplateType="p_enumeratedvalue" PrimaryMeasureType="IfcText">
-        <Enumerators>
+        <Enumerators Name="">
           <EnumerationValues>
             <IfcLabel-wrapper pos="0">Batterie Langzeit</IfcLabel-wrapper>
             <IfcLabel-wrapper pos="1">Batterie Kurzzeit</IfcLabel-wrapper>
@@ -7984,7 +7986,7 @@ Splitbauweise</IfcLabel-wrapper>
     <HasPropertyTemplates>
       <IfcSimplePropertyTemplate id="i2080" pos="0" GlobalId="0_F6skSHj1q8FHmvoMk2ha" Name="Beschreibung" Description="Freitextfeld zur allgemeinen Beschreibung von Objektinformationen" TemplateType="p_singlevalue" PrimaryMeasureType="IfcText" />
       <IfcSimplePropertyTemplate id="i2081" pos="1" GlobalId="26yQLBiDr9Evxnc1drizXX" Name="Bauart" Description="" TemplateType="p_enumeratedvalue" PrimaryMeasureType="IfcText">
-        <Enumerators>
+        <Enumerators Name="">
           <EnumerationValues>
             <IfcLabel-wrapper pos="0">elektronische Schließanlage</IfcLabel-wrapper>
             <IfcLabel-wrapper pos="1">Zutrittskontrolle</IfcLabel-wrapper>
@@ -7992,7 +7994,7 @@ Splitbauweise</IfcLabel-wrapper>
         </Enumerators>
       </IfcSimplePropertyTemplate>
       <IfcSimplePropertyTemplate id="i2082" pos="2" GlobalId="3Cigl9Rc1DG8qO_pIrPNqM" Name="Lesesystem" Description="Erkennung der Person" TemplateType="p_enumeratedvalue" PrimaryMeasureType="IfcText">
-        <Enumerators>
+        <Enumerators Name="">
           <EnumerationValues>
             <IfcLabel-wrapper pos="0">RFID-Transponder</IfcLabel-wrapper>
             <IfcLabel-wrapper pos="1">Biometrisch</IfcLabel-wrapper>
@@ -8062,7 +8064,7 @@ Splitbauweise</IfcLabel-wrapper>
     <HasPropertyTemplates>
       <IfcSimplePropertyTemplate id="i2098" pos="0" GlobalId="1wCag6PIrAc9OuHOI_iqZi" Name="Beschreibung" Description="Freitextfeld zur allgemeinen Beschreibung von Objektinformationen" TemplateType="p_singlevalue" PrimaryMeasureType="IfcText" />
       <IfcSimplePropertyTemplate id="i2099" pos="2" GlobalId="0YmJlrTebEFOrKGU7eVZXf" Name="Art der Anlage" Description="" TemplateType="p_enumeratedvalue" PrimaryMeasureType="IfcText">
-        <Enumerators>
+        <Enumerators Name="">
           <EnumerationValues>
             <IfcLabel-wrapper pos="0">Feuerwehraufzug</IfcLabel-wrapper>
             <IfcLabel-wrapper pos="1">Güteraufzug</IfcLabel-wrapper>
@@ -8079,7 +8081,7 @@ Splitbauweise</IfcLabel-wrapper>
       </IfcSimplePropertyTemplate>
       <IfcSimplePropertyTemplate id="i2100" pos="5" GlobalId="2TwIF03$nBJQrWt$N0GjBC" Name="Baujahr" Description="" TemplateType="p_singlevalue" PrimaryMeasureType="IfcReal" />
       <IfcSimplePropertyTemplate id="i2101" pos="9" GlobalId="1VLTKVvl16Rx4kNbCzVMkV" Name="Errichtungsnorm" Description="" TemplateType="p_enumeratedvalue" PrimaryMeasureType="IfcText">
-        <Enumerators>
+        <Enumerators Name="">
           <EnumerationValues>
             <IfcLabel-wrapper pos="0">EN81-1</IfcLabel-wrapper>
             <IfcLabel-wrapper pos="1">EN81-2</IfcLabel-wrapper>
@@ -8124,7 +8126,7 @@ Splitbauweise</IfcLabel-wrapper>
     <HasPropertyTemplates>
       <IfcSimplePropertyTemplate id="i2113" pos="0" GlobalId="0KFBMrxqnAA8DdUdR8$6XS" Name="Beschreibung" Description="Freitextfeld zur allgemeinen Beschreibung von Objektinformationen" TemplateType="p_singlevalue" PrimaryMeasureType="IfcText" />
       <IfcSimplePropertyTemplate id="i2114" pos="1" GlobalId="08_wer7cX41REqgFVBrn3y" Name="Art des Antriebs" Description="" TemplateType="p_enumeratedvalue" PrimaryMeasureType="IfcText">
-        <Enumerators>
+        <Enumerators Name="">
           <EnumerationValues>
             <IfcLabel-wrapper pos="0">Treibscheibe</IfcLabel-wrapper>
             <IfcLabel-wrapper pos="1">hydraulisch direkt 1 Kolben</IfcLabel-wrapper>
@@ -8167,7 +8169,7 @@ Splitbauweise</IfcLabel-wrapper>
     <HasPropertyTemplates>
       <IfcSimplePropertyTemplate id="i2120" pos="0" GlobalId="17jN50PHbFzRv5tiIKkhSR" Name="Beschreibung" Description="Freitextfeld zur allgemeinen Beschreibung von Objektinformationen" TemplateType="p_singlevalue" PrimaryMeasureType="IfcText" />
       <IfcSimplePropertyTemplate id="i2121" pos="1" GlobalId="2OqxmOgkD2JwIYn4sRGme0" Name="Art der Kopierung" Description="" TemplateType="p_enumeratedvalue" PrimaryMeasureType="IfcText">
-        <Enumerators>
+        <Enumerators Name="">
           <EnumerationValues>
             <IfcLabel-wrapper pos="0">Kopierwerk im Triebwerksraum (Foto)</IfcLabel-wrapper>
             <IfcLabel-wrapper pos="1">Kopierung im Schacht (Foto)</IfcLabel-wrapper>
@@ -8188,7 +8190,7 @@ Splitbauweise</IfcLabel-wrapper>
         </Enumerators>
       </IfcSimplePropertyTemplate>
       <IfcSimplePropertyTemplate id="i2122" pos="2" GlobalId="3HUo_ipmr97xnO0dEzSpT2" Name="Art der Steuerung Aufzug" Description="" TemplateType="p_enumeratedvalue" PrimaryMeasureType="IfcText">
-        <Enumerators>
+        <Enumerators Name="">
           <EnumerationValues>
             <IfcLabel-wrapper pos="0">Mikroprozessorsteuerung</IfcLabel-wrapper>
             <IfcLabel-wrapper pos="1">Steckkartensteuerung</IfcLabel-wrapper>
@@ -8217,7 +8219,7 @@ Splitbauweise</IfcLabel-wrapper>
     <HasPropertyTemplates>
       <IfcSimplePropertyTemplate id="i2128" pos="0" GlobalId="3KzNirNODF6uF3iNoY7Qza" Name="Beschreibung" Description="Freitextfeld zur allgemeinen Beschreibung von Objektinformationen" TemplateType="p_singlevalue" PrimaryMeasureType="IfcText" />
       <IfcSimplePropertyTemplate id="i2129" pos="1" GlobalId="2cYyiqOSzEvBjGQvNC0i3j" Name="Art der Regelung" Description="" TemplateType="p_enumeratedvalue" PrimaryMeasureType="IfcText">
-        <Enumerators>
+        <Enumerators Name="">
           <EnumerationValues>
             <IfcLabel-wrapper pos="0">Eine Geschwindigkeit</IfcLabel-wrapper>
             <IfcLabel-wrapper pos="1">Zwei Geschwindigkeiten</IfcLabel-wrapper>
@@ -8249,7 +8251,7 @@ Splitbauweise</IfcLabel-wrapper>
     <HasPropertyTemplates>
       <IfcSimplePropertyTemplate id="i2135" pos="0" GlobalId="1jtFVrd_rEJxJMDRCKT7I3" Name="Beschreibung" Description="Freitextfeld zur allgemeinen Beschreibung von Objektinformationen" TemplateType="p_singlevalue" PrimaryMeasureType="IfcText" />
       <IfcSimplePropertyTemplate id="i2136" pos="1" GlobalId="3QlxvC1bnAWfAjyX1qlHDw" Name="Richtung" Description="" TemplateType="p_enumeratedvalue" PrimaryMeasureType="IfcText">
-        <Enumerators>
+        <Enumerators Name="">
           <EnumerationValues>
             <IfcLabel-wrapper pos="0">Abwärts</IfcLabel-wrapper>
             <IfcLabel-wrapper pos="1">Abwärts/ Aufwärts</IfcLabel-wrapper>
@@ -8257,7 +8259,7 @@ Splitbauweise</IfcLabel-wrapper>
         </Enumerators>
       </IfcSimplePropertyTemplate>
       <IfcSimplePropertyTemplate id="i2137" pos="2" GlobalId="0zoR403rX57gUAMT0GfGxY" Name="Auslösung" Description="" TemplateType="p_enumeratedvalue" PrimaryMeasureType="IfcText">
-        <Enumerators>
+        <Enumerators Name="">
           <EnumerationValues>
             <IfcLabel-wrapper pos="0">Fernauslösung</IfcLabel-wrapper>
             <IfcLabel-wrapper pos="1">Mitreisend</IfcLabel-wrapper>
@@ -8267,7 +8269,7 @@ Splitbauweise</IfcLabel-wrapper>
         </Enumerators>
       </IfcSimplePropertyTemplate>
       <IfcSimplePropertyTemplate id="i2138" pos="3" GlobalId="3i4QJKvJTF9gG9fX9xMuun" Name="Bauart" Description="" TemplateType="p_enumeratedvalue" PrimaryMeasureType="IfcText">
-        <Enumerators>
+        <Enumerators Name="">
           <EnumerationValues>
             <IfcLabel-wrapper pos="0">Seilbremse</IfcLabel-wrapper>
             <IfcLabel-wrapper pos="1">Rollenbremse</IfcLabel-wrapper>
@@ -8296,7 +8298,7 @@ Splitbauweise</IfcLabel-wrapper>
     <HasPropertyTemplates>
       <IfcSimplePropertyTemplate id="i2144" pos="0" GlobalId="2uJhCgAZL6h8LQ9mC_Zgkh" Name="Beschreibung" Description="Freitextfeld zur allgemeinen Beschreibung von Objektinformationen" TemplateType="p_singlevalue" PrimaryMeasureType="IfcText" />
       <IfcSimplePropertyTemplate id="i2145" pos="1" GlobalId="1D2xjBKYzE0BMFTexZ6dMT" Name="Beleuchtung" Description="" TemplateType="p_enumeratedvalue" PrimaryMeasureType="IfcText">
-        <Enumerators>
+        <Enumerators Name="">
           <EnumerationValues>
             <IfcLabel-wrapper pos="0">direkt, Glüh-/ Energiesparlampe</IfcLabel-wrapper>
             <IfcLabel-wrapper pos="1">direkt, Leuchtstoffröhre</IfcLabel-wrapper>
@@ -8308,7 +8310,7 @@ Splitbauweise</IfcLabel-wrapper>
         </Enumerators>
       </IfcSimplePropertyTemplate>
       <IfcSimplePropertyTemplate id="i2146" pos="2" GlobalId="02dJr2v6LDQhn5JaLz6w6I" Name="Boden" Description="" TemplateType="p_enumeratedvalue" PrimaryMeasureType="IfcText">
-        <Enumerators>
+        <Enumerators Name="">
           <EnumerationValues>
             <IfcLabel-wrapper pos="0">Holz</IfcLabel-wrapper>
             <IfcLabel-wrapper pos="1">Glas</IfcLabel-wrapper>
@@ -8327,7 +8329,7 @@ Splitbauweise</IfcLabel-wrapper>
         </Enumerators>
       </IfcSimplePropertyTemplate>
       <IfcSimplePropertyTemplate id="i2147" pos="3" GlobalId="1QR3G5svT1zfx1UwwRZmB3" Name="Decke" Description="" TemplateType="p_enumeratedvalue" PrimaryMeasureType="IfcText">
-        <Enumerators>
+        <Enumerators Name="">
           <EnumerationValues>
             <IfcLabel-wrapper pos="0">Messing</IfcLabel-wrapper>
             <IfcLabel-wrapper pos="1">Edelstahl</IfcLabel-wrapper>
@@ -8351,7 +8353,7 @@ Splitbauweise</IfcLabel-wrapper>
         </Enumerators>
       </IfcSimplePropertyTemplate>
       <IfcSimplePropertyTemplate id="i2148" pos="4" GlobalId="0XWty$WRLEOPKBKSICLnOR" Name="Spiegel" Description="" TemplateType="p_enumeratedvalue" PrimaryMeasureType="IfcText">
-        <Enumerators>
+        <Enumerators Name="">
           <EnumerationValues>
             <IfcLabel-wrapper pos="0">keine Spiegel</IfcLabel-wrapper>
             <IfcLabel-wrapper pos="1">halbe Höhe, Fahrkorbrückwand</IfcLabel-wrapper>
@@ -8366,7 +8368,7 @@ Splitbauweise</IfcLabel-wrapper>
         </Enumerators>
       </IfcSimplePropertyTemplate>
       <IfcSimplePropertyTemplate id="i2149" pos="5" GlobalId="2dLpSuC5n9_feUdJNfOQOA" Name="Wände" Description="" TemplateType="p_enumeratedvalue" PrimaryMeasureType="IfcText">
-        <Enumerators>
+        <Enumerators Name="">
           <EnumerationValues>
             <IfcLabel-wrapper pos="0">Messing</IfcLabel-wrapper>
             <IfcLabel-wrapper pos="1">Edelstahl</IfcLabel-wrapper>
@@ -8400,7 +8402,7 @@ Splitbauweise</IfcLabel-wrapper>
     <HasPropertyTemplates>
       <IfcSimplePropertyTemplate id="i2153" pos="0" GlobalId="3hAKOkMRLECuAUe2SxBci5" Name="Beschreibung" Description="Freitextfeld zur allgemeinen Beschreibung von Objektinformationen" TemplateType="p_singlevalue" PrimaryMeasureType="IfcText" />
       <IfcSimplePropertyTemplate id="i2154" pos="1" GlobalId="0il8I2gxn2081fINCat79g" Name="Art der Fahrkorbtür" Description="" TemplateType="p_enumeratedvalue" PrimaryMeasureType="IfcText">
-        <Enumerators>
+        <Enumerators Name="">
           <EnumerationValues>
             <IfcLabel-wrapper pos="0">Falttür</IfcLabel-wrapper>
             <IfcLabel-wrapper pos="1">Hubtür</IfcLabel-wrapper>
@@ -8420,7 +8422,7 @@ Splitbauweise</IfcLabel-wrapper>
         </Enumerators>
       </IfcSimplePropertyTemplate>
       <IfcSimplePropertyTemplate id="i2155" pos="2" GlobalId="1GSdJPdqb3HxEb8gtNe07j" Name="Art des Türantriebs" Description="" TemplateType="p_enumeratedvalue" PrimaryMeasureType="IfcText">
-        <Enumerators>
+        <Enumerators Name="">
           <EnumerationValues>
             <IfcLabel-wrapper pos="0">elektrisch geregelt</IfcLabel-wrapper>
             <IfcLabel-wrapper pos="1">elektrisch ungeregelt</IfcLabel-wrapper>
@@ -8431,7 +8433,7 @@ Splitbauweise</IfcLabel-wrapper>
         </Enumerators>
       </IfcSimplePropertyTemplate>
       <IfcSimplePropertyTemplate id="i2156" pos="3" GlobalId="3nK2LQfyH7gBw4cCdQLBB5" Name="Funktionsweise Türantrieb" Description="" TemplateType="p_enumeratedvalue" PrimaryMeasureType="IfcText">
-        <Enumerators>
+        <Enumerators Name="">
           <EnumerationValues>
             <IfcLabel-wrapper pos="0">schaltet ab</IfcLabel-wrapper>
             <IfcLabel-wrapper pos="1">hält permanent zu</IfcLabel-wrapper>
@@ -8460,7 +8462,7 @@ Splitbauweise</IfcLabel-wrapper>
     <HasPropertyTemplates>
       <IfcSimplePropertyTemplate id="i2162" pos="0" GlobalId="0quqrXALzEXPkGNHADovEo" Name="Beschreibung" Description="Freitextfeld zur allgemeinen Beschreibung von Objektinformationen" TemplateType="p_singlevalue" PrimaryMeasureType="IfcText" />
       <IfcSimplePropertyTemplate id="i2163" pos="1" GlobalId="3nsAzdmwz8YxraQ5_vlerX" Name="Art der Absturzsicherung" Description="" TemplateType="p_enumeratedvalue" PrimaryMeasureType="IfcText">
-        <Enumerators>
+        <Enumerators Name="">
           <EnumerationValues>
             <IfcLabel-wrapper pos="0">Aufsetzvorrichtung</IfcLabel-wrapper>
             <IfcLabel-wrapper pos="1">Sperrfangvorrichtung</IfcLabel-wrapper>
@@ -8491,7 +8493,7 @@ Splitbauweise</IfcLabel-wrapper>
     <HasPropertyTemplates>
       <IfcSimplePropertyTemplate id="i2169" pos="0" GlobalId="0p3LJl8tr9Eg4c6AbI15qD" Name="Beschreibung" Description="Freitextfeld zur allgemeinen Beschreibung von Objektinformationen" TemplateType="p_singlevalue" PrimaryMeasureType="IfcText" />
       <IfcSimplePropertyTemplate id="i2170" pos="1" GlobalId="0s0BzcnxT4HAWVibT4xDpm" Name="Art der Schachttüren" Description="" TemplateType="p_enumeratedvalue" PrimaryMeasureType="IfcText">
-        <Enumerators>
+        <Enumerators Name="">
           <EnumerationValues>
             <IfcLabel-wrapper pos="0">einflüglige Drehtüren</IfcLabel-wrapper>
             <IfcLabel-wrapper pos="1">zweiflüglige Drehtüren</IfcLabel-wrapper>
@@ -8530,7 +8532,7 @@ Splitbauweise</IfcLabel-wrapper>
     <HasPropertyTemplates>
       <IfcSimplePropertyTemplate id="i2177" pos="0" GlobalId="39hpA286j1rByUH$x$19Zo" Name="Beschreibung" Description="Freitextfeld zur allgemeinen Beschreibung von Objektinformationen" TemplateType="p_singlevalue" PrimaryMeasureType="IfcText" />
       <IfcSimplePropertyTemplate id="i2178" pos="1" GlobalId="3v14o6vOv58uWpeJ2QHFe0" Name="Art des Notrufsystems" Description="" TemplateType="p_enumeratedvalue" PrimaryMeasureType="IfcText">
-        <Enumerators>
+        <Enumerators Name="">
           <EnumerationValues>
             <IfcLabel-wrapper pos="0">NLS intern (Pforte, etc.)</IfcLabel-wrapper>
             <IfcLabel-wrapper pos="1">NLS extern</IfcLabel-wrapper>
@@ -8561,7 +8563,7 @@ Splitbauweise</IfcLabel-wrapper>
     <HasPropertyTemplates>
       <IfcSimplePropertyTemplate id="i2184" pos="0" GlobalId="2JmzLoy010iAD9WVJjJYtr" Name="Beschreibung" Description="Freitextfeld zur allgemeinen Beschreibung von Objektinformationen" TemplateType="p_singlevalue" PrimaryMeasureType="IfcText" />
       <IfcSimplePropertyTemplate id="i2185" pos="1" GlobalId="19hUkohLj4rez1qfU99g9$" Name="Bauart" Description="" TemplateType="p_enumeratedvalue" PrimaryMeasureType="IfcText">
-        <Enumerators>
+        <Enumerators Name="">
           <EnumerationValues>
             <IfcLabel-wrapper pos="0">Fahrtreppe</IfcLabel-wrapper>
             <IfcLabel-wrapper pos="1">Fahrsteig</IfcLabel-wrapper>
@@ -8625,7 +8627,7 @@ Splitbauweise</IfcLabel-wrapper>
     <HasPropertyTemplates>
       <IfcSimplePropertyTemplate id="i2205" pos="0" GlobalId="3ckBH5ijT34wMFyQeIxJS6" Name="Beschreibung" Description="Freitextfeld zur allgemeinen Beschreibung von Objektinformationen" TemplateType="p_singlevalue" PrimaryMeasureType="IfcText" />
       <IfcSimplePropertyTemplate id="i2206" pos="1" GlobalId="3h7DHvuZz2AhcninZK9X1g" Name="Anlagentyp" Description="" TemplateType="p_enumeratedvalue" PrimaryMeasureType="IfcText">
-        <Enumerators>
+        <Enumerators Name="">
           <EnumerationValues>
             <IfcLabel-wrapper pos="0">Kleingüteraufzug</IfcLabel-wrapper>
             <IfcLabel-wrapper pos="1">Stetigförderer</IfcLabel-wrapper>
@@ -8659,7 +8661,7 @@ Splitbauweise</IfcLabel-wrapper>
     <HasPropertyTemplates>
       <IfcSimplePropertyTemplate id="i2213" pos="0" GlobalId="2o60JGIdn3$Am6aSgTDLY$" Name="Beschreibung" Description="Freitextfeld zur allgemeinen Beschreibung von Objektinformationen" TemplateType="p_singlevalue" PrimaryMeasureType="IfcText" />
       <IfcSimplePropertyTemplate id="i2214" pos="1" GlobalId="3uT$q8qjv3DxPiQNVVcJ0q" Name="Art der Krananlage" Description="" TemplateType="p_enumeratedvalue" PrimaryMeasureType="IfcText">
-        <Enumerators>
+        <Enumerators Name="">
           <EnumerationValues>
             <IfcLabel-wrapper pos="0">ortsfest</IfcLabel-wrapper>
             <IfcLabel-wrapper pos="1">nicht ortsfest</IfcLabel-wrapper>
@@ -8675,7 +8677,7 @@ Splitbauweise</IfcLabel-wrapper>
         </PrimaryUnit>
       </IfcSimplePropertyTemplate>
       <IfcSimplePropertyTemplate id="i2219" pos="6" GlobalId="3lrxcZWif0jR6OQJAU6QRB" Name="Bauart" Description="" TemplateType="p_enumeratedvalue" PrimaryMeasureType="IfcText">
-        <Enumerators>
+        <Enumerators Name="">
           <EnumerationValues>
             <IfcLabel-wrapper pos="0">Brückenkran</IfcLabel-wrapper>
             <IfcLabel-wrapper pos="1">Schwenkkran</IfcLabel-wrapper>
@@ -8701,7 +8703,7 @@ Splitbauweise</IfcLabel-wrapper>
     <HasPropertyTemplates>
       <IfcSimplePropertyTemplate id="i2223" pos="0" GlobalId="2f77sppLj3Qg4UpMgY80pJ" Name="Beschreibung" Description="Freitextfeld zur allgemeinen Beschreibung von Objektinformationen" TemplateType="p_singlevalue" PrimaryMeasureType="IfcText" />
       <IfcSimplePropertyTemplate id="i2224" pos="1" GlobalId="1ewIHi7gn4QxYv5ZR3GBHC" Name="Lifterart" Description="" TemplateType="p_enumeratedvalue" PrimaryMeasureType="IfcText">
-        <Enumerators>
+        <Enumerators Name="">
           <EnumerationValues>
             <IfcLabel-wrapper pos="0">Deckenlifter</IfcLabel-wrapper>
             <IfcLabel-wrapper pos="1">Bodenlifter</IfcLabel-wrapper>
@@ -8750,7 +8752,7 @@ Splitbauweise</IfcLabel-wrapper>
     <HasPropertyTemplates>
       <IfcSimplePropertyTemplate id="i2235" pos="0" GlobalId="30ZV8RvrD8TwUYIeN22htX" Name="Beschreibung" Description="Freitextfeld zur allgemeinen Beschreibung von Objektinformationen" TemplateType="p_singlevalue" PrimaryMeasureType="IfcText" />
       <IfcSimplePropertyTemplate id="i2236" pos="1" GlobalId="3Thdk8xpf5FBX2vSqWi6w_" Name="Heberbühnenart" Description="" TemplateType="p_enumeratedvalue" PrimaryMeasureType="IfcText">
-        <Enumerators>
+        <Enumerators Name="">
           <EnumerationValues>
             <IfcLabel-wrapper pos="0">Hebebühnen für Personen (mit Absturzgefahr &lt;= 3 m)</IfcLabel-wrapper>
             <IfcLabel-wrapper pos="1">Hebebühnen für Personen (mit Absturzgefahr &gt; 3 m)</IfcLabel-wrapper>
@@ -8881,7 +8883,7 @@ Splitbauweise</IfcLabel-wrapper>
         </PrimaryUnit>
       </IfcSimplePropertyTemplate>
       <IfcSimplePropertyTemplate id="i2273" pos="2" GlobalId="00LQLCs0X1NhT$5QWRGXGP" Name="Material" Description="" TemplateType="p_enumeratedvalue" PrimaryMeasureType="IfcText">
-        <Enumerators>
+        <Enumerators Name="">
           <EnumerationValues>
             <IfcLabel-wrapper pos="0">Holz</IfcLabel-wrapper>
             <IfcLabel-wrapper pos="1">Edelstahl</IfcLabel-wrapper>
@@ -8975,7 +8977,7 @@ Splitbauweise</IfcLabel-wrapper>
         </PrimaryUnit>
       </IfcSimplePropertyTemplate>
       <IfcSimplePropertyTemplate id="i2296" pos="6" GlobalId="1KT2yuV2X2hOSdFj$RVRb4" Name="Baustoffklasse" Description="" TemplateType="p_enumeratedvalue" PrimaryMeasureType="IfcText">
-        <Enumerators>
+        <Enumerators Name="">
           <EnumerationValues>
             <IfcLabel-wrapper pos="0">A1</IfcLabel-wrapper>
             <IfcLabel-wrapper pos="1">A2</IfcLabel-wrapper>
@@ -9049,7 +9051,7 @@ Splitbauweise</IfcLabel-wrapper>
       <IfcSimplePropertyTemplate id="i2316" pos="1" GlobalId="0hDHbPMQz7axXTnkcnRaG6" Name="Hersteller" Description="" TemplateType="p_singlevalue" PrimaryMeasureType="IfcText" />
       <IfcSimplePropertyTemplate id="i2317" pos="2" GlobalId="2fAvrfsR52wuX5K0ylrNf9" Name="Hersteller-Typ" Description="" TemplateType="p_singlevalue" PrimaryMeasureType="IfcText" />
       <IfcSimplePropertyTemplate id="i2318" pos="3" GlobalId="37tCLFi_P3nAvO1HxQPFpn" Name="Bauart" Description="" TemplateType="p_enumeratedvalue" PrimaryMeasureType="IfcText">
-        <Enumerators>
+        <Enumerators Name="">
           <EnumerationValues>
             <IfcLabel-wrapper pos="0">Kaffeevollautomat</IfcLabel-wrapper>
             <IfcLabel-wrapper pos="1">Kaffee-Pad-Maschine</IfcLabel-wrapper>
@@ -9165,7 +9167,7 @@ Splitbauweise</IfcLabel-wrapper>
       <IfcSimplePropertyTemplate id="i2349" pos="5" GlobalId="2TVeCiuxH89hsrZT_cv9Op" Name="Netzanbindung Druckluftnetz" Description="" TemplateType="p_singlevalue" PrimaryMeasureType="IfcBoolean" />
       <IfcSimplePropertyTemplate id="i2350" pos="6" GlobalId="0Sni_ck7f0HRSUwDxcR$L3" Name="Volumen Behälter" Description="" TemplateType="p_singlevalue" PrimaryMeasureType="IfcReal" />
       <IfcSimplePropertyTemplate id="i2351" pos="7" GlobalId="1S3yO5O7bAQeWyXh9UhNhT" Name="Kompressortyp" Description="" TemplateType="p_enumeratedvalue" PrimaryMeasureType="IfcText">
-        <Enumerators>
+        <Enumerators Name="">
           <EnumerationValues>
             <IfcLabel-wrapper pos="0">"ölfreier" Kompressor</IfcLabel-wrapper>
             <IfcLabel-wrapper pos="1">fluid- bzw. ölgekühlter Kompressor</IfcLabel-wrapper>
@@ -9339,7 +9341,7 @@ Splitbauweise</IfcLabel-wrapper>
     <HasPropertyTemplates>
       <IfcSimplePropertyTemplate id="i2401" pos="0" GlobalId="0OO0iDtjn8twPHayIJn_EY" Name="Beschreibung" Description="Freitextfeld zur allgemeinen Beschreibung von Objektinformationen" TemplateType="p_singlevalue" PrimaryMeasureType="IfcText" />
       <IfcSimplePropertyTemplate id="i2402" pos="1" GlobalId="1NgS_Ij417f8jwrAsPQYtG" Name="Bauart" Description="" TemplateType="p_enumeratedvalue" PrimaryMeasureType="IfcText">
-        <Enumerators>
+        <Enumerators Name="">
           <EnumerationValues>
             <IfcLabel-wrapper pos="0">Sprinkleranlagen</IfcLabel-wrapper>
             <IfcLabel-wrapper pos="1">Sprühwasser-Löschanlagen</IfcLabel-wrapper>
@@ -9355,7 +9357,7 @@ Splitbauweise</IfcLabel-wrapper>
       <IfcSimplePropertyTemplate id="i2406" pos="5" GlobalId="0hnU5XYaPDqAtE_FEfkdBL" Name="Anzahl Zohnenchecks" Description="" TemplateType="p_singlevalue" PrimaryMeasureType="IfcReal" />
       <IfcSimplePropertyTemplate id="i2407" pos="7" GlobalId="2Xb2uULeXDtPfWFn6kal9p" Name="Druckluftwasserkessel" Description="" TemplateType="p_singlevalue" PrimaryMeasureType="IfcBoolean" />
       <IfcSimplePropertyTemplate id="i2408" pos="8" GlobalId="3464B4bv97KvMzoH_4WJJ8" Name="Energieversorgung Pumpe" Description="" TemplateType="p_enumeratedvalue" PrimaryMeasureType="IfcText">
-        <Enumerators>
+        <Enumerators Name="">
           <EnumerationValues>
             <IfcLabel-wrapper pos="0">elektrisch</IfcLabel-wrapper>
             <IfcLabel-wrapper pos="1">Diesel</IfcLabel-wrapper>
@@ -9389,7 +9391,7 @@ Splitbauweise</IfcLabel-wrapper>
       <IfcSimplePropertyTemplate id="i2415" pos="1" GlobalId="3qWVWvu5598fmyHhlR03Vv" Name="Anzahl Bereichsventile" Description="" TemplateType="p_singlevalue" PrimaryMeasureType="IfcReal" />
       <IfcSimplePropertyTemplate id="i2416" pos="2" GlobalId="33RiPbnhzAdRKFO08mMFJ4" Name="Baujahr" Description="" TemplateType="p_singlevalue" PrimaryMeasureType="IfcReal" />
       <IfcSimplePropertyTemplate id="i2417" pos="3" GlobalId="2mOVoWiUj8H9mFoAidC3sR" Name="Löschmittel" Description="" TemplateType="p_enumeratedvalue" PrimaryMeasureType="IfcText">
-        <Enumerators>
+        <Enumerators Name="">
           <EnumerationValues>
             <IfcLabel-wrapper pos="0">CO2</IfcLabel-wrapper>
             <IfcLabel-wrapper pos="1">Argon</IfcLabel-wrapper>
@@ -9426,7 +9428,7 @@ Splitbauweise</IfcLabel-wrapper>
     <HasPropertyTemplates>
       <IfcSimplePropertyTemplate id="i2425" pos="0" GlobalId="2PnEm$eVH7tRv7_ci_873O" Name="Beschreibung" Description="Freitextfeld zur allgemeinen Beschreibung von Objektinformationen" TemplateType="p_singlevalue" PrimaryMeasureType="IfcText" />
       <IfcSimplePropertyTemplate id="i2426" pos="1" GlobalId="11D8GzyoT8ovyAUurMuLHN" Name="Bauart" Description="" TemplateType="p_enumeratedvalue" PrimaryMeasureType="IfcText">
-        <Enumerators>
+        <Enumerators Name="">
           <EnumerationValues>
             <IfcLabel-wrapper pos="0">Funkenausscheidungslöschanlage</IfcLabel-wrapper>
             <IfcLabel-wrapper pos="1">Funkenerkennungslöschanlage</IfcLabel-wrapper>
@@ -9465,7 +9467,7 @@ Splitbauweise</IfcLabel-wrapper>
         </PrimaryUnit>
       </IfcSimplePropertyTemplate>
       <IfcSimplePropertyTemplate id="i2436" pos="4" GlobalId="2aT3akAPD5YRJf7WutiBPs" Name="Typ Feuerlöscher" Description="" TemplateType="p_enumeratedvalue" PrimaryMeasureType="IfcText">
-        <Enumerators>
+        <Enumerators Name="">
           <EnumerationValues>
             <IfcLabel-wrapper pos="0">Schaum</IfcLabel-wrapper>
             <IfcLabel-wrapper pos="1">Pulver</IfcLabel-wrapper>
@@ -9478,7 +9480,7 @@ Splitbauweise</IfcLabel-wrapper>
       </IfcSimplePropertyTemplate>
       <IfcSimplePropertyTemplate id="i2437" pos="5" GlobalId="0SajZnMgX3bOZUV6mkGZ9c" Name="Hersteller" Description="Name des Herstellers" TemplateType="p_singlevalue" PrimaryMeasureType="IfcText" />
       <IfcSimplePropertyTemplate id="i2438" pos="7" GlobalId="0Ufpqhq5DFevXrhX13tRK2" Name="Brandklasse" Description="" TemplateType="p_enumeratedvalue" PrimaryMeasureType="IfcText">
-        <Enumerators>
+        <Enumerators Name="">
           <EnumerationValues>
             <IfcLabel-wrapper pos="0">A</IfcLabel-wrapper>
             <IfcLabel-wrapper pos="1">B</IfcLabel-wrapper>
@@ -9492,7 +9494,7 @@ Splitbauweise</IfcLabel-wrapper>
       </IfcSimplePropertyTemplate>
       <IfcSimplePropertyTemplate id="i2439" pos="8" GlobalId="1vfXcUghPBKA_$tufFwWyU" Name="Baujahr" Description="Bau- bzw. Anschaffungsjahr des Feuerlöschers" TemplateType="p_singlevalue" PrimaryMeasureType="IfcText" />
       <IfcSimplePropertyTemplate id="i2440" pos="9" GlobalId="0XstSmQdf8YgerIcTuXpYY" Name="Transporart Feuerlöscher" Description="Unterscheidung zwischen tragbaren und fahrbarenFeuerlöschern" TemplateType="p_enumeratedvalue" PrimaryMeasureType="IfcText">
-        <Enumerators>
+        <Enumerators Name="">
           <EnumerationValues>
             <IfcLabel-wrapper pos="0">tragbar</IfcLabel-wrapper>
             <IfcLabel-wrapper pos="1">fahrbar </IfcLabel-wrapper>
@@ -9500,7 +9502,7 @@ Splitbauweise</IfcLabel-wrapper>
         </Enumerators>
       </IfcSimplePropertyTemplate>
       <IfcSimplePropertyTemplate id="i2441" pos="10" GlobalId="1nRUonBMbB1vudaIGCfxUB" Name="Typ Auslösevorrichtung" Description="" TemplateType="p_enumeratedvalue" PrimaryMeasureType="IfcText">
-        <Enumerators>
+        <Enumerators Name="">
           <EnumerationValues>
             <IfcLabel-wrapper pos="0">Gaslöscher</IfcLabel-wrapper>
             <IfcLabel-wrapper pos="1">Aufladelöscher</IfcLabel-wrapper>
@@ -9527,7 +9529,7 @@ Splitbauweise</IfcLabel-wrapper>
     <HasPropertyTemplates>
       <IfcSimplePropertyTemplate id="i2445" pos="0" GlobalId="3ND5VsPJr0MuGSHuHTxQcn" Name="Beschreibung" Description="Freitextfeld zur allgemeinen Beschreibung von Objektinformationen" TemplateType="p_singlevalue" PrimaryMeasureType="IfcText" />
       <IfcSimplePropertyTemplate id="i2446" pos="1" GlobalId="0G4_WSmMv6$P_qDCR9BiHz" Name="Bauart" Description="" TemplateType="p_enumeratedvalue" PrimaryMeasureType="IfcText">
-        <Enumerators>
+        <Enumerators Name="">
           <EnumerationValues>
             <IfcLabel-wrapper pos="0">
 Außenhydrant unterflur</IfcLabel-wrapper>
@@ -9537,7 +9539,7 @@ Außenhydrant unterflur</IfcLabel-wrapper>
         </Enumerators>
       </IfcSimplePropertyTemplate>
       <IfcSimplePropertyTemplate id="i2447" pos="2" GlobalId="0Huf8GTs52l8JtMnjCnFpr" Name="Typ" Description="" TemplateType="p_enumeratedvalue" PrimaryMeasureType="IfcText">
-        <Enumerators>
+        <Enumerators Name="">
           <EnumerationValues>
             <IfcLabel-wrapper pos="0">Typ F</IfcLabel-wrapper>
             <IfcLabel-wrapper pos="1">Typ S</IfcLabel-wrapper>
@@ -9548,7 +9550,7 @@ Außenhydrant unterflur</IfcLabel-wrapper>
       <IfcSimplePropertyTemplate id="i2449" pos="4" GlobalId="3Ht1DHKZHESQqNs8BVcca1" Name="Hersteller" Description="" TemplateType="p_singlevalue" PrimaryMeasureType="IfcText" />
       <IfcSimplePropertyTemplate id="i2450" pos="5" GlobalId="1VWPwJKiv5UQ_3L4SwAzGr" Name="Hersteller-Typ" Description="" TemplateType="p_singlevalue" PrimaryMeasureType="IfcText" />
       <IfcSimplePropertyTemplate id="i2451" pos="6" GlobalId="0Avl9VAILDUR2Lt4ybn_O1" Name="Wasserversorgung durch" Description="" TemplateType="p_enumeratedvalue" PrimaryMeasureType="IfcText">
-        <Enumerators>
+        <Enumerators Name="">
           <EnumerationValues>
             <IfcLabel-wrapper pos="0">Trinkwassernetz</IfcLabel-wrapper>
             <IfcLabel-wrapper pos="1">Löschwasserbehälter</IfcLabel-wrapper>
@@ -9556,7 +9558,7 @@ Außenhydrant unterflur</IfcLabel-wrapper>
         </Enumerators>
       </IfcSimplePropertyTemplate>
       <IfcSimplePropertyTemplate id="i2452" pos="7" GlobalId="3f366UyoX8KQCiluy96JsU" Name="Leitungssystem" Description="" TemplateType="p_enumeratedvalue" PrimaryMeasureType="IfcText">
-        <Enumerators>
+        <Enumerators Name="">
           <EnumerationValues>
             <IfcLabel-wrapper pos="0">trocken</IfcLabel-wrapper>
             <IfcLabel-wrapper pos="1">nass</IfcLabel-wrapper>
@@ -9565,7 +9567,7 @@ Außenhydrant unterflur</IfcLabel-wrapper>
         </Enumerators>
       </IfcSimplePropertyTemplate>
       <IfcSimplePropertyTemplate id="i2453" pos="8" GlobalId="3Rok34$9j8_v8BjkboHdCB" Name="Bauart Löschwasserleitung" Description="Technische Bauart der Wandhydrantenanlage" TemplateType="p_enumeratedvalue" PrimaryMeasureType="IfcText">
-        <Enumerators>
+        <Enumerators Name="">
           <EnumerationValues>
             <IfcLabel-wrapper pos="0">trocken</IfcLabel-wrapper>
             <IfcLabel-wrapper pos="1">nass</IfcLabel-wrapper>
@@ -9802,7 +9804,7 @@ Außenhydrant unterflur</IfcLabel-wrapper>
     <HasPropertyTemplates>
       <IfcSimplePropertyTemplate id="i2527" pos="0" GlobalId="36e0YYlaD8VvC9__MJn5B8" Name="Beschreibung" Description="Freitextfeld zur allgemeinen Beschreibung von Objektinformationen" TemplateType="p_singlevalue" PrimaryMeasureType="IfcText" />
       <IfcSimplePropertyTemplate id="i2528" pos="1" GlobalId="0JAolEYOf3AvWhcM_3ClZm" Name="Bauart" Description="" TemplateType="p_enumeratedvalue" PrimaryMeasureType="IfcText">
-        <Enumerators>
+        <Enumerators Name="">
           <EnumerationValues>
             <IfcLabel-wrapper pos="0">Ballenpresse</IfcLabel-wrapper>
             <IfcLabel-wrapper pos="1">Flüssigabfallsammler</IfcLabel-wrapper>
@@ -9894,7 +9896,7 @@ Außenhydrant unterflur</IfcLabel-wrapper>
     <HasPropertyTemplates>
       <IfcSimplePropertyTemplate id="i2555" pos="0" GlobalId="0do0rO7_r7gBIAiidZrqTG" Name="Beschreibung" Description="Freitextfeld zur allgemeinen Beschreibung von Objektinformationen" TemplateType="p_singlevalue" PrimaryMeasureType="IfcText" />
       <IfcSimplePropertyTemplate id="i2556" pos="1" GlobalId="30cFzI0Rr0lAs0LnoWuYbQ" Name="Typ Feldgerät" Description="" TemplateType="p_enumeratedvalue" PrimaryMeasureType="IfcText">
-        <Enumerators>
+        <Enumerators Name="">
           <EnumerationValues>
             <IfcLabel-wrapper pos="0">Sensor</IfcLabel-wrapper>
             <IfcLabel-wrapper pos="1">Aktor</IfcLabel-wrapper>
@@ -9902,7 +9904,7 @@ Außenhydrant unterflur</IfcLabel-wrapper>
         </Enumerators>
       </IfcSimplePropertyTemplate>
       <IfcSimplePropertyTemplate id="i2557" pos="2" GlobalId="1jLcVLA2DCyunqsw4T6eVU" Name="Bauart Sensor" Description="" TemplateType="p_enumeratedvalue" PrimaryMeasureType="IfcText">
-        <Enumerators>
+        <Enumerators Name="">
           <EnumerationValues>
             <IfcLabel-wrapper pos="0">Temperatursensor</IfcLabel-wrapper>
             <IfcLabel-wrapper pos="1">Drucksensor</IfcLabel-wrapper>
@@ -9915,7 +9917,7 @@ Außenhydrant unterflur</IfcLabel-wrapper>
         </Enumerators>
       </IfcSimplePropertyTemplate>
       <IfcSimplePropertyTemplate id="i2558" pos="3" GlobalId="2pTQwbFmr1D9b_m5MIyfpK" Name="Bauart Aktor" Description="" TemplateType="p_enumeratedvalue" PrimaryMeasureType="IfcText">
-        <Enumerators>
+        <Enumerators Name="">
           <EnumerationValues>
             <IfcLabel-wrapper pos="0">Ventilantrieb</IfcLabel-wrapper>
             <IfcLabel-wrapper pos="1">Klappenantrieb</IfcLabel-wrapper>
@@ -9975,7 +9977,7 @@ Außenhydrant unterflur</IfcLabel-wrapper>
       <IfcSimplePropertyTemplate id="i2571" pos="0" GlobalId="2NyaUZpM10VOeVS_RbHYNe" Name="Beschreibung" Description="Freitextfeld zur allgemeinen Beschreibung von Objektinformationen" TemplateType="p_singlevalue" PrimaryMeasureType="IfcText" />
       <IfcSimplePropertyTemplate id="i2572" pos="1" GlobalId="2nZQHUikDEXvWLw4ImZcqZ" Name="Schaltrank mit Leistungsteilen" Description="" TemplateType="p_singlevalue" PrimaryMeasureType="IfcBoolean" />
       <IfcSimplePropertyTemplate id="i2573" pos="2" GlobalId="0c_LIagIvESv8s6A$DJ42e" Name="Bauart" Description="" TemplateType="p_enumeratedvalue" PrimaryMeasureType="IfcText">
-        <Enumerators>
+        <Enumerators Name="">
           <EnumerationValues>
             <IfcLabel-wrapper pos="0">Standschrank</IfcLabel-wrapper>
             <IfcLabel-wrapper pos="1">Wandschrank</IfcLabel-wrapper>
@@ -10073,7 +10075,7 @@ Außenhydrant unterflur</IfcLabel-wrapper>
     <HasPropertyTemplates>
       <IfcSimplePropertyTemplate id="i2595" pos="0" GlobalId="2Q5$hYZd1CvPMdZzLnYoyC" Name="Beschreibung" Description="Freitextfeld zur allgemeinen Beschreibung von Objektinformationen" TemplateType="p_singlevalue" PrimaryMeasureType="IfcText" />
       <IfcSimplePropertyTemplate id="i2596" pos="1" GlobalId="2ARgjFWa1BPvJeRgJRquhc" Name="Bauart Text-Grafikeingabe" Description="" TemplateType="p_enumeratedvalue" PrimaryMeasureType="IfcText">
-        <Enumerators>
+        <Enumerators Name="">
           <EnumerationValues>
             <IfcLabel-wrapper pos="0">Tastatur</IfcLabel-wrapper>
             <IfcLabel-wrapper pos="1">Grafiktablett</IfcLabel-wrapper>
@@ -10081,7 +10083,7 @@ Außenhydrant unterflur</IfcLabel-wrapper>
         </Enumerators>
       </IfcSimplePropertyTemplate>
       <IfcSimplePropertyTemplate id="i2597" pos="2" GlobalId="3hAPVbSIf7gP9X1La06JCI" Name="Bauart Zeichen- und Bildeingabe" Description="" TemplateType="p_enumeratedvalue" PrimaryMeasureType="IfcText">
-        <Enumerators>
+        <Enumerators Name="">
           <EnumerationValues>
             <IfcLabel-wrapper pos="0">Scanner</IfcLabel-wrapper>
             <IfcLabel-wrapper pos="1">Schriftleser</IfcLabel-wrapper>
@@ -10090,7 +10092,7 @@ Außenhydrant unterflur</IfcLabel-wrapper>
         </Enumerators>
       </IfcSimplePropertyTemplate>
       <IfcSimplePropertyTemplate id="i2598" pos="3" GlobalId="3ODVMedqL2yhlCcjZx7pfS" Name="Bauart Zeigegerät" Description="" TemplateType="p_enumeratedvalue" PrimaryMeasureType="IfcText">
-        <Enumerators>
+        <Enumerators Name="">
           <EnumerationValues>
             <IfcLabel-wrapper pos="0">Maus</IfcLabel-wrapper>
             <IfcLabel-wrapper pos="1">Trackball</IfcLabel-wrapper>
@@ -10102,7 +10104,7 @@ Außenhydrant unterflur</IfcLabel-wrapper>
         </Enumerators>
       </IfcSimplePropertyTemplate>
       <IfcSimplePropertyTemplate id="i2599" pos="4" GlobalId="1XOuVzMYr5B8haIgwI3RJl" Name="Bauart Sonstige Eingabegeräte" Description="" TemplateType="p_enumeratedvalue" PrimaryMeasureType="IfcText">
-        <Enumerators>
+        <Enumerators Name="">
           <EnumerationValues>
             <IfcLabel-wrapper pos="0">Mikrofon</IfcLabel-wrapper>
             <IfcLabel-wrapper pos="1">Headset</IfcLabel-wrapper>
@@ -10129,7 +10131,7 @@ Außenhydrant unterflur</IfcLabel-wrapper>
     <HasPropertyTemplates>
       <IfcSimplePropertyTemplate id="i2603" pos="0" GlobalId="0sronLojv80P3R6ngT8CuM" Name="Beschreibung" Description="Freitextfeld zur allgemeinen Beschreibung von Objektinformationen" TemplateType="p_singlevalue" PrimaryMeasureType="IfcText" />
       <IfcSimplePropertyTemplate id="i2604" pos="1" GlobalId="3g0pE3_WTFwBfibJxB01HG" Name="Bauart Optische Ausgabe" Description="" TemplateType="p_enumeratedvalue" PrimaryMeasureType="IfcText">
-        <Enumerators>
+        <Enumerators Name="">
           <EnumerationValues>
             <IfcLabel-wrapper pos="0">Monitor</IfcLabel-wrapper>
             <IfcLabel-wrapper pos="1">Anzeige</IfcLabel-wrapper>
@@ -10138,7 +10140,7 @@ Außenhydrant unterflur</IfcLabel-wrapper>
         </Enumerators>
       </IfcSimplePropertyTemplate>
       <IfcSimplePropertyTemplate id="i2605" pos="2" GlobalId="3OgqteyTDBN8O5BEbKa9TU" Name="Bauart Druckausgabe" Description="" TemplateType="p_enumeratedvalue" PrimaryMeasureType="IfcText">
-        <Enumerators>
+        <Enumerators Name="">
           <EnumerationValues>
             <IfcLabel-wrapper pos="0">Drucker</IfcLabel-wrapper>
             <IfcLabel-wrapper pos="1">Typenraddrucker</IfcLabel-wrapper>
@@ -10151,7 +10153,7 @@ Außenhydrant unterflur</IfcLabel-wrapper>
         </Enumerators>
       </IfcSimplePropertyTemplate>
       <IfcSimplePropertyTemplate id="i2606" pos="3" GlobalId="0LL58e1yvDJBoutLf8uMSP" Name="Bauart aktustische Ausgabe" Description="" TemplateType="p_enumeratedvalue" PrimaryMeasureType="IfcText">
-        <Enumerators>
+        <Enumerators Name="">
           <EnumerationValues>
             <IfcLabel-wrapper pos="0">Lautsprecher</IfcLabel-wrapper>
             <IfcLabel-wrapper pos="1">Heatset</IfcLabel-wrapper>
@@ -10177,7 +10179,7 @@ Außenhydrant unterflur</IfcLabel-wrapper>
     <HasPropertyTemplates>
       <IfcSimplePropertyTemplate id="i2610" pos="0" GlobalId="24OglMX1HCCQiMcjIdkYGF" Name="Beschreibung" Description="Freitextfeld zur allgemeinen Beschreibung von Objektinformationen" TemplateType="p_singlevalue" PrimaryMeasureType="IfcText" />
       <IfcSimplePropertyTemplate id="i2611" pos="1" GlobalId="2VtesWXV13SeckJOewwFeN" Name="Bauart Magnet Speicher" Description="" TemplateType="p_enumeratedvalue" PrimaryMeasureType="IfcText">
-        <Enumerators>
+        <Enumerators Name="">
           <EnumerationValues>
             <IfcLabel-wrapper pos="0">Disketten-Laufwerk</IfcLabel-wrapper>
             <IfcLabel-wrapper pos="1">Festplatten-Laufwerk</IfcLabel-wrapper>
@@ -10186,7 +10188,7 @@ Außenhydrant unterflur</IfcLabel-wrapper>
         </Enumerators>
       </IfcSimplePropertyTemplate>
       <IfcSimplePropertyTemplate id="i2612" pos="2" GlobalId="02NGSZXJbBrQVBNLiMnpPk" Name="Bauart Optische Speicher" Description="" TemplateType="p_enumeratedvalue" PrimaryMeasureType="IfcText">
-        <Enumerators>
+        <Enumerators Name="">
           <EnumerationValues>
             <IfcLabel-wrapper pos="0">Disketten</IfcLabel-wrapper>
             <IfcLabel-wrapper pos="1">CD-Laufwerke</IfcLabel-wrapper>
@@ -10200,7 +10202,7 @@ Außenhydrant unterflur</IfcLabel-wrapper>
       </IfcSimplePropertyTemplate>
       <IfcSimplePropertyTemplate id="i2613" pos="3" GlobalId="19fIYBtPPD2hGyUGC$99nB" Name="Bauart MO-Laufwerk" Description="" TemplateType="p_singlevalue" PrimaryMeasureType="IfcBoolean" />
       <IfcSimplePropertyTemplate id="i2614" pos="4" GlobalId="29SiIBSZ11MBrVPZV0vqa2" Name="Bauart Halbleiter-Speicher" Description="" TemplateType="p_enumeratedvalue" PrimaryMeasureType="IfcText">
-        <Enumerators>
+        <Enumerators Name="">
           <EnumerationValues>
             <IfcLabel-wrapper pos="0">Fash-Karten</IfcLabel-wrapper>
             <IfcLabel-wrapper pos="1">Chipkarten</IfcLabel-wrapper>
@@ -10249,7 +10251,7 @@ Außenhydrant unterflur</IfcLabel-wrapper>
       <IfcSimplePropertyTemplate id="i2626" pos="1" GlobalId="1fnAZH0XvB6Pmji1$g_wsh" Name="Hersteller" Description="" TemplateType="p_singlevalue" PrimaryMeasureType="IfcText" />
       <IfcSimplePropertyTemplate id="i2627" pos="2" GlobalId="0cHs6H7lX6g9kxoXHdVkAk" Name="Hersteller-Typ" Description="" TemplateType="p_singlevalue" PrimaryMeasureType="IfcText" />
       <IfcSimplePropertyTemplate id="i2628" pos="6" GlobalId="3ahcjGBYzDcvKK01Exj_k7" Name="Kategorie&#xD;&#xA;" Description="" TemplateType="p_enumeratedvalue" PrimaryMeasureType="IfcText">
-        <Enumerators>
+        <Enumerators Name="">
           <EnumerationValues>
             <IfcLabel-wrapper pos="0">Betriebssystem</IfcLabel-wrapper>
             <IfcLabel-wrapper pos="1">Bildbearbeitung</IfcLabel-wrapper>
@@ -10280,7 +10282,7 @@ Außenhydrant unterflur</IfcLabel-wrapper>
     <HasPropertyTemplates>
       <IfcSimplePropertyTemplate id="i2633" pos="0" GlobalId="2AFFN1p2HEtgphi9YXKgs$" Name="Beschreibung" Description="Freitextfeld zur allgemeinen Beschreibung von Objektinformationen" TemplateType="p_singlevalue" PrimaryMeasureType="IfcText" />
       <IfcSimplePropertyTemplate id="i2634" pos="1" GlobalId="1q6$z0qpD2Guetzys4n1C8" Name="Funktionsbereich" Description="" TemplateType="p_enumeratedvalue" PrimaryMeasureType="IfcText">
-        <Enumerators>
+        <Enumerators Name="">
           <EnumerationValues>
             <IfcLabel-wrapper pos="0">Konstantlichtregelung</IfcLabel-wrapper>
             <IfcLabel-wrapper pos="1">Tageslichtschaltung</IfcLabel-wrapper>
