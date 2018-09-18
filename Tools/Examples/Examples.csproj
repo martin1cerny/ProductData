@@ -79,6 +79,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="AbstractExample.cs" />
+    <Compile Include="BasicExample\BasicCodeExample.cs" />
     <Compile Include="ComplexProperty\ComplexPropertyExample.cs" />
     <Compile Include="DynamicValues\DynamicValuesExample.cs" />
     <Compile Include="Helper.cs" />
