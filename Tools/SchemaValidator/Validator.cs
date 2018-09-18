@@ -1,6 +1,7 @@
 ﻿using log4net;
 using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Text;
 using Xbim.Common;
@@ -9,6 +10,8 @@ using Xbim.Common.Exceptions;
 using Xbim.Common.ExpressValidation;
 using Xbim.Ifc;
 using Xbim.Ifc.Validation;
+using Xbim.IO.Memory;
+using Xbim.IO.Xml;
 
 namespace SchemaValidator
 {
@@ -19,7 +22,7 @@ namespace SchemaValidator
         private ILog log;
         private ErrorAppender appender;
 
-        private bool CheckInternal(IModel model)
+        private bool CheckInternal(IModel model, Dictionary<int, string> idMap)
         {
             // check for parser exceptions
             var v = new IfcValidator
@@ -33,7 +36,11 @@ namespace SchemaValidator
                 var identity = err.Item.GetType().Name;
                 if (err.Item is IPersistEntity entity)
                 {
-                    identity = $"#{entity.EntityLabel}={entity.ExpressType.ExpressName}";
+                    // use XML entity id if available
+                    if (idMap.TryGetValue(entity.EntityLabel, out string xmlId))
+                        identity = $"XML entity '{xmlId}' ({entity.ExpressType.ExpressName})";
+                    else
+                        identity = $"#{entity.EntityLabel}={entity.ExpressType.ExpressName}";
                 }
                 var msg = new StringBuilder();
                 msg.AppendLine($"{identity} is invalid.");
@@ -48,6 +55,12 @@ namespace SchemaValidator
                     if (string.IsNullOrWhiteSpace(report))
                         report = detail.Report();
                     msg.AppendLine("    " + report);
+
+                    if (detail.IssueType == ValidationFlags.EntityWhereClauses || detail.IssueType == ValidationFlags.TypeWhereClauses)
+                    {
+                        var source = detail.IssueSource.Split('.')[0].ToLower();
+                        msg.AppendLine($"http://www.buildingsmart-tech.org/ifc/IFC4/Add2/html/link/{source}.htm");
+                    }
                 }
                 log.Error(msg.ToString());
             }
@@ -61,7 +74,7 @@ namespace SchemaValidator
             appender = Logger.Setup(logFile);
             log = LogManager.GetLogger("Validator");
 
-            return CheckInternal(model);
+            return CheckInternal(model, new Dictionary<int, string>());
         }
 
         public bool Check(string file)
@@ -81,7 +94,16 @@ namespace SchemaValidator
                         // do not proceed because the data is incomplete
                         return false;
 
-                    CheckInternal(model);
+                    var idMap = new Dictionary<int, string>();
+                    if (file.ToLower().EndsWith(".ifcxml"))
+                    {
+                        using (var stream = File.OpenRead(file))
+                        {
+                            idMap = GetXmlEntityMap(stream, model);
+                        }
+                    }
+
+                    CheckInternal(model, idMap);
                 }
             }
             // XML syntactic errors will be fired as an exception
@@ -97,6 +119,43 @@ namespace SchemaValidator
             }
 
             return !Errors.Any();
+        }
+
+        private Dictionary<int, string> GetXmlEntityMap(Stream stream, IModel model)
+        {
+            var result = new Dictionary<int, string>(model.Instances.Count());
+            var schema = model.Header.FileSchema.Schemas.First();
+            if (string.Equals(schema, "IFC2X3", StringComparison.OrdinalIgnoreCase))
+            {
+                log.Warn("Only IFC4 models are supported to report XML ids");
+                return result;
+            }
+
+            _dummyModel = new MemoryModel(_factory4);
+            var xmlReader = new XbimXmlReader4(GetOrCreateXMLEntity, entity => { }, model.Metadata);
+            xmlReader.Read(stream);
+
+            // swap the dictionary
+            foreach (var item in xmlReader.IdMap)
+                result.Add(item.Value, item.Key);
+
+            //purge
+            _read.Clear();
+            _dummyModel = null;
+            return result;
+        }
+
+        private readonly Dictionary<int, IPersistEntity> _read = new Dictionary<int, IPersistEntity>();
+        private readonly IEntityFactory _factory4 = new Xbim.Ifc4.EntityFactoryIfc4();
+        private IModel _dummyModel;
+        private IPersistEntity GetOrCreateXMLEntity(int label, Type type)
+        {
+            if (_read.TryGetValue(label, out IPersistEntity exist))
+                return exist;
+
+            var ent = _factory4.New(_dummyModel, type, label, true);
+            _read.Add(label, ent);
+            return ent;
         }
     }
 }
