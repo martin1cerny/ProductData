@@ -25,7 +25,7 @@
 				<IfcDerivedUnit id="i110" UnitType="heatfluxdensityunit">
 					<Elements>
 						<IfcDerivedUnitElement id="i111" Exponent="1">
-							<Unit xsi:type="IfcSIUnit" UnitType="electriccurrentunit"/>
+							<Unit id="i9119" xsi:type="IfcSIUnit" UnitType="electriccurrentunit" Name="ampere"/>
 						</IfcDerivedUnitElement>
 						<IfcDerivedUnitElement id="i112" Exponent="-1">
 							<Unit xsi:type="IfcConversionBasedUnit" UnitType="timeunit" Name="Hour">
@@ -35,7 +35,7 @@
 										<IfcTimeMeasure-wrapper>3600</IfcTimeMeasure-wrapper>
 									</ValueComponent>
 									<UnitComponent>
-										<IfcSIUnit UnitType="timeunit"/>
+										<IfcSIUnit id="i9120"  UnitType="timeunit" Name="second"/>
 									</UnitComponent>
 								</ConversionFactor>
 							</Unit>
@@ -47,7 +47,7 @@
 				<IfcDerivedUnit id="i115" UnitType="volumetricflowrateunit">
 					<Elements>
 						<IfcDerivedUnitElement id="i116" Exponent="3">
-							<Unit xsi:type="IfcSIUnit" UnitType="lengthunit"/>
+							<Unit id="i9115" xsi:type="IfcSIUnit" UnitType="lengthunit" Name="metre"/>
 						</IfcDerivedUnitElement>
 						<IfcDerivedUnitElement id="i117" Exponent="-1">
 							<Unit xsi:type="IfcConversionBasedUnit" UnitType="timeunit" Name="Hour">
@@ -57,7 +57,7 @@
 										<IfcTimeMeasure-wrapper>3600</IfcTimeMeasure-wrapper>
 									</ValueComponent>
 									<UnitComponent>
-										<IfcSIUnit UnitType="timeunit"/>
+										<IfcSIUnit id="i9116" UnitType="timeunit" Name="second"/>
 									</UnitComponent>
 								</ConversionFactor>
 							</Unit>
@@ -67,10 +67,10 @@
 				<IfcDerivedUnit id="i118" UnitType="massdensityunit">
 					<Elements>
 						<IfcDerivedUnitElement id="i119" Exponent="1">
-							<Unit xsi:type="IfcSIUnit" UnitType="massunit"/>
+							<Unit id="i9117" xsi:type="IfcSIUnit" UnitType="massunit" Name="gram"/>
 						</IfcDerivedUnitElement>
 						<IfcDerivedUnitElement id="i120" Exponent="-3">
-							<Unit xsi:type="IfcSIUnit" UnitType="lengthunit"/>
+							<Unit id="i9118" xsi:type="IfcSIUnit" UnitType="lengthunit" Name="metre"/>
 						</IfcDerivedUnitElement>
 					</Elements>
 				</IfcDerivedUnit>
@@ -80,10 +80,10 @@
 				<IfcDerivedUnit id="i124" UnitType="soundpowerlevelunit">
 					<Elements>
 						<IfcDerivedUnitElement id="i125" Exponent="1">
-							<Unit xsi:type="IfcSIUnit" UnitType="powerunit"/>
+							<Unit id="i9121"  xsi:type="IfcSIUnit" UnitType="powerunit" Name="watt"/>
 						</IfcDerivedUnitElement>
 						<IfcDerivedUnitElement id="i126" Exponent="-1">
-							<Unit xsi:type="IfcSIUnit" UnitType="powerunit"/>
+							<Unit id="i9122" xsi:type="IfcSIUnit" UnitType="timeunit" Name="second" />
 						</IfcDerivedUnitElement>
 					</Elements>
 				</IfcDerivedUnit>
@@ -2284,14 +2284,6 @@
 						<IfcLabel-wrapper pos="3">Glas</IfcLabel-wrapper>
 						<IfcLabel-wrapper pos="4">Stahl</IfcLabel-wrapper>
 						<IfcLabel-wrapper pos="5">Edelstahl (nicht rostender Stahl)</IfcLabel-wrapper>
-					</EnumerationValues>
-				</Enumerators>
-			</IfcSimplePropertyTemplate>
-			<IfcSimplePropertyTemplate id="i632" pos="4" GlobalId="3bQVe27U59dPmxKno7clJZ" Name="Bauart" Description="" TemplateType="p_enumeratedvalue" PrimaryMeasureType="IfcText">
-				<Enumerators Name="">
-					<EnumerationValues>
-						<IfcLabel-wrapper pos="0">einschalig</IfcLabel-wrapper>
-						<IfcLabel-wrapper pos="1">mehrschalig (mit Dämmung)</IfcLabel-wrapper>
 					</EnumerationValues>
 				</Enumerators>
 			</IfcSimplePropertyTemplate>
@@ -6546,7 +6538,6 @@ Splitbauweise</IfcLabel-wrapper>
 				</PrimaryUnit>
 			</IfcSimplePropertyTemplate>
 			<IfcSimplePropertyTemplate id="i1655" pos="10" GlobalId="3I3f8lZrL5YPvS$lcMY5fx" Name="Anzahl Transformatoren" Description="" TemplateType="p_singlevalue" PrimaryMeasureType="IfcReal"/>
-			<IfcSimplePropertyTemplate id="i1656" pos="11" GlobalId="3iMKMNVh5Ca8NF3aXDCdFj" Name="Hersteller" Description="" TemplateType="p_singlevalue" PrimaryMeasureType="IfcText"/>
 		</HasPropertyTemplates>
 	</IfcPropertySetTemplate>
 	<IfcRelAssociatesClassification id="i1657" GlobalId="2JiTns$Rn60gDS7ONWrpaa" Name="441.20 - Transformatorenstationen zu IfcClassificationReference">
@@ -9492,7 +9483,6 @@ Splitbauweise</IfcLabel-wrapper>
 					</EnumerationValues>
 				</Enumerators>
 			</IfcSimplePropertyTemplate>
-			<IfcSimplePropertyTemplate id="i2439" pos="8" GlobalId="1vfXcUghPBKA_$tufFwWyU" Name="Baujahr" Description="Bau- bzw. Anschaffungsjahr des Feuerlöschers" TemplateType="p_singlevalue" PrimaryMeasureType="IfcText"/>
 			<IfcSimplePropertyTemplate id="i2440" pos="9" GlobalId="0XstSmQdf8YgerIcTuXpYY" Name="Transporart Feuerlöscher" Description="Unterscheidung zwischen tragbaren und fahrbarenFeuerlöschern" TemplateType="p_enumeratedvalue" PrimaryMeasureType="IfcText">
 				<Enumerators Name="">
 					<EnumerationValues>
@@ -13464,13 +13454,13 @@ Außenhydrant unterflur</IfcLabel-wrapper>
 		</RelatedObjects>
 	</IfcRelAggregates>
 	<IfcSystem id="i3258" GlobalId="1NMbqRitH3Gx8An_QJRkaU" Name="430.51 Brandschutzklappen" Description="430.51 Brandschutzklappen"/>
-	<IfcBuildingElementProxy id="i3259" GlobalId="2_SFbHotvFgO5X97E_27uW" Name="Generisch" Description="Brandschutzklappe mit GLT-Auslöung" Tag="TYP01"/>
-	<IfcRelAssignsToGroup id="i3260" GlobalId="34xD17poH4VPnkOGxKKNje" Name="">
+	<IfcDamper id="i3259" GlobalId="2_SFbHotvFgO5X97E_27uW" Name="Generisch" Description="Brandschutzklappe mit GLT-Auslöung" Tag="TYP01"/>
+	<IfcRelAssignsToGroup id="i3260" GlobalId="34xD17poH4VPnkOGxKKNje" Name="" ref="cc1_2" RelatedObjectsType="notdefined">
 		<RelatedObjects>
-			<IfcBuildingElementProxy xsi:nil="true" ref="i3259"/>
-			<IfcBuildingElementProxy xsi:nil="true" ref="i3269"/>
-			<IfcBuildingElementProxy xsi:nil="true" ref="i3278"/>
-			<IfcBuildingElementProxy xsi:nil="true" ref="i3246"/>
+			<IfcDamper xsi:nil="true" ref="i3259"/>
+			<IfcDamper xsi:nil="true" ref="i3269"/>
+			<IfcDamper xsi:nil="true" ref="i3278"/>
+			<IfcDamper xsi:nil="true" ref="i3246"/>
 		</RelatedObjects>
 		<RelatingGroup xsi:type="IfcSystem" xsi:nil="true" ref="i3258"/>
 	</IfcRelAssignsToGroup>
@@ -13520,7 +13510,7 @@ Außenhydrant unterflur</IfcLabel-wrapper>
 		</RelatedPropertySets>
 		<RelatingTemplate xsi:nil="true" ref="i1273"/>
 	</IfcRelDefinesByTemplate>
-	<IfcBuildingElementProxy id="i3269" GlobalId="1VDJMuoWPA4OVNtks2$UY0" Name="Generisch" Description="Brandschutzklappe PAX mit GLT" Tag="TYP02"/>
+	<IfcDamper id="i3269" GlobalId="1VDJMuoWPA4OVNtks2$UY0" Name="Generisch" Description="Brandschutzklappe PAX mit GLT" Tag="TYP02"/>
 	<IfcPropertySet id="i3276" GlobalId="1VDJMuoWPA4OVUtks2$UY0" Name="">
 		<HasProperties>
 			<IfcPropertySingleValue id="i3270" Name="Beschreibung">
@@ -13567,7 +13557,7 @@ Außenhydrant unterflur</IfcLabel-wrapper>
 		</RelatedPropertySets>
 		<RelatingTemplate xsi:nil="true" ref="i1273"/>
 	</IfcRelDefinesByTemplate>
-	<IfcBuildingElementProxy id="i3278" GlobalId="39jntIOnv6XgBtjAUMJDSk" Name="Trox" Description="Trox 4711" Tag="TR0001"/>
+	<IfcDamper id="i3278" GlobalId="39jntIOnv6XgBtjAUMJDSk" Name="Trox" Description="Trox 4711" Tag="TR0001"/>
 	<IfcPropertySet id="i3285" GlobalId="1VZJMuoWPA4OVNtks2$UY0" Name="">
 		<HasProperties>
 			<IfcPropertySingleValue id="i3279" Name="Beschreibung">
@@ -13614,7 +13604,7 @@ Außenhydrant unterflur</IfcLabel-wrapper>
 		</RelatedPropertySets>
 		<RelatingTemplate xsi:nil="true" ref="i1273"/>
 	</IfcRelDefinesByTemplate>
-	<IfcBuildingElementProxy id="i3246" GlobalId="2UGW7WBUz4ZxRh4M8YtPrr" Name="Wildeboer" Description="Brandschutzklappe Wildeboer 4712" Tag="TYP03"/>
+	<IfcDamper id="i3246" GlobalId="2UGW7WBUz4ZxRh4M8YtPrr" Name="Wildeboer" Description="Brandschutzklappe Wildeboer 4712" Tag="TYP03"/>
 	<IfcPropertySet id="i3253" GlobalId="1VDJMuoWPA5OVNtks2$UY0" Name="">
 		<HasProperties>
 			<IfcPropertySingleValue id="i3247" Name="Beschreibung">
