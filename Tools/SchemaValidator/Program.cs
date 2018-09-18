@@ -13,7 +13,6 @@ namespace SchemaValidator
         [STAThread]
         static int Main(string[] args)
         {
-            var file = "";
             var interactive = false;
             if (args.Length < 1)
             {
@@ -30,33 +29,35 @@ namespace SchemaValidator
                     Console.WriteLine("No file selected");
                     return FAILED;
                 }
-                file = dlg.FileName;
-                Properties.Settings.Default.LastPath = file;
+                args = new[] { dlg.FileName };
+                Properties.Settings.Default.LastPath = dlg.FileName;
                 Properties.Settings.Default.Save();
                 interactive = true;
             }
-            else
-                file = args[0];
 
-            if (!File.Exists(file))
+            var ok = true;
+            foreach (var file in args)
             {
-                Console.WriteLine($"File '{file}' doesn't exist.");
-                return FAILED;
-            }
+                if (!File.Exists(file))
+                {
+                    Console.WriteLine($"File '{file}' doesn't exist.");
+                    continue;
+                }
 
-            var validator = new Validator();
-            var ok = validator.Check(file);
+                var validator = new Validator();
+                ok = validator.Check(file) && ok;
 
-            if (interactive)
-            {
-                if (!ok)
-                    Console.ForegroundColor = ConsoleColor.Red;
-                else
-                    Console.ForegroundColor = ConsoleColor.Green;
-                Console.WriteLine($"Check finished. There are {validator.Errors.Count()} errors.");
-                Console.ForegroundColor = ConsoleColor.White;
-                Console.WriteLine($"Press any key to quit...");
-                Console.ReadKey();
+                if (interactive)
+                {
+                    if (!ok)
+                        Console.ForegroundColor = ConsoleColor.Red;
+                    else
+                        Console.ForegroundColor = ConsoleColor.Green;
+                    Console.WriteLine($"Check finished. There are {validator.Errors.Count()} errors.");
+                    Console.ForegroundColor = ConsoleColor.White;
+                    Console.WriteLine($"Press any key to quit...");
+                    Console.ReadKey();
+                }
             }
 
             return ok ? SUCCESS : FAILED;
