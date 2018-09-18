@@ -179,7 +179,7 @@ namespace Examples
 
                     // empty line to create visual distinction
                     w.WriteLine();
-                    w.WriteLine("/*");
+                    w.WriteLine("/* * *");
                     var r = new StringReader(comment);
                     var commentLine = "";
                     while (!string.IsNullOrWhiteSpace(commentLine = r.ReadLine()))

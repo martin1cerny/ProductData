@@ -1,30 +1,103 @@
+/****************************************************************
+ * This example shows how complex properties can be used to describe
+ * declaration of performance of construction products. This utilises strong measure typing system and
+ * units from IFC schema. This approach can be used to store CPR data.
+ * 
+ * Created: 2018-09-18T07:29:22 (UTC)
+ ****************************************************************/
 ISO-10303-21;
 HEADER;
-FILE_DESCRIPTION ((''), '2;1');
-FILE_NAME ('', '2018-09-15T14:11:32', (''), (''), 'Xbim File Processor version 4.0.0.0', 'Xbim version 4.0.0.0', '');
+FILE_DESCRIPTION (('ProductDataView'), '2;1');
+FILE_NAME ('', '2018-09-18T09:29:21', (''), (''), 'Xbim File Processor version 4.0.0.0', 'Xbim version 4.0.0.0', '');
 FILE_SCHEMA (('IFC4'));
 ENDSEC;
 DATA;
-#1=IFCPROJECTLIBRARY('1S8Q1f29PEZemSPqVjHB_W',#2,'Declaration of Performance',$,$,$,$,$,#8);
-#2=IFCOWNERHISTORY(#5,#6,$,.ADDED.,1537020693,$,$,0);
-#3=IFCPERSON($,'Cerny','Martin',$,$,$,$,$);
-#4=IFCORGANIZATION($,'UNMZ',$,$,$);
+
+/* * *
+ * Root element of this file. Because this doesn't define a specific instance in the building it is a library.
+ * It can be used to declare elements, properties, property templates and other library objects 
+ * which can be later used in the actual design.
+ */
+#1=IFCPROJECTLIBRARY('1OjhHvfZXCt830NPrW0SD$',#2,'Declaration of Performance',$,$,$,$,$,#8);
+
+/* * *
+ * Owner history is used to define ownership of the information.
+ */
+#2=IFCOWNERHISTORY(#5,#6,$,.ADDED.,1537262962,$,$,0);
+#3=IFCPERSON($,'Martin','Cerny',$,$,$,$,$);
+#4=IFCORGANIZATION($,'xBIM Ltd.',$,$,$);
 #5=IFCPERSONANDORGANIZATION(#3,#4,$);
 #6=IFCAPPLICATION(#4,'4.0','xBIM Toolkit','xBIM');
+
+/* * *
+ * All units are machine readable in IFC. They are either SI or their definitions
+ * are infered from SI units. Because of that, relations between all units are well defined,
+ * reliable and it is possible to validate them.
+ */
 #7=IFCSIUNIT(*,.LENGTHUNIT.,.MILLI.,.METRE.);
+
+/* * *
+ * Units are assigned to the library project to that when units are not explicitely
+ * defined for properties thay can be found on the project level. There are exact rules to find units for
+ * all measure types (for example 'LENGTHUNIT' for 'IfcLengthMeasue' etc.)
+ */
 #8=IFCUNITASSIGNMENT((#7));
-#9=IFCRELDECLARES('04f3txR995RhSJ80qPjVt_',#2,$,$,#1,(#10,#14));
-#10=IFCPROPERTYSETTEMPLATE('0s1Pz_Kw9E8uYdqhQV3_jt',#2,'dimensions',$,$,'IfcElement',(#11));
-#12=IFCSIMPLEPROPERTYTEMPLATE('2ZSXantSv4HfPe18EkBSS8',#2,'Value',$,.P_SINGLEVALUE.,'IfcLengthMeasure',$,$,#7,$,$,$);
-#13=IFCSIMPLEPROPERTYTEMPLATE('2dL7zts6X7T9fLgmAVapDS',#2,'ReferenceDocument',$,.P_REFERENCEVALUE.,'IfcDocumentReference',$,$,$,$,$,$);
-#11=IFCCOMPLEXPROPERTYTEMPLATE('02JBL8XkvBmf9uL2F_BbjS',#2,'length',$,'length',$,(#12,#13));
-#14=IFCBUILDINGELEMENTPART('2U7HybUov8NQk4HEqpcQU0',#2,'Porotherm 50 EKO+ Profi R',$,'BRICK',$,$,$,.USERDEFINED.);
+
+/* * *
+ * This relation points to all definitions declared within the scope of the library.
+ * These can be elements, element types, properties or property templates
+ */
+#9=IFCRELDECLARES('3lnr9vnw9BRBdW8pzDZ4MU',#2,$,$,#1,(#10,#14));
+
+/* * *
+ * Template of the property set is used to group properties in logical groups.
+ * This can contain any number of properties with name unique within the set.
+ */
+#10=IFCPROPERTYSETTEMPLATE('0CrC3xL9zBBvQZhSxnHpvL',#2,'dimensions',$,$,'IfcElement',(#11));
+
+/* * *
+ * Simple name-definition-value property template defining actual value, type of measure (length) and unit (mm)
+ */
+#12=IFCSIMPLEPROPERTYTEMPLATE('0xfxGAgaLEAAOHeWue$5X6',#2,'Value',$,.P_SINGLEVALUE.,'IfcLengthMeasure',$,$,#7,$,$,$);
+
+/* * *
+ * Reference property template pointing to document relevant to the 'length' property
+ */
+#13=IFCSIMPLEPROPERTYTEMPLATE('3QvLAtQqT6DxTaxzba5MZX',#2,'ReferenceDocument',$,.P_REFERENCEVALUE.,'IfcDocumentReference',$,$,$,$,$,$);
+
+/* * *
+ * Template of the complex property to define all it's aspects. This can contain any number of descriptive properties.
+ * Both property set template and property template contain globally unique GUID which 
+ * can be used for global management of definitions and to maintain relations to data dictionaries.
+ */
+#11=IFCCOMPLEXPROPERTYTEMPLATE('3DaB6ZRAP1BxlWNevcOkVY',#2,'length',$,'length',$,(#12,#13));
+
+/* * *
+ * The best IfcElement subtype for brick is 'IfcBuildingElementPart'. 
+ * This type should not be considered as significant because authoring tools will often not support all 
+ * IFC element types and might not provide sufficient configurations or modelling workflows to create
+ * such a data. Combination of 'PredefinedType = USERDEFINED' and 'ObjectType = "BRICK"' can be
+ * used to identify the element. 'IfcBuildingElementPart' should also be used for materials.
+ */
+#14=IFCBUILDINGELEMENTPART('1lbaHuI4z6QgH7Sw9heVdl',#2,'Porotherm 50 EKO+ Profi R',$,'BRICK',$,$,$,.USERDEFINED.);
 #17=IFCPROPERTYSINGLEVALUE('Value',$,IFCLENGTHMEASURE(300.),#7);
 #19=IFCDOCUMENTREFERENCE($,$,'EN 772-1',$,$);
 #18=IFCPROPERTYREFERENCEVALUE('ReferenceDocument',$,$,#19);
 #16=IFCCOMPLEXPROPERTY('length',$,'length',(#17,#18));
-#15=IFCPROPERTYSET('0eYh5XVO52mArFPQsNfg9x',#2,'dimensions',$,(#16));
-#20=IFCRELDEFINESBYTEMPLATE('31yu8VwfjDTvqeX6oXwAqm',#2,$,$,(#15),#10);
-#21=IFCRELDEFINESBYPROPERTIES('1fHlan5DLCWeSZxHXmi4U3',#2,$,$,(#14),#15);
+
+/* * *
+ * This property set contains actual values and points to the defining template.
+ */
+#15=IFCPROPERTYSET('1uBlGUfFH3UhdNE5$D8IMk',#2,'dimensions',$,(#16));
+
+/* * *
+ * This relation binds actual property set with values to it's template.
+ */
+#20=IFCRELDEFINESBYTEMPLATE('1_3npYVejE6O0aLlsl9hcV',#2,$,$,(#15),#10);
+
+/* * *
+ * This relation sets the set of properties to the library element
+ */
+#21=IFCRELDEFINESBYPROPERTIES('0LIHyHPhf3y9t2lnDc493y',#2,$,$,(#14),#15);
 ENDSEC;
 END-ISO-10303-21;
