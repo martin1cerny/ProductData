@@ -1,17 +1,23 @@
 # IFC sample files tooling
 
 This is a Visual Studio solution containing a set of C# projects using [xBIM Toolkit](https://github.com/xBimTeam) 
-to create and validate IFC4 files. 
+to create and validate IFC4 files.
 
 
 ## Schema Validator Project
 
-Schema Validator is a command line application. When started without arguments it
-asks for an input IFC file with standard Windows file open dialog. Otherwise any number of IFC files can be defined as arguments.
-Files are check for syntactic errors (invalid type assignments, non-existing data types etc.) and for schema errors 
-(required fields, cardinality of attributes, IFC "Where Rules"). These are all written both to console and to *.log* file 
-next to the original IFC file. Validator can take both *.ifc* and *.ifcXML* files. Part of the functionality is specific to IFC4
-schema.
+Schema Validator is a command line application. When started without arguments it asks for an input IFC file with standard Windows file open dialog. Otherwise any number of IFC files can be defined as arguments.
+Files are checked for syntactic errors, e.g.
+
+- invalid type assignments
+- non-existing data types
+- schema errors
+- required fields
+- cardinality of attributes 
+- IFC "Where Rules"
+- and more
+
+These are all written both to console and to *.log* file next to the original IFC file. The validator can take both *.ifc* and *.ifcXML* files. Part of the functionality is specific to the IFC4 schema.
 
 Validator can also be referenced in other projects as a library. In that scenario models created with 
 [xBIM Toolkit](https://github.com/xBimTeam) can be validated to meet base schema constrains before they are saved. The use is like this:
@@ -32,7 +38,7 @@ abstract class `AbstractExample` which contains number of utility methods which 
 Examples can either be added to this project or can just reference this assembly as a library and inherit from the
 `AbstractExample` class. Utility methods include:
  - Model creation - IFC4 in-memory model is created automaticaly and ready for use
- - Comments and annotations - It is useful to extend sample files with comments to explain meaning and intended use of various data types and data structures. Utility method `Comment()` can be used to set these comments. Abstract property `Annotation` is used to ceate a header in the generated **.ifc* and **.ifcXML* files.
+ - Comments and annotations - It is useful to extend sample files with comments to explain meaning and intended use of various data types and data structures. Utility method `Comment()` can be used to set these comments. Abstract property `Annotation` is used to create a header in the generated **.ifc* and **.ifcXML* files.
  - Dual file generation - using utility method `SaveAs()` creates both **.ifc* and **.ifcXML* files both containing annotation in the header and all comments placed just above the relevant entities. Also, any commented entity in IFC STEP21 file (**.ifc*) will contain comment lile with names of attributes in right order to make developer navigation in the file easier
 
 ### Sample file generation code example:
