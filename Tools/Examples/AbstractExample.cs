@@ -57,8 +57,10 @@ namespace Examples
         /// <param name="comment">Commenting text</param>
         protected void Comment(IPersistEntity entity, string comment)
         {
+            // append to existing comment
             if (_comments.ContainsKey(entity.EntityLabel))
-                _comments[entity.EntityLabel] = comment;
+                _comments[entity.EntityLabel] = $"{_comments[entity.EntityLabel]}\r\n{comment}";
+            // create new comment
             else
                 _comments.Add(entity.EntityLabel, comment);
         }
