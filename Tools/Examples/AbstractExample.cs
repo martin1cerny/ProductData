@@ -57,8 +57,10 @@ namespace Examples
         /// <param name="comment">Commenting text</param>
         protected void Comment(IPersistEntity entity, string comment)
         {
+            // append to existing comment
             if (_comments.ContainsKey(entity.EntityLabel))
-                _comments[entity.EntityLabel] = comment;
+                _comments[entity.EntityLabel] = $"{_comments[entity.EntityLabel]}\r\n{comment}";
+            // create new comment
             else
                 _comments.Add(entity.EntityLabel, comment);
         }
@@ -178,16 +180,24 @@ namespace Examples
                     }
 
                     // empty line to create visual distinction
+                    var entity = model.Instances[id];
                     w.WriteLine();
                     w.WriteLine("/* * *");
                     var r = new StringReader(comment);
                     var commentLine = "";
                     while (!string.IsNullOrWhiteSpace(commentLine = r.ReadLine()))
                         w.WriteLine($" * {commentLine}");
-                    w.WriteLine(" */");
+                    // write attribute names to make the content more clear
+                    w.WriteLine($" * {entity.ExpressType.ExpressNameUpper}({string.Join(", ", GetStructureDescription(entity))}) */");
                     w.WriteLine(line);
                 }
             }
+        }
+
+        private IEnumerable<string> GetStructureDescription(IPersistEntity entity)
+        {
+            var type = entity.ExpressType;
+            return type.Properties.Select(p => p.Value.Name);
         }
 
         private void AddCommentsToXml(string xml)
