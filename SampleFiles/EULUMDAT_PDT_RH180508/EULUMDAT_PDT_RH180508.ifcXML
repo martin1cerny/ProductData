@@ -11,11 +11,11 @@
 		<documentation>https://www.zvei.org</documentation>
 	</header>
 	<!-- THE TEMPLATE STARTS HERE - PDT START - -->
-	<IfcProjectLibrary id="i100" GlobalId="3W_wCy4R58hgkAO0WsiUkm" Name="https://www.zvei.org/BIMAttributesProductsLibrary" LongName="ZVEI BIM Attributes Products Library" Description="A long description of the library content and usage concepts">
-		<OwnerHistory id="i101" CreationDate="20171122" LastModifiedDate="20171122" ChangeAction="nochange" State="readonly">
+	<IfcProjectLibrary id="i1100" GlobalId="3W_wCy4R58hgkAO0WsiUkm" Name="https://www.zvei.org/BIMAttributesProductsLibrary" LongName="ZVEI BIM Attributes Products Library" Description="A long description of the library content and usage concepts">
+		<OwnerHistory id="i1101" CreationDate="20171122" LastModifiedDate="20171122" ChangeAction="nochange" State="readonly">
 			<OwningUser>
-				<ThePerson/>
-				<TheOrganization id="i102" Identification="bSI" Name="ZVEI " Description="Zentralverband Elektrotechnik- und Elektronikindustrie e.V.">
+				<ThePerson id="i1102" FamilyName="" GivenName="" Identification=""/>
+				<TheOrganization id="i1103" Identification="bSI" Name="ZVEI" Description="Zentralverband Elektrotechnik- und Elektronikindustrie e.V.">
 					<Addresses>
 						<IfcPostalAddress>
 							<AddressLines>
@@ -26,15 +26,15 @@
 					</Addresses>
 				</TheOrganization>
 				<Roles>
-					<IfcActorRole id="i103" Role="userdefined" UserDefinedRole="LibraryPublisher"/>
+					<IfcActorRole id="i1104" Role="userdefined" UserDefinedRole="LibraryPublisher"/>
 				</Roles>
 			</OwningUser>
-			<OwningApplication id="i104" ApplicationFullName="bimLighting online database" ApplicationIdentifier="https://db4free.net" Version="1.0">
-				<ApplicationDeveloper/>
+			<OwningApplication id="i1105" ApplicationFullName="bimLighting online database" ApplicationIdentifier="https://db4free.net" Version="1.0">
+				<ApplicationDeveloper Name=""/>
 			</OwningApplication>
 		</OwnerHistory>
 		<Declares>
-			<IfcRelDeclares>
+			<IfcRelDeclares GlobalId="36JruP9Sj6_QQl9T2nuNCN">
 				<RelatedDefinitions>
 					<!-- Step 1: Define a PropertySetTemplate , That can be generated/imported from a PSet, the bSDD, IfcDoc or elsewhere - -->
 					<IfcPropertySetTemplate id="i105" GlobalId="3gmbhSjFD4JOPQZ7_I$HzY" Name="Company identification" TemplateType="pset_typedrivenoverride" ApplicableEntity="IFCLIGHTFIXTURETYPE" pos="1">
@@ -52,7 +52,7 @@
 					<IfcPropertySetTemplate id="i111" GlobalId="1lEpo0LO16FPpSj0jFwIOu" Name="Ityp" Description="Type indicator Ityp" TemplateType="pset_typedrivenoverride" ApplicableEntity="IFCLIGHTFIXTURETYPE" pos="1">
 						<HasPropertyTemplates>
 							<IfcSimplePropertyTemplate id="i112" GlobalId="1lEpo0LO16FPpSj0jFwIOu" Name="Point or linear source" Description="04-0001" TemplateType="p_enumeratedvalue" PrimaryMeasureType="IfcLabel" pos="1" AccessState="readonly">
-								<Enumerators>
+								<Enumerators  Name="">
 									<EnumerationValues>
 										<IfcLabel-wrapper pos="1">1</IfcLabel-wrapper>
 										<IfcLabel-wrapper pos="1">2</IfcLabel-wrapper>
@@ -65,7 +65,7 @@
 					<IfcPropertySetTemplate id="i113" GlobalId="1lEpo0LO16FPpSj0jFwIOu" Name="Isym" Description="Symmetry indicator Isym" TemplateType="pset_typedrivenoverride" ApplicableEntity="IFCLIGHTFIXTURETYPE" pos="1">
 						<HasPropertyTemplates>
 							<IfcSimplePropertyTemplate id="i114" GlobalId="1lEpo0LO16FPpSj0jFwIOu" Name="LDC symmetry" Description="04-0001" TemplateType="p_enumeratedvalue" pos="1" AccessState="readonly">
-								<Enumerators>
+								<Enumerators Name="">
 									<EnumerationValues>
 										<IfcLabel-wrapper pos="1">1</IfcLabel-wrapper>
 										<IfcLabel-wrapper pos="1">2</IfcLabel-wrapper>
@@ -277,24 +277,24 @@
 		<!-- Step 7: Insert the tracking information for the PDS-->
 		<OwnerHistory id="i201" CreationDate="20180528" LastModifiedDate="20180528" ChangeAction="nochange" State="readonly">
 			<OwningUser>
-				<ThePerson FamilyName="Heinze" GivenName="Robert"/>
-				<TheOrganization Identification="Trilux" Name="Trilux GmbH &amp; Co. KG" Description="Light Fixture Manufacturer"/>
+				<ThePerson id="i2202" FamilyName="Heinze" GivenName="Robert"/>
+				<TheOrganization id="i2203" Identification="Trilux" Name="Trilux GmbH und Co. KG" Description="Light Fixture Manufacturer"/>
 				<Roles>
-					<IfcActorRole Role="manufacturer"/>
+					<IfcActorRole id="i2304" Role="manufacturer"/>
 				</Roles>
 			</OwningUser>
 			<OwningApplication ApplicationFullName="Trilux product management system" ApplicationIdentifier="api.trilux.com" Version="1.0">
-				<ApplicationDeveloper/>
+				<ApplicationDeveloper Name=""/>
 			</OwningApplication>
 			<LastModifyingUser>
 				<ThePerson FamilyName="Heinze" GivenName="Robert"/>
-				<TheOrganization Identification="Trilux" Name="Trilux GmbH &amp; Co. KG" Description="Light Fixture Manufacturer"/>
+				<TheOrganization id="i2305" Identification="Trilux" Name="Trilux GmbH und Co. KG" Description="Light Fixture Manufacturer"/>
 				<Roles>
 					<IfcActorRole Role="manufacturer"/>
 				</Roles>
 			</LastModifyingUser>
 			<LastModifyingApplication ApplicationFullName="Trilux product management system" ApplicationIdentifier="api.trilux.com" Version="1.0">
-				<ApplicationDeveloper/>
+				<ApplicationDeveloper Name=""/>
 			</LastModifyingApplication>
 		</OwnerHistory>
 		<UnitsInContext id="i7" xsi:type="IfcUnitAssignment">
@@ -312,10 +312,10 @@
 		</UnitsInContext>
 	</IfcProject>
 	<!-- Step 8: Insert the name of the entity that describes all types of the product in ISO 16739 (IFC)-->
-	<IfcLampType id="i202" GlobalId="26JruP9Sj6_QQl9T2nuNCG">
+	<IfcLampType id="i202" GlobalId="26JruP9Sj6_QQl9T2nuNCG" Name="MyLightFixtureType">
 		<HasPropertySets>
 			<!-- Step 9: Insert the data based on the template-->
-			<IfcPropertySet id="i203" Name="Property set DoC header" Description="This property set is valid for all instances of this type">
+			<IfcPropertySet id="i203"  GlobalId="26JruP9Sj6_QQl9T2nuNCH"  Name="set DoC header" Description="This property set is valid for all instances of this type">
 				<HasProperties>
 					<IfcPropertySingleValue id="i204" Name="Document number">
 						<NominalValue>
@@ -389,9 +389,9 @@ Nextrema G3 TB 8000-840 ETDD +LLWC
 		</HasPropertySets>
 	</IfcLampType>
 	<IfcResourceConstraintRelationship id="i221" Name="Constraint on the values of 'Width of the luminous area'" Description="The value of width for the produkt is between 100 and 200 with no definition of steps (discrete value)">
-		<RelatingConstraint id="i218" xsi:type="IfcObjective" ConstraintGrade="hard" LogicalAggregator="logicaland" ObjectiveQualifier="parameter">
+		<RelatingConstraint id="i218" xsi:type="IfcObjective" ConstraintGrade="hard" LogicalAggregator="logicaland" ObjectiveQualifier="parameter" Name="">
 			<ifc:BenchmarkValues>
-				<IfcMetric id="i222" ConstraintGrade="hard" Benchmark="greaterthanorequalto">
+				<IfcMetric id="i222" ConstraintGrade="hard" Benchmark="greaterthanorequalto" Name="">
 					<DataValue>
 						<IfcMeasureWithUnit>
 							<ValueComponent>
@@ -403,7 +403,7 @@ Nextrema G3 TB 8000-840 ETDD +LLWC
 						</IfcMeasureWithUnit>
 					</DataValue>
 				</IfcMetric>
-				<IfcMetric id="i223" ConstraintGrade="hard" Benchmark="lessthanorequalto">
+				<IfcMetric id="i223" ConstraintGrade="hard" Benchmark="lessthanorequalto" Name="">
 					<DataValue>
 						<IfcMeasureWithUnit>
 							<ValueComponent>
@@ -422,9 +422,9 @@ Nextrema G3 TB 8000-840 ETDD +LLWC
 		</RelatedResourceObjects>
 	</IfcResourceConstraintRelationship>
 	<IfcResourceConstraintRelationship id="i231" Name="Constraint on the values of 'Lamp Count'" Description="The value of 'Lamp Count' one of [1,2,3,4,5,6] (distinct value)">
-		<RelatingConstraint id="i232" xsi:type="IfcObjective" ConstraintGrade="hard" LogicalAggregator="logicaland" ObjectiveQualifier="parameter">
+		<RelatingConstraint id="i232" xsi:type="IfcObjective" ConstraintGrade="hard" LogicalAggregator="logicaland" ObjectiveQualifier="parameter" Name="">
 			<ifc:BenchmarkValues>
-				<IfcMetric id="i233" ConstraintGrade="hard" Benchmark="equalto" ValueSource="Value">
+				<IfcMetric id="i233" ConstraintGrade="hard" Benchmark="equalto" ValueSource="Value" Name="">
 					<DataValue>
 						<IfcTable id="i234" Name="Valuetable 'Lamp Count'">
 							<Rows>
@@ -471,7 +471,7 @@ Nextrema G3 TB 8000-840 ETDD +LLWC
 			<IfcPropertySingleValue ref="i220" Name="Constrain on value of 'Width of the luminous area'"/>
 		</RelatedResourceObjects>
 	</IfcResourceConstraintRelationship>
-	<IfcRelDefinesByTemplate>
+	<IfcRelDefinesByTemplate id="i229" GlobalId="26JruP9Sj6_QQl9T2nuNCk">
 		<RelatedPropertySets>
 			<IfcPropertySet xsi:nil="true" ref="i203"/>
 		</RelatedPropertySets>
@@ -483,7 +483,7 @@ Nextrema G3 TB 8000-840 ETDD +LLWC
 		</IsDefinedBy>
 	</IfcLamp>
 	<IfcDocumentInformation id="i300" Identification="26JzuP9Sj6_QQl9T2nuNCG" Name="CE180_RED_06.17_Nextrema_G3_HFS_LLWC.pdf" Location="Documents\CE180_RED_06.17_Nextrema_G3_HFS_LLWC.pdf" CreationTime="2017-06-10T00:00:00+00:01" LastRevisionTime="2017-06-10T00:00:00+00:01" ElectronicFormat="application/pdf"/>
-	<IfcRelAssociatesDocument>
+	<IfcRelAssociatesDocument id="i301" GlobalId="26JzuP9Sj6_QQl9T2nuNCH">
 		<RelatedObjects>
 			<IfcLampType xsi:nil="true" ref="i202"/>
 		</RelatedObjects>
@@ -491,22 +491,22 @@ Nextrema G3 TB 8000-840 ETDD +LLWC
 			<IfcDocumentInformation xsi:nil="true" ref="i300"/>
 		</RelatingDocument>
 	</IfcRelAssociatesDocument>
-	<IfcDocumentInformation id="i301" Identification="26JruP9Sj6_QQl9T2nuNCG" Name="Trilux Nextrema G3 B 4000-840 ET +HFS.pdf" Location="Documents\Trilux Nextrema G3 B 4000-840 ET +HFS.pdf" CreationTime="2017-06-10T00:00:00+00:01" LastRevisionTime="2017-06-10T00:00:00+00:01" ElectronicFormat="application/pdf"/>
-	<IfcRelAssociatesDocument>
-		<RelatedObjects>
-			<IfcLampType xsi:nil="true" ref="i202"/>
-		</RelatedObjects>
-		<RelatingDocument>
-			<IfcDocumentInformation xsi:nil="true" ref="i301"/>
-		</RelatingDocument>
-	</IfcRelAssociatesDocument>
-	<IfcDocumentInformation id="i302" Identification="26JruP9Sj6_QQl9T3nuNCG" Name="Trilux Nextrema G3 B 4000-840 ET +HFS.pdf" Location="![CDATA[PLACE_HERE_THE_LONG_BASE64_STRING_TO_EMBED_FILES_DIRECTLY]]" CreationTime="2017-06-10T00:00:00+00:01" LastRevisionTime="2017-06-10T00:00:00+00:01" ElectronicFormat="application/pdf"/>
-	<IfcRelAssociatesDocument>
+	<IfcDocumentInformation id="i302" Identification="26JruP9Sj6_QQl9T2nuNCG" Name="Trilux Nextrema G3 B 4000-840 ET +HFS.pdf" Location="Documents\Trilux Nextrema G3 B 4000-840 ET +HFS.pdf" CreationTime="2017-06-10T00:00:00+00:01" LastRevisionTime="2017-06-10T00:00:00+00:01" ElectronicFormat="application/pdf"/>
+	<IfcRelAssociatesDocument id="i303" GlobalId="27JzuP9Sj6_QQl9T2nuNCH">
 		<RelatedObjects>
 			<IfcLampType xsi:nil="true" ref="i202"/>
 		</RelatedObjects>
 		<RelatingDocument>
 			<IfcDocumentInformation xsi:nil="true" ref="i302"/>
+		</RelatingDocument>
+	</IfcRelAssociatesDocument>
+	<IfcDocumentInformation id="i304" Identification="26JruP9Sj6_QQl9T3nuNCG" Name="Trilux Nextrema G3 B 4000-840 ET +HFS.pdf" Location="![CDATA[PLACE_HERE_THE_LONG_BASE64_STRING_TO_EMBED_FILES_DIRECTLY]]" CreationTime="2017-06-10T00:00:00+00:01" LastRevisionTime="2017-06-10T00:00:00+00:01" ElectronicFormat="application/pdf"/>
+	<IfcRelAssociatesDocument id="i305" GlobalId="26JzuP9Sj6_QQl9T3nuNCH">
+		<RelatedObjects>
+			<IfcLampType xsi:nil="true" ref="i202"/>
+		</RelatedObjects>
+		<RelatingDocument>
+			<IfcDocumentInformation xsi:nil="true" ref="i304"/>
 		</RelatingDocument>
 	</IfcRelAssociatesDocument>
 	<!--  End DATA-->
