@@ -348,8 +348,7 @@
 				<IfcOwnerHistory xsi:nil="true" ref="i100006"/>
 			</OwnerHistory>
 			<Name>Pset_LightFixtureTypeCommon</Name>
-			<Description>Definition from IAI: Common data for light fixtures.
-History: IFC 2x4 - Article number deleted. Use Pset_ManufacturerTypeInformation. ArticleNumber instead.</Description>
+			<Description>Definition from IAI: Common data for light fixtures. History: IFC 2x4 - Article number deleted. Use Pset_ManufacturerTypeInformation. ArticleNumber instead.</Description>
 			<HasProperties ex:cType="set">
 				<IfcPropertySingleValue pos="0" xsi:nil="true" ref="i100033"/>
 				<IfcPropertySingleValue pos="1" xsi:nil="true" ref="i100034"/>
