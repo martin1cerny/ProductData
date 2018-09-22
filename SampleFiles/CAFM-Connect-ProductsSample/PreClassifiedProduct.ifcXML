@@ -1,0 +1,292 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ifcXML xmlns:ifc="http://www.buildingsmart-tech.org/ifcXML/IFC4/Add2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" id="ifcXML4" xmlns="http://www.buildingsmart-tech.org/ifcXML/IFC4/Add2" xsi:schemaLocation="http://www.buildingsmart-tech.org/ifcXML/IFC4/Add2 ../IFC4_ADD2.xsd">
+	<header>
+		<name>CAFM-Connect Katalog 2014</name>
+		<time_stamp>2015-08-17T06:45:03</time_stamp>
+		<author>Aengenvoort</author>
+		<organization>CAFM-Connect</organization>
+		<preprocessor_version>.NET API etask.ifc</preprocessor_version>
+		<originating_system>.NET API etask.ifc</originating_system>
+		<authorization>file created with IFC.NET</authorization>
+		<documentation>ProductDataTemplate</documentation>
+	</header>
+	<IfcProjectLibrary id="i100" GlobalId="3W_wCy4R58hgkAO0WsiUkm">
+		<OwnerHistory id="i1001" CreationDate="12345" LastModifiedDate="12345" ChangeAction="nochange" State="readonly" path="api.myPreferredDictServer.org">
+			<OwningUser>
+				<ThePerson FamilyName="Aengenvoort" GivenName="Klaus" Identification=""/>
+				<TheOrganization Identification="CEN-TC442-WG4-TG2" Description="A group of specialists for BIM products" Name=""/>
+			</OwningUser>
+			<OwningApplication ApplicationFullName="" ApplicationIdentifier="" Version="">
+				<ApplicationDeveloper Identification="myPreferredDictServer" Description="My preferred Dictionary running according to CEN-TC442" Name="" path="api.myPreferredDictServer.org"/>
+			</OwningApplication>
+		</OwnerHistory>
+		<UnitsInContext>
+			<Units>
+				<!-- m - Meter -->
+				<IfcSIUnit id="i101" UnitType="lengthunit" Name="metre"/>
+				<!-- cm - Zentimeter -->
+				<IfcSIUnit id="i102" UnitType="lengthunit" Prefix="centi" Name="metre"/>
+				<!-- mm - Millimeter -->
+				<IfcSIUnit id="i103" UnitType="lengthunit" Prefix="milli" Name="metre"/>
+				<!-- m² - Quadratmeter -->
+				<IfcSIUnit id="i104" UnitType="areaunit" Name="square_metre"/>
+				<!-- m³ - Kubikmeter -->
+				<IfcSIUnit id="i105" UnitType="volumeunit" Name="cubic_metre"/>
+				<!-- V - Volt -->
+				<IfcSIUnit id="i106" UnitType="electricvoltageunit" Name="volt"/>
+				<!-- °C - Grad Celsius -->
+				<IfcSIUnit id="i107" UnitType="thermodynamictemperatureunit" Name="degree_celsius"/>
+				<!-- A - Ampere -->
+				<IfcSIUnit id="i108" UnitType="electriccurrentunit" Name="ampere"/>
+				<!--  Ah - Amperstunde -->
+				<IfcDerivedUnit id="i109" UnitType="heatfluxdensityunit">
+					<Elements>
+						<IfcDerivedUnitElement id="i110" Exponent="1">
+							<Unit xsi:type="IfcSIUnit" UnitType="electriccurrentunit" Name="ampere"/>
+						</IfcDerivedUnitElement>
+						<IfcDerivedUnitElement id="i111" Exponent="-1">
+							<Unit xsi:type="IfcConversionBasedUnit" Name="Hour" UnitType="timeunit">
+								<Dimensions TimeExponent="1"/>
+								<ConversionFactor>
+									<ValueComponent>
+										<IfcTimeMeasure-wrapper>3600.</IfcTimeMeasure-wrapper>
+									</ValueComponent>
+									<UnitComponent>
+										<IfcSIUnit UnitType="timeunit" Name="second"/>
+									</UnitComponent>
+								</ConversionFactor>
+							</Unit>
+						</IfcDerivedUnitElement>
+					</Elements>
+				</IfcDerivedUnit>
+				<!-- Hz - Frequenz -->
+				<IfcSIUnit id="i112" UnitType="frequencyunit" Name="hertz"/>
+				<!-- kg - Kilogramm -->
+				<IfcSIUnit id="i113" UnitType="massunit" Prefix="kilo" Name="gram"/>
+				<!-- m³/h - Volumenstrom -->
+				<IfcDerivedUnit id="i114" UnitType="volumetricflowrateunit">
+					<Elements>
+						<IfcDerivedUnitElement id="i115" Exponent="3">
+							<Unit xsi:type="IfcSIUnit" UnitType="lengthunit" Name="metre"/>
+						</IfcDerivedUnitElement>
+						<IfcDerivedUnitElement id="i116" Exponent="-1">
+							<Unit xsi:type="IfcConversionBasedUnit" Name="Hour" UnitType="timeunit">
+								<Dimensions TimeExponent="1"/>
+								<ConversionFactor>
+									<ValueComponent>
+										<IfcTimeMeasure-wrapper>3600.</IfcTimeMeasure-wrapper>
+									</ValueComponent>
+									<UnitComponent>
+										<IfcSIUnit UnitType="timeunit" Name="second"/>
+									</UnitComponent>
+								</ConversionFactor>
+							</Unit>
+						</IfcDerivedUnitElement>
+					</Elements>
+				</IfcDerivedUnit>
+				<!-- kg/m³ - Dichte -->
+				<IfcDerivedUnit id="i117" UnitType="massdensityunit">
+					<Elements>
+						<IfcDerivedUnitElement id="i118" Exponent="1">
+							<Unit xsi:type="IfcSIUnit" UnitType="massunit" Name="gram"/>
+						</IfcDerivedUnitElement>
+						<IfcDerivedUnitElement id="i119" Exponent="-3">
+							<Unit xsi:type="IfcSIUnit" UnitType="lengthunit" Name="metre"/>
+						</IfcDerivedUnitElement>
+					</Elements>
+				</IfcDerivedUnit>
+				<!-- W - Leistung -->
+				<IfcSIUnit id="i120" UnitType="powerunit" Name="watt"/>
+				<!-- kW - Kilowatt -->
+				<IfcSIUnit id="i121" UnitType="powerunit" Prefix="kilo" Name="watt"/>
+				<!-- Pa - Druck -->
+				<IfcSIUnit id="i122" UnitType="pressureunit" Name="pascal"/>
+				<!-- db - Dezibel -->
+				<IfcDerivedUnit id="i123" UnitType="soundpowerlevelunit">
+					<Elements>
+						<IfcDerivedUnitElement id="i124" Exponent="1">
+							<Unit xsi:type="IfcSIUnit" UnitType="powerunit" Name="watt"/>
+						</IfcDerivedUnitElement>
+						<IfcDerivedUnitElement id="i125" Exponent="-1">
+							<Unit xsi:type="IfcSIUnit" UnitType="powerunit" Name="watt"/>
+						</IfcDerivedUnitElement>
+					</Elements>
+				</IfcDerivedUnit>
+				<IfcDerivedUnit id="i12560" UnitType="soundpowerlevelunit">
+					<Elements>
+						<IfcDerivedUnitElement Exponent="1">
+							<Unit xsi:type="IfcSIUnit" UnitType="pressureunit" Name="pascal"/>
+						</IfcDerivedUnitElement>
+						<IfcDerivedUnitElement Exponent="-1">
+							<Unit xsi:type="IfcSIUnit" UnitType="pressureunit" Name="pascal"/>
+						</IfcDerivedUnitElement>
+					</Elements>
+				</IfcDerivedUnit>
+			</Units>
+		</UnitsInContext>
+	</IfcProjectLibrary>
+	<IfcClassification id="i126" Edition="Version 1.06.02" EditionDate="2015-08-17T06:45:03" Name="A classification system for object types (OTL)" Description="Description of the classification system" Source="http://URL"/>
+	<IfcRelAssociatesClassification id="i127" GlobalId="1fbJ0AXVj7qQIdiMHqoMyI" Name="CAFM-Connect Katalog 2014 zu IfcClassification">
+		<RelatedObjects>
+			<IfcProject ref="i100" xsi:nil="true"/>
+		</RelatedObjects>
+		<RelatingClassification>
+			<IfcClassification ref="i126" xsi:nil="true"/>
+		</RelatingClassification>
+	</IfcRelAssociatesClassification>
+	<IfcClassificationReference id="i128" Identification="G1" Name="Group 1" Sort="0">
+		<HasReferences>
+			<IfcClassificationReference id="i132" Identification="G1.S1" Name="Subgroup 1.1" Sort="0">
+				<HasReferences>
+					<IfcClassificationReference id="i136" Identification="G1.S1.T1" Name="Objectttype 1" Sort="0"/>
+					<IfcClassificationReference id="i137" Identification="G1.S1.T2" Name="Objectttype 2" Sort=""/>
+				</HasReferences>
+			</IfcClassificationReference>
+		</HasReferences>
+	</IfcClassificationReference>
+	<IfcPropertySetTemplate id="i157" GlobalId="2DeVW21T54MvNyDeOrUn9O" Name="Propertyset for Objectttype 1" Description="Türen einschließlich Umrahmungen, Beschlägen, Antrieben, Lüftungselementen und sonstigen eingebauten Elementen" ApplicableEntity="IfcDoor">
+		<HasPropertyTemplates>
+			<IfcSimplePropertyTemplate id="i158" GlobalId="0qRvdT3abDKfNj3EtPset7" Name="Beschreibung" Description="Freitextfeld zur allgemeinen Beschreibung von Objektinformationen" TemplateType="p_singlevalue" PrimaryMeasureType="IfcText" pos="0"/>
+			<IfcSimplePropertyTemplate id="i159" GlobalId="0mb$wPzVL4Lw29xSsZI9gm" Name="Automatischer Antrieb" Description="Angabe, ob dieses Bauteil einen automatischen Antrieb (kraftbetärtigt) zum Öffnen und Schließen besitzt (JA) oder nicht (NEIN)." TemplateType="p_singlevalue" PrimaryMeasureType="IfcBoolean" pos="1"/>
+			<IfcSimplePropertyTemplate id="i160" GlobalId="0TsTShWprBqBATZkBjo22i" Name="Öffnungsart" Description="" TemplateType="p_enumeratedvalue" PrimaryMeasureType="IfcText" pos="2">
+				<Enumerators Name="">
+					<EnumerationValues>
+						<IfcLabel-wrapper pos="0">Drehtür</IfcLabel-wrapper>
+						<IfcLabel-wrapper pos="1">Falttür</IfcLabel-wrapper>
+						<IfcLabel-wrapper pos="2">Hebedrehtür</IfcLabel-wrapper>
+						<IfcLabel-wrapper pos="3">Hebeschiebetür</IfcLabel-wrapper>
+						<IfcLabel-wrapper pos="4">Pendeltür</IfcLabel-wrapper>
+						<IfcLabel-wrapper pos="5">Schiebetür</IfcLabel-wrapper>
+						<IfcLabel-wrapper pos="6">Karusselltür </IfcLabel-wrapper>
+					</EnumerationValues>
+				</Enumerators>
+			</IfcSimplePropertyTemplate>
+			<IfcSimplePropertyTemplate id="i162" GlobalId="2cWZvwu0fEfhvTXia$PbSM" Name="Anschlag" Description="" TemplateType="p_enumeratedvalue" PrimaryMeasureType="IfcText" pos="3">
+				<Enumerators Name="">
+					<EnumerationValues>
+						<IfcLabel-wrapper pos="0">Din R</IfcLabel-wrapper>
+						<IfcLabel-wrapper pos="1">Din L</IfcLabel-wrapper>
+					</EnumerationValues>
+				</Enumerators>
+			</IfcSimplePropertyTemplate>
+			<IfcSimplePropertyTemplate id="i164" GlobalId="1A5LyOZ4r6yOXYmvfudGJr" Name="Hersteller" Description="" TemplateType="p_singlevalue" PrimaryMeasureType="IfcText" pos="4"/>
+			<IfcSimplePropertyTemplate id="i165" GlobalId="0$nuh8r1z36A5bVGxS82ZW" Name="Baujahr" Description="" TemplateType="p_singlevalue" PrimaryMeasureType="IfcReal" pos="5"/>
+			<IfcSimplePropertyTemplate id="i166" GlobalId="0FERfAvWX2kOL7PUua3mJm" Name="DiBT Zulassungsnummer" Description="" TemplateType="p_singlevalue" PrimaryMeasureType="IfcReal" pos="6"/>
+			<IfcSimplePropertyTemplate id="i167" GlobalId="2WOPKelFT7R9Pq6IXcjLx0" Name="Schutzanforderung Tür" Description="" TemplateType="p_enumeratedvalue" PrimaryMeasureType="IfcText" pos="7">
+				<Enumerators Name="">
+					<EnumerationValues>
+						<IfcLabel-wrapper pos="0">ohne besondere Schutzanforderung</IfcLabel-wrapper>
+						<IfcLabel-wrapper pos="1">Brandschutztür</IfcLabel-wrapper>
+						<IfcLabel-wrapper pos="2">Rauchschutztür</IfcLabel-wrapper>
+						<IfcLabel-wrapper pos="3">Schallschutztür </IfcLabel-wrapper>
+						<IfcLabel-wrapper pos="4"> Brand-Rauchschutztür</IfcLabel-wrapper>
+					</EnumerationValues>
+				</Enumerators>
+			</IfcSimplePropertyTemplate>
+			<IfcSimplePropertyTemplate id="i169" GlobalId="19DurUNXLEQ8Eddt$Ruw8o" Name="Fluchttür" Description="" TemplateType="p_singlevalue" PrimaryMeasureType="IfcBoolean" pos="8"/>
+			<IfcSimplePropertyTemplate id="i170" GlobalId="1Qq3hTkQf3Rx1rVSGSfRwX" Name="Obertürschließer" Description="" TemplateType="p_singlevalue" PrimaryMeasureType="IfcBoolean" pos="9"/>
+			<IfcSimplePropertyTemplate id="i171" GlobalId="1hUbBImKz6ge2S_MY$7y4I" Name="Feststellanlage" Description="" TemplateType="p_enumeratedvalue" PrimaryMeasureType="IfcText" pos="10">
+				<Enumerators Name="">
+					<EnumerationValues>
+						<IfcLabel-wrapper pos="0">nein</IfcLabel-wrapper>
+						<IfcLabel-wrapper pos="1">manuell</IfcLabel-wrapper>
+						<IfcLabel-wrapper pos="2">elektrisch</IfcLabel-wrapper>
+					</EnumerationValues>
+				</Enumerators>
+			</IfcSimplePropertyTemplate>
+			<IfcSimplePropertyTemplate id="i173" GlobalId="2xf958RPLA4hXB2nsA1jnB" Name="Feuerwiderstandsklasse" Description="" TemplateType="p_enumeratedvalue" PrimaryMeasureType="IfcText" pos="11">
+				<Enumerators Name="">
+					<EnumerationValues>
+						<IfcLabel-wrapper pos="0">T 30-1</IfcLabel-wrapper>
+						<IfcLabel-wrapper pos="1">T 30-2</IfcLabel-wrapper>
+						<IfcLabel-wrapper pos="2">T 90-1</IfcLabel-wrapper>
+						<IfcLabel-wrapper pos="3">T 90-2 </IfcLabel-wrapper>
+					</EnumerationValues>
+				</Enumerators>
+			</IfcSimplePropertyTemplate>
+			<IfcSimplePropertyTemplate id="i175" GlobalId="0ctwDbCbvCTxKEyvl_RJTm" Name="Anzahl Flügel" Description="" TemplateType="p_enumeratedvalue" PrimaryMeasureType="IfcText" pos="12">
+				<Enumerators Name="">
+					<EnumerationValues>
+						<IfcLabel-wrapper pos="0">einflügelig</IfcLabel-wrapper>
+						<IfcLabel-wrapper pos="1">2-flügelig</IfcLabel-wrapper>
+						<IfcLabel-wrapper pos="2">mehrflüglig</IfcLabel-wrapper>
+					</EnumerationValues>
+				</Enumerators>
+			</IfcSimplePropertyTemplate>
+			<IfcSimplePropertyTemplate id="i177" GlobalId="3mpCpm7S58xuXMDsGLtPez" Name="Notausgangsverschluss" Description="" TemplateType="p_singlevalue" PrimaryMeasureType="IfcBoolean" pos="13"/>
+		</HasPropertyTemplates>
+	</IfcPropertySetTemplate>
+	<IfcRelAssociatesClassification id="i178" GlobalId="1XS_HPENjA0wd_6P789FOL" Name="Association of Propertyset to Objectttype 1">
+		<RelatedObjects>
+			<IfcPropertySetTemplate ref="i157" xsi:nil="true"/>
+		</RelatedObjects>
+		<RelatingClassification>
+			<IfcClassificationReference ref="i136" xsi:nil="true"/>
+		</RelatingClassification>
+	</IfcRelAssociatesClassification>
+		<IfcAlarm id="i6886" GlobalId="26JruP9Sj6_QQl9T2nuNCN" Name="430.41" Description="A Instance of Objecttype 1" Tag="4711" PredefinedType="bell">
+		<IsDefinedBy>
+			<IfcRelDefinesByProperties id="i6896976" GlobalId="26JruP9Sj6_QQl9T2nuNCO">
+				<RelatingPropertyDefinition>
+					<IfcPropertySet id="i6896977" GlobalId="26JruP9Sj6_QQl9T2nuNCK" Name="">
+						<HasProperties>
+							<IfcComplexProperty id="i71300" UsageName="" Name="">
+								<HasProperties>
+									<IfcPropertySingleValue id="i71301" Name="Unique Product identification code">
+										<NominalValue>
+											<IfcLabel-wrapper>Fireray50/100RV</IfcLabel-wrapper>
+										</NominalValue>
+									</IfcPropertySingleValue>
+									<IfcPropertySingleValue id="i71302" Name="Type according Article 11-4">
+										<NominalValue>
+											<IfcLabel-wrapper>Fireray 50 RV and Fireray 100RV</IfcLabel-wrapper>
+										</NominalValue>
+									</IfcPropertySingleValue>
+									<IfcPropertySingleValue id="i71303" Name="Name of Property3">
+										<NominalValue>
+											<IfcLabel-wrapper>3456</IfcLabel-wrapper>
+										</NominalValue>
+									</IfcPropertySingleValue>
+								</HasProperties>
+							</IfcComplexProperty>
+						</HasProperties>
+					</IfcPropertySet>
+				</RelatingPropertyDefinition>
+			</IfcRelDefinesByProperties>
+		</IsDefinedBy>
+	</IfcAlarm>
+	<IfcRelDefinesByTemplate id="i6896979" GlobalId="26JruP9Sj6_QQl9T2nuNCI">
+		<RelatedPropertySets>
+			<IfcPropertySet ref="i6896977" pos="0" xsi:nil="true"/>
+		</RelatedPropertySets>
+		<RelatingTemplate ref="i157" xsi:type="IfcPropertySetTemplate" xsi:nil="true"/>
+	</IfcRelDefinesByTemplate>
+	<IfcAlarmType id="i9999" GlobalId="26JruP9Sj6_QQl9T2nuNCN" Name="Fireray Type 1" Description="Description of Fireray Type 1" PredefinedType="bell"/>
+	<!--  Sample reference to classification DINSPEC 91400 outside of XML structure of the element-->
+	<IfcRelAssociatesClassification id="i12799999999999" GlobalId="1fbJ0AXVj7qQIdiMHqoMyI" Name="PSet2CPR">
+		<RelatedObjects>
+			<IfcAlarm ref="i6886"/>
+		</RelatedObjects>
+		<RelatingClassification>
+			<IfcClassification ref="i136" xsi:nil="true"/>
+		</RelatingClassification>
+	</IfcRelAssociatesClassification>
+	<IfcDocumentInformation id="i6690" Identification="d96295cf779240e9a204105627ec00be" Name="Data_sheet_enUS_1281214987.pdf" Location="Documents\Data_sheet_enUS_1281214987.pdf" CreationTime="25.10.2016 09:47:48" LastRevisionTime="25.10.2016 09:47:52" ElectronicFormat="application/pdf"/>
+	<IfcRelAssociatesDocument GlobalId="3EGlhekFT4z96nW7gmGyfS">
+		<RelatedObjects>
+			<IfcAlarm xsi:nil="true" ref="i6886"/>
+		</RelatedObjects>
+		<RelatingDocument>
+			<IfcDocumentInformation xsi:nil="true" ref="i6690"/>
+		</RelatingDocument>
+	</IfcRelAssociatesDocument>
+	<IfcDocumentInformation id="i6691" Identification="d96295cf779241e9a204105627ec00be" Name="Fireray_50_100RV_Declaration_of_Performance_enUS_12448966539.pdf" Location="Documents\Fireray_50_100RV_Declaration_of_Performance_enUS_12448966539.pdf" CreationTime="25.10.2016 09:47:48" LastRevisionTime="25.10.2016 09:47:52" ElectronicFormat="application/pdf"/>
+	<IfcRelAssociatesDocument GlobalId="3EGlhekFT4z96nW7gmGyfS">
+		<RelatedObjects>
+			<IfcAlarm xsi:nil="true" ref="i6886"/>
+		</RelatedObjects>
+		<RelatingDocument>
+			<IfcDocumentInformation xsi:nil="true" ref="i6690"/>
+		</RelatingDocument>
+	</IfcRelAssociatesDocument>
+</ifcXML>
