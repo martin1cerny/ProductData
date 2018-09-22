@@ -1,0 +1,1708 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ex:iso_10303_28 xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ex="urn:iso.org:standard:10303:part(28):version(2):xmlschema:common" xmlns="http://www.iai-tech.org/ifcXML/IFC2x3/FINAL" xsi:schemaLocation="http://www.iai-tech.org/ifcXML/IFC2x3/FINAL http://www.iai-tech.org/ifcXML/IFC2x3/FINAL/IFC2X3.xsd" version="2.0">
+	<ex:iso_10303_28_header>
+		<ex:name>Model 001</ex:name>
+		<ex:time_stamp>2012-07-12T12:00:00</ex:time_stamp>
+		<ex:author>Nisbet</ex:author>
+		<ex:organization>AEC3 UK Ltd</ex:organization>
+		<ex:preprocessor_version>BimServices</ex:preprocessor_version>
+		<ex:originating_system>BimServices Transform2 v2012-07-12T12:00:00</ex:originating_system>
+		<ex:authorization> using TNO IfcEngine.</ex:authorization>
+		<ex:documentation>Transform2</ex:documentation>
+	</ex:iso_10303_28_header>
+	<uos id="uos_1" description="" edo="" configuration="default" xmlns="http://www.iai-tech.org/ifcXML/IFC2x3/FINAL" xsi:schemaLocation="http://www.iai-tech.org/ifcXML/IFC2x3/FINAL http://www.iai-tech.org/ifcXML/IFC2x3/FINAL/IFC2X3.xsd">
+		<IfcClassification id="i12">
+			<Source>UK RICS NRM 2011</Source>
+			<Edition>2011</Edition>
+			<EditionDate>
+				<IfcCalendarDate xsi:nil="true" ref="i100000"/>
+			</EditionDate>
+			<Name>UK RICS NRM 2011</Name>
+		</IfcClassification>
+		<IfcClassification id="i13">
+			<Source>UK NBS 2011</Source>
+			<Edition>2011</Edition>
+			<EditionDate>
+				<IfcCalendarDate xsi:nil="true" ref="i100001"/>
+			</EditionDate>
+			<Name>UK NBS 2011</Name>
+		</IfcClassification>
+		<IfcClassification id="i14">
+			<Source>UK Uniclass GH 1999</Source>
+			<Edition>1999</Edition>
+			<EditionDate>
+				<IfcCalendarDate xsi:nil="true" ref="i100002"/>
+			</EditionDate>
+			<Name>UK Uniclass GH 1999</Name>
+		</IfcClassification>
+		<IfcClassification id="i15">
+			<Source>UK Uniclass JK 1999</Source>
+			<Edition>1999</Edition>
+			<EditionDate>
+				<IfcCalendarDate xsi:nil="true" ref="i100003"/>
+			</EditionDate>
+			<Name>UK Uniclass JK 1999</Name>
+		</IfcClassification>
+		<IfcClassification id="i16">
+			<Source>UK Uniclass L 1999</Source>
+			<Edition>1999</Edition>
+			<EditionDate>
+				<IfcCalendarDate xsi:nil="true" ref="i100004"/>
+			</EditionDate>
+			<Name>UK Uniclass L 1999</Name>
+		</IfcClassification>
+		<IfcCalendarDate id="i100000">
+			<DayComponent>15</DayComponent>
+			<MonthComponent>11</MonthComponent>
+			<YearComponent>2011</YearComponent>
+		</IfcCalendarDate>
+		<IfcCalendarDate id="i100001">
+			<DayComponent>15</DayComponent>
+			<MonthComponent>11</MonthComponent>
+			<YearComponent>2011</YearComponent>
+		</IfcCalendarDate>
+		<IfcCalendarDate id="i100002">
+			<DayComponent>15</DayComponent>
+			<MonthComponent>11</MonthComponent>
+			<YearComponent>1999</YearComponent>
+		</IfcCalendarDate>
+		<IfcCalendarDate id="i100003">
+			<DayComponent>15</DayComponent>
+			<MonthComponent>11</MonthComponent>
+			<YearComponent>1999</YearComponent>
+		</IfcCalendarDate>
+		<IfcCalendarDate id="i100004">
+			<DayComponent>15</DayComponent>
+			<MonthComponent>11</MonthComponent>
+			<YearComponent>1999</YearComponent>
+		</IfcCalendarDate>
+		<IfcLightFixtureType id="i100005">
+			<GlobalId>1COBietyp9999999D0EOX5</GlobalId>
+			<OwnerHistory>
+				<IfcOwnerHistory xsi:nil="true" ref="i100006"/>
+			</OwnerHistory>
+			<Name>LightFixture_NOTDEFINED_NBL_GeneralPurposeLuminaires_UK</Name>
+			<Description>NOTDEFINED: Undefined or generic type Template</Description>
+			<ApplicableOccurrence/>
+			<HasPropertySets ex:cType="set">
+				<IfcPropertySet pos="0" xsi:nil="true" ref="i100007"/>
+				<IfcPropertySet pos="1" xsi:nil="true" ref="i100032"/>
+				<IfcPropertySet pos="2" xsi:nil="true" ref="i100041"/>
+				<IfcPropertySet pos="3" xsi:nil="true" ref="i100053"/>
+				<IfcPropertySet pos="4" xsi:nil="true" ref="i100057"/>
+				<IfcPropertySet pos="5" xsi:nil="true" ref="i100076"/>
+				<IfcPropertySet pos="6" xsi:nil="true" ref="i100082"/>
+				<IfcElementQuantity pos="7" xsi:nil="true" ref="i100086"/>
+				<IfcPropertySet pos="8" xsi:nil="true" ref="i100088"/>
+			</HasPropertySets>
+			<RepresentationMaps ex:cType="list-unique">
+				<IfcRepresentationMap pos="0" xsi:nil="true" ref="i100092"/>
+			</RepresentationMaps>
+			<Tag>UK Product Template Template</Tag>
+			<ElementType>NOTDEFINED: Undefined or generic type</ElementType>
+			<PredefinedType>notdefined</PredefinedType>
+		</IfcLightFixtureType>
+		<IfcOwnerHistory id="i100006">
+			<OwningUser>
+				<IfcPersonAndOrganization xsi:nil="true" ref="i100145"/>
+			</OwningUser>
+			<OwningApplication>
+				<IfcApplication xsi:nil="true" ref="i100148"/>
+			</OwningApplication>
+			<ChangeAction>nochange</ChangeAction>
+			<CreationDate>1346840101</CreationDate>
+		</IfcOwnerHistory>
+		<IfcPropertySet id="i100007">
+			<GlobalId>1COBieps1ps41999D0EOX5</GlobalId>
+			<OwnerHistory>
+				<IfcOwnerHistory xsi:nil="true" ref="i100006"/>
+			</OwnerHistory>
+			<Name>NBL_GeneralPurposeLuminaires_UK</Name>
+			<Description>National BIM Library Specifying Properties for General purpose luminaires</Description>
+			<HasProperties ex:cType="set">
+				<IfcPropertySingleValue pos="0" xsi:nil="true" ref="i100008"/>
+				<IfcPropertySingleValue pos="1" xsi:nil="true" ref="i100009"/>
+				<IfcPropertySingleValue pos="2" xsi:nil="true" ref="i100010"/>
+				<IfcPropertySingleValue pos="3" xsi:nil="true" ref="i100011"/>
+				<IfcPropertySingleValue pos="4" xsi:nil="true" ref="i100012"/>
+				<IfcPropertySingleValue pos="5" xsi:nil="true" ref="i100013"/>
+				<IfcPropertySingleValue pos="6" xsi:nil="true" ref="i100014"/>
+				<IfcPropertySingleValue pos="7" xsi:nil="true" ref="i100015"/>
+				<IfcPropertySingleValue pos="8" xsi:nil="true" ref="i100016"/>
+				<IfcPropertySingleValue pos="9" xsi:nil="true" ref="i100017"/>
+				<IfcPropertySingleValue pos="10" xsi:nil="true" ref="i100018"/>
+				<IfcPropertySingleValue pos="11" xsi:nil="true" ref="i100019"/>
+				<IfcPropertySingleValue pos="12" xsi:nil="true" ref="i100020"/>
+				<IfcPropertySingleValue pos="13" xsi:nil="true" ref="i100021"/>
+				<IfcPropertySingleValue pos="14" xsi:nil="true" ref="i100022"/>
+				<IfcPropertySingleValue pos="15" xsi:nil="true" ref="i100023"/>
+				<IfcPropertySingleValue pos="16" xsi:nil="true" ref="i100024"/>
+				<IfcPropertySingleValue pos="17" xsi:nil="true" ref="i100025"/>
+				<IfcPropertySingleValue pos="18" xsi:nil="true" ref="i100026"/>
+				<IfcPropertySingleValue pos="19" xsi:nil="true" ref="i100027"/>
+				<IfcPropertySingleValue pos="20" xsi:nil="true" ref="i100028"/>
+				<IfcPropertySingleValue pos="21" xsi:nil="true" ref="i100029"/>
+				<IfcPropertySingleValue pos="22" xsi:nil="true" ref="i100030"/>
+				<IfcPropertySingleValue pos="23" xsi:nil="true" ref="i100031"/>
+				<IfcPropertyTableValue pos="24">
+					<Name>RadialLuminance</Name>
+					<Description>Table of luminance values radially from fixture</Description>
+					<DefiningValues>
+						<IfcPlaneAngleMeasure>-1.5708</IfcPlaneAngleMeasure>
+						<IfcPlaneAngleMeasure>-0.7854</IfcPlaneAngleMeasure>
+						<IfcPlaneAngleMeasure>0</IfcPlaneAngleMeasure>
+						<IfcPlaneAngleMeasure>0.7854</IfcPlaneAngleMeasure>
+						<IfcPlaneAngleMeasure>1.5708</IfcPlaneAngleMeasure>
+					</DefiningValues>
+					<DefinedValues>
+						<IfcLuminousIntensityMeasure>0</IfcLuminousIntensityMeasure>
+						<IfcLuminousIntensityMeasure>120</IfcLuminousIntensityMeasure>
+						<IfcLuminousIntensityMeasure>150</IfcLuminousIntensityMeasure>
+						<IfcLuminousIntensityMeasure>120</IfcLuminousIntensityMeasure>
+						<IfcLuminousIntensityMeasure>0</IfcLuminousIntensityMeasure>
+					</DefinedValues>
+					<Expression>LIM=150*cos(PAM)</Expression>
+					<DefiningUnit>
+						<IfcSIUnit ref="i100116" xsi:nil="true"/>
+					</DefiningUnit>
+					<DefinedUnit>
+						<IfcSIUnit>
+							<UnitType>illuminanceunit</UnitType>
+							<Name>lumen</Name>
+						</IfcSIUnit>
+					</DefinedUnit>
+				</IfcPropertyTableValue>
+			</HasProperties>
+		</IfcPropertySet>
+		<IfcPropertySingleValue id="i100008">
+			<Name>Standard</Name>
+			<Description>Value of Standard</Description>
+			<NominalValue>
+				<IfcText>n/a</IfcText>
+			</NominalValue>
+		</IfcPropertySingleValue>
+		<IfcPropertySingleValue id="i100009">
+			<Name>FluorescentLampBallastsSwitchedStart</Name>
+			<Description>Value of Fluorescent lamp ballasts Switched start</Description>
+			<NominalValue>
+				<IfcText>n/a</IfcText>
+			</NominalValue>
+		</IfcPropertySingleValue>
+		<IfcPropertySingleValue id="i100010">
+			<Name>FluorescentLampBallastsHighFrequency(ACSupplied)</Name>
+			<Description>Value of Fluorescent lamp ballasts High frequency (A.C supplied)</Description>
+			<NominalValue>
+				<IfcText>n/a</IfcText>
+			</NominalValue>
+		</IfcPropertySingleValue>
+		<IfcPropertySingleValue id="i100011">
+			<Name>FluorescentLampBallastsHighFrequency(DCSupplied)</Name>
+			<Description>Value of Fluorescent lamp ballasts High frequency (D.C supplied)</Description>
+			<NominalValue>
+				<IfcText>n/a</IfcText>
+			</NominalValue>
+		</IfcPropertySingleValue>
+		<IfcPropertySingleValue id="i100012">
+			<Name>BallastsDischargeLampBallasts</Name>
+			<Description>Value of Ballasts Discharge lamp ballasts</Description>
+			<NominalValue>
+				<IfcText>n/a</IfcText>
+			</NominalValue>
+		</IfcPropertySingleValue>
+		<IfcPropertySingleValue id="i100013">
+			<Name>BallastsEmergencyLightingBallasts</Name>
+			<Description>Value of Ballasts Emergency lighting ballasts</Description>
+			<NominalValue>
+				<IfcText>n/a</IfcText>
+			</NominalValue>
+		</IfcPropertySingleValue>
+		<IfcPropertySingleValue id="i100014">
+			<Name>LampStartersGenerally</Name>
+			<Description>Value of Lamp starters generally</Description>
+			<NominalValue>
+				<IfcText>n/a</IfcText>
+			</NominalValue>
+		</IfcPropertySingleValue>
+		<IfcPropertySingleValue id="i100015">
+			<Name>Manufacturer</Name>
+			<Description>Value of Manufacturer</Description>
+			<NominalValue>
+				<IfcText>n/a</IfcText>
+			</NominalValue>
+		</IfcPropertySingleValue>
+		<IfcPropertySingleValue id="i100016">
+			<Name>Standards</Name>
+			<Description>Value of Standards</Description>
+			<NominalValue>
+				<IfcText>n/a</IfcText>
+			</NominalValue>
+		</IfcPropertySingleValue>
+		<IfcPropertySingleValue id="i100017">
+			<Name>PhotometricPerformance</Name>
+			<Description>Value of Photometric performance</Description>
+			<NominalValue>
+				<IfcText>n/a</IfcText>
+			</NominalValue>
+		</IfcPropertySingleValue>
+		<IfcPropertySingleValue id="i100018">
+			<Name>SupplyCircuitConductorConnections</Name>
+			<Description>Value of Supply circuit conductor connections</Description>
+			<NominalValue>
+				<IfcText>n/a</IfcText>
+			</NominalValue>
+		</IfcPropertySingleValue>
+		<IfcPropertySingleValue id="i100019">
+			<Name>InternalFuse</Name>
+			<Description>Value of Internal fuse</Description>
+			<NominalValue>
+				<IfcText>n/a</IfcText>
+			</NominalValue>
+		</IfcPropertySingleValue>
+		<IfcPropertySingleValue id="i100020">
+			<Name>InputVoltage</Name>
+			<Description>Value of Input voltage</Description>
+			<NominalValue>
+				<IfcText>n/a</IfcText>
+			</NominalValue>
+		</IfcPropertySingleValue>
+		<IfcPropertySingleValue id="i100021">
+			<Name>LuminairePowerFactor</Name>
+			<Description>Value of Luminaire power factor</Description>
+			<NominalValue>
+				<IfcText>n/a</IfcText>
+			</NominalValue>
+		</IfcPropertySingleValue>
+		<IfcPropertySingleValue id="i100022">
+			<Name>LuminaireType</Name>
+			<Description>Value of Luminaire type</Description>
+			<NominalValue>
+				<IfcText>n/a</IfcText>
+			</NominalValue>
+		</IfcPropertySingleValue>
+		<IfcPropertySingleValue id="i100023">
+			<Name>Features</Name>
+			<Description>Value of Features</Description>
+			<NominalValue>
+				<IfcText>n/a</IfcText>
+			</NominalValue>
+		</IfcPropertySingleValue>
+		<IfcPropertySingleValue id="i100024">
+			<Name>IngressProtection(minimum)</Name>
+			<Description>Value of Ingress protection (minimum)</Description>
+			<NominalValue>
+				<IfcText>n/a</IfcText>
+			</NominalValue>
+		</IfcPropertySingleValue>
+		<IfcPropertySingleValue id="i100025">
+			<Name>BallastsCELMAEnergyEfficiencyIndex(minimum)</Name>
+			<Description>Value of Ballasts CELMA energy efficiency index (minimum)</Description>
+			<NominalValue>
+				<IfcText>n/a</IfcText>
+			</NominalValue>
+		</IfcPropertySingleValue>
+		<IfcPropertySingleValue id="i100026">
+			<Name>ControlGearPosition</Name>
+			<Description>Value of Control gear position</Description>
+			<NominalValue>
+				<IfcText>n/a</IfcText>
+			</NominalValue>
+		</IfcPropertySingleValue>
+		<IfcPropertySingleValue id="i100027">
+			<Name>LampsNumber</Name>
+			<Description>Value of Lamps Number</Description>
+			<NominalValue>
+				<IfcText>n/a</IfcText>
+			</NominalValue>
+		</IfcPropertySingleValue>
+		<IfcPropertySingleValue id="i100028">
+			<Name>LampsType</Name>
+			<Description>Value of Lamps Type</Description>
+			<NominalValue>
+				<IfcText>n/a</IfcText>
+			</NominalValue>
+		</IfcPropertySingleValue>
+		<IfcPropertySingleValue id="i100029">
+			<Name>LampsColourTemperature</Name>
+			<Description>Value of Lamps Colour temperature</Description>
+			<NominalValue>
+				<IfcText>n/a</IfcText>
+			</NominalValue>
+		</IfcPropertySingleValue>
+		<IfcPropertySingleValue id="i100030">
+			<Name>LampsColourRenderingIndex</Name>
+			<Description>Value of Lamps Colour rendering index</Description>
+			<NominalValue>
+				<IfcText>n/a</IfcText>
+			</NominalValue>
+		</IfcPropertySingleValue>
+		<IfcPropertySingleValue id="i100031">
+			<Name>LampsRating</Name>
+			<Description>Value of Lamps Rating</Description>
+			<NominalValue>
+				<IfcText>n/a</IfcText>
+			</NominalValue>
+		</IfcPropertySingleValue>
+		<IfcPropertySet id="i100032">
+			<GlobalId>1COBieps1ps01999D0EOX5</GlobalId>
+			<OwnerHistory>
+				<IfcOwnerHistory xsi:nil="true" ref="i100006"/>
+			</OwnerHistory>
+			<Name>Pset_LightFixtureTypeCommon</Name>
+			<Description>Definition from IAI: Common data for light fixtures.
+History: IFC 2x4 - Article number deleted. Use Pset_ManufacturerTypeInformation. ArticleNumber instead.</Description>
+			<HasProperties ex:cType="set">
+				<IfcPropertySingleValue pos="0" xsi:nil="true" ref="i100033"/>
+				<IfcPropertySingleValue pos="1" xsi:nil="true" ref="i100034"/>
+				<IfcPropertyEnumeratedValue pos="2" xsi:nil="true" ref="i100035"/>
+				<IfcPropertyEnumeratedValue pos="3" xsi:nil="true" ref="i100037"/>
+				<IfcPropertySingleValue pos="4" xsi:nil="true" ref="i100039"/>
+				<IfcPropertySingleValue pos="5" xsi:nil="true" ref="i100040"/>
+			</HasProperties>
+		</IfcPropertySet>
+		<IfcPropertySingleValue id="i100033">
+			<Name>NumberOfSources</Name>
+			<Description>Number of sources .</Description>
+			<NominalValue>
+				<IfcInteger>0</IfcInteger>
+			</NominalValue>
+		</IfcPropertySingleValue>
+		<IfcPropertySingleValue id="i100034">
+			<Name>TotalWattage</Name>
+			<Description>Wattage on whole lightfitting device with all sources intact.</Description>
+			<NominalValue>
+				<IfcPowerMeasure>0.</IfcPowerMeasure>
+			</NominalValue>
+		</IfcPropertySingleValue>
+		<IfcPropertyEnumeratedValue id="i100035">
+			<Name>LightFixtureMountingType</Name>
+			<Description>A list of the available types of mounting for light fixtures from which that required may be selected.</Description>
+			<EnumerationValues ex:cType="list">
+				<IfcLabel pos="0">unset</IfcLabel>
+			</EnumerationValues>
+			<EnumerationReference>
+				<IfcPropertyEnumeration xsi:nil="true" ref="i100036"/>
+			</EnumerationReference>
+		</IfcPropertyEnumeratedValue>
+		<IfcPropertyEnumeration id="i100036">
+			<Name>PEnum_LightFixtureMountingType</Name>
+			<EnumerationValues ex:cType="list-unique">
+				<IfcLabel pos="0">cablespanned</IfcLabel>
+				<IfcLabel pos="1">freestanding</IfcLabel>
+				<IfcLabel pos="2">pole_side</IfcLabel>
+				<IfcLabel pos="3">pole_top</IfcLabel>
+				<IfcLabel pos="4">recessed</IfcLabel>
+				<IfcLabel pos="5">surface</IfcLabel>
+				<IfcLabel pos="6">suspended</IfcLabel>
+				<IfcLabel pos="7">trackmounted</IfcLabel>
+				<IfcLabel pos="8">other</IfcLabel>
+				<IfcLabel pos="9">notknown</IfcLabel>
+				<IfcLabel pos="10">unset</IfcLabel>
+			</EnumerationValues>
+		</IfcPropertyEnumeration>
+		<IfcPropertyEnumeratedValue id="i100037">
+			<Name>LightFixturePlacingType</Name>
+			<Description>A list of the available types of placing specification for light fixtures from which that required may be selected.</Description>
+			<EnumerationValues ex:cType="list">
+				<IfcLabel pos="0">unset</IfcLabel>
+			</EnumerationValues>
+			<EnumerationReference>
+				<IfcPropertyEnumeration xsi:nil="true" ref="i100038"/>
+			</EnumerationReference>
+		</IfcPropertyEnumeratedValue>
+		<IfcPropertyEnumeration id="i100038">
+			<Name>PEnum_LightFixturePlacingType</Name>
+			<EnumerationValues ex:cType="list-unique">
+				<IfcLabel pos="0">ceiling</IfcLabel>
+				<IfcLabel pos="1">floor</IfcLabel>
+				<IfcLabel pos="2">furniture</IfcLabel>
+				<IfcLabel pos="3">pole</IfcLabel>
+				<IfcLabel pos="4">wall</IfcLabel>
+				<IfcLabel pos="5">other</IfcLabel>
+				<IfcLabel pos="6">notknown</IfcLabel>
+				<IfcLabel pos="7">unset</IfcLabel>
+			</EnumerationValues>
+		</IfcPropertyEnumeration>
+		<IfcPropertySingleValue id="i100039">
+			<Name>MaintenanceFactor</Name>
+			<Description>The arithmetical allowance made for depreciation of lamps and reflective equipment from their initial values due to dirt, fumes, or age.</Description>
+			<NominalValue>
+				<IfcReal>0.</IfcReal>
+			</NominalValue>
+		</IfcPropertySingleValue>
+		<IfcPropertySingleValue id="i100040">
+			<Name>ManufacturersSpecificInformation</Name>
+			<Description>Manufacturer specific information.</Description>
+			<NominalValue>
+				<IfcText>n/a</IfcText>
+			</NominalValue>
+		</IfcPropertySingleValue>
+		<IfcPropertySet id="i100041">
+			<GlobalId>1COBieps1ps31999D0EOX5</GlobalId>
+			<OwnerHistory>
+				<IfcOwnerHistory xsi:nil="true" ref="i100006"/>
+			</OwnerHistory>
+			<Name>Pset_ElectricalDeviceCommon</Name>
+			<Description>Definition from IAI: A collection of properties that are commonly used by electrical device types. Note that IfcCableType is excluded from the list of applicable classes.</Description>
+			<HasProperties ex:cType="set">
+				<IfcPropertyBoundedValue pos="0" xsi:nil="true" ref="i100042"/>
+				<IfcPropertyBoundedValue pos="1" xsi:nil="true" ref="i100043"/>
+				<IfcPropertyBoundedValue pos="2" xsi:nil="true" ref="i100044"/>
+				<IfcPropertyBoundedValue pos="3" xsi:nil="true" ref="i100045"/>
+				<IfcPropertySingleValue pos="4" xsi:nil="true" ref="i100046"/>
+				<IfcPropertySingleValue pos="5" xsi:nil="true" ref="i100047"/>
+				<IfcPropertySingleValue pos="6" xsi:nil="true" ref="i100048"/>
+				<IfcPropertySingleValue pos="7" xsi:nil="true" ref="i100049"/>
+				<IfcPropertySingleValue pos="8" xsi:nil="true" ref="i100050"/>
+				<IfcPropertyEnumeratedValue pos="9" xsi:nil="true" ref="i100051"/>
+			</HasProperties>
+		</IfcPropertySet>
+		<IfcPropertyBoundedValue id="i100042">
+			<Name>Current</Name>
+			<Description>The current that a device is designed to handle.</Description>
+			<UpperBoundValue>
+				<IfcElectricCurrentMeasure>0.</IfcElectricCurrentMeasure>
+			</UpperBoundValue>
+			<LowerBoundValue>
+				<IfcElectricCurrentMeasure>0.</IfcElectricCurrentMeasure>
+			</LowerBoundValue>
+		</IfcPropertyBoundedValue>
+		<IfcPropertyBoundedValue id="i100043">
+			<Name>Voltage</Name>
+			<Description>The voltage that a device is designed to handle.</Description>
+			<UpperBoundValue>
+				<IfcElectricVoltageMeasure>0.</IfcElectricVoltageMeasure>
+			</UpperBoundValue>
+			<LowerBoundValue>
+				<IfcElectricVoltageMeasure>0.</IfcElectricVoltageMeasure>
+			</LowerBoundValue>
+		</IfcPropertyBoundedValue>
+		<IfcPropertyBoundedValue id="i100044">
+			<Name>Power</Name>
+			<Description>The power that a device is designed to handle.</Description>
+			<UpperBoundValue>
+				<IfcPowerMeasure>0.</IfcPowerMeasure>
+			</UpperBoundValue>
+			<LowerBoundValue>
+				<IfcPowerMeasure>0.</IfcPowerMeasure>
+			</LowerBoundValue>
+		</IfcPropertyBoundedValue>
+		<IfcPropertyBoundedValue id="i100045">
+			<Name>Frequency</Name>
+			<Description>The frequency that a device is designed to handle.</Description>
+			<UpperBoundValue>
+				<IfcFrequencyMeasure>0.</IfcFrequencyMeasure>
+			</UpperBoundValue>
+			<LowerBoundValue>
+				<IfcFrequencyMeasure>0.</IfcFrequencyMeasure>
+			</LowerBoundValue>
+		</IfcPropertyBoundedValue>
+		<IfcPropertySingleValue id="i100046">
+			<Name>PhaseAngle</Name>
+			<Description>The angular difference between two waveforms of the same frequency.</Description>
+			<NominalValue>
+				<IfcPositivePlaneAngleMeasure>0.</IfcPositivePlaneAngleMeasure>
+			</NominalValue>
+		</IfcPropertySingleValue>
+		<IfcPropertySingleValue id="i100047">
+			<Name>PhaseReference</Name>
+			<Description>The phase identification used for the device electrical input. This should be the same phase identifier that is used for the conductor segment providing the electrical service to the device. In general, it is recommended that IEC recommendations for phase identification are used (L1, L2 etc.). However, other phase identifiers may be used such as by color (Red, Blue, Yellow) or by number (1, 2, 3) etc.</Description>
+			<NominalValue>
+				<IfcLabel>n/a</IfcLabel>
+			</NominalValue>
+		</IfcPropertySingleValue>
+		<IfcPropertySingleValue id="i100048">
+			<Name>NumberOfPoles</Name>
+			<Description>The number of live lines that is intemnded to be handled by the device.</Description>
+			<NominalValue>
+				<IfcInteger>0</IfcInteger>
+			</NominalValue>
+		</IfcPropertySingleValue>
+		<IfcPropertySingleValue id="i100049">
+			<Name>HasProtectiveEarth</Name>
+			<Description>Indicates whether the electrical device has a protective earth connection (=TRUE) or not (= FALSE).</Description>
+			<NominalValue>
+				<IfcBoolean>false</IfcBoolean>
+			</NominalValue>
+		</IfcPropertySingleValue>
+		<IfcPropertySingleValue id="i100050">
+			<Name>IP_Code</Name>
+			<Description>IEC 60529 (1989) Classification of degrees of protection provided by enclosures (IP Code).</Description>
+			<NominalValue>
+				<IfcLabel>n/a</IfcLabel>
+			</NominalValue>
+		</IfcPropertySingleValue>
+		<IfcPropertyEnumeratedValue id="i100051">
+			<Name>InsulationStandardClass</Name>
+			<Description>Insulation standard classes provides basic protection information against electric shock. Defines levels of insulation required in terms of constructional requirements (creepage and clearance distances) and electrical requirements (compliance with electric strength tests). Basic insulation is considered to be shorted under single fault conditions. The actual values required depend on the working voltage to which the insulation is subjected, as well as other factors. Also indicates whether the electrical device has a protective earth connection.</Description>
+			<EnumerationValues ex:cType="list">
+				<IfcLabel pos="0">unset</IfcLabel>
+			</EnumerationValues>
+			<EnumerationReference>
+				<IfcPropertyEnumeration xsi:nil="true" ref="i100052"/>
+			</EnumerationReference>
+		</IfcPropertyEnumeratedValue>
+		<IfcPropertyEnumeration id="i100052">
+			<Name>PEnum_InsulationStandardClass</Name>
+			<EnumerationValues ex:cType="list-unique">
+				<IfcLabel pos="0">class0appliance</IfcLabel>
+				<IfcLabel pos="1">class0iappliance</IfcLabel>
+				<IfcLabel pos="2">classiappliance</IfcLabel>
+				<IfcLabel pos="3">classiiappliance</IfcLabel>
+				<IfcLabel pos="4">classiiiappliance</IfcLabel>
+				<IfcLabel pos="5">notknown</IfcLabel>
+				<IfcLabel pos="6">unset</IfcLabel>
+			</EnumerationValues>
+		</IfcPropertyEnumeration>
+		<IfcPropertySet id="i100053">
+			<GlobalId>1COBiemti9999999D0EOX5</GlobalId>
+			<OwnerHistory>
+				<IfcOwnerHistory xsi:nil="true" ref="i100006"/>
+			</OwnerHistory>
+			<Name>Pset_ManufacturerTypeInformation</Name>
+			<Description>Properties for ManufacturerTypeInformation</Description>
+			<HasProperties ex:cType="set">
+				<IfcPropertySingleValue pos="0" xsi:nil="true" ref="i100054"/>
+				<IfcPropertySingleValue pos="1" xsi:nil="true" ref="i100055"/>
+				<IfcPropertySingleValue pos="2" xsi:nil="true" ref="i100056"/>
+			</HasProperties>
+		</IfcPropertySet>
+		<IfcPropertySingleValue id="i100054">
+			<Name>ModelReference</Name>
+			<Description>The name used by the manufacturer</Description>
+			<NominalValue>
+				<IfcText>NotDefined</IfcText>
+			</NominalValue>
+		</IfcPropertySingleValue>
+		<IfcPropertySingleValue id="i100055">
+			<Name>ModelLabel</Name>
+			<Description>The model number assigned by manufacturer.</Description>
+			<NominalValue>
+				<IfcText>NotDefined</IfcText>
+			</NominalValue>
+		</IfcPropertySingleValue>
+		<IfcPropertySingleValue id="i100056">
+			<Name>Manufacturer</Name>
+			<Description>The organization that manufactured or assembled the item.</Description>
+			<NominalValue>
+				<IfcText>NotDefined</IfcText>
+			</NominalValue>
+		</IfcPropertySingleValue>
+		<IfcPropertySet id="i100057">
+			<GlobalId>1COBiespc9999999D0EOX5</GlobalId>
+			<OwnerHistory>
+				<IfcOwnerHistory xsi:nil="true" ref="i100006"/>
+			</OwnerHistory>
+			<Name>COBie_Specification</Name>
+			<Description>Properties for COBie Type Specification</Description>
+			<HasProperties ex:cType="set">
+				<IfcPropertySingleValue pos="0" xsi:nil="true" ref="i100058"/>
+				<IfcPropertySingleValue pos="1" xsi:nil="true" ref="i100059"/>
+				<IfcPropertySingleValue pos="2" xsi:nil="true" ref="i100060"/>
+				<IfcPropertySingleValue pos="3" xsi:nil="true" ref="i100061"/>
+				<IfcPropertySingleValue pos="4" xsi:nil="true" ref="i100062"/>
+				<IfcPropertySingleValue pos="5" xsi:nil="true" ref="i100063"/>
+				<IfcPropertySingleValue pos="6" xsi:nil="true" ref="i100064"/>
+				<IfcPropertySingleValue pos="7" xsi:nil="true" ref="i100065"/>
+				<IfcPropertySingleValue pos="8" xsi:nil="true" ref="i100066"/>
+				<IfcPropertySingleValue pos="9" xsi:nil="true" ref="i100067"/>
+				<IfcPropertySingleValue pos="10" xsi:nil="true" ref="i100069"/>
+				<IfcPropertySingleValue pos="11" xsi:nil="true" ref="i100070"/>
+				<IfcPropertySingleValue pos="12" xsi:nil="true" ref="i100071"/>
+				<IfcPropertySingleValue pos="13" xsi:nil="true" ref="i100072"/>
+				<IfcPropertySingleValue pos="14" xsi:nil="true" ref="i100073"/>
+				<IfcPropertySingleValue pos="15" xsi:nil="true" ref="i100074"/>
+				<IfcPropertySingleValue pos="16" xsi:nil="true" ref="i100075"/>
+			</HasProperties>
+		</IfcPropertySet>
+		<IfcPropertySingleValue id="i100058">
+			<Name>AccessibilityPerformance</Name>
+			<Description>Accessibility issue(s) which the product satisfies.</Description>
+			<NominalValue>
+				<IfcText>NotDefined</IfcText>
+			</NominalValue>
+		</IfcPropertySingleValue>
+		<IfcPropertySingleValue id="i100059">
+			<Name>CodePerformance</Name>
+			<Description>Code Compliance requirement(s) which the product satisfies</Description>
+			<NominalValue>
+				<IfcText>NotDefined</IfcText>
+			</NominalValue>
+		</IfcPropertySingleValue>
+		<IfcPropertySingleValue id="i100060">
+			<Name>Color</Name>
+			<Description>Characteristic or primary color of product.</Description>
+			<NominalValue>
+				<IfcText>NotDefined</IfcText>
+			</NominalValue>
+		</IfcPropertySingleValue>
+		<IfcPropertySingleValue id="i100061">
+			<Name>Constituents</Name>
+			<Description>Optional constituent features, parts or finishes.</Description>
+			<NominalValue>
+				<IfcText>NotDefined</IfcText>
+			</NominalValue>
+		</IfcPropertySingleValue>
+		<IfcPropertySingleValue id="i100062">
+			<Name>Documentation</Name>
+			<Description>Location (Uniform Resource Information) for  further product information</Description>
+			<NominalValue>
+				<IfcText>http://www.buildingSMART.org.uk/LightFixture_NOTDEFINED_NBL_GeneralPurposeLuminaires_UK.pdf</IfcText>
+			</NominalValue>
+		</IfcPropertySingleValue>
+		<IfcPropertySingleValue id="i100063">
+			<Name>DocumentReference</Name>
+			<Description>Location (Uniform Resource Information) for the source or updates to this product information</Description>
+			<NominalValue>
+				<IfcText>http://www.buildingSMART.org.uk/LightFixture_NOTDEFINED_NBL_GeneralPurposeLuminaires_UK.ifcxml</IfcText>
+			</NominalValue>
+		</IfcPropertySingleValue>
+		<IfcPropertySingleValue id="i100064">
+			<Name>Features</Name>
+			<Description>Features or other important characteristics relevant to product specification.</Description>
+			<NominalValue>
+				<IfcText>NotDefined</IfcText>
+			</NominalValue>
+		</IfcPropertySingleValue>
+		<IfcPropertySingleValue id="i100065">
+			<Name>Finish</Name>
+			<Description>Characteristic or primary finish of product.</Description>
+			<NominalValue>
+				<IfcText>NotDefined</IfcText>
+			</NominalValue>
+		</IfcPropertySingleValue>
+		<IfcPropertySingleValue id="i100066">
+			<Name>Grade</Name>
+			<Description>Standard grading(s) to which the product corresponds</Description>
+			<NominalValue>
+				<IfcText>NotDefined</IfcText>
+			</NominalValue>
+		</IfcPropertySingleValue>
+		<IfcPropertySingleValue id="i100067">
+			<Name>NominalHeight</Name>
+			<Description>Nominal height of product, typically the vertical or secondary characteristic dimension.</Description>
+			<NominalValue>
+				<IfcLengthMeasure>100.</IfcLengthMeasure>
+			</NominalValue>
+			<Unit>
+				<IfcSIUnit xsi:nil="true" ref="i100068"/>
+			</Unit>
+		</IfcPropertySingleValue>
+		<IfcSIUnit id="i100068">
+			<UnitType>lengthunit</UnitType>
+			<Prefix>milli</Prefix>
+			<Name>metre</Name>
+		</IfcSIUnit>
+		<IfcPropertySingleValue id="i100069">
+			<Name>NominalLength</Name>
+			<Description>Nominal length of product, typically the larger or primary horizontal dimension.</Description>
+			<NominalValue>
+				<IfcLengthMeasure>300.</IfcLengthMeasure>
+			</NominalValue>
+			<Unit>
+				<IfcSIUnit xsi:nil="true" ref="i100068"/>
+			</Unit>
+		</IfcPropertySingleValue>
+		<IfcPropertySingleValue id="i100070">
+			<Name>Material</Name>
+			<Description>Characteristic or primary material of product.</Description>
+			<NominalValue>
+				<IfcText>NotDefined</IfcText>
+			</NominalValue>
+		</IfcPropertySingleValue>
+		<IfcPropertySingleValue id="i100071">
+			<Name>ReferenceStandard</Name>
+			<Description>Reference standard(s) to which the product is compliant.</Description>
+			<NominalValue>
+				<IfcText>NotDefined</IfcText>
+			</NominalValue>
+		</IfcPropertySingleValue>
+		<IfcPropertySingleValue id="i100072">
+			<Name>Shape</Name>
+			<Description>Characteristic shape of product.</Description>
+			<NominalValue>
+				<IfcText>NotDefined</IfcText>
+			</NominalValue>
+		</IfcPropertySingleValue>
+		<IfcPropertySingleValue id="i100073">
+			<Name>Size</Name>
+			<Description>Characteristic size of product.</Description>
+			<NominalValue>
+				<IfcText>NotDefined</IfcText>
+			</NominalValue>
+		</IfcPropertySingleValue>
+		<IfcPropertySingleValue id="i100074">
+			<Name>NominalWidth</Name>
+			<Description>Nominal width of product, typically the characteristic or secondary horizontal or characteristic dimension.</Description>
+			<NominalValue>
+				<IfcLengthMeasure>200.</IfcLengthMeasure>
+			</NominalValue>
+			<Unit>
+				<IfcSIUnit xsi:nil="true" ref="i100068"/>
+			</Unit>
+		</IfcPropertySingleValue>
+		<IfcPropertySingleValue id="i100075">
+			<Name>SustainabilityPerformance</Name>
+			<Description>Sustainability issue(s) which the product satisfies</Description>
+			<NominalValue>
+				<IfcText>NotDefined</IfcText>
+			</NominalValue>
+		</IfcPropertySingleValue>
+		<IfcPropertySet id="i100076">
+			<GlobalId>1COBieeiv9999999D0EOX5</GlobalId>
+			<OwnerHistory>
+				<IfcOwnerHistory xsi:nil="true" ref="i100006"/>
+			</OwnerHistory>
+			<Name>Pset_EconomicImpactValues</Name>
+			<Description>Properties for Economic Impact Values for production</Description>
+			<HasProperties ex:cType="set">
+				<IfcPropertySingleValue pos="0" xsi:nil="true" ref="i100077"/>
+				<IfcPropertySingleValue pos="1" xsi:nil="true" ref="i100078"/>
+				<IfcPropertyEnumeratedValue pos="2" xsi:nil="true" ref="i100079"/>
+				<IfcPropertySingleValue pos="3" xsi:nil="true" ref="i100081"/>
+			</HasProperties>
+		</IfcPropertySet>
+		<IfcPropertySingleValue id="i100077">
+			<Name>MethodOfMeasurement</Name>
+			<Description>Method of measurement</Description>
+			<NominalValue>
+				<IfcText>UK Product Template</IfcText>
+			</NominalValue>
+		</IfcPropertySingleValue>
+		<IfcPropertySingleValue id="i100078">
+			<Name>Process</Name>
+			<Description>Specification of process</Description>
+			<NominalValue>
+				<IfcText>Replacement at service life intervals</IfcText>
+			</NominalValue>
+		</IfcPropertySingleValue>
+		<IfcPropertyEnumeratedValue id="i100079">
+			<Name>LifeCyclePhase</Name>
+			<Description>Life Cycle Phase as defined in ISO 15978</Description>
+			<EnumerationValues ex:cType="list">
+				<IfcLabel pos="0">replacement</IfcLabel>
+			</EnumerationValues>
+			<EnumerationReference>
+				<IfcPropertyEnumeration xsi:nil="true" ref="i100080"/>
+			</EnumerationReference>
+		</IfcPropertyEnumeratedValue>
+		<IfcPropertyEnumeration id="i100080">
+			<Name>PEnum_LifeCyclePhase</Name>
+			<EnumerationValues ex:cType="list-unique">
+				<IfcLabel pos="0">wholelifecycle</IfcLabel>
+				<IfcLabel pos="1">cradletosite</IfcLabel>
+				<IfcLabel pos="2">production</IfcLabel>
+				<IfcLabel pos="3">growth</IfcLabel>
+				<IfcLabel pos="4">acquisition</IfcLabel>
+				<IfcLabel pos="5">productiontransport</IfcLabel>
+				<IfcLabel pos="6">manufacture</IfcLabel>
+				<IfcLabel pos="7">procurement</IfcLabel>
+				<IfcLabel pos="8">transport</IfcLabel>
+				<IfcLabel pos="9">installation</IfcLabel>
+				<IfcLabel pos="10">usage</IfcLabel>
+				<IfcLabel pos="11">operation</IfcLabel>
+				<IfcLabel pos="12">occupancy</IfcLabel>
+				<IfcLabel pos="13">maintenance</IfcLabel>
+				<IfcLabel pos="14">refurbishment</IfcLabel>
+				<IfcLabel pos="15">replacement</IfcLabel>
+				<IfcLabel pos="16">repair</IfcLabel>
+				<IfcLabel pos="17">disposal</IfcLabel>
+				<IfcLabel pos="18">deconstruction</IfcLabel>
+				<IfcLabel pos="19">disposaltransport</IfcLabel>
+				<IfcLabel pos="20">recovery</IfcLabel>
+				<IfcLabel pos="21">waste</IfcLabel>
+			</EnumerationValues>
+		</IfcPropertyEnumeration>
+		<IfcPropertySingleValue id="i100081">
+			<Name>Cost</Name>
+			<Description>Cost impact of replacement process</Description>
+			<NominalValue>
+				<IfcRatioMeasure>0.</IfcRatioMeasure>
+			</NominalValue>
+		</IfcPropertySingleValue>
+		<IfcPropertySet id="i100082">
+			<GlobalId>1COBiesl19999999D0EOX5</GlobalId>
+			<OwnerHistory>
+				<IfcOwnerHistory xsi:nil="true" ref="i100006"/>
+			</OwnerHistory>
+			<Name>Pset_ServiceLife</Name>
+			<Description>Captures the period of time that an artifact will last along with various factors that impact the expected service life.</Description>
+			<HasProperties ex:cType="set">
+				<IfcPropertyEnumeratedValue pos="0" xsi:nil="true" ref="i100083"/>
+				<IfcPropertySingleValue pos="1" xsi:nil="true" ref="i100085"/>
+			</HasProperties>
+		</IfcPropertySet>
+		<IfcPropertyEnumeratedValue id="i100083">
+			<Name>ServiceLifeType</Name>
+			<Description>The typical service life that is quoted for an artefact under reference operating conditions.</Description>
+			<EnumerationValues ex:cType="list">
+				<IfcLabel pos="0">referenceservicelife</IfcLabel>
+			</EnumerationValues>
+			<EnumerationReference>
+				<IfcPropertyEnumeration xsi:nil="true" ref="i100084"/>
+			</EnumerationReference>
+		</IfcPropertyEnumeratedValue>
+		<IfcPropertyEnumeration id="i100084">
+			<Name>PEnum_ServiceLifeType</Name>
+			<EnumerationValues ex:cType="list-unique">
+				<IfcLabel pos="0">actualservicelife</IfcLabel>
+				<IfcLabel pos="1">expectedservicelife</IfcLabel>
+				<IfcLabel pos="2">optimisticreferenceservicelife</IfcLabel>
+				<IfcLabel pos="3">pessimisticreferenceservicelife</IfcLabel>
+				<IfcLabel pos="4">referenceservicelife</IfcLabel>
+				<IfcLabel pos="5">productiontransport</IfcLabel>
+				<IfcLabel pos="6">other</IfcLabel>
+				<IfcLabel pos="7">notknown</IfcLabel>
+				<IfcLabel pos="8">unset</IfcLabel>
+			</EnumerationValues>
+		</IfcPropertyEnumeration>
+		<IfcPropertySingleValue id="i100085">
+			<Name>ServiceLifeDuration</Name>
+			<Description>The length or duration of a service life.</Description>
+			<NominalValue>
+				<IfcReal>0.</IfcReal>
+			</NominalValue>
+		</IfcPropertySingleValue>
+		<IfcElementQuantity id="i100086">
+			<GlobalId>1COBieeq1qt11999D0EOX5</GlobalId>
+			<OwnerHistory>
+				<IfcOwnerHistory xsi:nil="true" ref="i100006"/>
+			</OwnerHistory>
+			<Name>BaseQuantities</Name>
+			<Description>Base quantities that are common to the definition of all occurrences of light fixture.</Description>
+			<Quantities ex:cType="set">
+				<IfcQuantityWeight pos="0" xsi:nil="true" ref="i100087"/>
+			</Quantities>
+		</IfcElementQuantity>
+		<IfcQuantityWeight id="i100087">
+			<Name>GrossWeight</Name>
+			<Description>Weight of the element.</Description>
+			<WeightValue>0.</WeightValue>
+		</IfcQuantityWeight>
+		<IfcPropertySet id="i100088">
+			<GlobalId>1COBieifc9999999D0EOX5</GlobalId>
+			<OwnerHistory>
+				<IfcOwnerHistory xsi:nil="true" ref="i100006"/>
+			</OwnerHistory>
+			<Name>IFC_Type</Name>
+			<Description>Suggested IFC Mapping</Description>
+			<HasProperties ex:cType="set">
+				<IfcPropertySingleValue pos="0" xsi:nil="true" ref="i100089"/>
+				<IfcPropertySingleValue pos="1" xsi:nil="true" ref="i100090"/>
+				<IfcPropertySingleValue pos="2" xsi:nil="true" ref="i100091"/>
+			</HasProperties>
+		</IfcPropertySet>
+		<IfcPropertySingleValue id="i100089">
+			<Name>IfcExportAs</Name>
+			<Description>Mapping to IFC Product</Description>
+			<NominalValue>
+				<IfcText>IfcFlowTerminal</IfcText>
+			</NominalValue>
+		</IfcPropertySingleValue>
+		<IfcPropertySingleValue id="i100090">
+			<Name>IfcExportType</Name>
+			<Description>Mapping to IFC Type Product</Description>
+			<NominalValue>
+				<IfcText>IfcLightFixtureType</IfcText>
+			</NominalValue>
+		</IfcPropertySingleValue>
+		<IfcPropertySingleValue id="i100091">
+			<Name>IfcPredefinedType</Name>
+			<Description>Mapping to IFC Predefined Type</Description>
+			<NominalValue>
+				<IfcText>NOTDEFINED</IfcText>
+			</NominalValue>
+		</IfcPropertySingleValue>
+		<IfcRepresentationMap id="i100092">
+			<MappingOrigin>
+				<IfcAxis2Placement3D xsi:nil="true" ref="i100093"/>
+			</MappingOrigin>
+			<MappedRepresentation>
+				<IfcShapeRepresentation xsi:nil="true" ref="i100094"/>
+			</MappedRepresentation>
+		</IfcRepresentationMap>
+		<IfcAxis2Placement3D id="i100093">
+			<Location>
+				<IfcCartesianPoint xsi:nil="true" ref="i100112"/>
+			</Location>
+			<Axis>
+				<IfcDirection xsi:nil="true" ref="i100100"/>
+			</Axis>
+			<RefDirection>
+				<IfcDirection xsi:nil="true" ref="i100155"/>
+			</RefDirection>
+		</IfcAxis2Placement3D>
+		<IfcShapeRepresentation id="i100094">
+			<ContextOfItems>
+				<IfcGeometricRepresentationContext xsi:nil="true" ref="i100095"/>
+			</ContextOfItems>
+			<RepresentationIdentifier>Body</RepresentationIdentifier>
+			<RepresentationType>SweptSolid</RepresentationType>
+			<Items ex:cType="set">
+				<IfcExtrudedAreaSolid pos="0" xsi:nil="true" ref="i100096"/>
+			</Items>
+		</IfcShapeRepresentation>
+		<IfcGeometricRepresentationContext id="i100095">
+			<ContextType>Model</ContextType>
+			<CoordinateSpaceDimension>3</CoordinateSpaceDimension>
+			<Precision>1.E-8</Precision>
+			<WorldCoordinateSystem>
+				<IfcAxis2Placement3D xsi:nil="true" ref="i100093"/>
+			</WorldCoordinateSystem>
+		</IfcGeometricRepresentationContext>
+		<IfcExtrudedAreaSolid id="i100096">
+			<SweptArea>
+				<IfcRectangleProfileDef xsi:nil="true" ref="i100097"/>
+			</SweptArea>
+			<Position>
+				<IfcAxis2Placement3D xsi:nil="true" ref="i100093"/>
+			</Position>
+			<ExtrudedDirection>
+				<IfcDirection xsi:nil="true" ref="i100100"/>
+			</ExtrudedDirection>
+			<Depth>800.</Depth>
+		</IfcExtrudedAreaSolid>
+		<IfcRectangleProfileDef id="i100097">
+			<ProfileType>area</ProfileType>
+			<Position>
+				<IfcAxis2Placement2D xsi:nil="true" ref="i100098"/>
+			</Position>
+			<XDim>400.</XDim>
+			<YDim>600.</YDim>
+		</IfcRectangleProfileDef>
+		<IfcAxis2Placement2D id="i100098">
+			<Location>
+				<IfcCartesianPoint xsi:nil="true" ref="i100099"/>
+			</Location>
+		</IfcAxis2Placement2D>
+		<IfcCartesianPoint id="i100099">
+			<Coordinates ex:cType="list">
+				<IfcLengthMeasure pos="0">200.</IfcLengthMeasure>
+				<IfcLengthMeasure pos="1">300.</IfcLengthMeasure>
+			</Coordinates>
+		</IfcCartesianPoint>
+		<IfcDirection id="i100100">
+			<DirectionRatios ex:cType="list">
+				<ex:double-wrapper pos="0">0.</ex:double-wrapper>
+				<ex:double-wrapper pos="1">0.</ex:double-wrapper>
+				<ex:double-wrapper pos="2">1.</ex:double-wrapper>
+			</DirectionRatios>
+		</IfcDirection>
+		<IfcFlowTerminal id="i100101">
+			<GlobalId>1COBieocc9999999D0EOX5</GlobalId>
+			<OwnerHistory>
+				<IfcOwnerHistory xsi:nil="true" ref="i100006"/>
+			</OwnerHistory>
+			<Name>LightFixture_LightFixture_NOTDEFINED_NBL_GeneralPurposeLuminaires_UK_Instance</Name>
+			<Description>NOTDEFINED: Undefined or generic type  Template</Description>
+			<ObjectType>NOTDEFINED</ObjectType>
+			<ObjectPlacement>
+				<IfcLocalPlacement xsi:nil="true" ref="i100102"/>
+			</ObjectPlacement>
+			<Representation>
+				<IfcProductDefinitionShape xsi:nil="true" ref="i100108"/>
+			</Representation>
+			<Tag>UK Product Template Template</Tag>
+		</IfcFlowTerminal>
+		<IfcLocalPlacement id="i100102">
+			<PlacementRelTo>
+				<IfcLocalPlacement xsi:nil="true" ref="i100103"/>
+			</PlacementRelTo>
+			<RelativePlacement>
+				<IfcAxis2Placement3D xsi:nil="true" ref="i100104"/>
+			</RelativePlacement>
+		</IfcLocalPlacement>
+		<IfcLocalPlacement id="i100103">
+			<PlacementRelTo>
+				<IfcLocalPlacement xsi:nil="true" ref="i100124"/>
+			</PlacementRelTo>
+			<RelativePlacement>
+				<IfcAxis2Placement3D xsi:nil="true" ref="i100130"/>
+			</RelativePlacement>
+		</IfcLocalPlacement>
+		<IfcAxis2Placement3D id="i100104">
+			<Location>
+				<IfcCartesianPoint xsi:nil="true" ref="i100105"/>
+			</Location>
+			<Axis>
+				<IfcDirection xsi:nil="true" ref="i100106"/>
+			</Axis>
+			<RefDirection>
+				<IfcDirection xsi:nil="true" ref="i100107"/>
+			</RefDirection>
+		</IfcAxis2Placement3D>
+		<IfcCartesianPoint id="i100105">
+			<Coordinates ex:cType="list">
+				<IfcLengthMeasure pos="0">0.</IfcLengthMeasure>
+				<IfcLengthMeasure pos="1">0.</IfcLengthMeasure>
+				<IfcLengthMeasure pos="2">0.</IfcLengthMeasure>
+			</Coordinates>
+		</IfcCartesianPoint>
+		<IfcDirection id="i100106">
+			<DirectionRatios ex:cType="list">
+				<ex:double-wrapper pos="0">0.</ex:double-wrapper>
+				<ex:double-wrapper pos="1">0.</ex:double-wrapper>
+				<ex:double-wrapper pos="2">1.</ex:double-wrapper>
+			</DirectionRatios>
+		</IfcDirection>
+		<IfcDirection id="i100107">
+			<DirectionRatios ex:cType="list">
+				<ex:double-wrapper pos="0">1.</ex:double-wrapper>
+				<ex:double-wrapper pos="1">0.</ex:double-wrapper>
+				<ex:double-wrapper pos="2">0.</ex:double-wrapper>
+			</DirectionRatios>
+		</IfcDirection>
+		<IfcProductDefinitionShape id="i100108">
+			<Representations ex:cType="list">
+				<IfcShapeRepresentation pos="0" xsi:nil="true" ref="i100109"/>
+			</Representations>
+		</IfcProductDefinitionShape>
+		<IfcShapeRepresentation id="i100109">
+			<ContextOfItems>
+				<IfcGeometricRepresentationContext xsi:nil="true" ref="i100095"/>
+			</ContextOfItems>
+			<RepresentationIdentifier>Body</RepresentationIdentifier>
+			<RepresentationType>MappedRepresentation</RepresentationType>
+			<Items ex:cType="set">
+				<IfcMappedItem pos="0" xsi:nil="true" ref="i100110"/>
+			</Items>
+		</IfcShapeRepresentation>
+		<IfcMappedItem id="i100110">
+			<MappingSource>
+				<IfcRepresentationMap xsi:nil="true" ref="i100092"/>
+			</MappingSource>
+			<MappingTarget>
+				<IfcCartesianTransformationOperator3D xsi:nil="true" ref="i100111"/>
+			</MappingTarget>
+		</IfcMappedItem>
+		<IfcCartesianTransformationOperator3D id="i100111">
+			<LocalOrigin>
+				<IfcCartesianPoint xsi:nil="true" ref="i100112"/>
+			</LocalOrigin>
+		</IfcCartesianTransformationOperator3D>
+		<IfcCartesianPoint id="i100112">
+			<Coordinates ex:cType="list">
+				<IfcLengthMeasure pos="0">0.</IfcLengthMeasure>
+				<IfcLengthMeasure pos="1">0.</IfcLengthMeasure>
+				<IfcLengthMeasure pos="2">0.</IfcLengthMeasure>
+			</Coordinates>
+		</IfcCartesianPoint>
+		<IfcRelDefinesByType id="i100113">
+			<GlobalId>1COBiedbt9999999D0EOX5</GlobalId>
+			<OwnerHistory>
+				<IfcOwnerHistory xsi:nil="true" ref="i100006"/>
+			</OwnerHistory>
+			<Name>Type_to_Instance</Name>
+			<Description>relate Type to Instance</Description>
+			<RelatedObjects ex:cType="set">
+				<IfcFlowTerminal pos="0" xsi:nil="true" ref="i100101"/>
+			</RelatedObjects>
+			<RelatingType>
+				<IfcLightFixtureType xsi:nil="true" ref="i100005"/>
+			</RelatingType>
+		</IfcRelDefinesByType>
+		<IfcProject id="i100114">
+			<GlobalId>1COBieprj9999999D0EOX5</GlobalId>
+			<OwnerHistory>
+				<IfcOwnerHistory xsi:nil="true" ref="i100006"/>
+			</OwnerHistory>
+			<Name>UK Product Template</Name>
+			<Description>UK Product Template</Description>
+			<ObjectType/>
+			<LongName>UK Product Template</LongName>
+			<Phase>design</Phase>
+			<RepresentationContexts ex:cType="set">
+				<IfcGeometricRepresentationContext pos="0" xsi:nil="true" ref="i100095"/>
+			</RepresentationContexts>
+			<UnitsInContext>
+				<IfcUnitAssignment xsi:nil="true" ref="i100115"/>
+			</UnitsInContext>
+		</IfcProject>
+		<IfcUnitAssignment id="i100115">
+			<Units ex:cType="set">
+				<IfcSIUnit pos="0" xsi:nil="true" ref="i100068"/>
+				<IfcSIUnit pos="1" xsi:nil="true" ref="i100116"/>
+			</Units>
+		</IfcUnitAssignment>
+		<IfcSIUnit id="i100116">
+			<UnitType>planeangleunit</UnitType>
+			<Name>radian</Name>
+		</IfcSIUnit>
+		<IfcSite id="i100117">
+			<GlobalId>1COBiesit9999999D0EOX5</GlobalId>
+			<OwnerHistory>
+				<IfcOwnerHistory xsi:nil="true" ref="i100006"/>
+			</OwnerHistory>
+			<Name>UK Product Template Site</Name>
+			<Description>Template UK Product Template Site</Description>
+			<ObjectPlacement>
+				<IfcLocalPlacement xsi:nil="true" ref="i100118"/>
+			</ObjectPlacement>
+			<CompositionType>element</CompositionType>
+			<RefLatitude ex:cType="list">
+				<ex:long-wrapper pos="0">24</ex:long-wrapper>
+				<ex:long-wrapper pos="1">28</ex:long-wrapper>
+				<ex:long-wrapper pos="2">0</ex:long-wrapper>
+			</RefLatitude>
+			<RefLongitude ex:cType="list">
+				<ex:long-wrapper pos="0">54</ex:long-wrapper>
+				<ex:long-wrapper pos="1">25</ex:long-wrapper>
+				<ex:long-wrapper pos="2">0</ex:long-wrapper>
+			</RefLongitude>
+		</IfcSite>
+		<IfcLocalPlacement id="i100118">
+			<RelativePlacement>
+				<IfcAxis2Placement3D xsi:nil="true" ref="i100119"/>
+			</RelativePlacement>
+		</IfcLocalPlacement>
+		<IfcAxis2Placement3D id="i100119">
+			<Location>
+				<IfcCartesianPoint xsi:nil="true" ref="i100120"/>
+			</Location>
+			<Axis>
+				<IfcDirection xsi:nil="true" ref="i100121"/>
+			</Axis>
+			<RefDirection>
+				<IfcDirection xsi:nil="true" ref="i100122"/>
+			</RefDirection>
+		</IfcAxis2Placement3D>
+		<IfcCartesianPoint id="i100120">
+			<Coordinates ex:cType="list">
+				<IfcLengthMeasure pos="0">0.</IfcLengthMeasure>
+				<IfcLengthMeasure pos="1">0.</IfcLengthMeasure>
+				<IfcLengthMeasure pos="2">0.</IfcLengthMeasure>
+			</Coordinates>
+		</IfcCartesianPoint>
+		<IfcDirection id="i100121">
+			<DirectionRatios ex:cType="list">
+				<ex:double-wrapper pos="0">0.</ex:double-wrapper>
+				<ex:double-wrapper pos="1">0.</ex:double-wrapper>
+				<ex:double-wrapper pos="2">1.</ex:double-wrapper>
+			</DirectionRatios>
+		</IfcDirection>
+		<IfcDirection id="i100122">
+			<DirectionRatios ex:cType="list">
+				<ex:double-wrapper pos="0">1.</ex:double-wrapper>
+				<ex:double-wrapper pos="1">0.</ex:double-wrapper>
+				<ex:double-wrapper pos="2">0.</ex:double-wrapper>
+			</DirectionRatios>
+		</IfcDirection>
+		<IfcBuilding id="i100123">
+			<GlobalId>1COBiebui9999999D0EOX5</GlobalId>
+			<OwnerHistory>
+				<IfcOwnerHistory xsi:nil="true" ref="i100006"/>
+			</OwnerHistory>
+			<Name>UK Product Template Building</Name>
+			<Description>UK Product Template Building</Description>
+			<ObjectPlacement>
+				<IfcLocalPlacement xsi:nil="true" ref="i100124"/>
+			</ObjectPlacement>
+			<CompositionType>element</CompositionType>
+		</IfcBuilding>
+		<IfcLocalPlacement id="i100124">
+			<PlacementRelTo>
+				<IfcLocalPlacement xsi:nil="true" ref="i100118"/>
+			</PlacementRelTo>
+			<RelativePlacement>
+				<IfcAxis2Placement3D xsi:nil="true" ref="i100125"/>
+			</RelativePlacement>
+		</IfcLocalPlacement>
+		<IfcAxis2Placement3D id="i100125">
+			<Location>
+				<IfcCartesianPoint xsi:nil="true" ref="i100126"/>
+			</Location>
+			<Axis>
+				<IfcDirection xsi:nil="true" ref="i100127"/>
+			</Axis>
+			<RefDirection>
+				<IfcDirection xsi:nil="true" ref="i100128"/>
+			</RefDirection>
+		</IfcAxis2Placement3D>
+		<IfcCartesianPoint id="i100126">
+			<Coordinates ex:cType="list">
+				<IfcLengthMeasure pos="0">0.</IfcLengthMeasure>
+				<IfcLengthMeasure pos="1">0.</IfcLengthMeasure>
+				<IfcLengthMeasure pos="2">0.</IfcLengthMeasure>
+			</Coordinates>
+		</IfcCartesianPoint>
+		<IfcDirection id="i100127">
+			<DirectionRatios ex:cType="list">
+				<ex:double-wrapper pos="0">0.</ex:double-wrapper>
+				<ex:double-wrapper pos="1">0.</ex:double-wrapper>
+				<ex:double-wrapper pos="2">1.</ex:double-wrapper>
+			</DirectionRatios>
+		</IfcDirection>
+		<IfcDirection id="i100128">
+			<DirectionRatios ex:cType="list">
+				<ex:double-wrapper pos="0">1.</ex:double-wrapper>
+				<ex:double-wrapper pos="1">0.</ex:double-wrapper>
+				<ex:double-wrapper pos="2">0.</ex:double-wrapper>
+			</DirectionRatios>
+		</IfcDirection>
+		<IfcBuildingStorey id="i100129">
+			<GlobalId>1COBiebst9999999D0EOX5</GlobalId>
+			<OwnerHistory>
+				<IfcOwnerHistory xsi:nil="true" ref="i100006"/>
+			</OwnerHistory>
+			<Name>UK Product Template Building Storey</Name>
+			<Description>UK Product Template Building Storey</Description>
+			<ObjectPlacement>
+				<IfcLocalPlacement xsi:nil="true" ref="i100103"/>
+			</ObjectPlacement>
+			<CompositionType>element</CompositionType>
+			<Elevation>0.</Elevation>
+		</IfcBuildingStorey>
+		<IfcAxis2Placement3D id="i100130">
+			<Location>
+				<IfcCartesianPoint xsi:nil="true" ref="i100131"/>
+			</Location>
+			<Axis>
+				<IfcDirection xsi:nil="true" ref="i100132"/>
+			</Axis>
+			<RefDirection>
+				<IfcDirection xsi:nil="true" ref="i100133"/>
+			</RefDirection>
+		</IfcAxis2Placement3D>
+		<IfcCartesianPoint id="i100131">
+			<Coordinates ex:cType="list">
+				<IfcLengthMeasure pos="0">0.</IfcLengthMeasure>
+				<IfcLengthMeasure pos="1">0.</IfcLengthMeasure>
+				<IfcLengthMeasure pos="2">0.</IfcLengthMeasure>
+			</Coordinates>
+		</IfcCartesianPoint>
+		<IfcDirection id="i100132">
+			<DirectionRatios ex:cType="list">
+				<ex:double-wrapper pos="0">0.</ex:double-wrapper>
+				<ex:double-wrapper pos="1">0.</ex:double-wrapper>
+				<ex:double-wrapper pos="2">1.</ex:double-wrapper>
+			</DirectionRatios>
+		</IfcDirection>
+		<IfcDirection id="i100133">
+			<DirectionRatios ex:cType="list">
+				<ex:double-wrapper pos="0">1.</ex:double-wrapper>
+				<ex:double-wrapper pos="1">0.</ex:double-wrapper>
+				<ex:double-wrapper pos="2">0.</ex:double-wrapper>
+			</DirectionRatios>
+		</IfcDirection>
+		<IfcSpace id="i100134">
+			<GlobalId>1COBiespc9999999D0EOX5</GlobalId>
+			<OwnerHistory>
+				<IfcOwnerHistory xsi:nil="true" ref="i100006"/>
+			</OwnerHistory>
+			<Name>UK Product Template Space</Name>
+			<Description>UK Product Template Space</Description>
+			<ObjectPlacement>
+				<IfcLocalPlacement xsi:nil="true" ref="i100135"/>
+			</ObjectPlacement>
+			<CompositionType>element</CompositionType>
+			<InteriorOrExteriorSpace>internal</InteriorOrExteriorSpace>
+			<ElevationWithFlooring>0.</ElevationWithFlooring>
+		</IfcSpace>
+		<IfcLocalPlacement id="i100135">
+			<PlacementRelTo>
+				<IfcLocalPlacement xsi:nil="true" ref="i100103"/>
+			</PlacementRelTo>
+			<RelativePlacement>
+				<IfcAxis2Placement3D xsi:nil="true" ref="i100136"/>
+			</RelativePlacement>
+		</IfcLocalPlacement>
+		<IfcAxis2Placement3D id="i100136">
+			<Location>
+				<IfcCartesianPoint xsi:nil="true" ref="i100137"/>
+			</Location>
+			<Axis>
+				<IfcDirection xsi:nil="true" ref="i100138"/>
+			</Axis>
+			<RefDirection>
+				<IfcDirection xsi:nil="true" ref="i100139"/>
+			</RefDirection>
+		</IfcAxis2Placement3D>
+		<IfcCartesianPoint id="i100137">
+			<Coordinates ex:cType="list">
+				<IfcLengthMeasure pos="0">0.</IfcLengthMeasure>
+				<IfcLengthMeasure pos="1">0.</IfcLengthMeasure>
+				<IfcLengthMeasure pos="2">0.</IfcLengthMeasure>
+			</Coordinates>
+		</IfcCartesianPoint>
+		<IfcDirection id="i100138">
+			<DirectionRatios ex:cType="list">
+				<ex:double-wrapper pos="0">0.</ex:double-wrapper>
+				<ex:double-wrapper pos="1">0.</ex:double-wrapper>
+				<ex:double-wrapper pos="2">1.</ex:double-wrapper>
+			</DirectionRatios>
+		</IfcDirection>
+		<IfcDirection id="i100139">
+			<DirectionRatios ex:cType="list">
+				<ex:double-wrapper pos="0">1.</ex:double-wrapper>
+				<ex:double-wrapper pos="1">0.</ex:double-wrapper>
+				<ex:double-wrapper pos="2">0.</ex:double-wrapper>
+			</DirectionRatios>
+		</IfcDirection>
+		<IfcRelAggregates id="i100140">
+			<GlobalId>1COBieag19999999D0EOX5</GlobalId>
+			<OwnerHistory>
+				<IfcOwnerHistory xsi:nil="true" ref="i100006"/>
+			</OwnerHistory>
+			<Name>Space</Name>
+			<Description>BuildingContainer for Spaces</Description>
+			<RelatingObject>
+				<IfcBuildingStorey xsi:nil="true" ref="i100129"/>
+			</RelatingObject>
+			<RelatedObjects ex:cType="set">
+				<IfcSpace pos="0" xsi:nil="true" ref="i100134"/>
+			</RelatedObjects>
+		</IfcRelAggregates>
+		<IfcRelAggregates id="i100141">
+			<GlobalId>1COBieag19999999D0EOX5</GlobalId>
+			<OwnerHistory>
+				<IfcOwnerHistory xsi:nil="true" ref="i100006"/>
+			</OwnerHistory>
+			<Name>BuildingContainer</Name>
+			<Description>BuildingContainer for BuildingStories</Description>
+			<RelatingObject>
+				<IfcBuilding xsi:nil="true" ref="i100123"/>
+			</RelatingObject>
+			<RelatedObjects ex:cType="set">
+				<IfcBuildingStorey pos="0" xsi:nil="true" ref="i100129"/>
+			</RelatedObjects>
+		</IfcRelAggregates>
+		<IfcRelAggregates id="i100142">
+			<GlobalId>1COBieag29999999D0EOX5</GlobalId>
+			<OwnerHistory>
+				<IfcOwnerHistory xsi:nil="true" ref="i100006"/>
+			</OwnerHistory>
+			<Name>SiteContainer</Name>
+			<Description>SiteContainer For Buildings</Description>
+			<RelatingObject>
+				<IfcSite xsi:nil="true" ref="i100117"/>
+			</RelatingObject>
+			<RelatedObjects ex:cType="set">
+				<IfcBuilding pos="0" xsi:nil="true" ref="i100123"/>
+			</RelatedObjects>
+		</IfcRelAggregates>
+		<IfcRelAggregates id="i100143">
+			<GlobalId>1COBieag39999999D0EOX5</GlobalId>
+			<OwnerHistory>
+				<IfcOwnerHistory xsi:nil="true" ref="i100006"/>
+			</OwnerHistory>
+			<Name>ProjectContainer</Name>
+			<Description>ProjectContainer for Sites</Description>
+			<RelatingObject>
+				<IfcProject xsi:nil="true" ref="i100114"/>
+			</RelatingObject>
+			<RelatedObjects ex:cType="set">
+				<IfcSite pos="0" xsi:nil="true" ref="i100117"/>
+			</RelatedObjects>
+		</IfcRelAggregates>
+		<IfcRelContainedInSpatialStructure id="i100144">
+			<GlobalId>1COBiecss9999999D0EOX5</GlobalId>
+			<OwnerHistory>
+				<IfcOwnerHistory xsi:nil="true" ref="i100006"/>
+			</OwnerHistory>
+			<Name>TemplateInstance-BuildingStorey</Name>
+			<Description>Template Instance in Building Storey</Description>
+			<RelatedElements ex:cType="set">
+				<IfcFlowTerminal pos="0" xsi:nil="true" ref="i100101"/>
+			</RelatedElements>
+			<RelatingStructure>
+				<IfcSpace xsi:nil="true" ref="i100134"/>
+			</RelatingStructure>
+		</IfcRelContainedInSpatialStructure>
+		<IfcPersonAndOrganization id="i100145">
+			<ThePerson>
+				<IfcPerson xsi:nil="true" ref="i100146"/>
+			</ThePerson>
+			<TheOrganization>
+				<IfcOrganization xsi:nil="true" ref="i100147"/>
+			</TheOrganization>
+		</IfcPersonAndOrganization>
+		<IfcPerson id="i100146">
+			<Id>nn@buildingSMART.org.uk</Id>
+			<FamilyName>Nisbet</FamilyName>
+			<GivenName>Nicholas</GivenName>
+			<PrefixTitles ex:cType="list">
+				<IfcLabel>Director</IfcLabel>
+			</PrefixTitles>
+			<SuffixTitles ex:cType="list">
+				<IfcLabel>buildingSMART</IfcLabel>
+			</SuffixTitles>
+			<Roles ex:cType="list">
+				<IfcActorRole pos="0" xsi:nil="true" ref="i100151"/>
+			</Roles>
+			<Addresses ex:cType="list">
+				<IfcPostalAddress pos="0" xsi:nil="true" ref="i100149"/>
+				<IfcTelecomAddress pos="1" xsi:nil="true" ref="i100150"/>
+			</Addresses>
+		</IfcPerson>
+		<IfcOrganization id="i100147">
+			<Id>nn@buildingSMART.org.uk</Id>
+			<Name>bS UKI</Name>
+			<Description>buildingSMART United Kingdom and Ireland Chapter</Description>
+		</IfcOrganization>
+		<IfcApplication id="i100148">
+			<ApplicationDeveloper>
+				<IfcOrganization xsi:nil="true" ref="i100147"/>
+			</ApplicationDeveloper>
+			<Version>v2012-09-05T09:15:01</Version>
+			<ApplicationFullName>AEC3_BimServices</ApplicationFullName>
+			<ApplicationIdentifier>AEC3_BimServices</ApplicationIdentifier>
+		</IfcApplication>
+		<IfcPostalAddress id="i100149">
+			<AddressLines ex:cType="list">
+				<IfcLabel>46 St Margarets Grove</IfcLabel>
+				<IfcLabel>Great Kingshill</IfcLabel>
+			</AddressLines>
+			<Town>High Wycombe</Town>
+			<Region>Bucks</Region>
+			<PostalCode>HP15 6HP</PostalCode>
+			<Country>United Kingdom</Country>
+		</IfcPostalAddress>
+		<IfcTelecomAddress id="i100150">
+			<TelephoneNumbers ex:cType="list">
+				<IfcLabel>+44 1494 714933</IfcLabel>
+			</TelephoneNumbers>
+			<ElectronicMailAddresses ex:cType="list">
+				<IfcLabel>nn@buildingSMART.org.uk</IfcLabel>
+			</ElectronicMailAddresses>
+			<WWWHomePageURL>http://www.buildingSMART.org.uk</WWWHomePageURL>
+		</IfcTelecomAddress>
+		<IfcActorRole id="i100151">
+			<Role>reseller</Role>
+			<Description>Director of buildingSMART UKI</Description>
+		</IfcActorRole>
+		<IfcDateAndTime id="i100152">
+			<DateComponent>
+				<IfcCalendarDate xsi:nil="true" ref="i100153"/>
+			</DateComponent>
+			<TimeComponent>
+				<IfcLocalTime xsi:nil="true" ref="i100154"/>
+			</TimeComponent>
+		</IfcDateAndTime>
+		<IfcCalendarDate id="i100153">
+			<DayComponent>5</DayComponent>
+			<MonthComponent>9</MonthComponent>
+			<YearComponent>2012</YearComponent>
+		</IfcCalendarDate>
+		<IfcLocalTime id="i100154">
+			<HourComponent>9</HourComponent>
+			<MinuteComponent>15</MinuteComponent>
+			<SecondComponent>1.</SecondComponent>
+		</IfcLocalTime>
+		<IfcDirection id="i100155">
+			<DirectionRatios ex:cType="list">
+				<ex:double-wrapper pos="0">1.</ex:double-wrapper>
+				<ex:double-wrapper pos="1">0.</ex:double-wrapper>
+				<ex:double-wrapper pos="2">0.</ex:double-wrapper>
+			</DirectionRatios>
+		</IfcDirection>
+		<IfcDirection id="i100156">
+			<DirectionRatios ex:cType="list">
+				<ex:double-wrapper pos="0">1.</ex:double-wrapper>
+				<ex:double-wrapper pos="1">0.</ex:double-wrapper>
+			</DirectionRatios>
+		</IfcDirection>
+		<IfcDirection id="i100157">
+			<DirectionRatios ex:cType="list">
+				<ex:double-wrapper pos="0">0.</ex:double-wrapper>
+				<ex:double-wrapper pos="1">1.</ex:double-wrapper>
+				<ex:double-wrapper pos="2">0.</ex:double-wrapper>
+			</DirectionRatios>
+		</IfcDirection>
+		<IfcAxis2Placement2D id="i100158">
+			<Location>
+				<IfcCartesianPoint xsi:nil="true" ref="i100112"/>
+			</Location>
+			<RefDirection>
+				<IfcDirection xsi:nil="true" ref="i100155"/>
+			</RefDirection>
+		</IfcAxis2Placement2D>
+		<IfcRelAssociatesClassification id="i100159">
+			<GlobalId>1COBieracct39999D0EOX5</GlobalId>
+			<OwnerHistory>
+				<IfcOwnerHistory xsi:nil="true" ref="i100006"/>
+			</OwnerHistory>
+			<Name>UK Uniclass GH 1999</Name>
+			<Description>UK Uniclass GH 1999</Description>
+			<RelatedObjects ex:cType="set">
+				<IfcLightFixtureType pos="0" xsi:nil="true" ref="i100005"/>
+			</RelatedObjects>
+			<RelatingClassification>
+				<IfcClassificationReference xsi:nil="true" ref="i100160"/>
+			</RelatingClassification>
+		</IfcRelAssociatesClassification>
+		<IfcClassificationReference id="i100160">
+			<Location>http://www.UK_Uniclass_GH_1999.com/tables#_G541</Location>
+			<ItemReference>G541</ItemReference>
+			<Name>General lighting</Name>
+			<ReferencedSource>
+				<IfcClassification xsi:nil="true" ref="i14"/>
+			</ReferencedSource>
+		</IfcClassificationReference>
+		<IfcRelAssociatesClassification id="i100161">
+			<GlobalId>1COBieracct49999D0EOX5</GlobalId>
+			<OwnerHistory>
+				<IfcOwnerHistory xsi:nil="true" ref="i100006"/>
+			</OwnerHistory>
+			<Name>UK Uniclass JK 1999</Name>
+			<Description>UK Uniclass JK 1999</Description>
+			<RelatedObjects ex:cType="set">
+				<IfcLightFixtureType pos="0" xsi:nil="true" ref="i100005"/>
+			</RelatedObjects>
+			<RelatingClassification>
+				<IfcClassificationReference xsi:nil="true" ref="i100162"/>
+			</RelatingClassification>
+		</IfcRelAssociatesClassification>
+		<IfcClassificationReference id="i100162">
+			<Location>http://www.UK_Uniclass_JK_1999.com/tables#_JV21</Location>
+			<ItemReference>JV21</ItemReference>
+			<Name>General lighting</Name>
+			<ReferencedSource>
+				<IfcClassification xsi:nil="true" ref="i15"/>
+			</ReferencedSource>
+		</IfcClassificationReference>
+		<IfcRelAssociatesClassification id="i100163">
+			<GlobalId>1COBieracct59999D0EOX5</GlobalId>
+			<OwnerHistory>
+				<IfcOwnerHistory xsi:nil="true" ref="i100006"/>
+			</OwnerHistory>
+			<Name>UK Uniclass L 1999</Name>
+			<Description>UK Uniclass L 1999</Description>
+			<RelatedObjects ex:cType="set">
+				<IfcLightFixtureType pos="0" xsi:nil="true" ref="i100005"/>
+			</RelatedObjects>
+			<RelatingClassification>
+				<IfcClassificationReference xsi:nil="true" ref="i100164"/>
+			</RelatingClassification>
+		</IfcRelAssociatesClassification>
+		<IfcClassificationReference id="i100164">
+			<Location>http://www.UK_Uniclass_L_1999.com/tables#_L74731</Location>
+			<ItemReference>L74731</ItemReference>
+			<Name>Fixed luminaires for general lighting</Name>
+			<ReferencedSource>
+				<IfcClassification xsi:nil="true" ref="i16"/>
+			</ReferencedSource>
+		</IfcClassificationReference>
+		<IfcRelAssociatesClassification id="i100165">
+			<GlobalId>1COBieracct19999D0EOX5</GlobalId>
+			<OwnerHistory>
+				<IfcOwnerHistory xsi:nil="true" ref="i100006"/>
+			</OwnerHistory>
+			<Name>UK RICS NRM 2011</Name>
+			<Description>UK RICS NRM 2011</Description>
+			<RelatedObjects ex:cType="set">
+				<IfcLightFixtureType pos="0" xsi:nil="true" ref="i100005"/>
+			</RelatedObjects>
+			<RelatingClassification>
+				<IfcClassificationReference xsi:nil="true" ref="i100166"/>
+			</RelatingClassification>
+		</IfcRelAssociatesClassification>
+		<IfcClassificationReference id="i100166">
+			<Location>http://www.UK_RICS_NRM_2011.com/tables#_05_08_03</Location>
+			<ItemReference>05 08 03</ItemReference>
+			<Name>Lighting installations</Name>
+			<ReferencedSource>
+				<IfcClassification xsi:nil="true" ref="i12"/>
+			</ReferencedSource>
+		</IfcClassificationReference>
+		<IfcRelAssociatesClassification id="i100167">
+			<GlobalId>1COBieracct29999D0EOX5</GlobalId>
+			<OwnerHistory>
+				<IfcOwnerHistory xsi:nil="true" ref="i100006"/>
+			</OwnerHistory>
+			<Name>UK NBS 2011</Name>
+			<Description>UK NBS 2011</Description>
+			<RelatedObjects ex:cType="set">
+				<IfcLightFixtureType pos="0" xsi:nil="true" ref="i100005"/>
+			</RelatedObjects>
+			<RelatingClassification>
+				<IfcClassificationReference xsi:nil="true" ref="i100168"/>
+			</RelatingClassification>
+		</IfcRelAssociatesClassification>
+		<IfcClassificationReference id="i100168">
+			<Location>http://www.UK_NBS_2011.com/tables#_90_60_50_405</Location>
+			<ItemReference>90 60 50 405</ItemReference>
+			<Name>General purpose luminaires</Name>
+			<ReferencedSource>
+				<IfcClassification xsi:nil="true" ref="i13"/>
+			</ReferencedSource>
+		</IfcClassificationReference>
+		<IfcRelDefinesByProperties id="i100169">
+			<GlobalId>1COBierdpmoc9999D0EOX5</GlobalId>
+			<OwnerHistory>
+				<IfcOwnerHistory xsi:nil="true" ref="i100006"/>
+			</OwnerHistory>
+			<Name>ManufacturerOccurrence</Name>
+			<Description>ManufacturerOccurrence</Description>
+			<RelatedObjects ex:cType="set">
+				<IfcFlowTerminal pos="0" xsi:nil="true" ref="i100101"/>
+			</RelatedObjects>
+			<RelatingPropertyDefinition>
+				<IfcPropertySet xsi:nil="true" ref="i100170"/>
+			</RelatingPropertyDefinition>
+		</IfcRelDefinesByProperties>
+		<IfcPropertySet id="i100170">
+			<GlobalId>1COBieps1p019999D0EOX5</GlobalId>
+			<OwnerHistory>
+				<IfcOwnerHistory xsi:nil="true" ref="i100006"/>
+			</OwnerHistory>
+			<Name>Pset_ManufacturerOccurrence</Name>
+			<Description>Definition from IAI: Defines properties of individual instances of manufactured products that may be given by the manufacturer.
+HISTORY: IFC 2x4: AssemblyPlace property added. This property does not need to be asserted if Pset_ManufacturerTypeInformation is allocated to the type and the AssemblyPlace property is asserted there.</Description>
+			<HasProperties ex:cType="set">
+				<IfcPropertySingleValue pos="0" xsi:nil="true" ref="i100171"/>
+				<IfcPropertySingleValue pos="1" xsi:nil="true" ref="i100172"/>
+				<IfcPropertySingleValue pos="2" xsi:nil="true" ref="i100173"/>
+				<IfcPropertySingleValue pos="3" xsi:nil="true" ref="i100174"/>
+				<IfcPropertyEnumeratedValue pos="4" xsi:nil="true" ref="i100175"/>
+			</HasProperties>
+		</IfcPropertySet>
+		<IfcPropertySingleValue id="i100171">
+			<Name>AcquisitionDate</Name>
+			<Description>The date that the manufactured item was purchased.</Description>
+			<NominalValue>
+				<IfcLabel>2012-09-05T09:15:01</IfcLabel>
+			</NominalValue>
+		</IfcPropertySingleValue>
+		<IfcPropertySingleValue id="i100172">
+			<Name>BarCode</Name>
+			<Description>The identity of the bar code given to an occurrence of the product.</Description>
+			<NominalValue>
+				<IfcIdentifier>n/a</IfcIdentifier>
+			</NominalValue>
+		</IfcPropertySingleValue>
+		<IfcPropertySingleValue id="i100173">
+			<Name>SerialNumber</Name>
+			<Description>The serial number assigned to an occurrence of a product.</Description>
+			<NominalValue>
+				<IfcIdentifier>n/a</IfcIdentifier>
+			</NominalValue>
+		</IfcPropertySingleValue>
+		<IfcPropertySingleValue id="i100174">
+			<Name>BatchReference</Name>
+			<Description>The identity of the batch reference from which an occurrence of a product is taken.</Description>
+			<NominalValue>
+				<IfcIdentifier>n/a</IfcIdentifier>
+			</NominalValue>
+		</IfcPropertySingleValue>
+		<IfcPropertyEnumeratedValue id="i100175">
+			<Name>AssemblyPlace</Name>
+			<Description>Enumeration defining where the assembly is intended to take place, either in a factory, other offsite location or on the building site.</Description>
+			<EnumerationValues ex:cType="list">
+				<IfcLabel pos="0">unset</IfcLabel>
+			</EnumerationValues>
+			<EnumerationReference>
+				<IfcPropertyEnumeration xsi:nil="true" ref="i100176"/>
+			</EnumerationReference>
+		</IfcPropertyEnumeratedValue>
+		<IfcPropertyEnumeration id="i100176">
+			<Name>PEnum_AssemblyPlace</Name>
+			<EnumerationValues ex:cType="list-unique">
+				<IfcLabel pos="0">factory</IfcLabel>
+				<IfcLabel pos="1">offsite</IfcLabel>
+				<IfcLabel pos="2">site</IfcLabel>
+				<IfcLabel pos="3">other</IfcLabel>
+				<IfcLabel pos="4">notknown</IfcLabel>
+				<IfcLabel pos="5">unset</IfcLabel>
+			</EnumerationValues>
+		</IfcPropertyEnumeration>
+	</uos>
+</ex:iso_10303_28>
