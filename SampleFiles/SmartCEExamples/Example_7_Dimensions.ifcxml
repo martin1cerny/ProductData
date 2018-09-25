@@ -1,12 +1,12 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<!-- This example shows how complex properties can be used to describe -->
+<!-- This example shows how property templates can be used to describe -->
 <!-- declaration of performance of construction products. This utilises strong measure typing system and -->
 <!-- units from IFC schema. This approach can be used to store CPR data. -->
 <!--  -->
-<!-- Created: 2018-09-18T07:29:22 (UTC) -->
+<!-- Created: 2018-09-25T13:54:15 (UTC) -->
 <ifcXML xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:ifc="http://www.buildingsmart-tech.org/ifcXML/IFC4/Add2" xsi:schemaLocation="http://www.buildingsmart-tech.org/ifcXML/IFC4/Add2 http://www.buildingsmart-tech.org/ifc/IFC4/Add2/IFC4_ADD2.xsd" id="uos_1" express="http://www.buildingsmart-tech.org/ifc/IFC4/Add2/IFC4_ADD2.exp" configuration="http://www.buildingsmart-tech.org/ifc/IFC4/Add2/IFC4_ADD2_config.xml" xmlns="http://www.buildingsmart-tech.org/ifcXML/IFC4/Add2">
   <header>
-    <time_stamp>2018-09-18T09:29:21</time_stamp>
+    <time_stamp>2018-09-25T15:54:14</time_stamp>
     <preprocessor_version>Xbim File Processor version 4.0.0.0</preprocessor_version>
     <originating_system>Xbim version 4.0.0.0</originating_system>
     <documentation>ProductDataView</documentation>
@@ -14,9 +14,9 @@
   <!-- Root element of this file. Because this doesn't define a specific instance in the building it is a library. -->
   <!-- It can be used to declare elements, properties, property templates and other library objects  -->
   <!-- which can be later used in the actual design. -->
-  <IfcProjectLibrary id="i1" GlobalId="1OjhHvfZXCt830NPrW0SD$" Name="Declaration of Performance">
+  <IfcProjectLibrary id="i1" GlobalId="0zODPJQgb5Uu3n9H$q9Lg8" Name="Declaration of Performance">
     <!-- Owner history is used to define ownership of the information. -->
-    <OwnerHistory id="i2" xsi:type="IfcOwnerHistory" ChangeAction="added" LastModifiedDate="1537262962" CreationDate="0">
+    <OwnerHistory id="i2" xsi:type="IfcOwnerHistory" ChangeAction="added" LastModifiedDate="1537890855" CreationDate="0">
       <OwningUser id="i5" xsi:type="IfcPersonAndOrganization">
         <ThePerson id="i3" xsi:type="IfcPerson" FamilyName="Martin" GivenName="Cerny" MiddleNames="" PrefixTitles="" SuffixTitles="" />
         <TheOrganization id="i4" xsi:type="IfcOrganization" Name="xBIM Ltd." />
@@ -39,84 +39,60 @@
     <Declares>
       <!-- This relation points to all definitions declared within the scope of the library. -->
       <!-- These can be elements, element types, properties or property templates -->
-      <IfcRelDeclares id="i9" pos="0" GlobalId="3lnr9vnw9BRBdW8pzDZ4MU">
+      <IfcRelDeclares id="i9" pos="0" GlobalId="3kvUl0F3551OtUfK5gR_3k">
         <OwnerHistory ref="i2" xsi:type="IfcOwnerHistory" xsi:nil="true" />
         <RelatedDefinitions>
           <!-- Template of the property set is used to group properties in logical groups. -->
-          <!-- This can contain any number of properties with name unique within the set. -->
-          <IfcPropertySetTemplate id="i10" pos="0" GlobalId="0CrC3xL9zBBvQZhSxnHpvL" Name="dimensions" ApplicableEntity="IfcElement">
+          <!-- This can contain any number of properties with the name unique within the set. 'IfcBuildingElementPart' is the best IFC -->
+          <!-- entity type fit for a brick so it is used as the applicable entity definition -->
+          <IfcPropertySetTemplate id="i10" pos="0" GlobalId="07nrkXINH5OuYnDJ3CU$Ql" Name="Essential Characteristics" TemplateType="pset_typedrivenoverride" ApplicableEntity="IfcBuildingElementPart">
             <OwnerHistory ref="i2" xsi:type="IfcOwnerHistory" xsi:nil="true" />
             <HasPropertyTemplates>
-              <!-- Template of the complex property to define all it's aspects. This can contain any number of descriptive properties. -->
-              <!-- Both property set template and property template contain globally unique GUID which  -->
-              <!-- can be used for global management of definitions and to maintain relations to data dictionaries. -->
-              <IfcComplexPropertyTemplate id="i11" pos="0" GlobalId="3DaB6ZRAP1BxlWNevcOkVY" Name="length" UsageName="length">
+              <!-- Complex property template is used to describe all aspects of the property.  -->
+              <!-- Both property set template and property template have globally unique GUID which can be used for  -->
+              <!-- global management of definitions and to maintain relations to data dictionaries.  -->
+              <IfcComplexPropertyTemplate id="i11" pos="0" GlobalId="0l1LzTndvERx_P9a3hyvyr" Name="dimensions" UsageName="dimensions">
                 <OwnerHistory ref="i2" xsi:type="IfcOwnerHistory" xsi:nil="true" />
                 <HasPropertyTemplates>
                   <!-- Simple name-definition-value property template defining actual value, type of measure (length) and unit (mm) -->
-                  <IfcSimplePropertyTemplate id="i12" pos="0" GlobalId="0xfxGAgaLEAAOHeWue$5X6" Name="Value" TemplateType="p_singlevalue" PrimaryMeasureType="IfcLengthMeasure">
+                  <IfcSimplePropertyTemplate id="i12" pos="0" GlobalId="0hLKBcnXD4Cug08sFKBN5q" Name="length" TemplateType="p_singlevalue" PrimaryMeasureType="IfcLengthMeasure">
                     <OwnerHistory ref="i2" xsi:type="IfcOwnerHistory" xsi:nil="true" />
                     <PrimaryUnit>
                       <IfcSIUnit ref="i7" xsi:nil="true" />
                     </PrimaryUnit>
                   </IfcSimplePropertyTemplate>
-                  <!-- Reference property template pointing to document relevant to the 'length' property -->
-                  <IfcSimplePropertyTemplate id="i13" pos="1" GlobalId="3QvLAtQqT6DxTaxzba5MZX" Name="ReferenceDocument" TemplateType="p_referencevalue" PrimaryMeasureType="IfcDocumentReference">
-                    <OwnerHistory ref="i2" xsi:type="IfcOwnerHistory" xsi:nil="true" />
-                  </IfcSimplePropertyTemplate>
                 </HasPropertyTemplates>
               </IfcComplexPropertyTemplate>
             </HasPropertyTemplates>
           </IfcPropertySetTemplate>
-          <!-- The best IfcElement subtype for brick is 'IfcBuildingElementPart'.  -->
-          <!-- This type should not be considered as significant because authoring tools will often not support all  -->
-          <!-- IFC element types and might not provide sufficient configurations or modelling workflows to create -->
-          <!-- such a data. Combination of 'PredefinedType = USERDEFINED' and 'ObjectType = "BRICK"' can be -->
-          <!-- used to identify the element. 'IfcBuildingElementPart' should also be used for materials. -->
-          <IfcBuildingElementPart id="i14" pos="1" GlobalId="1lbaHuI4z6QgH7Sw9heVdl" Name="Porotherm 50 EKO+ Profi R" ObjectType="BRICK" PredefinedType="userdefined">
-            <OwnerHistory ref="i2" xsi:type="IfcOwnerHistory" xsi:nil="true" />
-            <IsDefinedBy>
-              <!-- This relation sets the set of properties to the library element -->
-              <IfcRelDefinesByProperties id="i21" pos="0" GlobalId="0LIHyHPhf3y9t2lnDc493y">
-                <OwnerHistory ref="i2" xsi:type="IfcOwnerHistory" xsi:nil="true" />
-                <RelatingPropertyDefinition>
-                  <!-- This property set contains actual values and points to the defining template. -->
-                  <IfcPropertySet id="i15" GlobalId="1uBlGUfFH3UhdNE5$D8IMk" Name="dimensions">
-                    <OwnerHistory ref="i2" xsi:type="IfcOwnerHistory" xsi:nil="true" />
-                    <HasProperties>
-                      <IfcComplexProperty id="i16" pos="0" Name="length" UsageName="length">
-                        <HasProperties>
-                          <IfcPropertySingleValue id="i17" pos="0" Name="Value">
-                            <NominalValue>
-                              <IfcLengthMeasure-wrapper>300</IfcLengthMeasure-wrapper>
-                            </NominalValue>
-                            <Unit>
-                              <IfcSIUnit ref="i7" xsi:nil="true" />
-                            </Unit>
-                          </IfcPropertySingleValue>
-                          <IfcPropertyReferenceValue id="i18" pos="1" Name="ReferenceDocument">
-                            <PropertyReference>
-                              <IfcDocumentReference id="i19" Name="EN 772-1" />
-                            </PropertyReference>
-                          </IfcPropertyReferenceValue>
-                        </HasProperties>
-                      </IfcComplexProperty>
-                    </HasProperties>
-                  </IfcPropertySet>
-                </RelatingPropertyDefinition>
-              </IfcRelDefinesByProperties>
-            </IsDefinedBy>
-          </IfcBuildingElementPart>
         </RelatedDefinitions>
       </IfcRelDeclares>
     </Declares>
   </IfcProjectLibrary>
-  <!-- This relation binds actual property set with values to it's template. -->
-  <IfcRelDefinesByTemplate id="i20" GlobalId="1_3npYVejE6O0aLlsl9hcV">
+  <!-- Metric constraint used to define required value of 300 mm -->
+  <IfcMetric id="i14" Name="Required length" ConstraintGrade="hard" Benchmark="equalto">
+    <DataValue>
+      <IfcLengthMeasure-wrapper>300</IfcLengthMeasure-wrapper>
+    </DataValue>
+  </IfcMetric>
+  <!-- Relation used to set a constraint on the template property -->
+  <IfcRelAssociatesConstraint id="i13" GlobalId="1Eo6wqdA91XeGXEnESADyM">
     <OwnerHistory ref="i2" xsi:type="IfcOwnerHistory" xsi:nil="true" />
-    <RelatedPropertySets>
-      <IfcPropertySet ref="i15" pos="0" xsi:nil="true" />
-    </RelatedPropertySets>
-    <RelatingTemplate ref="i10" xsi:type="IfcPropertySetTemplate" xsi:nil="true" />
-  </IfcRelDefinesByTemplate>
+    <RelatedObjects>
+      <IfcSimplePropertyTemplate ref="i12" pos="0" xsi:nil="true" />
+    </RelatedObjects>
+    <RelatingConstraint ref="i14" xsi:type="IfcMetric" xsi:nil="true" />
+  </IfcRelAssociatesConstraint>
+  <!-- Document reference pointing to relevant document. GUID is used for unique identification. -->
+  <IfcDocumentReference id="i16" Location="https://standards.cen.eu" Identification="3bhhlYovD1xOzSEP5n2HRY" Name="EN 772-1" />
+  <!-- Relation associates this property template with the document reference -->
+  <IfcRelAssociatesDocument id="i15" GlobalId="3PZRoOhAP3KxX47WtifK2y">
+    <OwnerHistory ref="i2" xsi:type="IfcOwnerHistory" xsi:nil="true" />
+    <RelatedObjects>
+      <IfcComplexPropertyTemplate ref="i11" pos="0" xsi:nil="true" />
+    </RelatedObjects>
+    <RelatingDocument>
+      <IfcDocumentReference ref="i16" xsi:nil="true" />
+    </RelatingDocument>
+  </IfcRelAssociatesDocument>
 </ifcXML>
