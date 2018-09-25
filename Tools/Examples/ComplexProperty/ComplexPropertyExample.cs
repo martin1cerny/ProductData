@@ -1,8 +1,8 @@
-﻿using Xbim.Ifc4.ExternalReferenceResource;
+﻿using Xbim.Ifc4.ConstraintResource;
+using Xbim.Ifc4.ControlExtension;
+using Xbim.Ifc4.ExternalReferenceResource;
 using Xbim.Ifc4.Kernel;
 using Xbim.Ifc4.MeasureResource;
-using Xbim.Ifc4.ProductExtension;
-using Xbim.Ifc4.PropertyResource;
 using Xbim.Ifc4.SharedComponentElements;
 
 namespace Examples.ComplexProperty
@@ -11,7 +11,7 @@ namespace Examples.ComplexProperty
     {
         public ComplexPropertyExample() : base("Martin", "Cerny", "xBIM Ltd.") { }
 
-        public override string Annotation => @"This example shows how complex properties can be used to describe
+        public override string Annotation => @"This example shows how property templates can be used to describe
 declaration of performance of construction products. This utilises strong measure typing system and
 units from IFC schema. This approach can be used to store CPR data.";
 
@@ -51,88 +51,63 @@ These can be elements, element types, properties or property templates");
 
                 var psetTemplate = New<IfcPropertySetTemplate>(ps =>
                 {
-                    ps.Name = "dimensions";
-                    ps.ApplicableEntity = nameof(IfcElement);
+                    ps.Name = "Essential Characteristics";
+                    ps.ApplicableEntity = nameof(IfcBuildingElementPart);
+                    ps.TemplateType = Xbim.Ifc4.Interfaces.IfcPropertySetTemplateTypeEnum.PSET_TYPEDRIVENOVERRIDE;
                 });
                 Comment(psetTemplate, @"Template of the property set is used to group properties in logical groups.
-This can contain any number of properties with name unique within the set.");
+This can contain any number of properties with the name unique within the set. 'IfcBuildingElementPart' is the best IFC
+entity type fit for a brick so it is used as the applicable entity definition");
 
                 declarations.Add(psetTemplate);
 
-                var lengthTemplate = New<IfcComplexPropertyTemplate>(c =>
+                var lengthTemplate = New<IfcComplexPropertyTemplate>(t =>
                 {
-                    c.Name = "length";
-                    c.UsageName = "length";
-                    c.HasPropertyTemplates.AddRange(new[] {
-                            New<IfcSimplePropertyTemplate>(v => {
-                                v.Name = "Value";
-                                v.TemplateType = Xbim.Ifc4.Interfaces.IfcSimplePropertyTemplateTypeEnum.P_SINGLEVALUE;
-                                v.PrimaryUnit = mm;
-                                v.PrimaryMeasureType = nameof(IfcLengthMeasure);
-                                Comment(v, "Simple name-definition-value property template defining actual value, type of measure (length) and unit (mm)");
-                            }),
-                            New<IfcSimplePropertyTemplate>(v => {
-                                v.Name = "ReferenceDocument";
-                                v.TemplateType = Xbim.Ifc4.Interfaces.IfcSimplePropertyTemplateTypeEnum.P_REFERENCEVALUE;
-                                v.PrimaryMeasureType = nameof(IfcDocumentReference);
-                                Comment(v, "Reference property template pointing to document relevant to the 'length' property");
-                            })
-                        });
+                    t.Name = "dimensions";
+                    t.UsageName = "dimensions";
+                    t.HasPropertyTemplates.Add(
+                        New<IfcSimplePropertyTemplate>(v =>
+                        {
+                            v.Name = "length";
+                            v.TemplateType = Xbim.Ifc4.Interfaces.IfcSimplePropertyTemplateTypeEnum.P_SINGLEVALUE;
+                            v.PrimaryUnit = mm;
+                            v.PrimaryMeasureType = nameof(IfcLengthMeasure);
+                            Comment(v, "Simple name-definition-value property template defining actual value, type of measure (length) and unit (mm)");
+
+                            New<IfcRelAssociatesConstraint>(r =>
+                            {
+                                r.RelatedObjects.Add(v);
+                                r.RelatingConstraint = New<IfcMetric>(m =>
+                                {
+                                    m.Name = "Required length";
+                                    m.ConstraintGrade = Xbim.Ifc4.Interfaces.IfcConstraintEnum.HARD;
+                                    m.Benchmark = Xbim.Ifc4.Interfaces.IfcBenchmarkEnum.EQUALTO;
+                                    m.DataValue = new IfcLengthMeasure(300);
+                                    Comment(m, "Metric constraint used to define required value of 300 mm");
+                                });
+                                Comment(r, "Relation used to set a constraint on the template property");
+                            });
+                        })
+                    );
                 });
                 psetTemplate.HasPropertyTemplates.Add(lengthTemplate);
-                Comment(lengthTemplate, @"Template of the complex property to define all it's aspects. This can contain any number of descriptive properties.
-Both property set template and property template contain globally unique GUID which 
-can be used for global management of definitions and to maintain relations to data dictionaries.");
+                Comment(lengthTemplate, @"Complex property template is used to describe all aspects of the property. 
+Both property set template and property template have globally unique GUID which can be used for 
+global management of definitions and to maintain relations to data dictionaries. ");
 
-
-                var brick = New<IfcBuildingElementPart>(b =>
+                var docRel = New<IfcRelAssociatesDocument>(r =>
                 {
-                    b.Name = "Porotherm 50 EKO+ Profi R";
-                    b.PredefinedType = Xbim.Ifc4.Interfaces.IfcBuildingElementPartTypeEnum.USERDEFINED;
-                    b.ObjectType = "BRICK";
-                });
-                declarations.Add(brick);
-                Comment(brick, @"The best IfcElement subtype for brick is 'IfcBuildingElementPart'. 
-This type should not be considered as significant because authoring tools will often not support all 
-IFC element types and might not provide sufficient configurations or modelling workflows to create
-such a data. Combination of 'PredefinedType = USERDEFINED' and 'ObjectType = ""BRICK""' can be
-used to identify the element. 'IfcBuildingElementPart' should also be used for materials.");
-
-                var pset = New<IfcPropertySet>(ps =>
-                {
-                    ps.Name = psetTemplate.Name;
-                    ps.HasProperties.Add(New<IfcComplexProperty>(c =>
+                    r.RelatedObjects.Add(lengthTemplate);
+                    r.RelatingDocument = New<IfcDocumentReference>(d =>
                     {
-                        c.Name = lengthTemplate.Name?.ToString();
-                        c.UsageName = c.Name;
-                        c.HasProperties.AddRange(new IfcProperty[] {
-                            New<IfcPropertySingleValue>(v => {
-                                v.Name = "Value";
-                                v.Unit = mm;
-                                v.NominalValue = new IfcLengthMeasure(300);
-                            }),
-                            New<IfcPropertyReferenceValue>(v => {
-                                v.Name = "ReferenceDocument";
-                                v.PropertyReference = New<IfcDocumentReference>(d => {
-                                    d.Name = "EN 772-1";
-                                });
-                            })
-                        });
-                    }));
-                    Comment(ps, @"This property set contains actual values and points to the defining template.");
+                        d.Name = "EN 772-1";
+                        d.Location = new IfcURIReference("https://standards.cen.eu");
+                        d.Identification = "3bhhlYovD1xOzSEP5n2HRY";
+                        Comment(d, "Document reference pointing to relevant document. GUID is used for unique identification.");
+                    });
                 });
-                New<IfcRelDefinesByTemplate>(r =>
-                {
-                    r.RelatedPropertySets.Add(pset);
-                    r.RelatingTemplate = psetTemplate;
-                    Comment(r, "This relation binds actual property set with values to it's template.");
-                });
-                New<IfcRelDefinesByProperties>(r =>
-                {
-                    r.RelatingPropertyDefinition = pset;
-                    r.RelatedObjects.Add(brick);
-                    Comment(r, "This relation sets the set of properties to the library element");
-                });
+                Comment(docRel, @"Relation associates this property template with the document reference");
+
 
                 Comment(lib.OwnerHistory, @"Owner history is used to define ownership of the information.");
 
