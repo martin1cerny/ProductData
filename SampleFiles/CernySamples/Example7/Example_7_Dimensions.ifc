@@ -1,0 +1,91 @@
+/****************************************************************
+ * This example shows how property templates can be used to describe
+ * declaration of performance of construction products. This utilises strong measure typing system and
+ * units from IFC schema. This approach can be used to store CPR data.
+ * 
+ * Created: 2018-09-25T13:54:15 (UTC)
+ ****************************************************************/
+ISO-10303-21;
+HEADER;
+FILE_DESCRIPTION (('ProductDataView'), '2;1');
+FILE_NAME ('', '2018-09-25T15:54:14', (''), (''), 'Xbim File Processor version 4.0.0.0', 'Xbim version 4.0.0.0', '');
+FILE_SCHEMA (('IFC4'));
+ENDSEC;
+DATA;
+
+/* * *
+ * Root element of this file. Because this doesn't define a specific instance in the building it is a library.
+ * It can be used to declare elements, properties, property templates and other library objects 
+ * which can be later used in the actual design.
+ * IFCPROJECTLIBRARY(GlobalId, OwnerHistory, Name, Description, ObjectType, LongName, Phase, RepresentationContexts, UnitsInContext) */
+#1=IFCPROJECTLIBRARY('0zODPJQgb5Uu3n9H$q9Lg8',#2,'Declaration of Performance',$,$,$,$,$,#8);
+
+/* * *
+ * Owner history is used to define ownership of the information.
+ * IFCOWNERHISTORY(OwningUser, OwningApplication, State, ChangeAction, LastModifiedDate, LastModifyingUser, LastModifyingApplication, CreationDate) */
+#2=IFCOWNERHISTORY(#5,#6,$,.ADDED.,1537890855,$,$,0);
+#3=IFCPERSON($,'Martin','Cerny',$,$,$,$,$);
+#4=IFCORGANIZATION($,'xBIM Ltd.',$,$,$);
+#5=IFCPERSONANDORGANIZATION(#3,#4,$);
+#6=IFCAPPLICATION(#4,'4.0','xBIM Toolkit','xBIM');
+
+/* * *
+ * All units are machine readable in IFC. They are either SI or their definitions
+ * are infered from SI units. Because of that, relations between all units are well defined,
+ * reliable and it is possible to validate them.
+ * IFCSIUNIT(Dimensions, UnitType, Prefix, Name) */
+#7=IFCSIUNIT(*,.LENGTHUNIT.,.MILLI.,.METRE.);
+
+/* * *
+ * Units are assigned to the library project to that when units are not explicitely
+ * defined for properties thay can be found on the project level. There are exact rules to find units for
+ * all measure types (for example 'LENGTHUNIT' for 'IfcLengthMeasue' etc.)
+ * IFCUNITASSIGNMENT(Units) */
+#8=IFCUNITASSIGNMENT((#7));
+
+/* * *
+ * This relation points to all definitions declared within the scope of the library.
+ * These can be elements, element types, properties or property templates
+ * IFCRELDECLARES(GlobalId, OwnerHistory, Name, Description, RelatingContext, RelatedDefinitions) */
+#9=IFCRELDECLARES('3kvUl0F3551OtUfK5gR_3k',#2,$,$,#1,(#10));
+
+/* * *
+ * Template of the property set is used to group properties in logical groups.
+ * This can contain any number of properties with the name unique within the set. 'IfcBuildingElementPart' is the best IFC
+ * entity type fit for a brick so it is used as the applicable entity definition
+ * IFCPROPERTYSETTEMPLATE(GlobalId, OwnerHistory, Name, Description, TemplateType, ApplicableEntity, HasPropertyTemplates) */
+#10=IFCPROPERTYSETTEMPLATE('07nrkXINH5OuYnDJ3CU$Ql',#2,'Essential Characteristics',$,.PSET_TYPEDRIVENOVERRIDE.,'IfcBuildingElementPart',(#11));
+
+/* * *
+ * Metric constraint used to define required value of 300 mm
+ * IFCMETRIC(Name, Description, ConstraintGrade, ConstraintSource, CreatingActor, CreationTime, UserDefinedGrade, Benchmark, ValueSource, DataValue, ReferencePath) */
+#14=IFCMETRIC('Required length',$,.HARD.,$,$,$,$,.EQUALTO.,$,IFCLENGTHMEASURE(300.),$);
+
+/* * *
+ * Relation used to set a constraint on the template property
+ * IFCRELASSOCIATESCONSTRAINT(GlobalId, OwnerHistory, Name, Description, RelatedObjects, Intent, RelatingConstraint) */
+#13=IFCRELASSOCIATESCONSTRAINT('1Eo6wqdA91XeGXEnESADyM',#2,$,$,(#12),$,#14);
+
+/* * *
+ * Simple name-definition-value property template defining actual value, type of measure (length) and unit (mm)
+ * IFCSIMPLEPROPERTYTEMPLATE(GlobalId, OwnerHistory, Name, Description, TemplateType, PrimaryMeasureType, SecondaryMeasureType, Enumerators, PrimaryUnit, SecondaryUnit, Expression, AccessState) */
+#12=IFCSIMPLEPROPERTYTEMPLATE('0hLKBcnXD4Cug08sFKBN5q',#2,'length',$,.P_SINGLEVALUE.,'IfcLengthMeasure',$,$,#7,$,$,$);
+
+/* * *
+ * Complex property template is used to describe all aspects of the property. 
+ * Both property set template and property template have globally unique GUID which can be used for 
+ * global management of definitions and to maintain relations to data dictionaries. 
+ * IFCCOMPLEXPROPERTYTEMPLATE(GlobalId, OwnerHistory, Name, Description, UsageName, TemplateType, HasPropertyTemplates) */
+#11=IFCCOMPLEXPROPERTYTEMPLATE('0l1LzTndvERx_P9a3hyvyr',#2,'dimensions',$,'dimensions',$,(#12));
+
+/* * *
+ * Document reference pointing to relevant document. GUID is used for unique identification.
+ * IFCDOCUMENTREFERENCE(Location, Identification, Name, Description, ReferencedDocument) */
+#16=IFCDOCUMENTREFERENCE('https://standards.cen.eu','3bhhlYovD1xOzSEP5n2HRY','EN 772-1',$,$);
+
+/* * *
+ * Relation associates this property template with the document reference
+ * IFCRELASSOCIATESDOCUMENT(GlobalId, OwnerHistory, Name, Description, RelatedObjects, RelatingDocument) */
+#15=IFCRELASSOCIATESDOCUMENT('3PZRoOhAP3KxX47WtifK2y',#2,$,$,(#11),#16);
+ENDSEC;
+END-ISO-10303-21;
