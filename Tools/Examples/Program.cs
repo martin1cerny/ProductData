@@ -8,6 +8,7 @@
             new ComplexProperty.ComplexPropertyExample().Run();
             new DynamicValues.DynamicValuesExample().Run();
             new BasicExample.BasicCodeExample().Run();
+            new ComplexProperty.NPDExample().Run();
         }
     }
 }

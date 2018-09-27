@@ -80,6 +80,7 @@
   <ItemGroup>
     <Compile Include="AbstractExample.cs" />
     <Compile Include="BasicExample\BasicCodeExample.cs" />
+    <Compile Include="ComplexProperty\NPDExample.cs" />
     <Compile Include="ComplexProperty\ComplexPropertyExample.cs" />
     <Compile Include="DynamicValues\DynamicValuesExample.cs" />
     <Compile Include="Helper.cs" />
@@ -91,6 +92,10 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\ColorCode\ColorCode.csproj">
+      <Project>{37438935-d221-4fd8-a10e-4ec5356b0f94}</Project>
+      <Name>ColorCode</Name>
+    </ProjectReference>
     <ProjectReference Include="..\SchemaValidator\SchemaValidator.csproj">
       <Project>{25de284d-60ad-44d3-b320-a244d781ac20}</Project>
       <Name>SchemaValidator</Name>
