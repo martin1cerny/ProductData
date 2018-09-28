@@ -19,6 +19,18 @@ Files are checked for syntactic errors, e.g.
 
 These are all written both to console and to *.log* file next to the original IFC file. The validator can take both *.ifc* and *.ifcXML* files. Part of the functionality is specific to the IFC4 schema.
 
+### Use the Schema Validator in command line mode
+
+1. Download the latest build of the SchemaValidator.zip from [here](https://ci.appveyor.com/api/projects/klacol/productdata/artifacts/Tools%2FSchemaValidator%2Fbin%2FSchemaValidator.zip)
+2. Unzip the build into a local folder an your computer
+3. Start the SchemeValidator.exe as following
+```powershell
+SchemaValidator.exe "The file you want to validate.ifcXML"
+```
+4. Look into the log file, that is located next to your IFC file. If the file is emtpy, your file is valid, Good Job :-)
+
+### Use the Schema Validator in your own software
+
 Validator can also be referenced in other projects as a library. In that scenario models created with 
 [xBIM Toolkit](https://github.com/xBimTeam) can be validated to meet base schema constrains before they are saved. The use is like this:
 
