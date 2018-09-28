@@ -1,3 +1,6 @@
+#------------------------------------#
+#  Build the SchemaValidator.exe     #
+#------------------------------------#
 version: 1.0.{build}
 image: Visual Studio 2017
 configuration: Release
@@ -17,3 +20,10 @@ build:
 artifacts:
 - path: Tools\SchemaValidator\bin\$(configuration)
   name: SchemaValidator
+  
+#------------------------------------#
+#    Run the SchemaValidator.exe     #
+#------------------------------------#
+on_success:
+  - cd Tools\SchemaValidator\bin\$(configuration)
+  - SchemaValidator.exe "SampleFiles/bSDD product room sample/bSDD product room sample.ifcXML"
