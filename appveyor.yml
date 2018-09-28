@@ -25,5 +25,5 @@ artifacts:
 #    Run the SchemaValidator.exe     #
 #------------------------------------#
 on_success:
-  - cd "C:\projects\productdata\Tools\SchemaValidator\bin\Release"
-  - SchemaValidator.exe "SampleFiles/bSDD product room sample/bSDD product room sample.ifcXML"
+  - cd "{APPVEYOR_BUILD_FOLDER}\Tools\SchemaValidator\bin\Release"
+  - SchemaValidator.exe "{APPVEYOR_BUILD_FOLDER}\SampleFiles\bSDD product room sample\bSDD product room sample.ifcXML"
