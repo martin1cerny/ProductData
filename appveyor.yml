@@ -12,5 +12,5 @@ before_build:
   - cd Tools
   - nuget restore
 build:
-  project: Tools.sln
+  project: Tools/Tools.sln
   verbosity: detailed
