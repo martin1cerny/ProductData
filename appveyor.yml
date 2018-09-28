@@ -13,4 +13,7 @@ before_build:
   - nuget restore
 build:
   project: Tools/Tools.sln
-  verbosity: detailed
+  verbosity: minimal
+artifacts:
+- path: Tools\SchemaValidator\bin\$(configuration)
+  name: SchemaValidator
