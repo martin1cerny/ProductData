@@ -9,7 +9,8 @@ assembly_info:
   assembly_file_version: '{version}'
   assembly_informational_version: '{version}'
 before_build:
+  - cd Tools
   - nuget restore
 build:
-  project: Tools\Tools.sln
+  project: Tools.sln
   verbosity: detailed
