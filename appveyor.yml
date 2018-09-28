@@ -26,4 +26,9 @@ artifacts:
 #------------------------------------#
 on_success:
   - cd "C:\projects\ProductData\Tools\SchemaValidator\bin\Release"
+  - SchemaValidator.exe "C:\projects\ProductData\IFC4 Library\IkeaKitchenCabinets.ifcXML"
   - SchemaValidator.exe "C:\projects\ProductData\SampleFiles\bSDD product room sample\bSDD product room sample.ifcXML"
+  - SchemaValidator.exe "C:\projects\ProductData\SampleFiles\CAFM-Connect-ProductsSample\CAFM-Connect-ProductsSample.ifcXML"
+  - SchemaValidator.exe "C:\projects\ProductData\SampleFiles\CAFM-Connect-ProductsSample\PreClassifiedProduct.ifcXML"
+  - SchemaValidator.exe "C:\projects\ProductData\SampleFiles\SampleFiles\CatalogExample\catalogExample.ifc"
+  - SchemaValidator.exe "C:\projects\ProductData\SampleFiles\SampleFiles\CatalogExample\catalogExample.ifcXML"
