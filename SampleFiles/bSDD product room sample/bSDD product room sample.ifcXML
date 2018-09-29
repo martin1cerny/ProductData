@@ -13,10 +13,10 @@
 		<OwnerHistory id="i1001" CreationDate="12345" LastModifiedDate="12345" ChangeAction="nochange" State="readonly" path="api.myPreferredDictServer.org">
 			<OwningUser>
 				<ThePerson id="i1002" FamilyName="Aengenvoort" GivenName="Klaus"/>
-				<TheOrganization id="i1003" Identification="bSIPR"  Name="buildingSMART product room" Description="A group of specialists for BIM products"/>
+				<TheOrganization id="i1003" Identification="bSIPR" Name="buildingSMART product room" Description="A group of specialists for BIM products"/>
 			</OwningUser>
 			<OwningApplication id="i1004" ApplicationFullName="" ApplicationIdentifier="" Version="">
-				<ApplicationDeveloper Identification="myPreferredDictServer"  Name="" Description="My preferred Dictionary running according to CEN-TC442" path="api.myPreferredDictServer.org"/>
+				<ApplicationDeveloper Identification="myPreferredDictServer" Name="" Description="My preferred Dictionary running according to CEN-TC442" path="api.myPreferredDictServer.org"/>
 			</OwningApplication>
 		</OwnerHistory>
 		<UnitsInContext>
@@ -45,7 +45,7 @@
 						</IfcDerivedUnitElement>
 						<IfcDerivedUnitElement id="i111" Exponent="-1">
 							<Unit xsi:type="IfcConversionBasedUnit" Name="Hour" UnitType="timeunit">
-							    <Dimensions TimeExponent="1"/>
+								<Dimensions TimeExponent="1"/>
 								<ConversionFactor>
 									<ValueComponent>
 										<IfcTimeMeasure-wrapper>3600.</IfcTimeMeasure-wrapper>
@@ -151,7 +151,7 @@
 											</IfcDerivedUnitElement>
 											<IfcDerivedUnitElement id="i21116" Exponent="-1">
 												<Unit xsi:type="IfcConversionBasedUnit" Name="Hour" UnitType="timeunit">
-												<Dimensions TimeExponent="1"/>
+													<Dimensions TimeExponent="1"/>
 													<ConversionFactor>
 														<ValueComponent>
 															<IfcTimeMeasure-wrapper>3600.</IfcTimeMeasure-wrapper>
@@ -283,10 +283,10 @@
 									<IfcDerivedUnit id="i999969" UnitType="massdensityunit">
 										<Elements>
 											<IfcDerivedUnitElement id="i999970" Exponent="1">
-												<Unit xsi:type="IfcSIUnit" UnitType="massunit" Prefix="kilo" Name="gram"/>
+												<Unit xsi:type="IfcSIUnit" id="i899989" UnitType="massunit" Prefix="kilo" Name="gram"/>
 											</IfcDerivedUnitElement>
 											<IfcDerivedUnitElement id="i999971" Exponent="-3">
-												<Unit xsi:type="IfcSIUnit" UnitType="lengthunit" Name="metre"/>
+												<Unit xsi:type="IfcSIUnit" id="i899988" UnitType="lengthunit" Name="metre"/>
 											</IfcDerivedUnitElement>
 										</Elements>
 									</IfcDerivedUnit>
@@ -297,10 +297,10 @@
 									<IfcDerivedUnit id="i999972" UnitType="massdensityunit">
 										<Elements>
 											<IfcDerivedUnitElement id="i999973" Exponent="1">
-												<Unit xsi:type="IfcSIUnit" UnitType="massunit" Prefix="kilo" Name="gram"/>
+												<Unit xsi:type="IfcSIUnit" id="i899987" UnitType="massunit" Prefix="kilo" Name="gram"/>
 											</IfcDerivedUnitElement>
 											<IfcDerivedUnitElement id="i999974" Exponent="-3">
-												<Unit xsi:type="IfcSIUnit" UnitType="lengthunit" Name="metre"/>
+												<Unit xsi:type="IfcSIUnit" id="i899986" UnitType="lengthunit" Name="metre"/>
 											</IfcDerivedUnitElement>
 										</Elements>
 									</IfcDerivedUnit>
@@ -311,10 +311,10 @@
 									<IfcDerivedUnit id="i999975" UnitType="massdensityunit">
 										<Elements>
 											<IfcDerivedUnitElement id="i999976" Exponent="1">
-												<Unit xsi:type="IfcSIUnit" UnitType="massunit" Prefix="kilo" Name="gram"/>
+												<Unit xsi:type="IfcSIUnit" id="i899984" UnitType="massunit" Prefix="kilo" Name="gram"/>
 											</IfcDerivedUnitElement>
 											<IfcDerivedUnitElement id="i999977" Exponent="-3">
-												<Unit xsi:type="IfcSIUnit" UnitType="lengthunit" Name="metre"/>
+												<Unit xsi:type="IfcSIUnit" id="i899985" UnitType="lengthunit" Name="metre"/>
 											</IfcDerivedUnitElement>
 										</Elements>
 									</IfcDerivedUnit>
@@ -343,10 +343,10 @@
 									<IfcDerivedUnit id="i999978" UnitType="areadensityunit">
 										<Elements>
 											<IfcDerivedUnitElement id="i999979" Exponent="1">
-												<Unit xsi:type="IfcSIUnit" UnitType="forceunit" Name="watt"/>
+												<Unit xsi:type="IfcSIUnit" id="i899980" UnitType="massunit" Prefix="kilo" Name="gram"/>
 											</IfcDerivedUnitElement>
 											<IfcDerivedUnitElement id="i999980" Exponent="-2">
-												<Unit xsi:type="IfcSIUnit" UnitType="lengthunit" Prefix="milli" Name="metre"/>
+												<Unit xsi:type="IfcSIUnit" id="i899981" UnitType="lengthunit" Prefix="milli" Name="metre"/>
 											</IfcDerivedUnitElement>
 										</Elements>
 									</IfcDerivedUnit>
@@ -357,10 +357,10 @@
 									<IfcDerivedUnit id="i999981" UnitType="areadensityunit">
 										<Elements>
 											<IfcDerivedUnitElement id="i999982" Exponent="1">
-												<Unit xsi:type="IfcSIUnit" UnitType="forceunit" Name="watt"/>
+												<Unit xsi:type="IfcSIUnit" id="i899982" UnitType="massunit" Prefix="kilo" Name="gram"/>
 											</IfcDerivedUnitElement>
 											<IfcDerivedUnitElement id="i999983" Exponent="-2">
-												<Unit xsi:type="IfcSIUnit" UnitType="lengthunit" Prefix="milli" Name="metre"/>
+												<Unit xsi:type="IfcSIUnit" id="i899983" UnitType="lengthunit" Prefix="milli" Name="metre"/>
 											</IfcDerivedUnitElement>
 										</Elements>
 									</IfcDerivedUnit>
