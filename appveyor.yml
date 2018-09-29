@@ -24,7 +24,7 @@ artifacts:
 #------------------------------------#
 #    Run the SchemaValidator.exe     #
 #------------------------------------#
-on_success:
+on_finish:
   - cd "C:\projects\ProductData\Tools\SchemaValidator\bin\Release"
   - SchemaValidator.exe "C:\projects\ProductData\IFC4 Library\IkeaKitchenCabinets.ifcXML"
   - SchemaValidator.exe "C:\projects\ProductData\SampleFiles\bSDD product room sample\bSDD product room sample.ifcXML"
