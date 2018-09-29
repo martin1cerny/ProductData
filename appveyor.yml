@@ -24,10 +24,5 @@ artifacts:
 #------------------------------------#
 #    Run the SchemaValidator.exe     #
 #------------------------------------#
-on_finish:
-  - C:\projects\ProductData\Tools\SchemaValidator\bin\Release\SchemaValidator.exe "C:\projects\ProductData\IFC4 Library\IkeaKitchenCabinets.ifcXML"
-  - C:\projects\ProductData\Tools\SchemaValidator\bin\Release\SchemaValidator.exe "C:\projects\ProductData\SampleFiles\bSDD product room sample\bSDD product room sample.ifcXML"
-  - C:\projects\ProductData\Tools\SchemaValidator\bin\Release\SchemaValidator.exe "C:\projects\ProductData\SampleFiles\CAFM-Connect-ProductsSample\CAFM-Connect-ProductsSample.ifcXML"
-  - C:\projects\ProductData\Tools\SchemaValidator\bin\Release\SchemaValidator.exe "C:\projects\ProductData\SampleFiles\CAFM-Connect-ProductsSample\PreClassifiedProduct.ifcXML"
-  - C:\projects\ProductData\Tools\SchemaValidator\bin\Release\SchemaValidator.exe "C:\projects\ProductData\SampleFiles\SampleFiles\CatalogExample\catalogExample.ifc"
-  - C:\projects\ProductData\Tools\SchemaValidator\bin\Release\SchemaValidator.exe "C:\projects\ProductData\SampleFiles\SampleFiles\CatalogExample\catalogExample.ifcXML"
+on_finish
+  - ./ValidateSampleFiles.ps1
