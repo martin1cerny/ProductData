@@ -25,12 +25,4 @@ artifacts:
 #    Run the SchemaValidator.exe     #
 #------------------------------------#
 on_finish:
-  - ps: $ValidatorExe="Tools\SchemaValidator\bin\Release\SchemaValidator.exe"
-        $SampleFiles = Get-ChildItem  -Recurse -Include *.ifc,*.ifcXML
-        foreach ($file in $SampleFiles | Sort-Object -Property FullName) 
-        {
-           Write-Host "++++++++++++++++++++++++++++++++++++++"
-           Write-Host Validating $file.Name
-           Write-Host "++++++++++++++++++++++++++++++++++++++"  
-           & $ValidatorExe $file.FullName
-        }
+  - ./ValidateSampleFiles.ps1
