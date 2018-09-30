@@ -10,9 +10,9 @@
 		<authorization>CEN-TC442-WG2-TG3</authorization>
 		<documentation>https://www.cafm-connect.org</documentation>
 	</header>
-	<IfcProject id="i100"/>
+	<IfcProject id="i100" GlobalId="1DbshdzGD71ejurQqQcxba" Name="NameOfProject"/>
 	<IfcProjectLibrary id="i102" GlobalId="1DbshdzGD71ejurQqQcxbw" Name="brick product data templates" Description="" Phase=""/>
-	<IfcRelDeclares id="i103">
+	<IfcRelDeclares id="i103" GlobalId="1DbshdzGD71ejurQqQcxbc">
 		<RelatingContext xsi:nil="true" ref="i102" xsi:type="IfcProjectLibrary"/>
 		<RelatedDefinitions>
 			<IfcTypeProduct id="i104" GlobalId="1DbshTzGD71ejurQqQcxbw" Name="Brick Product" Description="Description of Brick Product" ApplicableOccurrence="IfcWall" Tag="MyProductTypeNumber"/>
@@ -39,7 +39,7 @@
 		</RelatedDefinitions>
 	</IfcRelDeclares>
 	<IfcProjectLibrary id="i114" GlobalId="1cNmLkRwD1X9OIYSEpvavF" Name="brick product data" Description=""/>
-	<IfcRelDeclares id="i115">
+	<IfcRelDeclares id="i115" GlobalId="1DbshdzGD71ejurQqQcxbx">
 		<RelatingContext xsi:nil="true" ref="i102" xsi:type="IfcProjectLibrary"/>
 		<RelatedDefinitions>
 			<IfcTypeProduct id="i116" GlobalId="0cQNoiuyfEBQ1OXEJUplyy" Name="Brick Product variant #1" Description="Description of Brick Product variant #1" ApplicableOccurrence="IfcWall" Tag="1">
@@ -884,181 +884,181 @@
 			</IfcTypeProduct>
 		</RelatedDefinitions>
 	</IfcRelDeclares>
-	<IfcRelDefinesByTemplate id="i118">
+	<IfcRelDefinesByTemplate GlobalId="2tuax0G2r64xBxVDoBFTc6" id="i118">
 		<RelatedPropertySets>
 			<IfcPropertySet xsi:nil="true" ref="i117"/>
 		</RelatedPropertySets>
 		<RelatingTemplate xsi:nil="true" ref="i105"/>
 	</IfcRelDefinesByTemplate>
-	<IfcRelDefinesByTemplate id="i125">
+	<IfcRelDefinesByTemplate GlobalId="2tuax0G2r64xBxVDoBFTc6" id="i125">
 		<RelatedPropertySets>
 			<IfcPropertySet xsi:nil="true" ref="i124"/>
 		</RelatedPropertySets>
 		<RelatingTemplate xsi:nil="true" ref="i105"/>
 	</IfcRelDefinesByTemplate>
-	<IfcRelDefinesByTemplate id="i132">
+	<IfcRelDefinesByTemplate GlobalId="2tuax0G2r64xBxVDoBFTc6" id="i132">
 		<RelatedPropertySets>
 			<IfcPropertySet xsi:nil="true" ref="i131"/>
 		</RelatedPropertySets>
 		<RelatingTemplate xsi:nil="true" ref="i105"/>
 	</IfcRelDefinesByTemplate>
-	<IfcRelDefinesByTemplate id="i139">
+	<IfcRelDefinesByTemplate GlobalId="2tuax0G2r64xBxVDoBFTc6" id="i139">
 		<RelatedPropertySets>
 			<IfcPropertySet xsi:nil="true" ref="i138"/>
 		</RelatedPropertySets>
 		<RelatingTemplate xsi:nil="true" ref="i105"/>
 	</IfcRelDefinesByTemplate>
-	<IfcRelDefinesByTemplate id="i146">
+	<IfcRelDefinesByTemplate GlobalId="2tuax0G2r64xBxVDoBFTc6" id="i146">
 		<RelatedPropertySets>
 			<IfcPropertySet xsi:nil="true" ref="i145"/>
 		</RelatedPropertySets>
 		<RelatingTemplate xsi:nil="true" ref="i105"/>
 	</IfcRelDefinesByTemplate>
-	<IfcRelDefinesByTemplate id="i153">
+	<IfcRelDefinesByTemplate GlobalId="2tuax0G2r64xBxVDoBFTc6" id="i153">
 		<RelatedPropertySets>
 			<IfcPropertySet xsi:nil="true" ref="i152"/>
 		</RelatedPropertySets>
 		<RelatingTemplate xsi:nil="true" ref="i105"/>
 	</IfcRelDefinesByTemplate>
-	<IfcRelDefinesByTemplate id="i160">
+	<IfcRelDefinesByTemplate GlobalId="2tuax0G2r64xBxVDoBFTc6" id="i160">
 		<RelatedPropertySets>
 			<IfcPropertySet xsi:nil="true" ref="i159"/>
 		</RelatedPropertySets>
 		<RelatingTemplate xsi:nil="true" ref="i105"/>
 	</IfcRelDefinesByTemplate>
-	<IfcRelDefinesByTemplate id="i167">
+	<IfcRelDefinesByTemplate GlobalId="2tuax0G2r64xBxVDoBFTc6" id="i167">
 		<RelatedPropertySets>
 			<IfcPropertySet xsi:nil="true" ref="i166"/>
 		</RelatedPropertySets>
 		<RelatingTemplate xsi:nil="true" ref="i105"/>
 	</IfcRelDefinesByTemplate>
-	<IfcRelDefinesByTemplate id="i174">
+	<IfcRelDefinesByTemplate GlobalId="2tuax0G2r64xBxVDoBFTc6" id="i174">
 		<RelatedPropertySets>
 			<IfcPropertySet xsi:nil="true" ref="i173"/>
 		</RelatedPropertySets>
 		<RelatingTemplate xsi:nil="true" ref="i105"/>
 	</IfcRelDefinesByTemplate>
-	<IfcRelDefinesByTemplate id="i181">
+	<IfcRelDefinesByTemplate GlobalId="2tuax0G2r64xBxVDoBFTc6" id="i181">
 		<RelatedPropertySets>
 			<IfcPropertySet xsi:nil="true" ref="i180"/>
 		</RelatedPropertySets>
 		<RelatingTemplate xsi:nil="true" ref="i105"/>
 	</IfcRelDefinesByTemplate>
-	<IfcRelDefinesByTemplate id="i188">
+	<IfcRelDefinesByTemplate GlobalId="2tuax0G2r64xBxVDoBFTc6" id="i188">
 		<RelatedPropertySets>
 			<IfcPropertySet xsi:nil="true" ref="i187"/>
 		</RelatedPropertySets>
 		<RelatingTemplate xsi:nil="true" ref="i105"/>
 	</IfcRelDefinesByTemplate>
-	<IfcRelDefinesByTemplate id="i195">
+	<IfcRelDefinesByTemplate GlobalId="2tuax0G2r64xBxVDoBFTc6" id="i195">
 		<RelatedPropertySets>
 			<IfcPropertySet xsi:nil="true" ref="i194"/>
 		</RelatedPropertySets>
 		<RelatingTemplate xsi:nil="true" ref="i105"/>
 	</IfcRelDefinesByTemplate>
-	<IfcRelDefinesByTemplate id="i202">
+	<IfcRelDefinesByTemplate GlobalId="2tuax0G2r64xBxVDoBFTc6" id="i202">
 		<RelatedPropertySets>
 			<IfcPropertySet xsi:nil="true" ref="i201"/>
 		</RelatedPropertySets>
 		<RelatingTemplate xsi:nil="true" ref="i105"/>
 	</IfcRelDefinesByTemplate>
-	<IfcRelDefinesByTemplate id="i209">
+	<IfcRelDefinesByTemplate GlobalId="2tuax0G2r64xBxVDoBFTc6" id="i209">
 		<RelatedPropertySets>
 			<IfcPropertySet xsi:nil="true" ref="i208"/>
 		</RelatedPropertySets>
 		<RelatingTemplate xsi:nil="true" ref="i105"/>
 	</IfcRelDefinesByTemplate>
-	<IfcRelDefinesByTemplate id="i216">
+	<IfcRelDefinesByTemplate GlobalId="2tuax0G2r64xBxVDoBFTc6" id="i216">
 		<RelatedPropertySets>
 			<IfcPropertySet xsi:nil="true" ref="i215"/>
 		</RelatedPropertySets>
 		<RelatingTemplate xsi:nil="true" ref="i105"/>
 	</IfcRelDefinesByTemplate>
-	<IfcRelDefinesByTemplate id="i223">
+	<IfcRelDefinesByTemplate GlobalId="2tuax0G2r64xBxVDoBFTc6" id="i223">
 		<RelatedPropertySets>
 			<IfcPropertySet xsi:nil="true" ref="i222"/>
 		</RelatedPropertySets>
 		<RelatingTemplate xsi:nil="true" ref="i105"/>
 	</IfcRelDefinesByTemplate>
-	<IfcRelDefinesByTemplate id="i230">
+	<IfcRelDefinesByTemplate GlobalId="2tuax0G2r64xBxVDoBFTc6" id="i230">
 		<RelatedPropertySets>
 			<IfcPropertySet xsi:nil="true" ref="i229"/>
 		</RelatedPropertySets>
 		<RelatingTemplate xsi:nil="true" ref="i105"/>
 	</IfcRelDefinesByTemplate>
-	<IfcRelDefinesByTemplate id="i237">
+	<IfcRelDefinesByTemplate GlobalId="2tuax0G2r64xBxVDoBFTc6" id="i237">
 		<RelatedPropertySets>
 			<IfcPropertySet xsi:nil="true" ref="i236"/>
 		</RelatedPropertySets>
 		<RelatingTemplate xsi:nil="true" ref="i105"/>
 	</IfcRelDefinesByTemplate>
-	<IfcRelDefinesByTemplate id="i244">
+	<IfcRelDefinesByTemplate GlobalId="2tuax0G2r64xBxVDoBFTc6" id="i244">
 		<RelatedPropertySets>
 			<IfcPropertySet xsi:nil="true" ref="i243"/>
 		</RelatedPropertySets>
 		<RelatingTemplate xsi:nil="true" ref="i105"/>
 	</IfcRelDefinesByTemplate>
-	<IfcRelDefinesByTemplate id="i251">
+	<IfcRelDefinesByTemplate GlobalId="2tuax0G2r64xBxVDoBFTc6" id="i251">
 		<RelatedPropertySets>
 			<IfcPropertySet xsi:nil="true" ref="i250"/>
 		</RelatedPropertySets>
 		<RelatingTemplate xsi:nil="true" ref="i105"/>
 	</IfcRelDefinesByTemplate>
-	<IfcRelDefinesByTemplate id="i258">
+	<IfcRelDefinesByTemplate GlobalId="2tuax0G2r64xBxVDoBFTc6" id="i258">
 		<RelatedPropertySets>
 			<IfcPropertySet xsi:nil="true" ref="i257"/>
 		</RelatedPropertySets>
 		<RelatingTemplate xsi:nil="true" ref="i105"/>
 	</IfcRelDefinesByTemplate>
-	<IfcRelDefinesByTemplate id="i265">
+	<IfcRelDefinesByTemplate GlobalId="2tuax0G2r64xBxVDoBFTc6" id="i265">
 		<RelatedPropertySets>
 			<IfcPropertySet xsi:nil="true" ref="i264"/>
 		</RelatedPropertySets>
 		<RelatingTemplate xsi:nil="true" ref="i105"/>
 	</IfcRelDefinesByTemplate>
-	<IfcRelDefinesByTemplate id="i272">
+	<IfcRelDefinesByTemplate GlobalId="2tuax0G2r64xBxVDoBFTc6" id="i272">
 		<RelatedPropertySets>
 			<IfcPropertySet xsi:nil="true" ref="i271"/>
 		</RelatedPropertySets>
 		<RelatingTemplate xsi:nil="true" ref="i105"/>
 	</IfcRelDefinesByTemplate>
-	<IfcRelDefinesByTemplate id="i279">
+	<IfcRelDefinesByTemplate GlobalId="2tuax0G2r64xBxVDoBFTc6" id="i279">
 		<RelatedPropertySets>
 			<IfcPropertySet xsi:nil="true" ref="i278"/>
 		</RelatedPropertySets>
 		<RelatingTemplate xsi:nil="true" ref="i105"/>
 	</IfcRelDefinesByTemplate>
-	<IfcRelDefinesByTemplate id="i286">
+	<IfcRelDefinesByTemplate GlobalId="2tuax0G2r64xBxVDoBFTc6" id="i286">
 		<RelatedPropertySets>
 			<IfcPropertySet xsi:nil="true" ref="i285"/>
 		</RelatedPropertySets>
 		<RelatingTemplate xsi:nil="true" ref="i105"/>
 	</IfcRelDefinesByTemplate>
-	<IfcRelDefinesByTemplate id="i293">
+	<IfcRelDefinesByTemplate GlobalId="2tuax0G2r64xBxVDoBFTc6" id="i293">
 		<RelatedPropertySets>
 			<IfcPropertySet xsi:nil="true" ref="i292"/>
 		</RelatedPropertySets>
 		<RelatingTemplate xsi:nil="true" ref="i105"/>
 	</IfcRelDefinesByTemplate>
-	<IfcRelDefinesByTemplate id="i300">
+	<IfcRelDefinesByTemplate GlobalId="2tuax0G2r64xBxVDoBFTc6" id="i300">
 		<RelatedPropertySets>
 			<IfcPropertySet xsi:nil="true" ref="i299"/>
 		</RelatedPropertySets>
 		<RelatingTemplate xsi:nil="true" ref="i105"/>
 	</IfcRelDefinesByTemplate>
-	<IfcRelDefinesByTemplate id="i307">
+	<IfcRelDefinesByTemplate GlobalId="2tuax0G2r64xBxVDoBFTc6" id="i307">
 		<RelatedPropertySets>
 			<IfcPropertySet xsi:nil="true" ref="i306"/>
 		</RelatedPropertySets>
 		<RelatingTemplate xsi:nil="true" ref="i105"/>
 	</IfcRelDefinesByTemplate>
-	<IfcRelDefinesByTemplate id="i314">
+	<IfcRelDefinesByTemplate GlobalId="2tuax0G2r64xBxVDoBFTc6" id="i314">
 		<RelatedPropertySets>
 			<IfcPropertySet xsi:nil="true" ref="i313"/>
 		</RelatedPropertySets>
 		<RelatingTemplate xsi:nil="true" ref="i105"/>
 	</IfcRelDefinesByTemplate>
-	<IfcRelDefinesByTemplate id="i321">
+	<IfcRelDefinesByTemplate GlobalId="2tuax0G2r64xBxVDoBFTc6" id="i321">
 		<RelatedPropertySets>
 			<IfcPropertySet xsi:nil="true" ref="i320"/>
 		</RelatedPropertySets>
