@@ -1,5 +1,4 @@
 ﻿$BaseFolder = "C:\projects\productdata"
-$BaseFolder = "C:\Users\Aengenvoort\Documents\GitHub\ProductData"
 $ValidatorExe="$BaseFolder\Tools\SchemaValidator\bin\Release\SchemaValidator.exe"
 $SampleFiles = Get-ChildItem -Path $BaseFolder  -Recurse -Include *.ifc,*.ifcXML
 $ExitCode=0
