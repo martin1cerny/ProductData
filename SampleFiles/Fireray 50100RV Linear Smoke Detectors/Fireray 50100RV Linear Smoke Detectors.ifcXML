@@ -88,7 +88,7 @@
 				<IfcDerivedUnit id="i117" UnitType="massdensityunit">
 					<Elements>
 						<IfcDerivedUnitElement id="i118" Exponent="1">
-							<Unit xsi:type="IfcSIUnit" UnitType="massunit" Name="gram"/>
+							<Unit xsi:type="IfcSIUnit" UnitType="massunit" Prefix="kilo" Name="gram"/>
 						</IfcDerivedUnitElement>
 						<IfcDerivedUnitElement id="i119" Exponent="-3">
 							<Unit xsi:type="IfcSIUnit" UnitType="lengthunit" Name="metre"/>
@@ -102,23 +102,16 @@
 				<!-- Pa - Druck -->
 				<IfcSIUnit id="i122" UnitType="pressureunit" Name="pascal"/>
 				<!-- db - Dezibel -->
-				<IfcDerivedUnit id="i123" UnitType="soundpowerlevelunit">
+				<IfcDerivedUnit id="i123" UnitType="heatfluxdensityunit">
 					<Elements>
 						<IfcDerivedUnitElement id="i124" Exponent="1">
 							<Unit xsi:type="IfcSIUnit" UnitType="powerunit" Name="watt"/>
 						</IfcDerivedUnitElement>
-						<IfcDerivedUnitElement id="i125" Exponent="-1">
-							<Unit xsi:type="IfcSIUnit" UnitType="powerunit" Name="watt"/>
-						</IfcDerivedUnitElement>
-					</Elements>
-				</IfcDerivedUnit>
-				<IfcDerivedUnit id="i12560" UnitType="soundpowerlevelunit">
-					<Elements>
-						<IfcDerivedUnitElement Exponent="1">
-							<Unit xsi:type="IfcSIUnit" UnitType="pressureunit" Name="pascal"/>
+						<IfcDerivedUnitElement id="i125" Exponent="-2">
+							<Unit xsi:type="IfcSIUnit" UnitType="lengthunit" Name="metre"/>
 						</IfcDerivedUnitElement>
 						<IfcDerivedUnitElement Exponent="-1">
-							<Unit xsi:type="IfcSIUnit" UnitType="pressureunit" Name="pascal"/>
+							<Unit xsi:type="IfcSIUnit" UnitType="thermodynamictemperatureunit" Name="kelvin"/>
 						</IfcDerivedUnitElement>
 					</Elements>
 				</IfcDerivedUnit>
@@ -161,8 +154,8 @@
 	<!-- Step 2: Define a PropertySetTemplate , That can be generated/imported from a PSet, the bSDD, IfcDoc or elsewhere - -->
 	<IfcPropertySetTemplate id="i33467" GlobalId="2e_rZByaj3v9TmNwzXRpFy" Name="Unique Product identification code" Description="Sample Property for a Unique Product identification code" ApplicableEntity="IfcPipeSegment" TemplateType="pset_typedrivenonly" pos="1">
 		<HasPropertyTemplates>
-			<IfcSimplePropertyTemplate id="i33668" GlobalId="26JruP9Sj6_QQl9T2nuNCN" Name="Unique Product identification code" Description="Description of Property" TemplateType="p_enumeratedvalue" PrimaryMeasureType="IfcText" pos="1"/>
-			<IfcSimplePropertyTemplate id="i33669" GlobalId="26JruP9Sj6_QQl9T2nuNCQ" Name="Type according Article 11-4" Description="Description of Property" TemplateType="p_enumeratedvalue" PrimaryMeasureType="IfcText" pos="2"/>
+			<IfcSimplePropertyTemplate id="i33668" GlobalId="26JruP9Sj6_QQl9T2nuNCN" Name="Unique Product identification code" Description="Description of Property" TemplateType="p_singlevalue" PrimaryMeasureType="IfcText" pos="1"/>
+			<IfcSimplePropertyTemplate id="i33669" GlobalId="26JruP9Sj6_QQl9T2nuNCQ" Name="Type according Article 11-4" Description="Description of Property" TemplateType="p_singlevalue" PrimaryMeasureType="IfcText" pos="2"/>
 			<IfcSimplePropertyTemplate id="i33670" GlobalId="2gWUvQ3HT2FfUkpq4QgzE3" Name="Name of Property3" Description="Description of Property3" TemplateType="p_enumeratedvalue" PrimaryMeasureType="IfcText" pos="3">
 				<Enumerators Name="">
 					<EnumerationValues>
@@ -367,29 +360,29 @@
 					</EnumerationValues>
 				</Enumerators>
 			</IfcSimplePropertyTemplate>
-			<IfcSimplePropertyTemplate id="i999939" GlobalId="1RZil0BwT6h9ViGC$Bdb1L" Name="Compressive strength perpendicular to bed face – mean compressive strength" Description="" TemplateType="p_singlevalue" PrimaryMeasureType="areadensityunit" pos="7">
+			<IfcSimplePropertyTemplate id="i999939" GlobalId="1RZil0BwT6h9ViGC$Bdb1L" Name="Compressive strength perpendicular to bed face – mean compressive strength" Description="" TemplateType="p_singlevalue" PrimaryMeasureType="IfcMassDensityMeasure" pos="7">
 				<PrimaryUnit>
-					<IfcDerivedUnit id="i999978" UnitType="areadensityunit">
+					<IfcDerivedUnit id="i999978" UnitType="massdensityunit">
 						<Elements>
 							<IfcDerivedUnitElement id="i999979" Exponent="1">
-								<Unit xsi:type="IfcSIUnit" UnitType="forceunit" Name="newton"/>
+								<Unit xsi:type="IfcSIUnit" UnitType="massunit" Prefix="kilo" Name="gram"/>
 							</IfcDerivedUnitElement>
 							<IfcDerivedUnitElement id="i999980" Exponent="-2">
-								<Unit xsi:type="IfcSIUnit" UnitType="lengthunit" Prefix="milli" Name="metre"/>
+								<Unit xsi:type="IfcSIUnit" UnitType="lengthunit" Name="metre"/>
 							</IfcDerivedUnitElement>
 						</Elements>
 					</IfcDerivedUnit>
 				</PrimaryUnit>
 			</IfcSimplePropertyTemplate>
-			<IfcSimplePropertyTemplate id="i999940" GlobalId="1RZil0BwT6h9ViGC$Bdb1L" Name="Compressive strength perpendicular to bed face – normalised compressive strength" Description="" TemplateType="p_singlevalue" PrimaryMeasureType="areadensityunit" pos="7">
+			<IfcSimplePropertyTemplate id="i999940" GlobalId="1RZil0BwT6h9ViGC$Bdb1L" Name="Compressive strength perpendicular to bed face – normalised compressive strength" Description="" TemplateType="p_singlevalue" PrimaryMeasureType="IfcMassDensityMeasure" pos="7">
 				<PrimaryUnit>
-					<IfcDerivedUnit id="i999981" UnitType="areadensityunit">
+					<IfcDerivedUnit id="i999981" UnitType="massdensityunit">
 						<Elements>
 							<IfcDerivedUnitElement id="i999982" Exponent="1">
-								<Unit xsi:type="IfcSIUnit" UnitType="forceunit" Name="newton"/>
+								<Unit xsi:type="IfcSIUnit" UnitType="massunit" Prefix="kilo" Name="gram"/>
 							</IfcDerivedUnitElement>
 							<IfcDerivedUnitElement id="i999983" Exponent="-2">
-								<Unit xsi:type="IfcSIUnit" UnitType="lengthunit" Prefix="milli" Name="metre"/>
+								<Unit xsi:type="IfcSIUnit" UnitType="lengthunit" Name="metre"/>
 							</IfcDerivedUnitElement>
 						</Elements>
 					</IfcDerivedUnit>
@@ -407,19 +400,19 @@
 	</IfcPropertySetTemplate>
 	<IfcPropertySetTemplate id="i999942" GlobalId="1cbJaB0Uf0f8QbEnIhzd8b" Name="Discussion on methods of measurement and properties" Description="" ApplicableEntity="IfcWall">
 		<HasPropertyTemplates>
-			<IfcSimplePropertyTemplate id="i999943" GlobalId="10x58_dMjCtv6QMVLNUbj0" Name="Heat transmission (U-Value)" Description="This is an example of the ONE CLASSIFIED PROPERTYTEMPLATE FOR ALL TESTMETHODS WITH THE SAME UNIT solution. See Step 4 in this example!!!" TemplateType="p_singlevalue" PrimaryMeasureType="IfcLengthMeasure" pos="10">
+			<IfcSimplePropertyTemplate id="i999943" GlobalId="10x58_dMjCtv6QMVLNUbj0" Name="Heat transmission (U-Value)" Description="This is an example of the ONE CLASSIFIED PROPERTYTEMPLATE FOR ALL TESTMETHODS WITH THE SAME UNIT solution. See Step 4 in this example!!!" TemplateType="p_singlevalue" PrimaryMeasureType="IfcHeatFluxDensityMeasure" pos="10">
 				<PrimaryUnit>
-					<IfcSIUnit id="i999944" UnitType="thermodynamictemperatureunit" Name="kelvin"/>
+					<IfcSIUnit ref="i123"/>
 				</PrimaryUnit>
 			</IfcSimplePropertyTemplate>
-			<IfcSimplePropertyTemplate id="i999945" GlobalId="10x58_dMjCtv6QMVLNUbjA" Name="Heat transmission according to TBM" Description="This is an example of the ONE PROPERTYTEMPLATE PER TESTMETHOD solution" TemplateType="p_singlevalue" PrimaryMeasureType="IfcLengthMeasure" pos="11">
+			<IfcSimplePropertyTemplate id="i999945" GlobalId="10x58_dMjCtv6QMVLNUbjA" Name="Heat transmission according to TBM" Description="This is an example of the ONE PROPERTYTEMPLATE PER TESTMETHOD solution" TemplateType="p_singlevalue" PrimaryMeasureType="IfcHeatFluxDensityMeasure" pos="11">
 				<PrimaryUnit>
-					<IfcSIUnit id="i999946" UnitType="thermodynamictemperatureunit" Name="kelvin"/>
+					<IfcSIUnit ref="i123"/>
 				</PrimaryUnit>
 			</IfcSimplePropertyTemplate>
-			<IfcSimplePropertyTemplate id="i999947" GlobalId="10x58_dMjCtv6QMVLNUbjB" Name="Heat transmission according to HFM " Description="This is an example of the ONE PROPERTYTEMPLATE PER TESTMETHOD solution" TemplateType="p_singlevalue" PrimaryMeasureType="IfcLengthMeasure" pos="12">
+			<IfcSimplePropertyTemplate id="i999947" GlobalId="10x58_dMjCtv6QMVLNUbjB" Name="Heat transmission according to HFM " Description="This is an example of the ONE PROPERTYTEMPLATE PER TESTMETHOD solution" TemplateType="p_singlevalue" PrimaryMeasureType="IfcHeatFluxDensityMeasure" pos="12">
 				<PrimaryUnit>
-					<IfcSIUnit id="i999948" UnitType="thermodynamictemperatureunit" Name="kelvin"/>
+					<IfcSIUnit ref="i123"/>
 				</PrimaryUnit>
 			</IfcSimplePropertyTemplate>
 		</HasPropertyTemplates>
@@ -429,14 +422,14 @@
 		<HasPropertyTemplates>
 			<IfcComplexPropertyTemplate id="i979943" GlobalId="10x58_dMjCtv6QMVLNUbj0" Name="Heat transmission (U-Value)" Description="This is an example of the ONE CLASSIFIED PROPERTYTEMPLATE FOR ALL TESTMETHODS WITH THE SAME UNIT solution. See Step 4 in this example!!!" pos="1">
 				<HasPropertyTemplates>
-					<IfcSimplePropertyTemplate id="i979944" GlobalId="10x58_dMjCtv6QMVLNUbj0" Name="Heat transmission (U-Value)" Description="This is an example of the ONE CLASSIFIED PROPERTYTEMPLATE FOR ALL TESTMETHODS WITH THE SAME UNIT solution. See Step 4 in this example!!!" TemplateType="p_singlevalue" PrimaryMeasureType="IfcLengthMeasure" pos="10">
+					<IfcSimplePropertyTemplate id="i979944" GlobalId="10x58_dMjCtv6QMVLNUbj0" Name="Heat transmission (U-Value)" Description="This is an example of the ONE CLASSIFIED PROPERTYTEMPLATE FOR ALL TESTMETHODS WITH THE SAME UNIT solution. See Step 4 in this example!!!" TemplateType="p_singlevalue" PrimaryMeasureType="IfcHeatFluxDensityMeasure" pos="10">
 						<PrimaryUnit>
-							<IfcSIUnit id="i979945" UnitType="thermodynamictemperatureunit" Name="kelvin"/>
+							<IfcSIUnit ref="i123"/>
 						</PrimaryUnit>
 					</IfcSimplePropertyTemplate>
-					<IfcSimplePropertyTemplate id="i979946" GlobalId="10x58_dMjCtv6QMVLNUbjA" Name="Heat transmission according to TBM" Description="This is an example of the ONE PROPERTYTEMPLATE PER TESTMETHOD solution" TemplateType="p_singlevalue" PrimaryMeasureType="IfcLengthMeasure" pos="11">
+					<IfcSimplePropertyTemplate id="i979946" GlobalId="10x58_dMjCtv6QMVLNUbjA" Name="Heat transmission according to TBM" Description="This is an example of the ONE PROPERTYTEMPLATE PER TESTMETHOD solution" TemplateType="p_singlevalue" PrimaryMeasureType="IfcHeatFluxDensityMeasure" pos="11">
 						<PrimaryUnit>
-							<IfcSIUnit id="i979947" UnitType="thermodynamictemperatureunit" Name="kelvin"/>
+							<IfcSIUnit ref="i123"/>
 						</PrimaryUnit>
 					</IfcSimplePropertyTemplate>
 				</HasPropertyTemplates>
