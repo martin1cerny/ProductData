@@ -89,7 +89,7 @@
 								<HasPropertyTemplates>
 									<IfcSimplePropertyTemplate id="i979945" GlobalId="10x58_dMjCtv6QMVLNUbjA" Name="Thermal Transmittance according to EN 10077-1" Description="Put in the description of Thermal Transmittance according to EN 10077-1 here" TemplateType="p_singlevalue" PrimaryMeasureType="IFCTHERMALTRANSMITTANCEMEASURE" pos="10">
 										<PrimaryUnit>
-											<IfcDerivedUnit id="i23720" UnitType="thermaladmittanceunit" path="10x58_dMjCtv6QMVLNUbj0">
+											<IfcDerivedUnit id="i23720" UnitType="thermaltransmittanceunit" path="10x58_dMjCtv6QMVLNUbj0">
 												<Elements>
 													<IfcDerivedUnitElement id="i21421" Exponent="1">
 														<Unit xsi:type="IfcSIUnit" UnitType="powerunit" Name="watt"/>
@@ -97,19 +97,25 @@
 													<IfcDerivedUnitElement id="i21822" Exponent="-2">
 														<Unit xsi:type="IfcSIUnit" UnitType="lengthunit" Name="metre"/>
 													</IfcDerivedUnitElement>
+													<IfcDerivedUnitElement id="i21823" Exponent="-1">
+														<Unit xsi:type="IfcSIUnit" UnitType="thermodynamictemperatureunit" Name="kelvin"/>
+													</IfcDerivedUnitElement>
 												</Elements>
 											</IfcDerivedUnit>
 										</PrimaryUnit>
 									</IfcSimplePropertyTemplate>
 									<IfcSimplePropertyTemplate id="i979936" GlobalId="10x58_dMjCtv6QMVLNUbjB" Name="Thermal Transmittance according to EN 12567-1" Description="Put in the description of Thermal Transmittance according to EN 12567-1 here" TemplateType="p_singlevalue" PrimaryMeasureType="IfcThermalTransmittanceMeasure" pos="11">
 										<PrimaryUnit>
-											<IfcDerivedUnit id="i23740" UnitType="thermaladmittanceunit" path="10x58_dMjCtv6QMVLNUbj0">
+											<IfcDerivedUnit id="i23740" UnitType="thermaltransmittanceunit" path="10x58_dMjCtv6QMVLNUbj0">
 												<Elements>
 													<IfcDerivedUnitElement id="i21451" Exponent="1">
 														<Unit xsi:type="IfcSIUnit" UnitType="powerunit" Name="watt"/>
 													</IfcDerivedUnitElement>
 													<IfcDerivedUnitElement id="i21812" Exponent="-2">
 														<Unit xsi:type="IfcSIUnit" UnitType="lengthunit" Name="metre"/>
+													</IfcDerivedUnitElement>
+													<IfcDerivedUnitElement id="i21813" Exponent="-1">
+														<Unit xsi:type="IfcSIUnit" UnitType="thermodynamictemperatureunit" Name="kelvin"/>
 													</IfcDerivedUnitElement>
 												</Elements>
 											</IfcDerivedUnit>
@@ -120,8 +126,38 @@
 							<IfcComplexPropertyTemplate id="i959844" GlobalId="10x58_dMjCtv7QMVLNUbj0" Name="Other measured property" Description="This is an super property for Thermal Transmittance (global)" pos="1" UsageName="">
 								<HasPropertyTemplates>
 									<IfcSimplePropertyTemplate id="i959945" GlobalId="10x58_dMjCtv6QMVLNUbjA" Name="Thermal Transmittance according to EN 10077-1" Description="Put in the description of Thermal Transmittance according to EN 10077-1 here" TemplateType="p_singlevalue" PrimaryMeasureType="IfcThermalTransmittanceMeasure" pos="10">
+										<PrimaryUnit>
+											<IfcDerivedUnit id="i959946" UnitType="thermaltransmittanceunit" path="10x58_dMjCtv6QMVLNUbj0">
+												<Elements>
+													<IfcDerivedUnitElement id="i959947" Exponent="1">
+														<Unit xsi:type="IfcSIUnit" UnitType="powerunit" Name="watt"/>
+													</IfcDerivedUnitElement>
+													<IfcDerivedUnitElement id="i959948" Exponent="-2">
+														<Unit xsi:type="IfcSIUnit" UnitType="lengthunit" Name="metre"/>
+													</IfcDerivedUnitElement>
+													<IfcDerivedUnitElement id="i959949" Exponent="-1">
+														<Unit xsi:type="IfcSIUnit" UnitType="thermodynamictemperatureunit" Name="kelvin"/>
+													</IfcDerivedUnitElement>
+												</Elements>
+											</IfcDerivedUnit>
+										</PrimaryUnit>									
 									</IfcSimplePropertyTemplate>
 									<IfcSimplePropertyTemplate id="i959936" GlobalId="10x58_dMjCtv6QMVLNUbjB" Name="Thermal Transmittance according to EN 10077-2" Description="Put in the description of Thermal Transmittance according to EN 10077-2 here" TemplateType="p_singlevalue" PrimaryMeasureType="IfcThermalTransmittanceMeasure" pos="11">
+										<PrimaryUnit>
+											<IfcDerivedUnit id="i959937" UnitType="thermaltransmittanceunit" path="10x58_dMjCtv6QMVLNUbj0">
+												<Elements>
+													<IfcDerivedUnitElement id="i959938" Exponent="1">
+														<Unit xsi:type="IfcSIUnit" UnitType="powerunit" Name="watt"/>
+													</IfcDerivedUnitElement>
+													<IfcDerivedUnitElement id="i959939" Exponent="-2">
+														<Unit xsi:type="IfcSIUnit" UnitType="lengthunit" Name="metre"/>
+													</IfcDerivedUnitElement>
+													<IfcDerivedUnitElement id="i959940" Exponent="-1">
+														<Unit xsi:type="IfcSIUnit" UnitType="thermodynamictemperatureunit" Name="kelvin"/>
+													</IfcDerivedUnitElement>
+												</Elements>
+											</IfcDerivedUnit>
+										</PrimaryUnit>										
 									</IfcSimplePropertyTemplate>
 								</HasPropertyTemplates>
 							</IfcComplexPropertyTemplate>
