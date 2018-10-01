@@ -9,6 +9,7 @@
             new DynamicValues.DynamicValuesExample().Run();
             new BasicExample.BasicCodeExample().Run();
             new ComplexProperty.NPDExample().Run();
+            new CatalogueExample.CatalogueExample().Run();
         }
     }
 }

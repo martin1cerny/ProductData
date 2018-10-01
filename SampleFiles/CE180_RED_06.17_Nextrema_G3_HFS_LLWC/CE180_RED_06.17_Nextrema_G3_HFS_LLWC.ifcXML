@@ -14,18 +14,18 @@
 	<IfcProjectLibrary id="i100" GlobalId="3W_wCy4R58hgkAO0WsiUkm" Name="DoCLigthingProductsLibrary" LongName="Library for DoC of ligthing products" Description="A long description of the library content and usage concepts">
 		<OwnerHistory id="i101" CreationDate="20171122" LastModifiedDate="20171122" ChangeAction="nochange" State="readonly">
 			<OwningUser>
-				<ThePerson/>
+				<ThePerson id="i4711" GivenName="Otto" FamilyName="Müller"/>
 				<TheOrganization id="i102" Identification="bSI" Name="buildingSMART International" Description="A possible publisher of libraries, one out of many publisher"/>
 				<Roles>
 					<IfcActorRole id="i103" Role="userdefined" UserDefinedRole="LibraryPublisher"/>
 				</Roles>
 			</OwningUser>
 			<OwningApplication id="i104" ApplicationFullName="buildingSMART Data Dictionary" ApplicationIdentifier="bsdd.buildingsmart.org" Version="1.0">
-				<ApplicationDeveloper/>
+				<ApplicationDeveloper Name=""/>
 			</OwningApplication>
 		</OwnerHistory>
 		<Declares>
-			<IfcRelDeclares>
+			<IfcRelDeclares GlobalId="3W_wCy4R58hgkAO0WsiUki">
 				<RelatedDefinitions>
 					<!-- Step 1: Define a PropertySetTemplate , That can be generated/imported from a PSet, the bSDD, IfcDoc or elsewhere - -->
 					<IfcPropertySetTemplate id="i105" GlobalId="2e_rZByaj3v9TmNwzXRpFy" Name="Property set DoC header" Description="Property set of the header of a declaration of conformity" TemplateType="pset_typedrivenoverride" ApplicableEntity="IfcLamp" pos="1">
@@ -70,7 +70,7 @@
 				</Roles>
 			</OwningUser>
 			<OwningApplication ApplicationFullName="Trilux product management system" ApplicationIdentifier="api.trilux.com" Version="1.0">
-				<ApplicationDeveloper/>
+				<ApplicationDeveloper Name=""/>
 			</OwningApplication>
 			<LastModifyingUser>
 				<ThePerson FamilyName="Heinze" GivenName="Robert"/>
@@ -80,15 +80,15 @@
 				</Roles>
 			</LastModifyingUser>
 			<LastModifyingApplication ApplicationFullName="Trilux product management system" ApplicationIdentifier="api.trilux.com" Version="1.0">
-				<ApplicationDeveloper/>
+				<ApplicationDeveloper Name=""/>
 			</LastModifyingApplication>
 		</OwnerHistory>
 	</IfcProject>
 	<!-- Step 8: Insert the name of the entity that describes all types of the product in ISO 16739 (IFC)-->
-	<IfcLampType id="i202" GlobalId="26JruP9Sj6_QQl9T2nuNCG">
+	<IfcLampType id="i202" GlobalId="26JruP9Sj6_QQl9T2nuNCG" Name="MyLampType">
 		<HasPropertySets>
 			<!-- Step 9: Insert the data based on the template-->
-			<IfcPropertySet id="i203" Name="Property set DoC header" Description="This property set is valid for all instances of this type">
+			<IfcPropertySet id="i203" GlobalId="26JruP9Sj6_QQl9T2nuNCZ" Name="Property set DoC header" Description="This property set is valid for all instances of this type">
 				<HasProperties>
 					<IfcPropertySingleValue id="i204" Name="Document number">
 						<NominalValue>
@@ -159,7 +159,7 @@ Nextrema G3 TB 8000-840 ETDD +LLWC
 			</IfcPropertySet>
 		</HasPropertySets>
 	</IfcLampType>
-	<IfcRelDefinesByTemplate>
+	<IfcRelDefinesByTemplate GlobalId="26JzuP9Sj6_QQl9T2nuNCH">
 		<RelatedPropertySets>
 			<IfcPropertySet xsi:nil="true" ref="i203"/>
 		</RelatedPropertySets>
@@ -171,7 +171,7 @@ Nextrema G3 TB 8000-840 ETDD +LLWC
 		</IsDefinedBy>
 	</IfcLamp>
 	<IfcDocumentInformation id="i300" Identification="26JzuP9Sj6_QQl9T2nuNCG" Name="CE180_RED_06.17_Nextrema_G3_HFS_LLWC.pdf" Location="Documents\CE180_RED_06.17_Nextrema_G3_HFS_LLWC.pdf" CreationTime="2017-06-10T00:00:00+00:01" LastRevisionTime="2017-06-10T00:00:00+00:01" ElectronicFormat="application/pdf"/>
-	<IfcRelAssociatesDocument>
+	<IfcRelAssociatesDocument GlobalId="26JruP9Sj6_QQl9T2nuNCj">
 		<RelatedObjects>
 			<IfcLampType xsi:nil="true" ref="i202"/>
 		</RelatedObjects>
@@ -180,7 +180,7 @@ Nextrema G3 TB 8000-840 ETDD +LLWC
 		</RelatingDocument>
 	</IfcRelAssociatesDocument>
 	<IfcDocumentInformation id="i301" Identification="26JruP9Sj6_QQl9T2nuNCG" Name="Trilux Nextrema G3 B 4000-840 ET +HFS.pdf" Location="Documents\Trilux Nextrema G3 B 4000-840 ET +HFS.pdf" CreationTime="2017-06-10T00:00:00+00:01" LastRevisionTime="2017-06-10T00:00:00+00:01" ElectronicFormat="application/pdf" />
-	<IfcRelAssociatesDocument>
+	<IfcRelAssociatesDocument GlobalId="26JruP9Sj6_QQl9T2nuNCk">
 		<RelatedObjects>
 			<IfcLampType xsi:nil="true" ref="i202"/>
 		</RelatedObjects>
@@ -189,7 +189,7 @@ Nextrema G3 TB 8000-840 ETDD +LLWC
 		</RelatingDocument>
 	</IfcRelAssociatesDocument>	
 	<IfcDocumentInformation id="i302" Identification="26JruP9Sj6_QQl9T3nuNCG" Name="Trilux Nextrema G3 B 4000-840 ET +HFS.pdf" Location="![CDATA[PLACE_HERE_THE_LONG_BASE64_STRING_TO_EMBED_FILES_DIRECTLY]]" CreationTime="2017-06-10T00:00:00+00:01" LastRevisionTime="2017-06-10T00:00:00+00:01" ElectronicFormat="application/pdf" />
-	<IfcRelAssociatesDocument>
+	<IfcRelAssociatesDocument GlobalId="26JruP9Sj6_QQl9T2nuNCl">
 		<RelatedObjects>
 			<IfcLampType xsi:nil="true" ref="i202"/>
 		</RelatedObjects>

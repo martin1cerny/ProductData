@@ -1,0 +1,14 @@
+<Property>
+  <Name>dimensions</Name>
+  <Property>
+   <Name>length </Name>
+   <GUID>3vHhqmoT0Hsm00051Mm008</GUID>
+   <ReferenceDocument GUID="3bhhlYovD1xOzSEP5n2HRY">EN 772-1</ReferenceDocument>
+   <Declaration>
+     <Name>value</Name>
+     <Value>300</Value>
+     <Unit GUID="1GkM_00mOHtG0000PR1IRl">mm</Unit>
+     <Relation>equal to</Relation>
+   </Declaration>
+  </Property>
+</Property>

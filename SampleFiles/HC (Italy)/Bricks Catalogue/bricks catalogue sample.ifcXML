@@ -39,9 +39,13 @@
 						<HasPropertySets>
 							<IfcPropertySet Name="geometic data" id="id_ps0">
 								<HasProperties>
-									<IfcPropertySingleValue id="id_prop_l" Name="length" Description="Length of the brick"/>
-									<IfcPropertySingleValue id="id_prop_w" Name="width" Description="Width of the brick"/>
-									<IfcPropertySingleValue id="id_prop_h" Name="height" Description=" Height of the brick"/>
+									<IfcComplexProperty id="id_cp0">
+										<HasProperties>
+											<IfcPropertySingleValue id="id_prop_l" Name="length" Description="Length of the brick"/>
+											<IfcPropertySingleValue id="id_prop_w" Name="width" Description="Width of the brick"/>
+											<IfcPropertySingleValue id="id_prop_h" Name="height" Description=" Height of the brick"/>
+										</HasProperties>
+									</IfcComplexProperty>
 								</HasProperties>
 							</IfcPropertySet>
 						</HasPropertySets>
@@ -108,9 +112,9 @@
 						</DataValue>
 						<ReferencePath TypeIdentifier="IfcTypeProduct" AttributeIdentifier="HasProperties" ref="id_BrickType1">
 							<InnerReference TypeIdentifier="IfcPropertySet" AttributeIdentifier="HasProperties" ref="id_ps0">
-									<InnerReference AttributeIdentifier="NominalValue" TypeIdentifier="IfcPropertySingleValue" InstanceName="length" ref="id_propt_l">
-									</InnerReference>
+								<InnerReference AttributeIdentifier="NominalValue" TypeIdentifier="IfcPropertySingleValue" InstanceName="length" ref="id_propt_l">
 								</InnerReference>
+							</InnerReference>
 						</ReferencePath>
 					</IfcMetric>
 					<IfcMetric Name="Piemonte_widht" Benchmark="equalto" ConstraintGrade="hard" ConstraintSource="list of possible values" Description="width constraint" ValueSource="IfcSimplePropertyTemplate">

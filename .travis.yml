@@ -1,5 +1,8 @@
 language: c#
 
+language: csharp
+solution: ${TRAVIS_BUILD_DIR}/Tools/Tools.sln
+
 addons:
   apt:
     packages:

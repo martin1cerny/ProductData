@@ -13,14 +13,14 @@
 		<documentation>https://github.com/buildingSMART/ProductData/tree/master/IFC4%20Library</documentation>
 	</header>
 	<!--Define Property Templates, e.g. from a dictionary server-->
-	<IfcProjectLibrary id="templateLib" Name="Template library for a IFC parametric product type library" Description="">
+	<IfcProjectLibrary GlobalId="1DbshTzGD71ejuBQqQcxab" id="templateLib" Name="Template library for a IFC parametric product type library" Description="">
 		<Declares>
-			<IfcRelDeclares>
+			<IfcRelDeclares GlobalId="1DbshTzGD71ejuZQqQcxac">
 				<RelatedDefinitions>
-					<IfcTypeProduct id="Tid_ProductType1" Name="cabinet" Description="Description of a cabinet"/>
-					<IfcPropertySetTemplate Name="geometic data" id="id_pset1_template">
+					<IfcTypeProduct id="Tid_ProductType1" GlobalId="1DbshTzGD71ejuZQqQcxaD" Name="cabinet" Description="Description of a cabinet"/>
+					<IfcPropertySetTemplate id="id_pset1_template" GlobalId="1DbshTzGD71ejuZQqQcxae" Name="geometic data">
 						<HasPropertyTemplates>
-							<IfcComplexPropertyTemplate GlobalId="1DbshTzGD71ejuZQqQcxab" Name="dimension" id="Tid_cp0">
+							<IfcComplexPropertyTemplate id="Tid_cp0" GlobalId="1DbshTzGD71ejuZQqQcxab" Name="dimension">
 								<HasPropertyTemplates>
 									<IfcSimplePropertyTemplate id="id_propt_a_" GlobalId="1DbshTzGD71eOuZQqQcxan" Name="article" Description="SKU" TemplateType="p_singlevalue" PrimaryMeasureType="IfcLabel"/>
 									<IfcSimplePropertyTemplate id="id_propt_c_" GlobalId="1DbshTzGD71eOuZQqQcxan" Name="color" Description="" TemplateType="p_singlevalue" PrimaryMeasureType="IfcLabel"/>
@@ -40,7 +40,7 @@
 	<!--List with products-->
 	<IfcProjectLibrary id="typeLib" GlobalId="1DbztTzGD71ejuZQqQcxab" Name="IFC parametric product type library" LongName="" Description="" Phase="">
 		<Declares>
-			<IfcRelDeclares>
+			<IfcRelDeclares GlobalId="1DbshTzGD71ejuZQqQcxaC">
 				<RelatedDefinitions>
 					<IfcSystemFurnitureElementType id="i01" GlobalId="1DbztTzGD71ejuZQqQcxah" Name="AKURUM" Description="Base cabinet frame">
 						<RepresentationMaps>
@@ -113,7 +113,7 @@
 			</IfcRelDeclares>
 		</Declares>
 	</IfcProjectLibrary>
-	<IfcRelAssociatesConstraint>
+	<IfcRelAssociatesConstraint id="ico1" GlobalId="1DbshTzGD71ejfZQqQcxak">
 		<RelatedObjects>
 			<IfcSystemFurnitureElementType ref="i01"/>
 		</RelatedObjects>
@@ -441,10 +441,10 @@
 			</BenchmarkValues>
 		</RelatingConstraint>
 	</IfcRelAssociatesConstraint>
-	<IfcProject id="p1" Name="MyProject" LongName=" "/>
-	<IfcRelAssociatesConstraint>
+	<IfcProject id="p1" GlobalId="1DbshTzGD71ejuZQqQcxai" Name="MyProject" LongName=" "/>
+	<IfcRelAssociatesConstraint id="ico2" GlobalId="1DbshTzGD71ejfZQqQcxaj">
 		<RelatedObjects>
-			<IfcSystemFurnitureElementType id="i91" Name="BaseCabinetFrame"/>
+			<IfcSystemFurnitureElementType id="i91" GlobalId="1DbshTzGD71ejuZQqQcxah" Name="BaseCabinetFrame"/>
 		</RelatedObjects>
 		<RelatingConstraint xsi:type="IfcObjective" Name="Parameters" ObjectiveQualifier="parameter">
 			<BenchmarkValues>
@@ -468,10 +468,10 @@
 	</IfcRelAssociatesConstraint>
 	<IfcElementAssemblyType id="i345" GlobalId="1DbshTzGD71ejfZQqQcxab" Name="IKEA Cabinet" Description="This is an occurring real life cabinet, build as preassembled product, containing the frame, the door, and other parts" PredefinedType="userdefined">
 		<IsDecomposedBy>
-			<IfcRelAggregates>
+			<IfcRelAggregates GlobalId="1DbshTzGD71ejuZQqQcxag">
 				<RelatedObjects>
 					<IfcSystemFurnitureElement id="i346" GlobalId="1DbshTzGD71ejfZQqQcxaz" Tag="14567890" Name="Frame" Description="This is an occurring real life frame"  PredefinedType="userdefined">
-						<IsTypedBy>
+						<IsTypedBy GlobalId="1DbshTzGD71ejuZQqQcxaf">
 							<RelatingType ref="i91"/>
 						</IsTypedBy>
 					</IfcSystemFurnitureElement>
