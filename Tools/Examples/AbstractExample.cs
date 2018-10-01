@@ -1,4 +1,7 @@
-﻿using SchemaValidator;
+﻿using ColorCode;
+using ColorCode.Formatting;
+using ColorCode.Styling.StyleSheets;
+using SchemaValidator;
 using System;
 using System.Collections.Generic;
 using System.IO;
@@ -127,6 +130,8 @@ namespace Examples
 
             Helper.SaveXmlWithRoots(model, xml, rootTypes);
             AddCommentsToXml(xml);
+
+            SaveColorizedStep(ifc);
         }
 
         private string GetMetadata()
@@ -138,6 +143,38 @@ namespace Examples
                 w.WriteLine($"Created: {DateTime.UtcNow.ToString("s")} (UTC)");
 
                 return w.ToString();
+            }
+        }
+
+        private void SaveColorizedStep(string file)
+        {
+            var content = File.ReadAllText(file);
+            var html = file + ".htm";
+            var css = (StyleSheets.Default as DefaultStyleSheet).GetCssFile(); ;
+            using (var w = File.CreateText(html))
+            {
+                w.WriteLine(@"<!DOCTYPE html>
+                    <html lang=""en"">
+                      <head>
+                        <meta charset = ""utf-8"">
+                        <title>" + Path.GetFileNameWithoutExtension(file) + @"</title>
+                        <style>" + css + @"
+
+                        .step .number {
+                            color: red;
+                        }
+                        .type {
+                            color: blue;
+                        }
+                        </style>
+                      </head>
+                      <body>");
+
+                var cc = new CodeColorizer();
+                cc.Colorize(content, Languages.Step, new HtmlClassFormatter(), StyleSheets.Default, w);
+
+                w.WriteLine(@"</body></html>");
+                w.Close();
             }
         }
 
