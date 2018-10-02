@@ -132,6 +132,12 @@ namespace Examples.CatalogueExample
                 IXLTable rawData = dataRange.AsTable();
                 DataTable dt = ReadDataTable(worksheet);
 
+
+                var ifcRelDefinesByTemplate = New<IfcRelDefinesByTemplate>(dbt =>
+                {
+                    dbt.RelatingTemplate = ifcPropertySetTemplate;
+                });
+
                 int n = 0;
                 do
                 {
@@ -182,10 +188,7 @@ namespace Examples.CatalogueExample
                         ifcProductDataLibraryDeclarations.Add(ifcTypeProduct);
                         Comment(ifcTypeProduct, @"Declaration of 'IfcTypeProduct' within the library for brick product data templates.");
 
-                        var ifcRelDefinesByTemplate = New<IfcRelDefinesByTemplate>(dbt => {
-                            dbt.RelatedPropertySets.Add(ifcPropertySet);
-                            dbt.RelatingTemplate = ifcPropertySetTemplate;
-                        });
+                        ifcRelDefinesByTemplate.RelatedPropertySets.Add(ifcPropertySet);
                     }
                     n++;
                 }
