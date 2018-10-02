@@ -59,7 +59,7 @@ namespace Examples.CatalogueExample
                 }).RelatedDefinitions;
                 Comment(ifcProductDataLibraryDeclarations.OwningEntity, @"This relation points to all definitions declared within the scope of the library. These can be elements, element types, properties or property templates");
 
-                var ifcPropertySetTemplate = model.Instances.New<IfcPropertySetTemplate>(pset=>
+                IfcPropertySetTemplate ifcPropertySetTemplate = model.Instances.New<IfcPropertySetTemplate>(pset=>
                 {
                     pset.GlobalId = "1DbshTzGD71ejurQqQcxbw";
                     pset.Name = "My IfcPropertySetTemplate";
@@ -123,7 +123,6 @@ namespace Examples.CatalogueExample
                 ifcProductDataLibraryDeclarations.Add(ifcPropertySetTemplate);
                 Comment(ifcPropertySetTemplate, @"Declaration of 'IfcPropertySetTemplate' within the library for brick product data templates.");
 
-
                 //Read source data from excel sheet
                 var workbook = new XLWorkbook(Path.Combine(baseFolder, sourceFile));
                 IXLWorksheet worksheet;
@@ -146,7 +145,7 @@ namespace Examples.CatalogueExample
                         ifcTypeProduct.Description = "Description of " + ifcTypeProduct.Name;
                         ifcTypeProduct.ApplicableOccurrence = "IfcWall";
 
-                        ifcTypeProduct.HasPropertySets.Add(model.Instances.New<IfcPropertySet>(pset =>
+                        IfcPropertySet ifcPropertySet = model.Instances.New<IfcPropertySet>(pset =>
                         {
                             pset.Name = "Properties of "+ ifcTypeProduct.Name;
                             pset.HasProperties.AddRange(new[]
@@ -177,10 +176,16 @@ namespace Examples.CatalogueExample
                                     p.Unit = project.UnitsInContext.LengthUnit;
                                 })
                              });
-                        }));
+                        });
+
+                        ifcTypeProduct.HasPropertySets.Add(ifcPropertySet);
                         ifcProductDataLibraryDeclarations.Add(ifcTypeProduct);
                         Comment(ifcTypeProduct, @"Declaration of 'IfcTypeProduct' within the library for brick product data templates.");
 
+                        var ifcRelDefinesByTemplate = New<IfcRelDefinesByTemplate>(dbt => {
+                            dbt.RelatedPropertySets.Add(ifcPropertySet);
+                            dbt.RelatingTemplate = ifcPropertySetTemplate;
+                        });
                     }
                     n++;
                 }
