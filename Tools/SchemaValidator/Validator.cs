@@ -356,15 +356,40 @@ namespace SchemaValidator
             appender = Logger.Setup(logFile);
             log = LogManager.GetLogger("Validator");
 
+
+            var ext = Path.GetExtension(file).ToUpperInvariant().Trim('.');
+            var format = "UNKNOWN";
+            switch (ext)
+            {
+                case "IFC":
+                    format = "STEP21 (*.ifc)";
+                    break;
+                case "IFCXML":
+                    format = "XML (*.ifcXML)";
+                    break;
+                default:
+                    break;
+            }
+            log.Info($"Validating file: {file}");
+            log.Info($"File format: {format}");
+
+
             try
             {
                 // open as an in-memory model (all syntactic errors fill be picked up)
                 using (var model = IfcStore.Open(file, null, -1))
                 {
-                    // STEP21 syntactic errors will be reported in the log
+                    // header information
+                    log.Info($"Schema version: {string.Join(", ", model.Header.SchemaVersion)}");
+                    log.Info($"Model View Definitions: {string.Join(", ", model.Header.FileDescription.Description)}");
+
+                    // STEP21 syntactic errors will be reported in the log already
                     if (appender.Errors.Any())
                         // do not proceed because the data is incomplete
                         return false;
+
+                    log.Info($"Number of entities: {model.Instances.Count}");
+                    LogEntityHistogram(model);
 
                     var idMap = new Dictionary<int, string>();
                     if (file.ToLower().EndsWith(".ifcxml"))
@@ -391,6 +416,28 @@ namespace SchemaValidator
             }
 
             return !Errors.Any();
+        }
+
+        private void LogEntityHistogram(IModel model)
+        {
+            var histogram = new Dictionary<string, int>();
+            foreach (var item in model.Instances)
+            {
+                var type = item.ExpressType.ExpressName;
+                if (histogram.TryGetValue(type, out int value))
+                    histogram[type]++;
+                else
+                    histogram.Add(type, 1);
+            }
+
+            var msg = new StringBuilder();
+            msg.AppendLine("Types frequency");
+            foreach (var kvp in histogram.OrderByDescending(kvp => kvp.Value))
+            {
+                msg.AppendLine($"{kvp.Key, 40}: {kvp.Value}");
+            }
+            log.Info($"Number of types: {histogram.Count}");
+            log.Info(msg.ToString());
         }
 
         private Dictionary<int, string> GetXmlEntityMap(Stream stream, IModel model)
