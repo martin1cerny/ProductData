@@ -43,63 +43,63 @@
  <!-- Measure Unit SI - End  -->
 
  <!-- Derived Measure Unit - Start  -->
- <IfcDerivedUnit id="idCM0" UserDefinedType="Thermal conductivity">
+ <IfcDerivedUnit id="idCM0" UnitType="userdefined" UserDefinedType="Thermal conductivity">
   <Elements>
-   <IfcDerivedUnitElement ref="id06" Exponent="1">
-    <Unit xsi:type="IfcSIUnit"/>
+   <IfcDerivedUnitElement Exponent="1">
+    <Unit xsi:type="IfcSIUnit" ref="id06"/>
    </IfcDerivedUnitElement>
-   <IfcDerivedUnitElement ref="id07" Exponent="-1">
-    <Unit xsi:type="IfcSIUnit"/>
+   <IfcDerivedUnitElement Exponent="-1">
+    <Unit xsi:type="IfcSIUnit" ref="id07" />
    </IfcDerivedUnitElement>
-   <IfcDerivedUnitElement ref="id01" Exponent="-1">
-    <Unit xsi:type="IfcSIUnit"/>
+   <IfcDerivedUnitElement Exponent="-1">
+    <Unit xsi:type="IfcSIUnit" ref="id01"/>
    </IfcDerivedUnitElement>
   </Elements>
  </IfcDerivedUnit>
 
- <IfcDerivedUnit id="idCM1" UserDefinedType="Thermal Resistance">
+ <IfcDerivedUnit id="idCM1" UnitType="userdefined" UserDefinedType="Thermal Resistance">
   <Elements>
-   <IfcDerivedUnitElement ref="id08" Exponent="1">
-    <Unit xsi:type="IfcSIUnit"/>
+   <IfcDerivedUnitElement Exponent="1">
+    <Unit xsi:type="IfcSIUnit" ref="id08"/>
    </IfcDerivedUnitElement>
-   <IfcDerivedUnitElement ref="id07" Exponent="1">
-    <Unit xsi:type="IfcSIUnit"/>
+   <IfcDerivedUnitElement Exponent="1">
+    <Unit xsi:type="IfcSIUnit" ref="id07"/>
    </IfcDerivedUnitElement>
-   <IfcDerivedUnitElement ref="id06" Exponent="-1">
-    <Unit xsi:type="IfcSIUnit"/>
+   <IfcDerivedUnitElement Exponent="-1">
+    <Unit xsi:type="IfcSIUnit" ref="id06"/>
    </IfcDerivedUnitElement>
   </Elements>
  </IfcDerivedUnit>
 
- <IfcDerivedUnit id="idCM2" UserDefinedType="Spostamento">
+ <IfcDerivedUnit id="idCM2" UnitType="userdefined" UserDefinedType="Spostamento">
   <Elements>
-   <IfcDerivedUnitElement ref="mm" Exponent="1">
-    <Unit xsi:type="IfcSIUnit"/>
+   <IfcDerivedUnitElement Exponent="1">
+    <Unit xsi:type="IfcSIUnit" ref="mm" />
    </IfcDerivedUnitElement>
-   <IfcDerivedUnitElement ref="id01" Exponent="-1">
-    <Unit xsi:type="IfcSIUnit"/>
+   <IfcDerivedUnitElement Exponent="-1">
+    <Unit xsi:type="IfcSIUnit" ref="id01"/>
    </IfcDerivedUnitElement>
   </Elements>
  </IfcDerivedUnit>
 
- <IfcDerivedUnit id="idCM3" UserDefinedType="Massa Volumica">
+ <IfcDerivedUnit id="idCM3" UnitType="userdefined" UserDefinedType="Massa Volumica">
   <Elements>
-   <IfcDerivedUnitElement ref="id03" Exponent="1">
-    <Unit xsi:type="IfcSIUnit"/>
+   <IfcDerivedUnitElement Exponent="1">
+    <Unit xsi:type="IfcSIUnit" ref="id03"/>
    </IfcDerivedUnitElement>
-   <IfcDerivedUnitElement ref="id05" Exponent="-1">
-    <Unit xsi:type="IfcSIUnit"/>
+   <IfcDerivedUnitElement Exponent="-1">
+    <Unit xsi:type="IfcSIUnit" ref="id05"/>
    </IfcDerivedUnitElement>
   </Elements>
  </IfcDerivedUnit>
 
- <IfcDerivedUnit id="idCM4" UserDefinedType="mm^2">
+ <IfcDerivedUnit id="idCM4" UnitType="userdefined" UserDefinedType="mm^2">
   <Elements>
-   <IfcDerivedUnitElement ref="mm" Exponent="1">
-    <Unit xsi:type="IfcSIUnit"/>
+   <IfcDerivedUnitElement Exponent="1">
+    <Unit xsi:type="IfcSIUnit" ref="mm"/>
    </IfcDerivedUnitElement>
-   <IfcDerivedUnitElement ref="mm" Exponent="1">
-    <Unit xsi:type="IfcSIUnit"/>
+   <IfcDerivedUnitElement Exponent="1">
+    <Unit xsi:type="IfcSIUnit" ref="mm"/>
    </IfcDerivedUnitElement>
   </Elements>
  </IfcDerivedUnit>
@@ -123,7 +123,7 @@
  <!-- Classification - End -->
  
  <!-- Measure Unit Assignment - Start  -->
- <IfcUnitAssignment>  <!-- verificare  -->
+ <!--<IfcUnitAssignment>  --><!-- verificare  --><!--
   <Units>
    <IfcSIUnit ref="mm"></IfcSIUnit>
    <IfcSIUnit ref="id01"></IfcSIUnit>
@@ -137,7 +137,7 @@
    <IfcDerivedUnit ref="idCM0">
     <Elements>
      <IfcDerivedUnitElement>
-      <Unit xsi:type="IfcSIUnit"></Unit>
+      <Unit xsi:type="IfcSIUnit" ref=""></Unit>
      </IfcDerivedUnitElement>
     </Elements>
    </IfcDerivedUnit>
@@ -170,7 +170,7 @@
     </Elements>
    </IfcDerivedUnit>
   </Units>
- </IfcUnitAssignment>
+ </IfcUnitAssignment>-->
  <!-- Measure Unit Assignment - End  -->
 
  <!-- Regulatory Context - Start  -->
