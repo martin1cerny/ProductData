@@ -1,11 +1,11 @@
 ﻿# (c) buildingSMART International
-# The content of this file is provides under the license "Creative Commons Attribution-ShareAlike 4.0 International"
+# The content of this file is provided under the license "Creative Commons Attribution-ShareAlike 4.0 International"
 # Please read and respect the license: https://creativecommons.org/licenses/by-sa/4.0/
 # This file is only for defining properties and providing the metadata of the properties
 # The home of this file is https://github.com/buildingsmart/bSDD
 # Please respect the contribution guidelines
 # After commit please make a pull request
-# After the approval of the pull request, the bSDD repository will build a ready-to-use PSet for you
+# After the approval of the pull request, the bSDD repository will build a ready-to-use PSet and other formats for you
 #
 #
 PropertySet:Pset_TransportElementElevator
@@ -37,7 +37,7 @@ PropertySet:Pset_TransportElementElevator
       Localizations: 
         Language: "de-DE"
           Name: Feuerwehraufzug
-          Definition: "Angabe, ob der Aufzug als ein Feuerwerksaufzug vorgesehen ist (WAHR) oder nicht (FALSCH). Ein Feuerwehraufzug ist ein besonders abgesicherter Aufzug der der Feuerwehr im Brandfall ein Erreichen der Brandetage ermöglicht."
+          Definition: "Angabe, ob der Aufzug als ein Feuerwerksaufzug vorgesehen ist (WAHR) oder nicht (FALSCH). Ein Feuerwehraufzug ist ein besonders abgesicherter Aufzug, der der Feuerwehr im Brandfall ein Erreichen der Brandetage ermöglicht."
         Language: "fr-FR"
           Name: "Ascenseur pompiers"
           Definition: "Indique si l'ascenseur est conçu pour servir d'ascenseur pompier (VRAI) ou non (FAUX). Un ascenseur pompier est utilisé par les pompiers pour accéder à l'endroit du feu et évacuer les personnes."
@@ -52,6 +52,9 @@ PropertySet:Pset_TransportElementElevator
       IfdGuid: "263b2abf50a54e2e91d8ca15470d018e"
       Definition: "Clear width of the object (elevator). It indicates the distance from the inner surfaces of the elevator car left and right from the elevator door. \nThe shape information is provided in addition to the shape representation and the geometric parameters used within. In cases of inconsistency between the geometric parameters and the shape properties, provided in the attached property, the geometric parameters take precedence."
       Localizations: 
+        Language: "de-DE"
+          Name: Lichte Breite
+          Definition: "Lichte Breite des Objekts (Aufzug). Es zeigt den Abstand von den Innenflächen der Aufzugskabine links und rechts von der Aufzugstür an. Die Forminformationen werden zusätzlich zur Formdarstellung und den darin verwendeten geometrischen Parametern bereitgestellt. Im Falle von Inkonsistenzen zwischen den geometrischen Parametern und den Formeigenschaften, die in der angehängten Eigenschaft angegeben sind, haben die geometrischen Parameter Vorrang."
         Language: "fr-FR"
           Name: "Largeur du passage"
           Definition: "Largeur du passage de l'ascenseur. Elle indique la distance entre les surfaces intérieures gauche et droite de la cabine depuis la porte de l'ascenseur. Cette propriété est donnée en complément de la représentation de la forme de l'élément et des paramètres géométriques qui la déterminent. En cas d'incohérence entre ces paramètres géométriques et cette propriété, ce sont les paramètres géométriques qui priment."
