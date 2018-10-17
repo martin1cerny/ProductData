@@ -12,6 +12,7 @@ name: Pset_TransportElementElevator
 ifcVersion:
   version: 4.0.0.5
   schema: ifcproductextension
+ifdGuid: 0LWrk0qX8HuO00025QrE$V
 definition: "properties common to the definition of all occurrences of ifctransportelement with the predefined type = elevator"
 localizations:
 - language: de-DE
@@ -31,7 +32,7 @@ properties:
   valueType: 
     name: TypePropertySingleValue
     dataType: IfcBoolean
-  ifdGuid: missing
+  ifdGuid: 0QI0_0qX8HuO00025QrE$V
   definition: "Indication whether the elevator is designed to serve as a fire fighting lift the case of fire (TRUE) or not (FALSE). A fire fighting lift is used by fire fighters to access the location of fire and to evacuate people."
   localizations:
     - language: de-DE
@@ -48,7 +49,7 @@ properties:
     name: TypePropertySingleValue
     dataType: IfcPositiveLengthMeasure
   unit: LENGTHUNIT
-  ifdGuid: 263b2abf50a54e2e91d8ca15470d018e
+  ifdGuid: 0WreS0qX8HuO00025QrE$V
   definition: Clear width of the object (elevator). It indicates the distance from the inner surfaces of the elevator car left and right from the elevator door. \nThe shape information is provided in addition to the shape representation and the geometric parameters used within. In cases of inconsistency between the geometric parameters and the shape properties, provided in the attached property, the geometric parameters take precedence.
   localizations: 
   - language: de-DE
@@ -65,7 +66,7 @@ properties:
     name: TypePropertySingleValue
     dataType: IfcPositiveLengthMeasure
   unit: LENGTHUNIT
-  ifdGuid: d08c964725fe4b8897be1409b2aadefc
+  ifdGuid: 0fnrY0qX8HuO00025QrE$V
   definition: Clear depth of the object (elevator). It indicates the distance from the inner surface of the elevator door to the opposite surface of the elevator car. \nThe shape information is provided in addition to the shape representation and the geometric parameters used within. In cases of inconsistency between the geometric parameters and the shape properties, provided in the attached property, the geometric parameters take precedence.
   localizations: 
   - language: fr-FR
@@ -79,7 +80,7 @@ properties:
     name: TypePropertySingleValue
     dataType: IfcPositiveLengthMeasure
   unit: LENGTHUNIT
-  ifdGuid: 39c3fa2d12d64ad88c70c9164ca90a33
+  ifdGuid: 0o7vE0qX8HuO00025QrE$V
   definition: Clear height of the object (elevator).  \nThe shape information is provided in addition to the shape representation and the geometric parameters used within. In cases of inconsistency between the geometric parameters and the shape properties, provided in the attached property, the geometric parameters take precedence.
   localizations: 
   - language: fr-FR
