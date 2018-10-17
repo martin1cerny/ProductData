@@ -22,8 +22,8 @@ localizations:
   name: "Propriétés communes à la définition de toutes les instances de la classe IfcTransportElement dont le type prédéfini est ELEVATOR."
   definition: "Propriétés communes à la définition de toutes les instances de la classe IfcTransportElement dont le type prédéfini est ELEVATOR."
 - language: ja-JP
-  name: タイプが既定義の\ELEVATOR\であるIfcTransportElementすべてに共通な属性の定義。
-  definition: タイプが既定義の\ELEVATOR\であるIfcTransportElementすべてに共通な属性の定義。
+  name: "タイプが既定義の\\ELEVATOR\\であるIfcTransportElementすべてに共通な属性の定義。"
+  definition: "タイプが既定義の\\ELEVATOR\\であるIfcTransportElementすべてに共通な属性の定義。"
 applicableIfcClasses:
 - name: IfcTransportElement
   type: ELEVATOR
@@ -50,42 +50,42 @@ properties:
     dataType: IfcPositiveLengthMeasure
   unit: LENGTHUNIT
   ifdGuid: 0WreS0qX8HuO00025QrE$V
-  definition: Clear width of the object (elevator). It indicates the distance from the inner surfaces of the elevator car left and right from the elevator door. \nThe shape information is provided in addition to the shape representation and the geometric parameters used within. In cases of inconsistency between the geometric parameters and the shape properties, provided in the attached property, the geometric parameters take precedence.
+  definition: "Clear width of the object (elevator). It indicates the distance from the inner surfaces of the elevator car left and right from the elevator door. \nThe shape information is provided in addition to the shape representation and the geometric parameters used within. In cases of inconsistency between the geometric parameters and the shape properties, provided in the attached property, the geometric parameters take precedence."
   localizations: 
   - language: de-DE
-    name: Lichte Breite
-    definition: Lichte Breite des Objekts (Aufzug). Es zeigt den Abstand von den Innenflächen der Aufzugskabine links und rechts von der Aufzugstür an. Die Forminformationen werden zusätzlich zur Formdarstellung und den darin verwendeten geometrischen Parametern bereitgestellt. Im Falle von Inkonsistenzen zwischen den geometrischen Parametern und den Formeigenschaften, die in der angehängten Eigenschaft angegeben sind, haben die geometrischen Parameter Vorrang.
+    name: "Lichte Breite"
+    definition: "Lichte Breite des Objekts (Aufzug). Es zeigt den Abstand von den Innenflächen der Aufzugskabine links und rechts von der Aufzugstür an. Die Forminformationen werden zusätzlich zur Formdarstellung und den darin verwendeten geometrischen Parametern bereitgestellt. Im Falle von Inkonsistenzen zwischen den geometrischen Parametern und den Formeigenschaften, die in der angehängten Eigenschaft angegeben sind, haben die geometrischen Parameter Vorrang."
   - language: fr-FR
-    name: Largeur du passage
-    definition: Largeur du passage de l'ascenseur. Elle indique la distance entre les surfaces intérieures gauche et droite de la cabine depuis la porte de l'ascenseur. Cette propriété est donnée en complément de la représentation de la forme de l'élément et des paramètres géométriques qui la déterminent. En cas d'incohérence entre ces paramètres géométriques et cette propriété, ce sont les paramètres géométriques qui priment.
+    name: "Largeur du passage"
+    definition: "Largeur du passage de l'ascenseur. Elle indique la distance entre les surfaces intérieures gauche et droite de la cabine depuis la porte de l'ascenseur. Cette propriété est donnée en complément de la représentation de la forme de l'élément et des paramètres géométriques qui la déterminent. En cas d'incohérence entre ces paramètres géométriques et cette propriété, ce sont les paramètres géométriques qui priment."
   - language: ja-JP
-    name: 幅員
-    definition: オブジェクト（エレベータ）の幅。エレベータ昇降機内部表面の左から右の距離を示す。\n形状表現は、Shape representation（IFCの幾何形状表現）およびそこで設定されている幾何形状パラメータにより与えられる。もし、幾何形状パラメータと形状プロパティ情報が一致しない場合は、形状パラメータの値を優先する。
+    name: "幅員"
+    definition: "オブジェクト（エレベータ）の幅。エレベータ昇降機内部表面の左から右の距離を示す。\n形状表現は、Shape representation（IFCの幾何形状表現）およびそこで設定されている幾何形状パラメータにより与えられる。もし、幾何形状パラメータと形状プロパティ情報が一致しない場合は、形状パラメータの値を優先する。"
 - name: ClearDepth
   valueType: 
     name: TypePropertySingleValue
     dataType: IfcPositiveLengthMeasure
   unit: LENGTHUNIT
   ifdGuid: 0fnrY0qX8HuO00025QrE$V
-  definition: Clear depth of the object (elevator). It indicates the distance from the inner surface of the elevator door to the opposite surface of the elevator car. \nThe shape information is provided in addition to the shape representation and the geometric parameters used within. In cases of inconsistency between the geometric parameters and the shape properties, provided in the attached property, the geometric parameters take precedence.
+  definition: "Clear depth of the object (elevator). It indicates the distance from the inner surface of the elevator door to the opposite surface of the elevator car. \nThe shape information is provided in addition to the shape representation and the geometric parameters used within. In cases of inconsistency between the geometric parameters and the shape properties, provided in the attached property, the geometric parameters take precedence."
   localizations: 
   - language: fr-FR
-    name: Profondeur de passage
-    definition: Profondeur de l'ascenseur. Elle indique la distance entre la face intérieure de la porte et la face opposée de la cabine de l'ascenseur. Cette propriété est donnée en complément de la représentation de la forme de l'élément et des paramètres géométriques qui la déterminent. En cas d'incohérence entre ces paramètres géométriques et cette propriété, ce sont les paramètres géométriques qui priment.
+    name: "Profondeur de passage"
+    definition: "Profondeur de l'ascenseur. Elle indique la distance entre la face intérieure de la porte et la face opposée de la cabine de l'ascenseur. Cette propriété est donnée en complément de la représentation de la forme de l'élément et des paramètres géométriques qui la déterminent. En cas d'incohérence entre ces paramètres géométriques et cette propriété, ce sont les paramètres géométriques qui priment."
   - language: ja-JP
-    name: 奥行き
-    definition: オブジェクト（エレベータ）の奥行き。エレベータドアの内部表面から、反対側の表面までの距離を示す。\n形状表現は、Shape representation（IFCの幾何形状表現）およびそこで設定されている幾何形状パラメータにより与えられる。もし、幾何形状パラメータと形状プロパティ情報が一致しない場合は、形状パラメータの値を優先する。
+    name: "奥行き"
+    definition: "オブジェクト（エレベータ）の奥行き。エレベータドアの内部表面から、反対側の表面までの距離を示す。\n形状表現は、Shape representation（IFCの幾何形状表現）およびそこで設定されている幾何形状パラメータにより与えられる。もし、幾何形状パラメータと形状プロパティ情報が一致しない場合は、形状パラメータの値を優先する。"
 - name: ClearHeight
   valueType: 
     name: TypePropertySingleValue
     dataType: IfcPositiveLengthMeasure
   unit: LENGTHUNIT
   ifdGuid: 0o7vE0qX8HuO00025QrE$V
-  definition: Clear height of the object (elevator).  \nThe shape information is provided in addition to the shape representation and the geometric parameters used within. In cases of inconsistency between the geometric parameters and the shape properties, provided in the attached property, the geometric parameters take precedence.
+  definition: "Clear height of the object (elevator).  \nThe shape information is provided in addition to the shape representation and the geometric parameters used within. In cases of inconsistency between the geometric parameters and the shape properties, provided in the attached property, the geometric parameters take precedence."
   localizations: 
   - language: fr-FR
-    name: Hauteur de passage
-    definition: Hauteur du passage de l'ascenseur. Cette propriété est donnée en complément de la représentation de la forme de l'élément et des paramètres géométriques qui la déterminent. En cas d'incohérence entre ces paramètres géométriques et cette propriété, ce sont les paramètres géométriques qui priment.
+    name: "Hauteur de passage"
+    definition: "Hauteur du passage de l'ascenseur. Cette propriété est donnée en complément de la représentation de la forme de l'élément et des paramètres géométriques qui la déterminent. En cas d'incohérence entre ces paramètres géométriques et cette propriété, ce sont les paramètres géométriques qui priment."
   - language: ja-JP
-    name: 高さ
-    definition: オブジェクト（エレベータ）の高さ。エレベータドアの内部の床面から天井までの距離を示す。\n形状表現は、Shape representation（IFCの幾何形状表現）およびそこで設定されている幾何形状パラメータにより与えられる。もし、幾何形状パラメータと形状プロパティ情報が一致しない場合は、形状パラメータの値を優先する。
+    name: "高さ"
+    definition: "オブジェクト（エレベータ）の高さ。エレベータドアの内部の床面から天井までの距離を示す。\n形状表現は、Shape representation（IFCの幾何形状表現）およびそこで設定されている幾何形状パラメータにより与えられる。もし、幾何形状パラメータと形状プロパティ情報が一致しない場合は、形状パラメータの値を優先する。"
