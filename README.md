@@ -1,3 +1,5 @@
+![This repo is managed by the ProductRoom](https://img.shields.io/badge/-ProductRoom-blue.svg)
+
 ## Product Data for Building Information Modeling (BIM)
 Validity of ifcXML files aginst the XSD-schema 
 [![Build Status](https://travis-ci.org/buildingSMART/ProductData.svg?branch=master)](https://travis-ci.org/buildingSMART/ProductData)
