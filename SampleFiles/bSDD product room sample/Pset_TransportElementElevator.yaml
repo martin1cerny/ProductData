@@ -11,13 +11,13 @@
 name: Pset_TransportElementElevator
 ifcVersion:
   version: 4.0.0.5
-  schema: ifcproductextension
+  schema: IfcProductExtension
 ifdGuid: 0LWrk0qX8HuO00025QrE$V
 definition: "properties common to the definition of all occurrences of ifctransportelement with the predefined type = elevator"
 localizations:
 - language: de-DE
-  name: "Property Set Definition in German"
-  definition: "Property Set Definition in German"
+  name: "Eigenschaften, die der Definition aller Vorkommen von IfcTransportElement mit dem vordefinierten Typ ELEVATOR gemeinsam sind."
+  definition: "Eigenschaften, die der Definition aller Vorkommen von IfcTransportElement mit dem vordefinierten Typ ELEVATOR gemeinsam sind."
 - language: fr-FR
   name: "Propriétés communes à la définition de toutes les instances de la classe IfcTransportElement dont le type prédéfini est ELEVATOR."
   definition: "Propriétés communes à la définition de toutes les instances de la classe IfcTransportElement dont le type prédéfini est ELEVATOR."
