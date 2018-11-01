@@ -46,12 +46,20 @@
 						<RepresentationMaps>
 							<IfcRepresentationMap>
 								<MappingOrigin>
-									<IfcAxis2Placement2D>
-										<Location/>
+									<IfcAxis2Placement2D id="i02">
+										<Location id="i03" Coordinates="0.674992359484 0.506897413118"/>
+										<RefDirection id="i04" DirectionRatios="-0.799628449021 -0.600495082009"/>
 									</IfcAxis2Placement2D>
 								</MappingOrigin>
-								<MappedRepresentation xsi:type="IfcShapeRepresentation" RepresentationIdentifier="Body" RepresentationType="CSG">
-									<ContextOfItems xsi:type="IfcGeometricRepresentationContext"/>
+								<MappedRepresentation id="i19" xsi:type="IfcShapeRepresentation" RepresentationIdentifier="Body" RepresentationType="Surface">
+									<ContextOfItems id="i10" xsi:type="IfcGeometricRepresentationContext" ContextIdentifier="Body" ContextType="Surface" CoordinateSpaceDimension="3" Precision="0">
+										<WorldCoordinateSystem>
+											<IfcAxis2Placement2D id="i05">
+												<Location id="i06" Coordinates="0.674992359484 0.506897413118"/>
+												<RefDirection id="i07" DirectionRatios="-0.799628449021 -0.600495082009"/>
+											</IfcAxis2Placement2D>
+										</WorldCoordinateSystem>
+									</ContextOfItems>
 									<Items>
 										<IfcBlock XLength="0.75" YLength="24.125" ZLength="30.375">
 											<!-- Left plate -->
@@ -94,11 +102,12 @@
 							</IfcRepresentationMap>
 							<IfcRepresentationMap>
 								<MappingOrigin>
-									<IfcAxis2Placement2D>
-										<Location/>
+									<IfcAxis2Placement2D id="i11">
+										<Location id="i12" Coordinates="0.674992359484 0.506897413118"/>
+										<RefDirection id="i13" DirectionRatios="-0.799628449021 -0.600495082009"/>
 									</IfcAxis2Placement2D>
 								</MappingOrigin>
-								<MappedRepresentation xsi:type="IfcShapeRepresentation" RepresentationIdentifier="Body" RepresentationType="CSG">
+								<MappedRepresentation id="i20" xsi:type="IfcShapeRepresentation" RepresentationIdentifier="Body" RepresentationType="Surface">
 									<ContextOfItems xsi:type="IfcGeometricRepresentationContext"/>
 									<Items>
 										<IfcBoundingBox XDim="24" YDim="24" ZDim="30.375">
@@ -359,8 +368,8 @@
 					<ReferencePath TypeIdentifier="RepresentationMap" AttributeIdentifier="MappedRepresentation['Body']">
 						<InnerReference AttributeIdentifier="Items[3]">
 							<InnerReference AttributeIdentifier="XLength"/>
-						</InnerReference>										
-					</ReferencePath>	
+						</InnerReference>
+					</ReferencePath>
 				</IfcMetric>
 				<IfcMetric Name="Parametric calculation of geometry Top front beam" Description="LengthX=Size-0.75">
 					<DataValue>
@@ -370,8 +379,8 @@
 									<AppliedValue>
 										<IfcReference TypeIdentifier="RepresentationMaps" AttributeIdentifier="MappedRepresentation['BoundingBox']">
 											<InnerReference AttributeIdentifier="Items[1]">
-												<InnerReference AttributeIdentifier="XDim"/>	
-											</InnerReference>									
+												<InnerReference AttributeIdentifier="XDim"/>
+											</InnerReference>
 										</IfcReference>
 									</AppliedValue>
 								</IfcAppliedValue>
@@ -386,8 +395,8 @@
 					<ReferencePath TypeIdentifier="RepresentationMap" AttributeIdentifier="MappedRepresentation['Body']">
 						<InnerReference AttributeIdentifier="Items[4]">
 							<InnerReference AttributeIdentifier="XLength"/>
-						</InnerReference>										
-					</ReferencePath>					
+						</InnerReference>
+					</ReferencePath>
 				</IfcMetric>
 				<IfcMetric Name="Parametric calculation of geometry Top back beam" Description="LengthX=Size-0.75">
 					<DataValue>
@@ -413,7 +422,7 @@
 					<ReferencePath TypeIdentifier="RepresentationMap" AttributeIdentifier="MappedRepresentation['Body']">
 						<InnerReference AttributeIdentifier="Items[5]">
 							<InnerReference AttributeIdentifier="XLength"/>
-						</InnerReference>										
+						</InnerReference>
 					</ReferencePath>
 				</IfcMetric>
 				<IfcMetric Name="Parametric calculation of geometry Back covering" Description="LengthX=Size">
@@ -425,7 +434,7 @@
 										<IfcReference TypeIdentifier="RepresentationMaps" AttributeIdentifier="MappedRepresentation['BoundingBox']">
 											<InnerReference AttributeIdentifier="Items[1]">
 												<InnerReference AttributeIdentifier="XDim"/>
-											</InnerReference>										
+											</InnerReference>
 										</IfcReference>
 									</AppliedValue>
 								</IfcAppliedValue>
@@ -435,7 +444,7 @@
 					<ReferencePath TypeIdentifier="RepresentationMap" AttributeIdentifier="MappedRepresentation['Body']">
 						<InnerReference AttributeIdentifier="Items[6]">
 							<InnerReference AttributeIdentifier="XLength"/>
-						</InnerReference>										
+						</InnerReference>
 					</ReferencePath>
 				</IfcMetric>
 			</BenchmarkValues>
@@ -470,7 +479,7 @@
 		<IsDecomposedBy>
 			<IfcRelAggregates GlobalId="1DbshTzGD71ejuZQqQcxag">
 				<RelatedObjects>
-					<IfcSystemFurnitureElement id="i346" GlobalId="1DbshTzGD71ejfZQqQcxaz" Tag="14567890" Name="Frame" Description="This is an occurring real life frame"  PredefinedType="userdefined">
+					<IfcSystemFurnitureElement id="i346" GlobalId="1DbshTzGD71ejfZQqQcxaz" Tag="14567890" Name="Frame" Description="This is an occurring real life frame" PredefinedType="userdefined">
 						<IsTypedBy GlobalId="1DbshTzGD71ejuZQqQcxaf">
 							<RelatingType ref="i91"/>
 						</IsTypedBy>
