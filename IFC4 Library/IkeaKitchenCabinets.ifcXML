@@ -51,8 +51,8 @@
 										<RefDirection id="i04" DirectionRatios="-0.799628449021 -0.600495082009"/>
 									</IfcAxis2Placement2D>
 								</MappingOrigin>
-								<MappedRepresentation id="i19" xsi:type="IfcShapeRepresentation" RepresentationIdentifier="Body" RepresentationType="Surface">
-									<ContextOfItems id="i10" xsi:type="IfcGeometricRepresentationContext" ContextIdentifier="Body" ContextType="Surface" CoordinateSpaceDimension="3" Precision="0">
+								<MappedRepresentation id="i19" xsi:type="IfcShapeRepresentation" RepresentationIdentifier="Body" RepresentationType="CSG">
+									<ContextOfItems id="i10" xsi:type="IfcGeometricRepresentationContext" ContextIdentifier="Body" ContextType="CSG" CoordinateSpaceDimension="3" Precision="0">
 										<WorldCoordinateSystem>
 											<IfcAxis2Placement2D id="i05">
 												<Location id="i06" Coordinates="0.674992359484 0.506897413118"/>
@@ -107,8 +107,8 @@
 										<RefDirection id="i13" DirectionRatios="-0.799628449021 -0.600495082009"/>
 									</IfcAxis2Placement2D>
 								</MappingOrigin>
-								<MappedRepresentation id="i20" xsi:type="IfcShapeRepresentation" RepresentationIdentifier="Body" RepresentationType="Surface">
-									<ContextOfItems id="i21" xsi:type="IfcGeometricRepresentationContext" ContextIdentifier="Body" ContextType="Surface" CoordinateSpaceDimension="3" Precision="0">
+								<MappedRepresentation id="i20" xsi:type="IfcShapeRepresentation" RepresentationIdentifier="Body" RepresentationType="BoundingBox">
+									<ContextOfItems id="i21" xsi:type="IfcGeometricRepresentationContext" ContextIdentifier="Body" ContextType="BoundingBox" CoordinateSpaceDimension="3" Precision="0">
 										<WorldCoordinateSystem>
 											<IfcAxis2Placement2D id="i22">
 												<Location id="i23" Coordinates="0.674992359484 0.506897413118"/>
