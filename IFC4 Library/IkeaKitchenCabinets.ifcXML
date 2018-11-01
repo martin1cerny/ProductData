@@ -108,7 +108,14 @@
 									</IfcAxis2Placement2D>
 								</MappingOrigin>
 								<MappedRepresentation id="i20" xsi:type="IfcShapeRepresentation" RepresentationIdentifier="Body" RepresentationType="Surface">
-									<ContextOfItems xsi:type="IfcGeometricRepresentationContext"/>
+									<ContextOfItems id="i21" xsi:type="IfcGeometricRepresentationContext" ContextIdentifier="Body" ContextType="Surface" CoordinateSpaceDimension="3" Precision="0">
+										<WorldCoordinateSystem>
+											<IfcAxis2Placement2D id="i22">
+												<Location id="i23" Coordinates="0.674992359484 0.506897413118"/>
+												<RefDirection id="i24" DirectionRatios="-0.799628449021 -0.600495082009"/>
+											</IfcAxis2Placement2D>
+										</WorldCoordinateSystem>
+									</ContextOfItems>
 									<Items>
 										<IfcBoundingBox XDim="24" YDim="24" ZDim="30.375">
 											<Corner Coordinates="0 0 0"/>
@@ -475,11 +482,11 @@
 			</BenchmarkValues>
 		</RelatingConstraint>
 	</IfcRelAssociatesConstraint>
-	<IfcElementAssemblyType id="i345" GlobalId="1DbshTzGD71ejfZQqQcxab" Name="IKEA Cabinet" Description="This is an occurring real life cabinet, build as preassembled product, containing the frame, the door, and other parts" PredefinedType="userdefined">
+	<IfcElementAssemblyType id="i345" GlobalId="1DbshTzGD71ejfZQqQcxab" Name="IKEA Cabinet" Description="This is an occurring real life cabinet, build as preassembled product, containing the frame, the door, and other parts" PredefinedType="accessory_assembly">
 		<IsDecomposedBy>
 			<IfcRelAggregates GlobalId="1DbshTzGD71ejuZQqQcxag">
 				<RelatedObjects>
-					<IfcSystemFurnitureElement id="i346" GlobalId="1DbshTzGD71ejfZQqQcxaz" Tag="14567890" Name="Frame" Description="This is an occurring real life frame" PredefinedType="userdefined">
+					<IfcSystemFurnitureElement id="i346" GlobalId="1DbshTzGD71ejfZQqQcxaz" Tag="14567890" Name="Frame" Description="This is an occurring real life frame" PredefinedType="panel">
 						<IsTypedBy GlobalId="1DbshTzGD71ejuZQqQcxaf">
 							<RelatingType ref="i91"/>
 						</IsTypedBy>
