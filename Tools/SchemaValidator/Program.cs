@@ -53,7 +53,7 @@ namespace SchemaValidator
                         Console.ForegroundColor = ConsoleColor.Red;
                     else
                         Console.ForegroundColor = ConsoleColor.Green;
-                    Console.WriteLine($"Check finished. There are {validator.Errors.Count()} errors.");
+                    Console.WriteLine($"Check finished. There are {validator.Errors.Count()} errors and {validator.Warnings.Count()} warnings.");
                     Console.ForegroundColor = ConsoleColor.White;
                     Console.WriteLine($"Press any key to quit...");
                     Console.ReadKey();
