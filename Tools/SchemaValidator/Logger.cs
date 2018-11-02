@@ -77,12 +77,19 @@ namespace SchemaValidator
     {
         public ErrorAppender()
         {
-            Threshold = Level.Error;
+            Threshold = Level.Warn;
         }
-        public IEnumerable<Error> Errors => GetEvents().Select(e => new Error { Message = e.RenderedMessage, Exception = e.ExceptionObject });
+        public IEnumerable<LogMessage> Errors => GetEvents()
+            .Where(e => e.Level == Level.Error)
+            .Select(e => new LogMessage { Message = e.RenderedMessage, Exception = e.ExceptionObject });
+
+        public IEnumerable<LogMessage> Warnings => GetEvents()
+            .Where(e => e.Level == Level.Warn)
+            .Select(e => new LogMessage { Message = e.RenderedMessage, Exception = e.ExceptionObject });
+
     }
 
-    public struct Error
+    public struct LogMessage
     {
         public string Message;
         public Exception Exception;

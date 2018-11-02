@@ -19,7 +19,8 @@ namespace SchemaValidator
 {
     public class Validator
     {
-        public IEnumerable<Error> Errors => appender.Errors;
+        public IEnumerable<LogMessage> Errors => appender.Errors;
+        public IEnumerable<LogMessage> Warnings => appender.Warnings;
 
         private ILog log;
         private ErrorAppender appender;
@@ -415,7 +416,7 @@ namespace SchemaValidator
                 return false;
             }
 
-            return !Errors.Any();
+            return !Errors.Any() && !Warnings.Any();
         }
 
         private void LogEntityHistogram(IModel model)
