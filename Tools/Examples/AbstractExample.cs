@@ -98,13 +98,18 @@ namespace Examples
         /// </summary>
         /// <param name="throwOnErrors">Throws an exception when there are errors in the model</param>
         /// <returns>List of errors. Model is valid if this is empty.</returns>
-        protected IEnumerable<Error> Validate(bool throwOnErrors, string logFile = null)
+        protected IEnumerable<LogMessage> Validate(bool throwOnErrors, bool treatWarningsAsErrors, string logFile = null)
         {
             var validator = new Validator();
             var ok = validator.Check(model, logFile);
+            var errs = treatWarningsAsErrors ? validator.Errors.Concat(validator.Warnings) : validator.Errors;
+            if (treatWarningsAsErrors)
+            {
+                ok = ok && !validator.Warnings.Any();
+            }
             if (throwOnErrors && !ok)
-                throw new Exception($"Model contains errors: \r\n{string.Concat("\r\n", validator.Errors.Select(e => e.Message))}");
-            return validator.Errors;
+                throw new Exception($"Model contains errors: \r\n{string.Concat("\r\n", errs.Select(e => e.Message))}");
+            return errs;
         }
 
         /// <summary>
@@ -116,14 +121,14 @@ namespace Examples
         /// <param name="throwOnSchemaErrors">Makes the validator to throw an exception when there are errors. Files will not be
         /// generated in that case</param>
         /// <param name="rootTypes">Root (main) types for XML serialization</param>
-        protected void SaveAs(string pathWithoutExtention, bool throwOnSchemaErrors,  params Type[] rootTypes)
+        protected void SaveAs(string pathWithoutExtention, bool throwOnSchemaErrors, params Type[] rootTypes)
         {
             var ifc = pathWithoutExtention + ".ifc";
             var xml = pathWithoutExtention + ".ifcxml";
             var log = pathWithoutExtention + ".log";
 
             // make sure all errors are logged alongside the files created
-            Validate(throwOnSchemaErrors, log);
+            Validate(throwOnSchemaErrors, true, log);
 
             model.SaveAs(ifc);
             AddCommentsToStep21(ifc);
