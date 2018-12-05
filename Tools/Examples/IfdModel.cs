@@ -83,10 +83,17 @@ namespace Examples
                 _comments.Add(entity.EntityLabel, comment);
         }
 
-        public void Save(string file)
+        public void Save(string file, bool throwOnError = false)
         {
+            var log = Path.ChangeExtension(file, ".log");
+            var validator = new SchemaValidator.Validator();
+            validator.Check(this, log);
+            if (throwOnError && validator.Errors.Any())
+                throw new Exception("Model is not invalid. Check the log.");
+
             if (!file.EndsWith(".stp", StringComparison.InvariantCultureIgnoreCase))
                 file = file + ".stp";
+
             using (var output = File.CreateText(file))
             {
                 Write(output);
