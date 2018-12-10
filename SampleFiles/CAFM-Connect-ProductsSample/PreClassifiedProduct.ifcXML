@@ -146,32 +146,20 @@
 	</IfcClassificationReference>
 	<IfcPropertySetTemplate id="i157" GlobalId="2DeVW21T54MvNyDeOrUn9O" Name="Propertyset for an IfcAlarm/BELL" Description="Generell description of an Propertyset for an IfcAlarm/BELL" ApplicableEntity="IfcAlarm/BELL">
 		<HasPropertyTemplates>
-			<IfcSimplePropertyTemplate id="i158" GlobalId="0qRvdT3abDKfNj3EtPset7" Name="Descitption" Description="Freitextfeld zur allgemeinen Beschreibung von Objektinformationen" TemplateType="p_singlevalue" PrimaryMeasureType="IfcText"/>
+			<IfcSimplePropertyTemplate id="i158" GlobalId="0qRvdT3abDKfNj3EtPset7" Name="Description" Description="Generall description of the object" TemplateType="p_singlevalue" PrimaryMeasureType="IfcText"/>
 			<IfcSimplePropertyTemplate id="i159" GlobalId="0mb$wPzVL4Lw29xSsZI9gm" Name="Automatic drive" Description="Indication whether this component has an automatic drive (power-operated) to open and close (YES) or not (NO)." TemplateType="p_singlevalue" PrimaryMeasureType="IfcBoolean"/>
 			<IfcSimplePropertyTemplate id="i160" GlobalId="0qRvdT3abDKfNj3EtPset4" Name="Unique Product identification code" Description="" TemplateType="p_singlevalue" PrimaryMeasureType="IfcText"/>
 			<IfcSimplePropertyTemplate id="i161" GlobalId="0qRvdT3abDKfNj3EtPset5" Name="Type according Article 11-4" Description="" TemplateType="p_singlevalue" PrimaryMeasureType="IfcText"/>
 			<IfcSimplePropertyTemplate id="i162" GlobalId="0qRvdT3abDKfNj3EtPset6" Name="Name of Property3" Description="" TemplateType="p_singlevalue" PrimaryMeasureType="IfcText"/>
 			<IfcSimplePropertyTemplate id="i164" GlobalId="1A5LyOZ4r6yOXYmvfudGJr" Name="Manufacturer" Description="" TemplateType="p_singlevalue" PrimaryMeasureType="IfcText"/>
 			<IfcSimplePropertyTemplate id="i165" GlobalId="0$nuh8r1z36A5bVGxS82ZW" Name="Year of construction" Description="" TemplateType="p_singlevalue" PrimaryMeasureType="IfcReal"/>
-			<IfcSimplePropertyTemplate id="i166" GlobalId="0FERfAvWX2kOL7PUua3mJm" Name="DiBT Zulassungsnummer" Description="" TemplateType="p_singlevalue" PrimaryMeasureType="IfcReal"/>
-			<IfcSimplePropertyTemplate id="i167" GlobalId="2WOPKelFT7R9Pq6IXcjLx0" Name="Schutzanforderung Alarm" Description="" TemplateType="p_enumeratedvalue" PrimaryMeasureType="IfcText">
+			<IfcSimplePropertyTemplate id="i166" GlobalId="0FERfAvWX2kOL7PUua3mJm" Name="DiBT approval number" Description="" TemplateType="p_singlevalue" PrimaryMeasureType="IfcReal"/>
+			<IfcSimplePropertyTemplate id="i167" GlobalId="2WOPKelFT7R9Pq6IXcjLx0" Name="protection requirement alarm" Description="" TemplateType="p_enumeratedvalue" PrimaryMeasureType="IfcText">
 				<Enumerators Name="">
 					<EnumerationValues>
-						<IfcLabel-wrapper pos="0">ohne besondere Schutzanforderung</IfcLabel-wrapper>
-						<IfcLabel-wrapper pos="1">Brandschutztür</IfcLabel-wrapper>
-						<IfcLabel-wrapper pos="2">Rauchschutztür</IfcLabel-wrapper>
-						<IfcLabel-wrapper pos="3">Schallschutztür </IfcLabel-wrapper>
-						<IfcLabel-wrapper pos="4"> Brand-Rauchschutztür</IfcLabel-wrapper>
-					</EnumerationValues>
-				</Enumerators>
-			</IfcSimplePropertyTemplate>
-			<IfcSimplePropertyTemplate id="i173" GlobalId="2xf958RPLA4hXB2nsA1jnB" Name="Feuerwiderstandsklasse" Description="" TemplateType="p_enumeratedvalue" PrimaryMeasureType="IfcText" pos="11">
-				<Enumerators Name="">
-					<EnumerationValues>
-						<IfcLabel-wrapper pos="0">T 30-1</IfcLabel-wrapper>
-						<IfcLabel-wrapper pos="1">T 30-2</IfcLabel-wrapper>
-						<IfcLabel-wrapper pos="2">T 90-1</IfcLabel-wrapper>
-						<IfcLabel-wrapper pos="3">T 90-2 </IfcLabel-wrapper>
+						<IfcLabel-wrapper pos="0">no special protection requirement</IfcLabel-wrapper>
+						<IfcLabel-wrapper pos="1">protection requirement level 1</IfcLabel-wrapper>
+						<IfcLabel-wrapper pos="2">protection requirement level 2</IfcLabel-wrapper>
 					</EnumerationValues>
 				</Enumerators>
 			</IfcSimplePropertyTemplate>
@@ -192,7 +180,7 @@
 					<IfcPropertySet id="i6896977" GlobalId="26JruP9Sj6_QQl9T2nuNCK" Name="">
 						<HasProperties>
 							<IfcComplexProperty id="i71300" UsageName="" Name="">
-								<HasProperties>
+								<HasProperties>					
 									<IfcPropertySingleValue id="i71301" Name="Unique Product identification code">
 										<NominalValue>
 											<IfcLabel-wrapper>Fireray50/100RV</IfcLabel-wrapper>
@@ -208,6 +196,11 @@
 											<IfcLabel-wrapper>3456</IfcLabel-wrapper>
 										</NominalValue>
 									</IfcPropertySingleValue>
+									<IfcPropertySingleValue id="i71304" Name="Description">
+										<NominalValue>
+											<IfcLabel-wrapper>A nice description of the Fireray50/100RV</IfcLabel-wrapper>
+										</NominalValue>
+									</IfcPropertySingleValue>	
 								</HasProperties>
 							</IfcComplexProperty>
 						</HasProperties>
