@@ -144,35 +144,17 @@
 			</IfcClassificationReference>
 		</HasReferences>
 	</IfcClassificationReference>
-	<IfcPropertySetTemplate id="i157" GlobalId="2DeVW21T54MvNyDeOrUn9O" Name="Propertyset for Objectttype 1" Description="Türen einschließlich Umrahmungen, Beschlägen, Antrieben, Lüftungselementen und sonstigen eingebauten Elementen" ApplicableEntity="IfcDoor">
+	<IfcPropertySetTemplate id="i157" GlobalId="2DeVW21T54MvNyDeOrUn9O" Name="Propertyset for an IfcAlarm/BELL" Description="Generell description of an Propertyset for an IfcAlarm/BELL" ApplicableEntity="IfcAlarm/BELL">
 		<HasPropertyTemplates>
-			<IfcSimplePropertyTemplate id="i158" GlobalId="0qRvdT3abDKfNj3EtPset7" Name="Beschreibung" Description="Freitextfeld zur allgemeinen Beschreibung von Objektinformationen" TemplateType="p_singlevalue" PrimaryMeasureType="IfcText" pos="0"/>
-			<IfcSimplePropertyTemplate id="i159" GlobalId="0mb$wPzVL4Lw29xSsZI9gm" Name="Automatischer Antrieb" Description="Angabe, ob dieses Bauteil einen automatischen Antrieb (kraftbetärtigt) zum Öffnen und Schließen besitzt (JA) oder nicht (NEIN)." TemplateType="p_singlevalue" PrimaryMeasureType="IfcBoolean" pos="1"/>
-			<IfcSimplePropertyTemplate id="i160" GlobalId="0TsTShWprBqBATZkBjo22i" Name="Öffnungsart" Description="" TemplateType="p_enumeratedvalue" PrimaryMeasureType="IfcText" pos="2">
-				<Enumerators Name="">
-					<EnumerationValues>
-						<IfcLabel-wrapper pos="0">Drehtür</IfcLabel-wrapper>
-						<IfcLabel-wrapper pos="1">Falttür</IfcLabel-wrapper>
-						<IfcLabel-wrapper pos="2">Hebedrehtür</IfcLabel-wrapper>
-						<IfcLabel-wrapper pos="3">Hebeschiebetür</IfcLabel-wrapper>
-						<IfcLabel-wrapper pos="4">Pendeltür</IfcLabel-wrapper>
-						<IfcLabel-wrapper pos="5">Schiebetür</IfcLabel-wrapper>
-						<IfcLabel-wrapper pos="6">Karusselltür </IfcLabel-wrapper>
-					</EnumerationValues>
-				</Enumerators>
-			</IfcSimplePropertyTemplate>
-			<IfcSimplePropertyTemplate id="i162" GlobalId="2cWZvwu0fEfhvTXia$PbSM" Name="Anschlag" Description="" TemplateType="p_enumeratedvalue" PrimaryMeasureType="IfcText" pos="3">
-				<Enumerators Name="">
-					<EnumerationValues>
-						<IfcLabel-wrapper pos="0">Din R</IfcLabel-wrapper>
-						<IfcLabel-wrapper pos="1">Din L</IfcLabel-wrapper>
-					</EnumerationValues>
-				</Enumerators>
-			</IfcSimplePropertyTemplate>
-			<IfcSimplePropertyTemplate id="i164" GlobalId="1A5LyOZ4r6yOXYmvfudGJr" Name="Hersteller" Description="" TemplateType="p_singlevalue" PrimaryMeasureType="IfcText" pos="4"/>
-			<IfcSimplePropertyTemplate id="i165" GlobalId="0$nuh8r1z36A5bVGxS82ZW" Name="Baujahr" Description="" TemplateType="p_singlevalue" PrimaryMeasureType="IfcReal" pos="5"/>
-			<IfcSimplePropertyTemplate id="i166" GlobalId="0FERfAvWX2kOL7PUua3mJm" Name="DiBT Zulassungsnummer" Description="" TemplateType="p_singlevalue" PrimaryMeasureType="IfcReal" pos="6"/>
-			<IfcSimplePropertyTemplate id="i167" GlobalId="2WOPKelFT7R9Pq6IXcjLx0" Name="Schutzanforderung Tür" Description="" TemplateType="p_enumeratedvalue" PrimaryMeasureType="IfcText" pos="7">
+			<IfcSimplePropertyTemplate id="i158" GlobalId="0qRvdT3abDKfNj3EtPset7" Name="Descitption" Description="Freitextfeld zur allgemeinen Beschreibung von Objektinformationen" TemplateType="p_singlevalue" PrimaryMeasureType="IfcText"/>
+			<IfcSimplePropertyTemplate id="i159" GlobalId="0mb$wPzVL4Lw29xSsZI9gm" Name="Automatic drive" Description="Indication whether this component has an automatic drive (power-operated) to open and close (YES) or not (NO)." TemplateType="p_singlevalue" PrimaryMeasureType="IfcBoolean"/>
+			<IfcSimplePropertyTemplate id="i160" GlobalId="0qRvdT3abDKfNj3EtPset4" Name="Unique Product identification code" Description="" TemplateType="p_singlevalue" PrimaryMeasureType="IfcText"/>
+			<IfcSimplePropertyTemplate id="i161" GlobalId="0qRvdT3abDKfNj3EtPset5" Name="Type according Article 11-4" Description="" TemplateType="p_singlevalue" PrimaryMeasureType="IfcText"/>
+			<IfcSimplePropertyTemplate id="i162" GlobalId="0qRvdT3abDKfNj3EtPset6" Name="Name of Property3" Description="" TemplateType="p_singlevalue" PrimaryMeasureType="IfcText"/>
+			<IfcSimplePropertyTemplate id="i164" GlobalId="1A5LyOZ4r6yOXYmvfudGJr" Name="Manufacturer" Description="" TemplateType="p_singlevalue" PrimaryMeasureType="IfcText"/>
+			<IfcSimplePropertyTemplate id="i165" GlobalId="0$nuh8r1z36A5bVGxS82ZW" Name="Year of construction" Description="" TemplateType="p_singlevalue" PrimaryMeasureType="IfcReal"/>
+			<IfcSimplePropertyTemplate id="i166" GlobalId="0FERfAvWX2kOL7PUua3mJm" Name="DiBT Zulassungsnummer" Description="" TemplateType="p_singlevalue" PrimaryMeasureType="IfcReal"/>
+			<IfcSimplePropertyTemplate id="i167" GlobalId="2WOPKelFT7R9Pq6IXcjLx0" Name="Schutzanforderung Alarm" Description="" TemplateType="p_enumeratedvalue" PrimaryMeasureType="IfcText">
 				<Enumerators Name="">
 					<EnumerationValues>
 						<IfcLabel-wrapper pos="0">ohne besondere Schutzanforderung</IfcLabel-wrapper>
@@ -180,17 +162,6 @@
 						<IfcLabel-wrapper pos="2">Rauchschutztür</IfcLabel-wrapper>
 						<IfcLabel-wrapper pos="3">Schallschutztür </IfcLabel-wrapper>
 						<IfcLabel-wrapper pos="4"> Brand-Rauchschutztür</IfcLabel-wrapper>
-					</EnumerationValues>
-				</Enumerators>
-			</IfcSimplePropertyTemplate>
-			<IfcSimplePropertyTemplate id="i169" GlobalId="19DurUNXLEQ8Eddt$Ruw8o" Name="Fluchttür" Description="" TemplateType="p_singlevalue" PrimaryMeasureType="IfcBoolean" pos="8"/>
-			<IfcSimplePropertyTemplate id="i170" GlobalId="1Qq3hTkQf3Rx1rVSGSfRwX" Name="Obertürschließer" Description="" TemplateType="p_singlevalue" PrimaryMeasureType="IfcBoolean" pos="9"/>
-			<IfcSimplePropertyTemplate id="i171" GlobalId="1hUbBImKz6ge2S_MY$7y4I" Name="Feststellanlage" Description="" TemplateType="p_enumeratedvalue" PrimaryMeasureType="IfcText" pos="10">
-				<Enumerators Name="">
-					<EnumerationValues>
-						<IfcLabel-wrapper pos="0">nein</IfcLabel-wrapper>
-						<IfcLabel-wrapper pos="1">manuell</IfcLabel-wrapper>
-						<IfcLabel-wrapper pos="2">elektrisch</IfcLabel-wrapper>
 					</EnumerationValues>
 				</Enumerators>
 			</IfcSimplePropertyTemplate>
@@ -204,16 +175,6 @@
 					</EnumerationValues>
 				</Enumerators>
 			</IfcSimplePropertyTemplate>
-			<IfcSimplePropertyTemplate id="i175" GlobalId="0ctwDbCbvCTxKEyvl_RJTm" Name="Anzahl Flügel" Description="" TemplateType="p_enumeratedvalue" PrimaryMeasureType="IfcText" pos="12">
-				<Enumerators Name="">
-					<EnumerationValues>
-						<IfcLabel-wrapper pos="0">einflügelig</IfcLabel-wrapper>
-						<IfcLabel-wrapper pos="1">2-flügelig</IfcLabel-wrapper>
-						<IfcLabel-wrapper pos="2">mehrflüglig</IfcLabel-wrapper>
-					</EnumerationValues>
-				</Enumerators>
-			</IfcSimplePropertyTemplate>
-			<IfcSimplePropertyTemplate id="i177" GlobalId="3mpCpm7S58xuXMDsGLtPez" Name="Notausgangsverschluss" Description="" TemplateType="p_singlevalue" PrimaryMeasureType="IfcBoolean" pos="13"/>
 		</HasPropertyTemplates>
 	</IfcPropertySetTemplate>
 	<IfcRelAssociatesClassification id="i178" GlobalId="1XS_HPENjA0wd_6P789FOL" Name="Association of Propertyset to Objectttype 1">
