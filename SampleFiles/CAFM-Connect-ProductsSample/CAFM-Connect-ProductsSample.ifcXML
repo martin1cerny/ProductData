@@ -13454,7 +13454,7 @@ Außenhydrant unterflur</IfcLabel-wrapper>
 		</RelatedObjects>
 	</IfcRelAggregates>
 	<IfcSystem id="i3258" GlobalId="1NMbqRitH3Gx8An_QJRkaU" Name="430.51 Brandschutzklappen" Description="430.51 Brandschutzklappen"/>
-	<IfcDamper id="i3259" GlobalId="2_SFbHotvFgO5X97E_27uW" Name="Generisch" Description="Brandschutzklappe mit GLT-Auslöung" Tag="TYP01"/>
+	<IfcDamper id="i3259" GlobalId="2_SFbHotvFgO5X97E_27uW" Name="Generisch" Description="Brandschutzklappe mit GLT-Auslöung" Tag="TYP01" ObjectType="FIREDAMPER"/>
 	<IfcRelAssignsToGroup id="i3260" GlobalId="34xD17poH4VPnkOGxKKNje" Name="" ref="cc1_2" RelatedObjectsType="notdefined">
 		<RelatedObjects>
 			<IfcDamper xsi:nil="true" ref="i3259"/>
@@ -13499,7 +13499,7 @@ Außenhydrant unterflur</IfcLabel-wrapper>
 		</HasProperties>
 	</IfcPropertySet>
 	<IfcRelDefinesByProperties id="i3268" GlobalId="1VDJMuoWPA4OVUtks2$UY8">
-		<RelatedObjects xsi:type="IfcBuildingElementProxy" xsi:nil="true" ref="i3259"/>
+		<RelatedObjects xsi:type="IfcDamper" xsi:nil="true" ref="i3259"/>
 		<RelatingPropertyDefinition>
 			<IfcPropertySet xsi:nil="true" ref="i3267"/>
 		</RelatingPropertyDefinition>
@@ -13546,7 +13546,7 @@ Außenhydrant unterflur</IfcLabel-wrapper>
 		</HasProperties>
 	</IfcPropertySet>
 	<IfcRelDefinesByProperties id="i3277" GlobalId="1VDJMuoWPA4OVUtks2$UY9">
-		<RelatedObjects xsi:type="IfcBuildingElementProxy" xsi:nil="true" ref="i3269"/>
+		<RelatedObjects xsi:type="IfcDamper" xsi:nil="true" ref="i3269"/>
 		<RelatingPropertyDefinition>
 			<IfcPropertySet xsi:nil="true" ref="i3276"/>
 		</RelatingPropertyDefinition>
@@ -13593,7 +13593,7 @@ Außenhydrant unterflur</IfcLabel-wrapper>
 		</HasProperties>
 	</IfcPropertySet>
 	<IfcRelDefinesByProperties id="i3286" GlobalId="1VDJMuoWPA4OVUtks2$UY4">
-		<RelatedObjects xsi:type="IfcBuildingElementProxy" xsi:nil="true" ref="i3278"/>
+		<RelatedObjects xsi:type="IfcDamper" xsi:nil="true" ref="i3278"/>
 		<RelatingPropertyDefinition>
 			<IfcPropertySet xsi:nil="true" ref="i3285"/>
 		</RelatingPropertyDefinition>
@@ -13653,16 +13653,16 @@ Außenhydrant unterflur</IfcLabel-wrapper>
 	</IfcRelDefinesByTemplate>
 	<IfcRelContainedInSpatialStructure GlobalId="1VDJMuoWPA4OVUtks2$UY6">
 		<RelatedElements>
-			<IfcBuildingElementProxy xsi:nil="true" ref="i3259"/>
-			<IfcBuildingElementProxy xsi:nil="true" ref="i3269"/>
-			<IfcBuildingElementProxy xsi:nil="true" ref="i3278"/>
-			<IfcBuildingElementProxy xsi:nil="true" ref="i3246"/>
+			<IfcDamper xsi:nil="true" ref="i3259"/>
+			<IfcDamper xsi:nil="true" ref="i3269"/>
+			<IfcDamper xsi:nil="true" ref="i3278"/>
+			<IfcDamper xsi:nil="true" ref="i3246"/>
 		</RelatedElements>
 		<RelatingStructure xsi:type="IfcSite" xsi:nil="true" ref="i3244"/>
 	</IfcRelContainedInSpatialStructure>
 	<IfcBuildingElementProxy id="i3255" GlobalId="1x7DFf67D61BCAeOCQBHyn" Name=""/>
 	<IfcRelAggregates id="i3256" GlobalId="18pKIaqWn2tuPdwhDbmWaS">
-		<RelatingObject xsi:type="IfcBuildingElementProxy" xsi:nil="true" ref="i3246"/>
+		<RelatingObject xsi:type="IfcDamper" xsi:nil="true" ref="i3246"/>
 		<RelatedObjects>
 			<IfcBuildingElementProxy xsi:nil="true" ref="i3255"/>
 		</RelatedObjects>
@@ -13684,7 +13684,7 @@ Außenhydrant unterflur</IfcLabel-wrapper>
 	<IfcDocumentInformation id="i3290" Identification="d96295cf779240e9a204105627ec00be" Name="fkrs-eu-montage-GL.pdf" Location="Documents\fkrs-eu-montage-GL.pdf" CreationTime="25.10.2016 09:47:48" LastRevisionTime="25.10.2016 09:47:52" ElectronicFormat="application/pdf"/>
 	<IfcRelAssociatesDocument GlobalId="3EGlhekFT4z96nW7gmGyfS">
 		<RelatedObjects>
-			<IfcBuildingElementProxy xsi:nil="true" ref="i3278"/>
+			<IfcDamper xsi:nil="true" ref="i3278"/>
 		</RelatedObjects>
 		<RelatingDocument>
 			<IfcDocumentInformation xsi:nil="true" ref="i3290"/>
