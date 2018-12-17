@@ -5,6 +5,7 @@ using System.Xml;
 using Xbim.Common;
 using Xbim.Common.Step21;
 using Xbim.Ifc;
+using Xbim.IO;
 using Xbim.IO.Xml;
 
 namespace Examples
