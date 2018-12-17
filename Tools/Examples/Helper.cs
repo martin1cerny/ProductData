@@ -1,14 +1,11 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.IO;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Xml;
 using Xbim.Common;
 using Xbim.Common.Step21;
 using Xbim.Ifc;
-using Xbim.Ifc4.Kernel;
+using Xbim.IO;
 using Xbim.IO.Xml;
 
 namespace Examples
@@ -47,7 +44,7 @@ namespace Examples
         public static IfcStore CreateModel(string name, string surname, string organization)
         {
             var credentials = GetCredentials(name, surname, organization);
-            return IfcStore.Create(credentials, IfcSchemaVersion.Ifc4, XbimStoreType.InMemoryModel);
+            return IfcStore.Create(credentials, XbimSchemaVersion.Ifc4, XbimStoreType.InMemoryModel);
         }
 
         //public static  string GetPathInSamples(string directory, string name)

@@ -1,6 +1,5 @@
 ﻿using System.Data;
 using System.IO;
-using Xbim.Common.Logging;
 using Xbim.Ifc4.Kernel;
 using Xbim.Ifc4.MeasureResource;
 using Xbim.Ifc4.PropertyResource;

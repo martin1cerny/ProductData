@@ -1,4 +1,5 @@
-﻿using log4net;
+﻿using Microsoft.Extensions.Logging;
+using Microsoft.Extensions.Logging.Abstractions;
 using System;
 using System.Collections.Generic;
 using System.IO;
@@ -22,8 +23,8 @@ namespace SchemaValidator
         public IEnumerable<LogMessage> Errors => appender.Errors;
         public IEnumerable<LogMessage> Warnings => appender.Warnings;
 
-        private ILog log;
-        private ErrorAppender appender;
+        private ILogger log;
+        private MemoryLog appender;
 
         private bool CheckInternal(IModel model, Dictionary<int, string> idMap)
         {
@@ -71,7 +72,7 @@ namespace SchemaValidator
                         msg.AppendLine($"http://www.buildingsmart-tech.org/ifc/IFC4/Add2/html/link/{source}.htm");
                     }
                 }
-                log.Error(msg.ToString());
+                log.LogError(msg.ToString());
             }
 
             return !schemaErrors.Any();
@@ -345,7 +346,7 @@ namespace SchemaValidator
         {
             // set up error logger handler to get errors from parser
             appender = Logger.Setup(logFile);
-            log = LogManager.GetLogger("Validator");
+            log = XbimLogging.CreateLogger("Validator");
 
             return CheckInternal(model, new Dictionary<int, string>());
         }
@@ -355,7 +356,7 @@ namespace SchemaValidator
             // set up error logger handler to get errors from parser
             var logFile = file + ".log";
             appender = Logger.Setup(logFile);
-            log = LogManager.GetLogger("Validator");
+            log = XbimLogging.CreateLogger("Validator");
 
 
             var ext = Path.GetExtension(file).ToUpperInvariant().Trim('.');
@@ -371,8 +372,8 @@ namespace SchemaValidator
                 default:
                     break;
             }
-            log.Info($"Validating file: {file}");
-            log.Info($"File format: {format}");
+            log.LogInformation($"Validating file: {file}");
+            log.LogInformation($"File format: {format}");
 
 
             try
@@ -381,15 +382,15 @@ namespace SchemaValidator
                 using (var model = IfcStore.Open(file, null, -1))
                 {
                     // header information
-                    log.Info($"Schema version: {string.Join(", ", model.Header.SchemaVersion)}");
-                    log.Info($"Model View Definitions: {string.Join(", ", model.Header.FileDescription.Description)}");
+                    log.LogInformation($"Schema version: {string.Join(", ", model.Header.SchemaVersion)}");
+                    log.LogInformation($"Model View Definitions: {string.Join(", ", model.Header.FileDescription.Description)}");
 
                     // STEP21 syntactic errors will be reported in the log already
                     if (appender.Errors.Any())
                         // do not proceed because the data is incomplete
                         return false;
 
-                    log.Info($"Number of entities: {model.Instances.Count}");
+                    log.LogInformation($"Number of entities: {model.Instances.Count}");
                     LogEntityHistogram(model);
 
                     var idMap = new Dictionary<int, string>();
@@ -407,12 +408,12 @@ namespace SchemaValidator
             // XML syntactic errors will be fired as an exception
             catch (XbimParserException pe)
             {
-                log.Error($"Parser failure: {pe.Message}.");
+                log.LogError($"Parser failure: {pe.Message}.");
                 return false;
             }
             catch (Exception ge)
             {
-                log.Error($"General failure: {ge.Message}.", ge);
+                log.LogError($"General failure: {ge.Message}.", ge);
                 return false;
             }
 
@@ -437,8 +438,8 @@ namespace SchemaValidator
             {
                 msg.AppendLine($"{kvp.Key, 40}: {kvp.Value}");
             }
-            log.Info($"Number of types: {histogram.Count}");
-            log.Info(msg.ToString());
+            log.LogInformation($"Number of types: {histogram.Count}");
+            log.LogInformation(msg.ToString());
         }
 
         private Dictionary<int, string> GetXmlEntityMap(Stream stream, IModel model)
@@ -447,13 +448,14 @@ namespace SchemaValidator
             var schema = model.Header.FileSchema.Schemas.First();
             if (string.Equals(schema, "IFC2X3", StringComparison.OrdinalIgnoreCase))
             {
-                log.Warn("Only IFC4 models are supported to report XML ids");
+                log.LogWarning("Only IFC4 models are supported to report XML ids");
                 return result;
             }
 
             _dummyModel = new MemoryModel(_factory4);
-            var xmlReader = new XbimXmlReader4(GetOrCreateXMLEntity, entity => { }, model.Metadata);
-            xmlReader.Read(stream);
+            // pass in null logger as this is not critical
+            var xmlReader = new XbimXmlReader4(GetOrCreateXMLEntity, entity => { }, model.Metadata, NullLogger.Instance);
+            xmlReader.Read(stream, _dummyModel);
 
             // swap the dictionary
             foreach (var item in xmlReader.IdMap)
