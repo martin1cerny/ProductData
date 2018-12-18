@@ -11,7 +11,6 @@ using Xbim.Common.Exceptions;
 using Xbim.Common.ExpressValidation;
 using Xbim.Common.Metadata;
 using Xbim.Ifc;
-using Xbim.Ifc.Validation;
 using Xbim.Ifc4.Interfaces;
 using Xbim.IO.Memory;
 using Xbim.IO.Xml;
@@ -20,6 +19,11 @@ namespace SchemaValidator
 {
     public class Validator
     {
+        static Validator()
+        {
+            IfcStore.ModelProviderFactory.UseHeuristicModelProvider();
+        }
+
         public IEnumerable<LogMessage> Errors => appender.Errors;
         public IEnumerable<LogMessage> Warnings => appender.Warnings;
 
@@ -29,7 +33,7 @@ namespace SchemaValidator
         private bool CheckInternal(IModel model, Dictionary<int, string> idMap)
         {
             // check for parser exceptions
-            var v = new IfcValidator
+            var v = new Xbim.Common.ExpressValidation.Validator
             {
                 ValidateLevel = ValidationFlags.All,
                 CreateEntityHierarchy = true
