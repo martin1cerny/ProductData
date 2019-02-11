@@ -29,8 +29,7 @@ namespace SchemaValidator
 
             var lf = new LoggerFactory().AddSerilog();
             lf.AddProvider(memLogProvider);
-            var log = lf.CreateLogger("WexbimCreation");
-            log.LogInformation("Creating wexBIM file from IFC model.");
+            var log = lf.CreateLogger("The Log");
 
             // set up xBIM logging. It will use your providers.
             XbimLogging.LoggerFactory = lf;

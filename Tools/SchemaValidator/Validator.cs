@@ -169,7 +169,7 @@ namespace SchemaValidator
                     case IfcSimplePropertyTemplateTypeEnum.P_LISTVALUE:
                         if ((detail = CheckMeasureType(property.PrimaryMeasureType, model.Metadata, false)) != null)
                             err.AddDetail(detail);
-                        if ((detail = CheckUnit(property.PrimaryMeasureType, property.PrimaryUnit, property)) != null)
+                        if (property.PrimaryUnit != null && (detail = CheckUnit(property.PrimaryMeasureType, property.PrimaryUnit, property)) != null)
                             err.AddDetail(detail);
                         break;
 
@@ -192,9 +192,9 @@ namespace SchemaValidator
                         if ((detail = CheckMeasureType(property.SecondaryMeasureType, model.Metadata, false)) != null)
                             err.AddDetail(detail);
 
-                        if ((detail = CheckUnit(property.PrimaryMeasureType, property.PrimaryUnit, property)) != null)
+                        if (property.PrimaryUnit != null && (detail = CheckUnit(property.PrimaryMeasureType, property.PrimaryUnit, property)) != null)
                             err.AddDetail(detail);
-                        if ((detail = CheckUnit(property.SecondaryMeasureType, property.SecondaryUnit, property)) != null)
+                        if (property.SecondaryUnit != null && (detail = CheckUnit(property.SecondaryMeasureType, property.SecondaryUnit, property)) != null)
                             err.AddDetail(detail);
                         break;
 

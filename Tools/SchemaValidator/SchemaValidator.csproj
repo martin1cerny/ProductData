@@ -7,7 +7,7 @@
     <PackageReference Include="Serilog.Extensions.Logging" Version="2.0.2" />
     <PackageReference Include="Serilog.Sinks.ColoredConsole" Version="3.0.1" />
     <PackageReference Include="Serilog.Sinks.File" Version="4.0.0" />
-    <PackageReference Include="Xbim.Essentials" Version="5.0.214" />
+    <PackageReference Include="Xbim.Essentials" Version="5.0.222" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="System.Windows.Forms" />
