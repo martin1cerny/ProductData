@@ -52,7 +52,7 @@
 					<IfcPropertySetTemplate id="i111" GlobalId="1lEpo0LO16FPpSj0jFwIOu" Name="Ityp" Description="Type indicator Ityp" TemplateType="pset_typedrivenoverride" ApplicableEntity="IFCLIGHTFIXTURETYPE" pos="1">
 						<HasPropertyTemplates>
 							<IfcSimplePropertyTemplate id="i112" GlobalId="1lEpo0LO16FPpSj0jFwIOu" Name="Point or linear source" Description="04-0001" TemplateType="p_enumeratedvalue" PrimaryMeasureType="IfcLabel" pos="1" AccessState="readonly">
-								<Enumerators  Name="">
+								<Enumerators Name="">
 									<EnumerationValues>
 										<IfcLabel-wrapper pos="1">1</IfcLabel-wrapper>
 										<IfcLabel-wrapper pos="1">2</IfcLabel-wrapper>
@@ -255,12 +255,95 @@
 							<IfcSimplePropertyTemplate id="i182" GlobalId="1lEpo0LO16FPpSj0jFwIOu" Name="Luminous intensity " Description="04-0001" TemplateType="p_singlevalue" pos="1" AccessState="readonly"/>
 						</HasPropertyTemplates>
 					</IfcPropertySetTemplate>
+					<IfcLampType ref="i202"/>
+					<IfcLampType id="i99202" GlobalId="26JruP9Sj6_QQl9T2nuNCG" Name="MyLightFixtureType">
+						<HasPropertySets>
+							<!-- Step 9: Insert the data based on the template-->
+							<IfcPropertySet id="i99203" GlobalId="26JruP9Sj6_QQl9T2nuNCH" Name="set DoC header" Description="This property set is valid for all instances of this type">
+								<HasProperties>
+									<IfcPropertySingleValue id="i99204" Name="Document number">
+										<NominalValue>
+											<IfcLabel-wrapper>CE 180/RED/06.17</IfcLabel-wrapper>
+										</NominalValue>
+									</IfcPropertySingleValue>
+									<IfcPropertySingleValue id="i99205" Name="Document title">
+										<NominalValue>
+											<IfcLabel-wrapper>EC Declaration of Conformity</IfcLabel-wrapper>
+										</NominalValue>
+									</IfcPropertySingleValue>
+									<IfcPropertySingleValue id="i99206" Name="Document text">
+										<NominalValue>
+											<IfcText-wrapper><![CDATA[Hiermit bestätigen wir unter alleiniger Verantwortung, dass die nachstehend aufgeführten Produkte den 
+Anforderungen der EG- Richtlinie über die Bereitstellung von Funkanlagen auf dem Markt 
+(RED-Richtlinie) (2014/53/EU) entsprechen:
+Hereby we confirm under our sole responsibility that the following products are in conformity with the 
+requirements according the EU-directive relating to the making available on the market of radio 
+equipment (RED-directive) (2014/53/EU): 
+Funkanlage / Radio equipment 
+Verwendungszweck / Intended use: 
+Produktbezeichnung / Type name: 
+HFS: Funkortung / Radiodetermination 
+LLWC: Funkfernsteuerung (Empfänger) / Radiocommunication 
+Nextrema G3 B 4000-840 ETDD +HFS
+Nextrema G3 B 6000-840 ETDD +HFS 
+Nextrema G3 XB 2300-840 ETDD *LI-WC 
+Nextrema G3 B 6000-840 ETDD *LI-WC 
+Nextrema (33 XB 2300-840 ETDD +HFS 
+Nextreme XB 4000-840 ETDD +HFS
+Nextreme XB 6000-840 ETDD +HFS 
+Nextrema G3 B 4000-840 ETDD +LLWC 
+Nextrema G3 TB 8000-840 ETDD +LLWC 
+]]></IfcText-wrapper>
+										</NominalValue>
+									</IfcPropertySingleValue>
+									<IfcPropertySingleValue id="i99207" Name="Country of Production">
+										<NominalValue>
+											<IfcLabel-wrapper>DE</IfcLabel-wrapper>
+										</NominalValue>
+									</IfcPropertySingleValue>
+									<IfcPropertySingleValue id="i99208" Name="Manufacturer">
+										<NominalValue>
+											<IfcLabel-wrapper><![CDATA[TRILUX GmbH & Co. KG]]></IfcLabel-wrapper>
+										</NominalValue>
+									</IfcPropertySingleValue>
+									<IfcPropertySingleValue id="i99209" Name="Manufacturer address">
+										<NominalValue>
+											<IfcText-wrapper><![CDATA[Heidestraße, 59759 Arnsberg-Hüsten]]></IfcText-wrapper>
+										</NominalValue>
+									</IfcPropertySingleValue>
+									<IfcPropertySingleValue id="i99210" Name="Product brand">
+										<NominalValue>
+											<IfcLabel-wrapper><![CDATA[Nextrema]]></IfcLabel-wrapper>
+										</NominalValue>
+									</IfcPropertySingleValue>
+									<IfcPropertySingleValue id="i99211" Name="Issuer">
+										<NominalValue>
+											<IfcLabel-wrapper><![CDATA[TRILUX GmbH & Co. KG]]></IfcLabel-wrapper>
+										</NominalValue>
+									</IfcPropertySingleValue>
+									<IfcPropertySingleValue id="i99212" Name="Date">
+										<NominalValue>
+											<IfcLabel-wrapper>2017-06-10T00:00:00+00:01</IfcLabel-wrapper>
+										</NominalValue>
+									</IfcPropertySingleValue>
+									<IfcPropertySingleValue id="i99219" Name="Width of the luminous area" Description="The 'Width of the luminous area' is defined by a related constraint"/>
+									<IfcPropertySingleValue id="i99220" Name="Lamp Count" Description="The 'Lamp Count' is defined by a related constraint"/>
+								</HasProperties>
+							</IfcPropertySet>
+						</HasPropertySets>
+					</IfcLampType>
 					<!-- Step 2: Define a PropertySetTemplate that includes a ComplexProperty (can be called "SuperProperty"), That can be generated/imported from a PSet, the bSDD, IfcDoc or elsewhere - -->
 					<!-- Step 3: Define a classification of all Testmethods in a one dimensinal hierarchy as IfcClassification -That can be generated/imported from a the bSDD, IfcDoc or elsewhere - -->
 				</RelatedDefinitions>
 			</IfcRelDeclares>
 		</Declares>
 	</IfcProjectLibrary>
+	<IfcRelDefinesByTemplate id="i473737373">
+		<RelatedPropertySets>
+			<IfcPropertySet xsi:nil="true" ref="i99203"/>
+		</RelatedPropertySets>
+		<RelatingTemplate xsi:nil="true" ref="i105"/>
+	</IfcRelDefinesByTemplate>
 	<!-- Step 3: Insert a classification of standards as base for the reference of elements to the standard documents (perhaps not needed)- -->
 	<!-- Step 4: Relate the specical PropertyTemplate to  the classification node, that links to the document concept in the dictionary- -->
 	<!-- Step 5: Insert a table, that contains the references to a dictionary for those IFC elements who do not have an own attribute "GlobalId". These are IfcClassificationReference and EnumerationValues/IfcLabel-wrapper-->
@@ -315,7 +398,7 @@
 	<IfcLampType id="i202" GlobalId="26JruP9Sj6_QQl9T2nuNCG" Name="MyLightFixtureType">
 		<HasPropertySets>
 			<!-- Step 9: Insert the data based on the template-->
-			<IfcPropertySet id="i203"  GlobalId="26JruP9Sj6_QQl9T2nuNCH"  Name="set DoC header" Description="This property set is valid for all instances of this type">
+			<IfcPropertySet id="i203" GlobalId="26JruP9Sj6_QQl9T2nuNCH" Name="set DoC header" Description="This property set is valid for all instances of this type">
 				<HasProperties>
 					<IfcPropertySingleValue id="i204" Name="Document number">
 						<NominalValue>
@@ -471,15 +554,25 @@ Nextrema G3 TB 8000-840 ETDD +LLWC
 			<IfcPropertySingleValue ref="i220" Name="Constrain on value of 'Width of the luminous area'"/>
 		</RelatedResourceObjects>
 	</IfcResourceConstraintRelationship>
-	<IfcRelDefinesByTemplate id="i229" GlobalId="26JruP9Sj6_QQl9T2nuNCk">
-		<RelatedPropertySets>
-			<IfcPropertySet xsi:nil="true" ref="i203"/>
-		</RelatedPropertySets>
-		<RelatingTemplate xsi:nil="true" ref="i105"/>
-	</IfcRelDefinesByTemplate>
 	<!-- Step 8: Insert the tracking information for the PDS (tbd)-->
 	<IfcLamp id="i213" GlobalId="26JruP9Sj6_QQl9T2nuNCi" Name="Nextrema G3 B 4000-840 ETDD +HFS" Description="Real Lamp (AsDelivered)" Tag="4711" PredefinedType="halogen">
+		<IsTypedBy>
+			<RelatingType ref="i99202"/>
+		</IsTypedBy>
 		<IsDefinedBy>
+			<IfcRelDefinesByProperties>
+				<RelatingPropertyDefinition>
+					<IfcPropertySet>
+						<HasProperties>
+							<IfcPropertySingleValue id="i992172" Name="Seriennummer">
+								<NominalValue>
+									<IfcLabel-wrapper>UUTVBNJ747234</IfcLabel-wrapper>
+								</NominalValue>
+							</IfcPropertySingleValue>
+						</HasProperties>
+					</IfcPropertySet>
+				</RelatingPropertyDefinition>
+			</IfcRelDefinesByProperties>
 		</IsDefinedBy>
 	</IfcLamp>
 	<IfcDocumentInformation id="i300" Identification="26JzuP9Sj6_QQl9T2nuNCG" Name="CE180_RED_06.17_Nextrema_G3_HFS_LLWC.pdf" Location="Documents\CE180_RED_06.17_Nextrema_G3_HFS_LLWC.pdf" CreationTime="2017-06-10T00:00:00+00:01" LastRevisionTime="2017-06-10T00:00:00+00:01" ElectronicFormat="application/pdf"/>
