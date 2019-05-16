@@ -1,229 +1,229 @@
 <?xml version="1.0" encoding="utf-8"?>
 <ifcXML xmlns:ifc="http://www.buildingsmart-tech.org/ifcXML/IFC4/Add1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" id="ifcXML4" xmlns="http://www.buildingsmart-tech.org/ifcXML/IFC4/Add1" xsi:schemaLocation="http://www.buildingsmart-tech.org/ifcXML/IFC4/Add1 ../IFC4_ADD1.xsd">
-<IfcProject GlobalId="16FzQLyFXFOAco0hHmFZXB" Name="myProject">
- <IsDecomposedBy>
-  <IfcRelAggregates GlobalId="3q9yfa16z9wOZHi5h9dr4e">
-   <RelatedObjects>
-    <IfcBuilding GlobalId="1jCJfz2$TF29H$W5cKDgim" CompositionType="element">
-     <ContainsElements>
-      <IfcRelContainedInSpatialStructure GlobalId="2srhqEqDY4nA5hKmyLxDOV">
-       <RelatedElements>
-        <IfcDoor id="i7" GlobalId="33thURoQX5leiBg7ZN3H1A" Name="myDoor" OverallHeight="2040" OverallWidth="800" PredefinedType="notdefined">
-         <IsDefinedBy>
-          <IfcRelDefinesByProperties GlobalId="0GvYPGnxqQO2fJCMkZGzt7">
-           <RelatingPropertyDefinition>
-            <IfcPropertySet GlobalId="3rXyql0mf8kx3ZXg1$Xk9u" Name="Pset_Geometry">
-             <HasProperties>
-              <IfcPropertySingleValue Name="PanelWidth">
-               <NominalValue>
-                <IfcLengthMeasure-wrapper>800</IfcLengthMeasure-wrapper>
-               </NominalValue>
-              </IfcPropertySingleValue>
-             </HasProperties>
-            </IfcPropertySet>
-           </RelatingPropertyDefinition>
-          </IfcRelDefinesByProperties>
-         </IsDefinedBy>
-         <ObjectPlacement xsi:type="IfcLocalPlacement" id="i3">
-          <RelativePlacement>
-           <IfcAxis2Placement3D id="i1">
-            <Location id="i2" Coordinates="0 0 0" />
-           </IfcAxis2Placement3D>
-          </RelativePlacement>
-         </ObjectPlacement>
-         <Representation xsi:type="IfcProductDefinitionShape">
-          <Representations>
-           <IfcShapeRepresentation RepresentationIdentifier="Body" RepresentationType="SweptSolid">
-            <ContextOfItems xsi:type="IfcGeometricRepresentationContext" id="i4" ContextIdentifier="3D" ContextType="Model" CoordinateSpaceDimension="3" Precision="1E-05">
-             <WorldCoordinateSystem>
-              <IfcAxis2Placement3D xsi:nil="true" ref="i1" />
-             </WorldCoordinateSystem>
-            </ContextOfItems>
-            <Items>
-             <IfcExtrudedAreaSolid Depth="40">
-              <SweptArea xsi:type="IfcRectangleProfileDef" ProfileType="area" ProfileName="Panel" XDim="800" YDim="2040">
-               <Position id="i5">
-                <Location xsi:nil="true" ref="i2" />
-                <RefDirection DirectionRatios="1 0 0" />
-               </Position>
-              </SweptArea>
-              <Position xsi:nil="true" ref="i1" />
-              <ExtrudedDirection id="i6" DirectionRatios="0 0 1" />
-             </IfcExtrudedAreaSolid>
-            </Items>
-           </IfcShapeRepresentation>
-          </Representations>
-         </Representation>
-        </IfcDoor>
-        <IfcOpeningElement GlobalId="0rOQdi_3HDQuab2DeadCdQ" Name="myOpeningElement" PredefinedType="opening">
-         <ObjectPlacement xsi:type="IfcLocalPlacement" xsi:nil="true" ref="i3" />
-         <Representation xsi:type="IfcProductDefinitionShape">
-          <Representations>
-           <IfcShapeRepresentation RepresentationIdentifier="Body" RepresentationType="SweptSolid">
-            <ContextOfItems xsi:type="IfcGeometricRepresentationContext" xsi:nil="true" ref="i4" />
-            <Items>
-             <IfcExtrudedAreaSolid Depth="30">
-              <SweptArea xsi:type="IfcRectangleProfileDef" ProfileType="area" ProfileName="Panel" XDim="1000" YDim="2040">
-               <Position xsi:nil="true" ref="i5" />
-              </SweptArea>
-              <Position xsi:nil="true" ref="i1" />
-              <ExtrudedDirection xsi:nil="true" ref="i6" />
-             </IfcExtrudedAreaSolid>
-            </Items>
-           </IfcShapeRepresentation>
-          </Representations>
-         </Representation>
-        </IfcOpeningElement>
-       </RelatedElements>
-      </IfcRelContainedInSpatialStructure>
-     </ContainsElements>
-    </IfcBuilding>
-   </RelatedObjects>
-  </IfcRelAggregates>
- </IsDecomposedBy>
- <RepresentationContexts>
-  <IfcGeometricRepresentationContext xsi:nil="true" ref="i4" />
- </RepresentationContexts>
- <UnitsInContext>
-  <Units>
-   <IfcConversionBasedUnit UnitType="lengthunit" Name="mm">
-    <Dimensions LengthExponent="1" MassExponent="0" TimeExponent="0" ElectricCurrentExponent="0" ThermodynamicTemperatureExponent="0" AmountOfSubstanceExponent="0" LuminousIntensityExponent="0" />
-    <ConversionFactor>
-     <ValueComponent>
-      <IfcLengthMeasure-wrapper>0.001</IfcLengthMeasure-wrapper>
-     </ValueComponent>
-     <UnitComponent>
-      <IfcSIUnit UnitType="lengthunit" Name="metre" />
-     </UnitComponent>
-    </ConversionFactor>
-   </IfcConversionBasedUnit>
-  </Units>
- </UnitsInContext>
-</IfcProject>
-
-<IfcRelAssociatesConstraint GlobalId="2HroMgRGu6jW3gyqrKaZHT" Name="myAssociation" Intent="Geometric Consistency">
- <RelatedObjects>
-  <IfcDoor xsi:nil="true" ref="i7" />
- </RelatedObjects>
- <RelatingConstraint xsi:type="IfcObjective" Name="myObjective" ConstraintGrade="hard" LogicalAggregator="logicaland" ObjectiveQualifier="parameter">
-  <BenchmarkValues>
-   <IfcMetric Name="myMetric" ConstraintGrade="hard" Benchmark="equalto">
-    <DataValue>
-     <IfcAppliedValue id="i9" Name="myAppliedValue">
-      <AppliedValue>
-       <IfcReference TypeIdentifier="IfcDoor" AttributeIdentifier="Representation">
-        <InnerReference TypeIdentifier="IfcProductDefinitionShape" AttributeIdentifier="Representations" InstanceName="Body">
-         <InnerReference TypeIdentifier="IfcShapeRepresentation" AttributeIdentifier="Items" ListPositions="1">
-          <InnerReference TypeIdentifier="IfcExtrudedAreaSolid" AttributeIdentifier="SweptArea">
-           <InnerReference TypeIdentifier="IfcRectangleProfileDef" AttributeIdentifier="XDim" />
-          </InnerReference>
-         </InnerReference>
-        </InnerReference>
-       </IfcReference>
-      </AppliedValue>
-     </IfcAppliedValue>
-    </DataValue>
-    <ReferencePath TypeIdentifier="IfcDoor" AttributeIdentifier="IsDefinedBy" ListPositions="1">
-     <InnerReference TypeIdentifier="IfcRelDefinesByProperties" AttributeIdentifier="RelatingPropertyDefinition">
-      <InnerReference TypeIdentifier="IfcPropertySet" AttributeIdentifier="HasProperties" InstanceName="PanelWidth">
-       <InnerReference TypeIdentifier="IfcPropertySingleValue" AttributeIdentifier="NominalValue" />
-      </InnerReference>
-     </InnerReference>
-    </ReferencePath>
-   </IfcMetric>
-  </BenchmarkValues>
- </RelatingConstraint>
-</IfcRelAssociatesConstraint>
-
-<IfcRelAssociatesConstraint GlobalId="3HroMgRGu6jW3gyqrKaZHT" Name="myAssociation_1000_3101" Intent="Geometric Consistency">
- <RelatedObjects>
-  <IfcDoor xsi:nil="true" ref="i7" />
- </RelatedObjects>
- <RelatingConstraint xsi:type="IfcObjective" Name="myObjective3001" ConstraintGrade="hard" LogicalAggregator="logicaland" ObjectiveQualifier="parameter">
-  <BenchmarkValues>
-   <IfcMetric Name="myMetric_0000_3030" ConstraintGrade="hard" Benchmark="equalto">
-    <DataValue>
-     <IfcLengthMeasure-wrapper>800</IfcLengthMeasure-wrapper>
-    </DataValue>
-    <ReferencePath id="i8" TypeIdentifier="IfcDoor" AttributeIdentifier="OverallWidth" />
-   </IfcMetric>
-   <IfcMetric Name="myMetric_3040_3030" ConstraintGrade="hard" Benchmark="equalto">
-    <DataValue>
-     <IfcAppliedValue Name="myAppliedValue3140" ArithmeticOperator="add">
-      <Components>
-       <IfcAppliedValue Name="myAppliedValue3141">
-        <AppliedValue>
-         <IfcLengthMeasure-wrapper>300</IfcLengthMeasure-wrapper>
-        </AppliedValue>
-       </IfcAppliedValue>
-       <IfcAppliedValue Name="myAppliedValue3142">
-        <AppliedValue>
-         <IfcLengthMeasure-wrapper>500</IfcLengthMeasure-wrapper>
-        </AppliedValue>
-       </IfcAppliedValue>
-      </Components>
-     </IfcAppliedValue>
-    </DataValue>
-    <ReferencePath xsi:nil="true" ref="i8" />
-   </IfcMetric>
-   <IfcMetric Name="myMetric_3050_3030" ConstraintGrade="hard" Benchmark="equalto">
-    <DataValue>
-     <IfcAppliedValue Name="myAppliedValue3050" ArithmeticOperator="add">
-      <Components>
-       <IfcAppliedValue Name="myAppliedValue3051">
-        <AppliedValue>
-         <IfcLengthMeasure-wrapper>400</IfcLengthMeasure-wrapper>
-        </AppliedValue>
-       </IfcAppliedValue>
-       <IfcAppliedValue Name="myAppliedValue3052" ArithmeticOperator="divide">
-        <Components>
-         <IfcAppliedValue Name="myAppliedValue3053">
-          <AppliedValue>
-           <IfcReference xsi:nil="true" ref="i8" />
-          </AppliedValue>
-         </IfcAppliedValue>
-         <IfcAppliedValue Name="myAppliedValue3054">
-          <AppliedValue>
-           <IfcReal-wrapper>2</IfcReal-wrapper>
-          </AppliedValue>
-         </IfcAppliedValue>
-        </Components>
-       </IfcAppliedValue>
-      </Components>
-     </IfcAppliedValue>
-    </DataValue>
-    <ReferencePath xsi:nil="true" ref="i8" />
-   </IfcMetric>
-  </BenchmarkValues>
- </RelatingConstraint>
-</IfcRelAssociatesConstraint>
-
-<IfcRelAssociatesConstraint GlobalId="3HroMgRGu6jW3gyqrKaZHT" Name="myAssociation_1000_6101" Intent="Geometric Consistency">
- <RelatedObjects>
-  <IfcDoor xsi:nil="true" ref="i7" />
- </RelatedObjects>
- <RelatingConstraint xsi:type="IfcObjective" Name="myObjective6001" ConstraintGrade="hard" LogicalAggregator="logicaland" ObjectiveQualifier="parameter">
-  <BenchmarkValues>
-   <IfcMetric Name="myMetric_3009_3030" ConstraintGrade="hard" Benchmark="equalto">
-    <DataValue>
-     <IfcAppliedValue xsi:nil="true" ref="i9" />
-    </DataValue>
-    <ReferencePath TypeIdentifier="IfcDoor" AttributeIdentifier="FillsVoids">
-     <InnerReference TypeIdentifier="IfcRelFillsElement" AttributeIdentifier="RelatingOpeningElement">
-      <InnerReference TypeIdentifier="IfcOpeningElement" AttributeIdentifier="Representation">
-       <InnerReference TypeIdentifier="IfcProductDefinitionShape" AttributeIdentifier="Representations" InstanceName="Body">
-        <InnerReference TypeIdentifier="IfcShapeRepresentation" AttributeIdentifier="Items" ListPositions="1">
-         <InnerReference TypeIdentifier="IfcExtrudedAreaSolid" AttributeIdentifier="SweptArea">
-          <InnerReference TypeIdentifier="IfcRectangleProfileDef" AttributeIdentifier="XDim" />
-         </InnerReference>
-        </InnerReference>
-       </InnerReference>
-      </InnerReference>
-     </InnerReference>
-    </ReferencePath>
-   </IfcMetric>
-  </BenchmarkValues>
- </RelatingConstraint>
-</IfcRelAssociatesConstraint>
-
+	<IfcProject GlobalId="16FzQLyFXFOAco0hHmFZXB" Name="myProject">
+		<IsDecomposedBy>
+			<IfcRelAggregates GlobalId="3q9yfa16z9wOZHi5h9dr4e">
+				<RelatedObjects>
+					<IfcBuilding GlobalId="1jCJfz2$TF29H$W5cKDgim" CompositionType="element">
+						<ContainsElements>
+							<IfcRelContainedInSpatialStructure GlobalId="2srhqEqDY4nA5hKmyLxDOV">
+								<RelatedElements>
+									<IfcDoor id="i7" GlobalId="33thURoQX5leiBg7ZN3H1A" Name="myDoor" OverallHeight="2040" OverallWidth="800" PredefinedType="notdefined">
+										<IsDefinedBy>
+											<IfcRelDefinesByProperties GlobalId="0GvYPGnxqQO2fJCMkZGzt7">
+												<RelatingPropertyDefinition>
+													<IfcPropertySet GlobalId="3rXyql0mf8kx3ZXg1$Xk9u" Name="Pset_Geometry">
+														<HasProperties>
+															<IfcPropertySingleValue Name="PanelWidth">
+																<NominalValue>
+																	<IfcLengthMeasure-wrapper>800</IfcLengthMeasure-wrapper>
+																</NominalValue>
+															</IfcPropertySingleValue>
+														</HasProperties>
+													</IfcPropertySet>
+												</RelatingPropertyDefinition>
+											</IfcRelDefinesByProperties>
+										</IsDefinedBy>
+										<ObjectPlacement xsi:type="IfcLocalPlacement" id="i3">
+											<RelativePlacement>
+												<IfcAxis2Placement3D id="i1">
+													<Location id="i2" Coordinates="0 0 0"/>
+												</IfcAxis2Placement3D>
+											</RelativePlacement>
+										</ObjectPlacement>
+										<Representation xsi:type="IfcProductDefinitionShape">
+											<Representations>
+												<IfcShapeRepresentation RepresentationIdentifier="Body" RepresentationType="SweptSolid">
+													<ContextOfItems xsi:type="IfcGeometricRepresentationContext" id="i4" ContextIdentifier="3D" ContextType="Model" CoordinateSpaceDimension="3" Precision="1E-05">
+														<WorldCoordinateSystem>
+															<IfcAxis2Placement3D xsi:nil="true" ref="i1"/>
+														</WorldCoordinateSystem>
+													</ContextOfItems>
+													<Items>
+														<IfcExtrudedAreaSolid Depth="40">
+															<SweptArea xsi:type="IfcRectangleProfileDef" ProfileType="area" ProfileName="Panel" XDim="800" YDim="2040">
+																<Position id="i5">
+																	<Location xsi:nil="true" ref="i2"/>
+																	<RefDirection DirectionRatios="1 0 0"/>
+																</Position>
+															</SweptArea>
+															<Position xsi:nil="true" ref="i1"/>
+															<ExtrudedDirection id="i6" DirectionRatios="0 0 1"/>
+														</IfcExtrudedAreaSolid>
+													</Items>
+												</IfcShapeRepresentation>
+											</Representations>
+										</Representation>
+									</IfcDoor>
+									<IfcOpeningElement id="i4711" GlobalId="0rOQdi_3HDQuab2DeadCdQ" Name="myOpeningElement" PredefinedType="opening">
+										<ObjectPlacement xsi:type="IfcLocalPlacement" xsi:nil="true" ref="i3"/>
+										<Representation xsi:type="IfcProductDefinitionShape">
+											<Representations>
+												<IfcShapeRepresentation RepresentationIdentifier="Body" RepresentationType="SweptSolid">
+													<ContextOfItems xsi:type="IfcGeometricRepresentationContext" xsi:nil="true" ref="i4"/>
+													<Items>
+														<IfcExtrudedAreaSolid Depth="30">
+															<SweptArea xsi:type="IfcRectangleProfileDef" ProfileType="area" ProfileName="Panel" XDim="1000" YDim="2040">
+																<Position xsi:nil="true" ref="i5"/>
+															</SweptArea>
+															<Position xsi:nil="true" ref="i1"/>
+															<ExtrudedDirection xsi:nil="true" ref="i6"/>
+														</IfcExtrudedAreaSolid>
+													</Items>
+												</IfcShapeRepresentation>
+											</Representations>
+										</Representation>
+									</IfcOpeningElement>
+								</RelatedElements>
+							</IfcRelContainedInSpatialStructure>
+						</ContainsElements>
+					</IfcBuilding>
+				</RelatedObjects>
+			</IfcRelAggregates>
+		</IsDecomposedBy>
+		<RepresentationContexts>
+			<IfcGeometricRepresentationContext xsi:nil="true" ref="i4"/>
+		</RepresentationContexts>
+		<UnitsInContext>
+			<Units>
+				<IfcConversionBasedUnit UnitType="lengthunit" Name="mm">
+					<Dimensions LengthExponent="1" MassExponent="0" TimeExponent="0" ElectricCurrentExponent="0" ThermodynamicTemperatureExponent="0" AmountOfSubstanceExponent="0" LuminousIntensityExponent="0"/>
+					<ConversionFactor>
+						<ValueComponent>
+							<IfcLengthMeasure-wrapper>0.001</IfcLengthMeasure-wrapper>
+						</ValueComponent>
+						<UnitComponent>
+							<IfcSIUnit UnitType="lengthunit" Name="metre"/>
+						</UnitComponent>
+					</ConversionFactor>
+				</IfcConversionBasedUnit>
+			</Units>
+		</UnitsInContext>
+	</IfcProject>
+	<IfcRelAssociatesConstraint GlobalId="2HroMgRGu6jW3gyqrKaZHT" Name="myAssociation" Intent="Geometric Consistency">
+		<RelatedObjects>
+			<IfcDoor xsi:nil="true" ref="i7"/>
+		</RelatedObjects>
+		<RelatingConstraint xsi:type="IfcObjective" Name="myObjective" ConstraintGrade="hard" LogicalAggregator="logicaland" ObjectiveQualifier="parameter">
+			<BenchmarkValues>
+				<IfcMetric Name="myMetric" ConstraintGrade="hard" Benchmark="equalto">
+					<DataValue>
+						<IfcAppliedValue id="i9" Name="myAppliedValue">
+							<AppliedValue>
+								<IfcReference TypeIdentifier="IfcDoor" AttributeIdentifier="Representation">
+									<InnerReference TypeIdentifier="IfcProductDefinitionShape" AttributeIdentifier="Representations" InstanceName="Body">
+										<InnerReference TypeIdentifier="IfcShapeRepresentation" AttributeIdentifier="Items" ListPositions="1">
+											<InnerReference TypeIdentifier="IfcExtrudedAreaSolid" AttributeIdentifier="SweptArea">
+												<InnerReference TypeIdentifier="IfcRectangleProfileDef" AttributeIdentifier="XDim"/>
+											</InnerReference>
+										</InnerReference>
+									</InnerReference>
+								</IfcReference>
+							</AppliedValue>
+						</IfcAppliedValue>
+					</DataValue>
+					<ReferencePath TypeIdentifier="IfcDoor" AttributeIdentifier="IsDefinedBy" ListPositions="1">
+						<InnerReference TypeIdentifier="IfcRelDefinesByProperties" AttributeIdentifier="RelatingPropertyDefinition">
+							<InnerReference TypeIdentifier="IfcPropertySet" AttributeIdentifier="HasProperties" InstanceName="PanelWidth">
+								<InnerReference TypeIdentifier="IfcPropertySingleValue" AttributeIdentifier="NominalValue"/>
+							</InnerReference>
+						</InnerReference>
+					</ReferencePath>
+				</IfcMetric>
+			</BenchmarkValues>
+		</RelatingConstraint>
+	</IfcRelAssociatesConstraint>
+	<IfcRelAssociatesConstraint GlobalId="3HroMgRGu6jW3gyqrKaZHT" Name="myAssociation_1000_3101" Intent="Geometric Consistency">
+		<RelatedObjects>
+			<IfcDoor xsi:nil="true" ref="i7"/>
+		</RelatedObjects>
+		<RelatingConstraint xsi:type="IfcObjective" Name="myObjective3001" ConstraintGrade="hard" LogicalAggregator="logicaland" ObjectiveQualifier="parameter">
+			<BenchmarkValues>
+				<IfcMetric Name="myMetric_0000_3030" ConstraintGrade="hard" Benchmark="equalto">
+					<DataValue>
+						<IfcLengthMeasure-wrapper>800</IfcLengthMeasure-wrapper>
+					</DataValue>
+					<ReferencePath id="i8" TypeIdentifier="IfcDoor" AttributeIdentifier="OverallWidth"/>
+				</IfcMetric>
+				<IfcMetric Name="myMetric_3040_3030" ConstraintGrade="hard" Benchmark="equalto">
+					<DataValue>
+						<IfcAppliedValue Name="myAppliedValue3140" ArithmeticOperator="add">
+							<Components>
+								<IfcAppliedValue Name="myAppliedValue3141">
+									<AppliedValue>
+										<IfcLengthMeasure-wrapper>300</IfcLengthMeasure-wrapper>
+									</AppliedValue>
+								</IfcAppliedValue>
+								<IfcAppliedValue Name="myAppliedValue3142">
+									<AppliedValue>
+										<IfcLengthMeasure-wrapper>500</IfcLengthMeasure-wrapper>
+									</AppliedValue>
+								</IfcAppliedValue>
+							</Components>
+						</IfcAppliedValue>
+					</DataValue>
+					<ReferencePath xsi:nil="true" ref="i8"/>
+				</IfcMetric>
+				<IfcMetric Name="myMetric_3050_3030" ConstraintGrade="hard" Benchmark="equalto">
+					<DataValue>
+						<IfcAppliedValue Name="myAppliedValue3050" ArithmeticOperator="add">
+							<Components>
+								<IfcAppliedValue Name="myAppliedValue3051">
+									<AppliedValue>
+										<IfcLengthMeasure-wrapper>400</IfcLengthMeasure-wrapper>
+									</AppliedValue>
+								</IfcAppliedValue>
+								<IfcAppliedValue Name="myAppliedValue3052" ArithmeticOperator="divide">
+									<Components>
+										<IfcAppliedValue Name="myAppliedValue3053">
+											<AppliedValue>
+												<IfcReference xsi:nil="true" ref="i8"/>
+											</AppliedValue>
+										</IfcAppliedValue>
+										<IfcAppliedValue Name="myAppliedValue3054">
+											<AppliedValue>
+												<IfcReal-wrapper>2</IfcReal-wrapper>
+											</AppliedValue>
+										</IfcAppliedValue>
+									</Components>
+								</IfcAppliedValue>
+							</Components>
+						</IfcAppliedValue>
+					</DataValue>
+					<ReferencePath xsi:nil="true" ref="i8"/>
+				</IfcMetric>
+			</BenchmarkValues>
+		</RelatingConstraint>
+	</IfcRelAssociatesConstraint>
+	<IfcRelAssociatesConstraint GlobalId="3HroMgRGu6jW3gyqrKaZHT" Name="myAssociation_1000_6101" Intent="Geometric Consistency">
+		<RelatedObjects>
+			<IfcDoor xsi:nil="true" ref="i7"/>
+		</RelatedObjects>
+		<RelatingConstraint xsi:type="IfcObjective" Name="myObjective6001" ConstraintGrade="hard" LogicalAggregator="logicaland" ObjectiveQualifier="parameter">
+			<BenchmarkValues>
+				<IfcMetric Name="myMetric_3009_3030" ConstraintGrade="hard" Benchmark="equalto">
+					<DataValue>
+						<IfcAppliedValue xsi:nil="true" ref="i9"/>
+					</DataValue>
+					<ReferencePath TypeIdentifier="IfcDoor" AttributeIdentifier="FillsVoids">
+						<InnerReference TypeIdentifier="IfcRelFillsElement" AttributeIdentifier="RelatingOpeningElement">
+							<InnerReference TypeIdentifier="IfcOpeningElement" AttributeIdentifier="Representation">
+								<InnerReference TypeIdentifier="IfcProductDefinitionShape" AttributeIdentifier="Representations" InstanceName="Body">
+									<InnerReference TypeIdentifier="IfcShapeRepresentation" AttributeIdentifier="Items" ListPositions="1">
+										<InnerReference TypeIdentifier="IfcExtrudedAreaSolid" AttributeIdentifier="SweptArea">
+											<InnerReference TypeIdentifier="IfcRectangleProfileDef" AttributeIdentifier="XDim"/>
+										</InnerReference>
+									</InnerReference>
+								</InnerReference>
+							</InnerReference>
+						</InnerReference>
+					</ReferencePath>
+				</IfcMetric>
+			</BenchmarkValues>
+		</RelatingConstraint>
+	</IfcRelAssociatesConstraint>
+	<IfcRelVoidsElement GlobalId="3HroMgRGu6jW3gyqrKaZHU">
+		<RelatingBuildingElement xsi:type="IfcDoor" ref="i7"/>
+		<RelatedOpeningElement xsi:type="IfcOpeningElement" ref="i4711"/>
+	</IfcRelVoidsElement>
 </ifcXML>

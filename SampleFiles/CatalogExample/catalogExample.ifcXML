@@ -1,354 +1,351 @@
 <?xml version="1.0" encoding="utf-8"?>
 <ifcXML xmlns:ifc="http://www.buildingsmart-tech.org/ifcXML/IFC4/Add1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" id="ifcXML4" xmlns="http://www.buildingsmart-tech.org/ifcXML/IFC4/Add1" xsi:schemaLocation="http://www.buildingsmart-tech.org/ifcXML/IFC4/Add1 ../IFC4_ADD1.xsd">
-<IfcProject GlobalId="16FzQLyFXFOAco0hHmFZXB" Name="myProject">
- <RepresentationContexts>
-  <IfcGeometricRepresentationContext id="i2" ContextIdentifier="3D" ContextType="Model" CoordinateSpaceDimension="3" Precision="1E-05">
-   <WorldCoordinateSystem>
-    <IfcAxis2Placement3D id="i1">
-     <Location id="i3" Coordinates="0 0 0" />
-    </IfcAxis2Placement3D>
-   </WorldCoordinateSystem>
-  </IfcGeometricRepresentationContext>
- </RepresentationContexts>
- <UnitsInContext>
-  <Units>
-   <IfcConversionBasedUnit UnitType="lengthunit" Name="mm">
-    <Dimensions LengthExponent="1" MassExponent="0" TimeExponent="0" ElectricCurrentExponent="0" ThermodynamicTemperatureExponent="0" AmountOfSubstanceExponent="0" LuminousIntensityExponent="0" />
-    <ConversionFactor>
-     <ValueComponent>
-      <IfcLengthMeasure-wrapper>0.001</IfcLengthMeasure-wrapper>
-     </ValueComponent>
-     <UnitComponent>
-      <IfcSIUnit UnitType="lengthunit" Name="metre" />
-     </UnitComponent>
-    </ConversionFactor>
-   </IfcConversionBasedUnit>
-  </Units>
- </UnitsInContext>
- <Declares>
-  <IfcRelDeclares GlobalId="0$b_ytn8PEbAVbeTOu2ljb" Name="myRelDeclares_31">
-   <RelatedDefinitions>
-    <IfcProjectLibrary GlobalId="0lIJEMoxL8yP0B7vq1iIiM" Name="myProjectLibrary" ObjectType="ProductLibrary">
-     <Declares>
-      <IfcRelDeclares GlobalId="00GZQZ98PAoOtB6V3qDnvW" Name="myRelDeclares_101">
-       <RelatedDefinitions>
-        <IfcDoor id="i7" GlobalId="33thURoQX5leiBg7ZN3H1A" Name="myDoor_1" OverallHeight="2040" OverallWidth="800" PredefinedType="notdefined">
-         <IsDefinedBy>
-          <IfcRelDefinesByProperties GlobalId="0GvYPGnxqQO2fJCMkZGzt7" Name="myRelDefinesByProperties_1">
-           <RelatingPropertyDefinition>
-            <IfcPropertySet GlobalId="3rXyql0mf8kx3ZXg1$Xk9u" Name="myPropertySet">
-             <HasProperties>
-              <IfcPropertySingleValue Name="myProperty_01">
-               <NominalValue>
-                <IfcLengthMeasure-wrapper>830</IfcLengthMeasure-wrapper>
-               </NominalValue>
-              </IfcPropertySingleValue>
-              <IfcPropertySingleValue Name="myProperty_02">
-               <NominalValue>
-                <IfcLabel-wrapper>RAL 9010</IfcLabel-wrapper>
-               </NominalValue>
-              </IfcPropertySingleValue>
-              <IfcPropertySingleValue Name="myProperty_03">
-               <NominalValue>
-                <IfcBoolean-wrapper>true</IfcBoolean-wrapper>
-               </NominalValue>
-              </IfcPropertySingleValue>
-             </HasProperties>
-            </IfcPropertySet>
-           </RelatingPropertyDefinition>
-          </IfcRelDefinesByProperties>
-         </IsDefinedBy>
-         <ObjectPlacement xsi:type="IfcLocalPlacement" id="i4">
-          <RelativePlacement>
-           <IfcAxis2Placement3D xsi:nil="true" href="i1" />
-          </RelativePlacement>
-         </ObjectPlacement>
-         <Representation xsi:type="IfcProductDefinitionShape">
-          <Representations>
-           <IfcShapeRepresentation RepresentationIdentifier="Body" RepresentationType="SweptSolid">
-            <ContextOfItems xsi:type="IfcGeometricRepresentationContext" xsi:nil="true" href="i2" />
-            <Items>
-             <IfcExtrudedAreaSolid Depth="40">
-              <SweptArea xsi:type="IfcRectangleProfileDef" ProfileType="area" ProfileName="Panel" XDim="830" YDim="2040">
-               <Position id="i5">
-                <Location xsi:nil="true" href="i3" />
-                <RefDirection DirectionRatios="1 0 0" />
-               </Position>
-              </SweptArea>
-              <Position xsi:nil="true" href="i1" />
-              <ExtrudedDirection id="i6" DirectionRatios="0 0 1" />
-             </IfcExtrudedAreaSolid>
-            </Items>
-           </IfcShapeRepresentation>
-          </Representations>
-         </Representation>
-        </IfcDoor>
-        <IfcDoor id="i10" GlobalId="11UKwf69j7deiyfMeK$VwZ" Name="myDoor_2" OverallHeight="2040" OverallWidth="800" PredefinedType="notdefined">
-         <IsDefinedBy>
-          <IfcRelDefinesByProperties GlobalId="178MrQh3rE4Qg1taT2O8mh" Name="myRelDefinesByProperties_2">
-           <RelatingPropertyDefinition>
-            <IfcPropertySet GlobalId="32euFdLyD8u8FnSdts5fPc" Name="myPropertySet">
-             <HasProperties>
-              <IfcPropertySingleValue Name="myProperty_01">
-               <NominalValue>
-                <IfcLengthMeasure-wrapper>830</IfcLengthMeasure-wrapper>
-               </NominalValue>
-              </IfcPropertySingleValue>
-              <IfcPropertySingleValue Name="myProperty_02">
-               <NominalValue>
-                <IfcLabel-wrapper>RAL 9001</IfcLabel-wrapper>
-               </NominalValue>
-              </IfcPropertySingleValue>
-              <IfcPropertySingleValue Name="myProperty_03">
-               <NominalValue>
-                <IfcBoolean-wrapper>true</IfcBoolean-wrapper>
-               </NominalValue>
-              </IfcPropertySingleValue>
-             </HasProperties>
-            </IfcPropertySet>
-           </RelatingPropertyDefinition>
-          </IfcRelDefinesByProperties>
-         </IsDefinedBy>
-         <ObjectPlacement xsi:type="IfcLocalPlacement" xsi:nil="true" href="i4" />
-         <Representation xsi:type="IfcProductDefinitionShape">
-          <Representations>
-           <IfcShapeRepresentation RepresentationIdentifier="Body" RepresentationType="SweptSolid">
-            <ContextOfItems xsi:type="IfcGeometricRepresentationContext" xsi:nil="true" href="i2" />
-            <Items>
-             <IfcExtrudedAreaSolid Depth="40">
-              <SweptArea xsi:type="IfcRectangleProfileDef" ProfileType="area" ProfileName="Panel" XDim="800" YDim="2040">
-               <Position xsi:nil="true" href="i5" />
-              </SweptArea>
-              <Position xsi:nil="true" href="i1" />
-              <ExtrudedDirection xsi:nil="true" href="i6" />
-             </IfcExtrudedAreaSolid>
-            </Items>
-           </IfcShapeRepresentation>
-          </Representations>
-         </Representation>
-        </IfcDoor>
-       </RelatedDefinitions>
-      </IfcRelDeclares>
-     </Declares>
-    </IfcProjectLibrary>
-   </RelatedDefinitions>
-  </IfcRelDeclares>
- </Declares>
-</IfcProject>
-
-<IfcRelAssociatesConstraint GlobalId="1aIkwCWGjAHQzkSLTf$zdV" Name="myAssociation_1" Intent="Configuration Rule">
- <RelatedObjects>
-  <IfcDoor xsi:nil="true" href="i7" />
- </RelatedObjects>
- <RelatingConstraint xsi:type="IfcObjective" id="i11" Name="myObjective_500" Description="lists of possible values and configuration rules" ConstraintGrade="hard" LogicalAggregator="logicaland" ObjectiveQualifier="parameter">
-  <BenchmarkValues>
-   <IfcObjective Name="myObjective_701" Description="list of possible widths" ConstraintGrade="hard" LogicalAggregator="logicalor" ObjectiveQualifier="parameter">
-    <BenchmarkValues>
-     <IfcMetric Name="myMetric_710" ConstraintGrade="hard" Benchmark="equalto">
-      <DataValue>
-       <IfcAppliedValue Name="myAppliedValue_715">
-        <AppliedValue>
-         <IfcLengthMeasure-wrapper>830</IfcLengthMeasure-wrapper>
-        </AppliedValue>
-       </IfcAppliedValue>
-      </DataValue>
-      <ReferencePath AttributeIdentifier="IsDefinedBy" TypeIdentifier="IfcDoor">
-       <InnerReference AttributeIdentifier="RelatingPropertyDefinition" TypeIdentifier="IfcRelDefinesByProperties" InstanceName="myPropertySet">
-        <InnerReference AttributeIdentifier="HasProperties" TypeIdentifier="IfcPropertySet" InstanceName="myProperty_01">
-         <InnerReference AttributeIdentifier="NominalValue" TypeIdentifier="IfcPropertySingleValue"/>
-        </InnerReference>
-       </InnerReference>
-      </ReferencePath>
-     </IfcMetric>
-     <IfcMetric Name="myMetric_720" ConstraintGrade="hard" Benchmark="equalto">
-      <DataValue>
-       <IfcAppliedValue Name="myAppliedValue_725">
-        <AppliedValue>
-         <IfcLengthMeasure-wrapper>850</IfcLengthMeasure-wrapper>
-        </AppliedValue>
-       </IfcAppliedValue>
-      </DataValue>
-      <ReferencePath AttributeIdentifier="IsDefinedBy" TypeIdentifier="IfcDoor">
-       <InnerReference AttributeIdentifier="RelatingPropertyDefinition" TypeIdentifier="IfcRelDefinesByProperties" InstanceName="myPropertySet">
-        <InnerReference AttributeIdentifier="HasProperties" TypeIdentifier="IfcPropertySet" InstanceName="myProperty_01">
-         <InnerReference AttributeIdentifier="NominalValue" TypeIdentifier="IfcPropertySingleValue"/>
-        </InnerReference>
-       </InnerReference>
-      </ReferencePath>
-     </IfcMetric>
-    </BenchmarkValues>
-   </IfcObjective>
-   <IfcObjective Name="myObjective_751" Description="list of possible colors" ConstraintGrade="hard" LogicalAggregator="logicalor" ObjectiveQualifier="parameter">
-    <BenchmarkValues>
-     <IfcMetric Name="myMetric_760" ConstraintGrade="hard" Benchmark="equalto">
-      <DataValue>
-       <IfcAppliedValue Name="myAppliedValue_765">
-        <AppliedValue>
-         <IfcLabel-wrapper>RAL 9010</IfcLabel-wrapper>
-        </AppliedValue>
-       </IfcAppliedValue>
-      </DataValue>
-      <ReferencePath AttributeIdentifier="IsDefinedBy" TypeIdentifier="IfcDoor">
-       <InnerReference AttributeIdentifier="RelatingPropertyDefinition" TypeIdentifier="IfcRelDefinesByProperties" InstanceName="myPropertySet">
-        <InnerReference AttributeIdentifier="HasProperties" TypeIdentifier="IfcPropertySet" InstanceName="myProperty_02">
-         <InnerReference AttributeIdentifier="NominalValue" TypeIdentifier="IfcPropertySingleValue"/>
-        </InnerReference>
-       </InnerReference>
-      </ReferencePath>
-     </IfcMetric>
-     <IfcMetric Name="myMetric_770" ConstraintGrade="hard" Benchmark="equalto">
-      <DataValue>
-       <IfcAppliedValue Name="myAppliedValue_775">
-        <AppliedValue>
-         <IfcLabel-wrapper>RAL 9001</IfcLabel-wrapper>
-        </AppliedValue>
-       </IfcAppliedValue>
-      </DataValue>
-      <ReferencePath AttributeIdentifier="IsDefinedBy" TypeIdentifier="IfcDoor">
-       <InnerReference AttributeIdentifier="RelatingPropertyDefinition" TypeIdentifier="IfcRelDefinesByProperties" InstanceName="myPropertySet">
-        <InnerReference AttributeIdentifier="HasProperties" TypeIdentifier="IfcPropertySet" InstanceName="myProperty_02">
-         <InnerReference AttributeIdentifier="NominalValue" TypeIdentifier="IfcPropertySingleValue"/>
-        </InnerReference>
-       </InnerReference>
-      </ReferencePath>
-     </IfcMetric>
-    </BenchmarkValues>
-   </IfcObjective>
-   <IfcObjective Name="myObjective_901" Description="=&gt; (implies)" ConstraintGrade="hard" LogicalAggregator="logicalor" ObjectiveQualifier="parameter">
-    <BenchmarkValues>
-     <IfcObjective Name="myObjective_902" ConstraintGrade="hard" LogicalAggregator="logicalnotand" ObjectiveQualifier="parameter">
-      <BenchmarkValues>
-       <IfcObjective Name="myObjective_903" ConstraintGrade="hard" LogicalAggregator="logicaland" ObjectiveQualifier="parameter">
-        <BenchmarkValues>
-         <IfcMetric Name="myMetric_910" ConstraintGrade="hard" Benchmark="notequalto">
-          <DataValue>
-           <IfcAppliedValue Name="myAppliedValue_915">
-            <AppliedValue>
-             <IfcLabel-wrapper>RAL 9010</IfcLabel-wrapper>
-            </AppliedValue>
-           </IfcAppliedValue>
-          </DataValue>
-          <ReferencePath AttributeIdentifier="IsDefinedBy" TypeIdentifier="IfcDoor">
-           <InnerReference AttributeIdentifier="RelatingPropertyDefinition" TypeIdentifier="IfcRelDefinesByProperties" InstanceName="myPropertySet">
-            <InnerReference AttributeIdentifier="HasProperties" TypeIdentifier="IfcPropertySet" InstanceName="myProperty_02">
-             <InnerReference AttributeIdentifier="NominalValue" TypeIdentifier="IfcPropertySingleValue"/>
-            </InnerReference>
-           </InnerReference>
-          </ReferencePath>
-         </IfcMetric>
-        </BenchmarkValues>
-       </IfcObjective>
-      </BenchmarkValues>
-     </IfcObjective>
-     <IfcObjective Name="myObjective_904" ConstraintGrade="hard" LogicalAggregator="logicaland" ObjectiveQualifier="parameter">
-      <BenchmarkValues>
-       <IfcMetric Name="myMetric_920" ConstraintGrade="hard" Benchmark="equalto">
-        <DataValue>
-         <IfcAppliedValue Name="myAppliedValue_925">
-          <AppliedValue>
-           <IfcBoolean-wrapper>true</IfcBoolean-wrapper>
-          </AppliedValue>
-         </IfcAppliedValue>
-        </DataValue>
-        <ReferencePath TypeIdentifier="IfcDoor" AttributeIdentifier="IsDefinedBy">
-         <InnerReference TypeIdentifier="IfcRelDefinesByProperties" AttributeIdentifier="RelatingPropertyDefinition" InstanceName="myPropertySet">
-          <InnerReference TypeIdentifier="IfcPropertySet" AttributeIdentifier="HasProperties" InstanceName="myProperty_03">
-           <InnerReference TypeIdentifier="IfcPropertySingleValue" AttributeIdentifier="NominalValue" />
-          </InnerReference>
-         </InnerReference>
-        </ReferencePath>
-       </IfcMetric>
-      </BenchmarkValues>
-     </IfcObjective>
-    </BenchmarkValues>
-   </IfcObjective>
-   <IfcObjective Name="myObjective_951" Description="&lt;=&gt; (is equivalent)" ConstraintGrade="hard" LogicalAggregator="logicalor" ObjectiveQualifier="parameter">
-    <BenchmarkValues>
-     <IfcObjective Name="myObjective_952" ConstraintGrade="hard" LogicalAggregator="logicaland" ObjectiveQualifier="parameter">
-      <BenchmarkValues>
-       <IfcObjective id="i8" Name="myObjective_956" ConstraintGrade="hard" LogicalAggregator="logicaland" ObjectiveQualifier="parameter">
-        <BenchmarkValues>
-         <IfcMetric Name="myMetric_960" ConstraintGrade="hard" Benchmark="equalto">
-          <DataValue>
-           <IfcAppliedValue Name="myAppliedValue_965">
-            <AppliedValue>
-             <IfcBoolean-wrapper>true</IfcBoolean-wrapper>
-            </AppliedValue>
-           </IfcAppliedValue>
-          </DataValue>
-          <ReferencePath TypeIdentifier="IfcDoor" AttributeIdentifier="IsDefinedBy">
-           <InnerReference TypeIdentifier="IfcRelDefinesByProperties" AttributeIdentifier="RelatingPropertyDefinition" InstanceName="myPropertySet">
-            <InnerReference TypeIdentifier="IfcPropertySet" AttributeIdentifier="HasProperties" InstanceName="myProperty_03">
-             <InnerReference TypeIdentifier="IfcPropertySingleValue" AttributeIdentifier="NominalValue" />
-            </InnerReference>
-           </InnerReference>
-          </ReferencePath>
-         </IfcMetric>
-        </BenchmarkValues>
-       </IfcObjective>
-       <IfcObjective id="i9" Name="myObjective_957" ConstraintGrade="hard" LogicalAggregator="logicaland" ObjectiveQualifier="parameter">
-        <BenchmarkValues>
-         <IfcMetric Name="myMetric_970" ConstraintGrade="hard" Benchmark="equalto">
-          <DataValue>
-           <IfcAppliedValue Name="myAppliedValue_975">
-            <AppliedValue>
-             <IfcLabel-wrapper>RAL 9010</IfcLabel-wrapper>
-            </AppliedValue>
-           </IfcAppliedValue>
-          </DataValue>
-          <ReferencePath TypeIdentifier="IfcDoor" AttributeIdentifier="IsDefinedBy">
-           <InnerReference TypeIdentifier="IfcRelDefinesByProperties" AttributeIdentifier="RelatingPropertyDefinition" InstanceName="myPropertySet">
-            <InnerReference TypeIdentifier="IfcPropertySet" AttributeIdentifier="HasProperties" InstanceName="myProperty_02">
-             <InnerReference TypeIdentifier="IfcPropertySingleValue" AttributeIdentifier="NominalValue" />
-            </InnerReference>
-           </InnerReference>
-          </ReferencePath>
-         </IfcMetric>
-         <IfcMetric Name="myMetric_980" ConstraintGrade="hard" Benchmark="equalto">
-          <DataValue>
-           <IfcAppliedValue Name="myAppliedValue_985">
-            <AppliedValue>
-             <IfcLengthMeasure-wrapper>830</IfcLengthMeasure-wrapper>
-            </AppliedValue>
-           </IfcAppliedValue>
-          </DataValue>
-          <ReferencePath TypeIdentifier="IfcDoor" AttributeIdentifier="IsDefinedBy">
-           <InnerReference TypeIdentifier="IfcRelDefinesByProperties" AttributeIdentifier="RelatingPropertyDefinition" InstanceName="myPropertySet">
-            <InnerReference TypeIdentifier="IfcPropertySet" AttributeIdentifier="HasProperties" InstanceName="myProperty_01">
-             <InnerReference TypeIdentifier="IfcPropertySingleValue" AttributeIdentifier="NominalValue" />
-            </InnerReference>
-           </InnerReference>
-          </ReferencePath>
-         </IfcMetric>
-        </BenchmarkValues>
-       </IfcObjective>
-      </BenchmarkValues>
-     </IfcObjective>
-     <IfcObjective Name="myObjective_953" ConstraintGrade="hard" LogicalAggregator="logicaland" ObjectiveQualifier="parameter">
-      <BenchmarkValues>
-       <IfcObjective Name="myObjective_954" ConstraintGrade="hard" LogicalAggregator="logicalnotand" ObjectiveQualifier="parameter">
-        <BenchmarkValues>
-         <IfcObjective xsi:nil="true" href="i8" />
-        </BenchmarkValues>
-       </IfcObjective>
-       <IfcObjective Name="myObjective_955" ConstraintGrade="hard" LogicalAggregator="logicalnotand" ObjectiveQualifier="parameter">
-        <BenchmarkValues>
-         <IfcObjective xsi:nil="true" href="i9" />
-        </BenchmarkValues>
-       </IfcObjective>
-      </BenchmarkValues>
-     </IfcObjective>
-    </BenchmarkValues>
-   </IfcObjective>
-  </BenchmarkValues>
- </RelatingConstraint>
-</IfcRelAssociatesConstraint>
-
-<IfcRelAssociatesConstraint GlobalId="0PXEMtjf54rOHcVlP36_AD" Name="myAssociation_2" Intent="Configuration Rule">
- <RelatedObjects>
-  <IfcDoor xsi:nil="true" href="i10" />
- </RelatedObjects>
- <RelatingConstraint xsi:type="IfcObjective" xsi:nil="true" href="i11" />
-</IfcRelAssociatesConstraint>
-
+	<IfcProject GlobalId="16FzQLyFXFOAco0hHmFZXB" Name="myProject">
+		<RepresentationContexts>
+			<IfcGeometricRepresentationContext id="i2" ContextIdentifier="3D" ContextType="Model" CoordinateSpaceDimension="3" Precision="1E-05">
+				<WorldCoordinateSystem>
+					<IfcAxis2Placement3D id="i1">
+						<Location id="i3" Coordinates="0 0 0"/>
+					</IfcAxis2Placement3D>
+				</WorldCoordinateSystem>
+			</IfcGeometricRepresentationContext>
+		</RepresentationContexts>
+		<UnitsInContext>
+			<Units>
+				<IfcConversionBasedUnit UnitType="lengthunit" Name="mm">
+					<Dimensions LengthExponent="1" MassExponent="0" TimeExponent="0" ElectricCurrentExponent="0" ThermodynamicTemperatureExponent="0" AmountOfSubstanceExponent="0" LuminousIntensityExponent="0"/>
+					<ConversionFactor>
+						<ValueComponent>
+							<IfcLengthMeasure-wrapper>0.001</IfcLengthMeasure-wrapper>
+						</ValueComponent>
+						<UnitComponent>
+							<IfcSIUnit UnitType="lengthunit" Name="metre"/>
+						</UnitComponent>
+					</ConversionFactor>
+				</IfcConversionBasedUnit>
+			</Units>
+		</UnitsInContext>
+		<Declares>
+			<IfcRelDeclares GlobalId="0$b_ytn8PEbAVbeTOu2ljb" Name="myRelDeclares_31">
+				<RelatedDefinitions>
+					<IfcProjectLibrary GlobalId="0lIJEMoxL8yP0B7vq1iIiM" Name="myProjectLibrary" ObjectType="ProductLibrary">
+						<Declares>
+							<IfcRelDeclares GlobalId="00GZQZ98PAoOtB6V3qDnvW" Name="myRelDeclares_101">
+								<RelatedDefinitions>
+									<IfcDoor id="i7" GlobalId="33thURoQX5leiBg7ZN3H1A" Name="myDoor_1" OverallHeight="2040" OverallWidth="800" PredefinedType="notdefined">
+										<IsDefinedBy>
+											<IfcRelDefinesByProperties GlobalId="0GvYPGnxqQO2fJCMkZGzt7" Name="myRelDefinesByProperties_1">
+												<RelatingPropertyDefinition>
+													<IfcPropertySet GlobalId="3rXyql0mf8kx3ZXg1$Xk9u" Name="myPropertySet">
+														<HasProperties>
+															<IfcPropertySingleValue Name="myProperty_01">
+																<NominalValue>
+																	<IfcLengthMeasure-wrapper>830</IfcLengthMeasure-wrapper>
+																</NominalValue>
+															</IfcPropertySingleValue>
+															<IfcPropertySingleValue Name="myProperty_02">
+																<NominalValue>
+																	<IfcLabel-wrapper>RAL 9010</IfcLabel-wrapper>
+																</NominalValue>
+															</IfcPropertySingleValue>
+															<IfcPropertySingleValue Name="myProperty_03">
+																<NominalValue>
+																	<IfcBoolean-wrapper>true</IfcBoolean-wrapper>
+																</NominalValue>
+															</IfcPropertySingleValue>
+														</HasProperties>
+													</IfcPropertySet>
+												</RelatingPropertyDefinition>
+											</IfcRelDefinesByProperties>
+										</IsDefinedBy>
+										<ObjectPlacement xsi:type="IfcLocalPlacement" id="i4">
+											<RelativePlacement>
+												<IfcAxis2Placement3D xsi:nil="true" ref="i1"/>
+											</RelativePlacement>
+										</ObjectPlacement>
+										<Representation xsi:type="IfcProductDefinitionShape">
+											<Representations>
+												<IfcShapeRepresentation RepresentationIdentifier="Body" RepresentationType="SweptSolid">
+													<ContextOfItems xsi:type="IfcGeometricRepresentationContext" xsi:nil="true" ref="i2"/>
+													<Items>
+														<IfcExtrudedAreaSolid Depth="40">
+															<SweptArea xsi:type="IfcRectangleProfileDef" ProfileType="area" ProfileName="Panel" XDim="830" YDim="2040">
+																<Position id="i5">
+																	<Location xsi:nil="true" ref="i3"/>
+																	<RefDirection DirectionRatios="1 0"/>																	
+																</Position>
+															</SweptArea>
+															<Position xsi:nil="true" ref="i1"/>
+															<ExtrudedDirection id="i6" DirectionRatios="1 0"/>
+														</IfcExtrudedAreaSolid>
+													</Items>
+												</IfcShapeRepresentation>
+											</Representations>
+										</Representation>
+									</IfcDoor>
+									<IfcDoor id="i10" GlobalId="11UKwf69j7deiyfMeK$VwZ" Name="myDoor_2" OverallHeight="2040" OverallWidth="800" PredefinedType="notdefined">
+										<IsDefinedBy>
+											<IfcRelDefinesByProperties GlobalId="178MrQh3rE4Qg1taT2O8mh" Name="myRelDefinesByProperties_2">
+												<RelatingPropertyDefinition>
+													<IfcPropertySet GlobalId="32euFdLyD8u8FnSdts5fPc" Name="myPropertySet">
+														<HasProperties>
+															<IfcPropertySingleValue Name="myProperty_01">
+																<NominalValue>
+																	<IfcLengthMeasure-wrapper>830</IfcLengthMeasure-wrapper>
+																</NominalValue>
+															</IfcPropertySingleValue>
+															<IfcPropertySingleValue Name="myProperty_02">
+																<NominalValue>
+																	<IfcLabel-wrapper>RAL 9001</IfcLabel-wrapper>
+																</NominalValue>
+															</IfcPropertySingleValue>
+															<IfcPropertySingleValue Name="myProperty_03">
+																<NominalValue>
+																	<IfcBoolean-wrapper>true</IfcBoolean-wrapper>
+																</NominalValue>
+															</IfcPropertySingleValue>
+														</HasProperties>
+													</IfcPropertySet>
+												</RelatingPropertyDefinition>
+											</IfcRelDefinesByProperties>
+										</IsDefinedBy>
+										<ObjectPlacement xsi:type="IfcLocalPlacement" xsi:nil="true" ref="i4"/>
+										<Representation xsi:type="IfcProductDefinitionShape">
+											<Representations>
+												<IfcShapeRepresentation RepresentationIdentifier="Body" RepresentationType="SweptSolid">
+													<ContextOfItems xsi:type="IfcGeometricRepresentationContext" xsi:nil="true" ref="i2"/>
+													<Items>
+														<IfcExtrudedAreaSolid Depth="40">
+															<SweptArea xsi:type="IfcRectangleProfileDef" ProfileType="area" ProfileName="Panel" XDim="800" YDim="2040">
+																<Position xsi:nil="true" ref="i5"/>
+															</SweptArea>
+															<Position xsi:nil="true" ref="i1"/>
+															<ExtrudedDirection xsi:nil="true" ref="i6"/>
+														</IfcExtrudedAreaSolid>
+													</Items>
+												</IfcShapeRepresentation>
+											</Representations>
+										</Representation>
+									</IfcDoor>
+								</RelatedDefinitions>
+							</IfcRelDeclares>
+						</Declares>
+					</IfcProjectLibrary>
+				</RelatedDefinitions>
+			</IfcRelDeclares>
+		</Declares>
+	</IfcProject>
+	<IfcRelAssociatesConstraint GlobalId="1aIkwCWGjAHQzkSLTf$zdV" Name="myAssociation_1" Intent="Configuration Rule">
+		<RelatedObjects>
+			<IfcDoor xsi:nil="true" ref="i7"/>
+		</RelatedObjects>
+		<RelatingConstraint xsi:type="IfcObjective" id="i11" Name="myObjective_500" Description="lists of possible values and configuration rules" ConstraintGrade="hard" LogicalAggregator="logicaland" ObjectiveQualifier="parameter">
+			<BenchmarkValues>
+				<IfcObjective Name="myObjective_701" Description="list of possible widths" ConstraintGrade="hard" LogicalAggregator="logicalor" ObjectiveQualifier="parameter">
+					<BenchmarkValues>
+						<IfcMetric Name="myMetric_710" ConstraintGrade="hard" Benchmark="equalto">
+							<DataValue>
+								<IfcAppliedValue Name="myAppliedValue_715">
+									<AppliedValue>
+										<IfcLengthMeasure-wrapper>830</IfcLengthMeasure-wrapper>
+									</AppliedValue>
+								</IfcAppliedValue>
+							</DataValue>
+							<ReferencePath AttributeIdentifier="IsDefinedBy" TypeIdentifier="IfcDoor">
+								<InnerReference AttributeIdentifier="RelatingPropertyDefinition" TypeIdentifier="IfcRelDefinesByProperties" InstanceName="myPropertySet">
+									<InnerReference AttributeIdentifier="HasProperties" TypeIdentifier="IfcPropertySet" InstanceName="myProperty_01">
+										<InnerReference AttributeIdentifier="NominalValue" TypeIdentifier="IfcPropertySingleValue"/>
+									</InnerReference>
+								</InnerReference>
+							</ReferencePath>
+						</IfcMetric>
+						<IfcMetric Name="myMetric_720" ConstraintGrade="hard" Benchmark="equalto">
+							<DataValue>
+								<IfcAppliedValue Name="myAppliedValue_725">
+									<AppliedValue>
+										<IfcLengthMeasure-wrapper>850</IfcLengthMeasure-wrapper>
+									</AppliedValue>
+								</IfcAppliedValue>
+							</DataValue>
+							<ReferencePath AttributeIdentifier="IsDefinedBy" TypeIdentifier="IfcDoor">
+								<InnerReference AttributeIdentifier="RelatingPropertyDefinition" TypeIdentifier="IfcRelDefinesByProperties" InstanceName="myPropertySet">
+									<InnerReference AttributeIdentifier="HasProperties" TypeIdentifier="IfcPropertySet" InstanceName="myProperty_01">
+										<InnerReference AttributeIdentifier="NominalValue" TypeIdentifier="IfcPropertySingleValue"/>
+									</InnerReference>
+								</InnerReference>
+							</ReferencePath>
+						</IfcMetric>
+					</BenchmarkValues>
+				</IfcObjective>
+				<IfcObjective Name="myObjective_751" Description="list of possible colors" ConstraintGrade="hard" LogicalAggregator="logicalor" ObjectiveQualifier="parameter">
+					<BenchmarkValues>
+						<IfcMetric Name="myMetric_760" ConstraintGrade="hard" Benchmark="equalto">
+							<DataValue>
+								<IfcAppliedValue Name="myAppliedValue_765">
+									<AppliedValue>
+										<IfcLabel-wrapper>RAL 9010</IfcLabel-wrapper>
+									</AppliedValue>
+								</IfcAppliedValue>
+							</DataValue>
+							<ReferencePath AttributeIdentifier="IsDefinedBy" TypeIdentifier="IfcDoor">
+								<InnerReference AttributeIdentifier="RelatingPropertyDefinition" TypeIdentifier="IfcRelDefinesByProperties" InstanceName="myPropertySet">
+									<InnerReference AttributeIdentifier="HasProperties" TypeIdentifier="IfcPropertySet" InstanceName="myProperty_02">
+										<InnerReference AttributeIdentifier="NominalValue" TypeIdentifier="IfcPropertySingleValue"/>
+									</InnerReference>
+								</InnerReference>
+							</ReferencePath>
+						</IfcMetric>
+						<IfcMetric Name="myMetric_770" ConstraintGrade="hard" Benchmark="equalto">
+							<DataValue>
+								<IfcAppliedValue Name="myAppliedValue_775">
+									<AppliedValue>
+										<IfcLabel-wrapper>RAL 9001</IfcLabel-wrapper>
+									</AppliedValue>
+								</IfcAppliedValue>
+							</DataValue>
+							<ReferencePath AttributeIdentifier="IsDefinedBy" TypeIdentifier="IfcDoor">
+								<InnerReference AttributeIdentifier="RelatingPropertyDefinition" TypeIdentifier="IfcRelDefinesByProperties" InstanceName="myPropertySet">
+									<InnerReference AttributeIdentifier="HasProperties" TypeIdentifier="IfcPropertySet" InstanceName="myProperty_02">
+										<InnerReference AttributeIdentifier="NominalValue" TypeIdentifier="IfcPropertySingleValue"/>
+									</InnerReference>
+								</InnerReference>
+							</ReferencePath>
+						</IfcMetric>
+					</BenchmarkValues>
+				</IfcObjective>
+				<IfcObjective Name="myObjective_901" Description="=&gt; (implies)" ConstraintGrade="hard" LogicalAggregator="logicalor" ObjectiveQualifier="parameter">
+					<BenchmarkValues>
+						<IfcObjective Name="myObjective_902" ConstraintGrade="hard" LogicalAggregator="logicalnotand" ObjectiveQualifier="parameter">
+							<BenchmarkValues>
+								<IfcObjective Name="myObjective_903" ConstraintGrade="hard" LogicalAggregator="logicaland" ObjectiveQualifier="parameter">
+									<BenchmarkValues>
+										<IfcMetric Name="myMetric_910" ConstraintGrade="hard" Benchmark="notequalto">
+											<DataValue>
+												<IfcAppliedValue Name="myAppliedValue_915">
+													<AppliedValue>
+														<IfcLabel-wrapper>RAL 9010</IfcLabel-wrapper>
+													</AppliedValue>
+												</IfcAppliedValue>
+											</DataValue>
+											<ReferencePath AttributeIdentifier="IsDefinedBy" TypeIdentifier="IfcDoor">
+												<InnerReference AttributeIdentifier="RelatingPropertyDefinition" TypeIdentifier="IfcRelDefinesByProperties" InstanceName="myPropertySet">
+													<InnerReference AttributeIdentifier="HasProperties" TypeIdentifier="IfcPropertySet" InstanceName="myProperty_02">
+														<InnerReference AttributeIdentifier="NominalValue" TypeIdentifier="IfcPropertySingleValue"/>
+													</InnerReference>
+												</InnerReference>
+											</ReferencePath>
+										</IfcMetric>
+									</BenchmarkValues>
+								</IfcObjective>
+							</BenchmarkValues>
+						</IfcObjective>
+						<IfcObjective Name="myObjective_904" ConstraintGrade="hard" LogicalAggregator="logicaland" ObjectiveQualifier="parameter">
+							<BenchmarkValues>
+								<IfcMetric Name="myMetric_920" ConstraintGrade="hard" Benchmark="equalto">
+									<DataValue>
+										<IfcAppliedValue Name="myAppliedValue_925">
+											<AppliedValue>
+												<IfcBoolean-wrapper>true</IfcBoolean-wrapper>
+											</AppliedValue>
+										</IfcAppliedValue>
+									</DataValue>
+									<ReferencePath TypeIdentifier="IfcDoor" AttributeIdentifier="IsDefinedBy">
+										<InnerReference TypeIdentifier="IfcRelDefinesByProperties" AttributeIdentifier="RelatingPropertyDefinition" InstanceName="myPropertySet">
+											<InnerReference TypeIdentifier="IfcPropertySet" AttributeIdentifier="HasProperties" InstanceName="myProperty_03">
+												<InnerReference TypeIdentifier="IfcPropertySingleValue" AttributeIdentifier="NominalValue"/>
+											</InnerReference>
+										</InnerReference>
+									</ReferencePath>
+								</IfcMetric>
+							</BenchmarkValues>
+						</IfcObjective>
+					</BenchmarkValues>
+				</IfcObjective>
+				<IfcObjective Name="myObjective_951" Description="&lt;=&gt; (is equivalent)" ConstraintGrade="hard" LogicalAggregator="logicalor" ObjectiveQualifier="parameter">
+					<BenchmarkValues>
+						<IfcObjective Name="myObjective_952" ConstraintGrade="hard" LogicalAggregator="logicaland" ObjectiveQualifier="parameter">
+							<BenchmarkValues>
+								<IfcObjective id="i8" Name="myObjective_956" ConstraintGrade="hard" LogicalAggregator="logicaland" ObjectiveQualifier="parameter">
+									<BenchmarkValues>
+										<IfcMetric Name="myMetric_960" ConstraintGrade="hard" Benchmark="equalto">
+											<DataValue>
+												<IfcAppliedValue Name="myAppliedValue_965">
+													<AppliedValue>
+														<IfcBoolean-wrapper>true</IfcBoolean-wrapper>
+													</AppliedValue>
+												</IfcAppliedValue>
+											</DataValue>
+											<ReferencePath TypeIdentifier="IfcDoor" AttributeIdentifier="IsDefinedBy">
+												<InnerReference TypeIdentifier="IfcRelDefinesByProperties" AttributeIdentifier="RelatingPropertyDefinition" InstanceName="myPropertySet">
+													<InnerReference TypeIdentifier="IfcPropertySet" AttributeIdentifier="HasProperties" InstanceName="myProperty_03">
+														<InnerReference TypeIdentifier="IfcPropertySingleValue" AttributeIdentifier="NominalValue"/>
+													</InnerReference>
+												</InnerReference>
+											</ReferencePath>
+										</IfcMetric>
+									</BenchmarkValues>
+								</IfcObjective>
+								<IfcObjective id="i9" Name="myObjective_957" ConstraintGrade="hard" LogicalAggregator="logicaland" ObjectiveQualifier="parameter">
+									<BenchmarkValues>
+										<IfcMetric Name="myMetric_970" ConstraintGrade="hard" Benchmark="equalto">
+											<DataValue>
+												<IfcAppliedValue Name="myAppliedValue_975">
+													<AppliedValue>
+														<IfcLabel-wrapper>RAL 9010</IfcLabel-wrapper>
+													</AppliedValue>
+												</IfcAppliedValue>
+											</DataValue>
+											<ReferencePath TypeIdentifier="IfcDoor" AttributeIdentifier="IsDefinedBy">
+												<InnerReference TypeIdentifier="IfcRelDefinesByProperties" AttributeIdentifier="RelatingPropertyDefinition" InstanceName="myPropertySet">
+													<InnerReference TypeIdentifier="IfcPropertySet" AttributeIdentifier="HasProperties" InstanceName="myProperty_02">
+														<InnerReference TypeIdentifier="IfcPropertySingleValue" AttributeIdentifier="NominalValue"/>
+													</InnerReference>
+												</InnerReference>
+											</ReferencePath>
+										</IfcMetric>
+										<IfcMetric Name="myMetric_980" ConstraintGrade="hard" Benchmark="equalto">
+											<DataValue>
+												<IfcAppliedValue Name="myAppliedValue_985">
+													<AppliedValue>
+														<IfcLengthMeasure-wrapper>830</IfcLengthMeasure-wrapper>
+													</AppliedValue>
+												</IfcAppliedValue>
+											</DataValue>
+											<ReferencePath TypeIdentifier="IfcDoor" AttributeIdentifier="IsDefinedBy">
+												<InnerReference TypeIdentifier="IfcRelDefinesByProperties" AttributeIdentifier="RelatingPropertyDefinition" InstanceName="myPropertySet">
+													<InnerReference TypeIdentifier="IfcPropertySet" AttributeIdentifier="HasProperties" InstanceName="myProperty_01">
+														<InnerReference TypeIdentifier="IfcPropertySingleValue" AttributeIdentifier="NominalValue"/>
+													</InnerReference>
+												</InnerReference>
+											</ReferencePath>
+										</IfcMetric>
+									</BenchmarkValues>
+								</IfcObjective>
+							</BenchmarkValues>
+						</IfcObjective>
+						<IfcObjective Name="myObjective_953" ConstraintGrade="hard" LogicalAggregator="logicaland" ObjectiveQualifier="parameter">
+							<BenchmarkValues>
+								<IfcObjective Name="myObjective_954" ConstraintGrade="hard" LogicalAggregator="logicalnotand" ObjectiveQualifier="parameter">
+									<BenchmarkValues>
+										<IfcObjective xsi:nil="true" ref="i8"/>
+									</BenchmarkValues>
+								</IfcObjective>
+								<IfcObjective Name="myObjective_955" ConstraintGrade="hard" LogicalAggregator="logicalnotand" ObjectiveQualifier="parameter">
+									<BenchmarkValues>
+										<IfcObjective xsi:nil="true" ref="i9"/>
+									</BenchmarkValues>
+								</IfcObjective>
+							</BenchmarkValues>
+						</IfcObjective>
+					</BenchmarkValues>
+				</IfcObjective>
+			</BenchmarkValues>
+		</RelatingConstraint>
+	</IfcRelAssociatesConstraint>
+	<IfcRelAssociatesConstraint GlobalId="0PXEMtjf54rOHcVlP36_AD" Name="myAssociation_2" Intent="Configuration Rule">
+		<RelatedObjects>
+			<IfcDoor xsi:nil="true" ref="i10"/>
+		</RelatedObjects>
+		<RelatingConstraint xsi:type="IfcObjective" xsi:nil="true" ref="i11"/>
+	</IfcRelAssociatesConstraint>
 </ifcXML>
