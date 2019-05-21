@@ -10,13 +10,13 @@ using System;
 
 namespace Examples.CatalogueExample
 {
-    class CatalogueExample : AbstractExample
+    class CatalogueExampleBricks : AbstractExample
     {
         /// <summary>
         /// These credentials will be passed to the model constructor to set an author of the example data
         /// in form of IfcOwnerHistory entity
         /// </summary>
-        public CatalogueExample() : base("Klaus", "Aengenvoort", "CEN-TC442-WG2-TG3") { }
+        public CatalogueExampleBricks() : base("Klaus", "Aengenvoort", "CEN-TC442-WG2-TG3") { }
         private string baseFolder = @"C:\Users\Aengenvoort\Documents\GitHub\ProductData\SampleFiles\HC (Italy)\Bricks Catalogue";
         private string sourceFile = "RawData.xlsx";
         private string sheetName = "MassData";

@@ -1,0 +1,8 @@
+{
+  "profiles": {
+    "SchemaValidator": {
+      "commandName": "Project",
+      "commandLineArgs": "\"C:\\Development\\GitHub\\buildingSMART\\ProductData\\SampleFiles\\ElevatorAsBuilt\\AsBuilt-Daten vom Aufzugserrichter\\AsBuilt-Daten vom Aufzugserrichter.ifcxml\""
+    }
+  }
+}

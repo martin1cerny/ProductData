@@ -21,7 +21,7 @@
   </ItemGroup>
   <ItemGroup>
     <PackageReference Include="ClosedXML" Version="0.93.1" />
-    <PackageReference Include="Xbim.Essentials" Version="5.0.214" />
+    <PackageReference Include="Xbim.Essentials" Version="5.0.254-develop" />
     <PackageReference Include="Xbim.ISO_12006_3_V3" Version="1.0.103" />
   </ItemGroup>
   <ItemGroup>
