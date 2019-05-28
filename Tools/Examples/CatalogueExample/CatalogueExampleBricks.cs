@@ -17,7 +17,7 @@ namespace Examples.CatalogueExample
         /// in form of IfcOwnerHistory entity
         /// </summary>
         public CatalogueExampleBricks() : base("Klaus", "Aengenvoort", "CEN-TC442-WG2-TG3") { }
-        private string baseFolder = @"C:\Users\Aengenvoort\Documents\GitHub\ProductData\SampleFiles\HC (Italy)\Bricks Catalogue";
+        private string baseFolder = @"..\..\..\..\..\SampleFiles\HC (Italy)\Bricks Catalogue";
         private string sourceFile = "RawData.xlsx";
         private string sheetName = "MassData";
         private string targetFile = "ProductDataGenerated";
