@@ -106,41 +106,32 @@ namespace Examples.CatalogueExample
                                         u.Name = Xbim.Ifc4.Interfaces.IfcSIUnitName.GRAM;
                                     });
                             else if (primaryMeasureType == typeof(IfcPlaneAngleMeasure).Name)
-                                    pt.PrimaryUnit = model.Instances.New<IfcSIUnit>(u=>
+                                    pt.PrimaryUnit = model.Instances.New<IfcConversionBasedUnit>(punit=>
                                     {
-                                        u.UnitType = Xbim.Ifc4.Interfaces.IfcUnitEnum.PLANEANGLEUNIT;
-                                        u.Name = Xbim.Ifc4.Interfaces.IfcSIUnitName.RADIAN;
+                                        //Convert the angel measure from the unit grad to the SI Unit radian
+                                        //rad=grad*(PI/180)
+                                        punit.Name = "Grad";
+                                        punit.UnitType = Xbim.Ifc4.Interfaces.IfcUnitEnum.PLANEANGLEUNIT;
+                                        punit.ConversionFactor = model.Instances.New<IfcMeasureWithUnit>(mwu=>
+                                        {
+                                            mwu.UnitComponent = model.Instances.New<IfcSIUnit>(siUnit=>
+                                            {
+                                               siUnit.UnitType = Xbim.Ifc4.Interfaces.IfcUnitEnum.PLANEANGLEUNIT;
+                                               siUnit.Name = Xbim.Ifc4.Interfaces.IfcSIUnitName.RADIAN;
+                                            });
+                                            mwu.ValueComponent = new IfcReal(Math.PI / 180);
+                                        });
+                                        punit.Dimensions = model.Instances.New<IfcDimensionalExponents>(dim=>
+                                        {
+                                            dim.LengthExponent = 0;
+                                            dim.MassExponent = 0;
+                                            dim.TimeExponent = 0;
+                                            dim.ElectricCurrentExponent = 0;
+                                            dim.ThermodynamicTemperatureExponent = 0;
+                                            dim.AmountOfSubstanceExponent = 0;
+                                            dim.LuminousIntensityExponent = 0;
+                                        });
                                     });
-                                    //pt.PrimaryUnit = model.Instances.New<IfcConversionBasedUnit>(u=>
-                                    //{
-                                    //    //Convert the angel measure from the unit grad to the SI Unit radian
-                                    //    //rad = Pi * grad / 180
-                                    //    u.Name = "Grad";
-                                    //    u.UnitType = Xbim.Ifc4.Interfaces.IfcUnitEnum.PLANEANGLEUNIT;
-                                    //    u.ConversionFactor = model.Instances.New<IfcMeasureWithUnit>(mwu1=>
-                                    //    {
-                                    //        mwu1.ValueComponent = new IfcReal(1000);
-                                    //        mwu1.UnitComponent = model.Instances.New<IfcMeasureWithUnit>(mwu2=>
-                                    //        {
-                                    //            mwu2.UnitComponent Item = new IfcSIUnit()
-                                    //            {
-                                    //                Id = unitId.Replace("unit_", "siunit1_"),
-                                    //                Name = IfcSIUnitName.Pascal,
-                                    //                UnitType = etask.Ifc4.IfcUnitEnum.Pressureunit
-                                    //            };
-                                    //        });
-                                    //    };
-                                    //    u.Dimensions = model.Instances.New<IfcDimensionalExponents>
-                                    //    {
-                                    //        LengthExponent = -1,
-                                    //        MassExponent = 1,
-                                    //        TimeExponent = -2,
-                                    //        ElectricCurrentExponent = 0,
-                                    //        ThermodynamicTemperatureExponent = 0,
-                                    //        AmountOfSubstanceExponent = 0,
-                                    //        LuminousIntensityExponent = 0
-                                    //    },
-                                    //};
                         })
                     });
                 };
