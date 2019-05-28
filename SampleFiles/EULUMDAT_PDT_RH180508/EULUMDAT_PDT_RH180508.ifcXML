@@ -338,7 +338,7 @@ Nextrema G3 TB 8000-840 ETDD +LLWC
 			</IfcRelDeclares>
 		</Declares>
 	</IfcProjectLibrary>
-	<IfcRelDefinesByTemplate id="i473737373">
+	<IfcRelDefinesByTemplate id="i473737373" GlobalId="23JruP9Sj6_QQl9T2nuNCG">
 		<RelatedPropertySets>
 			<IfcPropertySet xsi:nil="true" ref="i99203"/>
 		</RelatedPropertySets>
@@ -557,12 +557,12 @@ Nextrema G3 TB 8000-840 ETDD +LLWC
 	<!-- Step 8: Insert the tracking information for the PDS (tbd)-->
 	<IfcLamp id="i213" GlobalId="26JruP9Sj6_QQl9T2nuNCi" Name="Nextrema G3 B 4000-840 ETDD +HFS" Description="Real Lamp (AsDelivered)" Tag="4711" PredefinedType="halogen">
 		<IsTypedBy>
-			<RelatingType ref="i99202"/>
+			<RelatingType ref="i99202" GlobalId="26JruP9Sj6_QQl9T2nuNCi"/>
 		</IsTypedBy>
 		<IsDefinedBy>
-			<IfcRelDefinesByProperties>
+			<IfcRelDefinesByProperties GlobalId="26JruP9Sj6_QQl9T2nuNCi">
 				<RelatingPropertyDefinition>
-					<IfcPropertySet>
+					<IfcPropertySet Name="IfcPropertySet" GlobalId="26JruP9Sj6_QQl9T2nuNCi">
 						<HasProperties>
 							<IfcPropertySingleValue id="i992172" Name="Seriennummer">
 								<NominalValue>
