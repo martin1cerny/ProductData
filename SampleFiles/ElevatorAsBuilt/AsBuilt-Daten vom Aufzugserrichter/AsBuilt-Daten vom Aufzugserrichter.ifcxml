@@ -10,7 +10,7 @@
     <authorization>File created with IFC4.NET</authorization>
     <documentation>https://www.cafm-connect.org</documentation>
   </header>
-  <IfcProject id="i1" GlobalId="3W_wCy4R58hgkAO0WsiUkm" />
+  <IfcProject id="i1" GlobalId="3W_wCy4R58hgkAO0WsiUkm" Name="Sample file for an AsBuilt representation of an installed product" />
   <IfcTable id="i28973" Name="DictionaryReferenceTable">
     <Rows>
       <IfcTableRow IsHeading="true">
@@ -30246,7 +30246,7 @@
     </Rows>
   </IfcTable>
   <IfcClassification id="i28974" Source="https://www.cafm-connect.org" Edition="1.0" EditionDate="2018-05-03T13:35:14.6287968+02:00" Name="Raumnutzungsarten nach DIN 277-2" Description="CAFMConnectCatalogueOfSpaceTypes" />
-  <IfcRelAssociatesClassification id="i28976">
+  <IfcRelAssociatesClassification id="i28976" GlobalId="1H1fxBG7T13xnxCUpR6RPK">
     <RelatedObjects>
       <IfcProject xsi:nil="true" ref="i1" />
     </RelatedObjects>
@@ -30650,7 +30650,7 @@
     </ReferencedSource>
   </IfcClassificationReference>
   <IfcClassification id="i29346" Source="https://www.cafm-connect.org" Edition="1.0" EditionDate="2018-05-03T13:35:14.7526216+02:00" Name="Bauteiltypen nach DIN 276+x" Description="CAFMConnectCatalogueOfObjectTypes" />
-  <IfcRelAssociatesClassification id="i29347">
+  <IfcRelAssociatesClassification id="i29347" GlobalId="1H1fxBG7T13xnxCUpR6RPK">
     <RelatedObjects>
       <IfcProject xsi:nil="true" ref="i1" />
     </RelatedObjects>
@@ -30700,7 +30700,7 @@
       <IfcSimplePropertyTemplate id="i29416" GlobalId="0KuSc0qW0HuO00025QrE$V" Name="Abstand Ringbewehrung in Y-Richtung" Description="ÜBERSETZUNG FEHLT!" TemplateType="p_singlevalue" PrimaryMeasureType="IfcText" />
     </HasPropertyTemplates>
   </IfcPropertySetTemplate>
-  <IfcRelAssociatesClassification id="i29388">
+  <IfcRelAssociatesClassification id="i29388" GlobalId="1H1fxBG7T13xnxCUpR6RPK">
     <RelatedObjects>
       <IfcPropertySetTemplate xsi:nil="true" ref="i29387" />
     </RelatedObjects>
@@ -30792,7 +30792,7 @@
       <IfcSimplePropertyTemplate id="i29566" GlobalId="1o65E0qTqHuO00025QrE$V" Name="Drahtglas" Description="German-description-10" TemplateType="p_singlevalue" PrimaryMeasureType="IfcText" />
     </HasPropertyTemplates>
   </IfcPropertySetTemplate>
-  <IfcRelAssociatesClassification id="i29420">
+  <IfcRelAssociatesClassification id="i29420" GlobalId="1H1fxBG7T13xnxCUpR6RPK">
     <RelatedObjects>
       <IfcPropertySetTemplate xsi:nil="true" ref="i29419" />
     </RelatedObjects>
@@ -30826,7 +30826,7 @@
       </IfcSimplePropertyTemplate>
     </HasPropertyTemplates>
   </IfcPropertySetTemplate>
-  <IfcRelAssociatesClassification id="i29603">
+  <IfcRelAssociatesClassification id="i29603" GlobalId="1H1fxBG7T13xnxCUpR6RPK">
     <RelatedObjects>
       <IfcPropertySetTemplate xsi:nil="true" ref="i29602" />
     </RelatedObjects>
@@ -30854,7 +30854,7 @@
       <IfcSimplePropertyTemplate id="i29657" GlobalId="15gWg0qT0HuO00025QrE$V" Name="brennbares Material" Description="Angabe ob das Bauteil brennbares Material enthält (WAHR) oder nicht (FALSCH)." TemplateType="p_singlevalue" PrimaryMeasureType="IfcText" />
     </HasPropertyTemplates>
   </IfcPropertySetTemplate>
-  <IfcRelAssociatesClassification id="i29656">
+  <IfcRelAssociatesClassification id="i29656" GlobalId="1H1fxBG7T13xnxCUpR6RPK">
     <RelatedObjects>
       <IfcPropertySetTemplate xsi:nil="true" ref="i29643" />
     </RelatedObjects>
@@ -30879,7 +30879,7 @@
       <IfcSimplePropertyTemplate id="i29691" GlobalId="1lCbY0qWSHuO00025QrE$V" Name="mechanisch" Description="Angabe, ob dieses Bauteil  mechanisch bewegt oder angetrieben wird (JA) oder manuell (NEIN). Diese Eigenschaft wird nur für beweglichen Sonnenschutz angegeben." TemplateType="p_singlevalue" PrimaryMeasureType="IfcText" />
     </HasPropertyTemplates>
   </IfcPropertySetTemplate>
-  <IfcRelAssociatesClassification id="i29660">
+  <IfcRelAssociatesClassification id="i29660" GlobalId="1H1fxBG7T13xnxCUpR6RPK">
     <RelatedObjects>
       <IfcPropertySetTemplate xsi:nil="true" ref="i29659" />
     </RelatedObjects>
@@ -30905,7 +30905,7 @@
       <IfcSimplePropertyTemplate id="i29723" GlobalId="38Ihu0qW0HuO00025QrE$V" Name="Stabzuordnungstyp" Description="ÜBERSETZUNG FEHLT!" TemplateType="p_singlevalue" PrimaryMeasureType="IfcText" />
     </HasPropertyTemplates>
   </IfcPropertySetTemplate>
-  <IfcRelAssociatesClassification id="i29694">
+  <IfcRelAssociatesClassification id="i29694" GlobalId="1H1fxBG7T13xnxCUpR6RPK">
     <RelatedObjects>
       <IfcPropertySetTemplate xsi:nil="true" ref="i29693" />
     </RelatedObjects>
