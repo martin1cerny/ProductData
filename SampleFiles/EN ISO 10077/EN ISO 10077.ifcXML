@@ -283,7 +283,7 @@
 		<IsDefinedBy>
 			<IfcRelDefinesByProperties id="i6896976" GlobalId="26JruP9Sj6_QQl9T2nuNCk">
 				<RelatingPropertyDefinition>
-					<IfcPropertySet id="i6896977" GlobalId="26JruP9Sj6_QQl9T2nuNCG" ref="i999910" Name="Dop Header Information">
+					<IfcPropertySet id="i6896977" GlobalId="26JruP9Sj6_QQl9T2nuNCG" Name="Dop Header Information">
 						<HasProperties>
 							<IfcPropertySingleValue id="i971301" Name="Unique identification code of the product-type">
 								<NominalValue>

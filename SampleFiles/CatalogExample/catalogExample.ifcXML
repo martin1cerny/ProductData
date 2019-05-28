@@ -70,10 +70,6 @@
 													<Items>
 														<IfcExtrudedAreaSolid Depth="40">
 															<SweptArea xsi:type="IfcRectangleProfileDef" ProfileType="area" ProfileName="Panel" XDim="830" YDim="2040">
-																<Position id="i5">
-																	<Location xsi:nil="true" ref="i3"/>
-																	<RefDirection DirectionRatios="1 0"/>																	
-																</Position>
 															</SweptArea>
 															<Position xsi:nil="true" ref="i1"/>
 															<ExtrudedDirection id="i6" DirectionRatios="1 0"/>
@@ -117,7 +113,6 @@
 													<Items>
 														<IfcExtrudedAreaSolid Depth="40">
 															<SweptArea xsi:type="IfcRectangleProfileDef" ProfileType="area" ProfileName="Panel" XDim="800" YDim="2040">
-																<Position xsi:nil="true" ref="i5"/>
 															</SweptArea>
 															<Position xsi:nil="true" ref="i1"/>
 															<ExtrudedDirection xsi:nil="true" ref="i6"/>

@@ -556,7 +556,7 @@ Nextrema G3 TB 8000-840 ETDD +LLWC
 	</IfcResourceConstraintRelationship>
 	<!-- Step 8: Insert the tracking information for the PDS (tbd)-->
 	<IfcLamp id="i213" GlobalId="26JruP9Sj6_QQl9T2nuNCi" Name="Nextrema G3 B 4000-840 ETDD +HFS" Description="Real Lamp (AsDelivered)" Tag="4711" PredefinedType="halogen">
-		<IsTypedBy>
+		<IsTypedBy GlobalId="26JruP9Sj6_QQl9T2nuNCi">
 			<RelatingType ref="i99202" GlobalId="26JruP9Sj6_QQl9T2nuNCi"/>
 		</IsTypedBy>
 		<IsDefinedBy>
