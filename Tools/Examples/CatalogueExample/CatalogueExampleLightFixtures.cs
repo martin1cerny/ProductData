@@ -29,12 +29,26 @@ namespace Examples.CatalogueExample
         {
             using (var txn = model.BeginTransaction("Example creation"))
             {
-
-                var project = model.Instances.New<IfcProject>(p => p.Name = "Basic Creation");
+                IfcProject project = model.Instances.New<IfcProject>(p => p.Name = "TriluxLightingProducts");
+                IfcUnitAssignment ifcUnitAssignment = model.Instances.New<IfcUnitAssignment>(ua =>
+                {
+                    ua.Units.Add(model.Instances.New<IfcSIUnit>(u =>
+                    {
+                        u.UnitType = Xbim.Ifc4.Interfaces.IfcUnitEnum.LENGTHUNIT;
+                        u.Name = Xbim.Ifc4.Interfaces.IfcSIUnitName.METRE;
+                        u.Prefix = Xbim.Ifc4.Interfaces.IfcSIPrefix.MILLI;
+                    }));
+                    ua.Units.Add(model.Instances.New<IfcSIUnit>(u =>
+                    {
+                        u.UnitType = Xbim.Ifc4.Interfaces.IfcUnitEnum.MASSUNIT;
+                        u.Name = Xbim.Ifc4.Interfaces.IfcSIUnitName.GRAM;
+                        u.Prefix = Xbim.Ifc4.Interfaces.IfcSIPrefix.KILO;
+                    }));
+                });
 
                 //Insert a project library to store the product data templates and type products
-                var ifcProductDataLibrary = New<IfcProjectLibrary>(l => {
-                    l.Name = "TriluxLightingProducts";
+                IfcProjectLibrary ifcProductDataLibrary = New<IfcProjectLibrary>(l => {
+                    l.Name = "TriluxLightingProductsLibrary";
                     l.GlobalId = "1DbshdzGD71ejurQqQcxbw";
                     l.Description = "Library for Trilux light fixtures product data templates based on the ZVEI European core properties";
                     l.Phase = "Design,Build,Operate";
