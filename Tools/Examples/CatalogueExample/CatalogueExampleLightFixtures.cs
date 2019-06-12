@@ -9,6 +9,7 @@ using ClosedXML.Excel;
 using System;
 using System.Collections.Generic;
 using Xbim.Ifc4.ExternalReferenceResource;
+using System.IO.Compression;
 
 namespace Examples.CatalogueExample
 {
@@ -19,9 +20,11 @@ namespace Examples.CatalogueExample
         /// in form of IfcOwnerHistory entity
         /// </summary>
         public CatalogueExampleLightFixtures() : base("Robert", "Heinze", "CEN-TC442-WG2-TG3") { }
-        private string baseFolder = @"..\..\..\..\..\SampleFiles\TriluxLightingProducts\SourceDataFromPimSystem";
+        private string sourceFolder = @"..\..\..\..\..\SampleFiles\TriluxLightingProducts\SourceDataFromPimSystem";
         private string sourceFile = "TRILUX_Baselist_RH190520.xlsx";
+        private string targetFolder = @"..\..\..\..\..\SampleFiles\TriluxLightingProducts\OpenProductLibrary";
         private string targetFile = "TriluxLightingProducts";
+        private string zipFile = @"..\..\..\..\..\SampleFiles\TriluxLightingProducts\TriluxLightingProducts.ifczip";
 
         public override string Annotation => "This is an IFC product library that contains configured lighting products from the manufacturer Trilux.";
 
@@ -46,6 +49,38 @@ namespace Examples.CatalogueExample
                     }));
                 });
 
+                var ifcClassificationSystemOmniClass = model.Instances.New<IfcClassification>();
+                ifcClassificationSystemOmniClass.Name = "Omniclass";
+                ifcClassificationSystemOmniClass.Edition = "1.0";
+                ifcClassificationSystemOmniClass.EditionDate = "2018-12-27T00:00:00.0000000";
+                ifcClassificationSystemOmniClass.Description = "The OmniClass Construction Classification System (known as OmniClass™ or OCCS) is a classification system for the construction industry. OmniClass is useful for many applications, from organizing library materials, product literature, and project information, to providing a classification structure for electronic databases. It incorporates other extant systems currently in use as the basis of many of its Tables – MasterFormat™ for work results, UniFormat for elements, and EPIC (Electronic Product Information Cooperation) for structuring products.";
+                ifcClassificationSystemOmniClass.Location = "http://www.omniclass.org/";
+
+                var ifcClassificationReferenceOmniClass = model.Instances.New<IfcClassificationReference>();
+                ifcClassificationReferenceOmniClass.Identification = "23-35-47";
+                ifcClassificationReferenceOmniClass.Name = "Electrical Lighting";
+                ifcClassificationReferenceOmniClass.Description = "NOT PROVIDED";
+                ifcClassificationReferenceOmniClass.ReferencedSource = ifcClassificationSystemOmniClass;
+
+                var ifcRelAssociatesClassificationOmniClass = model.Instances.New<IfcRelAssociatesClassification>();
+                ifcRelAssociatesClassificationOmniClass.RelatingClassification = ifcClassificationReferenceOmniClass;
+
+                var ifcClassificationSystemUniClass = model.Instances.New<IfcClassification>();
+                ifcClassificationSystemUniClass.Name = "Uniclass";
+                ifcClassificationSystemUniClass.Edition = "2015";
+                ifcClassificationSystemUniClass.EditionDate = "";
+                ifcClassificationSystemUniClass.Description = "";
+                ifcClassificationSystemUniClass.Location = "https://www.thenbs.com/our-tools/introducing-uniclass-2015";
+
+                var ifcClassificationReferenceUniClass = model.Instances.New<IfcClassificationReference>();
+                ifcClassificationReferenceUniClass.Identification = "CA-70-10-30";
+                ifcClassificationReferenceUniClass.Name = "Site lighting equipment";
+                ifcClassificationReferenceUniClass.Description = "NOT PROVIDED";
+                ifcClassificationReferenceUniClass.ReferencedSource = ifcClassificationSystemUniClass;
+
+                var ifcRelAssociatesClassificationUniClass = model.Instances.New<IfcRelAssociatesClassification>();
+                ifcRelAssociatesClassificationUniClass.RelatingClassification = ifcClassificationReferenceUniClass;
+
                 //Insert a project library to store the product data templates and type products
                 IfcProjectLibrary ifcProductDataLibrary = New<IfcProjectLibrary>(l => {
                     l.Name = "TriluxLightingProductsLibrary";
@@ -69,7 +104,7 @@ namespace Examples.CatalogueExample
                 //they should be loaded from the publishing dictionary
 
                 //Read templates from excel sheet
-                var workbook = new XLWorkbook(Path.Combine(baseFolder, sourceFile));
+                var workbook = new XLWorkbook(Path.Combine(sourceFolder, sourceFile));
                 IXLWorksheet worksheetTemplates;
                 IXLRange rangeTemplates;
                 worksheetTemplates = workbook.Worksheet("Templates");
@@ -154,10 +189,10 @@ namespace Examples.CatalogueExample
                 ifcProductDataLibraryDeclarations.Add(ifcPropertySetTemplate);
   
                 //Read source data from excel sheet
-                var workbookData = new XLWorkbook(Path.Combine(baseFolder, sourceFile));
+                var workbookData = new XLWorkbook(Path.Combine(sourceFolder, sourceFile));
                 IXLWorksheet worksheetData;
                 IXLRange rangeData;
-                worksheetData = workbookData.Worksheet("BASELIST_1");
+                worksheetData = workbookData.Worksheet("Sheets");
                 rangeData = worksheetData.Range("A1:Z690");
                 IXLTable rawData = rangeData.AsTable();
                 DataTable dtData = ReadDataTable(worksheetData);
@@ -178,7 +213,9 @@ namespace Examples.CatalogueExample
                         ifcTypeProduct.Description = "Description of " + ifcTypeProduct.Name;
                         ifcTypeProduct.ApplicableOccurrence = "IfcLightFixture";
 
-                        
+                        ifcRelAssociatesClassificationOmniClass.RelatedObjects.Add(ifcTypeProduct);
+                        ifcRelAssociatesClassificationUniClass.RelatedObjects.Add(ifcTypeProduct);
+
                         IfcPropertySet ifcPropertySet = model.Instances.New<IfcPropertySet>(pset =>
                         {
                             pset.Name = "Properties of " + ifcTypeProduct.Name;
@@ -257,11 +294,20 @@ namespace Examples.CatalogueExample
                 txn.Commit();
             }
 
-            string targetFileName = Path.Combine(baseFolder, targetFile);
+            string targetFileName = Path.Combine(targetFolder, targetFile);
             SaveAs(targetFileName, true, typeof(IfcProjectLibrary));
-            
+
+            //Create ifcZip file
+            File.Delete(zipFile);
+            ZipFile.CreateFromDirectory(sourceFolder, zipFile);
+            using (ZipArchive zipArchive = ZipFile.Open(zipFile,ZipArchiveMode.Update))
+            {
+                zipArchive.GetEntry(sourceFile).Delete();
+                zipArchive.CreateEntryFromFile($"{targetFolder}/{targetFile}.ifcXML", $"{targetFile}.ifcXML");
+                zipArchive.CreateEntryFromFile($"{targetFolder}/{targetFile}.ifc", $"{targetFile}.ifc");
+            }
         }
-    
+
         private DataTable ReadDataTable(IXLWorksheet ws)
         {
             DataTable dt = new DataTable();
