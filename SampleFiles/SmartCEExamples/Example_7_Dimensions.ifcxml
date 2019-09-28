@@ -1,10 +1,10 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <!-- This example shows how property templates can be used to describe -->
 <!-- declaration of performance of construction products. This utilises strong measure typing system and -->
 <!-- units from IFC schema. This approach can be used to store CPR data. -->
 <!--  -->
 <!-- Created: 2018-09-25T13:54:15 (UTC) -->
-<ifcXML xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:ifc="http://www.buildingsmart-tech.org/ifcXML/IFC4/Add2" xsi:schemaLocation="http://www.buildingsmart-tech.org/ifcXML/IFC4/Add2 http://www.buildingsmart-tech.org/ifc/IFC4/Add2/IFC4_ADD2.xsd" id="uos_1" express="http://www.buildingsmart-tech.org/ifc/IFC4/Add2/IFC4_ADD2.exp" configuration="http://www.buildingsmart-tech.org/ifc/IFC4/Add2/IFC4_ADD2_config.xml" xmlns="http://www.buildingsmart-tech.org/ifcXML/IFC4/Add2">
+<ifcXML xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:ifc="http://www.buildingsmart-tech.org/ifcXML/IFC4/Add2" xsi:schemaLocation="http://www.buildingsmart-tech.org/ifcXML/IFC4/Add2 ../IFC4_ADD2.xsd" id="uos_1" xmlns="http://www.buildingsmart-tech.org/ifcXML/IFC4/Add2">
   <header>
     <time_stamp>2018-09-25T15:54:14</time_stamp>
     <preprocessor_version>Xbim File Processor version 4.0.0.0</preprocessor_version>
