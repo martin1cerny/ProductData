@@ -10,6 +10,7 @@ using System;
 using System.Collections.Generic;
 using Xbim.Ifc4.ExternalReferenceResource;
 using System.IO.Compression;
+using System.Linq;
 
 namespace Examples.CatalogueExample
 {
@@ -59,7 +60,7 @@ namespace Examples.CatalogueExample
                 var ifcClassificationReferenceOmniClass = model.Instances.New<IfcClassificationReference>();
                 ifcClassificationReferenceOmniClass.Identification = "23-35-47";
                 ifcClassificationReferenceOmniClass.Name = "Electrical Lighting";
-                ifcClassificationReferenceOmniClass.Description = "NOT PROVIDED";
+                ifcClassificationReferenceOmniClass.Description = "";
                 ifcClassificationReferenceOmniClass.ReferencedSource = ifcClassificationSystemOmniClass;
 
                 var ifcRelAssociatesClassificationOmniClass = model.Instances.New<IfcRelAssociatesClassification>();
@@ -68,14 +69,14 @@ namespace Examples.CatalogueExample
                 var ifcClassificationSystemUniClass = model.Instances.New<IfcClassification>();
                 ifcClassificationSystemUniClass.Name = "Uniclass";
                 ifcClassificationSystemUniClass.Edition = "2015";
-                ifcClassificationSystemUniClass.EditionDate = "";
-                ifcClassificationSystemUniClass.Description = "";
+                ifcClassificationSystemUniClass.EditionDate = "01.01.2015";
+                ifcClassificationSystemUniClass.Description = "Uniclass is a voluntary classification system for the construction industry that can be used for structuring project information, such as building information models (BIM).";
                 ifcClassificationSystemUniClass.Location = "https://www.thenbs.com/our-tools/introducing-uniclass-2015";
 
                 var ifcClassificationReferenceUniClass = model.Instances.New<IfcClassificationReference>();
                 ifcClassificationReferenceUniClass.Identification = "CA-70-10-30";
                 ifcClassificationReferenceUniClass.Name = "Site lighting equipment";
-                ifcClassificationReferenceUniClass.Description = "NOT PROVIDED";
+                ifcClassificationReferenceUniClass.Description = "";
                 ifcClassificationReferenceUniClass.ReferencedSource = ifcClassificationSystemUniClass;
 
                 var ifcRelAssociatesClassificationUniClass = model.Instances.New<IfcRelAssociatesClassification>();
@@ -111,7 +112,6 @@ namespace Examples.CatalogueExample
                 rangeTemplates = worksheetTemplates.Range("A1:H27");
                 IXLTable rawDataTemplates = rangeTemplates.AsTable();
                 DataTable dtTemplates = ReadDataTable(worksheetTemplates);
-
 
                 IfcPropertySetTemplate ifcPropertySetTemplate = model.Instances.New<IfcPropertySetTemplate>(pset =>
                 {
@@ -208,7 +208,8 @@ namespace Examples.CatalogueExample
                     foreach (DataRow row in dtData.Rows)
                     {
                         var ifcTypeProduct = model.Instances.New<IfcTypeProduct>();
-                        ifcTypeProduct.GlobalId = "1DbshTzGD71ejurQqQcxbw"; //How to generate a fresh IFC GlobalId with XBim?
+                        ifcTypeProduct.GlobalId = Xbim.Ifc4.UtilityResource.IfcGloballyUniqueId.ConvertToBase64(Guid.NewGuid());
+
                         ifcTypeProduct.Name = row["Name"].ToString();
                         ifcTypeProduct.Description = "Description of " + ifcTypeProduct.Name;
                         ifcTypeProduct.ApplicableOccurrence = "IfcLightFixture";
@@ -229,22 +230,61 @@ namespace Examples.CatalogueExample
                                 string folderName = template["SystemName"].ToString();
                                 string docName = row[template["SystemName"].ToString()].ToString();
 
-                                IfcDocumentInformation ifcDocumentInformation = model.Instances.New<IfcDocumentInformation>(doc =>
-                                {
-                                    doc.Identification = docName;
-                                    doc.Name = docName;
-                                    doc.Location = $@"{folderName}/{docName}";
-                                    doc.Confidentiality = Xbim.Ifc4.Interfaces.IfcDocumentConfidentialityEnum.PUBLIC;
-                                    doc.ElectronicFormat = MimeTypes.GetMimeType(docName);
-                                    doc.IntendedUse = "Product information";
-                                    doc.Purpose = "Product information";
-                                });
+                                string fileLocation = $"{folderName}/{docName}";
 
-                                IfcRelAssociatesDocument ifcRelAssociatesDocument = model.Instances.New<IfcRelAssociatesDocument>(docref =>
+                                IfcDocumentInformation ifcDocumentInformation;
+                                var existingInsertedDocumentInformation = model.Instances.OfType<IfcDocumentInformation>().Where(x => x.Location == fileLocation);
+                                if (existingInsertedDocumentInformation.Count() == 0)
                                 {
-                                    docref.RelatedObjects.Add(ifcTypeProduct);
-                                    docref.RelatingDocument = ifcDocumentInformation;
-                                });
+                                    ifcDocumentInformation = model.Instances.New<IfcDocumentInformation>(doc =>
+                                    {
+                                        doc.Identification = docName;
+                                        doc.Name = docName;
+                                        doc.Location = $@"{folderName}/{docName}";
+                                        doc.CreationTime = DateTime.Now.ToString("dd.MM.yyyy");
+                                        doc.Confidentiality = Xbim.Ifc4.Interfaces.IfcDocumentConfidentialityEnum.PUBLIC;
+                                        doc.ElectronicFormat = MimeTypes.GetMimeType(docName);
+                                        doc.IntendedUse = "Product information";
+                                        doc.Purpose = "Product information";
+                                        doc.ValidFrom = "01.01.2018";
+                                        doc.ValidUntil = "31.12.2021";
+                                        doc.Scope = "Europa";
+                                        doc.Revision = "1.0";
+
+                                    });
+
+                                    string test = Path.GetExtension(docName);
+                                    switch (Path.GetExtension(docName))
+                                    {
+                                        case ".pdf":
+                                            ifcDocumentInformation.Description = "Produktdatenblatt";
+                                            break;
+                                        case ".3ds":
+                                            ifcDocumentInformation.Description = "3D-Visualisierung";
+                                            break;
+                                        case ".jpg":
+                                            ifcDocumentInformation.Description = "Produktphoto";
+                                            break;
+                                        case ".ies":
+                                            ifcDocumentInformation.Description = "Lichtverteilung von IES Standard";
+                                            break;
+                                    }
+
+
+                                    IfcRelAssociatesDocument ifcRelAssociatesDocument = model.Instances.New<IfcRelAssociatesDocument>(docref =>
+                                    {
+                                        docref.RelatedObjects.Add(ifcTypeProduct);
+                                        docref.RelatingDocument = ifcDocumentInformation;
+                                    });
+                                }
+                                else
+                                {
+                                    ifcDocumentInformation = existingInsertedDocumentInformation.FirstOrDefault();
+                                    var existingDocumentInformationRelation = model.Instances.OfType<IfcRelAssociatesDocument>()
+                                                                              .Where(x => x.RelatingDocument == ifcDocumentInformation).FirstOrDefault();
+
+                                    existingDocumentInformationRelation.RelatedObjects.Add(ifcTypeProduct);
+                                }
 
                                 //<IfcRelAssociatesDocument GlobalId="3vBcwkKGf1cxmQZUtNnL0g">
                                 //   < RelatedObjects >
