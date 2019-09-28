@@ -1,4 +1,4 @@
-﻿$BaseFolder = "C:\projects\productdata"
+﻿$BaseFolder = "C:\projects\productdata\SampleFiles"
 $ValidatorExe="$BaseFolder\Tools\SchemaValidator\bin\Release\net48\SchemaValidator.exe"
 $SampleFiles = Get-ChildItem -Path $BaseFolder  -Recurse -Include *.ifc,*.ifcXML
 $ExitCode=0
