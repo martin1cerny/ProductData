@@ -331,7 +331,7 @@
 			</IfcRelDefinesByProperties>
 			<IfcRelDefinesByProperties id="i971309" GlobalId="26JruP9Sj6_QQl9T2nuNCl">
 				<RelatingPropertyDefinition>
-					<IfcPropertySet id="i971310" GlobalId="26JruP9Sj6_QQl9T2nuNCJ" ref="i979643" Name="Pset Thermal Transmittance">
+					<IfcPropertySet id="i971310" GlobalId="26JruP9Sj6_QQl9T2nuNCJ" Name="Pset Thermal Transmittance">
 						<HasProperties>
 							<IfcComplexProperty id="i979911" Name="Thermal Transmittance" UsageName="">
 								<HasProperties>
