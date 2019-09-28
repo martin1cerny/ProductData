@@ -31531,13 +31531,26 @@
       </IfcSimplePropertyTemplate>
       <IfcSimplePropertyTemplate id="i30610" GlobalId="1$KOBaXgb39wEC7f5C6zQD" Name="Durchfluss" Description="" TemplateType="p_singlevalue" PrimaryMeasureType="IfcText">
         <PrimaryUnit>
-          <IfcDerivedUnit id="i3457" UnitType="volumetricflowrateunit">
-            <Elements>
-              <IfcDerivedUnitElement>
-                <Unit xsi:type="IfcSIUnit" id="i993457"/>
-              </IfcDerivedUnitElement>
-            </Elements>
-          </IfcDerivedUnit>
+			<IfcDerivedUnit id="i30610U1" UnitType="volumetricflowrateunit">
+			   <Elements>
+				  <IfcDerivedUnitElement Exponent="3">
+					 <Unit xsi:type="IfcSIUnit" id="i30610U2" UnitType="lengthunit" Name="metre" />
+				  </IfcDerivedUnitElement>
+				  <IfcDerivedUnitElement Exponent="-1">
+					  <Unit xsi:type="IfcConversionBasedUnit" UnitType="timeunit" Name="hour">
+						 <Dimensions TimeExponent="1" />
+						   <ConversionFactor>
+							  <ValueComponent>
+								 <IfcTimeMeasure-wrapper>3600</IfcTimeMeasure-wrapper>
+							  </ValueComponent>
+							  <UnitComponent>
+								 <IfcSIUnit id="i30610U3" UnitType="timeunit" Name="second" />
+							  </UnitComponent>
+						   </ConversionFactor>
+						</Unit>
+				   </IfcDerivedUnitElement>
+				 </Elements>
+			</IfcDerivedUnit>
         </PrimaryUnit>
       </IfcSimplePropertyTemplate>
       <IfcSimplePropertyTemplate id="i30611" GlobalId="3682yNq5LFtvTogEuToHse" Name="elektrische Leistung" Description="" TemplateType="p_singlevalue" PrimaryMeasureType="IfcPowerMeasure">
@@ -31898,13 +31911,26 @@
       </IfcSimplePropertyTemplate>
       <IfcSimplePropertyTemplate id="i30749" GlobalId="1mriiztU5Dr8edIlhWVcfP" Name="Dosierleistung" Description="" TemplateType="p_singlevalue" PrimaryMeasureType="IfcReal">
         <PrimaryUnit>
-          <IfcDerivedUnit id="i3575" UnitType="volumetricflowrateunit">
-            <Elements>
-              <IfcDerivedUnitElement>
-                <Unit xsi:type="IfcSIUnit"  id="i993575"/>
-              </IfcDerivedUnitElement>
-            </Elements>
-          </IfcDerivedUnit>
+			<IfcDerivedUnit id="i30749U1" UnitType="volumetricflowrateunit">
+			   <Elements>
+				  <IfcDerivedUnitElement Exponent="3">
+					 <Unit xsi:type="IfcSIUnit" id="i30749U2" UnitType="lengthunit" Name="metre" />
+				  </IfcDerivedUnitElement>
+				  <IfcDerivedUnitElement Exponent="-1">
+					  <Unit xsi:type="IfcConversionBasedUnit" UnitType="timeunit" Name="hour">
+						 <Dimensions TimeExponent="1" />
+						   <ConversionFactor>
+							  <ValueComponent>
+								 <IfcTimeMeasure-wrapper>3600</IfcTimeMeasure-wrapper>
+							  </ValueComponent>
+							  <UnitComponent>
+								 <IfcSIUnit id="i30749U3" UnitType="timeunit" Name="second" />
+							  </UnitComponent>
+						   </ConversionFactor>
+						</Unit>
+				   </IfcDerivedUnitElement>
+				 </Elements>
+			</IfcDerivedUnit>
         </PrimaryUnit>
       </IfcSimplePropertyTemplate>
       <IfcSimplePropertyTemplate id="i30750" GlobalId="2UmDD_LHz1F9pVcQSIBKoJ" Name="Leistungsaufnahme" Description="" TemplateType="p_singlevalue" PrimaryMeasureType="IfcPowerMeasure">
@@ -31923,13 +31949,26 @@
       </IfcSimplePropertyTemplate>
       <IfcSimplePropertyTemplate id="i30760" GlobalId="2o8b9NSlT9TxjLKLuNb1KI" Name="Volumenstrom" Description="" TemplateType="p_singlevalue" PrimaryMeasureType="IfcReal">
         <PrimaryUnit>
-          <IfcDerivedUnit id="i3583" UnitType="volumetricflowrateunit">
-            <Elements>
-              <IfcDerivedUnitElement>
-                <Unit xsi:type="IfcSIUnit" id="i993583"/>
-              </IfcDerivedUnitElement>
-            </Elements>
-          </IfcDerivedUnit>
+			<IfcDerivedUnit id="i30760U1" UnitType="volumetricflowrateunit">
+			   <Elements>
+				  <IfcDerivedUnitElement Exponent="3">
+					 <Unit xsi:type="IfcSIUnit" id="i30760U2" UnitType="lengthunit" Name="metre" />
+				  </IfcDerivedUnitElement>
+				  <IfcDerivedUnitElement Exponent="-1">
+					  <Unit xsi:type="IfcConversionBasedUnit" UnitType="timeunit" Name="hour">
+						 <Dimensions TimeExponent="1" />
+						   <ConversionFactor>
+							  <ValueComponent>
+								 <IfcTimeMeasure-wrapper>3600</IfcTimeMeasure-wrapper>
+							  </ValueComponent>
+							  <UnitComponent>
+								 <IfcSIUnit id="i30760U3" UnitType="timeunit" Name="second" />
+							  </UnitComponent>
+						   </ConversionFactor>
+						</Unit>
+				   </IfcDerivedUnitElement>
+				 </Elements>
+			</IfcDerivedUnit>
         </PrimaryUnit>
       </IfcSimplePropertyTemplate>
     </HasPropertyTemplates>
@@ -32003,13 +32042,26 @@
     <HasPropertyTemplates>
       <IfcSimplePropertyTemplate id="i30856" GlobalId="0RGFqN9mn8IvOwBhrCH_Su" Name="Volumenstrom Förderpumpe" Description="" TemplateType="p_singlevalue" PrimaryMeasureType="IfcReal">
         <PrimaryUnit>
-          <IfcDerivedUnit id="i3603" UnitType="volumetricflowrateunit">
-            <Elements>
-              <IfcDerivedUnitElement>
-                <Unit xsi:type="IfcSIUnit" id="i993603" />
-              </IfcDerivedUnitElement>
-            </Elements>
-          </IfcDerivedUnit>
+			<IfcDerivedUnit id="i30856U1" UnitType="volumetricflowrateunit">
+			   <Elements>
+				  <IfcDerivedUnitElement Exponent="3">
+					 <Unit xsi:type="IfcSIUnit" id="i30856U2" UnitType="lengthunit" Name="metre" />
+				  </IfcDerivedUnitElement>
+				  <IfcDerivedUnitElement Exponent="-1">
+					  <Unit xsi:type="IfcConversionBasedUnit" UnitType="timeunit" Name="hour">
+						 <Dimensions TimeExponent="1" />
+						   <ConversionFactor>
+							  <ValueComponent>
+								 <IfcTimeMeasure-wrapper>3600</IfcTimeMeasure-wrapper>
+							  </ValueComponent>
+							  <UnitComponent>
+								 <IfcSIUnit id="i30856U3" UnitType="timeunit" Name="second" />
+							  </UnitComponent>
+						   </ConversionFactor>
+						</Unit>
+				   </IfcDerivedUnitElement>
+				 </Elements>
+			</IfcDerivedUnit>
         </PrimaryUnit>
       </IfcSimplePropertyTemplate>
     </HasPropertyTemplates>
@@ -32747,13 +32799,26 @@
       <IfcSimplePropertyTemplate id="i31295" GlobalId="0GQJFKdXbCn9aMH5pzGS76" Name="Geräteausführung" Description="" TemplateType="p_singlevalue" PrimaryMeasureType="IfcText" />
       <IfcSimplePropertyTemplate id="i31296" GlobalId="1dB7zFcUb7JuduREQg9Zli" Name="Optimaler Volumenstrom" Description="" TemplateType="p_singlevalue" PrimaryMeasureType="IfcReal">
         <PrimaryUnit>
-          <IfcDerivedUnit id="i3838" UnitType="volumetricflowrateunit">
-            <Elements>
-              <IfcDerivedUnitElement>
-                <Unit xsi:type="IfcSIUnit" id="i993838"/>
-              </IfcDerivedUnitElement>
-            </Elements>
-          </IfcDerivedUnit>
+			<IfcDerivedUnit id="i31296U1" UnitType="volumetricflowrateunit">
+			   <Elements>
+				  <IfcDerivedUnitElement Exponent="3">
+					 <Unit xsi:type="IfcSIUnit" id="i31296U2" UnitType="lengthunit" Name="metre" />
+				  </IfcDerivedUnitElement>
+				  <IfcDerivedUnitElement Exponent="-1">
+					  <Unit xsi:type="IfcConversionBasedUnit" UnitType="timeunit" Name="hour">
+						 <Dimensions TimeExponent="1" />
+						   <ConversionFactor>
+							  <ValueComponent>
+								 <IfcTimeMeasure-wrapper>3600</IfcTimeMeasure-wrapper>
+							  </ValueComponent>
+							  <UnitComponent>
+								 <IfcSIUnit id="i31296U3" UnitType="timeunit" Name="second" />
+							  </UnitComponent>
+						   </ConversionFactor>
+						</Unit>
+				   </IfcDerivedUnitElement>
+				 </Elements>
+			</IfcDerivedUnit>
         </PrimaryUnit>
       </IfcSimplePropertyTemplate>
       <IfcSimplePropertyTemplate id="i31297" GlobalId="2_$oY0qUCHuO00025QrE$V" Name="Auslasstyp" Description="ÜBERSETZUNG FEHLT!" TemplateType="p_singlevalue" PrimaryMeasureType="IfcText" />
@@ -33412,24 +33477,50 @@
       <IfcSimplePropertyTemplate id="i31494" GlobalId="11mGMeMjX0LB4$Iti3Yn$B" Name="UV-Behandlung" Description="" TemplateType="p_singlevalue" PrimaryMeasureType="IfcBoolean" />
       <IfcSimplePropertyTemplate id="i31495" GlobalId="1MARF0i9DBhPwKfJwEVGdQ" Name="Volumenstrom Abluft" Description="" TemplateType="p_singlevalue" PrimaryMeasureType="IfcReal">
         <PrimaryUnit>
-          <IfcDerivedUnit id="i4055" UnitType="volumetricflowrateunit">
-            <Elements>
-              <IfcDerivedUnitElement>
-                <Unit xsi:type="IfcSIUnit" id="i994055"/>
-              </IfcDerivedUnitElement>
-            </Elements>
-          </IfcDerivedUnit>
+			<IfcDerivedUnit id="i31495U1" UnitType="volumetricflowrateunit">
+			   <Elements>
+				  <IfcDerivedUnitElement Exponent="3">
+					 <Unit xsi:type="IfcSIUnit" id="i31495U2" UnitType="lengthunit" Name="metre" />
+				  </IfcDerivedUnitElement>
+				  <IfcDerivedUnitElement Exponent="-1">
+					  <Unit xsi:type="IfcConversionBasedUnit" UnitType="timeunit" Name="hour">
+						 <Dimensions TimeExponent="1" />
+						   <ConversionFactor>
+							  <ValueComponent>
+								 <IfcTimeMeasure-wrapper>3600</IfcTimeMeasure-wrapper>
+							  </ValueComponent>
+							  <UnitComponent>
+								 <IfcSIUnit id="i31495U3" UnitType="timeunit" Name="second" />
+							  </UnitComponent>
+						   </ConversionFactor>
+						</Unit>
+				   </IfcDerivedUnitElement>
+				 </Elements>
+			</IfcDerivedUnit>
         </PrimaryUnit>
       </IfcSimplePropertyTemplate>
       <IfcSimplePropertyTemplate id="i31496" GlobalId="2EaK9s0p91XwsXk4p0hEiC" Name="Volumenstrom Zuluft" Description="" TemplateType="p_singlevalue" PrimaryMeasureType="IfcReal">
         <PrimaryUnit>
-          <IfcDerivedUnit id="i4057" UnitType="volumetricflowrateunit">
-            <Elements>
-              <IfcDerivedUnitElement>
-                <Unit xsi:type="IfcSIUnit" id="i994057"/>
-              </IfcDerivedUnitElement>
-            </Elements>
-          </IfcDerivedUnit>
+			<IfcDerivedUnit id="i31496U1" UnitType="volumetricflowrateunit">
+			   <Elements>
+				  <IfcDerivedUnitElement Exponent="3">
+					 <Unit xsi:type="IfcSIUnit" id="i31496U2" UnitType="lengthunit" Name="metre" />
+				  </IfcDerivedUnitElement>
+				  <IfcDerivedUnitElement Exponent="-1">
+					  <Unit xsi:type="IfcConversionBasedUnit" UnitType="timeunit" Name="hour">
+						 <Dimensions TimeExponent="1" />
+						   <ConversionFactor>
+							  <ValueComponent>
+								 <IfcTimeMeasure-wrapper>3600</IfcTimeMeasure-wrapper>
+							  </ValueComponent>
+							  <UnitComponent>
+								 <IfcSIUnit id="i31496U3" UnitType="timeunit" Name="second" />
+							  </UnitComponent>
+						   </ConversionFactor>
+						</Unit>
+				   </IfcDerivedUnitElement>
+				 </Elements>
+			</IfcDerivedUnit>
         </PrimaryUnit>
       </IfcSimplePropertyTemplate>
     </HasPropertyTemplates>
@@ -33461,13 +33552,26 @@
       </IfcSimplePropertyTemplate>
       <IfcSimplePropertyTemplate id="i31502" GlobalId="02Z$hTW955Ig72K7HQIXm7" Name="Volumenstrom maximal" Description="" TemplateType="p_singlevalue" PrimaryMeasureType="IfcReal">
         <PrimaryUnit>
-          <IfcDerivedUnit id="i4066" UnitType="volumetricflowrateunit">
-            <Elements>
-              <IfcDerivedUnitElement>
-                <Unit xsi:type="IfcSIUnit" id="i994066" />
-              </IfcDerivedUnitElement>
-            </Elements>
-          </IfcDerivedUnit>
+			<IfcDerivedUnit id="i31502U1" UnitType="volumetricflowrateunit">
+			   <Elements>
+				  <IfcDerivedUnitElement Exponent="3">
+					 <Unit xsi:type="IfcSIUnit" id="i31502U2" UnitType="lengthunit" Name="metre" />
+				  </IfcDerivedUnitElement>
+				  <IfcDerivedUnitElement Exponent="-1">
+					  <Unit xsi:type="IfcConversionBasedUnit" UnitType="timeunit" Name="hour">
+						 <Dimensions TimeExponent="1" />
+						   <ConversionFactor>
+							  <ValueComponent>
+								 <IfcTimeMeasure-wrapper>3600</IfcTimeMeasure-wrapper>
+							  </ValueComponent>
+							  <UnitComponent>
+								 <IfcSIUnit id="i31502U3" UnitType="timeunit" Name="second" />
+							  </UnitComponent>
+						   </ConversionFactor>
+						</Unit>
+				   </IfcDerivedUnitElement>
+				 </Elements>
+			</IfcDerivedUnit>
         </PrimaryUnit>
       </IfcSimplePropertyTemplate>
     </HasPropertyTemplates>
@@ -33985,13 +34089,26 @@
       <IfcSimplePropertyTemplate id="i31663" GlobalId="0wMtQCB$f138HgTmrYabcA" Name="Anzahl der Zellen" Description="" TemplateType="p_singlevalue" PrimaryMeasureType="IfcReal" />
       <IfcSimplePropertyTemplate id="i31664" GlobalId="2rDULRIiX1GwDeH_nL7UfM" Name="Nennkapazität" Description="" TemplateType="p_singlevalue" PrimaryMeasureType="IfcReal">
         <PrimaryUnit>
-          <IfcDerivedUnit id="i4248" UnitType="heatfluxdensityunit">
-            <Elements>
-              <IfcDerivedUnitElement>
-                <Unit xsi:type="IfcSIUnit" id="i994248" />
-              </IfcDerivedUnitElement>
-            </Elements>
-          </IfcDerivedUnit>
+			<IfcDerivedUnit id="i31664U1" UnitType="volumetricflowrateunit">
+			   <Elements>
+				  <IfcDerivedUnitElement Exponent="3">
+					 <Unit xsi:type="IfcSIUnit" id="i31664U2" UnitType="lengthunit" Name="metre" />
+				  </IfcDerivedUnitElement>
+				  <IfcDerivedUnitElement Exponent="-1">
+					  <Unit xsi:type="IfcConversionBasedUnit" UnitType="timeunit" Name="hour">
+						 <Dimensions TimeExponent="1" />
+						   <ConversionFactor>
+							  <ValueComponent>
+								 <IfcTimeMeasure-wrapper>3600</IfcTimeMeasure-wrapper>
+							  </ValueComponent>
+							  <UnitComponent>
+								 <IfcSIUnit id="i31664U3" UnitType="timeunit" Name="second" />
+							  </UnitComponent>
+						   </ConversionFactor>
+						</Unit>
+				   </IfcDerivedUnitElement>
+				 </Elements>
+			</IfcDerivedUnit>
         </PrimaryUnit>
       </IfcSimplePropertyTemplate>
       <IfcSimplePropertyTemplate id="i31665" GlobalId="1RTm5lflH6AuglBYjLeton" Name="Schutzart" Description="" TemplateType="p_singlevalue" PrimaryMeasureType="IfcText" />
@@ -34359,35 +34476,44 @@
       <IfcSimplePropertyTemplate id="i31760" GlobalId="2WfVAEULDD$8$7RtUpb_7d" Name="Biegbar" Description="Die Leuchte ist Biegbar" TemplateType="p_singlevalue" PrimaryMeasureType="IfcBoolean" />
       <IfcSimplePropertyTemplate id="i31761" GlobalId="1qwUowwhXF3BBrR0mCnDEo" Name="Überfahrbar" Description="Die Leuchte ist überfahrbar" TemplateType="p_singlevalue" PrimaryMeasureType="IfcReal">
         <PrimaryUnit>
-          <IfcDerivedUnit id="i4381" UnitType="areadensityunit">
-            <Elements>
-              <IfcDerivedUnitElement>
-                <Unit xsi:type="IfcSIUnit"  id="i994381" />
-              </IfcDerivedUnitElement>
-            </Elements>
-          </IfcDerivedUnit>
+			<IfcDerivedUnit id="i31761U1" UnitType="areadensityunit">
+			   <Elements>
+				   <IfcDerivedUnitElement Exponent="1">
+					  <Unit xsi:type="IfcSIUnit" id="i31761U2" UnitType="powerunit" Name="watt" />
+				   </IfcDerivedUnitElement>
+				   <IfcDerivedUnitElement Exponent="-2">
+					  <Unit xsi:type="IfcSIUnit" id="i31761U3" UnitType="lengthunit" Name="metre" />
+				   </IfcDerivedUnitElement>
+			   </Elements>
+			</IfcDerivedUnit>
         </PrimaryUnit>
       </IfcSimplePropertyTemplate>
       <IfcSimplePropertyTemplate id="i31762" GlobalId="07UngCp4n66etp2F1XJZfo" Name="Übergehbar" Description="Die Leuchte ist übergehbar" TemplateType="p_singlevalue" PrimaryMeasureType="IfcReal">
         <PrimaryUnit>
-          <IfcDerivedUnit id="i4383" UnitType="areadensityunit">
-            <Elements>
-              <IfcDerivedUnitElement>
-                <Unit xsi:type="IfcSIUnit" id="i994383"  />
-              </IfcDerivedUnitElement>
-            </Elements>
-          </IfcDerivedUnit>
+			<IfcDerivedUnit id="i31762U1" UnitType="areadensityunit">
+			   <Elements>
+				   <IfcDerivedUnitElement Exponent="1">
+					  <Unit xsi:type="IfcSIUnit" id="i31762U2" UnitType="powerunit" Name="watt" />
+				   </IfcDerivedUnitElement>
+				   <IfcDerivedUnitElement Exponent="-2">
+					  <Unit xsi:type="IfcSIUnit" id="i31762U3" UnitType="lengthunit" Name="metre" />
+				   </IfcDerivedUnitElement>
+			   </Elements>
+			</IfcDerivedUnit>
         </PrimaryUnit>
       </IfcSimplePropertyTemplate>
       <IfcSimplePropertyTemplate id="i31763" GlobalId="0DeS1OvffDdw2e1dRvGOES" Name="Überrollbar" Description="Die Leuchte ist überrollbar" TemplateType="p_singlevalue" PrimaryMeasureType="IfcReal">
         <PrimaryUnit>
-          <IfcDerivedUnit id="i4385" UnitType="areadensityunit">
-            <Elements>
-              <IfcDerivedUnitElement>
-                <Unit xsi:type="IfcSIUnit" id="i994385"/>
-              </IfcDerivedUnitElement>
-            </Elements>
-          </IfcDerivedUnit>
+			<IfcDerivedUnit id="i31763U1" UnitType="areadensityunit">
+			   <Elements>
+				   <IfcDerivedUnitElement Exponent="1">
+					  <Unit xsi:type="IfcSIUnit" id="i31763U2" UnitType="powerunit" Name="watt" />
+				   </IfcDerivedUnitElement>
+				   <IfcDerivedUnitElement Exponent="-2">
+					  <Unit xsi:type="IfcSIUnit" id="i31763U3" UnitType="lengthunit" Name="metre" />
+				   </IfcDerivedUnitElement>
+			   </Elements>
+			</IfcDerivedUnit>
         </PrimaryUnit>
       </IfcSimplePropertyTemplate>
       <IfcSimplePropertyTemplate id="i31764" GlobalId="2mV3GfX4LF1wAQ3FBJmjJe" Name="Dichtungsmaterial" Description="z.B. PU, Silikon" TemplateType="p_singlevalue" PrimaryMeasureType="IfcText" />
