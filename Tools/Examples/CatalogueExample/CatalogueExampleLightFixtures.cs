@@ -3,14 +3,12 @@ using System.IO;
 using Xbim.Ifc4.Kernel;
 using Xbim.Ifc4.MeasureResource;
 using Xbim.Ifc4.PropertyResource;
-using Xbim.Ifc4.SharedBldgElements;
-using Xbim.Ifc4.SharedComponentElements;
 using ClosedXML.Excel;
 using System;
-using System.Collections.Generic;
 using Xbim.Ifc4.ExternalReferenceResource;
 using System.IO.Compression;
 using System.Linq;
+using System.Collections.Generic;
 
 namespace Examples.CatalogueExample
 {
@@ -50,6 +48,8 @@ namespace Examples.CatalogueExample
                     }));
                 });
 
+
+                //Insert Classification system
                 var ifcClassificationSystemOmniClass = model.Instances.New<IfcClassification>();
                 ifcClassificationSystemOmniClass.Name = "Omniclass";
                 ifcClassificationSystemOmniClass.Edition = "1.0";
@@ -57,6 +57,8 @@ namespace Examples.CatalogueExample
                 ifcClassificationSystemOmniClass.Description = "The OmniClass Construction Classification System (known as OmniClass™ or OCCS) is a classification system for the construction industry. OmniClass is useful for many applications, from organizing library materials, product literature, and project information, to providing a classification structure for electronic databases. It incorporates other extant systems currently in use as the basis of many of its Tables – MasterFormat™ for work results, UniFormat for elements, and EPIC (Electronic Product Information Cooperation) for structuring products.";
                 ifcClassificationSystemOmniClass.Location = "http://www.omniclass.org/";
 
+                //Insertion of some sample classification references
+                //I would be better to insert the whole classification system and reference the appropriate code
                 var ifcClassificationReferenceOmniClass = model.Instances.New<IfcClassificationReference>();
                 ifcClassificationReferenceOmniClass.Identification = "23-35-47";
                 ifcClassificationReferenceOmniClass.Name = "Electrical Lighting";
@@ -66,6 +68,8 @@ namespace Examples.CatalogueExample
                 var ifcRelAssociatesClassificationOmniClass = model.Instances.New<IfcRelAssociatesClassification>();
                 ifcRelAssociatesClassificationOmniClass.RelatingClassification = ifcClassificationReferenceOmniClass;
 
+
+                //Insert Classification system
                 var ifcClassificationSystemUniClass = model.Instances.New<IfcClassification>();
                 ifcClassificationSystemUniClass.Name = "Uniclass";
                 ifcClassificationSystemUniClass.Edition = "2015";
@@ -73,6 +77,8 @@ namespace Examples.CatalogueExample
                 ifcClassificationSystemUniClass.Description = "Uniclass is a voluntary classification system for the construction industry that can be used for structuring project information, such as building information models (BIM).";
                 ifcClassificationSystemUniClass.Location = "https://www.thenbs.com/our-tools/introducing-uniclass-2015";
 
+                //Insertion of some sample classification references
+                //I would be better to insert the whole classification system and reference the appropriate code
                 var ifcClassificationReferenceUniClass = model.Instances.New<IfcClassificationReference>();
                 ifcClassificationReferenceUniClass.Identification = "CA-70-10-30";
                 ifcClassificationReferenceUniClass.Name = "Site lighting equipment";
@@ -81,6 +87,7 @@ namespace Examples.CatalogueExample
 
                 var ifcRelAssociatesClassificationUniClass = model.Instances.New<IfcRelAssociatesClassification>();
                 ifcRelAssociatesClassificationUniClass.RelatingClassification = ifcClassificationReferenceUniClass;
+
 
                 //Insert a project library to store the product data templates and type products
                 IfcProjectLibrary ifcProductDataLibrary = New<IfcProjectLibrary>(l => {
@@ -104,131 +111,155 @@ namespace Examples.CatalogueExample
                 //Instead of creating the IfcPropertySetTemplates manually, 
                 //they should be loaded from the publishing dictionary
 
+
                 //Read templates from excel sheet
-                var workbook = new XLWorkbook(Path.Combine(sourceFolder, sourceFile));
-                IXLWorksheet worksheetTemplates;
-                IXLRange rangeTemplates;
-                worksheetTemplates = workbook.Worksheet("Templates");
-                rangeTemplates = worksheetTemplates.Range("A1:H27");
-                IXLTable rawDataTemplates = rangeTemplates.AsTable();
+                var workbookTemplates = new XLWorkbook(Path.Combine(sourceFolder, sourceFile));
+                IXLWorksheet worksheetTemplates = workbookTemplates.Worksheet("Templates");
+                //IXLRange rangeTemplates = worksheetTemplates.Range("A1:Z690");
+                //IXLTable rawDataTemplates = rangeTemplates.AsTable();
                 DataTable dtTemplates = ReadDataTable(worksheetTemplates);
 
-                IfcPropertySetTemplate ifcPropertySetTemplate = model.Instances.New<IfcPropertySetTemplate>(pset =>
+                var productDataTemplates = from DataRow dr in dtTemplates.Rows orderby dr["DataTemplate"] group dr by dr["DataTemplate"];
+                foreach (var productDataTemplate in productDataTemplates)
                 {
-                    pset.GlobalId = "1DbshTzGD71ejurQqQcxbw";
-                    pset.Name = "IfcPropertySetTemplate";
-                    pset.Description = "Group of properties for " + ifcProductDataLibrary.Name;
-                    pset.ApplicableEntity = "IfcLightFixture/USERDEFINED";
-                    pset.TemplateType = Xbim.Ifc4.Interfaces.IfcPropertySetTemplateTypeEnum.PSET_TYPEDRIVENONLY;
-                });
-                Comment(ifcPropertySetTemplate, @"Declaration of 'IfcPropertySetTemplate' within the library for lighting product data templates.");
-                Comment(ifcPropertySetTemplate, @"Insert property templates; they should be loaded from the publishing dictionary");
-
-                foreach (DataRow row in dtTemplates.Rows)
-                {
-                    //Publisher SystemName  GlobalId PrimaryMeasureType  DataColumn
-
-                    ifcPropertySetTemplate.HasPropertyTemplates.AddRange(new[]
+                    IfcPropertySetTemplate ifcPropertySetTemplate = model.Instances.New<IfcPropertySetTemplate>(pset =>
                     {
-                        model.Instances.New<IfcSimplePropertyTemplate>(pt =>
-                        {
-                            pt.Name = row["SystemName"].ToString();
-                            pt.Description = "";
-                            pt.GlobalId = row["GlobalId"].ToString();
-                            pt.TemplateType = Xbim.Ifc4.Interfaces.IfcSimplePropertyTemplateTypeEnum.P_SINGLEVALUE;
-                            pt.AccessState = Xbim.Ifc4.Interfaces.IfcStateEnum.LOCKED;
-                            pt.PrimaryMeasureType = row["PrimaryMeasureType"].ToString();
-
-                            string primaryMeasureType = row["PrimaryMeasureType"].ToString();
-
-                            if (primaryMeasureType == typeof(IfcLengthMeasure).Name)
-                                    pt.PrimaryUnit = model.Instances.New<IfcSIUnit>(u=>
-                                    {
-                                        u.UnitType = Xbim.Ifc4.Interfaces.IfcUnitEnum.LENGTHUNIT;
-                                        u.Name = Xbim.Ifc4.Interfaces.IfcSIUnitName.METRE;
-                                        u.Prefix = Xbim.Ifc4.Interfaces.IfcSIPrefix.MILLI;
-                                    });
-                            else if (primaryMeasureType == typeof(IfcMassMeasure).Name)
-                                    pt.PrimaryUnit = model.Instances.New<IfcSIUnit>(u=>
-                                    {
-                                        u.UnitType = Xbim.Ifc4.Interfaces.IfcUnitEnum.MASSUNIT;
-                                        u.Name = Xbim.Ifc4.Interfaces.IfcSIUnitName.GRAM;
-                                    });
-                            else if (primaryMeasureType == typeof(IfcPlaneAngleMeasure).Name)
-                                    pt.PrimaryUnit = model.Instances.New<IfcConversionBasedUnit>(punit=>
-                                    {
-                                        //Convert the angel measure from the unit grad to the SI Unit radian
-                                        //rad=grad*(PI/180)
-                                        punit.Name = "Grad";
-                                        punit.UnitType = Xbim.Ifc4.Interfaces.IfcUnitEnum.PLANEANGLEUNIT;
-                                        punit.ConversionFactor = model.Instances.New<IfcMeasureWithUnit>(mwu=>
-                                        {
-                                            mwu.UnitComponent = model.Instances.New<IfcSIUnit>(siUnit=>
-                                            {
-                                               siUnit.UnitType = Xbim.Ifc4.Interfaces.IfcUnitEnum.PLANEANGLEUNIT;
-                                               siUnit.Name = Xbim.Ifc4.Interfaces.IfcSIUnitName.RADIAN;
-                                            });
-                                            mwu.ValueComponent = new IfcReal(Math.PI / 180);
-                                        });
-                                        punit.Dimensions = model.Instances.New<IfcDimensionalExponents>(dim=>
-                                        {
-                                            dim.LengthExponent = 0;
-                                            dim.MassExponent = 0;
-                                            dim.TimeExponent = 0;
-                                            dim.ElectricCurrentExponent = 0;
-                                            dim.ThermodynamicTemperatureExponent = 0;
-                                            dim.AmountOfSubstanceExponent = 0;
-                                            dim.LuminousIntensityExponent = 0;
-                                        });
-                                    });
-                        })
+                        pset.GlobalId = Xbim.Ifc4.UtilityResource.IfcGloballyUniqueId.ConvertToBase64(Guid.NewGuid());
+                        pset.Name = productDataTemplate.Key.ToString();
+                        pset.Description = "Data Template by " + productDataTemplate.ElementAt(0)["Publisher"].ToString();
+                        pset.ApplicableEntity = "IfcLightFixture/USERDEFINED";
+                        pset.TemplateType = Xbim.Ifc4.Interfaces.IfcPropertySetTemplateTypeEnum.PSET_TYPEDRIVENONLY;
                     });
-                };
-           
+                    Comment(ifcPropertySetTemplate, @"Declaration of 'IfcPropertySetTemplate' within the library for lighting product data templates.");
+                    Comment(ifcPropertySetTemplate, @"Insert property templates; they should be loaded from the publishing dictionary");
 
-                ifcProductDataLibraryDeclarations.Add(ifcPropertySetTemplate);
+                    foreach (DataRow propertyTemplate in productDataTemplate)
+                    {
+                        //Publisher SystemName  GlobalId PrimaryMeasureType  DataColumn
+                        ifcPropertySetTemplate.HasPropertyTemplates.AddRange(new[]
+                        {
+                            model.Instances.New<IfcSimplePropertyTemplate>(pt =>
+                            {
+                                pt.Name = propertyTemplate["SystemName"].ToString();
+                                pt.Description = "";
+                                pt.GlobalId = propertyTemplate["GlobalId"].ToString();
+                                pt.TemplateType = Xbim.Ifc4.Interfaces.IfcSimplePropertyTemplateTypeEnum.P_SINGLEVALUE;
+                                pt.AccessState = Xbim.Ifc4.Interfaces.IfcStateEnum.LOCKED;
+                                pt.PrimaryMeasureType = propertyTemplate["PrimaryMeasureType"].ToString();
+
+                                string primaryMeasureType = propertyTemplate["PrimaryMeasureType"].ToString();
+
+                                if ((primaryMeasureType == "IfcDocumentInformation") ||(primaryMeasureType == "IfcClassificationReference"))
+                                        {
+                                            pt.PrimaryMeasureType = "IfcLabel";
+                                        }
+                                else if (primaryMeasureType == typeof(IfcLengthMeasure).Name)
+                                        pt.PrimaryUnit = model.Instances.New<IfcSIUnit>(u=>
+                                        {
+                                            u.UnitType = Xbim.Ifc4.Interfaces.IfcUnitEnum.LENGTHUNIT;
+                                            u.Name = Xbim.Ifc4.Interfaces.IfcSIUnitName.METRE;
+                                            u.Prefix = Xbim.Ifc4.Interfaces.IfcSIPrefix.MILLI;
+                                        });
+                                else if (primaryMeasureType == typeof(IfcMassMeasure).Name)
+                                        pt.PrimaryUnit = model.Instances.New<IfcSIUnit>(u=>
+                                        {
+                                            u.UnitType = Xbim.Ifc4.Interfaces.IfcUnitEnum.MASSUNIT;
+                                            u.Name = Xbim.Ifc4.Interfaces.IfcSIUnitName.GRAM;
+                                        });
+                                else if (primaryMeasureType == typeof(IfcPlaneAngleMeasure).Name)
+                                        pt.PrimaryUnit = model.Instances.New<IfcConversionBasedUnit>(punit=>
+                                        {
+                                            //Convert the angel measure from the unit grad to the SI Unit radian
+                                            //rad=grad*(PI/180)
+                                            punit.Name = "Grad";
+                                            punit.UnitType = Xbim.Ifc4.Interfaces.IfcUnitEnum.PLANEANGLEUNIT;
+                                            punit.ConversionFactor = model.Instances.New<IfcMeasureWithUnit>(mwu=>
+                                            {
+                                                mwu.UnitComponent = model.Instances.New<IfcSIUnit>(siUnit=>
+                                                {
+                                                   siUnit.UnitType = Xbim.Ifc4.Interfaces.IfcUnitEnum.PLANEANGLEUNIT;
+                                                   siUnit.Name = Xbim.Ifc4.Interfaces.IfcSIUnitName.RADIAN;
+                                                });
+                                                mwu.ValueComponent = new IfcReal(Math.PI / 180);
+                                            });
+                                            punit.Dimensions = model.Instances.New<IfcDimensionalExponents>(dim=>
+                                            {
+                                                dim.LengthExponent = 0;
+                                                dim.MassExponent = 0;
+                                                dim.TimeExponent = 0;
+                                                dim.ElectricCurrentExponent = 0;
+                                                dim.ThermodynamicTemperatureExponent = 0;
+                                                dim.AmountOfSubstanceExponent = 0;
+                                                dim.LuminousIntensityExponent = 0;
+                                            });
+                                        });
+                            })
+                        });
+                    };
+
+                    ifcProductDataLibraryDeclarations.Add(ifcPropertySetTemplate);
+                }
   
                 //Read source data from excel sheet
                 var workbookData = new XLWorkbook(Path.Combine(sourceFolder, sourceFile));
-                IXLWorksheet worksheetData;
-                IXLRange rangeData;
-                worksheetData = workbookData.Worksheet("Sheets");
-                rangeData = worksheetData.Range("A1:Z690");
-                IXLTable rawData = rangeData.AsTable();
+                IXLWorksheet worksheetData = workbookData.Worksheet("Sheets");
+                //IXLRange rangeData = worksheetData.Range("A1:Z690");
+                //IXLTable rawData = rangeData.AsTable();
                 DataTable dtData = ReadDataTable(worksheetData);
 
-                var ifcRelDefinesByTemplate = New<IfcRelDefinesByTemplate>(dbt =>
+                //Loop through the products in the data sheet
+                foreach (DataRow product in dtData.Rows)
                 {
-                    dbt.RelatingTemplate = ifcPropertySetTemplate;
-                });
+                    var ifcTypeProduct = model.Instances.New<IfcTypeProduct>();
+                    ifcTypeProduct.GlobalId = Xbim.Ifc4.UtilityResource.IfcGloballyUniqueId.ConvertToBase64(Guid.NewGuid());
 
-                int n = 0;
-                do
-                {
-                    foreach (DataRow row in dtData.Rows)
-                    {
-                        var ifcTypeProduct = model.Instances.New<IfcTypeProduct>();
-                        ifcTypeProduct.GlobalId = Xbim.Ifc4.UtilityResource.IfcGloballyUniqueId.ConvertToBase64(Guid.NewGuid());
+                    ifcTypeProduct.Name = product["Name"].ToString();
+                    ifcTypeProduct.Description = "Description of " + ifcTypeProduct.Name;
+                    ifcTypeProduct.ApplicableOccurrence = "IfcLightFixture";
 
-                        ifcTypeProduct.Name = row["Name"].ToString();
-                        ifcTypeProduct.Description = "Description of " + ifcTypeProduct.Name;
-                        ifcTypeProduct.ApplicableOccurrence = "IfcLightFixture";
-
-                        ifcRelAssociatesClassificationOmniClass.RelatedObjects.Add(ifcTypeProduct);
-                        ifcRelAssociatesClassificationUniClass.RelatedObjects.Add(ifcTypeProduct);
-
+                    //Create the property sets, and relate them to the templates
+                    foreach (IfcPropertySetTemplate ifcPropertySetTemplate in model.Instances.OfType<IfcPropertySetTemplate>().ToList())
+                    { 
                         IfcPropertySet ifcPropertySet = model.Instances.New<IfcPropertySet>(pset =>
                         {
-                            pset.Name = "Properties of " + ifcTypeProduct.Name;
+                            pset.Name = ifcPropertySetTemplate.Name;
+                            pset.Description = ifcPropertySetTemplate.Description;
                         });
 
-                        foreach (DataRow template in dtTemplates.Rows)
+                        //Relate the property set to the definition propert
+                        var ifcRelDefinesByTemplate = New<IfcRelDefinesByTemplate>(dbt =>
                         {
-                            if (template["PropertyWithDocumentLink"].ToString() == "Yes")
-                            {
+                            dbt.RelatingTemplate = ifcPropertySetTemplate;
+                        });
+                        ifcRelDefinesByTemplate.RelatedPropertySets.Add(ifcPropertySet);
+                        ifcTypeProduct.HasPropertySets.Add(ifcPropertySet);
+                    }
+
+                    //loop through the properties of the product, based on the data template
+                    foreach (DataRow property in dtTemplates.Rows)
+                    {
+                        //Identify the correct IfcPropertySet for this property
+
+                        IfcPropertySet ifcPropertySet = (IfcPropertySet)ifcTypeProduct.HasPropertySets
+                                                                       .Where(x => x.Name == property["DataTemplate"].ToString())
+                                                                       .FirstOrDefault();
+
+
+                        //var ifcPropertySet = model.Instances.OfType<IfcPropertySet>()
+                        //                                    .Where(x => x.Name == property["DataTemplate"].ToString())
+                        //                                    .FirstOrDefault();
+
+                        //var ifcPropertySets = model.Instances.OfType<IfcPropertySet>()
+                        //            .Where(x => x.Name == property["DataTemplate"].ToString());
+
+
+                        //Insert Documents and Document references if the property templates
+                        switch (property["PrimaryMeasureType"].ToString())
+                        {
+                            case "IfcDocumentInformation":
                                 //Insert the product information into documents
-                                string folderName = template["SystemName"].ToString();
-                                string docName = row[template["SystemName"].ToString()].ToString();
+                                string folderName = property["SystemName"].ToString();
+                                string docName = product[property["SystemName"].ToString()].ToString();
 
                                 string fileLocation = $"{folderName}/{docName}";
 
@@ -281,61 +312,68 @@ namespace Examples.CatalogueExample
                                 {
                                     ifcDocumentInformation = existingInsertedDocumentInformation.FirstOrDefault();
                                     var existingDocumentInformationRelation = model.Instances.OfType<IfcRelAssociatesDocument>()
-                                                                              .Where(x => x.RelatingDocument == ifcDocumentInformation).FirstOrDefault();
+                                                                                .Where(x => x.RelatingDocument == ifcDocumentInformation).FirstOrDefault();
 
                                     existingDocumentInformationRelation.RelatedObjects.Add(ifcTypeProduct);
                                 }
+                                
+                                break;
 
-                                //<IfcRelAssociatesDocument GlobalId="3vBcwkKGf1cxmQZUtNnL0g">
-                                //   < RelatedObjects >
-                                //      < IfcTransportElement xsi: nil = "true" ref= "i143" />
-                                //   </ RelatedObjects >
-                                //   < RelatingDocument >
-                                //      < IfcDocumentInformation xsi: nil = "true" ref= "i150" />
-                                //   </ RelatingDocument >
-                                //</ IfcRelAssociatesDocument >
-                            }
-                            else
-                                //Insert the product information into Properties
+                            case "IfcClassificationReference":
+
+                                switch (property["SystemName"].ToString())
+                                {
+                                    case "Omniclass":
+                                        var classificationReference = model.Instances.OfType<IfcClassificationReference>()
+                                                                                .Where(x => x.Identification == product[property["SystemName"].ToString()].ToString()).FirstOrDefault();
+
+                                        ifcRelAssociatesClassificationOmniClass.RelatedObjects.Add(ifcTypeProduct);
+                                        break;
+                                    case "Uniclass":
+
+                                        ifcRelAssociatesClassificationUniClass.RelatedObjects.Add(ifcTypeProduct);
+                                        break;
+                                }                                                                
+                                    
+                                break;
+
+                            default:
+                                //Insert the product information into the property set
                                 ifcPropertySet.HasProperties.AddRange(new[]
                                 {
                                     model.Instances.New<IfcPropertySingleValue>(p =>
                                     {
-                                        string propertyName = template["SystemName"].ToString();
-                                        var dataValue = row[propertyName];
+                                        string propertyName = property["SystemName"].ToString();
+                                        var dataValue = product[propertyName];
 
                                         p.Name = propertyName;
                                         p.Description = "";
 
-                                        string primaryMeasureType = template["PrimaryMeasureType"].ToString();
+                                        string primaryMeasureType = property["PrimaryMeasureType"].ToString();
                                         if (primaryMeasureType==typeof(IfcLengthMeasure).Name)
-                                           p.NominalValue = new IfcMassMeasure(Double.Parse(dataValue.ToString()));
+                                            p.NominalValue = new IfcMassMeasure(Double.Parse(dataValue.ToString()));
                                         else if (primaryMeasureType==typeof(IfcMassMeasure).Name)
-                                           p.NominalValue = new IfcMassMeasure(Double.Parse(dataValue.ToString()));
+                                            p.NominalValue = new IfcMassMeasure(Double.Parse(dataValue.ToString()));
                                         else if (primaryMeasureType==typeof(IfcPlaneAngleMeasure).Name)
-                                           p.NominalValue = new IfcPlaneAngleMeasure(Double.Parse(dataValue.ToString()));
+                                            p.NominalValue = new IfcPlaneAngleMeasure(Double.Parse(dataValue.ToString()));
                                         else
-                                           p.NominalValue = new IfcLabel(dataValue.ToString());
+                                            p.NominalValue = new IfcLabel(dataValue.ToString());
                                     })
                                 });
-                        };
+                                 
+                                break;
+                        }                                             
+                    };
 
-                        ifcTypeProduct.HasPropertySets.Add(ifcPropertySet);
-
-                        ifcProductDataLibraryDeclarations.Add(ifcTypeProduct);
-                        Comment(ifcTypeProduct, @"Declaration of 'IfcTypeProduct' within the library for a ligthing product.");
-
-                        ifcRelDefinesByTemplate.RelatedPropertySets.Add(ifcPropertySet);
-                    }
-                    n++;
+                    ifcProductDataLibraryDeclarations.Add(ifcTypeProduct);
+                    Comment(ifcTypeProduct, @"Declaration of 'IfcTypeProduct' within the library for a ligthing product.");
                 }
-                while (n < 1);
 
                 txn.Commit();
             }
 
             string targetFileName = Path.Combine(targetFolder, targetFile);
-            SaveAs(targetFileName, true, typeof(IfcProjectLibrary));
+            SaveAs(targetFileName, false, typeof(IfcProjectLibrary));
 
             //Create ifcZip file
             File.Delete(zipFile);
@@ -370,7 +408,8 @@ namespace Examples.CatalogueExample
                     dt.Rows.Add();
                     int i = 0;
 
-                    foreach (IXLCell cell in row.Cells(row.FirstCellUsed().Address.ColumnNumber, row.LastCellUsed().Address.ColumnNumber))
+                    var usedCells = row.Cells(row.FirstCellUsed().Address.ColumnNumber, row.LastCellUsed().Address.ColumnNumber);
+                    foreach (IXLCell cell in usedCells)
                     {
                         dt.Rows[dt.Rows.Count - 1][i] = cell.Value.ToString();
                         i++;

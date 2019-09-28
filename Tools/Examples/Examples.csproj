@@ -33,6 +33,8 @@
     <ProjectReference Include="..\SchemaValidator\SchemaValidator.csproj" />
   </ItemGroup>
   <ItemGroup>
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Data.Linq" />
     <Reference Include="System.IO.Compression" />
   </ItemGroup>
 </Project>
