@@ -34728,12 +34728,32 @@
       </IfcSimplePropertyTemplate>
       <IfcSimplePropertyTemplate id="i31862" GlobalId="2F2r0NZsz3bBdUWf9TvWtz" Name="Erste Aufladezeit für die Notbeleuchtung" Description="Betriebsstunden, in denen die Batterien für die Notbeleuchtung zur ersten Verwendung nach der Installation aufgeladen werden." TemplateType="p_singlevalue" PrimaryMeasureType="IfcReal">
         <PrimaryUnit>
-          <IfcSIUnit id="i4513" UnitType="timeunit" />
+		   <IfcConversionBasedUnit id="i4513" UnitType="timeunit" Name="hour">
+			 <Dimensions TimeExponent="1" />
+			   <ConversionFactor>
+				  <ValueComponent>
+					 <IfcTimeMeasure-wrapper>3600</IfcTimeMeasure-wrapper>
+				  </ValueComponent>
+				  <UnitComponent>
+					 <IfcSIUnit id="i4513U1" UnitType="timeunit" Name="second" />
+				  </UnitComponent>
+			   </ConversionFactor>
+			</IfcConversionBasedUnit>
         </PrimaryUnit>
       </IfcSimplePropertyTemplate>
       <IfcSimplePropertyTemplate id="i31863" GlobalId="0BdptXdIPBPgIVASeMEmRB" Name="Wiederaufladezeit für die Notbeleuchtung" Description="Betriebsstunden, in denen die Batterien für die Notbeleuchtung wiederholt aufgeladen werden." TemplateType="p_singlevalue" PrimaryMeasureType="IfcReal">
         <PrimaryUnit>
-          <IfcSIUnit id="i4515" UnitType="timeunit" />
+		   <IfcConversionBasedUnit id="i31863U1" UnitType="timeunit" Name="hour">
+			 <Dimensions TimeExponent="1" />
+			   <ConversionFactor>
+				  <ValueComponent>
+					 <IfcTimeMeasure-wrapper>3600</IfcTimeMeasure-wrapper>
+				  </ValueComponent>
+				  <UnitComponent>
+					 <IfcSIUnit id="i31863U2" UnitType="timeunit" Name="second" />
+				  </UnitComponent>
+			   </ConversionFactor>
+			</IfcConversionBasedUnit>
         </PrimaryUnit>
       </IfcSimplePropertyTemplate>
       <IfcSimplePropertyTemplate id="i31864" GlobalId="22xEsUK3f0zAflX16OGYE9" Name="Batterietyp" Description="Art der Batterie, Zellentyp" TemplateType="p_singlevalue" PrimaryMeasureType="IfcText" />
@@ -35013,7 +35033,17 @@
       <IfcSimplePropertyTemplate id="i32034" GlobalId="00ji2lltj5cAoz0gS2JS8Q" Name="Betrieb und Wartungshandbuch" Description="Hyperlink zur Herstellerdokumentation Betrieb und Wartung" TemplateType="p_singlevalue" PrimaryMeasureType="IfcURIReference" />
       <IfcSimplePropertyTemplate id="i32035" GlobalId="3gewW8xVnDjwU$LcvNlfra" Name="Einbrennzeit" Description="Einbrennzeit von Leuchtstofflampen" TemplateType="p_singlevalue" PrimaryMeasureType="IfcReal">
         <PrimaryUnit>
-          <IfcSIUnit id="i4714" UnitType="timeunit" />
+		   <IfcConversionBasedUnit id="i32035U1" UnitType="timeunit" Name="hour">
+			 <Dimensions TimeExponent="1" />
+			   <ConversionFactor>
+				  <ValueComponent>
+					 <IfcTimeMeasure-wrapper>3600</IfcTimeMeasure-wrapper>
+				  </ValueComponent>
+				  <UnitComponent>
+					 <IfcSIUnit id="i32035U2" UnitType="timeunit" Name="second" />
+				  </UnitComponent>
+			   </ConversionFactor>
+			</IfcConversionBasedUnit>
         </PrimaryUnit>
       </IfcSimplePropertyTemplate>
       <IfcSimplePropertyTemplate id="i32036" GlobalId="0lfoYwH6zAQQ69fWrEfcUU" Name="Garantienummer" Description="Garantienummer" TemplateType="p_singlevalue" PrimaryMeasureType="IfcText" />
@@ -35026,12 +35056,32 @@
       <IfcSimplePropertyTemplate id="i32043" GlobalId="3qFWyV_FnEWw_4pCERJx$A" Name="Bemessungslebensdauer" Description="Bemessungslebensdauer der Leuchte mit Angabe von Lx, By und Umgebungstemperatur. Z.B. L80B50 50000h 25°C" TemplateType="p_singlevalue" PrimaryMeasureType="IfcText" />
       <IfcSimplePropertyTemplate id="i32044" GlobalId="2rl4jkttL51fIeXO_rrrmZ" Name="Lampen Lebensdauer" Description="Zu erwartende Lebensdauer einer Lampe. Nicht gültig bei LED." TemplateType="p_singlevalue" PrimaryMeasureType="IfcReal">
         <PrimaryUnit>
-          <IfcSIUnit id="i4724" UnitType="timeunit" />
+		   <IfcConversionBasedUnit id="i32044U1" UnitType="timeunit" Name="hour">
+			 <Dimensions TimeExponent="1" />
+			   <ConversionFactor>
+				  <ValueComponent>
+					 <IfcTimeMeasure-wrapper>3600</IfcTimeMeasure-wrapper>
+				  </ValueComponent>
+				  <UnitComponent>
+					 <IfcSIUnit id="i32044U2" UnitType="timeunit" Name="second" />
+				  </UnitComponent>
+			   </ConversionFactor>
+			</IfcConversionBasedUnit>
         </PrimaryUnit>
       </IfcSimplePropertyTemplate>
       <IfcSimplePropertyTemplate id="i32045" GlobalId="2pjehir8P0lwpa3nrc$zhA" Name="Lebensdauer des Betriebsgerätes" Description="Lebensdauer des Betriebsgerätes" TemplateType="p_singlevalue" PrimaryMeasureType="IfcReal">
         <PrimaryUnit>
-          <IfcSIUnit id="i4726" UnitType="timeunit" />
+		   <IfcConversionBasedUnit id="i32045U1" UnitType="timeunit" Name="hour">
+			 <Dimensions TimeExponent="1" />
+			   <ConversionFactor>
+				  <ValueComponent>
+					 <IfcTimeMeasure-wrapper>3600</IfcTimeMeasure-wrapper>
+				  </ValueComponent>
+				  <UnitComponent>
+					 <IfcSIUnit id="i32045U2" UnitType="timeunit" Name="second" />
+				  </UnitComponent>
+			   </ConversionFactor>
+			</IfcConversionBasedUnit>
         </PrimaryUnit>
       </IfcSimplePropertyTemplate>
       <IfcSimplePropertyTemplate id="i32046" GlobalId="27jt$p3wTBrO7P8KYa$obW" Name="Mittlere&#xA;Bemessungslebensdauer" Description="Mittlere Bemessungs-lebensdauer (von LED modulen). Zeitdauer, während der 50% (B50) einer Lichtpopulation nicht unter einen Lichtstromwert von Lx fallen..&#xA;Empfohlen in festen Zeit Wert für Mittlere Bemessungs-lebensdauer von 35k, 50k, 75k und / oder 100k" TemplateType="p_singlevalue" PrimaryMeasureType="IfcText" />
@@ -42077,7 +42127,7 @@
       <IfcPropertySingleValue xsi:nil="true" ref="i107" />
     </HasProperties>
   </IfcPropertySet>
-  <IfcRelDefinesByProperties id="i110">
+  <IfcRelDefinesByProperties id="i110" GlobalId="1cX_bXca1DpA$3MuSoNLQb">
     <RelatedObjects xsi:type="IfcBuilding" xsi:nil="true" ref="i102" />
     <RelatingPropertyDefinition>
       <IfcPropertySet xsi:nil="true" ref="i109" />
@@ -42085,13 +42135,13 @@
   </IfcRelDefinesByProperties>
   <IfcQuantityArea id="i111" Name="GrossFloorArea" />
   <IfcQuantityArea id="i112" Name="NetFloorArea" />
-  <IfcElementQuantity id="i113" Name="Qto_BuildingBaseQuantities">
+  <IfcElementQuantity id="i113" Name="Qto_BuildingBaseQuantities" GlobalId="1cX_bXca1DpA$3MuSoNLQh">
     <Quantities>
       <IfcQuantityArea xsi:nil="true" ref="i111" />
       <IfcQuantityArea xsi:nil="true" ref="i112" />
     </Quantities>
   </IfcElementQuantity>
-  <IfcRelDefinesByProperties id="i114">
+  <IfcRelDefinesByProperties id="i114" GlobalId="1cX_bXca1DpA$3MuSoNLQi">
     <RelatedObjects xsi:type="IfcBuilding" xsi:nil="true" ref="i102" />
     <RelatingPropertyDefinition>
       <IfcElementQuantity xsi:nil="true" ref="i113" />
@@ -42111,7 +42161,7 @@
   <IfcQuantityArea id="i121" Name="NetFloorArea" />
   <IfcQuantityVolume id="i122" Name="GrossVolume" />
   <IfcQuantityVolume id="i123" Name="NetVolume" />
-  <IfcElementQuantity id="i124" Name="Qto_BuildingStoreyBaseQuantities">
+  <IfcElementQuantity id="i124" Name="Qto_BuildingStoreyBaseQuantities" GlobalId="1cY_bXca1DpA$3MuSoNLQc">
     <Quantities>
       <IfcQuantityLength xsi:nil="true" ref="i117" />
       <IfcQuantityLength xsi:nil="true" ref="i118" />
@@ -42122,7 +42172,7 @@
       <IfcQuantityVolume xsi:nil="true" ref="i123" />
     </Quantities>
   </IfcElementQuantity>
-  <IfcRelDefinesByProperties id="i125">
+  <IfcRelDefinesByProperties id="i125" GlobalId="1cY_bZca1DpA$3MuSoNLQc">
     <RelatedObjects xsi:type="IfcBuildingStorey" xsi:nil="true" ref="i116" />
     <RelatingPropertyDefinition>
       <IfcElementQuantity xsi:nil="true" ref="i124" />
@@ -42148,7 +42198,7 @@
   <IfcQuantityArea id="i137" Name="NetCeilingArea" />
   <IfcQuantityVolume id="i138" Name="GrossVolume" />
   <IfcQuantityVolume id="i139" Name="NetVolume" />
-  <IfcElementQuantity id="i140" Name="Qto_SpaceBaseQuantities">
+  <IfcElementQuantity id="i140" Name="Qto_SpaceBaseQuantities" GlobalId="31Kc44INP07QqlZN29qU9i">
     <Quantities>
       <IfcQuantityLength xsi:nil="true" ref="i127" />
       <IfcQuantityLength xsi:nil="true" ref="i128" />
@@ -42165,7 +42215,7 @@
       <IfcQuantityVolume xsi:nil="true" ref="i139" />
     </Quantities>
   </IfcElementQuantity>
-  <IfcRelDefinesByProperties id="i141">
+  <IfcRelDefinesByProperties id="i141" GlobalId="31Kc44INP07QqlZN29qU9k">
     <RelatedObjects xsi:type="IfcSpace" xsi:nil="true" ref="i126" />
     <RelatingPropertyDefinition>
       <IfcElementQuantity xsi:nil="true" ref="i140" />
@@ -42177,14 +42227,14 @@
       <IfcSpace xsi:nil="true" ref="i126" />
     </RelatedObjects>
   </IfcRelAggregates>
-  <IfcSystem id="i142" Name="Aufzugsanlagen" />
+  <IfcSystem id="i142" Name="Aufzugsanlagen" GlobalId="0LwUd1R3P5EvgK2hb0Wczu" />
   <IfcRelAssignsToGroup id="i144" GlobalId="3jv82zQNrAIhCnphzUEroS">
     <RelatedObjects>
       <IfcTransportElement xsi:nil="true" ref="i143" />
     </RelatedObjects>
     <RelatingGroup xsi:type="IfcSystem" xsi:nil="true" ref="i142" />
   </IfcRelAssignsToGroup>
-  <IfcRelContainedInSpatialStructure>
+  <IfcRelContainedInSpatialStructure id="rc123" GlobalId="0LwUd1R3P5EvgK2hb0Wczi">
     <RelatedElements>
       <IfcTransportElement xsi:nil="true" ref="i143" />
       <IfcTransportElement xsi:nil="true" ref="i168" />
@@ -42192,7 +42242,7 @@
     <RelatingStructure xsi:type="IfcBuilding" xsi:nil="true" ref="i102" />
   </IfcRelContainedInSpatialStructure>
   <IfcTransportElement id="i143" GlobalId="0A7lPvMBf3xfyZZAbQkU6k" Name="FT.A1" Description="Mieteraufzug links" Tag="234879" PredefinedType="elevator" />
-  <IfcPropertySet id="i159" GlobalId="1cX_bXca1DpA$3MuSoNLQc" >
+  <IfcPropertySet id="i159" GlobalId="1cX_bXca1DpA$3MuSoNLQc" Name="ElevatorPSet" >
     <HasProperties>
       <IfcPropertySingleValue id="i145" Name="Anzahl Haltestellen">
         <NominalValue>
@@ -42231,13 +42281,13 @@
       </IfcPropertySingleValue>
     </HasProperties>
   </IfcPropertySet>
-  <IfcRelDefinesByProperties id="i160">
+  <IfcRelDefinesByProperties id="i160" GlobalId="2ZIP3ba_nD7Af9IwRI_EIb">
     <RelatedObjects xsi:type="IfcTransportElement" xsi:nil="true" ref="i143" />
     <RelatingPropertyDefinition>
       <IfcPropertySet xsi:nil="true" ref="i159" />
     </RelatingPropertyDefinition>
   </IfcRelDefinesByProperties>
-  <IfcRelDefinesByTemplate>
+  <IfcRelDefinesByTemplate id="rdt01" GlobalId="2ZIP3ba_nD7Af9IwRI_EIc">
     <RelatedPropertySets>
       <IfcPropertySet xsi:nil="true" ref="i159" />
     </RelatedPropertySets>
@@ -42250,8 +42300,8 @@
       <IfcTransportElement xsi:nil="true" ref="i168" />
     </RelatedObjects>
   </IfcRelAggregates>
-  <IfcTransportElement id="i161" GlobalId="0YdUiZuHD9lhMwgvSBrHTW" Name="FT.A1.M1" Description="Motor" Tag="234880" PredefinedType="userdefined" />
-  <IfcPropertySet id="i165" GlobalId="1cX_bXca1DpA$3MuSoNLQc" >
+  <IfcTransportElement id="i161" GlobalId="0YdUiZuHD9lhMwgvSBrHTW" Name="FT.A1.M1" Description="Motor" Tag="234880" PredefinedType="elevator" />
+  <IfcPropertySet id="i165" GlobalId="1cX_bXca1DpA$3MuSoNLQc" Name="PsetElevator">
     <HasProperties>
       <IfcPropertyEnumeratedValue id="i163" Name="Art des Antriebs">
         <EnumerationValues>
@@ -42260,26 +42310,26 @@
       </IfcPropertyEnumeratedValue>
     </HasProperties>
   </IfcPropertySet>
-  <IfcRelDefinesByProperties id="i166">
+  <IfcRelDefinesByProperties id="i166" GlobalId="0YdUiZuHD0lhMwgvSBrHTW">
     <RelatedObjects xsi:type="IfcTransportElement" xsi:nil="true" ref="i161" />
     <RelatingPropertyDefinition>
       <IfcPropertySet xsi:nil="true" ref="i165" />
     </RelatingPropertyDefinition>
   </IfcRelDefinesByProperties>
-  <IfcRelDefinesByTemplate>
+  <IfcRelDefinesByTemplate id="rdt02" GlobalId="2ZIP3ba_nD7Af9IwRI_EIc">
     <RelatedPropertySets>
       <IfcPropertySet xsi:nil="true" ref="i165" />
     </RelatedPropertySets>
     <RelatingTemplate xsi:nil="true" ref="i32244" />
   </IfcRelDefinesByTemplate>
-  <IfcRelContainedInSpatialStructure>
+  <IfcRelContainedInSpatialStructure id="rc124" GlobalId="0LwUd1R3P5EvgK3hb0Wczi">
     <RelatedElements>
       <IfcTransportElement xsi:nil="true" ref="i161" />
       <IfcFireSuppressionTerminal xsi:nil="true" ref="i181" />
     </RelatedElements>
     <RelatingStructure xsi:type="IfcSite" xsi:nil="true" ref="i100" />
   </IfcRelContainedInSpatialStructure>
-  <IfcTransportElement id="i168" GlobalId="26$G$mJmDC6wDi5CLX1kW3" Name="FT.A1.K1" Description="Aufzugskorb" Tag="234881" PredefinedType="userdefined" />
+  <IfcTransportElement id="i168" GlobalId="26$G$mJmDC6wDi5CLX1kW3" Name="FT.A1.K1" Description="Aufzugskorb" Tag="234881" PredefinedType="elevator" />
   <IfcPropertySet id="i179" GlobalId="1cX_bXca1DpA$3MuSoNLQc" >
     <HasProperties>
       <IfcPropertyEnumeratedValue id="i169" Name="Beleuchtung">
@@ -42315,7 +42365,7 @@
       <IfcPropertySet xsi:nil="true" ref="i179" />
     </RelatingPropertyDefinition>
   </IfcRelDefinesByProperties>
-  <IfcRelDefinesByTemplate>
+  <IfcRelDefinesByTemplate id="rdt03" GlobalId="2ZIP3ba_nD7Af9IwRI_EIc">
     <RelatedPropertySets>
       <IfcPropertySet xsi:nil="true" ref="i179" />
     </RelatedPropertySets>
@@ -42358,7 +42408,7 @@
       <IfcPropertySet xsi:nil="true" ref="i191" />
     </RelatingPropertyDefinition>
   </IfcRelDefinesByProperties>
-  <IfcRelDefinesByTemplate>
+  <IfcRelDefinesByTemplate id="rdt04" GlobalId="2ZIP3ba_nD7Af9IwRI_EIc">
     <RelatedPropertySets>
       <IfcPropertySet xsi:nil="true" ref="i191" />
     </RelatedPropertySets>
