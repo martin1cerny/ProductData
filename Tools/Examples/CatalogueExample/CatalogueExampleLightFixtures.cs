@@ -9,6 +9,8 @@ using Xbim.Ifc4.ExternalReferenceResource;
 using System.IO.Compression;
 using System.Linq;
 using System.Collections.Generic;
+using Xbim.Ifc4.UtilityResource;
+using Xbim.Ifc4.ActorResource;
 
 namespace Examples.CatalogueExample
 {
@@ -50,52 +52,90 @@ namespace Examples.CatalogueExample
 
 
                 //Insert Classification system
-                var ifcClassificationSystemOmniClass = model.Instances.New<IfcClassification>();
-                ifcClassificationSystemOmniClass.Name = "Omniclass";
-                ifcClassificationSystemOmniClass.Edition = "1.0";
-                ifcClassificationSystemOmniClass.EditionDate = "2018-12-27T00:00:00.0000000";
-                ifcClassificationSystemOmniClass.Description = "The OmniClass Construction Classification System (known as OmniClass™ or OCCS) is a classification system for the construction industry. OmniClass is useful for many applications, from organizing library materials, product literature, and project information, to providing a classification structure for electronic databases. It incorporates other extant systems currently in use as the basis of many of its Tables – MasterFormat™ for work results, UniFormat for elements, and EPIC (Electronic Product Information Cooperation) for structuring products.";
-                ifcClassificationSystemOmniClass.Location = "http://www.omniclass.org/";
+                var ifcClassificationSystemOmniClass = model.Instances.New<IfcClassification>(cs =>
+                {
+                    cs.Name = "Omniclass";
+                    cs.Edition = "1.0";
+                    cs.EditionDate = "2018-12-27T00:00:00.0000000";
+                    cs.Description = "The OmniClass Construction Classification System (known as OmniClass™ or OCCS) is a classification system for the construction industry. OmniClass is useful for many applications, from organizing library materials, product literature, and project information, to providing a classification structure for electronic databases. It incorporates other extant systems currently in use as the basis of many of its Tables – MasterFormat™ for work results, UniFormat for elements, and EPIC (Electronic Product Information Cooperation) for structuring products.";
+                    cs.Location = "http://www.omniclass.org/";
+                });
 
                 //Insertion of some sample classification references
                 //I would be better to insert the whole classification system and reference the appropriate code
-                var ifcClassificationReferenceOmniClass = model.Instances.New<IfcClassificationReference>();
-                ifcClassificationReferenceOmniClass.Identification = "23-35-47";
-                ifcClassificationReferenceOmniClass.Name = "Electrical Lighting";
-                ifcClassificationReferenceOmniClass.Description = "";
-                ifcClassificationReferenceOmniClass.ReferencedSource = ifcClassificationSystemOmniClass;
+                var ifcClassificationReferenceOmniClass = model.Instances.New<IfcClassificationReference>(cr =>
+                {
+                    cr.Identification = "23-35-47";
+                    cr.Name = "Electrical Lighting";
+                    cr.Description = "";
+                    cr.ReferencedSource = ifcClassificationSystemOmniClass;
+                });
 
-                var ifcRelAssociatesClassificationOmniClass = model.Instances.New<IfcRelAssociatesClassification>();
-                ifcRelAssociatesClassificationOmniClass.RelatingClassification = ifcClassificationReferenceOmniClass;
-
+                var ifcRelAssociatesClassificationOmniClass = model.Instances.New<IfcRelAssociatesClassification>(relc=>
+                {
+                    relc.RelatingClassification = ifcClassificationReferenceOmniClass;
+                });
 
                 //Insert Classification system
-                var ifcClassificationSystemUniClass = model.Instances.New<IfcClassification>();
-                ifcClassificationSystemUniClass.Name = "Uniclass";
-                ifcClassificationSystemUniClass.Edition = "2015";
-                ifcClassificationSystemUniClass.EditionDate = "01.01.2015";
-                ifcClassificationSystemUniClass.Description = "Uniclass is a voluntary classification system for the construction industry that can be used for structuring project information, such as building information models (BIM).";
-                ifcClassificationSystemUniClass.Location = "https://www.thenbs.com/our-tools/introducing-uniclass-2015";
+                var ifcClassificationSystemUniClass = model.Instances.New<IfcClassification>(cs =>
+                {
+                    cs.Name = "Uniclass";
+                    cs.Edition = "2015";
+                    cs.EditionDate = "01.01.2015";
+                    cs.Description = "Uniclass is a voluntary classification system for the construction industry that can be used for structuring project information, such as building information models (BIM).";
+                    cs.Location = "https://www.thenbs.com/our-tools/introducing-uniclass-2015";
+                });
 
                 //Insertion of some sample classification references
                 //I would be better to insert the whole classification system and reference the appropriate code
-                var ifcClassificationReferenceUniClass = model.Instances.New<IfcClassificationReference>();
-                ifcClassificationReferenceUniClass.Identification = "CA-70-10-30";
-                ifcClassificationReferenceUniClass.Name = "Site lighting equipment";
-                ifcClassificationReferenceUniClass.Description = "";
-                ifcClassificationReferenceUniClass.ReferencedSource = ifcClassificationSystemUniClass;
+                var ifcClassificationReferenceUniClass = model.Instances.New<IfcClassificationReference>(cr =>
+                {
+                    cr.Identification = "CA-70-10-30";
+                    cr.Name = "Site lighting equipment";
+                    cr.Description = "";
+                    cr.ReferencedSource = ifcClassificationSystemUniClass;
+                });
 
-                var ifcRelAssociatesClassificationUniClass = model.Instances.New<IfcRelAssociatesClassification>();
-                ifcRelAssociatesClassificationUniClass.RelatingClassification = ifcClassificationReferenceUniClass;
-
+                var ifcRelAssociatesClassificationUniClass = model.Instances.New<IfcRelAssociatesClassification>(relc=>
+                { 
+                    relc.RelatingClassification = ifcClassificationReferenceUniClass;
+                });
 
                 //Insert a project library to store the product data templates and type products
-                IfcProjectLibrary ifcProductDataLibrary = New<IfcProjectLibrary>(l => {
+
+                var ifcProductDataLibrary = New<IfcProjectLibrary>(l => {
                     l.Name = "TriluxLightingProductsLibrary";
                     l.GlobalId = "1DbshdzGD71ejurQqQcxbw";
                     l.Description = "Library for Trilux light fixtures product data templates based on the ZVEI European core properties";
                     l.Phase = "Design,Build,Operate";
+                    l.OwnerHistory = New<IfcOwnerHistory>(oh =>
+                    {
+                        oh.OwningUser = New<IfcPersonAndOrganization>(po =>
+                        {
+                            po.TheOrganization = New<IfcOrganization>(o =>
+                            {
+                                o.Name = "TRILUX GmbH & Co. KG";
+                            });
+
+                            po.ThePerson = New<IfcPerson>(p =>
+                            {
+                                p.GivenName = "Robert";
+                                p.FamilyName = "Heinze";
+                            });
+                        });
+                        oh.OwningApplication = New<IfcApplication>(app =>
+                        {
+                            app.ApplicationIdentifier = "ID_OF_PIM-SYSTEM";
+                            app.ApplicationFullName = "My Product Information System (PIM)";
+                            app.ApplicationDeveloper = New<IfcOrganization>(o =>
+                            {
+                                o.Name = "The software company, that developed the PIM system";
+                            });
+                            app.Version = "1.0";
+                        });
+                    });
                 });
+
                 Comment(ifcProductDataLibrary, @"Root element of this file. Because this doesn't define a specific instance in the building it is a library. It can be used to declare elements, properties, property templates and other library objects which can be later used in the actual design.");
                 Comment(ifcProductDataLibrary.OwnerHistory, @"Owner history is used to define ownership of the information.");
 
@@ -141,7 +181,8 @@ namespace Examples.CatalogueExample
                             model.Instances.New<IfcSimplePropertyTemplate>(pt =>
                             {
                                 pt.Name = propertyTemplate["SystemName"].ToString();
-                                pt.Description = "";
+                                pt.Description = propertyTemplate["Definition"].ToString();
+                                pt.Expression = "";
                                 pt.GlobalId = propertyTemplate["GlobalId"].ToString();
                                 pt.TemplateType = Xbim.Ifc4.Interfaces.IfcSimplePropertyTemplateTypeEnum.P_SINGLEVALUE;
                                 pt.AccessState = Xbim.Ifc4.Interfaces.IfcStateEnum.LOCKED;
@@ -257,66 +298,67 @@ namespace Examples.CatalogueExample
                         switch (property["PrimaryMeasureType"].ToString())
                         {
                             case "IfcDocumentInformation":
-                                //Insert the product information into documents
+                                //Insert the product information that are in documents
                                 string folderName = property["SystemName"].ToString();
                                 string docName = product[property["SystemName"].ToString()].ToString();
+                                if (docName.Length > 0)
+                                { 
+                                    string fileLocation = $"{folderName}/{docName}";
 
-                                string fileLocation = $"{folderName}/{docName}";
-
-                                IfcDocumentInformation ifcDocumentInformation;
-                                var existingInsertedDocumentInformation = model.Instances.OfType<IfcDocumentInformation>().Where(x => x.Location == fileLocation);
-                                if (existingInsertedDocumentInformation.Count() == 0)
-                                {
-                                    ifcDocumentInformation = model.Instances.New<IfcDocumentInformation>(doc =>
+                                    IfcDocumentInformation ifcDocumentInformation;
+                                    var existingInsertedDocumentInformation = model.Instances.OfType<IfcDocumentInformation>().Where(x => x.Location == fileLocation);
+                                    if (existingInsertedDocumentInformation.Count() == 0)
                                     {
-                                        doc.Identification = docName;
-                                        doc.Name = docName;
-                                        doc.Location = $@"{folderName}/{docName}";
-                                        doc.CreationTime = DateTime.Now.ToString("dd.MM.yyyy");
-                                        doc.Confidentiality = Xbim.Ifc4.Interfaces.IfcDocumentConfidentialityEnum.PUBLIC;
-                                        doc.ElectronicFormat = MimeTypes.GetMimeType(docName);
-                                        doc.IntendedUse = "Product information";
-                                        doc.Purpose = "Product information";
-                                        doc.ValidFrom = "01.01.2018";
-                                        doc.ValidUntil = "31.12.2021";
-                                        doc.Scope = "Europa";
-                                        doc.Revision = "1.0";
+                                        ifcDocumentInformation = model.Instances.New<IfcDocumentInformation>(doc =>
+                                        {
+                                            doc.Identification = docName;
+                                            doc.Name = docName;
+                                            doc.Location = $@"{folderName}/{docName}";
+                                            doc.CreationTime = DateTime.Now.ToString("dd.MM.yyyy");
+                                            doc.Confidentiality = Xbim.Ifc4.Interfaces.IfcDocumentConfidentialityEnum.PUBLIC;
+                                            doc.ElectronicFormat = MimeTypes.GetMimeType(docName);
+                                            doc.IntendedUse = "Product information";
+                                            doc.Purpose = "Product information";
+                                            doc.ValidFrom = "01.01.2018";
+                                            doc.ValidUntil = "31.12.2021";
+                                            doc.Scope = "Europa";
+                                            doc.Revision = "1.0";
 
-                                    });
+                                        });
 
-                                    string test = Path.GetExtension(docName);
-                                    switch (Path.GetExtension(docName))
-                                    {
-                                        case ".pdf":
-                                            ifcDocumentInformation.Description = "Produktdatenblatt";
-                                            break;
-                                        case ".3ds":
-                                            ifcDocumentInformation.Description = "3D-Visualisierung";
-                                            break;
-                                        case ".jpg":
-                                            ifcDocumentInformation.Description = "Produktphoto";
-                                            break;
-                                        case ".ies":
-                                            ifcDocumentInformation.Description = "Lichtverteilung von IES Standard";
-                                            break;
+                                        string test = Path.GetExtension(docName);
+                                        switch (Path.GetExtension(docName))
+                                        {
+                                            case ".pdf":
+                                                ifcDocumentInformation.Description = "Produktdatenblatt";
+                                                break;
+                                            case ".3ds":
+                                                ifcDocumentInformation.Description = "3D-Visualisierung";
+                                                break;
+                                            case ".jpg":
+                                                ifcDocumentInformation.Description = "Produktphoto";
+                                                break;
+                                            case ".ies":
+                                                ifcDocumentInformation.Description = "Lichtverteilung von IES Standard";
+                                                break;
+                                        }
+
+
+                                        IfcRelAssociatesDocument ifcRelAssociatesDocument = model.Instances.New<IfcRelAssociatesDocument>(docref =>
+                                        {
+                                            docref.RelatedObjects.Add(ifcTypeProduct);
+                                            docref.RelatingDocument = ifcDocumentInformation;
+                                        });
                                     }
-
-
-                                    IfcRelAssociatesDocument ifcRelAssociatesDocument = model.Instances.New<IfcRelAssociatesDocument>(docref =>
+                                    else
                                     {
-                                        docref.RelatedObjects.Add(ifcTypeProduct);
-                                        docref.RelatingDocument = ifcDocumentInformation;
-                                    });
-                                }
-                                else
-                                {
-                                    ifcDocumentInformation = existingInsertedDocumentInformation.FirstOrDefault();
-                                    var existingDocumentInformationRelation = model.Instances.OfType<IfcRelAssociatesDocument>()
-                                                                                .Where(x => x.RelatingDocument == ifcDocumentInformation).FirstOrDefault();
+                                        ifcDocumentInformation = existingInsertedDocumentInformation.FirstOrDefault();
+                                        var existingDocumentInformationRelation = model.Instances.OfType<IfcRelAssociatesDocument>()
+                                                                                    .Where(x => x.RelatingDocument == ifcDocumentInformation).FirstOrDefault();
 
-                                    existingDocumentInformationRelation.RelatedObjects.Add(ifcTypeProduct);
+                                        existingDocumentInformationRelation.RelatedObjects.Add(ifcTypeProduct);
+                                    }
                                 }
-                                
                                 break;
 
                             case "IfcClassificationReference":
@@ -374,6 +416,15 @@ namespace Examples.CatalogueExample
 
             string targetFileName = Path.Combine(targetFolder, targetFile);
             SaveAs(targetFileName, false, typeof(IfcProjectLibrary));
+
+            //DirtyFix with Schema location
+            //https://github.com/xBimTeam/XbimEssentials/issues/288
+            string contentOfFile = File.ReadAllText($"{targetFileName}.ifcXML");
+            string oldNameSpaceLocation = @"xsi:schemaLocation=""http://www.buildingsmart-tech.org/ifcXML/IFC4/Add2 http://www.buildingsmart-tech.org/ifc/IFC4/Add2/IFC4_ADD2.xsd""";
+            string newNameSpaceLocation = @"xsi:schemaLocation=""http://www.buildingsmart-tech.org/ifcXML/IFC4/Add2 ../../IFC4_ADD2.xsd""";
+            contentOfFile = contentOfFile.Replace(oldNameSpaceLocation, newNameSpaceLocation);
+            File.WriteAllText($"{targetFileName}.ifcXML", contentOfFile);
+
 
             //Create ifcZip file
             File.Delete(zipFile);
