@@ -251,9 +251,7 @@ namespace Examples.CatalogueExample
                 //Loop through the products in the data sheet
                 foreach (DataRow product in dtData.Rows)
                 {
-                    var ifcTypeProduct = model.Instances.New<IfcTypeProduct>();
-                    ifcTypeProduct.GlobalId = Xbim.Ifc4.UtilityResource.IfcGloballyUniqueId.ConvertToBase64(Guid.NewGuid());
-
+                    var ifcTypeProduct = model.Instances.New<IfcTypeProduct>();                   
                     ifcTypeProduct.Name = product["Name"].ToString();
                     ifcTypeProduct.Description = "Description of " + ifcTypeProduct.Name;
                     ifcTypeProduct.ApplicableOccurrence = "IfcLightFixture";
@@ -285,18 +283,38 @@ namespace Examples.CatalogueExample
                                                                        .Where(x => x.Name == property["DataTemplate"].ToString())
                                                                        .FirstOrDefault();
 
-
-                        //var ifcPropertySet = model.Instances.OfType<IfcPropertySet>()
-                        //                                    .Where(x => x.Name == property["DataTemplate"].ToString())
-                        //                                    .FirstOrDefault();
-
-                        //var ifcPropertySets = model.Instances.OfType<IfcPropertySet>()
-                        //            .Where(x => x.Name == property["DataTemplate"].ToString());
-
-
-                        //Insert Documents and Document references if the property templates
                         switch (property["PrimaryMeasureType"].ToString())
                         {
+                            case "IfcGloballyUniqueId":
+                                //Insert the unique number for the product type
+
+                                //Create a fallback 
+                                string guid = product[property["SystemName"].ToString()].ToString();
+
+                                IfcGloballyUniqueId IfcGlobalId;
+                                try
+                                {
+                                    //Assume, that is is a UUID based on IETF RFC 4122
+                                    IfcGlobalId = Xbim.Ifc4.UtilityResource.IfcGloballyUniqueId.ConvertToBase64(Guid.Parse(guid));
+                                }
+                                catch
+                                {
+                                    try
+                                    {
+                                        //Assume, that is is already an IFC compliant IfcGloballyUniqueId
+                                        IfcGlobalId = Xbim.Ifc4.UtilityResource.IfcGloballyUniqueId.ConvertFromBase64(guid);
+                                    }
+                                    catch
+                                    {
+                                        //Generate a new GUID every time
+                                        IfcGlobalId = Xbim.Ifc4.UtilityResource.IfcGloballyUniqueId.ConvertToBase64(Guid.NewGuid());
+                                    }                                 
+                                }
+
+                                ifcTypeProduct.GlobalId = IfcGlobalId;
+                                
+                                break;
+
                             case "IfcDocumentInformation":
                                 //Insert the product information that are in documents
                                 string folderName = property["SystemName"].ToString();
