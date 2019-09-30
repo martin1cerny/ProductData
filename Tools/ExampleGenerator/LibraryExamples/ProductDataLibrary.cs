@@ -117,31 +117,33 @@ namespace ExampleGenerator.LibraryExamples
 
                 //Insert a project library to store the product data templates and type products
 
-                var ifcProductDataLibrary = New<IfcProjectLibrary>(l => {
+                var ifcProductDataLibrary = model.Instances.New<IfcProjectLibrary>(l => {
                     l.Name = "TriluxLightingProductsLibrary";
                     l.GlobalId = "1DbshdzGD71ejurQqQcxbw";
                     l.Description = "Library for Trilux light fixtures product data templates based on the ZVEI European core properties";
                     l.Phase = "Design,Build,Operate";
-                    l.OwnerHistory = New<IfcOwnerHistory>(oh =>
+                    l.OwnerHistory = model.Instances.New<IfcOwnerHistory>(oh =>
                     {
-                        oh.OwningUser = New<IfcPersonAndOrganization>(po =>
+                        oh.CreationDate = DateTime.Now;
+                        //oh.ChangeAction = Xbim.Ifc4.Interfaces.IfcChangeActionEnum.ADDED;
+                        oh.OwningUser = model.Instances.New<IfcPersonAndOrganization>(po =>
                         {
-                            po.TheOrganization = New<IfcOrganization>(o =>
+                            po.TheOrganization = model.Instances.New<IfcOrganization>(o =>
                             {
                                 o.Name = "TRILUX GmbH & Co. KG";
                             });
 
-                            po.ThePerson = New<IfcPerson>(p =>
+                            po.ThePerson = model.Instances.New<IfcPerson>(p =>
                             {
                                 p.GivenName = "Robert";
                                 p.FamilyName = "Heinze";
                             });
                         });
-                        oh.OwningApplication = New<IfcApplication>(app =>
+                        oh.OwningApplication = model.Instances.New<IfcApplication>(app =>
                         {
                             app.ApplicationIdentifier = "ID_OF_PIM-SYSTEM";
                             app.ApplicationFullName = "My Product Information System (PIM)";
-                            app.ApplicationDeveloper = New<IfcOrganization>(o =>
+                            app.ApplicationDeveloper = model.Instances.New<IfcOrganization>(o =>
                             {
                                 o.Name = "The software company, that developed the PIM system";
                             });
