@@ -11,6 +11,8 @@ using System.Linq;
 using System.Collections.Generic;
 using Xbim.Ifc4.UtilityResource;
 using Xbim.Ifc4.ActorResource;
+using Xbim.Ifc4.Interfaces;
+using Xbim.Common;
 
 namespace ExampleGenerator.LibraryExamples
 {
@@ -183,7 +185,7 @@ namespace ExampleGenerator.LibraryExamples
                         pset.GlobalId = Xbim.Ifc4.UtilityResource.IfcGloballyUniqueId.ConvertToBase64(Guid.NewGuid());
                         pset.Name = productDataTemplate.Key.ToString();
                         pset.Description = "Data Template by " + productDataTemplate.ElementAt(0)["Publisher"].ToString();
-                        pset.ApplicableEntity = "IfcLightFixture/USERDEFINED";
+                        pset.ApplicableEntity = "IfcBuildingElementProxy/USERDEFINED";
                         pset.TemplateType = Xbim.Ifc4.Interfaces.IfcPropertySetTemplateTypeEnum.PSET_TYPEDRIVENONLY;
                     });
                     Comment(ifcPropertySetTemplate, @"Declaration of 'IfcPropertySetTemplate' within the library for lighting product data templates.");
@@ -201,8 +203,25 @@ namespace ExampleGenerator.LibraryExamples
                             spt.AccessState = Xbim.Ifc4.Interfaces.IfcStateEnum.LOCKED;
                             spt.PrimaryMeasureType = propertyTemplate["PrimaryMeasureType"].ToString();
 
-                            string primaryMeasureType = propertyTemplate["PrimaryMeasureType"].ToString();
+                            //check if enum values exists in this template, and if, create themn in IFC
+                            string allowedValues = propertyTemplate["AllowedValues"].ToString();
+                            if (allowedValues.Length > 0)
+                            {
+                                spt.TemplateType = IfcSimplePropertyTemplateTypeEnum.P_ENUMERATEDVALUE;
+                                IfcPropertyEnumeration ifcPropertyEnumeration = model.Instances.New<IfcPropertyEnumeration>(pe =>
+                                {
+                                    pe.Name = $"Allowed values of {spt.Name}";
+                                });
 
+                                char delimiter = '|';
+                                foreach (string allowedValue in allowedValues.Split(delimiter))
+                                    ifcPropertyEnumeration.EnumerationValues.Add(new IfcLabel(allowedValue));
+
+                                spt.Enumerators = ifcPropertyEnumeration;
+                            }
+
+                            //Check the measures and units
+                            string primaryMeasureType = propertyTemplate["PrimaryMeasureType"].ToString();
                             if ((primaryMeasureType == "IfcDocumentInformation")
                                    || (primaryMeasureType == "IfcClassificationReference")
                                    || (primaryMeasureType == "IfcGloballyUniqueId"))
@@ -252,23 +271,36 @@ namespace ExampleGenerator.LibraryExamples
                         });
 
 
-                        if (propertyTemplate["ComplexGroup"].ToString().Length == 0)
-                            {
-                                ifcPropertySetTemplate.HasPropertyTemplates.AddRange(ifcSimplePropertyTemplate);
-                            }
-                        else
-                        //Publisher SystemName  GlobalId PrimaryMeasureType  DataColumn
-                        //ifcPropertySetTemplate.HasPropertyTemplates.AddRange(new[]
+                        string complexGroupName = propertyTemplate["ComplexGroupName"].ToString();
+                        if (complexGroupName.Length == 0)
                         {
-                            if (propertyTemplate["ComplexGroup"].ToString().Length > 0)
-                                ifcPropertySetTemplate.HasPropertyTemplates.AddRange(new[]
-                                    {
-                                    model.Instances.New<IfcComplexPropertyTemplate>(cpt =>
-                                    {
-                                        cpt.Name = propertyTemplate["ComplexGroup"].ToString();
-                                    })
-                            });
+                            ifcPropertySetTemplate.HasPropertyTemplates.Add(ifcSimplePropertyTemplate);
                         }
+                        else
+                        {
+                            //Find the appropriate IfcComplexPropertyTemplate, and if it does not yet exist, create it
+                            IfcComplexPropertyTemplate ifcComplexPropertyTemplate
+                                = model.Instances.OfType<IfcComplexPropertyTemplate>()
+                                  .Where(cpt => cpt.Name == complexGroupName)
+                                  .FirstOrDefault();
+
+                            if (ifcComplexPropertyTemplate == null)
+                            {
+                                ifcComplexPropertyTemplate = model.Instances.New<IfcComplexPropertyTemplate>(cpt =>
+                                {
+                                    cpt.Name = complexGroupName;
+                                    cpt.Description = propertyTemplate["ComplexGroupDescription"].ToString();
+                                    cpt.GlobalId = GetGuid(propertyTemplate["ComplexGroupGuid"].ToString());
+                                });
+
+                                ifcPropertySetTemplate.HasPropertyTemplates.Add(ifcComplexPropertyTemplate);
+                            }
+
+                            ifcComplexPropertyTemplate.HasPropertyTemplates.Add(ifcSimplePropertyTemplate);                           
+                        }
+
+                    }
+
                     ifcProductDataLibraryDeclarations.Add(ifcPropertySetTemplate);
                 }
   
@@ -295,21 +327,29 @@ namespace ExampleGenerator.LibraryExamples
                             pset.Name = ifcPropertySetTemplate.Name;
                             pset.Description = ifcPropertySetTemplate.Description;
                         });
-
-                        //Relate the property set to the definition propert
-                        var ifcRelDefinesByTemplate = New<IfcRelDefinesByTemplate>(dbt =>
-                        {
-                            dbt.RelatingTemplate = ifcPropertySetTemplate;
-                        });
-                        ifcRelDefinesByTemplate.RelatedPropertySets.Add(ifcPropertySet);
+                        
                         ifcTypeProduct.HasPropertySets.Add(ifcPropertySet);
+
+                        //Relate the property set to the definition of the property set template
+                        //Find the appropriate relation, and if it does not yet exist, create it
+                        IfcRelDefinesByTemplate ifcRelDefinesByTemplate
+                            = model.Instances.OfType<IfcRelDefinesByTemplate>()
+                              .Where(rdbt => rdbt.RelatingTemplate == ifcPropertySetTemplate)
+                              .FirstOrDefault();
+
+                        if (ifcRelDefinesByTemplate == null)
+                            ifcRelDefinesByTemplate = New<IfcRelDefinesByTemplate>(dbt =>
+                            {
+                                dbt.RelatingTemplate = ifcPropertySetTemplate;
+                            });
+
+                        ifcRelDefinesByTemplate.RelatedPropertySets.Add(ifcPropertySet);
                     }
 
                     //loop through the properties of the product, based on the data template
                     foreach (DataRow property in dtTemplates.Rows)
                     {
                         //Identify the correct IfcPropertySet for this property
-
                         IfcPropertySet ifcPropertySet = (IfcPropertySet)ifcTypeProduct.HasPropertySets
                                                                        .Where(x => x.Name == property["DataTemplate"].ToString())
                                                                        .FirstOrDefault();
@@ -458,6 +498,26 @@ namespace ExampleGenerator.LibraryExamples
                 zipArchive.GetEntry(sourceFile).Delete();
                 zipArchive.CreateEntryFromFile($"{targetFolder}/{targetFile}.ifcXML", $"{targetFile}.ifcXML");
                 zipArchive.CreateEntryFromFile($"{targetFolder}/{targetFile}.ifc", $"{targetFile}.ifc");
+            }
+        }
+
+
+        public class IfcLabelWrapper : IfcValue
+        {
+            public Type UnderlyingSystemType
+            {
+                get
+                {
+                    return typeof(string);
+                }
+            }
+
+
+            public object Value { get; set; }
+
+            public void Parse(int propIndex, IPropertyValue value, int[] nested)
+            {
+                throw new NotImplementedException();
             }
         }
 
