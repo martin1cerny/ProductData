@@ -32,15 +32,15 @@ namespace ExampleGenerator.LibraryExamples
 
         public void RunFromFile (string _sourceFile, string _targetFile)
         {
+            Console.WriteLine($"Generating Library from source: {_sourceFile}");
             sourceFolder = Path.GetDirectoryName(_sourceFile);
             sourceFile = Path.GetFileName(_sourceFile);
 
             targetFolder = Path.GetDirectoryName(_targetFile);
             targetFile = Path.GetFileNameWithoutExtension(_targetFile);
             targetzipFile = _targetFile;
-
-
             Run();
+            Console.WriteLine($"Generated: {_sourceFile}");
         }
         public override void Run()
 
@@ -191,71 +191,84 @@ namespace ExampleGenerator.LibraryExamples
 
                     foreach (DataRow propertyTemplate in productDataTemplate)
                     {
-                        //Publisher SystemName  GlobalId PrimaryMeasureType  DataColumn
-                        ifcPropertySetTemplate.HasPropertyTemplates.AddRange(new[]
+                        IfcSimplePropertyTemplate ifcSimplePropertyTemplate = model.Instances.New<IfcSimplePropertyTemplate>(spt =>
                         {
-                            model.Instances.New<IfcSimplePropertyTemplate>(pt =>
+                            spt.Name = propertyTemplate["SystemName"].ToString();
+                            spt.Description = propertyTemplate["Definition"].ToString();
+                            spt.Expression = "";
+                            spt.GlobalId = GetGuid(propertyTemplate["GlobalId"].ToString());
+                            spt.TemplateType = Xbim.Ifc4.Interfaces.IfcSimplePropertyTemplateTypeEnum.P_SINGLEVALUE;
+                            spt.AccessState = Xbim.Ifc4.Interfaces.IfcStateEnum.LOCKED;
+                            spt.PrimaryMeasureType = propertyTemplate["PrimaryMeasureType"].ToString();
+
+                            string primaryMeasureType = propertyTemplate["PrimaryMeasureType"].ToString();
+
+                            if ((primaryMeasureType == "IfcDocumentInformation")
+                                   || (primaryMeasureType == "IfcClassificationReference")
+                                   || (primaryMeasureType == "IfcGloballyUniqueId"))
                             {
-                                pt.Name = propertyTemplate["SystemName"].ToString();
-                                pt.Description = propertyTemplate["Definition"].ToString();
-                                pt.Expression = "";
-                                pt.GlobalId = propertyTemplate["GlobalId"].ToString();
-                                pt.TemplateType = Xbim.Ifc4.Interfaces.IfcSimplePropertyTemplateTypeEnum.P_SINGLEVALUE;
-                                pt.AccessState = Xbim.Ifc4.Interfaces.IfcStateEnum.LOCKED;
-                                pt.PrimaryMeasureType = propertyTemplate["PrimaryMeasureType"].ToString();
-
-                                string primaryMeasureType = propertyTemplate["PrimaryMeasureType"].ToString();
-
-                                if ((primaryMeasureType == "IfcDocumentInformation") 
-                                    ||(primaryMeasureType == "IfcClassificationReference")
-                                    ||(primaryMeasureType == "IfcGloballyUniqueId"))
-                                        {
-                                            pt.PrimaryMeasureType = "IfcLabel";
-                                        }
-                                else if (primaryMeasureType == typeof(IfcLengthMeasure).Name)
-                                        pt.PrimaryUnit = model.Instances.New<IfcSIUnit>(u=>
-                                        {
-                                            u.UnitType = Xbim.Ifc4.Interfaces.IfcUnitEnum.LENGTHUNIT;
-                                            u.Name = Xbim.Ifc4.Interfaces.IfcSIUnitName.METRE;
-                                            u.Prefix = Xbim.Ifc4.Interfaces.IfcSIPrefix.MILLI;
-                                        });
-                                else if (primaryMeasureType == typeof(IfcMassMeasure).Name)
-                                        pt.PrimaryUnit = model.Instances.New<IfcSIUnit>(u=>
-                                        {
-                                            u.UnitType = Xbim.Ifc4.Interfaces.IfcUnitEnum.MASSUNIT;
-                                            u.Name = Xbim.Ifc4.Interfaces.IfcSIUnitName.GRAM;
-                                        });
-                                else if (primaryMeasureType == typeof(IfcPlaneAngleMeasure).Name)
-                                        pt.PrimaryUnit = model.Instances.New<IfcConversionBasedUnit>(punit=>
-                                        {
-                                            //Convert the angel measure from the unit grad to the SI Unit radian
-                                            //rad=grad*(PI/180)
-                                            punit.Name = "Grad";
-                                            punit.UnitType = Xbim.Ifc4.Interfaces.IfcUnitEnum.PLANEANGLEUNIT;
-                                            punit.ConversionFactor = model.Instances.New<IfcMeasureWithUnit>(mwu=>
-                                            {
-                                                mwu.UnitComponent = model.Instances.New<IfcSIUnit>(siUnit=>
-                                                {
-                                                   siUnit.UnitType = Xbim.Ifc4.Interfaces.IfcUnitEnum.PLANEANGLEUNIT;
-                                                   siUnit.Name = Xbim.Ifc4.Interfaces.IfcSIUnitName.RADIAN;
-                                                });
-                                                mwu.ValueComponent = new IfcReal(Math.PI / 180);
-                                            });
-                                            punit.Dimensions = model.Instances.New<IfcDimensionalExponents>(dim=>
-                                            {
-                                                dim.LengthExponent = 0;
-                                                dim.MassExponent = 0;
-                                                dim.TimeExponent = 0;
-                                                dim.ElectricCurrentExponent = 0;
-                                                dim.ThermodynamicTemperatureExponent = 0;
-                                                dim.AmountOfSubstanceExponent = 0;
-                                                dim.LuminousIntensityExponent = 0;
-                                            });
-                                        });
-                            })
+                                spt.PrimaryMeasureType = "IfcLabel";
+                            }
+                            else if (primaryMeasureType == typeof(IfcLengthMeasure).Name)
+                                spt.PrimaryUnit = model.Instances.New<IfcSIUnit>(u =>
+                                   {
+                                       u.UnitType = Xbim.Ifc4.Interfaces.IfcUnitEnum.LENGTHUNIT;
+                                       u.Name = Xbim.Ifc4.Interfaces.IfcSIUnitName.METRE;
+                                       u.Prefix = Xbim.Ifc4.Interfaces.IfcSIPrefix.MILLI;
+                                   });
+                            else if (primaryMeasureType == typeof(IfcMassMeasure).Name)
+                                spt.PrimaryUnit = model.Instances.New<IfcSIUnit>(u =>
+                                   {
+                                       u.UnitType = Xbim.Ifc4.Interfaces.IfcUnitEnum.MASSUNIT;
+                                       u.Name = Xbim.Ifc4.Interfaces.IfcSIUnitName.GRAM;
+                                   });
+                            else if (primaryMeasureType == typeof(IfcPlaneAngleMeasure).Name)
+                                spt.PrimaryUnit = model.Instances.New<IfcConversionBasedUnit>(punit =>
+                                   {
+                                       //Convert the angel measure from the unit grad to the SI Unit radian
+                                       //rad=grad*(PI/180)
+                                       punit.Name = "Grad";
+                                       punit.UnitType = Xbim.Ifc4.Interfaces.IfcUnitEnum.PLANEANGLEUNIT;
+                                       punit.ConversionFactor = model.Instances.New<IfcMeasureWithUnit>(mwu =>
+                                       {
+                                           mwu.UnitComponent = model.Instances.New<IfcSIUnit>(siUnit =>
+                                           {
+                                               siUnit.UnitType = Xbim.Ifc4.Interfaces.IfcUnitEnum.PLANEANGLEUNIT;
+                                               siUnit.Name = Xbim.Ifc4.Interfaces.IfcSIUnitName.RADIAN;
+                                           });
+                                           mwu.ValueComponent = new IfcReal(Math.PI / 180);
+                                       });
+                                       punit.Dimensions = model.Instances.New<IfcDimensionalExponents>(dim =>
+                                       {
+                                           dim.LengthExponent = 0;
+                                           dim.MassExponent = 0;
+                                           dim.TimeExponent = 0;
+                                           dim.ElectricCurrentExponent = 0;
+                                           dim.ThermodynamicTemperatureExponent = 0;
+                                           dim.AmountOfSubstanceExponent = 0;
+                                           dim.LuminousIntensityExponent = 0;
+                                       });
+                                   });
                         });
-                    };
 
+
+                        if (propertyTemplate["ComplexGroup"].ToString().Length == 0)
+                            {
+                                ifcPropertySetTemplate.HasPropertyTemplates.AddRange(ifcSimplePropertyTemplate);
+                            }
+                        else
+                        //Publisher SystemName  GlobalId PrimaryMeasureType  DataColumn
+                        //ifcPropertySetTemplate.HasPropertyTemplates.AddRange(new[]
+                        {
+                            if (propertyTemplate["ComplexGroup"].ToString().Length > 0)
+                                ifcPropertySetTemplate.HasPropertyTemplates.AddRange(new[]
+                                    {
+                                    model.Instances.New<IfcComplexPropertyTemplate>(cpt =>
+                                    {
+                                        cpt.Name = propertyTemplate["ComplexGroup"].ToString();
+                                    })
+                            });
+                        }
                     ifcProductDataLibraryDeclarations.Add(ifcPropertySetTemplate);
                 }
   
@@ -305,32 +318,7 @@ namespace ExampleGenerator.LibraryExamples
                         {
                             case "IfcGloballyUniqueId":
                                 //Insert the unique number for the product type
-
-                                //Create a fallback 
-                                string guid = product[property["SystemName"].ToString()].ToString();
-
-                                IfcGloballyUniqueId IfcGlobalId;
-                                try
-                                {
-                                    //Assume, that is is a UUID based on IETF RFC 4122
-                                    IfcGlobalId = Xbim.Ifc4.UtilityResource.IfcGloballyUniqueId.ConvertToBase64(Guid.Parse(guid));
-                                }
-                                catch
-                                {
-                                    try
-                                    {
-                                        //Assume, that is is already an IFC compliant IfcGloballyUniqueId
-                                        IfcGlobalId = Xbim.Ifc4.UtilityResource.IfcGloballyUniqueId.ConvertFromBase64(guid);
-                                    }
-                                    catch
-                                    {
-                                        //Generate a new GUID every time
-                                        IfcGlobalId = Xbim.Ifc4.UtilityResource.IfcGloballyUniqueId.ConvertToBase64(Guid.NewGuid());
-                                    }                                 
-                                }
-
-                                ifcTypeProduct.GlobalId = IfcGlobalId;
-                                
+                                ifcTypeProduct.GlobalId = GetGuid(product[property["SystemName"].ToString()].ToString());                             
                                 break;
 
                             case "IfcDocumentInformation":
@@ -504,6 +492,32 @@ namespace ExampleGenerator.LibraryExamples
                 }
             }
             return dt;
+        }
+
+
+
+        private IfcGloballyUniqueId GetGuid(string guid)
+        {
+            IfcGloballyUniqueId IfcGlobalId;
+            try
+            {
+                //Assume, that is is a UUID based on IETF RFC 4122
+                IfcGlobalId = IfcGloballyUniqueId.ConvertToBase64(Guid.Parse(guid));
+            }
+            catch
+            {
+                try
+                {
+                    //Assume, that is is already an IFC compliant IfcGloballyUniqueId
+                    IfcGlobalId = IfcGloballyUniqueId.ConvertFromBase64(guid);
+                }
+                catch
+                {
+                    //Generate a new GUID every time
+                    IfcGlobalId = IfcGloballyUniqueId.ConvertToBase64(Guid.NewGuid());
+                }
+            }
+            return IfcGlobalId;
         }
     }
 }
