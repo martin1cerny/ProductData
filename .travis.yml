@@ -13,7 +13,8 @@ script:
   - wget https://standards.buildingsmart.org/IFC/RELEASE/IFC4/FINAL/XML/ifcXML4.xsd  
   - wget https://standards.buildingsmart.org/IFC/RELEASE/IFC4/ADD1/XML/IFC4_ADD1.xsd
   - wget https://standards.buildingsmart.org/IFC/RELEASE/IFC4/ADD2_TC1/XML/IFC4.xsd
-  - wget http://www.buildingsmart-tech.org/downloads/ifcxml/ifcxml4/cnf.xsd
+  - wget https://standards.buildingsmart.org/IFC/RELEASE/IFC4/ADD2_TC1/XML/IFC4.xsd -O IFC4_ADD2.xsd
+  #- wget http://www.buildingsmart-tech.org/downloads/ifcxml/ifcxml4/cnf.xsd
   
   # Validate
   - xmllint "${TRAVIS_BUILD_DIR}/SampleFiles/bSDD product room sample/bSDD product room sample.ifcXML" --schema IFC4.xsd --noout
