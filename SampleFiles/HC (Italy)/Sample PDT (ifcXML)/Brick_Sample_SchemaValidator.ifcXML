@@ -1,0 +1,898 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ifcXML xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.buildingsmart-tech.org/ifcXML/IFC4/Add2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.buildingsmart-tech.org/ifcXML/IFC4/Add2 ../../IFC4_ADD2.xsd">
+    <!-- header - Start  -->
+    <header>
+        <name>Sample PDT</name>
+        <time_stamp>2018-04-10T20:45:03+00:01</time_stamp>
+        <author>HC</author>
+        <organization>CEN TC 442-WG2</organization>
+        <preprocessor_version>manually edited</preprocessor_version>
+        <originating_system>manually edited</originating_system>
+        <authorization>CEN TC 442-WG2</authorization>
+        <documentation>http://www.buildingsmart-tech.org</documentation>
+    </header>
+    <!-- header - End  -->
+    
+    <!-- Manufacturer - Start  -->
+    <IfcOrganization Name="Produttore" Description="Stabilimento produttivo"  href="link to github" id="id_seq1">
+        <Addresses>
+            <IfcPostalAddress>
+                <AddressLines>
+                    <IfcLabel-wrapper>Koening strasse 33 - Koln (German)</IfcLabel-wrapper>
+                </AddressLines>
+            </IfcPostalAddress>
+        </Addresses>
+    </IfcOrganization>
+    <!-- Manufacturer - End  -->
+    
+    <!-- Measure Unit SI - Start  -->
+    <IfcSIUnit UnitType="lengthunit"                    Prefix="milli"      Name="metre"           id="id00"/>
+    <IfcSIUnit UnitType="lengthunit"                                        Name="metre"           id="id01"/>
+    <IfcSIUnit UnitType="pressureunit"                  Prefix="mega"       Name="pascal"          id="id02"/>
+    <IfcSIUnit UnitType="massunit"                      Prefix="kilo"       Name="gram"            id="id03"/>
+    <IfcSIUnit UnitType="massunit"                                          Name="gram"            id="id04"/>
+    <IfcSIUnit UnitType="volumeunit"                                        Name="cubic_metre"     id="id05"/>
+    <IfcSIUnit UnitType="powerunit"                                         Name="watt"            id="id06"/>
+    <IfcSIUnit UnitType="thermodynamictemperatureunit"                      Name="kelvin"          id="id07"/>
+    <IfcSIUnit UnitType="areaunit"                                          Name="square_metre"    id="id08"/>
+    <!-- Measure Unit SI - End  -->
+    
+    <!-- Derived Measure Unit - Start  -->
+    
+    <IfcDerivedUnit id="idCM0" UnitType="userdefined" UserDefinedType="Thermal conductivity">
+        <Elements>
+            <IfcDerivedUnitElement Exponent="1">
+                <Unit xsi:type="IfcSIUnit" ref="id06" xsi:nil="true"/> 
+            </IfcDerivedUnitElement>
+            <IfcDerivedUnitElement Exponent="-1">
+                <Unit xsi:type="IfcSIUnit" ref="id07" xsi:nil="true"/>
+            </IfcDerivedUnitElement>
+            <IfcDerivedUnitElement Exponent="-1">
+                <Unit xsi:type="IfcSIUnit" ref="id01" xsi:nil="true"/>
+            </IfcDerivedUnitElement>
+        </Elements>
+    </IfcDerivedUnit>
+    
+    <IfcDerivedUnit id="idCM1" UnitType="userdefined" UserDefinedType="Thermal Resistance">
+        <Elements>
+            <IfcDerivedUnitElement Exponent="1">
+                <Unit xsi:type="IfcSIUnit" ref="id08" xsi:nil="true"/>
+            </IfcDerivedUnitElement>
+            <IfcDerivedUnitElement Exponent="1">
+                <Unit xsi:type="IfcSIUnit" ref="id07" xsi:nil="true"/>
+            </IfcDerivedUnitElement>
+            <IfcDerivedUnitElement Exponent="-1">
+                <Unit xsi:type="IfcSIUnit" ref="id06" xsi:nil="true"/>
+            </IfcDerivedUnitElement>
+        </Elements>
+    </IfcDerivedUnit>
+    
+    <IfcDerivedUnit id="idCM2" UnitType="userdefined" UserDefinedType="Spostamento">
+        <Elements>
+            <IfcDerivedUnitElement Exponent="1">
+                <Unit xsi:type="IfcSIUnit" ref="id00" xsi:nil="true"/>
+            </IfcDerivedUnitElement>
+            <IfcDerivedUnitElement Exponent="-1">
+                <Unit xsi:type="IfcSIUnit" ref="id01" xsi:nil="true"/>
+            </IfcDerivedUnitElement>
+        </Elements>
+    </IfcDerivedUnit>
+    
+    <IfcDerivedUnit id="idCM3" UnitType="userdefined" UserDefinedType="Massa Volumica">
+        <Elements>
+            <IfcDerivedUnitElement Exponent="1">
+                <Unit xsi:type="IfcSIUnit" ref="id03" xsi:nil="true"/>
+            </IfcDerivedUnitElement>
+            <IfcDerivedUnitElement Exponent="-1">
+                <Unit xsi:type="IfcSIUnit" ref="id05" xsi:nil="true"/>
+            </IfcDerivedUnitElement>
+        </Elements>
+    </IfcDerivedUnit>
+    
+    <IfcDerivedUnit id="idCM4" UnitType="userdefined" UserDefinedType="mm^2">
+        <Elements>
+            <IfcDerivedUnitElement Exponent="1">
+                <Unit xsi:type="IfcSIUnit" ref="id00" xsi:nil="true"/>
+            </IfcDerivedUnitElement>
+            <IfcDerivedUnitElement Exponent="1">
+                <Unit xsi:type="IfcSIUnit" ref="id00" xsi:nil="true"/>
+            </IfcDerivedUnitElement>
+        </Elements>
+    </IfcDerivedUnit>
+    <!-- Derived Measure Unit - End  -->
+    
+    <!-- Measure Unit Assignment - Start  
+    <IfcUnitAssignment>  
+        <Units>
+            <IfcSIUnit ref="id00"/>
+            <IfcSIUnit ref="id01"/>
+            <IfcSIUnit ref="id02"/>
+            <IfcSIUnit ref="id03"/>
+            <IfcSIUnit ref="id04"/>
+            <IfcSIUnit ref="id05"/>
+            <IfcSIUnit ref="id06"/>
+            <IfcSIUnit ref="id07"/>
+            <IfcSIUnit ref="id08"/>
+            <IfcDerivedUnit ref="idCM0">
+                <Elements>
+                    <IfcDerivedUnitElement>
+                        <Unit xsi:type="IfcSIUnit"/>
+                    </IfcDerivedUnitElement>
+                </Elements>
+            </IfcDerivedUnit>
+            <IfcDerivedUnit ref="idCM1">
+                <Elements>
+                    <IfcDerivedUnitElement>
+                        <Unit xsi:type="IfcSIUnit"/>
+                    </IfcDerivedUnitElement>
+                </Elements>
+            </IfcDerivedUnit>
+            <IfcDerivedUnit ref="idCM2">
+                <Elements>
+                    <IfcDerivedUnitElement>
+                        <Unit xsi:type="IfcSIUnit"/>
+                    </IfcDerivedUnitElement>
+                </Elements>
+            </IfcDerivedUnit>
+            <IfcDerivedUnit ref="idCM3">
+                <Elements>
+                    <IfcDerivedUnitElement>
+                        <Unit xsi:type="IfcSIUnit"/>
+                    </IfcDerivedUnitElement>
+                </Elements>
+            </IfcDerivedUnit>
+            <IfcDerivedUnit ref="idCM4">
+                <Elements>
+                    <IfcDerivedUnitElement>
+                        <Unit xsi:type="IfcSIUnit"/>
+                    </IfcDerivedUnitElement>
+                </Elements>
+            </IfcDerivedUnit>
+        </Units>
+    </IfcUnitAssignment>
+  Measure Unit Assignment - End  -->
+    
+    <!-- Regulatory Context - Start  -->
+    <IfcSimplePropertyTemplate Name="Tolleranza del valore medio" id="idPS0" GlobalId="xxxxxxxxxxxxxxxxxxxxx0">
+        <Enumerators Name="elenco possibili valori">
+            <EnumerationValues>
+                <IfcLabel-wrapper>T2</IfcLabel-wrapper>
+            </EnumerationValues>
+        </Enumerators>
+    </IfcSimplePropertyTemplate>
+    
+    <IfcSimplePropertyTemplate Name="Tolleranza di campo" id="idPS1" GlobalId="xxxxxxxxxxxxxxxxxxxxx1" >
+        <Enumerators Name="elenco possibili valori"> 
+            <EnumerationValues>
+                <IfcLabel-wrapper>R2</IfcLabel-wrapper>
+            </EnumerationValues>
+        </Enumerators>
+    </IfcSimplePropertyTemplate>
+    
+    <IfcSimplePropertyTemplate Name="D.M. 20/11/1987" 
+                               GlobalId="xxxxxxxxxxxxxxxxxxxxx3"
+                               id="idPS2"    
+                               Description="Norme tecniche per la progettazione, esecuzione e collaudo degli edifici in muratura e per il loro consolidamento"/> 
+    
+    <IfcSimplePropertyTemplate Name="UNI EN 772-1"  
+                               GlobalId="3bhhlYovD1xOzSEP5n2HRY"  
+                               id="idPS3"    
+                               Description="Metodi di prova per elementi in muratura"/>
+    
+    <IfcSimplePropertyTemplate Name="UNI EN 772-3" 
+                               GlobalId="xxxxxxxxxxxxxxxxxxxxx4"
+                               id="idPS20"
+                               Description="Metodi di prova per elementi in muratura"/>
+    
+    <IfcSimplePropertyTemplate Name="UNI EN 772-5" 
+                               GlobalId="34CLbKYD16UQs40x7Kz1o6"
+                               id="idPS21"
+                               Description="Metodi di prova per elementi in muratura"/>
+    
+    <IfcSimplePropertyTemplate Name="UNI EN 772-7" 
+                               GlobalId="2h12nvrWP4TfuoyLalBB7U"
+                               id="idPS22"
+                               Description="Metodi di prova per elementi in muratura"/>
+    
+    <IfcSimplePropertyTemplate Name="UNI EN 772-9"  
+                               GlobalId="xxxxxxxxxxxxxxxxxxxxx5"
+                               id="idPS23"
+                               Description="Metodi di prova per elementi in muratura"/>
+    
+    <IfcSimplePropertyTemplate Name="UNI EN 772-11"
+                               GlobalId="3d_TCKF0j7euhXPQbLzibl"
+                               id="idPS24"
+                               Description="Metodi di prova per elementi in muratura"/>
+    
+    <IfcSimplePropertyTemplate Name="UNI EN 772-13" 
+                               GlobalId="1q$5qGRUv2nPA1Y7znE60L"
+                               id="idPS25"
+                               Description="Metodi di prova per elementi in muratura"/>
+    
+    <IfcSimplePropertyTemplate Name="UNI EN 772-16"
+                               GlobalId="3QEjcUQgbCGu4hrU19Kgnt"
+                               id="idPS26"
+                               Description="Metodi di prova per elementi in muratura"/>
+    
+    <IfcSimplePropertyTemplate Name="UNI EN 772-19" 
+                               GlobalId="2VmxLOGO1Ci9ePjHzyhftP" 
+                               id="idPS27"
+                               Description="Metodi di prova per elementi in muratura"/>
+    
+    <IfcSimplePropertyTemplate Name="UNI EN 772-20" 
+                               GlobalId="1MYCk$JqrCOufakpSs7hmr"
+                               id="idPS28"
+                               Description="Metodi di prova per elementi in muratura"/>
+    
+    <IfcSimplePropertyTemplate Name="UNI EN 772-21" 
+                               GlobalId="0rMdZawk1F1BLSraC777MQ" 
+                               id="idPS29"
+                               Description="Metodi di prova per elementi in muratura"/>
+    
+    <IfcSimplePropertyTemplate Name="UNI EN 1052-3:2007" 
+                               GlobalId="0j0SlbaVPCceAAHTgHvviT"
+                               id="idPS4"
+                               Description="Metodi di prova per muratura- Parte 3: Determinazione della resistenza iniziale a taglio"/>
+    
+    <IfcSimplePropertyTemplate Name="UNI EN 13501-1:2009"
+                               GlobalId="0Id31dJs94wwUDL3Mel4if"
+                               id="idPS5"
+                               Description="lassificazione al fuoco dei prodotti e degli elementi da costruzione"/>
+    
+    <IfcSimplePropertyTemplate Name="EC 1-2013 - UNI EN 1745:2012" 
+                               GlobalId="00EY_PAUP8Aum0zyjK4Tbi"
+                               id="idPS6"
+                               Description="Muratura e prodotti per muratura - Metodi per determinare le proprietà termiche"/>
+    
+    <IfcSimplePropertyTemplate Name="UNI EN 1996-1-1:2013" 
+                               GlobalId="0YCbi4jGn5XBUAHXv1ZI7z"
+                               id="idPS7"
+                               Description="Eurocodice 6 - Progettazione delle strutture in muratura - Parte 1-1: Regole generali per strutture di muratura armata e non armata"/>
+    
+    <IfcSimplePropertyTemplate Name="UNI EN 771-1:2015"
+                               GlobalId="0WLsTGoPH838HA5nmV6bQ7"
+                               id="idPS8"
+                               Description="Specifica per elementi per muratura – Parte 1: Elementi di laterizio per muratura. Art.5.3 Elementi U: previsti per essere utilizzati in muratura non protetta"/>
+    
+    <IfcSimplePropertyTemplate Name="UNI EN ISO 12572:2016" 
+                               GlobalId="2a3yDzQLvEnP6cseOoWlzi"
+                               id="idPS9"
+                               Description="Prestazione igrotermica dei materiali e dei prodotti per edilizia"/>
+    
+    <IfcSimplePropertyTemplate Name="CPR (UE) n° 305/2011" 
+                               GlobalId="1mVC7GuaL1xu6N04yDIclF"
+                               id="idPS10"
+                               Description="Regolamento Prodotti da Costruzione"/>
+    
+    <IfcSimplePropertyTemplate Name="D.M. Infrastrutture 28.02.2017 n.58"
+                               GlobalId="xxxxxxxxxxxxxxxxxxxxx6"
+                               id="idPS11"
+                               Description="Linee guida per la classificazione del rischio sismico delle costruzioni"/>
+    
+    <IfcSimplePropertyTemplate Name="D.M. Infrastrutture 17.01.2018"
+                               GlobalId="xxxxxxxxxxxxxxxxxxxxx7"
+                               id="idPS12"
+                               Description="Nuove Norme Tecniche per le costruzioni"/>
+    
+    <IfcSimplePropertyTemplate Name="UNI EN 998-2" 
+                               GlobalId="0h0cA2djL8cQolU$cP_hpN"
+                               id="idPS13"
+                               Description="Specifiche per malte per opere murarie - Parte 2: Malte da muratura"/>
+    <!-- Regulatory Contex - End  -->
+    
+    <!-- Product: Brick ARMALATER - Start  -->
+    <IfcCivilElement Name="Mattone ARMALATER" 
+                     GlobalId="xxxxxxxxxxxxxxxxxxxxx8"
+                     ObjectType="brick"
+                     Description="Elemento per muratura portante non protetta U perforato verticalmente"
+                     href="link to DoP1.JPG"/> 
+    <IfcMaterial Name="Mattone ARMALATER" Category="Laterizi" Description="Mattone in laterizio semipieno"/>
+    <!-- Product: Bricke ARMALATER - End  -->
+    
+    <!-- Project Library - Start  -->
+    <IfcProjectLibrary GlobalId="xxxxxxxxxxxxxxxxxxxx25" id="id_seq2">
+     <OwnerHistory CreationDate="20180709" LastModifiedDate="20181002" ChangeAction="nochange" State="readonly">
+      <OwningUser>
+       <ThePerson GivenName="Mr" FamilyName="HC" Identification="Eng" id="id_seq3"/>
+       <TheOrganization Identification="CEN" Description="Possible sample for PDT" Name="TC442-WG2-TG3" id="id_seq4"/>
+       <Roles>
+        <IfcActorRole Role="userdefined" UserDefinedRole="LibraryPublisher"/>
+       </Roles>
+      </OwningUser>
+      <OwningApplication ApplicationFullName="Product Data Template" ApplicationIdentifier="CEN" Version="1.0">
+       <ApplicationDeveloper Name="Mr" Identification="HC"/>
+      </OwningApplication>
+     </OwnerHistory>
+     <Declares>
+      <IfcRelDeclares GlobalId="xxxxxxxxxxxxxxxxxxxx26" id="id_seq5">
+       <RelatedDefinitions>
+        <IfcTypeProduct Name="Brick" Description="description type" GlobalId="xxxxxxxxxxxxxxxxxxxx27" id="id_seq6">
+        </IfcTypeProduct>
+            
+        <!-- DoP - Start -->  
+        <IfcPropertySetTemplate Name="Lunghezza" id="idTP0" GlobalId="27fAiukWL6yBwqrfdth7XC" Description="descrizione da bsDD" >
+         <HasPropertyTemplates>
+          <IfcComplexPropertyTemplate GlobalId="xxxxxxxxxxxxxxxxxxxx27" id="id_seq7">
+           <HasPropertyTemplates>
+            <IfcSimplePropertyTemplate Name="Lenght" id="idPS14" GlobalId="xxxxxxxxxxxxxxxxxxxx28"> 
+             <Enumerators Name="lenght">
+              <EnumerationValues>
+               <IfcLengthMeasure-wrapper>280</IfcLengthMeasure-wrapper>
+              </EnumerationValues>
+              <Unit><IfcSIUnit ref="id00"/></Unit>
+             </Enumerators>
+            </IfcSimplePropertyTemplate>
+            <IfcSimplePropertyTemplate  Name="Tolleranza del valore medio" ref="idPS0"  id="id_seq8" GlobalId="xxxxxxxxxxxxxxxxxxxx88"/>
+            <IfcSimplePropertyTemplate  Name="Tolleranza di campo" ref="idPS1"  id="id_seq9" GlobalId="xxxxxxxxxxxxxxxxxxxx89"/>
+           </HasPropertyTemplates>
+          </IfcComplexPropertyTemplate>
+         </HasPropertyTemplates>
+        </IfcPropertySetTemplate>
+   
+        <IfcPropertySetTemplate Name="Larghezza" GlobalId="1GSM$3gpD9QgpFl2kMY0_I" id="idTP1">
+         <HasPropertyTemplates>
+          <IfcComplexPropertyTemplate GlobalId="xxxxxxxxxxxxxxxxxxxx29"  id="id_seq10">
+           <HasPropertyTemplates>
+            <IfcSimplePropertyTemplate Name="width" id="idPS15" GlobalId="xxxxxxxxxxxxxxxxxxxx30"> 
+             <Enumerators Name="width">
+              <EnumerationValues><IfcLengthMeasure-wrapper>135</IfcLengthMeasure-wrapper></EnumerationValues>
+              <Unit><IfcSIUnit ref="id00"/></Unit>
+             </Enumerators>
+            </IfcSimplePropertyTemplate>
+            <IfcSimplePropertyTemplate Name="Tolleranza del valore medio" ref="idPS0" id="id_seq11" GlobalId="xxxxxxxxxxxxxxxxxxxx90"/>
+            <IfcSimplePropertyTemplate Name="Tolleranza di campo" ref="idPS1" id="id_seq12" GlobalId="xxxxxxxxxxxxxxxxxxxx91"/>
+           </HasPropertyTemplates>
+          </IfcComplexPropertyTemplate>
+         </HasPropertyTemplates>
+        </IfcPropertySetTemplate>
+   
+        <IfcPropertySetTemplate Name="Altezza" GlobalId="046FEOpJ5B2RkgE1i$ffam" id="idTP2">
+         <HasPropertyTemplates>
+          <IfcComplexPropertyTemplate GlobalId="xxxxxxxxxxxxxxxxxxxx31" id="id_seq13">
+           <HasPropertyTemplates>
+            <IfcSimplePropertyTemplate Name="height" id="idPS16" GlobalId="xxxxxxxxxxxxxxxxxxxx32"> 
+             <Enumerators Name="height">
+              <EnumerationValues><IfcLengthMeasure-wrapper>72</IfcLengthMeasure-wrapper></EnumerationValues>
+              <Unit><IfcSIUnit ref="id00"/></Unit>
+             </Enumerators>
+            </IfcSimplePropertyTemplate>
+            <IfcSimplePropertyTemplate Name="Tolleranza del valore medio" ref="idPS0" id="id_seq14" GlobalId="xxxxxxxxxxxxxxxxxxxx92"/> 
+            <IfcSimplePropertyTemplate Name="Tolleranza di campo" ref="idPS1" id="id_seq15" GlobalId="xxxxxxxxxxxxxxxxxxxx93"/> 
+           </HasPropertyTemplates>
+          </IfcComplexPropertyTemplate>
+         </HasPropertyTemplates>
+        </IfcPropertySetTemplate>
+   
+        <IfcPropertySetTemplate Name="Categoria di prodotto" id="idTP3" GlobalId="xxxxxxxxxxxxxxxxxxxx10">
+         <HasPropertyTemplates>
+          <IfcComplexPropertyTemplate Name="attemp_1" GlobalId="xxxxxxxxxxxxxxxxxxxx33" id="id_seq16">
+           <HasPropertyTemplates>
+            <IfcSimplePropertyTemplate Name="Elemento per muratura di laterizion HD" GlobalId="xxxxxxxxxxxxxxxxxxxx34" id="id_seq17">
+             <Enumerators Name="Cathegory">
+              <EnumerationValues>
+               <IfcLabel-wrapper>1</IfcLabel-wrapper>
+              </EnumerationValues>
+             </Enumerators>
+            </IfcSimplePropertyTemplate>
+            <IfcSimplePropertyTemplate Name="Sistema di valutazione AVCP" GlobalId="xxxxxxxxxxxxxxxxxxxx35" id="id_seq18">
+             <Enumerators Name="System">
+              <EnumerationValues>
+               <IfcLabel-wrapper>"2+"</IfcLabel-wrapper>
+              </EnumerationValues>
+             </Enumerators>
+            </IfcSimplePropertyTemplate>
+           </HasPropertyTemplates>
+          </IfcComplexPropertyTemplate>
+         </HasPropertyTemplates>
+        </IfcPropertySetTemplate>
+           
+        <IfcPropertySetTemplate Name="Riferimenti Normativi DoP Mattone ARMALATER" id="idTP4" GlobalId="xxxxxxxxxxxxxxxxxxxx11">
+         <HasPropertyTemplates>
+          <IfcComplexPropertyTemplate GlobalId="xxxxxxxxxxxxxxxxxxxx36" id="id_seq19">
+           <HasPropertyTemplates>
+            <IfcSimplePropertyTemplate Name="Norma armonizzata:" ref="idPS8" id="id_seq20" GlobalId="xxxxxxxxxxxxxxxxxxxx94"/>
+            <IfcSimplePropertyTemplate Name="CPR (UE) n° 305/2011" ref="idPS10" id="id_seq21" GlobalId="xxxxxxxxxxxxxxxxxxxx95"/>
+           </HasPropertyTemplates>
+          </IfcComplexPropertyTemplate>
+         </HasPropertyTemplates>
+        </IfcPropertySetTemplate>
+        
+        <IfcPropertySetTemplate Name="Resistenza a Compressione" GlobalId="0DnaFUGi5DQ8CFnScU0ji8" id="id_seq22">
+         <HasPropertyTemplates>
+          <IfcComplexPropertyTemplate GlobalId="xxxxxxxxxxxxxxxxxxxx37" id="id_seq23">
+           <HasPropertyTemplates>
+            <IfcSimplePropertyTemplate Name="Categoria" id="idTP5" GlobalId="xxxxxxxxxxxxxxxxxxxx38">
+             <Enumerators Name="Cathegories">
+              <EnumerationValues>
+               <IfcLabel-wrapper>"1"</IfcLabel-wrapper>
+              </EnumerationValues>
+             </Enumerators>
+            </IfcSimplePropertyTemplate>
+            <IfcComplexPropertyTemplate Name="Valore Medio" GlobalId="xxxxxxxxxxxxxxxxxxxx39" id="id_seq24">
+             <HasPropertyTemplates>
+              <IfcSimplePropertyTemplate Name="Valore Medio_function" id="idTP6" GlobalId="xxxxxxxxxxxxxxxxxxxx40">
+               <Enumerators Name="Function">
+                <EnumerationValues>
+                 <IfcLabel-wrapper>&gt;=</IfcLabel-wrapper>
+                </EnumerationValues>
+               </Enumerators>
+              </IfcSimplePropertyTemplate>
+              <IfcSimplePropertyTemplate Name="Valore Medio_value" id="idTP60" GlobalId="xxxxxxxxxxxxxxxxxxxx41">
+               <Enumerators Name="Value">
+                <EnumerationValues>
+                 <IfcLengthMeasure-wrapper>40</IfcLengthMeasure-wrapper> <!-- inserire unità di misura -->
+                </EnumerationValues>
+               </Enumerators>
+              </IfcSimplePropertyTemplate>
+             </HasPropertyTemplates>
+            </IfcComplexPropertyTemplate>              
+            <IfcSimplePropertyTemplate Name="Direzione di carico" id="idTP7" GlobalId="xxxxxxxxxxxxxxxxxxxx42">
+             <Enumerators Name="Direction">
+              <EnumerationValues>
+               <IfcLabel-wrapper>"perpendicolare alle facce"</IfcLabel-wrapper>
+              </EnumerationValues>
+             </Enumerators>
+            </IfcSimplePropertyTemplate>
+           </HasPropertyTemplates>
+          </IfcComplexPropertyTemplate>
+         </HasPropertyTemplates>
+        </IfcPropertySetTemplate>
+      
+        <IfcPropertySetTemplate Name="Organismo notificato per l'ispezionamento" id="idTP8" GlobalId="xxxxxxxxxxxxxxxxxxxx12">
+         <HasPropertyTemplates>
+          <IfcComplexPropertyTemplate GlobalId="xxxxxxxxxxxxxxxxxxxx43" id="id_seq25">
+           <HasPropertyTemplates>
+            <IfcSimplePropertyTemplate Name="AENOR 0099" Description="Ispezione iniziale dell'impianto di fabbricazione e controllo di produzione in fabbrica" GlobalId="xxxxxxxxxxxxxxxxxxxx44" id="id_seq26">
+             <Enumerators Name="Certifcation">
+              <EnumerationValues>
+               <IfcLabel-wrapper>"Ispezione iniziale dell'impianto di fabbricazione e controllo di produzione in fabbrica"</IfcLabel-wrapper>
+              </EnumerationValues>
+             </Enumerators>
+            </IfcSimplePropertyTemplate>
+            <IfcSimplePropertyTemplate Name="0099-CPR-A73-0023" Description="Sorveglianza continua, valutazione e verifica del controllo di produzione in fabbrica" GlobalId="xxxxxxxxxxxxxxxxxxxx45" id="id_seq27"/>
+           </HasPropertyTemplates>
+          </IfcComplexPropertyTemplate>
+         </HasPropertyTemplates>
+        </IfcPropertySetTemplate>
+        
+        <IfcPropertySetTemplate Name="Dichiarazione di prestazione" GlobalId="xxxxxxxxxxxxxxxxxxxx13" id="id_seq28">
+         <HasPropertyTemplates>
+          <IfcComplexPropertyTemplate GlobalId="xxxxxxxxxxxxxxxxxxxx46" id="id_seq29">
+           <HasPropertyTemplates>
+            <IfcComplexPropertyTemplate Name="Stabilità dimensionale" Description="Spostamento dovuto all'umidità" id="idTP9" GlobalId="0ME3R5NET1rwM2mEToEDc2">
+             <HasPropertyTemplates>
+              <IfcSimplePropertyTemplate Name="Stabilità dimensionale_function" GlobalId="xxxxxxxxxxxxxxxxxxxx53" id="id_seq30"> 
+               <Enumerators Name="Function">
+                <EnumerationValues>
+                 <IfcLabel-wrapper> &lt;= </IfcLabel-wrapper>
+                </EnumerationValues>
+               </Enumerators>
+              </IfcSimplePropertyTemplate>
+              <IfcSimplePropertyTemplate Name="Stabilità dimensionale_value" GlobalId="xxxxxxxxxxxxxxxxxxxx54" id="id_seq31"> 
+               <Enumerators Name="Value">
+                <EnumerationValues>
+                 <IfcLengthMeasure-wrapper>0.500</IfcLengthMeasure-wrapper>
+                </EnumerationValues>
+                <Unit>
+                 <IfcDerivedUnit ref="idCM2" xsi:nil="true"/>
+                </Unit>
+               </Enumerators>
+              </IfcSimplePropertyTemplate>
+             </HasPropertyTemplates>
+            </IfcComplexPropertyTemplate>
+            <IfcSimplePropertyTemplate Name="Forza di adesione" Description="per utilizzo in componenti soggetti a requisiti strutturali" id="idTP10" GlobalId="3vHjuooT0Hsm00051Mm008"> 
+             <Enumerators Name="Value">
+              <EnumerationValues>
+               <IfcPressureMeasure-wrapper>0.15</IfcPressureMeasure-wrapper>
+              </EnumerationValues>
+              <Unit>
+               <IfcSIUnit ref="id02"/>
+              </Unit>
+             </Enumerators>
+            </IfcSimplePropertyTemplate> 
+            <IfcSimplePropertyTemplate Name="Planarità" id="idTP11" GlobalId="0UpOMC4S17U8fQUDjQ7JZi">
+             <Enumerators Name="Value">
+              <EnumerationValues>
+               <IfcLabel-wrapper>NPD</IfcLabel-wrapper>
+              </EnumerationValues>
+             </Enumerators>
+            </IfcSimplePropertyTemplate>
+            <IfcSimplePropertyTemplate Name="Parallelismo facce" id="idTP12" GlobalId="xxxxxxxxxxxxxxxxxxxx47">
+             <Enumerators Name="Value">
+              <EnumerationValues> 
+               <IfcLabel-wrapper>NPD</IfcLabel-wrapper>
+              </EnumerationValues>
+             </Enumerators>
+            </IfcSimplePropertyTemplate>
+            <IfcComplexPropertyTemplate Name="Percentuale dei vuoti" id="idTP13" GlobalId="14tIoDLgb2bx5U8KsJeDvJ">
+             <HasPropertyTemplates>
+              <IfcSimplePropertyTemplate Name="Percentuale dei vuoti_function" GlobalId="xxxxxxxxxxxxxxxxxxxx55" id="id_seq32"> 
+               <Enumerators Name="Function">
+                <EnumerationValues>
+                 <IfcLabel-wrapper> &#37; </IfcLabel-wrapper>
+                </EnumerationValues>
+               </Enumerators>
+              </IfcSimplePropertyTemplate>
+              <IfcSimplePropertyTemplate Name="Percentuale dei vuoti_value" GlobalId="xxxxxxxxxxxxxxxxxxxx56" id="id_seq33"> 
+               <Enumerators Name="Value">
+                <EnumerationValues>
+                 <IfcNumericMeasure-wrapper>32</IfcNumericMeasure-wrapper>
+                </EnumerationValues>
+               </Enumerators>
+              </IfcSimplePropertyTemplate>
+             </HasPropertyTemplates>
+            </IfcComplexPropertyTemplate>  
+            <IfcComplexPropertyTemplate Name="Spessore minimo setti esterni" id="idTP14" GlobalId="2azhlnHxHEORQ8y0ZS2Og2">
+             <HasPropertyTemplates>
+              <IfcSimplePropertyTemplate Name="Spessore minimo setti esterni_function" GlobalId="xxxxxxxxxxxxxxxxxxxx57" id="id_seq34"> 
+               <Enumerators Name="Function">
+                <EnumerationValues>
+                 <IfcLabel-wrapper> &gt;= </IfcLabel-wrapper>
+                </EnumerationValues>
+               </Enumerators>
+              </IfcSimplePropertyTemplate>
+              <IfcSimplePropertyTemplate Name="Spessore minimo setti esterni_value" GlobalId="xxxxxxxxxxxxxxxxxxxx58" id="id_seq35"> 
+               <Enumerators Name="Value">
+                <EnumerationValues>
+                 <IfcLengthMeasure-wrapper>15.00</IfcLengthMeasure-wrapper>
+                </EnumerationValues>
+                <Unit><IfcSIUnit ref="id00"/></Unit>
+               </Enumerators>
+              </IfcSimplePropertyTemplate>
+             </HasPropertyTemplates>
+            </IfcComplexPropertyTemplate>
+            <IfcComplexPropertyTemplate Name="Spessore minimo setti interni" id="idTP15" GlobalId="xxxxxxxxxxxxxxxxxxxx48">
+             <HasPropertyTemplates>
+              <IfcSimplePropertyTemplate Name="Spessore minimo setti interni_function" GlobalId="xxxxxxxxxxxxxxxxxxxx59" id="id_seq36"> 
+               <Enumerators Name="Function">
+                <EnumerationValues>
+                 <IfcLabel-wrapper> &gt;= </IfcLabel-wrapper>
+                </EnumerationValues>
+               </Enumerators>
+              </IfcSimplePropertyTemplate>
+              <IfcSimplePropertyTemplate Name="Spessore minimo setti interni_value" GlobalId="xxxxxxxxxxxxxxxxxxxx60" id="id_seq37"> 
+               <Enumerators Name="Value">
+                <EnumerationValues>
+                 <IfcLengthMeasure-wrapper>7.00</IfcLengthMeasure-wrapper>
+                </EnumerationValues>
+                <Unit><IfcSIUnit ref="id00"/></Unit>
+               </Enumerators>
+              </IfcSimplePropertyTemplate>
+             </HasPropertyTemplates>
+            </IfcComplexPropertyTemplate>
+            <IfcSimplePropertyTemplate Name="Contenuti sali solubili" id="idTP16" GlobalId="xxxxxxxxxxxxxxxxxxxx49">
+             <Enumerators Name="Content">
+              <EnumerationValues>
+               <IfcLabel-wrapper>S2</IfcLabel-wrapper>
+              </EnumerationValues>
+             </Enumerators>
+            </IfcSimplePropertyTemplate>
+            <IfcSimplePropertyTemplate Name="Reazione al fuoco" id="idTP17" GlobalId="0F3sC0AzGHt00000PR1IRl">
+             <Enumerators Name="Reaction">
+              <EnumerationValues>
+               <IfcLabel-wrapper>Euroclasse A1</IfcLabel-wrapper>
+              </EnumerationValues>
+             </Enumerators>
+            </IfcSimplePropertyTemplate>
+            <IfcSimplePropertyTemplate Name="Coefficiente diffusione vapore acqueo" Description="secondo EN 1745" id="idTP18" GlobalId="xxxxxxxxxxxxxxxxxxxx50">
+             <Enumerators  Name="Coefficient">
+              <EnumerationValues><IfcLabel-wrapper>50/100</IfcLabel-wrapper></EnumerationValues>
+             </Enumerators>
+            </IfcSimplePropertyTemplate>
+            <IfcComplexPropertyTemplate Name="Assorbimento acqua" id="idTP19" GlobalId="xxxxxxxxxxxxxxxxxxxx51">
+             <HasPropertyTemplates>
+              <IfcSimplePropertyTemplate Name="Assorbimento acqua_function" GlobalId="xxxxxxxxxxxxxxxxxxxx59" id="id_seq38"> 
+               <Enumerators Name="Function">
+                <EnumerationValues>
+                 <IfcLabel-wrapper> &#37; </IfcLabel-wrapper>
+                </EnumerationValues>
+               </Enumerators>
+              </IfcSimplePropertyTemplate>
+              <IfcSimplePropertyTemplate Name="Assorbimento acqua_value" GlobalId="xxxxxxxxxxxxxxxxxxxx60" id="id_seq39"> 
+               <Enumerators Name="Value">
+                <EnumerationValues>
+                 <IfcNumericMeasure-wrapper>6</IfcNumericMeasure-wrapper>
+                </EnumerationValues>
+               </Enumerators>
+              </IfcSimplePropertyTemplate>
+             </HasPropertyTemplates>
+            </IfcComplexPropertyTemplate>  
+            <IfcSimplePropertyTemplate Name="Durabilità ai cicli di gelo-disgelo" id="idTP20" GlobalId="2Pd607IZX0YuR2lOYdw6gZ">
+             <Enumerators Name="Value">
+              <EnumerationValues>
+               <IfcLabel-wrapper>F2 (idoneo per impiego in murature non protette)</IfcLabel-wrapper>
+              </EnumerationValues>
+             </Enumerators>
+            </IfcSimplePropertyTemplate>
+            <IfcSimplePropertyTemplate Name="Conducibilità termica" id="idTP21" GlobalId="0BNbo0WJWHu000025QrE$V">
+             <Enumerators Name="Value">
+              <EnumerationValues><IfcThermalConductivityMeasure-wrapper>0.35</IfcThermalConductivityMeasure-wrapper></EnumerationValues>
+              <Unit>
+               <IfcDerivedUnit ref="idCM0" xsi:nil="true"/>
+              </Unit>
+             </Enumerators>
+            </IfcSimplePropertyTemplate>
+            <IfcSimplePropertyTemplate Name="Resistenza termica R" id="idTP22" GlobalId="0NWXGlYk54w9HtfXNmklbc"> 
+             <Enumerators Name="Value">
+              <EnumerationValues><IfcPressureMeasure-wrapper>0.21</IfcPressureMeasure-wrapper></EnumerationValues>
+              <Unit>
+               <IfcDerivedUnit ref="idCM1" xsi:nil="true"/>
+              </Unit>
+             </Enumerators>
+            </IfcSimplePropertyTemplate>
+            <IfcSimplePropertyTemplate Name="Sostanze pericolose" id="idTP23" GlobalId="xxxxxxxxxxxxxxxxxxxx52">
+             <Enumerators Name="Value">
+              <EnumerationValues>
+               <IfcLabel-wrapper>Non presenti</IfcLabel-wrapper>
+              </EnumerationValues>
+             </Enumerators>
+            </IfcSimplePropertyTemplate>
+           </HasPropertyTemplates>
+          </IfcComplexPropertyTemplate>
+         </HasPropertyTemplates>
+        </IfcPropertySetTemplate> 
+        
+           
+        <IfcPropertySetTemplate Name="Isolamento acustico per via aerea, massa volumica e configurazione" id="idTP99"  GlobalId="xxxxxxxxxxxxxxxxxxxx14">
+         <HasPropertyTemplates>
+             <IfcComplexPropertyTemplate GlobalId="xxxxxxxxxxxxxxxxxxxx61" id="id_seq40">
+           <HasPropertyTemplates>
+            <IfcSimplePropertyTemplate Name="Massa Volumica" id="idTP24" GlobalId="0p5xfoQBfCKP3_Jz0PhqQm"> 
+             <Enumerators Name="Mass">
+              <EnumerationValues><IfcMassDensityMeasure-wrapper>2.200</IfcMassDensityMeasure-wrapper></EnumerationValues>
+              <Unit>
+               <IfcDerivedUnit ref="idCM3" xsi:nil="true"/>
+              </Unit>
+             </Enumerators>
+            </IfcSimplePropertyTemplate>
+            <IfcSimplePropertyTemplate Name="Massa Volumica Lorda a secco" id="idTP25" GlobalId="xxxxxxxxxxxxxxxxxxxx62">
+             <Enumerators Name="Mass">
+              <EnumerationValues><IfcMassDensityMeasure-wrapper>1.400</IfcMassDensityMeasure-wrapper>
+              </EnumerationValues>
+              <Unit>
+               <IfcDerivedUnit ref="idCM3" xsi:nil="true"/>
+              </Unit>
+             </Enumerators>
+            </IfcSimplePropertyTemplate>
+            <IfcSimplePropertyTemplate Name="Peso" id="idTP26" GlobalId="3QSjmY9Xj3ZRXnXdHCwmf2">
+             <Enumerators Name="Weight">
+              <EnumerationValues><IfcMassMeasure-wrapper>3.500</IfcMassMeasure-wrapper></EnumerationValues>
+              <Unit><IfcSIUnit ref="id04"/></Unit>
+             </Enumerators>
+            </IfcSimplePropertyTemplate>
+            <IfcSimplePropertyTemplate Name="Configurazione" id="idTP27" GlobalId="xxxxxxxxxxxxxxxxxxxx63">
+             <Enumerators Name="Configuration">
+              <EnumerationValues>
+               <IfcLabel-wrapper>perforato verticalmente</IfcLabel-wrapper>
+              </EnumerationValues>
+             </Enumerators>
+            </IfcSimplePropertyTemplate>
+           </HasPropertyTemplates>
+          </IfcComplexPropertyTemplate>
+         </HasPropertyTemplates>
+        </IfcPropertySetTemplate>
+        
+        <IfcPropertySetTemplate Name="Riferimenti Normativi" id="idTP56"  GlobalId="xxxxxxxxxxxxxxxxxxxx15">
+         <HasPropertyTemplates>
+          <IfcComplexPropertyTemplate GlobalId="xxxxxxxxxxxxxxxxxxxx64" id="id_seq631">
+           <HasPropertyTemplates>
+            <IfcSimplePropertyTemplate Name="D.M. 20/11/1987" id="id_seq41" ref="idPS2" GlobalId="xxxxxxxxxxxxxxxxxxxx92"/>
+            <IfcSimplePropertyTemplate Name="UNI EN 772-1" id="id_seq42" ref="idPS3" GlobalId="xxxxxxxxxxxxxxxxxxxx93"/>
+            <IfcSimplePropertyTemplate Name="UNI EN 1052-3:2007" id="id_seq43" ref="idPS4" GlobalId="xxxxxxxxxxxxxxxxxxxx94"/>
+            <IfcSimplePropertyTemplate Name="UNI EN 13501-1:2009" id="id_seq44" ref="idPS5" GlobalId="xxxxxxxxxxxxxxxxxxxx95"/>
+            <IfcSimplePropertyTemplate Name="EC 1-2013 - UNI EN 1745:2012" id="id_seq45" ref="idPS6" GlobalId="xxxxxxxxxxxxxxxxxxxx96"/>
+            <IfcSimplePropertyTemplate Name="UNI EN 1996-1-1:2013" id="id_seq46" ref="idPS7" GlobalId="xxxxxxxxxxxxxxxxxxxx97"/>
+            <IfcSimplePropertyTemplate Name="UNI EN 771-1:2015" id="id_seq47" ref="idPS8" GlobalId="xxxxxxxxxxxxxxxxxxxx98"/>
+            <IfcSimplePropertyTemplate Name="UNI EN ISO 12572:2016" id="id_seq48" ref="idPS9" GlobalId="xxxxxxxxxxxxxxxxxxxx99"/>
+            <IfcSimplePropertyTemplate Name="CPR (UE) n° 305/2011" id="id_seq49" ref="idPS10" GlobalId="xxxxxxxxxxxxxxxxxxx100"/>
+            <IfcSimplePropertyTemplate Name="D.M. Infrastrutture 28.02.2017 n.58" id="id_seq50" ref="idPS11" GlobalId="xxxxxxxxxxxxxxxxxxx101"/>
+            <IfcSimplePropertyTemplate Name="D.M. Infrastrutture 17.01.2018" id="id_seq51" ref="idPS12" GlobalId="xxxxxxxxxxxxxxxxxxx102"/>
+            <IfcSimplePropertyTemplate Name="UNI EN 998-2" id="id_seq52" ref="idPS13" GlobalId="xxxxxxxxxxxxxxxxxxx103"/>
+            <IfcSimplePropertyTemplate Name="UNI EN 772-3" id="id_seq53" ref="idPS20" GlobalId="xxxxxxxxxxxxxxxxxxx104"/>
+            <IfcSimplePropertyTemplate Name="UNI EN 772-5" id="id_seq54" ref="idPS21" GlobalId="xxxxxxxxxxxxxxxxxxx105"/>
+            <IfcSimplePropertyTemplate Name="UNI EN 772-7" id="id_seq55" ref="idPS22" GlobalId="xxxxxxxxxxxxxxxxxxx106"/>
+            <IfcSimplePropertyTemplate Name="UNI EN 772-9" id="id_seq56" ref="idPS23" GlobalId="xxxxxxxxxxxxxxxxxxx107"/>
+            <IfcSimplePropertyTemplate Name="UNI EN 772-11" id="id_seq57" ref="idPS24" GlobalId="xxxxxxxxxxxxxxxxxxx108"/>
+            <IfcSimplePropertyTemplate Name="UNI EN 772-13" id="id_seq58" ref="idPS25" GlobalId="xxxxxxxxxxxxxxxxxxx109"/>
+            <IfcSimplePropertyTemplate Name="UNI EN 772-16" id="id_seq59" ref="idPS26" GlobalId="xxxxxxxxxxxxxxxxxxx110"/>
+            <IfcSimplePropertyTemplate Name="UNI EN 772-19" id="id_seq60" ref="idPS27" GlobalId="xxxxxxxxxxxxxxxxxxx111"/>
+            <IfcSimplePropertyTemplate Name="UNI EN 772-20" id="id_seq61" ref="idPS28" GlobalId="xxxxxxxxxxxxxxxxxxx112"/>
+            <IfcSimplePropertyTemplate Name="UNI EN 772-21" id="id_seq62" ref="idPS29" GlobalId="xxxxxxxxxxxxxxxxxxx113"/>
+           </HasPropertyTemplates>
+          </IfcComplexPropertyTemplate>
+         </HasPropertyTemplates>
+        </IfcPropertySetTemplate>
+        <!-- DoP - End  -->
+   
+        <!-- Detail 1 - Start  -->
+        <IfcPropertySetTemplate Name="Details" id="id_seq63" GlobalId="xxxxxxxxxxxxxxxxxxxx16">
+         <HasPropertyTemplates>
+          <IfcComplexPropertyTemplate Name="Particolare delle forature funzionali all'inserimento di micro-armature verticali" href="link to Dett_Foro1.JPG" id="id_seq64" GlobalId="xxxxxxxxxxxxxxxxxxxx65">
+           <HasPropertyTemplates>
+            <IfcSimplePropertyTemplate Name="Spinotti in acciaio B450C, diametro Φ" Description="per micro-armature verticali diffuse con funzione di ingranaggio antiscorrimento" id="idTP28" GlobalId="xxxxxxxxxxxxxxxxxxxx66">
+             <Enumerators Name="Bars">
+              <EnumerationValues><IfcLengthMeasure-wrapper>6</IfcLengthMeasure-wrapper></EnumerationValues>
+              <Unit><IfcSIUnit ref="id00"/></Unit>
+             </Enumerators>
+            </IfcSimplePropertyTemplate>
+            <IfcSimplePropertyTemplate Name="Malta strutturale Classe M15 (UNI EN 998-2), spessore copriferro" Description="spessore di norma > Φ mm 6 + mm 5" ref="idPS7" id="idTP29" GlobalId="xxxxxxxxxxxxxxxxxxxx67">
+             <Enumerators Name="Material">           
+              <EnumerationValues>
+               <IfcLengthMeasure-wrapper>13</IfcLengthMeasure-wrapper>
+              </EnumerationValues>
+              <Unit><IfcSIUnit ref="id00"/></Unit>
+             </Enumerators>
+            </IfcSimplePropertyTemplate>
+            <IfcSimplePropertyTemplate Name="Setto esterno laterizio" Description="spessore minimo > mm 10" ref="idPS20" id="idTP30" GlobalId="xxxxxxxxxxxxxxxxxxxx68">
+             <Enumerators Name="Thickness">
+              <EnumerationValues><IfcLengthMeasure-wrapper>16</IfcLengthMeasure-wrapper></EnumerationValues>
+              <Unit><IfcSIUnit ref="id00"/></Unit>
+             </Enumerators>
+            </IfcSimplePropertyTemplate>
+            <IfcSimplePropertyTemplate Name="Setto esterno laterizio_2" Description="spessore minimo > mm 15" ref="idPS2" id="idTP31" GlobalId="xxxxxxxxxxxxxxxxxxxx69">
+             <Enumerators Name="Thickness">
+              <EnumerationValues><IfcLengthMeasure-wrapper>16</IfcLengthMeasure-wrapper></EnumerationValues>
+              <Unit><IfcSIUnit ref="id00"/></Unit>
+             </Enumerators>
+            </IfcSimplePropertyTemplate> 
+            <IfcSimplePropertyTemplate Name="Forature di estrusione Φ" Description="funzionali all'iniezione di malta strutturale e all'inserimento delle micro-armature verticali" id="idTP32" GlobalId="xxxxxxxxxxxxxxxxxxxx70">
+             <Enumerators Name="Function">
+              <EnumerationValues><IfcLengthMeasure-wrapper>32</IfcLengthMeasure-wrapper></EnumerationValues>
+              <Unit><IfcSIUnit ref="id00"/></Unit>
+             </Enumerators>
+            </IfcSimplePropertyTemplate>
+            <IfcSimplePropertyTemplate Name="Image_1" href="link to Dett_Foro2.JPG" Description="B - Forature oggetto di brevetto e ETA specifico in via di definizione" id="idTP33" GlobalId="xxxxxxxxxxxxxxxxxxxx71">
+            </IfcSimplePropertyTemplate>
+           </HasPropertyTemplates>
+          </IfcComplexPropertyTemplate>
+         </HasPropertyTemplates>
+        </IfcPropertySetTemplate>
+        <!-- Detail 1 - End  -->
+   
+        <!-- Bricks' stacking - Start  -->
+        <IfcPropertySetTemplate Name="Giaciture Mattone ARMALATER: 280*135*72mm" id="id_seq65" GlobalId="xxxxxxxxxxxxxxxxxxxx17">
+         <HasPropertyTemplates>
+          <IfcComplexPropertyTemplate id="id_seq66" GlobalId="xxxxxxxxxxxxxxxxxxxx72">
+           <HasPropertyTemplates>
+            <IfcSimplePropertyTemplate Name="Giacitura Gotica" href="link to Giacitura1.JPG" id="idTP34" GlobalId="xxxxxxxxxxxxxxxxxxxx73"/>
+            <IfcSimplePropertyTemplate Name="Giacitura a Chiave" href="link to Giacitura2.JPG" id="idTP35" GlobalId="xxxxxxxxxxxxxxxxxxxx74"/>
+            <IfcSimplePropertyTemplate Name="Superficie totale" id="idTP36" GlobalId="xxxxxxxxxxxxxxxxxxxx75">
+             <Enumerators Name="Area">
+              <EnumerationValues><IfcAreaMeasure-wrapper>37800</IfcAreaMeasure-wrapper></EnumerationValues>
+              <Unit>
+               <IfcDerivedUnit ref="idCM4" xsi:nil="true"/>
+              </Unit>
+             </Enumerators>
+            </IfcSimplePropertyTemplate>
+            <IfcSimplePropertyTemplate Name="Superficie forata" id="idTP37" GlobalId="xxxxxxxxxxxxxxxxxxxx75"> 
+             <Enumerators Name="Area">
+              <EnumerationValues><IfcAreaMeasure-wrapper>118950</IfcAreaMeasure-wrapper></EnumerationValues>
+              <Unit>
+               <IfcDerivedUnit ref="idCM4" xsi:nil="true"/>
+              </Unit>
+             </Enumerators>
+            </IfcSimplePropertyTemplate>
+            <IfcSimplePropertyTemplate Name="Percentuale di foratura" id="idTP38" GlobalId="xxxxxxxxxxxxxxxxxxxx76">
+             <Enumerators Name="Percentage">
+              <EnumerationValues>
+               <IfcNumericMeasure-wrapper>0.32</IfcNumericMeasure-wrapper>  <!-- percentage -->
+              </EnumerationValues>
+             </Enumerators>
+            </IfcSimplePropertyTemplate>
+           </HasPropertyTemplates>
+          </IfcComplexPropertyTemplate>
+         </HasPropertyTemplates>
+        </IfcPropertySetTemplate>
+        <!-- Bricks' stacking - End  -->
+    
+           <!-- Specification - Start --> 
+        <IfcPropertySetTemplate Name="Voce di Capitolato - Muratura portante armo-confinata antisismica a faccia-vista" 
+                                Description="Fornitura e posa in opera di mattoni in laterizio semipieni estrusi tipo ARMALATER aventi le seguenti prestazioni minime"
+                                id="id_seq67"
+                                GlobalId="xxxxxxxxxxxxxxxxxxxx18">
+         <HasPropertyTemplates>
+          <IfcComplexPropertyTemplate Name="Prova Resistances" id="id_seq68" GlobalId="xxxxxxxxxxxxxxxxxxxx77">
+           <HasPropertyTemplates>
+            <IfcSimplePropertyTemplate Name="Resistenza a compressione" ref="idTP6" id="idTP41" GlobalId="xxxxxxxxxxxxxxxxxxxx78"/>
+            <IfcSimplePropertyTemplate Name="Reazione al fuoco" ref="idTP17" id="idTP42" GlobalId="xxxxxxxxxxxxxxxxxxxx79"/> 
+            <IfcSimplePropertyTemplate Name="Durabilità ai cicli di gelo-disgelo" ref="idTP20" id="idTP43" GlobalId="xxxxxxxxxxxxxxxxxxxx80"/> 
+            <IfcSimplePropertyTemplate Name="Percentuale dei vuoti" ref="idTP13" id="idTP44" GlobalId="xxxxxxxxxxxxxxxxxxxx81"/> 
+            <IfcSimplePropertyTemplate Name="Massa Volumica Lorda a secco" ref="idTP25" id="idTP45" GlobalId="xxxxxxxxxxxxxxxxxxxx82"/> 
+            <IfcSimplePropertyTemplate Name="Conducibilità termica" ref="idTP21" id="idTP46" GlobalId="xxxxxxxxxxxxxxxxxxxx83"/> 
+           </HasPropertyTemplates>
+          </IfcComplexPropertyTemplate>
+         </HasPropertyTemplates>
+        </IfcPropertySetTemplate>
+        
+        <IfcPropertySetTemplate Name="Voce di Capitolato - Muratura portante armo-confinata antisismica a faccia-vista"
+                                Description="La posa in opera dovrà essere effettuata mediante la sovrapposizione degli elementi in disposizione esclusivamente a due teste con tessitura di tipo Gotica o a Chiave. Ogni fila di mattoni sarà legata mediante:" 
+                                id="id_seq69"
+                                GlobalId="xxxxxxxxxxxxxxxxxxxx19">
+         <HasPropertyTemplates>
+          <IfcComplexPropertyTemplate Name="Iniezione di" id="id_seq70" GlobalId="xxxxxxxxxxxxxxxxxxxx84">
+           <HasPropertyTemplates>
+            <IfcSimplePropertyTemplate Name="Specification"  ref="idTP29" Description="nei fori predisposti per l'inserimento delle micro armature in acciaio" id="idTP47" GlobalId="xxxxxxxxxxxxxxxxxxxx85">
+             <!-- check reference -->
+            </IfcSimplePropertyTemplate>
+            <IfcSimplePropertyTemplate Name="Giunti orizzontali realizzati con corsi di malta strutturale Classe M10, in conformità al D.M. 17/01/2018, avente resistenza media a compressione >" id="idTP50" GlobalId="xxxxxxxxxxxxxxxxxxxx86">
+             <Enumerators Name="Structural details">
+              <EnumerationValues><IfcPressureMeasure-wrapper>10</IfcPressureMeasure-wrapper></EnumerationValues>
+              <Unit><IfcSIUnit ref="id02"/></Unit>
+             </Enumerators>
+            </IfcSimplePropertyTemplate>
+            <IfcSimplePropertyTemplate Name="Micro armature verticali diffuse con funzione antiscorrimento, a sovrapposizione sfalsata, realizzate con spinotti in acciaio B450C, diametro" id="idTP51" GlobalId="xxxxxxxxxxxxxxxxxxxx87">
+             <Enumerators Name="Reinforcing bars">
+              <EnumerationValues><IfcLengthMeasure-wrapper>6</IfcLengthMeasure-wrapper></EnumerationValues>
+              <Unit><IfcSIUnit ref="id00"/></Unit>
+             </Enumerators>
+            </IfcSimplePropertyTemplate>
+           </HasPropertyTemplates>
+          </IfcComplexPropertyTemplate>
+         </HasPropertyTemplates>
+        </IfcPropertySetTemplate>
+       
+        <IfcPropertySetTemplate Name="Voce di Capitolato - Muratura portante armo-confinata antisismica a faccia-vista"
+                                Description="Le armature verticali continue verranno disposte in conformità al D.M. 17/01/2018 mediante la fornitura e posa in opera di:" 
+                                id="id_seq71"
+                                GlobalId="xxxxxxxxxxxxxxxxxxxx20">
+         <HasPropertyTemplates>
+          <IfcComplexPropertyTemplate id="id_seq72" GlobalId="xxxxxxxxxxxxxxxxxxxx85">
+           <HasPropertyTemplates>
+            <IfcSimplePropertyTemplate Name="Calandri fiduciari nodali tralicciati in acciaio B450C" 
+                                       Description="da disporre nei nodi angolari ed ortogonali delle pareti portanti" 
+                                       id="idTP70"
+                                       GlobalId="xxxxxxxxxxxxxxxxxxxx86"/>
+            <IfcSimplePropertyTemplate Name="barre integrative in acciaio B450C, diametro" 
+                                       Description="da disporre a distanza ≤ m 4 da ciascuna armatura verticale continua"
+                                       id="idTP71"
+                                       GlobalId="xxxxxxxxxxxxxxxxxxxx87">
+             <Enumerators Name="Bars">
+              <EnumerationValues><IfcLengthMeasure-wrapper>16</IfcLengthMeasure-wrapper></EnumerationValues>
+              <Unit><IfcSIUnit ref="id00"/></Unit>
+             </Enumerators>
+            </IfcSimplePropertyTemplate>
+           </HasPropertyTemplates>
+          </IfcComplexPropertyTemplate>
+         </HasPropertyTemplates>
+        </IfcPropertySetTemplate>
+        <!-- Specification - End  -->
+   
+        <!-- Technical Specification - Start  -->
+         <IfcSimplePropertyTemplate Name="Prospetto"
+                                    Description="Il sistema prevede l’inserimento di un micro armatura diffusa rappresentata da spinotti (tondini di acciaio nervato) inseriti ogni due file di mattoni
+                                    in maniera predeterminata nelle forature dei mattoni stessi con funzione anti scorrimento, andando a creare una connessione di tipo verticale sfalsata per ciascun corso e nello stesso tempo concatenante i
+                                    mattoni del corso inferiore con quelli del corso superiore." href="link to Descriz_breve1.JPG"
+                                    id="idTP52"
+                                    GlobalId="xxxxxxxxxxxxxxxxxxxx21"/>
+            
+         <IfcSimplePropertyTemplate Name="Sezioni primo e secondo corso di mattoni"
+                                    Description="Questa tecnica si differenzia dalle altre note poiché non adotta il sistema rappresentato da una continuità
+                                    di ciascun tondo di acciaio che attraversa la muratura stessa da un solaio all’altro e non utilizza armature di tipo orizzontale aggiuntive in quanto i vincoli che si creano tra i vari corsi attraverso 
+                                    il sistema di diffusione sfalsata sono sufficienti ad assicurare il collegamento tra tutte le file di mattoni."
+                                    href="link to Descriz_breve2.JPG"
+                                    id="idTP53" 
+                                    GlobalId="xxxxxxxxxxxxxxxxxxxx22"/> 
+            
+         <IfcSimplePropertyTemplate Name="Sezioni zona angolo primo e secondo corso di mattoni"
+                                    Description="Il sistema infine prevede, solo nelle zone d’angolo, dei cosiddetti “calandri fiduciari angolari” con funzione
+                                    di collegamento a cerniera delle murature ortogonali, formati da un doppio traliccio elettrosaldato fissato su una piastra d’acciaio."
+                                    href="link to Descriz_breve3.JPG" 
+                                    id="idTP54"
+                                    GlobalId="xxxxxxxxxxxxxxxxxxxx23"/> 
+            
+         <IfcSimplePropertyTemplate Name="Calando fiduciario angolare"
+                                    Description="Il calandro verrà gettato (una volta ultimato il muro in elevazione) unitamente al cordolo di collegamento
+                                    ed al solaio che, con la sua funzione di diaframma rigido, renderà definito nella sua scatolarità il sistema."
+                                    href="link to Descriz_breve4.JPG" 
+                                    id="idTP55" 
+                                    GlobalId="xxxxxxxxxxxxxxxxxxxx24"/>
+        <!-- Technical Specification - End  -->  
+         
+       </RelatedDefinitions>
+      </IfcRelDeclares>
+     </Declares>
+    </IfcProjectLibrary>
+    <!-- Project Library - End  -->
+    
+ </ifcXML>
+    

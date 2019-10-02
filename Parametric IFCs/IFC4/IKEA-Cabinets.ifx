@@ -1,0 +1,3490 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ex:iso_10303_28 xmlns:ex="urn:iso.org:standard:10303:part(28):version(2):xmlschema:common">
+	<ex:uos configuration="i-ifc2x4_rc2" xmlns:ex="http://www.iai-tech.org/ifcXML/IFC2X4_RC2">
+		<IfcApplication id="i1">
+			<ApplicationDeveloper>
+				<IfcOrganization id="i2">
+					<Name>Constructivity.com LLC</Name>
+					<Roles ex:cType="list"/>
+					<Addresses ex:cType="list"/>
+				</IfcOrganization>
+			</ApplicationDeveloper>
+			<Version>0.9.8</Version>
+			<ApplicationFullName>Constructivity</ApplicationFullName>
+			<ApplicationIdentifier>CONSTRUCTIVITY</ApplicationIdentifier>
+		</IfcApplication>
+		<IfcPersonAndOrganization id="i5">
+			<ThePerson>
+				<IfcPerson id="i3">
+					<Identification>Tim</Identification>
+					<MiddleNames ex:cType="list"/>
+					<PrefixTitles ex:cType="list"/>
+					<SuffixTitles ex:cType="list"/>
+					<Roles ex:cType="list"/>
+					<Addresses ex:cType="list"/>
+				</IfcPerson>
+			</ThePerson>
+			<TheOrganization>
+				<IfcOrganization id="i4">
+					<Name>PARLOR</Name>
+					<Roles ex:cType="list"/>
+					<Addresses ex:cType="list"/>
+				</IfcOrganization>
+			</TheOrganization>
+			<Roles ex:cType="list"/>
+		</IfcPersonAndOrganization>
+		<IfcGeometricRepresentationContext id="i44">
+			<ContextIdentifier>3D</ContextIdentifier>
+			<ContextType>Model</ContextType>
+			<CoordinateSpaceDimension>3</CoordinateSpaceDimension>
+			<Precision/>
+			<WorldCoordinateSystem>
+				<IfcAxis2Placement3D id="i43">
+					<Location>
+						<IfcCartesianPoint id="i42">
+							<Coordinates ex:cType="list">
+								<IfcLengthMeasure nil="true" ex:pos="0">0</IfcLengthMeasure>
+								<IfcLengthMeasure nil="true" ex:pos="1">0</IfcLengthMeasure>
+								<IfcLengthMeasure nil="true" ex:pos="2">0</IfcLengthMeasure>
+							</Coordinates>
+						</IfcCartesianPoint>
+					</Location>
+				</IfcAxis2Placement3D>
+			</WorldCoordinateSystem>
+		</IfcGeometricRepresentationContext>
+		<IfcSystemFurnitureElementType id="i48">
+			<GlobalId>1kn3mxj0n2URz0dyzoquAg</GlobalId>
+			<OwnerHistory>
+				<IfcOwnerHistory id="i830">
+					<OwningUser>
+						<IfcPersonAndOrganization nil="true" ref="i5"/>
+					</OwningUser>
+					<OwningApplication>
+						<IfcApplication nil="true" ref="i1"/>
+					</OwningApplication>
+					<State>readwrite</State>
+					<ChangeAction>modified</ChangeAction>
+					<LastModifiedDate>1393826607</LastModifiedDate>
+					<LastModifyingUser>
+						<IfcPersonAndOrganization nil="true" ref="i765"/>
+					</LastModifyingUser>
+					<LastModifyingApplication>
+						<IfcApplication nil="true" ref="i1"/>
+					</LastModifyingApplication>
+					<CreationDate>1393823065</CreationDate>
+				</IfcOwnerHistory>
+			</OwnerHistory>
+			<Name>AKURUM</Name>
+			<Description>Base cabinet frame</Description>
+			<HasPropertySets ex:cType="set"/>
+			<RepresentationMaps ex:cType="list">
+				<IfcRepresentationMap id="i55">
+					<MappingOrigin>
+						<IfcAxis2Placement3D id="i57">
+							<Location>
+								<IfcCartesianPoint id="i56">
+									<Coordinates ex:cType="list">
+										<IfcLengthMeasure nil="true" ex:pos="0">0</IfcLengthMeasure>
+										<IfcLengthMeasure nil="true" ex:pos="1">0</IfcLengthMeasure>
+										<IfcLengthMeasure nil="true" ex:pos="2">0</IfcLengthMeasure>
+									</Coordinates>
+								</IfcCartesianPoint>
+							</Location>
+						</IfcAxis2Placement3D>
+					</MappingOrigin>
+					<MappedRepresentation>
+						<IfcShapeRepresentation id="i54">
+							<ContextOfItems>
+								<IfcGeometricRepresentationContext nil="true" ref="i44"/>
+							</ContextOfItems>
+							<RepresentationIdentifier>Box</RepresentationIdentifier>
+							<RepresentationType>BoundingBox</RepresentationType>
+							<Items ex:cType="set">
+								<IfcBoundingBox id="i53">
+									<Corner>
+										<IfcCartesianPoint id="i52">
+											<Coordinates ex:cType="list">
+												<IfcLengthMeasure nil="true" ex:pos="0">0</IfcLengthMeasure>
+												<IfcLengthMeasure nil="true" ex:pos="1">0</IfcLengthMeasure>
+												<IfcLengthMeasure nil="true" ex:pos="2">0</IfcLengthMeasure>
+											</Coordinates>
+										</IfcCartesianPoint>
+									</Corner>
+									<XDim>36</XDim>
+									<YDim>24</YDim>
+									<ZDim>30.375</ZDim>
+								</IfcBoundingBox>
+							</Items>
+						</IfcShapeRepresentation>
+					</MappedRepresentation>
+				</IfcRepresentationMap>
+				<IfcRepresentationMap id="i64">
+					<MappingOrigin>
+						<IfcAxis2Placement3D id="i66">
+							<Location>
+								<IfcCartesianPoint id="i65">
+									<Coordinates ex:cType="list">
+										<IfcLengthMeasure nil="true" ex:pos="0">0</IfcLengthMeasure>
+										<IfcLengthMeasure nil="true" ex:pos="1">0</IfcLengthMeasure>
+										<IfcLengthMeasure nil="true" ex:pos="2">0</IfcLengthMeasure>
+									</Coordinates>
+								</IfcCartesianPoint>
+							</Location>
+						</IfcAxis2Placement3D>
+					</MappingOrigin>
+					<MappedRepresentation>
+						<IfcShapeRepresentation id="i63">
+							<ContextOfItems>
+								<IfcGeometricRepresentationContext nil="true" ref="i44"/>
+							</ContextOfItems>
+							<RepresentationIdentifier>Body</RepresentationIdentifier>
+							<RepresentationType>CSG</RepresentationType>
+							<Items ex:cType="set">
+								<IfcBlock id="i69">
+									<Position>
+										<IfcAxis2Placement3D id="i74">
+											<Location>
+												<IfcCartesianPoint id="i72">
+													<Coordinates ex:cType="list">
+														<IfcLengthMeasure nil="true" ex:pos="0">0</IfcLengthMeasure>
+														<IfcLengthMeasure nil="true" ex:pos="1">0</IfcLengthMeasure>
+														<IfcLengthMeasure nil="true" ex:pos="2">0</IfcLengthMeasure>
+													</Coordinates>
+												</IfcCartesianPoint>
+											</Location>
+											<Axis>
+												<IfcDirection nil="true" ref="i73"/>
+											</Axis>
+											<RefDirection>
+												<IfcDirection nil="true" ref="i68"/>
+											</RefDirection>
+										</IfcAxis2Placement3D>
+									</Position>
+									<XLength>0.75</XLength>
+									<YLength>24</YLength>
+									<ZLength>30.375</ZLength>
+								</IfcBlock>
+								<IfcBlock id="i129">
+									<Position>
+										<IfcAxis2Placement3D id="i131">
+											<Location>
+												<IfcCartesianPoint id="i130">
+													<Coordinates ex:cType="list">
+														<IfcLengthMeasure nil="true" ex:pos="0">35.25</IfcLengthMeasure>
+														<IfcLengthMeasure nil="true" ex:pos="1">0</IfcLengthMeasure>
+														<IfcLengthMeasure nil="true" ex:pos="2">0</IfcLengthMeasure>
+													</Coordinates>
+												</IfcCartesianPoint>
+											</Location>
+											<Axis>
+												<IfcDirection nil="true" ref="i73"/>
+											</Axis>
+											<RefDirection>
+												<IfcDirection nil="true" ref="i68"/>
+											</RefDirection>
+										</IfcAxis2Placement3D>
+									</Position>
+									<XLength>0.75</XLength>
+									<YLength>24</YLength>
+									<ZLength>30.375</ZLength>
+								</IfcBlock>
+								<IfcBlock id="i184">
+									<Position>
+										<IfcAxis2Placement3D id="i189">
+											<Location>
+												<IfcCartesianPoint id="i187">
+													<Coordinates ex:cType="list">
+														<IfcLengthMeasure nil="true" ex:pos="0">0</IfcLengthMeasure>
+														<IfcLengthMeasure nil="true" ex:pos="1">0</IfcLengthMeasure>
+														<IfcLengthMeasure nil="true" ex:pos="2">1.01372981071472</IfcLengthMeasure>
+													</Coordinates>
+												</IfcCartesianPoint>
+											</Location>
+											<Axis>
+												<IfcDirection id="i188">
+													<DirectionRatios ex:cType="list">
+														<ex:double-wrapper ex:pos="0">-1</ex:double-wrapper>
+														<ex:double-wrapper ex:pos="1">0</ex:double-wrapper>
+														<ex:double-wrapper ex:pos="2">0</ex:double-wrapper>
+													</DirectionRatios>
+												</IfcDirection>
+											</Axis>
+											<RefDirection>
+												<IfcDirection id="i183">
+													<DirectionRatios ex:cType="list">
+														<ex:double-wrapper ex:pos="0">1</ex:double-wrapper>
+														<ex:double-wrapper ex:pos="1">0</ex:double-wrapper>
+														<ex:double-wrapper ex:pos="2">0</ex:double-wrapper>
+													</DirectionRatios>
+												</IfcDirection>
+											</RefDirection>
+										</IfcAxis2Placement3D>
+									</Position>
+									<XLength>36</XLength>
+									<YLength>24</YLength>
+									<ZLength>24</ZLength>
+								</IfcBlock>
+								<IfcBlock id="i196">
+									<Position>
+										<IfcAxis2Placement3D id="i201">
+											<Location>
+												<IfcCartesianPoint id="i199">
+													<Coordinates ex:cType="list">
+														<IfcLengthMeasure nil="true" ex:pos="0">0</IfcLengthMeasure>
+														<IfcLengthMeasure nil="true" ex:pos="1">0</IfcLengthMeasure>
+														<IfcLengthMeasure nil="true" ex:pos="2">0</IfcLengthMeasure>
+													</Coordinates>
+												</IfcCartesianPoint>
+											</Location>
+											<Axis>
+												<IfcDirection id="i200">
+													<DirectionRatios ex:cType="list">
+														<ex:double-wrapper ex:pos="0">0</ex:double-wrapper>
+														<ex:double-wrapper ex:pos="1">0</ex:double-wrapper>
+														<ex:double-wrapper ex:pos="2">1</ex:double-wrapper>
+													</DirectionRatios>
+												</IfcDirection>
+											</Axis>
+											<RefDirection>
+												<IfcDirection id="i195">
+													<DirectionRatios ex:cType="list">
+														<ex:double-wrapper ex:pos="0">1</ex:double-wrapper>
+														<ex:double-wrapper ex:pos="1">0</ex:double-wrapper>
+														<ex:double-wrapper ex:pos="2">0</ex:double-wrapper>
+													</DirectionRatios>
+												</IfcDirection>
+											</RefDirection>
+										</IfcAxis2Placement3D>
+									</Position>
+									<XLength>36</XLength>
+									<YLength>24</YLength>
+									<ZLength>0.75</ZLength>
+								</IfcBlock>
+								<IfcBlock id="i252">
+									<Position>
+										<IfcAxis2Placement3D id="i264">
+											<Location>
+												<IfcCartesianPoint id="i263">
+													<Coordinates ex:cType="list">
+														<IfcLengthMeasure nil="true" ex:pos="0">0</IfcLengthMeasure>
+														<IfcLengthMeasure nil="true" ex:pos="1">0</IfcLengthMeasure>
+														<IfcLengthMeasure nil="true" ex:pos="2">29.625</IfcLengthMeasure>
+													</Coordinates>
+												</IfcCartesianPoint>
+											</Location>
+										</IfcAxis2Placement3D>
+									</Position>
+									<XLength>36</XLength>
+									<YLength>3</YLength>
+									<ZLength>0.75</ZLength>
+								</IfcBlock>
+								<IfcBlock id="i322">
+									<Position>
+										<IfcAxis2Placement3D id="i328">
+											<Location>
+												<IfcCartesianPoint id="i327">
+													<Coordinates ex:cType="list">
+														<IfcLengthMeasure nil="true" ex:pos="0">0</IfcLengthMeasure>
+														<IfcLengthMeasure nil="true" ex:pos="1">21</IfcLengthMeasure>
+														<IfcLengthMeasure nil="true" ex:pos="2">29.625</IfcLengthMeasure>
+													</Coordinates>
+												</IfcCartesianPoint>
+											</Location>
+										</IfcAxis2Placement3D>
+									</Position>
+									<XLength>36</XLength>
+									<YLength>3</YLength>
+									<ZLength>0.75</ZLength>
+								</IfcBlock>
+								<IfcBlock id="i391">
+									<Position>
+										<IfcAxis2Placement3D id="i396">
+											<Location>
+												<IfcCartesianPoint id="i394">
+													<Coordinates ex:cType="list">
+														<IfcLengthMeasure nil="true" ex:pos="0">0</IfcLengthMeasure>
+														<IfcLengthMeasure nil="true" ex:pos="1">23.875</IfcLengthMeasure>
+														<IfcLengthMeasure nil="true" ex:pos="2">0</IfcLengthMeasure>
+													</Coordinates>
+												</IfcCartesianPoint>
+											</Location>
+											<Axis>
+												<IfcDirection id="i395">
+													<DirectionRatios ex:cType="list">
+														<ex:double-wrapper ex:pos="0">0</ex:double-wrapper>
+														<ex:double-wrapper ex:pos="1">0</ex:double-wrapper>
+														<ex:double-wrapper ex:pos="2">1</ex:double-wrapper>
+													</DirectionRatios>
+												</IfcDirection>
+											</Axis>
+											<RefDirection>
+												<IfcDirection id="i390">
+													<DirectionRatios ex:cType="list">
+														<ex:double-wrapper ex:pos="0">1</ex:double-wrapper>
+														<ex:double-wrapper ex:pos="1">0</ex:double-wrapper>
+														<ex:double-wrapper ex:pos="2">0</ex:double-wrapper>
+													</DirectionRatios>
+												</IfcDirection>
+											</RefDirection>
+										</IfcAxis2Placement3D>
+									</Position>
+									<XLength>36</XLength>
+									<YLength>0.125</YLength>
+									<ZLength>30.375</ZLength>
+								</IfcBlock>
+							</Items>
+						</IfcShapeRepresentation>
+					</MappedRepresentation>
+				</IfcRepresentationMap>
+			</RepresentationMaps>
+			<Tag>400.493.49</Tag>
+		</IfcSystemFurnitureElementType>
+		<IfcOwnerHistory id="i49">
+			<OwningUser>
+				<IfcPersonAndOrganization nil="true" ref="i5"/>
+			</OwningUser>
+			<OwningApplication>
+				<IfcApplication nil="true" ref="i1"/>
+			</OwningApplication>
+			<State>readwrite</State>
+			<ChangeAction>nochange</ChangeAction>
+			<CreationDate>1393823065</CreationDate>
+		</IfcOwnerHistory>
+		<IfcRelDeclares id="i50">
+			<GlobalId>1MF83jgo5Bx8pMHQ3Kze8T</GlobalId>
+			<OwnerHistory>
+				<IfcOwnerHistory id="i51">
+					<OwningUser>
+						<IfcPersonAndOrganization nil="true" ref="i5"/>
+					</OwningUser>
+					<OwningApplication>
+						<IfcApplication nil="true" ref="i1"/>
+					</OwningApplication>
+					<State>readwrite</State>
+					<ChangeAction>nochange</ChangeAction>
+					<CreationDate>1393823067</CreationDate>
+				</IfcOwnerHistory>
+			</OwnerHistory>
+			<RelatingContext>
+				<IfcProject id="i40">
+					<GlobalId>0GNU7PX5D4muGs7qHL4OTx</GlobalId>
+					<OwnerHistory>
+						<IfcOwnerHistory id="i41">
+							<OwningUser>
+								<IfcPersonAndOrganization nil="true" ref="i5"/>
+							</OwningUser>
+							<OwningApplication>
+								<IfcApplication nil="true" ref="i1"/>
+							</OwningApplication>
+							<State>readwrite</State>
+							<ChangeAction>nochange</ChangeAction>
+							<CreationDate>1393823060</CreationDate>
+						</IfcOwnerHistory>
+					</OwnerHistory>
+					<Name>Project</Name>
+					<RepresentationContexts ex:cType="set">
+						<IfcGeometricRepresentationContext nil="true" ref="i44"/>
+						<IfcGeometricRepresentationContext id="i47">
+							<ContextIdentifier>2D</ContextIdentifier>
+							<ContextType>Plan</ContextType>
+							<CoordinateSpaceDimension>2</CoordinateSpaceDimension>
+							<Precision/>
+							<WorldCoordinateSystem>
+								<IfcAxis2Placement3D id="i46">
+									<Location>
+										<IfcCartesianPoint id="i45">
+											<Coordinates ex:cType="list">
+												<IfcLengthMeasure nil="true" ex:pos="0">0</IfcLengthMeasure>
+												<IfcLengthMeasure nil="true" ex:pos="1">0</IfcLengthMeasure>
+												<IfcLengthMeasure nil="true" ex:pos="2">0</IfcLengthMeasure>
+											</Coordinates>
+										</IfcCartesianPoint>
+									</Location>
+								</IfcAxis2Placement3D>
+							</WorldCoordinateSystem>
+						</IfcGeometricRepresentationContext>
+					</RepresentationContexts>
+					<UnitsInContext>
+						<IfcUnitAssignment id="i39">
+							<Units ex:cType="set">
+								<IfcMonetaryUnit id="i6">
+									<Currency>USD</Currency>
+								</IfcMonetaryUnit>
+								<IfcConversionBasedUnit id="i10">
+									<Dimensions>
+										<IfcDimensionalExponents id="i9">
+											<LengthExponent/>
+											<MassExponent/>
+											<TimeExponent/>
+											<ElectricCurrentExponent/>
+											<ThermodynamicTemperatureExponent/>
+											<AmountOfSubstanceExponent/>
+											<LuminousIntensityExponent/>
+										</IfcDimensionalExponents>
+									</Dimensions>
+									<UnitType>areaunit</UnitType>
+									<Name>square inch</Name>
+									<ConversionFactor>
+										<IfcMeasureWithUnit id="i8">
+											<ValueComponent>
+												<IfcAreaMeasure>0.0006452</IfcAreaMeasure>
+											</ValueComponent>
+											<UnitComponent>
+												<IfcSIUnit id="i7">
+													<UnitType>areaunit</UnitType>
+													<Name>square_metre</Name>
+												</IfcSIUnit>
+											</UnitComponent>
+										</IfcMeasureWithUnit>
+									</ConversionFactor>
+								</IfcConversionBasedUnit>
+								<IfcConversionBasedUnit id="i14">
+									<Dimensions>
+										<IfcDimensionalExponents id="i13">
+											<LengthExponent/>
+											<MassExponent/>
+											<TimeExponent/>
+											<ElectricCurrentExponent/>
+											<ThermodynamicTemperatureExponent/>
+											<AmountOfSubstanceExponent/>
+											<LuminousIntensityExponent/>
+										</IfcDimensionalExponents>
+									</Dimensions>
+									<UnitType>forceunit</UnitType>
+									<Name>pound-force</Name>
+									<ConversionFactor>
+										<IfcMeasureWithUnit id="i12">
+											<ValueComponent>
+												<IfcMassMeasure>4.44822162</IfcMassMeasure>
+											</ValueComponent>
+											<UnitComponent>
+												<IfcSIUnit id="i11">
+													<UnitType>forceunit</UnitType>
+													<Name>newton</Name>
+												</IfcSIUnit>
+											</UnitComponent>
+										</IfcMeasureWithUnit>
+									</ConversionFactor>
+								</IfcConversionBasedUnit>
+								<IfcConversionBasedUnit id="i18">
+									<Dimensions>
+										<IfcDimensionalExponents id="i17">
+											<LengthExponent/>
+											<MassExponent/>
+											<TimeExponent/>
+											<ElectricCurrentExponent/>
+											<ThermodynamicTemperatureExponent/>
+											<AmountOfSubstanceExponent/>
+											<LuminousIntensityExponent/>
+										</IfcDimensionalExponents>
+									</Dimensions>
+									<UnitType>lengthunit</UnitType>
+									<Name>inch</Name>
+									<ConversionFactor>
+										<IfcMeasureWithUnit id="i16">
+											<ValueComponent>
+												<IfcLengthMeasure>0.0254</IfcLengthMeasure>
+											</ValueComponent>
+											<UnitComponent>
+												<IfcSIUnit id="i15">
+													<UnitType>lengthunit</UnitType>
+													<Name>metre</Name>
+												</IfcSIUnit>
+											</UnitComponent>
+										</IfcMeasureWithUnit>
+									</ConversionFactor>
+								</IfcConversionBasedUnit>
+								<IfcConversionBasedUnit id="i22">
+									<Dimensions>
+										<IfcDimensionalExponents id="i21">
+											<LengthExponent/>
+											<MassExponent/>
+											<TimeExponent/>
+											<ElectricCurrentExponent/>
+											<ThermodynamicTemperatureExponent/>
+											<AmountOfSubstanceExponent/>
+											<LuminousIntensityExponent/>
+										</IfcDimensionalExponents>
+									</Dimensions>
+									<UnitType>massunit</UnitType>
+									<Name>pound</Name>
+									<ConversionFactor>
+										<IfcMeasureWithUnit id="i20">
+											<ValueComponent>
+												<IfcMassMeasure>0.45359237</IfcMassMeasure>
+											</ValueComponent>
+											<UnitComponent>
+												<IfcSIUnit id="i19">
+													<UnitType>massunit</UnitType>
+													<Prefix>kilo</Prefix>
+													<Name>gram</Name>
+												</IfcSIUnit>
+											</UnitComponent>
+										</IfcMeasureWithUnit>
+									</ConversionFactor>
+								</IfcConversionBasedUnit>
+								<IfcConversionBasedUnit id="i26">
+									<Dimensions>
+										<IfcDimensionalExponents id="i25">
+											<LengthExponent/>
+											<MassExponent/>
+											<TimeExponent/>
+											<ElectricCurrentExponent/>
+											<ThermodynamicTemperatureExponent/>
+											<AmountOfSubstanceExponent/>
+											<LuminousIntensityExponent/>
+										</IfcDimensionalExponents>
+									</Dimensions>
+									<UnitType>planeangleunit</UnitType>
+									<Name>degree</Name>
+									<ConversionFactor>
+										<IfcMeasureWithUnit id="i24">
+											<ValueComponent>
+												<IfcPlaneAngleMeasure>0.0174532925199433</IfcPlaneAngleMeasure>
+											</ValueComponent>
+											<UnitComponent>
+												<IfcSIUnit id="i23">
+													<UnitType>planeangleunit</UnitType>
+													<Name>radian</Name>
+												</IfcSIUnit>
+											</UnitComponent>
+										</IfcMeasureWithUnit>
+									</ConversionFactor>
+								</IfcConversionBasedUnit>
+								<IfcConversionBasedUnit id="i30">
+									<Dimensions>
+										<IfcDimensionalExponents id="i29">
+											<LengthExponent/>
+											<MassExponent/>
+											<TimeExponent/>
+											<ElectricCurrentExponent/>
+											<ThermodynamicTemperatureExponent/>
+											<AmountOfSubstanceExponent/>
+											<LuminousIntensityExponent/>
+										</IfcDimensionalExponents>
+									</Dimensions>
+									<UnitType>pressureunit</UnitType>
+									<Name>pound-force per square inch</Name>
+									<ConversionFactor>
+										<IfcMeasureWithUnit id="i28">
+											<ValueComponent>
+												<IfcPressureMeasure>6894.7572932</IfcPressureMeasure>
+											</ValueComponent>
+											<UnitComponent>
+												<IfcSIUnit id="i27">
+													<UnitType>pressureunit</UnitType>
+													<Name>pascal</Name>
+												</IfcSIUnit>
+											</UnitComponent>
+										</IfcMeasureWithUnit>
+									</ConversionFactor>
+								</IfcConversionBasedUnit>
+								<IfcConversionBasedUnitWithOffset id="i34">
+									<Dimensions>
+										<IfcDimensionalExponents id="i33">
+											<LengthExponent/>
+											<MassExponent/>
+											<TimeExponent/>
+											<ElectricCurrentExponent/>
+											<ThermodynamicTemperatureExponent/>
+											<AmountOfSubstanceExponent/>
+											<LuminousIntensityExponent/>
+										</IfcDimensionalExponents>
+									</Dimensions>
+									<UnitType>thermodynamictemperatureunit</UnitType>
+									<Name>Fahrenheit</Name>
+									<ConversionFactor>
+										<IfcMeasureWithUnit id="i32">
+											<ValueComponent>
+												<IfcThermodynamicTemperatureMeasure>1.8</IfcThermodynamicTemperatureMeasure>
+											</ValueComponent>
+											<UnitComponent>
+												<IfcSIUnit id="i31">
+													<UnitType>thermodynamictemperatureunit</UnitType>
+													<Name>kelvin</Name>
+												</IfcSIUnit>
+											</UnitComponent>
+										</IfcMeasureWithUnit>
+									</ConversionFactor>
+									<ConversionOffset>-459.67</ConversionOffset>
+								</IfcConversionBasedUnitWithOffset>
+								<IfcConversionBasedUnit id="i38">
+									<Dimensions>
+										<IfcDimensionalExponents id="i37">
+											<LengthExponent/>
+											<MassExponent/>
+											<TimeExponent/>
+											<ElectricCurrentExponent/>
+											<ThermodynamicTemperatureExponent/>
+											<AmountOfSubstanceExponent/>
+											<LuminousIntensityExponent/>
+										</IfcDimensionalExponents>
+									</Dimensions>
+									<UnitType>volumeunit</UnitType>
+									<Name>cubic inch</Name>
+									<ConversionFactor>
+										<IfcMeasureWithUnit id="i36">
+											<ValueComponent>
+												<IfcVolumeMeasure>1.639E-05</IfcVolumeMeasure>
+											</ValueComponent>
+											<UnitComponent>
+												<IfcSIUnit id="i35">
+													<UnitType>volumeunit</UnitType>
+													<Name>cubic_metre</Name>
+												</IfcSIUnit>
+											</UnitComponent>
+										</IfcMeasureWithUnit>
+									</ConversionFactor>
+								</IfcConversionBasedUnit>
+							</Units>
+						</IfcUnitAssignment>
+					</UnitsInContext>
+				</IfcProject>
+			</RelatingContext>
+			<RelatedDefinitions ex:cType="set">
+				<IfcSystemFurnitureElementType nil="true" ref="i48"/>
+			</RelatedDefinitions>
+		</IfcRelDeclares>
+		<IfcDirection id="i68">
+			<DirectionRatios ex:cType="list">
+				<ex:double-wrapper ex:pos="0">1</ex:double-wrapper>
+				<ex:double-wrapper ex:pos="1">0</ex:double-wrapper>
+				<ex:double-wrapper ex:pos="2">0</ex:double-wrapper>
+			</DirectionRatios>
+		</IfcDirection>
+		<IfcAxis2Placement3D id="i71">
+			<Location>
+				<IfcCartesianPoint id="i70">
+					<Coordinates ex:cType="list">
+						<IfcLengthMeasure nil="true" ex:pos="0">0</IfcLengthMeasure>
+						<IfcLengthMeasure nil="true" ex:pos="1">0</IfcLengthMeasure>
+						<IfcLengthMeasure nil="true" ex:pos="2">0</IfcLengthMeasure>
+					</Coordinates>
+				</IfcCartesianPoint>
+			</Location>
+		</IfcAxis2Placement3D>
+		<IfcDirection id="i73">
+			<DirectionRatios ex:cType="list">
+				<ex:double-wrapper ex:pos="0">0</ex:double-wrapper>
+				<ex:double-wrapper ex:pos="1">0</ex:double-wrapper>
+				<ex:double-wrapper ex:pos="2">1</ex:double-wrapper>
+			</DirectionRatios>
+		</IfcDirection>
+		<IfcRelAssociatesConstraint id="i82">
+			<GlobalId>3QJuPMhs15oAWePjtjzHqa</GlobalId>
+			<OwnerHistory>
+				<IfcOwnerHistory id="i83">
+					<OwningUser>
+						<IfcPersonAndOrganization nil="true" ref="i5"/>
+					</OwningUser>
+					<OwningApplication>
+						<IfcApplication nil="true" ref="i1"/>
+					</OwningApplication>
+					<State>readwrite</State>
+					<ChangeAction>nochange</ChangeAction>
+					<CreationDate>1393823195</CreationDate>
+				</IfcOwnerHistory>
+			</OwnerHistory>
+			<Name/>
+			<RelatedObjects ex:cType="set">
+				<IfcSystemFurnitureElementType nil="true" ref="i48"/>
+			</RelatedObjects>
+			<RelatingConstraint>
+				<IfcObjective id="i81">
+					<Name>Parametric</Name>
+					<ConstraintGrade>hard</ConstraintGrade>
+					<BenchmarkValues ex:cType="list">
+						<IfcMetric id="i95">
+							<Name>Anchor-1-Y</Name>
+							<ConstraintGrade>hard</ConstraintGrade>
+							<Benchmark>equalto</Benchmark>
+							<ValueSource>Span</ValueSource>
+							<DataValue>
+								<IfcAppliedValue id="i89">
+									<AppliedValue>
+										<IfcReference id="i88">
+											<TypeIdentifier>IfcTypeProduct</TypeIdentifier>
+											<AttributeIdentifier>RepresentationMaps</AttributeIdentifier>
+											<InstanceName>Box</InstanceName>
+											<ListPositions ex:cType="list"/>
+											<InnerReference>
+												<IfcReference id="i87">
+													<TypeIdentifier>IfcRepresentationMap</TypeIdentifier>
+													<AttributeIdentifier>MappedRepresentation</AttributeIdentifier>
+													<ListPositions ex:cType="list"/>
+													<InnerReference>
+														<IfcReference id="i86">
+															<TypeIdentifier>IfcShapeRepresentation</TypeIdentifier>
+															<AttributeIdentifier>Items</AttributeIdentifier>
+															<ListPositions ex:cType="list">
+																<Int32 nil="true" ex:pos="0"/>
+															</ListPositions>
+															<InnerReference>
+																<IfcReference id="i85">
+																	<TypeIdentifier>IfcBoundingBox</TypeIdentifier>
+																	<AttributeIdentifier>YDim</AttributeIdentifier>
+																	<ListPositions ex:cType="list"/>
+																	<InnerReference>
+																		<IfcReference id="i84">
+																			<TypeIdentifier>IfcPositiveLengthMeasure</TypeIdentifier>
+																			<ListPositions ex:cType="list"/>
+																		</IfcReference>
+																	</InnerReference>
+																</IfcReference>
+															</InnerReference>
+														</IfcReference>
+													</InnerReference>
+												</IfcReference>
+											</InnerReference>
+										</IfcReference>
+									</AppliedValue>
+									<Components ex:cType="list"/>
+								</IfcAppliedValue>
+							</DataValue>
+							<ReferencePath>
+								<IfcReference id="i94">
+									<TypeIdentifier>IfcTypeProduct</TypeIdentifier>
+									<AttributeIdentifier>RepresentationMaps</AttributeIdentifier>
+									<InstanceName>Body</InstanceName>
+									<ListPositions ex:cType="list"/>
+									<InnerReference>
+										<IfcReference id="i93">
+											<TypeIdentifier>IfcRepresentationMap</TypeIdentifier>
+											<AttributeIdentifier>MappedRepresentation</AttributeIdentifier>
+											<ListPositions ex:cType="list"/>
+											<InnerReference>
+												<IfcReference id="i92">
+													<TypeIdentifier>IfcShapeRepresentation</TypeIdentifier>
+													<AttributeIdentifier>Items</AttributeIdentifier>
+													<ListPositions ex:cType="list">
+														<Int32 nil="true" ex:pos="0"/>
+													</ListPositions>
+													<InnerReference>
+														<IfcReference id="i91">
+															<TypeIdentifier>IfcBlock</TypeIdentifier>
+															<AttributeIdentifier>YLength</AttributeIdentifier>
+															<ListPositions ex:cType="list"/>
+															<InnerReference>
+																<IfcReference id="i90">
+																	<TypeIdentifier>IfcPositiveLengthMeasure</TypeIdentifier>
+																	<ListPositions ex:cType="list"/>
+																</IfcReference>
+															</InnerReference>
+														</IfcReference>
+													</InnerReference>
+												</IfcReference>
+											</InnerReference>
+										</IfcReference>
+									</InnerReference>
+								</IfcReference>
+							</ReferencePath>
+						</IfcMetric>
+						<IfcMetric id="i109">
+							<Name>Anchor-1-Z</Name>
+							<ConstraintGrade>hard</ConstraintGrade>
+							<Benchmark>equalto</Benchmark>
+							<ValueSource>Span</ValueSource>
+							<DataValue>
+								<IfcAppliedValue id="i103">
+									<AppliedValue>
+										<IfcReference id="i102">
+											<TypeIdentifier>IfcTypeProduct</TypeIdentifier>
+											<AttributeIdentifier>RepresentationMaps</AttributeIdentifier>
+											<InstanceName>Box</InstanceName>
+											<ListPositions ex:cType="list"/>
+											<InnerReference>
+												<IfcReference id="i101">
+													<TypeIdentifier>IfcRepresentationMap</TypeIdentifier>
+													<AttributeIdentifier>MappedRepresentation</AttributeIdentifier>
+													<ListPositions ex:cType="list"/>
+													<InnerReference>
+														<IfcReference id="i100">
+															<TypeIdentifier>IfcShapeRepresentation</TypeIdentifier>
+															<AttributeIdentifier>Items</AttributeIdentifier>
+															<ListPositions ex:cType="list">
+																<Int32 nil="true" ex:pos="0"/>
+															</ListPositions>
+															<InnerReference>
+																<IfcReference id="i99">
+																	<TypeIdentifier>IfcBoundingBox</TypeIdentifier>
+																	<AttributeIdentifier>ZDim</AttributeIdentifier>
+																	<ListPositions ex:cType="list"/>
+																	<InnerReference>
+																		<IfcReference id="i98">
+																			<TypeIdentifier>IfcPositiveLengthMeasure</TypeIdentifier>
+																			<ListPositions ex:cType="list"/>
+																		</IfcReference>
+																	</InnerReference>
+																</IfcReference>
+															</InnerReference>
+														</IfcReference>
+													</InnerReference>
+												</IfcReference>
+											</InnerReference>
+										</IfcReference>
+									</AppliedValue>
+									<Components ex:cType="list"/>
+								</IfcAppliedValue>
+							</DataValue>
+							<ReferencePath>
+								<IfcReference id="i108">
+									<TypeIdentifier>IfcTypeProduct</TypeIdentifier>
+									<AttributeIdentifier>RepresentationMaps</AttributeIdentifier>
+									<InstanceName>Body</InstanceName>
+									<ListPositions ex:cType="list"/>
+									<InnerReference>
+										<IfcReference id="i107">
+											<TypeIdentifier>IfcRepresentationMap</TypeIdentifier>
+											<AttributeIdentifier>MappedRepresentation</AttributeIdentifier>
+											<ListPositions ex:cType="list"/>
+											<InnerReference>
+												<IfcReference id="i106">
+													<TypeIdentifier>IfcShapeRepresentation</TypeIdentifier>
+													<AttributeIdentifier>Items</AttributeIdentifier>
+													<ListPositions ex:cType="list">
+														<Int32 nil="true" ex:pos="0"/>
+													</ListPositions>
+													<InnerReference>
+														<IfcReference id="i105">
+															<TypeIdentifier>IfcBlock</TypeIdentifier>
+															<AttributeIdentifier>ZLength</AttributeIdentifier>
+															<ListPositions ex:cType="list"/>
+															<InnerReference>
+																<IfcReference id="i104">
+																	<TypeIdentifier>IfcPositiveLengthMeasure</TypeIdentifier>
+																	<ListPositions ex:cType="list"/>
+																</IfcReference>
+															</InnerReference>
+														</IfcReference>
+													</InnerReference>
+												</IfcReference>
+											</InnerReference>
+										</IfcReference>
+									</InnerReference>
+								</IfcReference>
+							</ReferencePath>
+						</IfcMetric>
+						<IfcMetric id="i126">
+							<Name>Anchor-1-X</Name>
+							<ConstraintGrade>hard</ConstraintGrade>
+							<Benchmark>equalto</Benchmark>
+							<ValueSource>Min</ValueSource>
+							<DataValue>
+								<IfcAppliedValue id="i118">
+									<AppliedValue>
+										<IfcReference id="i117">
+											<TypeIdentifier>IfcTypeProduct</TypeIdentifier>
+											<AttributeIdentifier>RepresentationMaps</AttributeIdentifier>
+											<InstanceName>Box</InstanceName>
+											<ListPositions ex:cType="list"/>
+											<InnerReference>
+												<IfcReference id="i116">
+													<TypeIdentifier>IfcRepresentationMap</TypeIdentifier>
+													<AttributeIdentifier>MappedRepresentation</AttributeIdentifier>
+													<ListPositions ex:cType="list"/>
+													<InnerReference>
+														<IfcReference id="i115">
+															<TypeIdentifier>IfcShapeRepresentation</TypeIdentifier>
+															<AttributeIdentifier>Items</AttributeIdentifier>
+															<ListPositions ex:cType="list">
+																<Int32 nil="true" ex:pos="0"/>
+															</ListPositions>
+															<InnerReference>
+																<IfcReference id="i114">
+																	<TypeIdentifier>IfcBoundingBox</TypeIdentifier>
+																	<AttributeIdentifier>Corner</AttributeIdentifier>
+																	<ListPositions ex:cType="list"/>
+																	<InnerReference>
+																		<IfcReference id="i113">
+																			<TypeIdentifier>IfcCartesianPoint</TypeIdentifier>
+																			<AttributeIdentifier>Coordinates</AttributeIdentifier>
+																			<ListPositions ex:cType="list">
+																				<Int32 nil="true" ex:pos="0"/>
+																			</ListPositions>
+																			<InnerReference>
+																				<IfcReference id="i112">
+																					<TypeIdentifier>IfcLengthMeasure</TypeIdentifier>
+																					<ListPositions ex:cType="list"/>
+																				</IfcReference>
+																			</InnerReference>
+																		</IfcReference>
+																	</InnerReference>
+																</IfcReference>
+															</InnerReference>
+														</IfcReference>
+													</InnerReference>
+												</IfcReference>
+											</InnerReference>
+										</IfcReference>
+									</AppliedValue>
+									<Components ex:cType="list"/>
+								</IfcAppliedValue>
+							</DataValue>
+							<ReferencePath>
+								<IfcReference id="i125">
+									<TypeIdentifier>IfcTypeProduct</TypeIdentifier>
+									<AttributeIdentifier>RepresentationMaps</AttributeIdentifier>
+									<InstanceName>Body</InstanceName>
+									<ListPositions ex:cType="list"/>
+									<InnerReference>
+										<IfcReference id="i124">
+											<TypeIdentifier>IfcRepresentationMap</TypeIdentifier>
+											<AttributeIdentifier>MappedRepresentation</AttributeIdentifier>
+											<ListPositions ex:cType="list"/>
+											<InnerReference>
+												<IfcReference id="i123">
+													<TypeIdentifier>IfcShapeRepresentation</TypeIdentifier>
+													<AttributeIdentifier>Items</AttributeIdentifier>
+													<ListPositions ex:cType="list">
+														<Int32 nil="true" ex:pos="0"/>
+													</ListPositions>
+													<InnerReference>
+														<IfcReference id="i122">
+															<TypeIdentifier>IfcCsgPrimitive3D</TypeIdentifier>
+															<AttributeIdentifier>Position</AttributeIdentifier>
+															<ListPositions ex:cType="list"/>
+															<InnerReference>
+																<IfcReference id="i121">
+																	<TypeIdentifier>IfcAxis2Placement3D</TypeIdentifier>
+																	<AttributeIdentifier>Location</AttributeIdentifier>
+																	<ListPositions ex:cType="list"/>
+																	<InnerReference>
+																		<IfcReference id="i120">
+																			<TypeIdentifier>IfcCartesianPoint</TypeIdentifier>
+																			<AttributeIdentifier>Coordinates</AttributeIdentifier>
+																			<ListPositions ex:cType="list">
+																				<Int32 nil="true" ex:pos="0"/>
+																			</ListPositions>
+																			<InnerReference>
+																				<IfcReference id="i119">
+																					<TypeIdentifier>IfcLengthMeasure</TypeIdentifier>
+																					<ListPositions ex:cType="list"/>
+																				</IfcReference>
+																			</InnerReference>
+																		</IfcReference>
+																	</InnerReference>
+																</IfcReference>
+															</InnerReference>
+														</IfcReference>
+													</InnerReference>
+												</IfcReference>
+											</InnerReference>
+										</IfcReference>
+									</InnerReference>
+								</IfcReference>
+							</ReferencePath>
+						</IfcMetric>
+						<IfcMetric id="i145">
+							<Name>Anchor-2-Y</Name>
+							<ConstraintGrade>hard</ConstraintGrade>
+							<Benchmark>equalto</Benchmark>
+							<ValueSource>Span</ValueSource>
+							<DataValue>
+								<IfcAppliedValue id="i139">
+									<AppliedValue>
+										<IfcReference id="i138">
+											<TypeIdentifier>IfcTypeProduct</TypeIdentifier>
+											<AttributeIdentifier>RepresentationMaps</AttributeIdentifier>
+											<InstanceName>Box</InstanceName>
+											<ListPositions ex:cType="list"/>
+											<InnerReference>
+												<IfcReference id="i137">
+													<TypeIdentifier>IfcRepresentationMap</TypeIdentifier>
+													<AttributeIdentifier>MappedRepresentation</AttributeIdentifier>
+													<ListPositions ex:cType="list"/>
+													<InnerReference>
+														<IfcReference id="i136">
+															<TypeIdentifier>IfcShapeRepresentation</TypeIdentifier>
+															<AttributeIdentifier>Items</AttributeIdentifier>
+															<ListPositions ex:cType="list">
+																<Int32 nil="true" ex:pos="0"/>
+															</ListPositions>
+															<InnerReference>
+																<IfcReference id="i135">
+																	<TypeIdentifier>IfcBoundingBox</TypeIdentifier>
+																	<AttributeIdentifier>YDim</AttributeIdentifier>
+																	<ListPositions ex:cType="list"/>
+																	<InnerReference>
+																		<IfcReference id="i134">
+																			<TypeIdentifier>IfcPositiveLengthMeasure</TypeIdentifier>
+																			<ListPositions ex:cType="list"/>
+																		</IfcReference>
+																	</InnerReference>
+																</IfcReference>
+															</InnerReference>
+														</IfcReference>
+													</InnerReference>
+												</IfcReference>
+											</InnerReference>
+										</IfcReference>
+									</AppliedValue>
+									<Components ex:cType="list"/>
+								</IfcAppliedValue>
+							</DataValue>
+							<ReferencePath>
+								<IfcReference id="i144">
+									<TypeIdentifier>IfcTypeProduct</TypeIdentifier>
+									<AttributeIdentifier>RepresentationMaps</AttributeIdentifier>
+									<InstanceName>Body</InstanceName>
+									<ListPositions ex:cType="list"/>
+									<InnerReference>
+										<IfcReference id="i143">
+											<TypeIdentifier>IfcRepresentationMap</TypeIdentifier>
+											<AttributeIdentifier>MappedRepresentation</AttributeIdentifier>
+											<ListPositions ex:cType="list"/>
+											<InnerReference>
+												<IfcReference id="i142">
+													<TypeIdentifier>IfcShapeRepresentation</TypeIdentifier>
+													<AttributeIdentifier>Items</AttributeIdentifier>
+													<ListPositions ex:cType="list">
+														<Int32 nil="true" ex:pos="0"/>
+													</ListPositions>
+													<InnerReference>
+														<IfcReference id="i141">
+															<TypeIdentifier>IfcBlock</TypeIdentifier>
+															<AttributeIdentifier>YLength</AttributeIdentifier>
+															<ListPositions ex:cType="list"/>
+															<InnerReference>
+																<IfcReference id="i140">
+																	<TypeIdentifier>IfcPositiveLengthMeasure</TypeIdentifier>
+																	<ListPositions ex:cType="list"/>
+																</IfcReference>
+															</InnerReference>
+														</IfcReference>
+													</InnerReference>
+												</IfcReference>
+											</InnerReference>
+										</IfcReference>
+									</InnerReference>
+								</IfcReference>
+							</ReferencePath>
+						</IfcMetric>
+						<IfcMetric id="i158">
+							<Name>Anchor-2-Z</Name>
+							<ConstraintGrade>hard</ConstraintGrade>
+							<Benchmark>equalto</Benchmark>
+							<ValueSource>Span</ValueSource>
+							<DataValue>
+								<IfcAppliedValue id="i152">
+									<AppliedValue>
+										<IfcReference id="i151">
+											<TypeIdentifier>IfcTypeProduct</TypeIdentifier>
+											<AttributeIdentifier>RepresentationMaps</AttributeIdentifier>
+											<InstanceName>Box</InstanceName>
+											<ListPositions ex:cType="list"/>
+											<InnerReference>
+												<IfcReference id="i150">
+													<TypeIdentifier>IfcRepresentationMap</TypeIdentifier>
+													<AttributeIdentifier>MappedRepresentation</AttributeIdentifier>
+													<ListPositions ex:cType="list"/>
+													<InnerReference>
+														<IfcReference id="i149">
+															<TypeIdentifier>IfcShapeRepresentation</TypeIdentifier>
+															<AttributeIdentifier>Items</AttributeIdentifier>
+															<ListPositions ex:cType="list">
+																<Int32 nil="true" ex:pos="0"/>
+															</ListPositions>
+															<InnerReference>
+																<IfcReference id="i148">
+																	<TypeIdentifier>IfcBoundingBox</TypeIdentifier>
+																	<AttributeIdentifier>ZDim</AttributeIdentifier>
+																	<ListPositions ex:cType="list"/>
+																	<InnerReference>
+																		<IfcReference id="i147">
+																			<TypeIdentifier>IfcPositiveLengthMeasure</TypeIdentifier>
+																			<ListPositions ex:cType="list"/>
+																		</IfcReference>
+																	</InnerReference>
+																</IfcReference>
+															</InnerReference>
+														</IfcReference>
+													</InnerReference>
+												</IfcReference>
+											</InnerReference>
+										</IfcReference>
+									</AppliedValue>
+									<Components ex:cType="list"/>
+								</IfcAppliedValue>
+							</DataValue>
+							<ReferencePath>
+								<IfcReference id="i157">
+									<TypeIdentifier>IfcTypeProduct</TypeIdentifier>
+									<AttributeIdentifier>RepresentationMaps</AttributeIdentifier>
+									<InstanceName>Body</InstanceName>
+									<ListPositions ex:cType="list"/>
+									<InnerReference>
+										<IfcReference id="i156">
+											<TypeIdentifier>IfcRepresentationMap</TypeIdentifier>
+											<AttributeIdentifier>MappedRepresentation</AttributeIdentifier>
+											<ListPositions ex:cType="list"/>
+											<InnerReference>
+												<IfcReference id="i155">
+													<TypeIdentifier>IfcShapeRepresentation</TypeIdentifier>
+													<AttributeIdentifier>Items</AttributeIdentifier>
+													<ListPositions ex:cType="list">
+														<Int32 nil="true" ex:pos="0"/>
+													</ListPositions>
+													<InnerReference>
+														<IfcReference id="i154">
+															<TypeIdentifier>IfcBlock</TypeIdentifier>
+															<AttributeIdentifier>ZLength</AttributeIdentifier>
+															<ListPositions ex:cType="list"/>
+															<InnerReference>
+																<IfcReference id="i153">
+																	<TypeIdentifier>IfcPositiveLengthMeasure</TypeIdentifier>
+																	<ListPositions ex:cType="list"/>
+																</IfcReference>
+															</InnerReference>
+														</IfcReference>
+													</InnerReference>
+												</IfcReference>
+											</InnerReference>
+										</IfcReference>
+									</InnerReference>
+								</IfcReference>
+							</ReferencePath>
+						</IfcMetric>
+						<IfcMetric id="i180">
+							<Name>Anchor-2-X</Name>
+							<ConstraintGrade>hard</ConstraintGrade>
+							<Benchmark>equalto</Benchmark>
+							<ValueSource>Max</ValueSource>
+							<DataValue>
+								<IfcAppliedValue id="i172">
+									<ArithmeticOperator>subtract</ArithmeticOperator>
+									<Components ex:cType="list">
+										<IfcAppliedValue id="i165">
+											<AppliedValue>
+												<IfcReference id="i164">
+													<TypeIdentifier>IfcTypeProduct</TypeIdentifier>
+													<AttributeIdentifier>RepresentationMaps</AttributeIdentifier>
+													<InstanceName>Box</InstanceName>
+													<ListPositions ex:cType="list"/>
+													<InnerReference>
+														<IfcReference id="i163">
+															<TypeIdentifier>IfcRepresentationMap</TypeIdentifier>
+															<AttributeIdentifier>MappedRepresentation</AttributeIdentifier>
+															<ListPositions ex:cType="list"/>
+															<InnerReference>
+																<IfcReference id="i162">
+																	<TypeIdentifier>IfcShapeRepresentation</TypeIdentifier>
+																	<AttributeIdentifier>Items</AttributeIdentifier>
+																	<ListPositions ex:cType="list">
+																		<Int32 nil="true" ex:pos="0"/>
+																	</ListPositions>
+																	<InnerReference>
+																		<IfcReference id="i161">
+																			<TypeIdentifier>IfcBoundingBox</TypeIdentifier>
+																			<AttributeIdentifier>XDim</AttributeIdentifier>
+																			<ListPositions ex:cType="list"/>
+																			<InnerReference>
+																				<IfcReference id="i160">
+																					<TypeIdentifier>IfcPositiveLengthMeasure</TypeIdentifier>
+																					<ListPositions ex:cType="list"/>
+																				</IfcReference>
+																			</InnerReference>
+																		</IfcReference>
+																	</InnerReference>
+																</IfcReference>
+															</InnerReference>
+														</IfcReference>
+													</InnerReference>
+												</IfcReference>
+											</AppliedValue>
+											<Components ex:cType="list"/>
+										</IfcAppliedValue>
+										<IfcAppliedValue id="i171">
+											<AppliedValue>
+												<IfcReference id="i170">
+													<TypeIdentifier>IfcTypeProduct</TypeIdentifier>
+													<AttributeIdentifier>RepresentationMaps</AttributeIdentifier>
+													<InstanceName>Body</InstanceName>
+													<ListPositions ex:cType="list"/>
+													<InnerReference>
+														<IfcReference id="i169">
+															<TypeIdentifier>IfcRepresentationMap</TypeIdentifier>
+															<AttributeIdentifier>MappedRepresentation</AttributeIdentifier>
+															<ListPositions ex:cType="list"/>
+															<InnerReference>
+																<IfcReference id="i168">
+																	<TypeIdentifier>IfcShapeRepresentation</TypeIdentifier>
+																	<AttributeIdentifier>Items</AttributeIdentifier>
+																	<ListPositions ex:cType="list">
+																		<Int32 nil="true" ex:pos="0"/>
+																	</ListPositions>
+																	<InnerReference>
+																		<IfcReference id="i167">
+																			<TypeIdentifier>IfcBlock</TypeIdentifier>
+																			<AttributeIdentifier>XLength</AttributeIdentifier>
+																			<ListPositions ex:cType="list"/>
+																			<InnerReference>
+																				<IfcReference id="i166">
+																					<TypeIdentifier>IfcPositiveLengthMeasure</TypeIdentifier>
+																					<ListPositions ex:cType="list"/>
+																				</IfcReference>
+																			</InnerReference>
+																		</IfcReference>
+																	</InnerReference>
+																</IfcReference>
+															</InnerReference>
+														</IfcReference>
+													</InnerReference>
+												</IfcReference>
+											</AppliedValue>
+											<Components ex:cType="list"/>
+										</IfcAppliedValue>
+									</Components>
+								</IfcAppliedValue>
+							</DataValue>
+							<ReferencePath>
+								<IfcReference id="i179">
+									<TypeIdentifier>IfcTypeProduct</TypeIdentifier>
+									<AttributeIdentifier>RepresentationMaps</AttributeIdentifier>
+									<InstanceName>Body</InstanceName>
+									<ListPositions ex:cType="list"/>
+									<InnerReference>
+										<IfcReference id="i178">
+											<TypeIdentifier>IfcRepresentationMap</TypeIdentifier>
+											<AttributeIdentifier>MappedRepresentation</AttributeIdentifier>
+											<ListPositions ex:cType="list"/>
+											<InnerReference>
+												<IfcReference id="i177">
+													<TypeIdentifier>IfcShapeRepresentation</TypeIdentifier>
+													<AttributeIdentifier>Items</AttributeIdentifier>
+													<ListPositions ex:cType="list">
+														<Int32 nil="true" ex:pos="0"/>
+													</ListPositions>
+													<InnerReference>
+														<IfcReference id="i176">
+															<TypeIdentifier>IfcCsgPrimitive3D</TypeIdentifier>
+															<AttributeIdentifier>Position</AttributeIdentifier>
+															<ListPositions ex:cType="list"/>
+															<InnerReference>
+																<IfcReference id="i175">
+																	<TypeIdentifier>IfcAxis2Placement3D</TypeIdentifier>
+																	<AttributeIdentifier>Location</AttributeIdentifier>
+																	<ListPositions ex:cType="list"/>
+																	<InnerReference>
+																		<IfcReference id="i174">
+																			<TypeIdentifier>IfcCartesianPoint</TypeIdentifier>
+																			<AttributeIdentifier>Coordinates</AttributeIdentifier>
+																			<ListPositions ex:cType="list">
+																				<Int32 nil="true" ex:pos="0"/>
+																			</ListPositions>
+																			<InnerReference>
+																				<IfcReference id="i173">
+																					<TypeIdentifier>IfcLengthMeasure</TypeIdentifier>
+																					<ListPositions ex:cType="list"/>
+																				</IfcReference>
+																			</InnerReference>
+																		</IfcReference>
+																	</InnerReference>
+																</IfcReference>
+															</InnerReference>
+														</IfcReference>
+													</InnerReference>
+												</IfcReference>
+											</InnerReference>
+										</IfcReference>
+									</InnerReference>
+								</IfcReference>
+							</ReferencePath>
+						</IfcMetric>
+						<IfcMetric id="i219">
+							<Name>Anchor-4-X</Name>
+							<ConstraintGrade>hard</ConstraintGrade>
+							<Benchmark>equalto</Benchmark>
+							<ValueSource>Span</ValueSource>
+							<DataValue>
+								<IfcAppliedValue id="i213">
+									<AppliedValue>
+										<IfcReference id="i212">
+											<TypeIdentifier>IfcTypeProduct</TypeIdentifier>
+											<AttributeIdentifier>RepresentationMaps</AttributeIdentifier>
+											<InstanceName>Box</InstanceName>
+											<ListPositions ex:cType="list"/>
+											<InnerReference>
+												<IfcReference id="i211">
+													<TypeIdentifier>IfcRepresentationMap</TypeIdentifier>
+													<AttributeIdentifier>MappedRepresentation</AttributeIdentifier>
+													<ListPositions ex:cType="list"/>
+													<InnerReference>
+														<IfcReference id="i210">
+															<TypeIdentifier>IfcShapeRepresentation</TypeIdentifier>
+															<AttributeIdentifier>Items</AttributeIdentifier>
+															<ListPositions ex:cType="list">
+																<Int32 nil="true" ex:pos="0"/>
+															</ListPositions>
+															<InnerReference>
+																<IfcReference id="i209">
+																	<TypeIdentifier>IfcBoundingBox</TypeIdentifier>
+																	<AttributeIdentifier>XDim</AttributeIdentifier>
+																	<ListPositions ex:cType="list"/>
+																	<InnerReference>
+																		<IfcReference id="i208">
+																			<TypeIdentifier>IfcPositiveLengthMeasure</TypeIdentifier>
+																			<ListPositions ex:cType="list"/>
+																		</IfcReference>
+																	</InnerReference>
+																</IfcReference>
+															</InnerReference>
+														</IfcReference>
+													</InnerReference>
+												</IfcReference>
+											</InnerReference>
+										</IfcReference>
+									</AppliedValue>
+									<Components ex:cType="list"/>
+								</IfcAppliedValue>
+							</DataValue>
+							<ReferencePath>
+								<IfcReference id="i218">
+									<TypeIdentifier>IfcTypeProduct</TypeIdentifier>
+									<AttributeIdentifier>RepresentationMaps</AttributeIdentifier>
+									<InstanceName>Body</InstanceName>
+									<ListPositions ex:cType="list"/>
+									<InnerReference>
+										<IfcReference id="i217">
+											<TypeIdentifier>IfcRepresentationMap</TypeIdentifier>
+											<AttributeIdentifier>MappedRepresentation</AttributeIdentifier>
+											<ListPositions ex:cType="list"/>
+											<InnerReference>
+												<IfcReference id="i216">
+													<TypeIdentifier>IfcShapeRepresentation</TypeIdentifier>
+													<AttributeIdentifier>Items</AttributeIdentifier>
+													<ListPositions ex:cType="list">
+														<Int32 nil="true" ex:pos="0"/>
+													</ListPositions>
+													<InnerReference>
+														<IfcReference id="i215">
+															<TypeIdentifier>IfcBlock</TypeIdentifier>
+															<AttributeIdentifier>XLength</AttributeIdentifier>
+															<ListPositions ex:cType="list"/>
+															<InnerReference>
+																<IfcReference id="i214">
+																	<TypeIdentifier>IfcPositiveLengthMeasure</TypeIdentifier>
+																	<ListPositions ex:cType="list"/>
+																</IfcReference>
+															</InnerReference>
+														</IfcReference>
+													</InnerReference>
+												</IfcReference>
+											</InnerReference>
+										</IfcReference>
+									</InnerReference>
+								</IfcReference>
+							</ReferencePath>
+						</IfcMetric>
+						<IfcMetric id="i232">
+							<Name>Anchor-4-Y</Name>
+							<ConstraintGrade>hard</ConstraintGrade>
+							<Benchmark>equalto</Benchmark>
+							<ValueSource>Span</ValueSource>
+							<DataValue>
+								<IfcAppliedValue id="i226">
+									<AppliedValue>
+										<IfcReference id="i225">
+											<TypeIdentifier>IfcTypeProduct</TypeIdentifier>
+											<AttributeIdentifier>RepresentationMaps</AttributeIdentifier>
+											<InstanceName>Box</InstanceName>
+											<ListPositions ex:cType="list"/>
+											<InnerReference>
+												<IfcReference id="i224">
+													<TypeIdentifier>IfcRepresentationMap</TypeIdentifier>
+													<AttributeIdentifier>MappedRepresentation</AttributeIdentifier>
+													<ListPositions ex:cType="list"/>
+													<InnerReference>
+														<IfcReference id="i223">
+															<TypeIdentifier>IfcShapeRepresentation</TypeIdentifier>
+															<AttributeIdentifier>Items</AttributeIdentifier>
+															<ListPositions ex:cType="list">
+																<Int32 nil="true" ex:pos="0"/>
+															</ListPositions>
+															<InnerReference>
+																<IfcReference id="i222">
+																	<TypeIdentifier>IfcBoundingBox</TypeIdentifier>
+																	<AttributeIdentifier>YDim</AttributeIdentifier>
+																	<ListPositions ex:cType="list"/>
+																	<InnerReference>
+																		<IfcReference id="i221">
+																			<TypeIdentifier>IfcPositiveLengthMeasure</TypeIdentifier>
+																			<ListPositions ex:cType="list"/>
+																		</IfcReference>
+																	</InnerReference>
+																</IfcReference>
+															</InnerReference>
+														</IfcReference>
+													</InnerReference>
+												</IfcReference>
+											</InnerReference>
+										</IfcReference>
+									</AppliedValue>
+									<Components ex:cType="list"/>
+								</IfcAppliedValue>
+							</DataValue>
+							<ReferencePath>
+								<IfcReference id="i231">
+									<TypeIdentifier>IfcTypeProduct</TypeIdentifier>
+									<AttributeIdentifier>RepresentationMaps</AttributeIdentifier>
+									<InstanceName>Body</InstanceName>
+									<ListPositions ex:cType="list"/>
+									<InnerReference>
+										<IfcReference id="i230">
+											<TypeIdentifier>IfcRepresentationMap</TypeIdentifier>
+											<AttributeIdentifier>MappedRepresentation</AttributeIdentifier>
+											<ListPositions ex:cType="list"/>
+											<InnerReference>
+												<IfcReference id="i229">
+													<TypeIdentifier>IfcShapeRepresentation</TypeIdentifier>
+													<AttributeIdentifier>Items</AttributeIdentifier>
+													<ListPositions ex:cType="list">
+														<Int32 nil="true" ex:pos="0"/>
+													</ListPositions>
+													<InnerReference>
+														<IfcReference id="i228">
+															<TypeIdentifier>IfcBlock</TypeIdentifier>
+															<AttributeIdentifier>YLength</AttributeIdentifier>
+															<ListPositions ex:cType="list"/>
+															<InnerReference>
+																<IfcReference id="i227">
+																	<TypeIdentifier>IfcPositiveLengthMeasure</TypeIdentifier>
+																	<ListPositions ex:cType="list"/>
+																</IfcReference>
+															</InnerReference>
+														</IfcReference>
+													</InnerReference>
+												</IfcReference>
+											</InnerReference>
+										</IfcReference>
+									</InnerReference>
+								</IfcReference>
+							</ReferencePath>
+						</IfcMetric>
+						<IfcMetric id="i248">
+							<Name>Anchor-4-Z</Name>
+							<ConstraintGrade>hard</ConstraintGrade>
+							<Benchmark>equalto</Benchmark>
+							<ValueSource>Min</ValueSource>
+							<DataValue>
+								<IfcAppliedValue id="i240">
+									<AppliedValue>
+										<IfcReference id="i239">
+											<TypeIdentifier>IfcTypeProduct</TypeIdentifier>
+											<AttributeIdentifier>RepresentationMaps</AttributeIdentifier>
+											<InstanceName>Box</InstanceName>
+											<ListPositions ex:cType="list"/>
+											<InnerReference>
+												<IfcReference id="i238">
+													<TypeIdentifier>IfcRepresentationMap</TypeIdentifier>
+													<AttributeIdentifier>MappedRepresentation</AttributeIdentifier>
+													<ListPositions ex:cType="list"/>
+													<InnerReference>
+														<IfcReference id="i237">
+															<TypeIdentifier>IfcShapeRepresentation</TypeIdentifier>
+															<AttributeIdentifier>Items</AttributeIdentifier>
+															<ListPositions ex:cType="list">
+																<Int32 nil="true" ex:pos="0"/>
+															</ListPositions>
+															<InnerReference>
+																<IfcReference id="i236">
+																	<TypeIdentifier>IfcBoundingBox</TypeIdentifier>
+																	<AttributeIdentifier>Corner</AttributeIdentifier>
+																	<ListPositions ex:cType="list"/>
+																	<InnerReference>
+																		<IfcReference id="i235">
+																			<TypeIdentifier>IfcCartesianPoint</TypeIdentifier>
+																			<AttributeIdentifier>Coordinates</AttributeIdentifier>
+																			<ListPositions ex:cType="list">
+																				<Int32 nil="true" ex:pos="0"/>
+																			</ListPositions>
+																			<InnerReference>
+																				<IfcReference id="i234">
+																					<TypeIdentifier>IfcLengthMeasure</TypeIdentifier>
+																					<ListPositions ex:cType="list"/>
+																				</IfcReference>
+																			</InnerReference>
+																		</IfcReference>
+																	</InnerReference>
+																</IfcReference>
+															</InnerReference>
+														</IfcReference>
+													</InnerReference>
+												</IfcReference>
+											</InnerReference>
+										</IfcReference>
+									</AppliedValue>
+									<Components ex:cType="list"/>
+								</IfcAppliedValue>
+							</DataValue>
+							<ReferencePath>
+								<IfcReference id="i247">
+									<TypeIdentifier>IfcTypeProduct</TypeIdentifier>
+									<AttributeIdentifier>RepresentationMaps</AttributeIdentifier>
+									<InstanceName>Body</InstanceName>
+									<ListPositions ex:cType="list"/>
+									<InnerReference>
+										<IfcReference id="i246">
+											<TypeIdentifier>IfcRepresentationMap</TypeIdentifier>
+											<AttributeIdentifier>MappedRepresentation</AttributeIdentifier>
+											<ListPositions ex:cType="list"/>
+											<InnerReference>
+												<IfcReference id="i245">
+													<TypeIdentifier>IfcShapeRepresentation</TypeIdentifier>
+													<AttributeIdentifier>Items</AttributeIdentifier>
+													<ListPositions ex:cType="list">
+														<Int32 nil="true" ex:pos="0"/>
+													</ListPositions>
+													<InnerReference>
+														<IfcReference id="i244">
+															<TypeIdentifier>IfcCsgPrimitive3D</TypeIdentifier>
+															<AttributeIdentifier>Position</AttributeIdentifier>
+															<ListPositions ex:cType="list"/>
+															<InnerReference>
+																<IfcReference id="i243">
+																	<TypeIdentifier>IfcAxis2Placement3D</TypeIdentifier>
+																	<AttributeIdentifier>Location</AttributeIdentifier>
+																	<ListPositions ex:cType="list"/>
+																	<InnerReference>
+																		<IfcReference id="i242">
+																			<TypeIdentifier>IfcCartesianPoint</TypeIdentifier>
+																			<AttributeIdentifier>Coordinates</AttributeIdentifier>
+																			<ListPositions ex:cType="list">
+																				<Int32 nil="true" ex:pos="0"/>
+																			</ListPositions>
+																			<InnerReference>
+																				<IfcReference id="i241">
+																					<TypeIdentifier>IfcLengthMeasure</TypeIdentifier>
+																					<ListPositions ex:cType="list"/>
+																				</IfcReference>
+																			</InnerReference>
+																		</IfcReference>
+																	</InnerReference>
+																</IfcReference>
+															</InnerReference>
+														</IfcReference>
+													</InnerReference>
+												</IfcReference>
+											</InnerReference>
+										</IfcReference>
+									</InnerReference>
+								</IfcReference>
+							</ReferencePath>
+						</IfcMetric>
+						<IfcMetric id="i289">
+							<Name>Anchor-5-Z</Name>
+							<ConstraintGrade>hard</ConstraintGrade>
+							<Benchmark>equalto</Benchmark>
+							<ValueSource>Max</ValueSource>
+							<DataValue>
+								<IfcAppliedValue id="i281">
+									<ArithmeticOperator>subtract</ArithmeticOperator>
+									<Components ex:cType="list">
+										<IfcAppliedValue id="i274">
+											<AppliedValue>
+												<IfcReference id="i273">
+													<TypeIdentifier>IfcTypeProduct</TypeIdentifier>
+													<AttributeIdentifier>RepresentationMaps</AttributeIdentifier>
+													<InstanceName>Box</InstanceName>
+													<ListPositions ex:cType="list"/>
+													<InnerReference>
+														<IfcReference id="i272">
+															<TypeIdentifier>IfcRepresentationMap</TypeIdentifier>
+															<AttributeIdentifier>MappedRepresentation</AttributeIdentifier>
+															<ListPositions ex:cType="list"/>
+															<InnerReference>
+																<IfcReference id="i271">
+																	<TypeIdentifier>IfcShapeRepresentation</TypeIdentifier>
+																	<AttributeIdentifier>Items</AttributeIdentifier>
+																	<ListPositions ex:cType="list">
+																		<Int32 nil="true" ex:pos="0"/>
+																	</ListPositions>
+																	<InnerReference>
+																		<IfcReference id="i270">
+																			<TypeIdentifier>IfcBoundingBox</TypeIdentifier>
+																			<AttributeIdentifier>ZDim</AttributeIdentifier>
+																			<ListPositions ex:cType="list"/>
+																			<InnerReference>
+																				<IfcReference id="i269">
+																					<TypeIdentifier>IfcPositiveLengthMeasure</TypeIdentifier>
+																					<ListPositions ex:cType="list"/>
+																				</IfcReference>
+																			</InnerReference>
+																		</IfcReference>
+																	</InnerReference>
+																</IfcReference>
+															</InnerReference>
+														</IfcReference>
+													</InnerReference>
+												</IfcReference>
+											</AppliedValue>
+											<Components ex:cType="list"/>
+										</IfcAppliedValue>
+										<IfcAppliedValue id="i280">
+											<AppliedValue>
+												<IfcReference id="i279">
+													<TypeIdentifier>IfcTypeProduct</TypeIdentifier>
+													<AttributeIdentifier>RepresentationMaps</AttributeIdentifier>
+													<InstanceName>Body</InstanceName>
+													<ListPositions ex:cType="list"/>
+													<InnerReference>
+														<IfcReference id="i278">
+															<TypeIdentifier>IfcRepresentationMap</TypeIdentifier>
+															<AttributeIdentifier>MappedRepresentation</AttributeIdentifier>
+															<ListPositions ex:cType="list"/>
+															<InnerReference>
+																<IfcReference id="i277">
+																	<TypeIdentifier>IfcShapeRepresentation</TypeIdentifier>
+																	<AttributeIdentifier>Items</AttributeIdentifier>
+																	<ListPositions ex:cType="list">
+																		<Int32 nil="true" ex:pos="0"/>
+																	</ListPositions>
+																	<InnerReference>
+																		<IfcReference id="i276">
+																			<TypeIdentifier>IfcBlock</TypeIdentifier>
+																			<AttributeIdentifier>ZLength</AttributeIdentifier>
+																			<ListPositions ex:cType="list"/>
+																			<InnerReference>
+																				<IfcReference id="i275">
+																					<TypeIdentifier>IfcPositiveLengthMeasure</TypeIdentifier>
+																					<ListPositions ex:cType="list"/>
+																				</IfcReference>
+																			</InnerReference>
+																		</IfcReference>
+																	</InnerReference>
+																</IfcReference>
+															</InnerReference>
+														</IfcReference>
+													</InnerReference>
+												</IfcReference>
+											</AppliedValue>
+											<Components ex:cType="list"/>
+										</IfcAppliedValue>
+									</Components>
+								</IfcAppliedValue>
+							</DataValue>
+							<ReferencePath>
+								<IfcReference id="i288">
+									<TypeIdentifier>IfcTypeProduct</TypeIdentifier>
+									<AttributeIdentifier>RepresentationMaps</AttributeIdentifier>
+									<InstanceName>Body</InstanceName>
+									<ListPositions ex:cType="list"/>
+									<InnerReference>
+										<IfcReference id="i287">
+											<TypeIdentifier>IfcRepresentationMap</TypeIdentifier>
+											<AttributeIdentifier>MappedRepresentation</AttributeIdentifier>
+											<ListPositions ex:cType="list"/>
+											<InnerReference>
+												<IfcReference id="i286">
+													<TypeIdentifier>IfcShapeRepresentation</TypeIdentifier>
+													<AttributeIdentifier>Items</AttributeIdentifier>
+													<ListPositions ex:cType="list">
+														<Int32 nil="true" ex:pos="0"/>
+													</ListPositions>
+													<InnerReference>
+														<IfcReference id="i285">
+															<TypeIdentifier>IfcCsgPrimitive3D</TypeIdentifier>
+															<AttributeIdentifier>Position</AttributeIdentifier>
+															<ListPositions ex:cType="list"/>
+															<InnerReference>
+																<IfcReference id="i284">
+																	<TypeIdentifier>IfcAxis2Placement3D</TypeIdentifier>
+																	<AttributeIdentifier>Location</AttributeIdentifier>
+																	<ListPositions ex:cType="list"/>
+																	<InnerReference>
+																		<IfcReference id="i283">
+																			<TypeIdentifier>IfcCartesianPoint</TypeIdentifier>
+																			<AttributeIdentifier>Coordinates</AttributeIdentifier>
+																			<ListPositions ex:cType="list">
+																				<Int32 nil="true" ex:pos="0"/>
+																			</ListPositions>
+																			<InnerReference>
+																				<IfcReference id="i282">
+																					<TypeIdentifier>IfcLengthMeasure</TypeIdentifier>
+																					<ListPositions ex:cType="list"/>
+																				</IfcReference>
+																			</InnerReference>
+																		</IfcReference>
+																	</InnerReference>
+																</IfcReference>
+															</InnerReference>
+														</IfcReference>
+													</InnerReference>
+												</IfcReference>
+											</InnerReference>
+										</IfcReference>
+									</InnerReference>
+								</IfcReference>
+							</ReferencePath>
+						</IfcMetric>
+						<IfcMetric id="i306">
+							<Name>Anchor-5-Y</Name>
+							<ConstraintGrade>hard</ConstraintGrade>
+							<Benchmark>equalto</Benchmark>
+							<ValueSource>Min</ValueSource>
+							<DataValue>
+								<IfcAppliedValue id="i298">
+									<AppliedValue>
+										<IfcReference id="i297">
+											<TypeIdentifier>IfcTypeProduct</TypeIdentifier>
+											<AttributeIdentifier>RepresentationMaps</AttributeIdentifier>
+											<InstanceName>Box</InstanceName>
+											<ListPositions ex:cType="list"/>
+											<InnerReference>
+												<IfcReference id="i296">
+													<TypeIdentifier>IfcRepresentationMap</TypeIdentifier>
+													<AttributeIdentifier>MappedRepresentation</AttributeIdentifier>
+													<ListPositions ex:cType="list"/>
+													<InnerReference>
+														<IfcReference id="i295">
+															<TypeIdentifier>IfcShapeRepresentation</TypeIdentifier>
+															<AttributeIdentifier>Items</AttributeIdentifier>
+															<ListPositions ex:cType="list">
+																<Int32 nil="true" ex:pos="0"/>
+															</ListPositions>
+															<InnerReference>
+																<IfcReference id="i294">
+																	<TypeIdentifier>IfcBoundingBox</TypeIdentifier>
+																	<AttributeIdentifier>Corner</AttributeIdentifier>
+																	<ListPositions ex:cType="list"/>
+																	<InnerReference>
+																		<IfcReference id="i293">
+																			<TypeIdentifier>IfcCartesianPoint</TypeIdentifier>
+																			<AttributeIdentifier>Coordinates</AttributeIdentifier>
+																			<ListPositions ex:cType="list">
+																				<Int32 nil="true" ex:pos="0"/>
+																			</ListPositions>
+																			<InnerReference>
+																				<IfcReference id="i292">
+																					<TypeIdentifier>IfcLengthMeasure</TypeIdentifier>
+																					<ListPositions ex:cType="list"/>
+																				</IfcReference>
+																			</InnerReference>
+																		</IfcReference>
+																	</InnerReference>
+																</IfcReference>
+															</InnerReference>
+														</IfcReference>
+													</InnerReference>
+												</IfcReference>
+											</InnerReference>
+										</IfcReference>
+									</AppliedValue>
+									<Components ex:cType="list"/>
+								</IfcAppliedValue>
+							</DataValue>
+							<ReferencePath>
+								<IfcReference id="i305">
+									<TypeIdentifier>IfcTypeProduct</TypeIdentifier>
+									<AttributeIdentifier>RepresentationMaps</AttributeIdentifier>
+									<InstanceName>Body</InstanceName>
+									<ListPositions ex:cType="list"/>
+									<InnerReference>
+										<IfcReference id="i304">
+											<TypeIdentifier>IfcRepresentationMap</TypeIdentifier>
+											<AttributeIdentifier>MappedRepresentation</AttributeIdentifier>
+											<ListPositions ex:cType="list"/>
+											<InnerReference>
+												<IfcReference id="i303">
+													<TypeIdentifier>IfcShapeRepresentation</TypeIdentifier>
+													<AttributeIdentifier>Items</AttributeIdentifier>
+													<ListPositions ex:cType="list">
+														<Int32 nil="true" ex:pos="0"/>
+													</ListPositions>
+													<InnerReference>
+														<IfcReference id="i302">
+															<TypeIdentifier>IfcCsgPrimitive3D</TypeIdentifier>
+															<AttributeIdentifier>Position</AttributeIdentifier>
+															<ListPositions ex:cType="list"/>
+															<InnerReference>
+																<IfcReference id="i301">
+																	<TypeIdentifier>IfcAxis2Placement3D</TypeIdentifier>
+																	<AttributeIdentifier>Location</AttributeIdentifier>
+																	<ListPositions ex:cType="list"/>
+																	<InnerReference>
+																		<IfcReference id="i300">
+																			<TypeIdentifier>IfcCartesianPoint</TypeIdentifier>
+																			<AttributeIdentifier>Coordinates</AttributeIdentifier>
+																			<ListPositions ex:cType="list">
+																				<Int32 nil="true" ex:pos="0"/>
+																			</ListPositions>
+																			<InnerReference>
+																				<IfcReference id="i299">
+																					<TypeIdentifier>IfcLengthMeasure</TypeIdentifier>
+																					<ListPositions ex:cType="list"/>
+																				</IfcReference>
+																			</InnerReference>
+																		</IfcReference>
+																	</InnerReference>
+																</IfcReference>
+															</InnerReference>
+														</IfcReference>
+													</InnerReference>
+												</IfcReference>
+											</InnerReference>
+										</IfcReference>
+									</InnerReference>
+								</IfcReference>
+							</ReferencePath>
+						</IfcMetric>
+						<IfcMetric id="i320">
+							<Name>Anchor-5-X</Name>
+							<ConstraintGrade>hard</ConstraintGrade>
+							<Benchmark>equalto</Benchmark>
+							<ValueSource>Span</ValueSource>
+							<DataValue>
+								<IfcAppliedValue id="i314">
+									<AppliedValue>
+										<IfcReference id="i313">
+											<TypeIdentifier>IfcTypeProduct</TypeIdentifier>
+											<AttributeIdentifier>RepresentationMaps</AttributeIdentifier>
+											<InstanceName>Box</InstanceName>
+											<ListPositions ex:cType="list"/>
+											<InnerReference>
+												<IfcReference id="i312">
+													<TypeIdentifier>IfcRepresentationMap</TypeIdentifier>
+													<AttributeIdentifier>MappedRepresentation</AttributeIdentifier>
+													<ListPositions ex:cType="list"/>
+													<InnerReference>
+														<IfcReference id="i311">
+															<TypeIdentifier>IfcShapeRepresentation</TypeIdentifier>
+															<AttributeIdentifier>Items</AttributeIdentifier>
+															<ListPositions ex:cType="list">
+																<Int32 nil="true" ex:pos="0"/>
+															</ListPositions>
+															<InnerReference>
+																<IfcReference id="i310">
+																	<TypeIdentifier>IfcBoundingBox</TypeIdentifier>
+																	<AttributeIdentifier>XDim</AttributeIdentifier>
+																	<ListPositions ex:cType="list"/>
+																	<InnerReference>
+																		<IfcReference id="i309">
+																			<TypeIdentifier>IfcPositiveLengthMeasure</TypeIdentifier>
+																			<ListPositions ex:cType="list"/>
+																		</IfcReference>
+																	</InnerReference>
+																</IfcReference>
+															</InnerReference>
+														</IfcReference>
+													</InnerReference>
+												</IfcReference>
+											</InnerReference>
+										</IfcReference>
+									</AppliedValue>
+									<Components ex:cType="list"/>
+								</IfcAppliedValue>
+							</DataValue>
+							<ReferencePath>
+								<IfcReference id="i319">
+									<TypeIdentifier>IfcTypeProduct</TypeIdentifier>
+									<AttributeIdentifier>RepresentationMaps</AttributeIdentifier>
+									<InstanceName>Body</InstanceName>
+									<ListPositions ex:cType="list"/>
+									<InnerReference>
+										<IfcReference id="i318">
+											<TypeIdentifier>IfcRepresentationMap</TypeIdentifier>
+											<AttributeIdentifier>MappedRepresentation</AttributeIdentifier>
+											<ListPositions ex:cType="list"/>
+											<InnerReference>
+												<IfcReference id="i317">
+													<TypeIdentifier>IfcShapeRepresentation</TypeIdentifier>
+													<AttributeIdentifier>Items</AttributeIdentifier>
+													<ListPositions ex:cType="list">
+														<Int32 nil="true" ex:pos="0"/>
+													</ListPositions>
+													<InnerReference>
+														<IfcReference id="i316">
+															<TypeIdentifier>IfcBlock</TypeIdentifier>
+															<AttributeIdentifier>XLength</AttributeIdentifier>
+															<ListPositions ex:cType="list"/>
+															<InnerReference>
+																<IfcReference id="i315">
+																	<TypeIdentifier>IfcPositiveLengthMeasure</TypeIdentifier>
+																	<ListPositions ex:cType="list"/>
+																</IfcReference>
+															</InnerReference>
+														</IfcReference>
+													</InnerReference>
+												</IfcReference>
+											</InnerReference>
+										</IfcReference>
+									</InnerReference>
+								</IfcReference>
+							</ReferencePath>
+						</IfcMetric>
+						<IfcMetric id="i351">
+							<Name>Anchor-6-Y</Name>
+							<ConstraintGrade>hard</ConstraintGrade>
+							<Benchmark>equalto</Benchmark>
+							<ValueSource>Max</ValueSource>
+							<DataValue>
+								<IfcAppliedValue id="i343">
+									<ArithmeticOperator>subtract</ArithmeticOperator>
+									<Components ex:cType="list">
+										<IfcAppliedValue id="i336">
+											<AppliedValue>
+												<IfcReference id="i335">
+													<TypeIdentifier>IfcTypeProduct</TypeIdentifier>
+													<AttributeIdentifier>RepresentationMaps</AttributeIdentifier>
+													<InstanceName>Box</InstanceName>
+													<ListPositions ex:cType="list"/>
+													<InnerReference>
+														<IfcReference id="i334">
+															<TypeIdentifier>IfcRepresentationMap</TypeIdentifier>
+															<AttributeIdentifier>MappedRepresentation</AttributeIdentifier>
+															<ListPositions ex:cType="list"/>
+															<InnerReference>
+																<IfcReference id="i333">
+																	<TypeIdentifier>IfcShapeRepresentation</TypeIdentifier>
+																	<AttributeIdentifier>Items</AttributeIdentifier>
+																	<ListPositions ex:cType="list">
+																		<Int32 nil="true" ex:pos="0"/>
+																	</ListPositions>
+																	<InnerReference>
+																		<IfcReference id="i332">
+																			<TypeIdentifier>IfcBoundingBox</TypeIdentifier>
+																			<AttributeIdentifier>YDim</AttributeIdentifier>
+																			<ListPositions ex:cType="list"/>
+																			<InnerReference>
+																				<IfcReference id="i331">
+																					<TypeIdentifier>IfcPositiveLengthMeasure</TypeIdentifier>
+																					<ListPositions ex:cType="list"/>
+																				</IfcReference>
+																			</InnerReference>
+																		</IfcReference>
+																	</InnerReference>
+																</IfcReference>
+															</InnerReference>
+														</IfcReference>
+													</InnerReference>
+												</IfcReference>
+											</AppliedValue>
+											<Components ex:cType="list"/>
+										</IfcAppliedValue>
+										<IfcAppliedValue id="i342">
+											<AppliedValue>
+												<IfcReference id="i341">
+													<TypeIdentifier>IfcTypeProduct</TypeIdentifier>
+													<AttributeIdentifier>RepresentationMaps</AttributeIdentifier>
+													<InstanceName>Body</InstanceName>
+													<ListPositions ex:cType="list"/>
+													<InnerReference>
+														<IfcReference id="i340">
+															<TypeIdentifier>IfcRepresentationMap</TypeIdentifier>
+															<AttributeIdentifier>MappedRepresentation</AttributeIdentifier>
+															<ListPositions ex:cType="list"/>
+															<InnerReference>
+																<IfcReference id="i339">
+																	<TypeIdentifier>IfcShapeRepresentation</TypeIdentifier>
+																	<AttributeIdentifier>Items</AttributeIdentifier>
+																	<ListPositions ex:cType="list">
+																		<Int32 nil="true" ex:pos="0"/>
+																	</ListPositions>
+																	<InnerReference>
+																		<IfcReference id="i338">
+																			<TypeIdentifier>IfcBlock</TypeIdentifier>
+																			<AttributeIdentifier>YLength</AttributeIdentifier>
+																			<ListPositions ex:cType="list"/>
+																			<InnerReference>
+																				<IfcReference id="i337">
+																					<TypeIdentifier>IfcPositiveLengthMeasure</TypeIdentifier>
+																					<ListPositions ex:cType="list"/>
+																				</IfcReference>
+																			</InnerReference>
+																		</IfcReference>
+																	</InnerReference>
+																</IfcReference>
+															</InnerReference>
+														</IfcReference>
+													</InnerReference>
+												</IfcReference>
+											</AppliedValue>
+											<Components ex:cType="list"/>
+										</IfcAppliedValue>
+									</Components>
+								</IfcAppliedValue>
+							</DataValue>
+							<ReferencePath>
+								<IfcReference id="i350">
+									<TypeIdentifier>IfcTypeProduct</TypeIdentifier>
+									<AttributeIdentifier>RepresentationMaps</AttributeIdentifier>
+									<InstanceName>Body</InstanceName>
+									<ListPositions ex:cType="list"/>
+									<InnerReference>
+										<IfcReference id="i349">
+											<TypeIdentifier>IfcRepresentationMap</TypeIdentifier>
+											<AttributeIdentifier>MappedRepresentation</AttributeIdentifier>
+											<ListPositions ex:cType="list"/>
+											<InnerReference>
+												<IfcReference id="i348">
+													<TypeIdentifier>IfcShapeRepresentation</TypeIdentifier>
+													<AttributeIdentifier>Items</AttributeIdentifier>
+													<ListPositions ex:cType="list">
+														<Int32 nil="true" ex:pos="0"/>
+													</ListPositions>
+													<InnerReference>
+														<IfcReference id="i347">
+															<TypeIdentifier>IfcCsgPrimitive3D</TypeIdentifier>
+															<AttributeIdentifier>Position</AttributeIdentifier>
+															<ListPositions ex:cType="list"/>
+															<InnerReference>
+																<IfcReference id="i346">
+																	<TypeIdentifier>IfcAxis2Placement3D</TypeIdentifier>
+																	<AttributeIdentifier>Location</AttributeIdentifier>
+																	<ListPositions ex:cType="list"/>
+																	<InnerReference>
+																		<IfcReference id="i345">
+																			<TypeIdentifier>IfcCartesianPoint</TypeIdentifier>
+																			<AttributeIdentifier>Coordinates</AttributeIdentifier>
+																			<ListPositions ex:cType="list">
+																				<Int32 nil="true" ex:pos="0"/>
+																			</ListPositions>
+																			<InnerReference>
+																				<IfcReference id="i344">
+																					<TypeIdentifier>IfcLengthMeasure</TypeIdentifier>
+																					<ListPositions ex:cType="list"/>
+																				</IfcReference>
+																			</InnerReference>
+																		</IfcReference>
+																	</InnerReference>
+																</IfcReference>
+															</InnerReference>
+														</IfcReference>
+													</InnerReference>
+												</IfcReference>
+											</InnerReference>
+										</IfcReference>
+									</InnerReference>
+								</IfcReference>
+							</ReferencePath>
+						</IfcMetric>
+						<IfcMetric id="i365">
+							<Name>Anchor-6-X</Name>
+							<ConstraintGrade>hard</ConstraintGrade>
+							<Benchmark>equalto</Benchmark>
+							<ValueSource>Span</ValueSource>
+							<DataValue>
+								<IfcAppliedValue id="i359">
+									<AppliedValue>
+										<IfcReference id="i358">
+											<TypeIdentifier>IfcTypeProduct</TypeIdentifier>
+											<AttributeIdentifier>RepresentationMaps</AttributeIdentifier>
+											<InstanceName>Box</InstanceName>
+											<ListPositions ex:cType="list"/>
+											<InnerReference>
+												<IfcReference id="i357">
+													<TypeIdentifier>IfcRepresentationMap</TypeIdentifier>
+													<AttributeIdentifier>MappedRepresentation</AttributeIdentifier>
+													<ListPositions ex:cType="list"/>
+													<InnerReference>
+														<IfcReference id="i356">
+															<TypeIdentifier>IfcShapeRepresentation</TypeIdentifier>
+															<AttributeIdentifier>Items</AttributeIdentifier>
+															<ListPositions ex:cType="list">
+																<Int32 nil="true" ex:pos="0"/>
+															</ListPositions>
+															<InnerReference>
+																<IfcReference id="i355">
+																	<TypeIdentifier>IfcBoundingBox</TypeIdentifier>
+																	<AttributeIdentifier>XDim</AttributeIdentifier>
+																	<ListPositions ex:cType="list"/>
+																	<InnerReference>
+																		<IfcReference id="i354">
+																			<TypeIdentifier>IfcPositiveLengthMeasure</TypeIdentifier>
+																			<ListPositions ex:cType="list"/>
+																		</IfcReference>
+																	</InnerReference>
+																</IfcReference>
+															</InnerReference>
+														</IfcReference>
+													</InnerReference>
+												</IfcReference>
+											</InnerReference>
+										</IfcReference>
+									</AppliedValue>
+									<Components ex:cType="list"/>
+								</IfcAppliedValue>
+							</DataValue>
+							<ReferencePath>
+								<IfcReference id="i364">
+									<TypeIdentifier>IfcTypeProduct</TypeIdentifier>
+									<AttributeIdentifier>RepresentationMaps</AttributeIdentifier>
+									<InstanceName>Body</InstanceName>
+									<ListPositions ex:cType="list"/>
+									<InnerReference>
+										<IfcReference id="i363">
+											<TypeIdentifier>IfcRepresentationMap</TypeIdentifier>
+											<AttributeIdentifier>MappedRepresentation</AttributeIdentifier>
+											<ListPositions ex:cType="list"/>
+											<InnerReference>
+												<IfcReference id="i362">
+													<TypeIdentifier>IfcShapeRepresentation</TypeIdentifier>
+													<AttributeIdentifier>Items</AttributeIdentifier>
+													<ListPositions ex:cType="list">
+														<Int32 nil="true" ex:pos="0"/>
+													</ListPositions>
+													<InnerReference>
+														<IfcReference id="i361">
+															<TypeIdentifier>IfcBlock</TypeIdentifier>
+															<AttributeIdentifier>XLength</AttributeIdentifier>
+															<ListPositions ex:cType="list"/>
+															<InnerReference>
+																<IfcReference id="i360">
+																	<TypeIdentifier>IfcPositiveLengthMeasure</TypeIdentifier>
+																	<ListPositions ex:cType="list"/>
+																</IfcReference>
+															</InnerReference>
+														</IfcReference>
+													</InnerReference>
+												</IfcReference>
+											</InnerReference>
+										</IfcReference>
+									</InnerReference>
+								</IfcReference>
+							</ReferencePath>
+						</IfcMetric>
+						<IfcMetric id="i387">
+							<Name>Anchor-6-Z</Name>
+							<ConstraintGrade>hard</ConstraintGrade>
+							<Benchmark>equalto</Benchmark>
+							<ValueSource>Max</ValueSource>
+							<DataValue>
+								<IfcAppliedValue id="i379">
+									<ArithmeticOperator>subtract</ArithmeticOperator>
+									<Components ex:cType="list">
+										<IfcAppliedValue id="i372">
+											<AppliedValue>
+												<IfcReference id="i371">
+													<TypeIdentifier>IfcTypeProduct</TypeIdentifier>
+													<AttributeIdentifier>RepresentationMaps</AttributeIdentifier>
+													<InstanceName>Box</InstanceName>
+													<ListPositions ex:cType="list"/>
+													<InnerReference>
+														<IfcReference id="i370">
+															<TypeIdentifier>IfcRepresentationMap</TypeIdentifier>
+															<AttributeIdentifier>MappedRepresentation</AttributeIdentifier>
+															<ListPositions ex:cType="list"/>
+															<InnerReference>
+																<IfcReference id="i369">
+																	<TypeIdentifier>IfcShapeRepresentation</TypeIdentifier>
+																	<AttributeIdentifier>Items</AttributeIdentifier>
+																	<ListPositions ex:cType="list">
+																		<Int32 nil="true" ex:pos="0"/>
+																	</ListPositions>
+																	<InnerReference>
+																		<IfcReference id="i368">
+																			<TypeIdentifier>IfcBoundingBox</TypeIdentifier>
+																			<AttributeIdentifier>ZDim</AttributeIdentifier>
+																			<ListPositions ex:cType="list"/>
+																			<InnerReference>
+																				<IfcReference id="i367">
+																					<TypeIdentifier>IfcPositiveLengthMeasure</TypeIdentifier>
+																					<ListPositions ex:cType="list"/>
+																				</IfcReference>
+																			</InnerReference>
+																		</IfcReference>
+																	</InnerReference>
+																</IfcReference>
+															</InnerReference>
+														</IfcReference>
+													</InnerReference>
+												</IfcReference>
+											</AppliedValue>
+											<Components ex:cType="list"/>
+										</IfcAppliedValue>
+										<IfcAppliedValue id="i378">
+											<AppliedValue>
+												<IfcReference id="i377">
+													<TypeIdentifier>IfcTypeProduct</TypeIdentifier>
+													<AttributeIdentifier>RepresentationMaps</AttributeIdentifier>
+													<InstanceName>Body</InstanceName>
+													<ListPositions ex:cType="list"/>
+													<InnerReference>
+														<IfcReference id="i376">
+															<TypeIdentifier>IfcRepresentationMap</TypeIdentifier>
+															<AttributeIdentifier>MappedRepresentation</AttributeIdentifier>
+															<ListPositions ex:cType="list"/>
+															<InnerReference>
+																<IfcReference id="i375">
+																	<TypeIdentifier>IfcShapeRepresentation</TypeIdentifier>
+																	<AttributeIdentifier>Items</AttributeIdentifier>
+																	<ListPositions ex:cType="list">
+																		<Int32 nil="true" ex:pos="0"/>
+																	</ListPositions>
+																	<InnerReference>
+																		<IfcReference id="i374">
+																			<TypeIdentifier>IfcBlock</TypeIdentifier>
+																			<AttributeIdentifier>ZLength</AttributeIdentifier>
+																			<ListPositions ex:cType="list"/>
+																			<InnerReference>
+																				<IfcReference id="i373">
+																					<TypeIdentifier>IfcPositiveLengthMeasure</TypeIdentifier>
+																					<ListPositions ex:cType="list"/>
+																				</IfcReference>
+																			</InnerReference>
+																		</IfcReference>
+																	</InnerReference>
+																</IfcReference>
+															</InnerReference>
+														</IfcReference>
+													</InnerReference>
+												</IfcReference>
+											</AppliedValue>
+											<Components ex:cType="list"/>
+										</IfcAppliedValue>
+									</Components>
+								</IfcAppliedValue>
+							</DataValue>
+							<ReferencePath>
+								<IfcReference id="i386">
+									<TypeIdentifier>IfcTypeProduct</TypeIdentifier>
+									<AttributeIdentifier>RepresentationMaps</AttributeIdentifier>
+									<InstanceName>Body</InstanceName>
+									<ListPositions ex:cType="list"/>
+									<InnerReference>
+										<IfcReference id="i385">
+											<TypeIdentifier>IfcRepresentationMap</TypeIdentifier>
+											<AttributeIdentifier>MappedRepresentation</AttributeIdentifier>
+											<ListPositions ex:cType="list"/>
+											<InnerReference>
+												<IfcReference id="i384">
+													<TypeIdentifier>IfcShapeRepresentation</TypeIdentifier>
+													<AttributeIdentifier>Items</AttributeIdentifier>
+													<ListPositions ex:cType="list">
+														<Int32 nil="true" ex:pos="0"/>
+													</ListPositions>
+													<InnerReference>
+														<IfcReference id="i383">
+															<TypeIdentifier>IfcCsgPrimitive3D</TypeIdentifier>
+															<AttributeIdentifier>Position</AttributeIdentifier>
+															<ListPositions ex:cType="list"/>
+															<InnerReference>
+																<IfcReference id="i382">
+																	<TypeIdentifier>IfcAxis2Placement3D</TypeIdentifier>
+																	<AttributeIdentifier>Location</AttributeIdentifier>
+																	<ListPositions ex:cType="list"/>
+																	<InnerReference>
+																		<IfcReference id="i381">
+																			<TypeIdentifier>IfcCartesianPoint</TypeIdentifier>
+																			<AttributeIdentifier>Coordinates</AttributeIdentifier>
+																			<ListPositions ex:cType="list">
+																				<Int32 nil="true" ex:pos="0"/>
+																			</ListPositions>
+																			<InnerReference>
+																				<IfcReference id="i380">
+																					<TypeIdentifier>IfcLengthMeasure</TypeIdentifier>
+																					<ListPositions ex:cType="list"/>
+																				</IfcReference>
+																			</InnerReference>
+																		</IfcReference>
+																	</InnerReference>
+																</IfcReference>
+															</InnerReference>
+														</IfcReference>
+													</InnerReference>
+												</IfcReference>
+											</InnerReference>
+										</IfcReference>
+									</InnerReference>
+								</IfcReference>
+							</ReferencePath>
+						</IfcMetric>
+						<IfcMetric id="i423">
+							<Name>Anchor-7-Y</Name>
+							<ConstraintGrade>hard</ConstraintGrade>
+							<Benchmark>equalto</Benchmark>
+							<ValueSource>Max</ValueSource>
+							<DataValue>
+								<IfcAppliedValue id="i415">
+									<ArithmeticOperator>subtract</ArithmeticOperator>
+									<Components ex:cType="list">
+										<IfcAppliedValue id="i408">
+											<AppliedValue>
+												<IfcReference id="i407">
+													<TypeIdentifier>IfcTypeProduct</TypeIdentifier>
+													<AttributeIdentifier>RepresentationMaps</AttributeIdentifier>
+													<InstanceName>Box</InstanceName>
+													<ListPositions ex:cType="list"/>
+													<InnerReference>
+														<IfcReference id="i406">
+															<TypeIdentifier>IfcRepresentationMap</TypeIdentifier>
+															<AttributeIdentifier>MappedRepresentation</AttributeIdentifier>
+															<ListPositions ex:cType="list"/>
+															<InnerReference>
+																<IfcReference id="i405">
+																	<TypeIdentifier>IfcShapeRepresentation</TypeIdentifier>
+																	<AttributeIdentifier>Items</AttributeIdentifier>
+																	<ListPositions ex:cType="list">
+																		<Int32 nil="true" ex:pos="0"/>
+																	</ListPositions>
+																	<InnerReference>
+																		<IfcReference id="i404">
+																			<TypeIdentifier>IfcBoundingBox</TypeIdentifier>
+																			<AttributeIdentifier>YDim</AttributeIdentifier>
+																			<ListPositions ex:cType="list"/>
+																			<InnerReference>
+																				<IfcReference id="i403">
+																					<TypeIdentifier>IfcPositiveLengthMeasure</TypeIdentifier>
+																					<ListPositions ex:cType="list"/>
+																				</IfcReference>
+																			</InnerReference>
+																		</IfcReference>
+																	</InnerReference>
+																</IfcReference>
+															</InnerReference>
+														</IfcReference>
+													</InnerReference>
+												</IfcReference>
+											</AppliedValue>
+											<Components ex:cType="list"/>
+										</IfcAppliedValue>
+										<IfcAppliedValue id="i414">
+											<AppliedValue>
+												<IfcReference id="i413">
+													<TypeIdentifier>IfcTypeProduct</TypeIdentifier>
+													<AttributeIdentifier>RepresentationMaps</AttributeIdentifier>
+													<InstanceName>Body</InstanceName>
+													<ListPositions ex:cType="list"/>
+													<InnerReference>
+														<IfcReference id="i412">
+															<TypeIdentifier>IfcRepresentationMap</TypeIdentifier>
+															<AttributeIdentifier>MappedRepresentation</AttributeIdentifier>
+															<ListPositions ex:cType="list"/>
+															<InnerReference>
+																<IfcReference id="i411">
+																	<TypeIdentifier>IfcShapeRepresentation</TypeIdentifier>
+																	<AttributeIdentifier>Items</AttributeIdentifier>
+																	<ListPositions ex:cType="list">
+																		<Int32 nil="true" ex:pos="0"/>
+																	</ListPositions>
+																	<InnerReference>
+																		<IfcReference id="i410">
+																			<TypeIdentifier>IfcBlock</TypeIdentifier>
+																			<AttributeIdentifier>YLength</AttributeIdentifier>
+																			<ListPositions ex:cType="list"/>
+																			<InnerReference>
+																				<IfcReference id="i409">
+																					<TypeIdentifier>IfcPositiveLengthMeasure</TypeIdentifier>
+																					<ListPositions ex:cType="list"/>
+																				</IfcReference>
+																			</InnerReference>
+																		</IfcReference>
+																	</InnerReference>
+																</IfcReference>
+															</InnerReference>
+														</IfcReference>
+													</InnerReference>
+												</IfcReference>
+											</AppliedValue>
+											<Components ex:cType="list"/>
+										</IfcAppliedValue>
+									</Components>
+								</IfcAppliedValue>
+							</DataValue>
+							<ReferencePath>
+								<IfcReference id="i422">
+									<TypeIdentifier>IfcTypeProduct</TypeIdentifier>
+									<AttributeIdentifier>RepresentationMaps</AttributeIdentifier>
+									<InstanceName>Body</InstanceName>
+									<ListPositions ex:cType="list"/>
+									<InnerReference>
+										<IfcReference id="i421">
+											<TypeIdentifier>IfcRepresentationMap</TypeIdentifier>
+											<AttributeIdentifier>MappedRepresentation</AttributeIdentifier>
+											<ListPositions ex:cType="list"/>
+											<InnerReference>
+												<IfcReference id="i420">
+													<TypeIdentifier>IfcShapeRepresentation</TypeIdentifier>
+													<AttributeIdentifier>Items</AttributeIdentifier>
+													<ListPositions ex:cType="list">
+														<Int32 nil="true" ex:pos="0"/>
+													</ListPositions>
+													<InnerReference>
+														<IfcReference id="i419">
+															<TypeIdentifier>IfcCsgPrimitive3D</TypeIdentifier>
+															<AttributeIdentifier>Position</AttributeIdentifier>
+															<ListPositions ex:cType="list"/>
+															<InnerReference>
+																<IfcReference id="i418">
+																	<TypeIdentifier>IfcAxis2Placement3D</TypeIdentifier>
+																	<AttributeIdentifier>Location</AttributeIdentifier>
+																	<ListPositions ex:cType="list"/>
+																	<InnerReference>
+																		<IfcReference id="i417">
+																			<TypeIdentifier>IfcCartesianPoint</TypeIdentifier>
+																			<AttributeIdentifier>Coordinates</AttributeIdentifier>
+																			<ListPositions ex:cType="list">
+																				<Int32 nil="true" ex:pos="0"/>
+																			</ListPositions>
+																			<InnerReference>
+																				<IfcReference id="i416">
+																					<TypeIdentifier>IfcLengthMeasure</TypeIdentifier>
+																					<ListPositions ex:cType="list"/>
+																				</IfcReference>
+																			</InnerReference>
+																		</IfcReference>
+																	</InnerReference>
+																</IfcReference>
+															</InnerReference>
+														</IfcReference>
+													</InnerReference>
+												</IfcReference>
+											</InnerReference>
+										</IfcReference>
+									</InnerReference>
+								</IfcReference>
+							</ReferencePath>
+						</IfcMetric>
+						<IfcMetric id="i437">
+							<Name>Anchor-7-X</Name>
+							<ConstraintGrade>hard</ConstraintGrade>
+							<Benchmark>equalto</Benchmark>
+							<ValueSource>Span</ValueSource>
+							<DataValue>
+								<IfcAppliedValue id="i431">
+									<AppliedValue>
+										<IfcReference id="i430">
+											<TypeIdentifier>IfcTypeProduct</TypeIdentifier>
+											<AttributeIdentifier>RepresentationMaps</AttributeIdentifier>
+											<InstanceName>Box</InstanceName>
+											<ListPositions ex:cType="list"/>
+											<InnerReference>
+												<IfcReference id="i429">
+													<TypeIdentifier>IfcRepresentationMap</TypeIdentifier>
+													<AttributeIdentifier>MappedRepresentation</AttributeIdentifier>
+													<ListPositions ex:cType="list"/>
+													<InnerReference>
+														<IfcReference id="i428">
+															<TypeIdentifier>IfcShapeRepresentation</TypeIdentifier>
+															<AttributeIdentifier>Items</AttributeIdentifier>
+															<ListPositions ex:cType="list">
+																<Int32 nil="true" ex:pos="0"/>
+															</ListPositions>
+															<InnerReference>
+																<IfcReference id="i427">
+																	<TypeIdentifier>IfcBoundingBox</TypeIdentifier>
+																	<AttributeIdentifier>XDim</AttributeIdentifier>
+																	<ListPositions ex:cType="list"/>
+																	<InnerReference>
+																		<IfcReference id="i426">
+																			<TypeIdentifier>IfcPositiveLengthMeasure</TypeIdentifier>
+																			<ListPositions ex:cType="list"/>
+																		</IfcReference>
+																	</InnerReference>
+																</IfcReference>
+															</InnerReference>
+														</IfcReference>
+													</InnerReference>
+												</IfcReference>
+											</InnerReference>
+										</IfcReference>
+									</AppliedValue>
+									<Components ex:cType="list"/>
+								</IfcAppliedValue>
+							</DataValue>
+							<ReferencePath>
+								<IfcReference id="i436">
+									<TypeIdentifier>IfcTypeProduct</TypeIdentifier>
+									<AttributeIdentifier>RepresentationMaps</AttributeIdentifier>
+									<InstanceName>Body</InstanceName>
+									<ListPositions ex:cType="list"/>
+									<InnerReference>
+										<IfcReference id="i435">
+											<TypeIdentifier>IfcRepresentationMap</TypeIdentifier>
+											<AttributeIdentifier>MappedRepresentation</AttributeIdentifier>
+											<ListPositions ex:cType="list"/>
+											<InnerReference>
+												<IfcReference id="i434">
+													<TypeIdentifier>IfcShapeRepresentation</TypeIdentifier>
+													<AttributeIdentifier>Items</AttributeIdentifier>
+													<ListPositions ex:cType="list">
+														<Int32 nil="true" ex:pos="0"/>
+													</ListPositions>
+													<InnerReference>
+														<IfcReference id="i433">
+															<TypeIdentifier>IfcBlock</TypeIdentifier>
+															<AttributeIdentifier>XLength</AttributeIdentifier>
+															<ListPositions ex:cType="list"/>
+															<InnerReference>
+																<IfcReference id="i432">
+																	<TypeIdentifier>IfcPositiveLengthMeasure</TypeIdentifier>
+																	<ListPositions ex:cType="list"/>
+																</IfcReference>
+															</InnerReference>
+														</IfcReference>
+													</InnerReference>
+												</IfcReference>
+											</InnerReference>
+										</IfcReference>
+									</InnerReference>
+								</IfcReference>
+							</ReferencePath>
+						</IfcMetric>
+						<IfcMetric id="i451">
+							<Name>Anchor-7-Z</Name>
+							<ConstraintGrade>hard</ConstraintGrade>
+							<Benchmark>equalto</Benchmark>
+							<ValueSource>Span</ValueSource>
+							<DataValue>
+								<IfcAppliedValue id="i445">
+									<AppliedValue>
+										<IfcReference id="i444">
+											<TypeIdentifier>IfcTypeProduct</TypeIdentifier>
+											<AttributeIdentifier>RepresentationMaps</AttributeIdentifier>
+											<InstanceName>Box</InstanceName>
+											<ListPositions ex:cType="list"/>
+											<InnerReference>
+												<IfcReference id="i443">
+													<TypeIdentifier>IfcRepresentationMap</TypeIdentifier>
+													<AttributeIdentifier>MappedRepresentation</AttributeIdentifier>
+													<ListPositions ex:cType="list"/>
+													<InnerReference>
+														<IfcReference id="i442">
+															<TypeIdentifier>IfcShapeRepresentation</TypeIdentifier>
+															<AttributeIdentifier>Items</AttributeIdentifier>
+															<ListPositions ex:cType="list">
+																<Int32 nil="true" ex:pos="0"/>
+															</ListPositions>
+															<InnerReference>
+																<IfcReference id="i441">
+																	<TypeIdentifier>IfcBoundingBox</TypeIdentifier>
+																	<AttributeIdentifier>ZDim</AttributeIdentifier>
+																	<ListPositions ex:cType="list"/>
+																	<InnerReference>
+																		<IfcReference id="i440">
+																			<TypeIdentifier>IfcPositiveLengthMeasure</TypeIdentifier>
+																			<ListPositions ex:cType="list"/>
+																		</IfcReference>
+																	</InnerReference>
+																</IfcReference>
+															</InnerReference>
+														</IfcReference>
+													</InnerReference>
+												</IfcReference>
+											</InnerReference>
+										</IfcReference>
+									</AppliedValue>
+									<Components ex:cType="list"/>
+								</IfcAppliedValue>
+							</DataValue>
+							<ReferencePath>
+								<IfcReference id="i450">
+									<TypeIdentifier>IfcTypeProduct</TypeIdentifier>
+									<AttributeIdentifier>RepresentationMaps</AttributeIdentifier>
+									<InstanceName>Body</InstanceName>
+									<ListPositions ex:cType="list"/>
+									<InnerReference>
+										<IfcReference id="i449">
+											<TypeIdentifier>IfcRepresentationMap</TypeIdentifier>
+											<AttributeIdentifier>MappedRepresentation</AttributeIdentifier>
+											<ListPositions ex:cType="list"/>
+											<InnerReference>
+												<IfcReference id="i448">
+													<TypeIdentifier>IfcShapeRepresentation</TypeIdentifier>
+													<AttributeIdentifier>Items</AttributeIdentifier>
+													<ListPositions ex:cType="list">
+														<Int32 nil="true" ex:pos="0"/>
+													</ListPositions>
+													<InnerReference>
+														<IfcReference id="i447">
+															<TypeIdentifier>IfcBlock</TypeIdentifier>
+															<AttributeIdentifier>ZLength</AttributeIdentifier>
+															<ListPositions ex:cType="list"/>
+															<InnerReference>
+																<IfcReference id="i446">
+																	<TypeIdentifier>IfcPositiveLengthMeasure</TypeIdentifier>
+																	<ListPositions ex:cType="list"/>
+																</IfcReference>
+															</InnerReference>
+														</IfcReference>
+													</InnerReference>
+												</IfcReference>
+											</InnerReference>
+										</IfcReference>
+									</InnerReference>
+								</IfcReference>
+							</ReferencePath>
+						</IfcMetric>
+						<IfcMetric id="i455">
+							<Name>Size</Name>
+							<ConstraintGrade>notdefined</ConstraintGrade>
+							<Benchmark>equalto</Benchmark>
+							<ValueSource>1'0.00"</ValueSource>
+							<DataValue>
+								<IfcTable id="i457">
+									<Rows ex:cType="list">
+										<IfcTableRow id="i468">
+											<RowCells ex:cType="list">
+												<IfcPositiveLengthMeasure nil="true" ex:pos="0">12</IfcPositiveLengthMeasure>
+											</RowCells>
+											<IsHeading/>
+										</IfcTableRow>
+										<IfcTableRow id="i470">
+											<RowCells ex:cType="list">
+												<IfcPositiveLengthMeasure nil="true" ex:pos="0">15</IfcPositiveLengthMeasure>
+											</RowCells>
+											<IsHeading/>
+										</IfcTableRow>
+										<IfcTableRow id="i472">
+											<RowCells ex:cType="list">
+												<IfcPositiveLengthMeasure nil="true" ex:pos="0">18</IfcPositiveLengthMeasure>
+											</RowCells>
+											<IsHeading/>
+										</IfcTableRow>
+										<IfcTableRow id="i474">
+											<RowCells ex:cType="list">
+												<IfcPositiveLengthMeasure nil="true" ex:pos="0">21</IfcPositiveLengthMeasure>
+											</RowCells>
+											<IsHeading/>
+										</IfcTableRow>
+										<IfcTableRow id="i476">
+											<RowCells ex:cType="list">
+												<IfcPositiveLengthMeasure nil="true" ex:pos="0">24</IfcPositiveLengthMeasure>
+											</RowCells>
+											<IsHeading/>
+										</IfcTableRow>
+										<IfcTableRow id="i478">
+											<RowCells ex:cType="list">
+												<IfcPositiveLengthMeasure nil="true" ex:pos="0">30</IfcPositiveLengthMeasure>
+											</RowCells>
+											<IsHeading/>
+										</IfcTableRow>
+										<IfcTableRow id="i480">
+											<RowCells ex:cType="list">
+												<IfcPositiveLengthMeasure nil="true" ex:pos="0">36</IfcPositiveLengthMeasure>
+											</RowCells>
+											<IsHeading/>
+										</IfcTableRow>
+									</Rows>
+									<Columns ex:cType="list">
+										<IfcTableColumn id="i461">
+											<Name>Size</Name>
+											<Description>Nominal width of the frame.</Description>
+											<Identifier>FrameSize</Identifier>
+											<ReferencePath>
+												<IfcReference id="i467">
+													<TypeIdentifier>IfcSystemFurnitureElementType</TypeIdentifier>
+													<AttributeIdentifier>RepresentationMaps</AttributeIdentifier>
+													<InstanceName>Box</InstanceName>
+													<ListPositions ex:cType="list"/>
+													<InnerReference>
+														<IfcReference id="i466">
+															<TypeIdentifier>IfcRepresentationMap</TypeIdentifier>
+															<AttributeIdentifier>MappedRepresentation</AttributeIdentifier>
+															<ListPositions ex:cType="list"/>
+															<InnerReference>
+																<IfcReference id="i465">
+																	<TypeIdentifier>IfcShapeRepresentation</TypeIdentifier>
+																	<AttributeIdentifier>Items</AttributeIdentifier>
+																	<InstanceName/>
+																	<ListPositions ex:cType="list"/>
+																	<InnerReference>
+																		<IfcReference id="i464">
+																			<TypeIdentifier>IfcBoundingBox</TypeIdentifier>
+																			<AttributeIdentifier>XDim</AttributeIdentifier>
+																			<ListPositions ex:cType="list"/>
+																			<InnerReference>
+																				<IfcReference id="i463">
+																					<TypeIdentifier>IfcPositiveLengthMeasure</TypeIdentifier>
+																					<ListPositions ex:cType="list"/>
+																				</IfcReference>
+																			</InnerReference>
+																		</IfcReference>
+																	</InnerReference>
+																</IfcReference>
+															</InnerReference>
+														</IfcReference>
+													</InnerReference>
+												</IfcReference>
+											</ReferencePath>
+										</IfcTableColumn>
+									</Columns>
+								</IfcTable>
+							</DataValue>
+						</IfcMetric>
+						<IfcMetric id="i516">
+							<Name>Color</Name>
+							<ConstraintGrade>notdefined</ConstraintGrade>
+							<Benchmark>equalto</Benchmark>
+							<ValueSource>birch effect</ValueSource>
+							<DataValue>
+								<IfcTable id="i518">
+									<Rows ex:cType="list">
+										<IfcTableRow id="i538">
+											<RowCells ex:cType="list">
+												<IfcLabel nil="true" ex:pos="0">birch effect</IfcLabel>
+												<IfcText nil="true" ex:pos="1">http://www.ikea.com/us/en/images/products/perfekt-orsa-cover-panel-for-base-cabinet__0183273_PE334435_S4.JPG</IfcText>
+											</RowCells>
+											<IsHeading/>
+										</IfcTableRow>
+										<IfcTableRow id="i540">
+											<RowCells ex:cType="list">
+												<IfcLabel nil="true" ex:pos="0">white</IfcLabel>
+												<IfcText nil="true" ex:pos="1">http://www.ikea.com/us/en/images/products/perfekt-cover-panel-for-base-cabinet__0084008_PE210282_S4.JPG</IfcText>
+											</RowCells>
+											<IsHeading/>
+										</IfcTableRow>
+									</Rows>
+									<Columns ex:cType="list">
+										<IfcTableColumn id="i522">
+											<Name>Color</Name>
+											<Description>Color of the frame as provided by the manufacturer.</Description>
+											<Identifier>FrameColor</Identifier>
+										</IfcTableColumn>
+										<IfcTableColumn id="i524">
+											<Name>Texture</Name>
+											<Description>Texture for displaying surface of frame.</Description>
+											<Identifier/>
+											<ReferencePath>
+												<IfcReference id="i537">
+													<TypeIdentifier>IfcSystemFurnitureElementType</TypeIdentifier>
+													<AttributeIdentifier>HasAssociations</AttributeIdentifier>
+													<InstanceName/>
+													<ListPositions ex:cType="list"/>
+													<InnerReference>
+														<IfcReference id="i536">
+															<TypeIdentifier>IfcRelAssociatesMaterial</TypeIdentifier>
+															<AttributeIdentifier>RelatingMaterial</AttributeIdentifier>
+															<ListPositions ex:cType="list"/>
+															<InnerReference>
+																<IfcReference id="i535">
+																	<TypeIdentifier>IfcMaterialConstituentSet</TypeIdentifier>
+																	<AttributeIdentifier>MaterialConstituents</AttributeIdentifier>
+																	<InstanceName>Frame</InstanceName>
+																	<ListPositions ex:cType="list"/>
+																	<InnerReference>
+																		<IfcReference id="i534">
+																			<TypeIdentifier>IfcMaterialConstituent</TypeIdentifier>
+																			<AttributeIdentifier>Material</AttributeIdentifier>
+																			<ListPositions ex:cType="list"/>
+																			<InnerReference>
+																				<IfcReference id="i533">
+																					<TypeIdentifier>IfcMaterial</TypeIdentifier>
+																					<AttributeIdentifier>HasRepresentation</AttributeIdentifier>
+																					<InstanceName/>
+																					<ListPositions ex:cType="list"/>
+																					<InnerReference>
+																						<IfcReference id="i532">
+																							<TypeIdentifier>IfcMaterialDefinitionRepresentation</TypeIdentifier>
+																							<AttributeIdentifier>Representations</AttributeIdentifier>
+																							<InstanceName/>
+																							<ListPositions ex:cType="list"/>
+																							<InnerReference>
+																								<IfcReference id="i531">
+																									<TypeIdentifier>IfcStyledRepresentation</TypeIdentifier>
+																									<AttributeIdentifier>Items</AttributeIdentifier>
+																									<InstanceName/>
+																									<ListPositions ex:cType="list"/>
+																									<InnerReference>
+																										<IfcReference id="i530">
+																											<TypeIdentifier>IfcStyledItem</TypeIdentifier>
+																											<AttributeIdentifier>Styles</AttributeIdentifier>
+																											<InstanceName/>
+																											<ListPositions ex:cType="list"/>
+																											<InnerReference>
+																												<IfcReference id="i529">
+																													<TypeIdentifier>IfcSurfaceStyle</TypeIdentifier>
+																													<AttributeIdentifier>Styles</AttributeIdentifier>
+																													<InstanceName/>
+																													<ListPositions ex:cType="list"/>
+																													<InnerReference>
+																														<IfcReference id="i528">
+																															<TypeIdentifier>IfcSurfaceStyleWithTextures</TypeIdentifier>
+																															<AttributeIdentifier>Textures</AttributeIdentifier>
+																															<InstanceName/>
+																															<ListPositions ex:cType="list"/>
+																															<InnerReference>
+																																<IfcReference id="i527">
+																																	<TypeIdentifier>IfcImageTexture</TypeIdentifier>
+																																	<AttributeIdentifier>URLReference</AttributeIdentifier>
+																																	<ListPositions ex:cType="list"/>
+																																	<InnerReference>
+																																		<IfcReference id="i526">
+																																			<TypeIdentifier>IfcURIReference</TypeIdentifier>
+																																			<ListPositions ex:cType="list"/>
+																																		</IfcReference>
+																																	</InnerReference>
+																																</IfcReference>
+																															</InnerReference>
+																														</IfcReference>
+																													</InnerReference>
+																												</IfcReference>
+																											</InnerReference>
+																										</IfcReference>
+																									</InnerReference>
+																								</IfcReference>
+																							</InnerReference>
+																						</IfcReference>
+																					</InnerReference>
+																				</IfcReference>
+																			</InnerReference>
+																		</IfcReference>
+																	</InnerReference>
+																</IfcReference>
+															</InnerReference>
+														</IfcReference>
+													</InnerReference>
+												</IfcReference>
+											</ReferencePath>
+										</IfcTableColumn>
+									</Columns>
+								</IfcTable>
+							</DataValue>
+						</IfcMetric>
+						<IfcMetric id="i573">
+							<Name>Article</Name>
+							<ConstraintGrade>notdefined</ConstraintGrade>
+							<Benchmark>equalto</Benchmark>
+							<ValueSource>400.493.49</ValueSource>
+							<DataValue>
+								<IfcTable id="i575">
+									<Rows ex:cType="list">
+										<IfcTableRow id="i601">
+											<RowCells ex:cType="list">
+												<IfcLabel nil="true" ex:pos="0">543.817.10</IfcLabel>
+												<IfcLabel nil="true" ex:pos="1">white</IfcLabel>
+												<IfcPositiveLengthMeasure nil="true" ex:pos="2">12</IfcPositiveLengthMeasure>
+												<IfcText nil="true" ex:pos="3">http://www.ikea.com/us/en/images/products/akurum-base-cabinet-frame__35804_PE126721_S4.jpg</IfcText>
+												<IfcMonetaryMeasure nil="true" ex:pos="4">28</IfcMonetaryMeasure>
+											</RowCells>
+											<IsHeading/>
+										</IfcTableRow>
+										<IfcTableRow id="i603">
+											<RowCells ex:cType="list">
+												<IfcLabel nil="true" ex:pos="0">543.818.10</IfcLabel>
+												<IfcLabel nil="true" ex:pos="1">white</IfcLabel>
+												<IfcPositiveLengthMeasure nil="true" ex:pos="2">15</IfcPositiveLengthMeasure>
+												<IfcText nil="true" ex:pos="3">http://www.ikea.com/us/en/images/products/akurum-base-cabinet-frame__35807_PE126724_S4.jpg</IfcText>
+												<IfcMonetaryMeasure nil="true" ex:pos="4">30</IfcMonetaryMeasure>
+											</RowCells>
+											<IsHeading/>
+										</IfcTableRow>
+										<IfcTableRow id="i605">
+											<RowCells ex:cType="list">
+												<IfcLabel nil="true" ex:pos="0">132.819.10</IfcLabel>
+												<IfcLabel nil="true" ex:pos="1">white</IfcLabel>
+												<IfcPositiveLengthMeasure nil="true" ex:pos="2">18</IfcPositiveLengthMeasure>
+												<IfcText nil="true" ex:pos="3">http://www.ikea.com/us/en/images/products/akurum-base-cabinet-frame__35867_PE126797_S4.jpg</IfcText>
+												<IfcMonetaryMeasure nil="true" ex:pos="4">31</IfcMonetaryMeasure>
+											</RowCells>
+											<IsHeading/>
+										</IfcTableRow>
+										<IfcTableRow id="i607">
+											<RowCells ex:cType="list">
+												<IfcLabel nil="true" ex:pos="0">943.820.10</IfcLabel>
+												<IfcLabel nil="true" ex:pos="1">white</IfcLabel>
+												<IfcPositiveLengthMeasure nil="true" ex:pos="2">21</IfcPositiveLengthMeasure>
+												<IfcText nil="true" ex:pos="3">http://www.ikea.com/us/en/images/products/akurum-base-cabinet-frame__35805_PE126722_S4.jpg</IfcText>
+												<IfcMonetaryMeasure nil="true" ex:pos="4">33</IfcMonetaryMeasure>
+											</RowCells>
+											<IsHeading/>
+										</IfcTableRow>
+										<IfcTableRow id="i609">
+											<RowCells ex:cType="list">
+												<IfcLabel nil="true" ex:pos="0">743.821.10</IfcLabel>
+												<IfcLabel nil="true" ex:pos="1">white</IfcLabel>
+												<IfcPositiveLengthMeasure nil="true" ex:pos="2">24</IfcPositiveLengthMeasure>
+												<IfcText nil="true" ex:pos="3">http://www.ikea.com/us/en/images/products/akurum-base-cabinet-frame__35806_PE126723_S4.jpg</IfcText>
+												<IfcMonetaryMeasure nil="true" ex:pos="4">36</IfcMonetaryMeasure>
+											</RowCells>
+											<IsHeading/>
+										</IfcTableRow>
+										<IfcTableRow id="i611">
+											<RowCells ex:cType="list">
+												<IfcLabel nil="true" ex:pos="0">543.822.10</IfcLabel>
+												<IfcLabel nil="true" ex:pos="1">white</IfcLabel>
+												<IfcPositiveLengthMeasure nil="true" ex:pos="2">30</IfcPositiveLengthMeasure>
+												<IfcText nil="true" ex:pos="3">http://www.ikea.com/us/en/images/products/akurum-base-cabinet-frame__32620_PE122645_S4.jpg</IfcText>
+												<IfcMonetaryMeasure nil="true" ex:pos="4">41</IfcMonetaryMeasure>
+											</RowCells>
+											<IsHeading/>
+										</IfcTableRow>
+										<IfcTableRow id="i613">
+											<RowCells ex:cType="list">
+												<IfcLabel nil="true" ex:pos="0">343.823.10</IfcLabel>
+												<IfcLabel nil="true" ex:pos="1">white</IfcLabel>
+												<IfcPositiveLengthMeasure nil="true" ex:pos="2">36</IfcPositiveLengthMeasure>
+												<IfcText nil="true" ex:pos="3">http://www.ikea.com/us/en/images/products/akurum-base-cabinet-frame__32620_PE122645_S4.jpg</IfcText>
+												<IfcMonetaryMeasure nil="true" ex:pos="4">45</IfcMonetaryMeasure>
+											</RowCells>
+											<IsHeading/>
+										</IfcTableRow>
+										<IfcTableRow id="i615">
+											<RowCells ex:cType="list">
+												<IfcLabel nil="true" ex:pos="0">700.493.43</IfcLabel>
+												<IfcLabel nil="true" ex:pos="1">birch effect</IfcLabel>
+												<IfcPositiveLengthMeasure nil="true" ex:pos="2">12</IfcPositiveLengthMeasure>
+												<IfcText nil="true" ex:pos="3">http://www.ikea.com/us/en/images/products/akurum-base-cabinet-frame__35800_PE126717_S4.jpg</IfcText>
+												<IfcMonetaryMeasure nil="true" ex:pos="4">28</IfcMonetaryMeasure>
+											</RowCells>
+											<IsHeading/>
+										</IfcTableRow>
+										<IfcTableRow id="i617">
+											<RowCells ex:cType="list">
+												<IfcLabel nil="true" ex:pos="0">500.492.44</IfcLabel>
+												<IfcLabel nil="true" ex:pos="1">birch effect</IfcLabel>
+												<IfcPositiveLengthMeasure nil="true" ex:pos="2">15</IfcPositiveLengthMeasure>
+												<IfcText nil="true" ex:pos="3">http://www.ikea.com/us/en/images/products/akurum-base-cabinet-frame__35801_PE126718_S4.jpg</IfcText>
+												<IfcMonetaryMeasure nil="true" ex:pos="4">30</IfcMonetaryMeasure>
+											</RowCells>
+											<IsHeading/>
+										</IfcTableRow>
+										<IfcTableRow id="i619">
+											<RowCells ex:cType="list">
+												<IfcLabel nil="true" ex:pos="0">200.493.45</IfcLabel>
+												<IfcLabel nil="true" ex:pos="1">birch effect</IfcLabel>
+												<IfcPositiveLengthMeasure nil="true" ex:pos="2">18</IfcPositiveLengthMeasure>
+												<IfcText nil="true" ex:pos="3">http://www.ikea.com/us/en/images/products/akurum-base-cabinet-frame__34357_PE124290_S4.jpg</IfcText>
+												<IfcMonetaryMeasure nil="true" ex:pos="4">31</IfcMonetaryMeasure>
+											</RowCells>
+											<IsHeading/>
+										</IfcTableRow>
+										<IfcTableRow id="i621">
+											<RowCells ex:cType="list">
+												<IfcLabel nil="true" ex:pos="0">000.493.46</IfcLabel>
+												<IfcLabel nil="true" ex:pos="1">birch effect</IfcLabel>
+												<IfcPositiveLengthMeasure nil="true" ex:pos="2">21</IfcPositiveLengthMeasure>
+												<IfcText nil="true" ex:pos="3">http://www.ikea.com/us/en/images/products/akurum-base-cabinet-frame__35802_PE126719_S4.jpg</IfcText>
+												<IfcMonetaryMeasure nil="true" ex:pos="4">33</IfcMonetaryMeasure>
+											</RowCells>
+											<IsHeading/>
+										</IfcTableRow>
+										<IfcTableRow id="i623">
+											<RowCells ex:cType="list">
+												<IfcLabel nil="true" ex:pos="0">800.493.47</IfcLabel>
+												<IfcLabel nil="true" ex:pos="1">birch effect</IfcLabel>
+												<IfcPositiveLengthMeasure nil="true" ex:pos="2">24</IfcPositiveLengthMeasure>
+												<IfcText nil="true" ex:pos="3">http://www.ikea.com/us/en/images/products/akurum-base-cabinet-frame__35803_PE126720_S4.jpg</IfcText>
+												<IfcMonetaryMeasure nil="true" ex:pos="4">36</IfcMonetaryMeasure>
+											</RowCells>
+											<IsHeading/>
+										</IfcTableRow>
+										<IfcTableRow id="i625">
+											<RowCells ex:cType="list">
+												<IfcLabel nil="true" ex:pos="0">600.493.48</IfcLabel>
+												<IfcLabel nil="true" ex:pos="1">birch effect</IfcLabel>
+												<IfcPositiveLengthMeasure nil="true" ex:pos="2">30</IfcPositiveLengthMeasure>
+												<IfcText nil="true" ex:pos="3">http://www.ikea.com/us/en/images/products/akurum-base-cabinet-frame__35803_PE126720_S4.jpg</IfcText>
+												<IfcMonetaryMeasure nil="true" ex:pos="4">41</IfcMonetaryMeasure>
+											</RowCells>
+											<IsHeading/>
+										</IfcTableRow>
+										<IfcTableRow id="i627">
+											<RowCells ex:cType="list">
+												<IfcLabel nil="true" ex:pos="0">400.493.49</IfcLabel>
+												<IfcLabel nil="true" ex:pos="1">birch effect</IfcLabel>
+												<IfcPositiveLengthMeasure nil="true" ex:pos="2">36</IfcPositiveLengthMeasure>
+												<IfcText nil="true" ex:pos="3">http://www.ikea.com/us/en/images/products/akurum-base-cabinet-frame__35803_PE126720_S4.jpg</IfcText>
+												<IfcMonetaryMeasure nil="true" ex:pos="4">45</IfcMonetaryMeasure>
+											</RowCells>
+											<IsHeading/>
+										</IfcTableRow>
+									</Rows>
+									<Columns ex:cType="list">
+										<IfcTableColumn id="i579">
+											<Name>Article</Name>
+											<Description>Article number used for purchasing.</Description>
+											<Identifier/>
+											<ReferencePath>
+												<IfcReference id="i582">
+													<TypeIdentifier>IfcSystemFurnitureElementType</TypeIdentifier>
+													<AttributeIdentifier>Tag</AttributeIdentifier>
+													<ListPositions ex:cType="list"/>
+													<InnerReference>
+														<IfcReference id="i581">
+															<TypeIdentifier>IfcLabel</TypeIdentifier>
+															<ListPositions ex:cType="list"/>
+														</IfcReference>
+													</InnerReference>
+												</IfcReference>
+											</ReferencePath>
+										</IfcTableColumn>
+										<IfcTableColumn id="i583">
+											<Name>Color</Name>
+											<Description>Color configuration of item.</Description>
+											<Identifier>FrameColor</Identifier>
+										</IfcTableColumn>
+										<IfcTableColumn id="i585">
+											<Name>Size</Name>
+											<Description>Size configuration of item.</Description>
+											<Identifier>FrameSize</Identifier>
+										</IfcTableColumn>
+										<IfcTableColumn id="i587">
+											<Name>Image</Name>
+											<Description>Image preview of item.</Description>
+											<Identifier/>
+											<ReferencePath>
+												<IfcReference id="i592">
+													<TypeIdentifier>IfcSystemFurnitureElementType</TypeIdentifier>
+													<AttributeIdentifier>HasAssociations</AttributeIdentifier>
+													<InstanceName>Icon</InstanceName>
+													<ListPositions ex:cType="list"/>
+													<InnerReference>
+														<IfcReference id="i591">
+															<TypeIdentifier>IfcRelAssociatesDocument</TypeIdentifier>
+															<AttributeIdentifier>RelatingDocument</AttributeIdentifier>
+															<ListPositions ex:cType="list"/>
+															<InnerReference>
+																<IfcReference id="i590">
+																	<TypeIdentifier>IfcDocumentInformation</TypeIdentifier>
+																	<AttributeIdentifier>Location</AttributeIdentifier>
+																	<ListPositions ex:cType="list"/>
+																	<InnerReference>
+																		<IfcReference id="i589">
+																			<TypeIdentifier>IfcURIReference</TypeIdentifier>
+																			<ListPositions ex:cType="list"/>
+																		</IfcReference>
+																	</InnerReference>
+																</IfcReference>
+															</InnerReference>
+														</IfcReference>
+													</InnerReference>
+												</IfcReference>
+											</ReferencePath>
+										</IfcTableColumn>
+										<IfcTableColumn id="i593">
+											<Name>Price</Name>
+											<Description>Manufacturers suggested retail price.</Description>
+											<Identifier/>
+											<ReferencePath>
+												<IfcReference id="i600">
+													<TypeIdentifier>IfcSystemFurnitureElementType</TypeIdentifier>
+													<AttributeIdentifier>HasAssignments</AttributeIdentifier>
+													<InstanceName/>
+													<ListPositions ex:cType="list"/>
+													<InnerReference>
+														<IfcReference id="i599">
+															<TypeIdentifier>IfcRelAssignsToControl</TypeIdentifier>
+															<AttributeIdentifier>RelatingControl</AttributeIdentifier>
+															<ListPositions ex:cType="list"/>
+															<InnerReference>
+																<IfcReference id="i598">
+																	<TypeIdentifier>IfcCostItem</TypeIdentifier>
+																	<AttributeIdentifier>CostValues</AttributeIdentifier>
+																	<InstanceName>Price</InstanceName>
+																	<ListPositions ex:cType="list"/>
+																	<InnerReference>
+																		<IfcReference id="i597">
+																			<TypeIdentifier>IfcCostValue</TypeIdentifier>
+																			<AttributeIdentifier>AppliedValue</AttributeIdentifier>
+																			<ListPositions ex:cType="list"/>
+																			<InnerReference>
+																				<IfcReference id="i596">
+																					<TypeIdentifier>IfcMeasureWithUnit</TypeIdentifier>
+																					<AttributeIdentifier>ValueComponent</AttributeIdentifier>
+																					<ListPositions ex:cType="list"/>
+																					<InnerReference>
+																						<IfcReference id="i595">
+																							<TypeIdentifier>IfcMonetaryMeasure</TypeIdentifier>
+																							<ListPositions ex:cType="list"/>
+																						</IfcReference>
+																					</InnerReference>
+																				</IfcReference>
+																			</InnerReference>
+																		</IfcReference>
+																	</InnerReference>
+																</IfcReference>
+															</InnerReference>
+														</IfcReference>
+													</InnerReference>
+												</IfcReference>
+											</ReferencePath>
+										</IfcTableColumn>
+									</Columns>
+								</IfcTable>
+							</DataValue>
+						</IfcMetric>
+					</BenchmarkValues>
+					<ObjectiveQualifier>parametric</ObjectiveQualifier>
+				</IfcObjective>
+			</RelatingConstraint>
+		</IfcRelAssociatesConstraint>
+		<IfcAxis2Placement3D id="i186">
+			<Location>
+				<IfcCartesianPoint id="i185">
+					<Coordinates ex:cType="list">
+						<IfcLengthMeasure nil="true" ex:pos="0">0</IfcLengthMeasure>
+						<IfcLengthMeasure nil="true" ex:pos="1">0</IfcLengthMeasure>
+						<IfcLengthMeasure nil="true" ex:pos="2">0</IfcLengthMeasure>
+					</Coordinates>
+				</IfcCartesianPoint>
+			</Location>
+		</IfcAxis2Placement3D>
+		<IfcAxis2Placement3D id="i198">
+			<Location>
+				<IfcCartesianPoint id="i197">
+					<Coordinates ex:cType="list">
+						<IfcLengthMeasure nil="true" ex:pos="0">0</IfcLengthMeasure>
+						<IfcLengthMeasure nil="true" ex:pos="1">0</IfcLengthMeasure>
+						<IfcLengthMeasure nil="true" ex:pos="2">0</IfcLengthMeasure>
+					</Coordinates>
+				</IfcCartesianPoint>
+			</Location>
+		</IfcAxis2Placement3D>
+		<IfcDirection id="i251">
+			<DirectionRatios ex:cType="list">
+				<ex:double-wrapper ex:pos="0">1</ex:double-wrapper>
+				<ex:double-wrapper ex:pos="1">0</ex:double-wrapper>
+				<ex:double-wrapper ex:pos="2">0</ex:double-wrapper>
+			</DirectionRatios>
+		</IfcDirection>
+		<IfcAxis2Placement3D id="i254">
+			<Location>
+				<IfcCartesianPoint id="i253">
+					<Coordinates ex:cType="list">
+						<IfcLengthMeasure nil="true" ex:pos="0">0</IfcLengthMeasure>
+						<IfcLengthMeasure nil="true" ex:pos="1">0</IfcLengthMeasure>
+						<IfcLengthMeasure nil="true" ex:pos="2">0</IfcLengthMeasure>
+					</Coordinates>
+				</IfcCartesianPoint>
+			</Location>
+		</IfcAxis2Placement3D>
+		<IfcCartesianPoint id="i255">
+			<Coordinates ex:cType="list">
+				<IfcLengthMeasure nil="true" ex:pos="0">60</IfcLengthMeasure>
+				<IfcLengthMeasure nil="true" ex:pos="1">0</IfcLengthMeasure>
+				<IfcLengthMeasure nil="true" ex:pos="2">0</IfcLengthMeasure>
+			</Coordinates>
+		</IfcCartesianPoint>
+		<IfcDirection id="i256">
+			<DirectionRatios ex:cType="list">
+				<ex:double-wrapper ex:pos="0">0</ex:double-wrapper>
+				<ex:double-wrapper ex:pos="1">0</ex:double-wrapper>
+				<ex:double-wrapper ex:pos="2">1</ex:double-wrapper>
+			</DirectionRatios>
+		</IfcDirection>
+		<IfcCartesianPoint id="i323">
+			<Coordinates ex:cType="list">
+				<IfcLengthMeasure nil="true" ex:pos="0">48</IfcLengthMeasure>
+				<IfcLengthMeasure nil="true" ex:pos="1">0</IfcLengthMeasure>
+				<IfcLengthMeasure nil="true" ex:pos="2">29.625</IfcLengthMeasure>
+			</Coordinates>
+		</IfcCartesianPoint>
+		<IfcAxis2Placement3D id="i393">
+			<Location>
+				<IfcCartesianPoint id="i392">
+					<Coordinates ex:cType="list">
+						<IfcLengthMeasure nil="true" ex:pos="0">0</IfcLengthMeasure>
+						<IfcLengthMeasure nil="true" ex:pos="1">0</IfcLengthMeasure>
+						<IfcLengthMeasure nil="true" ex:pos="2">0</IfcLengthMeasure>
+					</Coordinates>
+				</IfcCartesianPoint>
+			</Location>
+		</IfcAxis2Placement3D>
+		<IfcRelAssociatesMaterial id="i547">
+			<GlobalId>2CrVcUv9X5cwEEQaAeKtqa</GlobalId>
+			<Name/>
+			<RelatedObjects ex:cType="set">
+				<IfcSystemFurnitureElementType nil="true" ref="i48"/>
+			</RelatedObjects>
+			<RelatingMaterial>
+				<IfcMaterialConstituentSet id="i548">
+					<MaterialConstituents ex:cType="set">
+						<IfcMaterialConstituent id="i549">
+							<Name>Frame</Name>
+							<Material>
+								<IfcMaterial nil="true" ref="i551"/>
+							</Material>
+						</IfcMaterialConstituent>
+					</MaterialConstituents>
+				</IfcMaterialConstituentSet>
+			</RelatingMaterial>
+		</IfcRelAssociatesMaterial>
+		<IfcMaterial id="i551">
+			<Name/>
+		</IfcMaterial>
+		<IfcMaterialDefinitionRepresentation id="i552">
+			<Name/>
+			<Representations ex:cType="list">
+				<IfcStyledRepresentation id="i553">
+					<Items ex:cType="set">
+						<IfcStyledItem id="i555">
+							<Styles ex:cType="set">
+								<IfcSurfaceStyle id="i557">
+									<Name/>
+									<Side>positive</Side>
+									<Styles ex:cType="set">
+										<IfcSurfaceStyleWithTextures id="i559">
+											<Textures ex:cType="list">
+												<IfcImageTexture id="i561">
+													<RepeatS/>
+													<RepeatT/>
+													<Parameter ex:cType="list"/>
+													<URLReference>http://www.ikea.com/us/en/images/products/perfekt-orsa-cover-panel-for-base-cabinet__0183273_PE334435_S4.JPG</URLReference>
+												</IfcImageTexture>
+											</Textures>
+										</IfcSurfaceStyleWithTextures>
+									</Styles>
+								</IfcSurfaceStyle>
+							</Styles>
+							<Name/>
+						</IfcStyledItem>
+					</Items>
+				</IfcStyledRepresentation>
+			</Representations>
+			<RepresentedMaterial>
+				<IfcMaterial nil="true" ref="i551"/>
+			</RepresentedMaterial>
+		</IfcMaterialDefinitionRepresentation>
+		<IfcRelAssociatesDocument id="i639">
+			<GlobalId>1Mk0SzAYf3xeTgTKYfy4gN</GlobalId>
+			<Name>Icon</Name>
+			<RelatedObjects ex:cType="set">
+				<IfcSystemFurnitureElementType nil="true" ref="i48"/>
+			</RelatedObjects>
+			<RelatingDocument>
+				<IfcDocumentInformation id="i640">
+					<Identification/>
+					<Name/>
+					<Editors ex:cType="set"/>
+					<Location>http://www.ikea.com/us/en/images/products/akurum-base-cabinet-frame__35803_PE126720_S4.jpg</Location>
+				</IfcDocumentInformation>
+			</RelatingDocument>
+		</IfcRelAssociatesDocument>
+		<IfcRelAssignsToControl id="i641">
+			<GlobalId>3wVAmrsW18agPG7HndPLqc</GlobalId>
+			<Name/>
+			<RelatedObjects ex:cType="set">
+				<IfcSystemFurnitureElementType nil="true" ref="i48"/>
+			</RelatedObjects>
+			<RelatingControl>
+				<IfcCostItem id="i642">
+					<GlobalId>1DTQHefLX6zuk$ky8mq4ew</GlobalId>
+					<CostValues ex:cType="list">
+						<IfcCostValue id="i643">
+							<Name>Price</Name>
+							<AppliedValue>
+								<IfcMeasureWithUnit id="i645">
+									<ValueComponent>
+										<IfcMonetaryMeasure>45</IfcMonetaryMeasure>
+									</ValueComponent>
+								</IfcMeasureWithUnit>
+							</AppliedValue>
+							<Components ex:cType="list"/>
+						</IfcCostValue>
+					</CostValues>
+					<CostQuantities ex:cType="list"/>
+				</IfcCostItem>
+			</RelatingControl>
+		</IfcRelAssignsToControl>
+		<IfcPersonAndOrganization id="i648">
+			<ThePerson>
+				<IfcPerson id="i646">
+					<Identification>Tim</Identification>
+					<MiddleNames ex:cType="list"/>
+					<PrefixTitles ex:cType="list"/>
+					<SuffixTitles ex:cType="list"/>
+					<Roles ex:cType="list"/>
+					<Addresses ex:cType="list"/>
+				</IfcPerson>
+			</ThePerson>
+			<TheOrganization>
+				<IfcOrganization id="i647">
+					<Name>PARLOR</Name>
+					<Roles ex:cType="list"/>
+					<Addresses ex:cType="list"/>
+				</IfcOrganization>
+			</TheOrganization>
+			<Roles ex:cType="list"/>
+		</IfcPersonAndOrganization>
+		<IfcOwnerHistory id="i662">
+			<OwningUser>
+				<IfcPersonAndOrganization nil="true" ref="i5"/>
+			</OwningUser>
+			<OwningApplication>
+				<IfcApplication nil="true" ref="i1"/>
+			</OwningApplication>
+			<State>readwrite</State>
+			<ChangeAction>nochange</ChangeAction>
+			<LastModifiedDate>1393826145</LastModifiedDate>
+			<LastModifyingUser>
+				<IfcPersonAndOrganization nil="true" ref="i648"/>
+			</LastModifyingUser>
+			<LastModifyingApplication>
+				<IfcApplication nil="true" ref="i1"/>
+			</LastModifyingApplication>
+			<CreationDate>1393823065</CreationDate>
+		</IfcOwnerHistory>
+		<IfcOwnerHistory id="i685">
+			<OwningUser>
+				<IfcPersonAndOrganization nil="true" ref="i5"/>
+			</OwningUser>
+			<OwningApplication>
+				<IfcApplication nil="true" ref="i1"/>
+			</OwningApplication>
+			<State>readwrite</State>
+			<ChangeAction>nochange</ChangeAction>
+			<LastModifiedDate>1393826157</LastModifiedDate>
+			<LastModifyingUser>
+				<IfcPersonAndOrganization nil="true" ref="i648"/>
+			</LastModifyingUser>
+			<LastModifyingApplication>
+				<IfcApplication nil="true" ref="i1"/>
+			</LastModifyingApplication>
+			<CreationDate>1393823065</CreationDate>
+		</IfcOwnerHistory>
+		<IfcOwnerHistory id="i762">
+			<OwningUser>
+				<IfcPersonAndOrganization nil="true" ref="i5"/>
+			</OwningUser>
+			<OwningApplication>
+				<IfcApplication nil="true" ref="i1"/>
+			</OwningApplication>
+			<State>readwrite</State>
+			<ChangeAction>nochange</ChangeAction>
+			<LastModifiedDate>1393826489</LastModifiedDate>
+			<LastModifyingUser>
+				<IfcPersonAndOrganization nil="true" ref="i648"/>
+			</LastModifyingUser>
+			<LastModifyingApplication>
+				<IfcApplication nil="true" ref="i1"/>
+			</LastModifyingApplication>
+			<CreationDate>1393823065</CreationDate>
+		</IfcOwnerHistory>
+		<IfcPersonAndOrganization id="i765">
+			<ThePerson>
+				<IfcPerson id="i763">
+					<Identification>Tim</Identification>
+					<MiddleNames ex:cType="list"/>
+					<PrefixTitles ex:cType="list"/>
+					<SuffixTitles ex:cType="list"/>
+					<Roles ex:cType="list"/>
+					<Addresses ex:cType="list"/>
+				</IfcPerson>
+			</ThePerson>
+			<TheOrganization>
+				<IfcOrganization id="i764">
+					<Name>PARLOR</Name>
+					<Roles ex:cType="list"/>
+					<Addresses ex:cType="list"/>
+				</IfcOrganization>
+			</TheOrganization>
+			<Roles ex:cType="list"/>
+		</IfcPersonAndOrganization>
+		<IfcOwnerHistory id="i766">
+			<OwningUser>
+				<IfcPersonAndOrganization nil="true" ref="i5"/>
+			</OwningUser>
+			<OwningApplication>
+				<IfcApplication nil="true" ref="i1"/>
+			</OwningApplication>
+			<State>readwrite</State>
+			<ChangeAction>modified</ChangeAction>
+			<LastModifiedDate>1393826588</LastModifiedDate>
+			<LastModifyingUser>
+				<IfcPersonAndOrganization nil="true" ref="i765"/>
+			</LastModifyingUser>
+			<LastModifyingApplication>
+				<IfcApplication nil="true" ref="i1"/>
+			</LastModifyingApplication>
+			<CreationDate>1393823065</CreationDate>
+		</IfcOwnerHistory>
+		<IfcOwnerHistory id="i802">
+			<OwningUser>
+				<IfcPersonAndOrganization nil="true" ref="i5"/>
+			</OwningUser>
+			<OwningApplication>
+				<IfcApplication nil="true" ref="i1"/>
+			</OwningApplication>
+			<State>readwrite</State>
+			<ChangeAction>modified</ChangeAction>
+			<LastModifiedDate>1393826607</LastModifiedDate>
+			<LastModifyingUser>
+				<IfcPersonAndOrganization nil="true" ref="i765"/>
+			</LastModifyingUser>
+			<LastModifyingApplication>
+				<IfcApplication nil="true" ref="i1"/>
+			</LastModifyingApplication>
+			<CreationDate>1393823065</CreationDate>
+		</IfcOwnerHistory>
+		<IfcOwnerHistory id="i806">
+			<OwningUser>
+				<IfcPersonAndOrganization nil="true" ref="i5"/>
+			</OwningUser>
+			<OwningApplication>
+				<IfcApplication nil="true" ref="i1"/>
+			</OwningApplication>
+			<State>readwrite</State>
+			<ChangeAction>modified</ChangeAction>
+			<LastModifiedDate>1393826607</LastModifiedDate>
+			<LastModifyingUser>
+				<IfcPersonAndOrganization nil="true" ref="i765"/>
+			</LastModifyingUser>
+			<LastModifyingApplication>
+				<IfcApplication nil="true" ref="i1"/>
+			</LastModifyingApplication>
+			<CreationDate>1393823065</CreationDate>
+		</IfcOwnerHistory>
+		<IfcOwnerHistory id="i811">
+			<OwningUser>
+				<IfcPersonAndOrganization nil="true" ref="i5"/>
+			</OwningUser>
+			<OwningApplication>
+				<IfcApplication nil="true" ref="i1"/>
+			</OwningApplication>
+			<State>readwrite</State>
+			<ChangeAction>modified</ChangeAction>
+			<LastModifiedDate>1393826607</LastModifiedDate>
+			<LastModifyingUser>
+				<IfcPersonAndOrganization nil="true" ref="i765"/>
+			</LastModifyingUser>
+			<LastModifyingApplication>
+				<IfcApplication nil="true" ref="i1"/>
+			</LastModifyingApplication>
+			<CreationDate>1393823065</CreationDate>
+		</IfcOwnerHistory>
+		<IfcOwnerHistory id="i816">
+			<OwningUser>
+				<IfcPersonAndOrganization nil="true" ref="i5"/>
+			</OwningUser>
+			<OwningApplication>
+				<IfcApplication nil="true" ref="i1"/>
+			</OwningApplication>
+			<State>readwrite</State>
+			<ChangeAction>modified</ChangeAction>
+			<LastModifiedDate>1393826607</LastModifiedDate>
+			<LastModifyingUser>
+				<IfcPersonAndOrganization nil="true" ref="i765"/>
+			</LastModifyingUser>
+			<LastModifyingApplication>
+				<IfcApplication nil="true" ref="i1"/>
+			</LastModifyingApplication>
+			<CreationDate>1393823065</CreationDate>
+		</IfcOwnerHistory>
+		<IfcOwnerHistory id="i821">
+			<OwningUser>
+				<IfcPersonAndOrganization nil="true" ref="i5"/>
+			</OwningUser>
+			<OwningApplication>
+				<IfcApplication nil="true" ref="i1"/>
+			</OwningApplication>
+			<State>readwrite</State>
+			<ChangeAction>modified</ChangeAction>
+			<LastModifiedDate>1393826607</LastModifiedDate>
+			<LastModifyingUser>
+				<IfcPersonAndOrganization nil="true" ref="i765"/>
+			</LastModifyingUser>
+			<LastModifyingApplication>
+				<IfcApplication nil="true" ref="i1"/>
+			</LastModifyingApplication>
+			<CreationDate>1393823065</CreationDate>
+		</IfcOwnerHistory>
+		<IfcOwnerHistory id="i826">
+			<OwningUser>
+				<IfcPersonAndOrganization nil="true" ref="i5"/>
+			</OwningUser>
+			<OwningApplication>
+				<IfcApplication nil="true" ref="i1"/>
+			</OwningApplication>
+			<State>readwrite</State>
+			<ChangeAction>modified</ChangeAction>
+			<LastModifiedDate>1393826607</LastModifiedDate>
+			<LastModifyingUser>
+				<IfcPersonAndOrganization nil="true" ref="i765"/>
+			</LastModifyingUser>
+			<LastModifyingApplication>
+				<IfcApplication nil="true" ref="i1"/>
+			</LastModifyingApplication>
+			<CreationDate>1393823065</CreationDate>
+		</IfcOwnerHistory>
+	</ex:uos>
+</ex:iso_10303_28>

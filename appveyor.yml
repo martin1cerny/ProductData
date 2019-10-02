@@ -20,6 +20,8 @@ build:
 artifacts:
 - path: Tools\SchemaValidator\bin\$(configuration)
   name: SchemaValidator
+- path: Tools\ExampleGenerator\bin\$(configuration)
+  name: ExampleGenerator
   
 #------------------------------------#
 #    Run the SchemaValidator.exe     #

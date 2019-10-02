@@ -1,13 +1,13 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 15
-VisualStudioVersion = 15.0.27703.2042
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.29319.158
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SchemaValidator", "SchemaValidator\SchemaValidator.csproj", "{25DE284D-60AD-44D3-B320-A244D781AC20}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SchemaValidator", "SchemaValidator\SchemaValidator.csproj", "{25DE284D-60AD-44D3-B320-A244D781AC20}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Examples", "Examples\Examples.csproj", "{72641B12-ABEE-4D79-B626-6F001B945081}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ExampleGenerator", "ExampleGenerator\ExampleGenerator.csproj", "{72641B12-ABEE-4D79-B626-6F001B945081}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ColorCode", "ColorCode\ColorCode.csproj", "{37438935-D221-4FD8-A10E-4EC5356B0F94}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ColorCode", "ColorCode\ColorCode.csproj", "{37438935-D221-4FD8-A10E-4EC5356B0F94}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

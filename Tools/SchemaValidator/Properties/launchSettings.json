@@ -1,0 +1,8 @@
+{
+  "profiles": {
+    "SchemaValidator": {
+      "commandName": "Project",
+      "commandLineArgs": "\"C:\\Development\\GitHub\\BIM-Profiles\\ProfileFiles\\BimProfil.VDI2552-9A.V0.9\\Templates.ifcXML\""
+    }
+  }
+}

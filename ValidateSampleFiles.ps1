@@ -1,6 +1,6 @@
 ﻿$BaseFolder = "C:\projects\productdata"
-$ValidatorExe="$BaseFolder\Tools\SchemaValidator\bin\Release\SchemaValidator.exe"
-$SampleFiles = Get-ChildItem -Path $BaseFolder  -Recurse -Include *.ifc,*.ifcXML
+$ValidatorExe="$BaseFolder\Tools\SchemaValidator\bin\Release\net48\SchemaValidator.exe"
+$SampleFiles = Get-ChildItem -Path "$BaseFolder\SampleFiles"  -Recurse -Include *.ifc,*.ifcXML
 $ExitCode=0
 foreach ($file in $SampleFiles | Sort-Object -Property FullName) 
 {

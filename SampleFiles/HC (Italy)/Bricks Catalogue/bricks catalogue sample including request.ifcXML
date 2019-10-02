@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<ifcXML xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.buildingsmart-tech.org/ifcXML/IFC4/Add2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.buildingsmart-tech.org/ifcXML/IFC4/Add2 http://www.buildingsmart-tech.org/ifc/IFC4/Add2/IFC4_ADD2.xsd">
+<ifcXML xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.buildingsmart-tech.org/ifcXML/IFC4/Add2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.buildingsmart-tech.org/ifcXML/IFC4/Add2 ../../IFC4_ADD2.xsd">
 	<header>
 		<name/>
 		<author/>
