@@ -80,11 +80,18 @@ namespace Examples.LOIN
                     rel.RelatedObjects.Add(loin);
                     rel.RelatingClassification =
                         New<IfcClassificationReference>(c => {
-                            c.Identification = "NF2.3";
-                            c.ReferencedSource = New<IfcClassification>(cs => {
-                                cs.Name = "Uniclass 2015";
-                                cs.Description = "Unified Classification System";
-                                cs.Source = "https://toolkit.thenbs.com/articles/classification#classificationtables";
+                            c.Identification = "AD10";
+                            c.Name = "Wall construction with solid core";
+                            c.ReferencedSource = New<IfcClassificationReference>(cr => {
+                                cr.Identification = "AD";
+                                cr.Name = "Wall construction";
+                                cr.ReferencedSource = New<IfcClassification>(cs => {
+                                    cs.Name = "CoClass";
+                                    cs.Description = "Unified Classification System";
+                                    cs.Source = "https://coclass.byggtjanst.se/about#about-coclass";
+                                    Comment(cs, "And it can reference the classification system itself to avoid any ambiguities");
+                                });
+                                Comment(cr, "Classification references can form hierarchy");
                             });
                             Comment(c, "Classification reference is pointing to the classification system where it is defined.");
                             Comment(c, "Many classification systems might exist in a single model/file");

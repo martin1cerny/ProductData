@@ -34,9 +34,24 @@ which can be later used in the actual design.");
 are infered from SI units. Because of that, relations between all units are well defined,
 reliable and it is possible to validate them.");
                 });
+                var m6 = New<IfcDerivedUnit>(du =>
+                {
+                    du.UnitType = Xbim.Ifc4.Interfaces.IfcDerivedUnitEnum.WARPINGCONSTANTUNIT;
+                    du.Elements.Add(New<IfcDerivedUnitElement>(e =>
+                    {
+                        e.Exponent = 6;
+                        e.Unit = New<IfcSIUnit>(u =>
+                        {
+                            u.Name = Xbim.Ifc4.Interfaces.IfcSIUnitName.METRE;
+                            u.UnitType = Xbim.Ifc4.Interfaces.IfcUnitEnum.LENGTHUNIT;
+                        });
+                    }));
+                    Comment(du, @"Complex units can be described using elements with exponents.");
+                });
                 lib.UnitsInContext = New<IfcUnitAssignment>(ua =>
                 {
                     ua.Units.Add(mm);
+                    ua.Units.Add(m6);
                     Comment(ua, @"Units are assigned to the library project to that when units are not explicitely
 defined for properties thay can be found on the project level. There are exact rules to find units for
 all measure types (for example 'LENGTHUNIT' for 'IfcLengthMeasue' etc.)");
@@ -76,7 +91,8 @@ entity type fit for a brick so it is used as the applicable entity definition");
                             New<IfcRelAssociatesConstraint>(r =>
                             {
                                 r.RelatedObjects.Add(v);
-                                r.RelatingConstraint = New<IfcObjective>(o => {
+                                r.RelatingConstraint = New<IfcObjective>(o =>
+                                {
                                     o.Name = "Length constraints";
                                     o.LogicalAggregator = Xbim.Ifc4.Interfaces.IfcLogicalOperatorEnum.LOGICALXOR;
                                     o.BenchmarkValues.Add(New<IfcMetric>(m =>
@@ -86,7 +102,8 @@ entity type fit for a brick so it is used as the applicable entity definition");
                                         m.ConstraintSource = "EN 772-1";
                                         m.ValueSource = "EN 772-1";
                                         m.Benchmark = Xbim.Ifc4.Interfaces.IfcBenchmarkEnum.LESSTHANOREQUALTO;
-                                        m.DataValue = New<IfcMeasureWithUnit>(mu => {
+                                        m.DataValue = New<IfcMeasureWithUnit>(mu =>
+                                        {
                                             mu.ValueComponent = new IfcLengthMeasure(300);
                                             mu.UnitComponent = mm;
                                             Comment(mu, "Measure with unit is used to set a required value type and unit");
@@ -105,7 +122,7 @@ entity type fit for a brick so it is used as the applicable entity definition");
                                     }));
                                     Comment(o, "Objective is used to combine constrains so that either value with unit is evaluated or 'NPD' value is required");
                                 });
-                                
+
                                 Comment(r, "Relation used to set a constraint on the template property");
                             });
                         })
