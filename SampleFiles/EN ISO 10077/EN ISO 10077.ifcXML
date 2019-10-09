@@ -70,7 +70,7 @@
 							<IfcSimplePropertyTemplate id="i999914" GlobalId="10x58_dMjCtv6QMVLNUbjC" Name="Manufacturer name" Description="" TemplateType="p_singlevalue" PrimaryMeasureType="IfcText" pos="3"/>
 							<IfcSimplePropertyTemplate id="i999915" GlobalId="10x58_dMjCtv6QMVLNUbjD" Name="Manufacturer address" Description="perhaps separate into postalcode, city and street?" TemplateType="p_singlevalue" PrimaryMeasureType="IfcText" pos="4"/>
 							<IfcSimplePropertyTemplate id="i999916" GlobalId="10x58_dMjCtv6QMVLNUbjE" Name="Authorised representative" Description="" TemplateType="p_singlevalue" PrimaryMeasureType="IfcText" pos="5"/>
-							<IfcSimplePropertyTemplate id="i999917" GlobalId="10x58_dMjCtv6QMVLNUbjF" Name="System/s of AVCP" Description="" TemplateType="p_enumeratedvalue" PrimaryMeasureType="IfcText" pos="6">
+							<IfcSimplePropertyTemplate id="i999917" GlobalId="10x58_dMjCtv6QMVLNUbjF" Name="Systems of AVCP" Description="" TemplateType="p_enumeratedvalue" PrimaryMeasureType="IfcText" pos="6">
 								<Enumerators Name="">
 									<EnumerationValues>
 										<IfcLabel-wrapper id="i9999174" pos="0">2+</IfcLabel-wrapper>
@@ -78,7 +78,7 @@
 									</EnumerationValues>
 								</Enumerators>
 							</IfcSimplePropertyTemplate>
-							<IfcSimplePropertyTemplate id="i999918" GlobalId="10x58_dMjCtv6QMVLNUbjG" Name="Harmonised standard" Description="Empty,If System/s of AVCP was 4;to be filled by manufactuer if System/s of AVCP was not 4" TemplateType="p_singlevalue" PrimaryMeasureType="IfcText" pos="7"/>
+							<IfcSimplePropertyTemplate id="i999918" GlobalId="10x58_dMjCtv6QMVLNUbjG" Name="Harmonised standard" Description="Empty,If Systems of AVCP was 4;to be filled by manufactuer if Systems of AVCP was not 4" TemplateType="p_singlevalue" PrimaryMeasureType="IfcText" pos="7"/>
 							<IfcSimplePropertyTemplate id="i999919" GlobalId="10x58_dMjCtv6QMVLNUbjH" Name="Notified bodies" Description="" TemplateType="p_singlevalue" PrimaryMeasureType="IfcText" pos="8"/>
 						</HasPropertyTemplates>
 					</IfcPropertySetTemplate>
@@ -310,7 +310,7 @@
 									<IfcLabel-wrapper>Value of the Authorised representative</IfcLabel-wrapper>
 								</NominalValue>
 							</IfcPropertySingleValue>
-							<IfcPropertySingleValue id="i971306" Name="System/s of AVCP">
+							<IfcPropertySingleValue id="i971306" Name="Systems of AVCP">
 								<NominalValue>
 									<IfcLabel-wrapper>2+</IfcLabel-wrapper>
 								</NominalValue>
