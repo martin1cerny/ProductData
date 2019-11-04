@@ -1,0 +1,112 @@
+﻿<!DOCTYPE HTML>
+
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+    <link rel="stylesheet" type="text/css" href="../../../ifc-styles.css">
+
+    <link rel="stylesheet" type="text/css" href="../../../details-shim.css">
+    <script type="text/javascript" src="../../../details-shim.js"></script>
+    <title>Product Data View</title>
+
+    <style type="text/css">
+      body { counter-reset: index1 1 index2 1 index3 0 index4 -1 index5 0; }
+    </style>
+  </head>
+
+  <body>
+
+<p>CEN TC 442-WG2-TG3-P1</p>
+
+<script type="text/javascript">
+<!--
+    parent.index.location.replace("../../toc-1.htm#");
+//-->
+</script>
+
+<h3><a id="product data view" name="product data view">1.1 Product Data View</a></h3>
+<h5>IfcComplexPropertyTemplate</h5>
+<table class="gridtable">
+<tr><th>Field</th><th>Mapping</th><th>Definition</th>
+<th>DV</th></tr>
+<tr><th>(Query)</th><th>\<a href="../../ifckernel/lexical/ifccomplexpropertytemplate.htm">IfcComplexPropertyTemplate</a><br>
+</th><th></th><th></th></tr>
+<tr><td>UserDefined_RelationPropertySetTemplate</td><td>\<a href="../../ifckernel/lexical/ifccomplexpropertytemplate.htm">IfcComplexPropertyTemplate</a>.PartOfPsetTemplate[*]<br>\<a href="../../ifckernel/lexical/ifcpropertysettemplate.htm">IfcPropertySetTemplate</a><br></td><td>Reference to the <a href="../../ifckernel/lexical/ifcpropertysettemplate.htm">IfcPropertySetTemplate</a> that defines the scope for the <a href="../../ifckernel/lexical/ifcpropertytemplate.htm">IfcPropertyTemplate</a>. A single <a href="../../ifckernel/lexical/ifcpropertytemplate.htm">IfcPropertyTemplate</a> can be defined within the scope of zero, one or many <a href="../../ifckernel/lexical/ifcpropertysettemplate.htm">IfcPropertySetTemplate</a>'.</td><td></td></tr></table>
+<h5>IfcObject</h5>
+<table class="gridtable">
+<tr><th>Field</th><th>Mapping</th><th>Definition</th>
+<th>DV</th></tr>
+<tr><th>(Query)</th><th>\<a href="../../ifckernel/lexical/ifcobject.htm">IfcObject</a><br>
+</th><th></th><th></th></tr>
+<tr><td>Document Association</td><td>\<a href="../../ifckernel/lexical/ifcobjectdefinition.htm">IfcObjectDefinition</a>.HasAssociations[*]<br>\<a href="../../ifckernel/lexical/ifcrelassociatesdocument.htm">IfcRelAssociatesDocument</a>.Name<br>\<a href="../../ifcmeasureresource/lexical/ifclabel.htm">IfcLabel</a><br></td><td>Optional name for use by the participating software systems or users. For some subtypes of IfcRoot the insertion of the Name attribute may be required. This would be enforced by a where rule.
+</td><td></td></tr><tr><td>Classification Association</td><td>\<a href="../../ifckernel/lexical/ifcobjectdefinition.htm">IfcObjectDefinition</a>.HasAssociations[*]<br>\<a href="../../ifckernel/lexical/ifcrelassociatesclassification.htm">IfcRelAssociatesClassification</a>.RelatingClassification<br>\<a href="../../ifcexternalreferenceresource/lexical/ifcclassificationreference.htm">IfcClassificationReference</a>.Identification<br>\<a href="../../ifcmeasureresource/lexical/ifcidentifier.htm">IfcIdentifier</a><br></td><td>The <i>Identification</i> provides a unique identifier of the referenced item within the external source (classification, document or library). It may be provided as 
+<ul>
+ <li>a key, e.g. a classification notation, like NF2.3</li>
+ <li>a handle</li>
+ <li>a uuid or guid</li>
+</ul>
+It may be human readable (such as a key) or not (such as a handle or uuid) depending on the context of its usage (which has to be determined by local agreement).
+</td><td></td></tr><tr><td>UserDefined_ProjectLibraryAssociation</td><td>\<a href="../../ifckernel/lexical/ifcobject.htm">IfcObject</a>.HasContext[*]<br>\<a href="../../ifckernel/lexical/ifcreldeclares.htm">IfcRelDeclares</a>.RelatingContext<br>\<a href="../../ifckernel/lexical/ifcprojectlibrary.htm">IfcProjectLibrary</a><br></td><td>Reference to the <i>IfcProject</i> to which additional information is assigned.</td><td></td></tr><tr><td>UserDefined_DeComposition</td><td>\<a href="../../ifckernel/lexical/ifcobject.htm">IfcObject</a>.IsDecomposedBy[*]<br>\<a href="../../ifckernel/lexical/ifcrelaggregates.htm">IfcRelAggregates</a>.RelatedObjects[*]<br>\<a href="../../ifcproductextension/lexical/ifcelementtype.htm">IfcElementType</a><br></td><td>The object definitions, either object occurrences or object types, that are being aggregated. They are defined as the parts in the whole/part relationship. No order is implied between the parts.
+
+</td><td></td></tr><tr><td>Object Typing</td><td>\<a href="../../ifckernel/lexical/ifcobject.htm">IfcObject</a>.IsTypedBy[*]<br>\<a href="../../ifckernel/lexical/ifcreldefinesbytype.htm">IfcRelDefinesByType</a>.RelatingType<br>\<a href="../../ifckernel/lexical/ifctypeobject.htm">IfcTypeObject</a>.Name<br></td><td>Optional name for use by the participating software systems or users. For some subtypes of IfcRoot the insertion of the Name attribute may be required. This would be enforced by a where rule.
+</td><td></td></tr></table>
+<table class="gridtable">
+<tr><th>Field</th><th>Mapping</th><th>Definition</th>
+<th>DV</th></tr>
+<tr><th>(Query)</th><th>\<a href="../../ifckernel/lexical/ifcprojectlibrary.htm">IfcProjectLibrary</a><br>
+</th><th></th><th></th></tr>
+<tr><td>Document Association</td><td>\<a href="../../ifckernel/lexical/ifcobjectdefinition.htm">IfcObjectDefinition</a>.HasAssociations[*]<br>\<a href="../../ifckernel/lexical/ifcrelassociatesdocument.htm">IfcRelAssociatesDocument</a>.Name<br>\<a href="../../ifcmeasureresource/lexical/ifclabel.htm">IfcLabel</a><br></td><td>Optional name for use by the participating software systems or users. For some subtypes of IfcRoot the insertion of the Name attribute may be required. This would be enforced by a where rule.
+</td><td></td></tr><tr><td>Classification Association</td><td>\<a href="../../ifckernel/lexical/ifcobjectdefinition.htm">IfcObjectDefinition</a>.HasAssociations[*]<br>\<a href="../../ifckernel/lexical/ifcrelassociatesclassification.htm">IfcRelAssociatesClassification</a>.RelatingClassification<br>\<a href="../../ifcexternalreferenceresource/lexical/ifcclassificationreference.htm">IfcClassificationReference</a>.Identification<br>\<a href="../../ifcmeasureresource/lexical/ifcidentifier.htm">IfcIdentifier</a><br></td><td>The <i>Identification</i> provides a unique identifier of the referenced item within the external source (classification, document or library). It may be provided as 
+<ul>
+ <li>a key, e.g. a classification notation, like NF2.3</li>
+ <li>a handle</li>
+ <li>a uuid or guid</li>
+</ul>
+It may be human readable (such as a key) or not (such as a handle or uuid) depending on the context of its usage (which has to be determined by local agreement).
+</td><td></td></tr><tr><td>UserDefined_DeComposition</td><td>\<a href="../../ifckernel/lexical/ifcprojectlibrary.htm">IfcProjectLibrary</a>.Decomposes[*]<br>\<a href="../../ifckernel/lexical/ifcrelaggregates.htm">IfcRelAggregates</a>.RelatingObject<br>\<a href="../../ifckernel/lexical/ifcprojectlibrary.htm">IfcProjectLibrary</a><br></td><td>The object definition, either an object type or an object occurrence, that represents the aggregation. It is the whole within the whole/part relationship.
+
+</td><td></td></tr></table>
+<h5>IfcPropertySetTemplate</h5>
+<table class="gridtable">
+<tr><th>Field</th><th>Mapping</th><th>Definition</th>
+<th>DV</th></tr>
+<tr><th>(Query)</th><th>\<a href="../../ifckernel/lexical/ifcpropertysettemplate.htm">IfcPropertySetTemplate</a><br>
+</th><th></th><th></th></tr>
+<tr><td>Document Association</td><td>\<a href="../../ifckernel/lexical/ifcobjectdefinition.htm">IfcObjectDefinition</a>.HasAssociations[*]<br>\<a href="../../ifckernel/lexical/ifcrelassociatesdocument.htm">IfcRelAssociatesDocument</a>.Name<br>\<a href="../../ifcmeasureresource/lexical/ifclabel.htm">IfcLabel</a><br></td><td>Optional name for use by the participating software systems or users. For some subtypes of IfcRoot the insertion of the Name attribute may be required. This would be enforced by a where rule.
+</td><td></td></tr><tr><td>Classification Association</td><td>\<a href="../../ifckernel/lexical/ifcobjectdefinition.htm">IfcObjectDefinition</a>.HasAssociations[*]<br>\<a href="../../ifckernel/lexical/ifcrelassociatesclassification.htm">IfcRelAssociatesClassification</a>.RelatingClassification<br>\<a href="../../ifcexternalreferenceresource/lexical/ifcclassificationreference.htm">IfcClassificationReference</a>.Identification<br>\<a href="../../ifcmeasureresource/lexical/ifcidentifier.htm">IfcIdentifier</a><br></td><td>The <i>Identification</i> provides a unique identifier of the referenced item within the external source (classification, document or library). It may be provided as 
+<ul>
+ <li>a key, e.g. a classification notation, like NF2.3</li>
+ <li>a handle</li>
+ <li>a uuid or guid</li>
+</ul>
+It may be human readable (such as a key) or not (such as a handle or uuid) depending on the context of its usage (which has to be determined by local agreement).
+</td><td></td></tr><tr><td>UserDefined_RelationElementType</td><td>\<a href="../../ifckernel/lexical/ifcpropertysettemplate.htm">IfcPropertySetTemplate</a>.HasContext[*]<br>\<a href="../../ifckernel/lexical/ifcreldeclares.htm">IfcRelDeclares</a>.RelatedDefinitions[*]<br>\<a href="../../ifcproductextension/lexical/ifcelementtype.htm">IfcElementType</a><br></td><td>Set of object or property definitions that are assigned to a context and to which the unit and representation context definitions of that context apply.</td><td></td></tr></table>
+<h5>IfcPropertyTemplate</h5>
+<table class="gridtable">
+<tr><th>Field</th><th>Mapping</th><th>Definition</th>
+<th>DV</th></tr>
+<tr><th>(Query)</th><th>\<a href="../../ifckernel/lexical/ifcpropertytemplate.htm">IfcPropertyTemplate</a><br>
+</th><th></th><th></th></tr>
+<tr><td>UserDefined_RelationComplexProperty</td><td>\<a href="../../ifckernel/lexical/ifcpropertytemplate.htm">IfcPropertyTemplate</a>.PartOfComplexTemplate[*]<br>\<a href="../../ifckernel/lexical/ifccomplexpropertytemplate.htm">IfcComplexPropertyTemplate</a><br></td><td>Reference to a complex property templates. It should only be provided, if the <i>PropertyType</i> of the referenced complex property template is set to <small>COMPLEX</small>.</td><td></td></tr><tr><td>UserDefined_ConstraintAssociation</td><td>\<a href="../../ifckernel/lexical/ifcpropertytemplate.htm">IfcPropertyTemplate</a>.HasAssociations[*]<br>\<a href="../../ifccontrolextension/lexical/ifcrelassociatesconstraint.htm">IfcRelAssociatesConstraint</a>.RelatingConstraint<br>\<a href="../../ifcconstraintresource/lexical/ifcmetric.htm">IfcMetric</a>.DataValue<br>\<a href="../../ifcconstraintresource/lexical/ifcmetricvalueselect.htm">IfcMetricValueSelect</a><br></td><td>The value to be compared on associated objects. A null value indicates comparison to null.
+</td><td></td></tr><tr><td>UserDefined_Document Association</td><td>\<a href="../../ifckernel/lexical/ifcpropertytemplate.htm">IfcPropertyTemplate</a>.HasAssociations[*]<br>\<a href="../../ifckernel/lexical/ifcrelassociatesdocument.htm">IfcRelAssociatesDocument</a>.Name<br>\<a href="../../ifcmeasureresource/lexical/ifclabel.htm">IfcLabel</a><br></td><td>Optional name for use by the participating software systems or users. For some subtypes of IfcRoot the insertion of the Name attribute may be required. This would be enforced by a where rule.
+</td><td></td></tr><tr><td>UserDefined_Classification Association</td><td>\<a href="../../ifckernel/lexical/ifcpropertytemplate.htm">IfcPropertyTemplate</a>.HasAssociations[*]<br>\<a href="../../ifckernel/lexical/ifcrelassociatesclassification.htm">IfcRelAssociatesClassification</a>.RelatingClassification<br>\<a href="../../ifcexternalreferenceresource/lexical/ifcclassificationreference.htm">IfcClassificationReference</a>.Location<br>\<a href="../../ifcexternalreferenceresource/lexical/ifcurireference.htm">IfcURIReference</a><br></td><td>Location, where the external source (classification, document or library) can be accessed by electronic means. The electronic location is provided as an URI, and would normally be given as an URL location string.
+</td><td></td></tr></table>
+<h5>IfcSimplePropertyTemplate</h5>
+<table class="gridtable">
+<tr><th>Field</th><th>Mapping</th><th>Definition</th>
+<th>DV</th></tr>
+<tr><th>(Query)</th><th>\<a href="../../ifckernel/lexical/ifcsimplepropertytemplate.htm">IfcSimplePropertyTemplate</a><br>
+</th><th></th><th></th></tr>
+<tr><td>UserDefined_RelationPropertySetTemplate</td><td>\<a href="../../ifckernel/lexical/ifcsimplepropertytemplate.htm">IfcSimplePropertyTemplate</a>.PartOfPsetTemplate[*]<br>\<a href="../../ifckernel/lexical/ifcpropertysettemplate.htm">IfcPropertySetTemplate</a><br></td><td>Reference to the <a href="../../ifckernel/lexical/ifcpropertysettemplate.htm">IfcPropertySetTemplate</a> that defines the scope for the <a href="../../ifckernel/lexical/ifcpropertytemplate.htm">IfcPropertyTemplate</a>. A single <a href="../../ifckernel/lexical/ifcpropertytemplate.htm">IfcPropertyTemplate</a> can be defined within the scope of zero, one or many <a href="../../ifckernel/lexical/ifcpropertysettemplate.htm">IfcPropertySetTemplate</a>'.</td><td></td></tr><tr><td>UserDefined_AssociationUnitMeasureType</td><td>\<a href="../../ifckernel/lexical/ifcsimplepropertytemplate.htm">IfcSimplePropertyTemplate</a>.PrimaryUnit<br>\<a href="../../ifcmeasureresource/lexical/ifcunit.htm">IfcUnit</a><br></td><td>Primary unit assigned to the definition of the property. It should be provided, if the <i>PropertyType</i> is set to:
+<ul>
+<li><small>P_SINGLEVALUE</small>: determining the <i>IfcPropertySingleValue.Unit</i></li>
+<li><small>P_ENUMERATEDVALUE</small>: determining the <i>IfcPropertyEnumeration.Unit</i></li>
+<li><small>P_BOUNDEDVALUE</small>: determining the <i>IfcPropertyBoundedValue.Unit</i></li>
+<li><small>P_LISTVALUE</small>: determining the <i>IfcPropertyListValue.Unit</i></li>
+<li><small>P_TABLEVALUE</small>: determining the <i>IfcPropertyTableValue.DefiningUnit</i></li>
+</ul></td><td></td></tr><tr><td>UserDefined_PropertyValueSelect</td><td>\<a href="../../ifckernel/lexical/ifcsimplepropertytemplate.htm">IfcSimplePropertyTemplate</a>.TemplateType<br>\<a href="../../ifckernel/lexical/ifcsimplepropertytemplatetypeenum.htm">IfcSimplePropertyTemplateTypeEnum</a><br></td><td>Property type defining whether the property template defines a property with a single value, a bounded value, a list value, a table value, an enumerated value, or a reference value. Or the quantity type defining whether the template defines a quantity with a length, area, volume, weight or time value.
+</td><td></td></tr></table>
+<p>CEN TC 442-WG2-TG3-P1</p>
+  </body>
+</html>
