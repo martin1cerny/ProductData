@@ -5,8 +5,13 @@
 Validity of ifcXML files aginst the XSD-schema 
 [![Build Status](https://travis-ci.org/buildingSMART/ProductData.svg?branch=master)](https://travis-ci.org/buildingSMART/ProductData)
 
-Validity of ifcXML files aginst the SchemaValidator 
+Validity of ifc files aginst the SchemaValidator 
 [![Build status](https://ci.appveyor.com/api/projects/status/yjoess7g50xqasdb/branch/master?svg=true)](https://ci.appveyor.com/project/klacol/productdata/branch/master)
+
+To come: Validity of ifc files aginst the Product Data View (MVDXML)
+To come: Validity of ifc files aginst the Definitions in bSDD
+
+SchemaValidator
 
 This official repository is maintained by the community around the ProductRoom of [buildingSMART International](https://www.buildingsmart.org). It is used for open communication of ideas, samples and agreements.
 
