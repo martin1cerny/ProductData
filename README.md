@@ -23,7 +23,7 @@ One folder per sample file as a subfolder in "SampleFiles" e.g. like this
 ```
 SampleFiles/MyExample
 ```
-Store all files, related to the sample, in the this folder.
+All other related files are store alongside in the this folder.
 
 ### Serialization formats 
 The sample should be one of the following serialization formats
@@ -36,7 +36,7 @@ The sample should be one of the following serialization formats
 
 Please be aware, that the file endings are case sentitive.
 
-The file can be also in the compressed form as an ".ifcZIP". (Look [here](http://www.buildingsmart-tech.org/ifc) to get an overview of all possible file formats to transport IFC-compliant data.)
+The file can be also in the compressed form as an ".ifcZIP". (Look [here](https://technical.buildingsmart.org/standards/ifc/ifc-formats) to get an overview of all possible file formats to transport IFC-compliant data.)
 
 ### Description
 Please add a readme.md in the folder and describe your sample. Please describe the use case and the specialities of your sample, so that everybody can easily understand your sample.
