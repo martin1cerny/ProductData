@@ -12,7 +12,6 @@ To come: Validity of ifc files aginst the Product Data View (MVDXML)
 
 To come: Validity of ifc files aginst the Definitions in bSDD
 
-SchemaValidator
 
 This official repository is maintained by the community around the ProductRoom of [buildingSMART International](https://www.buildingsmart.org). It is used for open communication of ideas, samples and agreements.
 
