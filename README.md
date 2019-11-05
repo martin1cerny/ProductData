@@ -9,6 +9,7 @@ Validity of ifc files aginst the SchemaValidator
 [![Build status](https://ci.appveyor.com/api/projects/status/yjoess7g50xqasdb/branch/master?svg=true)](https://ci.appveyor.com/project/klacol/productdata/branch/master)
 
 To come: Validity of ifc files aginst the Product Data View (MVDXML)
+
 To come: Validity of ifc files aginst the Definitions in bSDD
 
 SchemaValidator
