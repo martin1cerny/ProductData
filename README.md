@@ -13,7 +13,7 @@
 
 #### To come: Validity of ifcXML files against the IFC 4 xsd schema of the Product Data View
 
-#### To come: Validity of ifc files aginst the Definitions in bSDD
+#### To come: Validity of ifc files against the Definitions in a dictionary (e.g. bSDD)
 
 
 This official repository is maintained by the community around the ProductRoom of [buildingSMART International](https://www.buildingsmart.org). It is used for open communication of ideas, samples and agreements.
