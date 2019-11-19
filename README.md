@@ -2,17 +2,18 @@
 [![This repo is managed by the ProductRoom](https://img.shields.io/badge/-ProductRoom-blue.svg)](https://www.buildingsmart.org/standards/rooms-and-groups/product-room)
 
 ## Product Data for Building Information Modeling (BIM)
-Validity of ifcXML files against the Full IFC 4 XSD-schema 
+### Validation of sample files in this repository
+#### Validity of ifcXML files against the Full IFC 4 XSD-schema 
 [![Build Status](https://travis-ci.org/buildingSMART/ProductData.svg?branch=master)](https://travis-ci.org/buildingSMART/ProductData)
 
-Validity of ifc files against the Full IFC 4 schema with the XBim SchemaValidator 
+#### Validity of ifc files against the Full IFC 4 schema with the XBim SchemaValidator 
 [![Build status](https://ci.appveyor.com/api/projects/status/yjoess7g50xqasdb/branch/master?svg=true)](https://ci.appveyor.com/project/klacol/productdata/branch/master)
 
-To come: Validity of ifc files against the Product Data View (MVDXML)
+#### To come: Validity of ifc files against the Product Data View (MVDXML)
 
-To come: Validity of ifcXML files against the IFC 4 xsd schema of the Product Data View
+#### To come: Validity of ifcXML files against the IFC 4 xsd schema of the Product Data View
 
-To come: Validity of ifc files aginst the Definitions in bSDD
+#### To come: Validity of ifc files aginst the Definitions in bSDD
 
 
 This official repository is maintained by the community around the ProductRoom of [buildingSMART International](https://www.buildingsmart.org). It is used for open communication of ideas, samples and agreements.
