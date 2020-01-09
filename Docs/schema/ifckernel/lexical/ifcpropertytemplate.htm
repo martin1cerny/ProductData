@@ -1,0 +1,201 @@
+﻿<!DOCTYPE HTML>
+
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+    <link rel="stylesheet" type="text/css" href="../../../ifc-styles.css">
+
+    <link rel="stylesheet" type="text/css" href="../../../details-shim.css">
+    <script type="text/javascript" src="../../../details-shim.js"></script>
+    <title>IfcPropertyTemplate</title>
+
+    <style type="text/css">
+      body { counter-reset: index1 5 index2 2 index3 3 index4 7 index5 0; }
+    </style>
+  </head>
+
+  <body>
+
+
+<script type="text/javascript">
+<!--
+    parent.index.location.replace("../../toc-5.htm#5.2.3.8");
+//-->
+</script>
+
+<h4 class="num">IfcPropertyTemplate</h4>
+<details open="open"><summary>Natural language names</summary><table>
+<table class="gridtable">
+<tr><td><img src="../../../img/locale-de.png" /></td><td><b>Merkmal - Vorlage</b></td></tr>
+<tr><td><img src="../../../img/locale-en.png" /></td><td><b>Property Template</b></td></tr>
+<tr><td><img src="../../../img/locale-fr.png" /></td><td><b>Modèle de propriété</b></td></tr>
+</table>
+</details>
+<details open="open"><summary>Change log</summary><table class="gridtable">
+<tr><th>Item</th><th>SPF</th><th>XML</th><th>Change</th><th>Description</th></tr>
+<td colspan=5><b><a href="../../../annex/annex-f/ifc2x3-to-ifc4/index.htm">IFC2x3 to IFC4</a></b></td>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;<a href="../../../schema/ifckernel/lexical/ifcpropertytemplate.htm">IfcPropertyTemplate</a></td><td></td><td></td><td>ADDED</td><td></td></tr>
+</table>
+</details>
+<section>
+<h5 class="num">Semantic definitions at the entity</h5>
+<details open="open"><summary>Entity definition</summary><p>The <span class="self-ref">IfcPropertyTemplate</span> is an abstract supertype comprising the templates for all dynamically extensible properties, either as an <a href="../../ifckernel/lexical/ifccomplexpropertytemplate.htm">IfcComplexPropertyTemplate</a>, or an <a href="../../ifckernel/lexical/ifcsimplepropertytemplate.htm">IfcSimplePropertyTemplate</a>. These templates determine the structure of:</p>
+<ul>
+<li>in case of <a href="../../ifckernel/lexical/ifccomplexpropertytemplate.htm">IfcComplexPropertyTemplate</a>
+<ul>
+<li>an <i>IfcComplexProperty</i></li>
+<li>an <i>IfcPhysicalComplexQuantity</i></li>
+</ul>
+</li>
+<li>in case of <a href="../../ifckernel/lexical/ifcsimplepropertytemplate.htm">IfcSimplePropertyTemplate</a>
+<ul>
+<li>a subtype of <i>IfcSimpleProperty</i></li>
+<li>a subtype of <i>IfcPhysicalSimpleQuantity</i></li>
+</ul>
+</li>
+</ul>
+<p>The individual property templates are interpreted according to their <i>Name</i> attribute and may have a predefined property type, property unit, and property data type. A template however shall not have measure values, or quantity values assigned.</p>
+<blockquote class="note">
+<p>NOTE  Property templates can form part of a property library used and attached as part of a project library. In general the <a href="../../ifckernel/lexical/ifcpropertysettemplate.htm">IfcPropertySetTemplate</a>, containing the subtypes of <span class="self-ref">IfcPropertyTemplate</span> would be directly linked to the <a href="../../ifckernel/lexical/ifcprojectlibrary.htm">IfcProjectLibrary</a>.</p>
+</blockquote>
+<blockquote class="history">
+<p>HISTORY  New entity in IFC4.</p>
+</blockquote>
+</details>
+<details open="open"><summary>Attribute definitions</summary><table class="attributes">
+<tr><th>#</th><th>Attribute</th><th>Type</th><th>Cardinality</th><th>Description</th>
+<th>P</th></tr>
+<tr><td></td><td><i>PartOfComplexTemplate</i></td><td><a href="../../ifckernel/lexical/ifccomplexpropertytemplate.htm">IfcComplexPropertyTemplate</a><br/>@HasPropertyTemplates</td><td>S[0:?]</td><td>Reference to a complex property templates. It should only be provided, if the <i>PropertyType</i> of the referenced complex property template is set to <small>COMPLEX</small>.
+</td><td>X</td></tr>
+<tr><td></td><td><i>PartOfPsetTemplate</i></td><td><a href="../../ifckernel/lexical/ifcpropertysettemplate.htm">IfcPropertySetTemplate</a><br/>@HasPropertyTemplates</td><td>S[0:?]</td><td>Reference to the <a href="../../ifckernel/lexical/ifcpropertysettemplate.htm">IfcPropertySetTemplate</a> that defines the scope for the <span class="self-ref">IfcPropertyTemplate</span>. A single <span class="self-ref">IfcPropertyTemplate</span> can be defined within the scope of zero, one or many <a href="../../ifckernel/lexical/ifcpropertysettemplate.htm">IfcPropertySetTemplate</a>'.
+</td><td>X</td></tr>
+</table>
+</details>
+</section>
+<section>
+<h5 class="num">Inherited definitions from supertypes</h5>
+<details open="open"><summary>Entity inheritance</summary><img src="../../../diagrams/ifcpropertytemplate.png" usemap="#f"/>
+<map name="f">
+<area shape="rect" coords="54,102,242,114" href="../../../schema/ifckernel/lexical/ifccomplexpropertytemplate.htm" alt="IfcComplexPropertyTemplate" />
+<area shape="rect" coords="54,126,242,138" href="../../../schema/ifckernel/lexical/ifcsimplepropertytemplate.htm" alt="IfcSimplePropertyTemplate" />
+<area shape="rect" coords="30,54,266,66" href="../../../schema/ifckernel/lexical/ifcpropertytemplatedefinition.htm" alt="IfcPropertyTemplateDefinition" />
+<area shape="rect" coords="18,30,278,42" href="../../../schema/ifckernel/lexical/ifcpropertydefinition.htm" alt="IfcPropertyDefinition" />
+<area shape="rect" coords="6,6,290,18" href="../../../schema/ifckernel/lexical/ifcroot.htm" alt="IfcRoot" />
+</map>
+</details>
+<details><summary>Attribute inheritance</summary><table class="attributes">
+<tr><th>#</th><th>Attribute</th><th>Type</th><th>Cardinality</th><th>Description</th><th>P</th></tr>
+<tr><td colspan="6"><i><a href="../../ifckernel/lexical/ifcroot.htm">IfcRoot</a></i></td></tr>
+<tr><td>1</td><td>GlobalId</td><td><a href="../../ifcutilityresource/lexical/ifcgloballyuniqueid.htm">IfcGloballyUniqueId</a></td><td></td><td>
+Assignment of a globally unique identifier within the entire software world.
+</td><td>X</td></tr>
+<tr><td>2</td><td>OwnerHistory</td><td><span class="self-ref">-</span></td><td></td><td>
+<i>This attribute is out of scope for this model view definition and shall not be set.</i></td><td></td></tr>
+<tr><td>3</td><td>Name</td><td><a href="../../ifcmeasureresource/lexical/ifclabel.htm">IfcLabel</a></td><td>? </td><td>
+Optional name for use by the participating software systems or users. For some subtypes of IfcRoot the insertion of the Name attribute may be required. This would be enforced by a where rule.
+</td><td>X</td></tr>
+<tr><td>4</td><td>Description</td><td><span class="self-ref">-</span></td><td></td><td>
+<i>This attribute is out of scope for this model view definition and shall not be set.</i></td><td></td></tr>
+<tr><td colspan="6"><i><a href="../../ifckernel/lexical/ifcpropertydefinition.htm">IfcPropertyDefinition</a></i></td></tr>
+<tr><td></td><td><i>HasContext</i></td><td><a href="../../ifckernel/lexical/ifcreldeclares.htm">IfcRelDeclares</a><br/>@RelatedDefinitions</td><td>S[0:1]</td><td></td><td>X</td></tr>
+<tr><td></td><td><i>HasAssociations</i></td><td><a href="../../ifckernel/lexical/ifcrelassociates.htm">IfcRelAssociates</a><br/>@RelatedObjects</td><td>S[0:?]</td><td>Reference to the relationship IfcRelAssociates and thus to those externally defined concepts, like classifications, documents, or library information, which are associated to the property definition.
+</td><td>X</td></tr>
+<tr><td colspan="6"><i><a href="../../ifckernel/lexical/ifcpropertytemplatedefinition.htm">IfcPropertyTemplateDefinition</a></i></td></tr>
+<tr><td colspan="6"><i><a href="../../ifckernel/lexical/ifcpropertytemplate.htm">IfcPropertyTemplate</a></i></td></tr>
+<tr><td></td><td><i>PartOfComplexTemplate</i></td><td><a href="../../ifckernel/lexical/ifccomplexpropertytemplate.htm">IfcComplexPropertyTemplate</a><br/>@HasPropertyTemplates</td><td>S[0:?]</td><td>Reference to a complex property templates. It should only be provided, if the <i>PropertyType</i> of the referenced complex property template is set to <small>COMPLEX</small>.
+</td><td>X</td></tr>
+<tr><td></td><td><i>PartOfPsetTemplate</i></td><td><a href="../../ifckernel/lexical/ifcpropertysettemplate.htm">IfcPropertySetTemplate</a><br/>@HasPropertyTemplates</td><td>S[0:?]</td><td>Reference to the <a href="../../ifckernel/lexical/ifcpropertysettemplate.htm">IfcPropertySetTemplate</a> that defines the scope for the <span class="self-ref">IfcPropertyTemplate</span>. A single <span class="self-ref">IfcPropertyTemplate</span> can be defined within the scope of zero, one or many <a href="../../ifckernel/lexical/ifcpropertysettemplate.htm">IfcPropertySetTemplate</a>'.
+</td><td>X</td></tr>
+</table>
+</details>
+</section>
+<section>
+<h5 class="num">Definitions applying to Product Data View</h5>
+<p><a href="../../../annex/annex-d/product-data-view/ifcpropertytemplate.htm"><img style="border: 0px" src="../../../img/diagram.png" />&nbsp;Instance diagram</a></p><hr />
+<h5>IfcPropertyTemplate</h5><details open="open">
+<summary>Concept usage</summary>
+<a id="30ef4e25-5247-4fd2-be08-dda21ca8051d" />
+<p class="use-head">UserDefined_RelationComplexProperty</p>
+<p>The <a href="../../templates/30ef4e25-5247-4fd2-be08-dda21ca8051d.htm"></a> concept applies to this entity.</p><br/><br/>
+
+<a id="b91d7421-fa16-4322-9c2a-5a12672a846f" />
+<p class="use-head">UserDefined_ConstraintAssociation</p>
+<p>The <a href="../../templates/b91d7421-fa16-4322-9c2a-5a12672a846f.htm"></a> concept applies to this entity.</p><br/><br/>
+
+<a id="dd3efb18-47cf-4f01-b810-af3f3d6792f1" />
+<p class="use-head">UserDefined_Document Association</p>
+<p>The <a href="../../templates/dd3efb18-47cf-4f01-b810-af3f3d6792f1.htm"></a> concept applies to this entity.</p><br/><br/>
+
+<a id="0bba125e-878c-4dc0-9a6c-c077ef60447e" />
+<p class="use-head">UserDefined_Classification Association</p>
+<p>The <a href="../../templates/0bba125e-878c-4dc0-9a6c-c077ef60447e.htm"></a> concept applies to this entity.</p><br/><br/>
+
+</details>
+<details><summary>mvdXML Specification</summary>
+<div class="xsd"><code class="xsd">
+&lt;?xml version=&quot;1.0&quot;?&gt;<br/>
+&lt;ConceptRoot xmlns:xsi=&quot;http://www.w3.org/2001/XMLSchema-instance&quot; xmlns:xsd=&quot;http://www.w3.org/2001/XMLSchema&quot; uuid=&quot;d6ab8d57-7bb6-4ded-9050-1c7e828a2421&quot; name=&quot;IfcPropertyTemplate&quot; status=&quot;sample&quot; applicableRootEntity=&quot;IfcPropertyTemplate&quot;&gt;<br/>
+&nbsp;&nbsp;&lt;Applicability uuid=&quot;00000000-0000-0000-0000-000000000000&quot; status=&quot;sample&quot;&gt;<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&lt;Template ref=&quot;a111544d-5b24-41cc-98c8-9440633f0fbe&quot; /&gt;<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&lt;TemplateRules operator=&quot;and&quot; /&gt;<br/>
+&nbsp;&nbsp;&lt;/Applicability&gt;<br/>
+&nbsp;&nbsp;&lt;Concepts&gt;<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&lt;Concept uuid=&quot;49b7a147-cdf4-4400-bfc7-4c232e702fd7&quot; name=&quot;UserDefined_RelationComplexProperty&quot; status=&quot;sample&quot; override=&quot;false&quot;&gt;<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;Template ref=&quot;30ef4e25-5247-4fd2-be08-dda21ca8051d&quot; /&gt;<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&lt;/Concept&gt;<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&lt;Concept uuid=&quot;f360bd28-4ec6-4773-8350-19d8c935b3e4&quot; name=&quot;UserDefined_ConstraintAssociation&quot; status=&quot;sample&quot; override=&quot;false&quot;&gt;<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;Template ref=&quot;b91d7421-fa16-4322-9c2a-5a12672a846f&quot; /&gt;<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&lt;/Concept&gt;<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&lt;Concept uuid=&quot;f036f372-4c1f-437b-8cc9-bf506552ce0b&quot; name=&quot;UserDefined_Document Association&quot; status=&quot;sample&quot; override=&quot;false&quot;&gt;<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;Template ref=&quot;dd3efb18-47cf-4f01-b810-af3f3d6792f1&quot; /&gt;<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&lt;/Concept&gt;<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&lt;Concept uuid=&quot;202419c4-7b00-42b3-855f-70a570ab7fb9&quot; name=&quot;UserDefined_Classification Association&quot; status=&quot;sample&quot; override=&quot;false&quot;&gt;<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;Template ref=&quot;0bba125e-878c-4dc0-9a6c-c077ef60447e&quot; /&gt;<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&lt;/Concept&gt;<br/>
+&nbsp;&nbsp;&lt;/Concepts&gt;<br/>
+&lt;/ConceptRoot&gt;<br/>
+
+</code></div></details>
+<section>
+<details>
+<summary>Concept inheritance</summary>
+<p><table class="attributes">
+<tr><th><b>#</b></th><th><b>Concept</b></th><th><b>Template</b></th><th><b>Model View</b></th></tr>
+<tr><td colspan="3"><a href="../../ifckernel/lexical/ifcpropertytemplate.htm"><span class="self-ref">IfcPropertyTemplate</span></a></td></tr><tr><td> </td><td><a href="../../ifckernel/lexical/ifcpropertytemplate.htm#30ef4e25-5247-4fd2-be08-dda21ca8051d">UserDefined_RelationComplexProperty</a></td><td><a href="../../templates/30ef4e25-5247-4fd2-be08-dda21ca8051d.htm"></a></td><td>Product Data View</td></tr>
+<tr><td> </td><td><a href="../../ifckernel/lexical/ifcpropertytemplate.htm#b91d7421-fa16-4322-9c2a-5a12672a846f">UserDefined_ConstraintAssociation</a></td><td><a href="../../templates/b91d7421-fa16-4322-9c2a-5a12672a846f.htm"></a></td><td>Product Data View</td></tr>
+<tr><td> </td><td><a href="../../ifckernel/lexical/ifcpropertytemplate.htm#dd3efb18-47cf-4f01-b810-af3f3d6792f1">UserDefined_Document Association</a></td><td><a href="../../templates/dd3efb18-47cf-4f01-b810-af3f3d6792f1.htm"></a></td><td>Product Data View</td></tr>
+<tr><td> </td><td><a href="../../ifckernel/lexical/ifcpropertytemplate.htm#0bba125e-878c-4dc0-9a6c-c077ef60447e">UserDefined_Classification Association</a></td><td><a href="../../templates/0bba125e-878c-4dc0-9a6c-c077ef60447e.htm"></a></td><td>Product Data View</td></tr>
+
+</table>
+</details>
+</section>
+</section>
+<section>
+<h5 class="num">Formal representations</h5>
+<details><summary>XML Specification</summary><div class="xsd"><code class="xsd">&nbsp;&lt;xs:element name=&quot;<a href="../../ifckernel/lexical/ifcpropertytemplate.htm">IfcPropertyTemplate</a>&quot; type=&quot;ifc:<a href="../../ifckernel/lexical/ifcpropertytemplate.htm">IfcPropertyTemplate</a>&quot; abstract=&quot;true&quot; substitutionGroup=&quot;ifc:<a href="../../ifckernel/lexical/ifcpropertytemplatedefinition.htm">IfcPropertyTemplateDefinition</a>&quot; nillable=&quot;true&quot;/&gt;<br/>
+&nbsp;&lt;xs:complexType name=&quot;<a href="../../ifckernel/lexical/ifcpropertytemplate.htm">IfcPropertyTemplate</a>&quot; abstract=&quot;true&quot;&gt;<br/>
+&nbsp;&nbsp;&lt;xs:complexContent&gt;<br/>
+&nbsp;&nbsp;&nbsp;&lt;xs:extension base=&quot;ifc:<a href="../../ifckernel/lexical/ifcpropertytemplatedefinition.htm">IfcPropertyTemplateDefinition</a>&quot;/&gt;<br/>
+&nbsp;&nbsp;&lt;/xs:complexContent&gt;<br/>
+&nbsp;&lt;/xs:complexType&gt;<br/>
+</code></div></details>
+<details><summary>EXPRESS Specification</summary><div class="express"><code class="express">
+<span class="keyword">ENTITY</span> IfcPropertyTemplate<br/>
+&nbsp;<span class="keyword">ABSTRACT</span> <span class="keyword">SUPERTYPE OF</span>(<span class="keyword">ONEOF</span>(<a href="../../ifckernel/lexical/ifccomplexpropertytemplate.htm">IfcComplexPropertyTemplate</a>, <a href="../../ifckernel/lexical/ifcsimplepropertytemplate.htm">IfcSimplePropertyTemplate</a>))<br/>
+&nbsp;<span class="keyword">SUBTYPE OF</span> (<a href="../../ifckernel/lexical/ifcpropertytemplatedefinition.htm">IfcPropertyTemplateDefinition</a>)<b>;</b><br/>
+&nbsp;<span class="keyword">INVERSE</span><br/>
+&nbsp;&nbsp;PartOfComplexTemplate : <span class="keyword">SET</span> [0:?] OF <a href="../../ifckernel/lexical/ifccomplexpropertytemplate.htm">IfcComplexPropertyTemplate</a> <span class="keyword">FOR</span> HasPropertyTemplates;<br/>
+&nbsp;&nbsp;PartOfPsetTemplate : <span class="keyword">SET</span> [0:?] OF <a href="../../ifckernel/lexical/ifcpropertysettemplate.htm">IfcPropertySetTemplate</a> <span class="keyword">FOR</span> HasPropertyTemplates;<br/>
+<span class="keyword">END_ENTITY;</span><br/>
+<p class="std"><a href="../../../annex/annex-d/ifckernel/diagram_0003.htm" ><img src="../../../img/diagram.png" style="border: 0px" title="Link to EXPRESS-G diagram" alt="Link to EXPRESS-G diagram">&nbsp;EXPRESS-G diagram</a></p>
+</code></div>
+</details>
+</section>
+<p><img src="../../../img/external.png" style="border: 0px" title="References" alt="References"/>&nbsp; References: <a href="../../ifckernel/lexical/ifccomplexpropertytemplate.htm">IfcComplexPropertyTemplate</a>
+<a href="../../ifckernel/lexical/ifcpropertysettemplate.htm">IfcPropertySetTemplate</a>
+</p>
+<p><a href="../../../link/ifcpropertytemplate.htm" target="_top" ><img src="../../../img/permlink.png" style="border: 0px" title="Link to this page" alt="Link to this page"/>&nbsp; Link to this page</a></p>
+<p></p>
+  </body>
+</html>

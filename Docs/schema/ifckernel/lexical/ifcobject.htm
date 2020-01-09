@@ -1,0 +1,234 @@
+﻿<!DOCTYPE HTML>
+
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+    <link rel="stylesheet" type="text/css" href="../../../ifc-styles.css">
+
+    <link rel="stylesheet" type="text/css" href="../../../details-shim.css">
+    <script type="text/javascript" src="../../../details-shim.js"></script>
+    <title>IfcObject</title>
+
+    <style type="text/css">
+      body { counter-reset: index1 5 index2 2 index3 3 index4 2 index5 0; }
+    </style>
+  </head>
+
+  <body>
+
+
+<script type="text/javascript">
+<!--
+    parent.index.location.replace("../../toc-5.htm#5.2.3.3");
+//-->
+</script>
+
+<h4 class="num">IfcObject</h4>
+<details open="open"><summary>Natural language names</summary><table>
+<table class="gridtable">
+<tr><td><img src="../../../img/locale-de.png" /></td><td><b>Objekt</b></td></tr>
+<tr><td><img src="../../../img/locale-en.png" /></td><td><b>Object</b></td></tr>
+<tr><td><img src="../../../img/locale-fr.png" /></td><td><b>Objet</b></td></tr>
+</table>
+</details>
+<section>
+<h5 class="num">Semantic definitions at the entity</h5>
+<details open="open"><summary>Entity definition</summary><p>An <span class="self-ref">IfcObject</span> is the generalization of any semantically treated thing or process. Objects are things as they appear - i.e. occurrences.</p>
+<blockquote class="note">
+<p>NOTE  Examples of <span class="self-ref">IfcObject</span> include physically tangible items such as wall, beam or covering, physically existing items such as spaces, or conceptual items such as grids or virtual boundaries. It also stands for processes such as work tasks, for controls such as cost items, or for actors such as persons involved in the design process.</p>
+</blockquote>
+<p>Objects can be named, using the inherited <i>Name</i> attribute, which should be a user recognizable label for the object occurrance. Further explanations to the object can be given using the inherited <i>Description</i> attribute. The <i>ObjectType</i> attribute is used:</p>
+<ul>
+<li>to store the user defined value for all subtypes of <span class="self-ref">IfcObject</span>, where a <i>PredefinedType</i> attribute is given, and its value is set to USERDEFINED.</li>
+<li>to provide a type information (could be seen as a very lightweight classifier) of the subtype of <span class="self-ref">IfcObject</span>, if no <i>PredefinedType</i> attribute is given. This is often the case, if no comprehensive list of predefined types is available.</li>
+</ul>
+<p>Objects are independent pieces of information that might contain or reference other pieces of information. There are several relationships in which objects can be involved:</p>
+<ul>
+<li><strong>Association to external/internal resource information</strong> - an association relationship that refers to external/internal sources of information. See supertype <a href="../../ifckernel/lexical/ifcobjectdefinition.htm">IfcObjectDefinition</a> for more information.</li>
+<li><strong>Assignment of other objects</strong> - an assignment relationship that refers to other types of objects. See supertype <a href="../../ifckernel/lexical/ifcobjectdefinition.htm">IfcObjectDefinition</a> for more information.</li>
+<li><strong>Aggregation of other objects</strong> - an aggregation relationship that establishes a whole/part relation. Objects can either be a whole, or a part, or both. See supertype <a href="../../ifckernel/lexical/ifcobjectdefinition.htm">IfcObjectDefinition</a> for more information.</li>
+<li><strong>Assignment of a type</strong> : <i>IsTypedBy</i> - a definition relationship <a href="../../ifckernel/lexical/ifcreldefinesbytype.htm">IfcRelDefinesByType</a> that uses a type definition to define the common characteristics of this occurrences, potentially including the common shape representation and common properties of all object occurrences assigned to this type. It is a specific - occurrence relationship with implied dependencies (as the occurrence properties depend on the properties of the type, but may override them).</li>
+<li><strong>Assignment of a partial type</strong> : <i>IsDeclaredBy</i>, <i>Declares</i> - a definition relationship <i>IfcRelDefinesByObject</i> that uses a component of a type definition (a part of a type, called the &quot;declaring part&quot;) to define a component of an occurence (part of occurrence, called the &quot;reflected part&quot;). This is also refered to as a &quot;deep copy&quot;. The common characteristics of all parts in the occurrence are defined by parts in the type. It is a specific - occurrence relationship with implied dependencies (as the occurrence properties depend on the properties of the type, but may override them).</li>
+<li><strong>Assignment of property sets</strong> : <i>IsDefinedBy</i> - a definition relationship <i>IfcRelDefinesByProperties</i> that assignes property set definitions to the object occurrence.</li>
+</ul>
+<blockquote class="note">
+<p>NOTE  See <a href="../../ifckernel/lexical/ifcreldefinesbytype.htm">IfcRelDefinesByType</a> for an explanatory figure. Also see there for how to override type properties by occurrence properties. See <i>IfcRelDefinesByObject</i> for an explanatory figure for the assignment of a partial type.</p>
+</blockquote>
+<blockquote class="history">
+<p>HISTORY  New entity in IFC1.0</p>
+</blockquote>
+<blockquote class="change-ifc2x4">
+<p>IFC4 CHANGE  The inverse relationships <i>Declares</i>, <i>IsDeclaredBy</i>, and <i>IsTypedBy</i> have been added, types are not longer included in the <i>IsDefinesBy</i> relationship. <i>IfcProject</i> has been promoted to be a subtype of <a href="../../ifckernel/lexical/ifcobjectdefinition.htm">IfcObjectDefinition</a> -&gt; <a href="../../ifckernel/lexical/ifccontext.htm">IfcContext</a>.</p>
+</blockquote>
+<p class="spec-head">
+Informal Propositions:</p>
+<ol>
+<li>A partial type assignment, i.e. the inverse attribute <i>IsDeclaredBy</i>, or <i>Declares</i> shall only be used, if the object is part of a decomposition, i.e. if either <i>IsDecomposedBy</i>, or <i>Decomposes</i> is exerted.</li>
+</ol>
+</details>
+<details open="open"><summary>Attribute definitions</summary><table class="attributes">
+<tr><th>#</th><th>Attribute</th><th>Type</th><th>Cardinality</th><th>Description</th>
+<th>P</th></tr>
+<tr><td>5</td><td>ObjectType</td><td><span class="self-ref">-</span></td><td></td><td>
+<i>This attribute is out of scope for this model view definition and shall not be set.</i></td><td></td></tr>
+<tr><td></td><td><i>IsTypedBy</i></td><td><a href="../../ifckernel/lexical/ifcreldefinesbytype.htm">IfcRelDefinesByType</a><br/>@RelatedObjects</td><td>S[0:1]</td><td>Set of relationships to the object type that provides the type definitions for this object occurrence. The then associated <a href="../../ifckernel/lexical/ifctypeobject.htm">IfcTypeObject</a>, or its subtypes, contains the specific information (or type, or style), that is common to all instances of <span class="self-ref">IfcObject</span>, or its subtypes, referring to the same type.
+
+<blockquote>
+IFC4 CHANGE  New inverse relationship, the link to <a href="../../ifckernel/lexical/ifcreldefinesbytype.htm">IfcRelDefinesByType</a> had previously be included in the inverse relationship <a href="../../ifckernel/lexical/ifcreldefines.htm">IfcRelDefines</a>. Change made with upward compatibility for file based exchange.
+</blockquote>
+</td><td>X</td></tr>
+</table>
+</details>
+</section>
+<section>
+<h5 class="num">Inherited definitions from supertypes</h5>
+<details open="open"><summary>Entity inheritance</summary><img src="../../../diagrams/ifcobject.png" usemap="#f"/>
+<map name="f">
+<area shape="rect" coords="18,30,230,42" href="../../../schema/ifckernel/lexical/ifcobjectdefinition.htm" alt="IfcObjectDefinition" />
+<area shape="rect" coords="6,6,242,18" href="../../../schema/ifckernel/lexical/ifcroot.htm" alt="IfcRoot" />
+</map>
+</details>
+<details><summary>Attribute inheritance</summary><table class="attributes">
+<tr><th>#</th><th>Attribute</th><th>Type</th><th>Cardinality</th><th>Description</th><th>P</th></tr>
+<tr><td colspan="6"><i><a href="../../ifckernel/lexical/ifcroot.htm">IfcRoot</a></i></td></tr>
+<tr><td>1</td><td>GlobalId</td><td><a href="../../ifcutilityresource/lexical/ifcgloballyuniqueid.htm">IfcGloballyUniqueId</a></td><td></td><td>
+Assignment of a globally unique identifier within the entire software world.
+</td><td>X</td></tr>
+<tr><td>2</td><td>OwnerHistory</td><td><span class="self-ref">-</span></td><td></td><td>
+<i>This attribute is out of scope for this model view definition and shall not be set.</i></td><td></td></tr>
+<tr><td>3</td><td>Name</td><td><a href="../../ifcmeasureresource/lexical/ifclabel.htm">IfcLabel</a></td><td>? </td><td>
+Optional name for use by the participating software systems or users. For some subtypes of IfcRoot the insertion of the Name attribute may be required. This would be enforced by a where rule.
+</td><td>X</td></tr>
+<tr><td>4</td><td>Description</td><td><span class="self-ref">-</span></td><td></td><td>
+<i>This attribute is out of scope for this model view definition and shall not be set.</i></td><td></td></tr>
+<tr><td colspan="6"><i><a href="../../ifckernel/lexical/ifcobjectdefinition.htm">IfcObjectDefinition</a></i></td></tr>
+<tr><td></td><td><i>HasContext</i></td><td><a href="../../ifckernel/lexical/ifcreldeclares.htm">IfcRelDeclares</a><br/>@RelatedDefinitions</td><td>S[0:1]</td><td>References to the context providing context information such as project unit or representation context. It should only be asserted for the uppermost non-spatial object.
+<blockquote class="change-ifc2x4">
+IFC4 CHANGE  The inverse attribute datatype has been added.
+</blockquote>
+</td><td>X</td></tr>
+<tr><td></td><td><i>IsDecomposedBy</i></td><td><a href="../../ifckernel/lexical/ifcrelaggregates.htm">IfcRelAggregates</a><br/>@RelatingObject</td><td>S[0:?]</td><td>References to the decomposition relationship being an aggregation. It determines that this object definition is whole within an unordered whole/part decomposition relationship. An object definitions can be aggregated by several other objects (occurrences or parts).
+<blockquote class="change-ifc2x4">
+IFC4 CHANGE  The inverse attribute datatype has been changed from the supertype <a href="../../ifckernel/lexical/ifcreldecomposes.htm">IfcRelDecomposes</a> to subtype <a href="../../ifckernel/lexical/ifcrelaggregates.htm">IfcRelAggregates</a>.
+</blockquote>
+</td><td>X</td></tr>
+<tr><td></td><td><i>Decomposes</i></td><td><a href="../../ifckernel/lexical/ifcrelaggregates.htm">IfcRelAggregates</a><br/>@RelatedObjects</td><td>S[0:1]</td><td>References to the decomposition relationship being an aggregation. It determines that this object definition is a part within an unordered whole/part decomposition relationship. An object definitions can only be part of a single decomposition (to allow hierarchical strutures only).
+<blockquote class="change-ifc2x4">
+IFC4 CHANGE  The inverse attribute datatype has been changed from the supertype <a href="../../ifckernel/lexical/ifcreldecomposes.htm">IfcRelDecomposes</a> to subtype <a href="../../ifckernel/lexical/ifcrelaggregates.htm">IfcRelAggregates</a>.
+</blockquote>
+</td><td>X</td></tr>
+<tr><td></td><td><i>HasAssociations</i></td><td><a href="../../ifckernel/lexical/ifcrelassociates.htm">IfcRelAssociates</a><br/>@RelatedObjects</td><td>S[0:?]</td><td>Reference to the relationship objects, that associates external references or other resource definitions to the object.. Examples are the association to library, documentation or classification.
+</td><td>X</td></tr>
+<tr><td colspan="6"><i><a href="../../ifckernel/lexical/ifcobject.htm">IfcObject</a></i></td></tr>
+<tr><td>5</td><td>ObjectType</td><td><span class="self-ref">-</span></td><td></td><td>
+<i>This attribute is out of scope for this model view definition and shall not be set.</i></td><td></td></tr>
+<tr><td></td><td><i>IsTypedBy</i></td><td><a href="../../ifckernel/lexical/ifcreldefinesbytype.htm">IfcRelDefinesByType</a><br/>@RelatedObjects</td><td>S[0:1]</td><td>Set of relationships to the object type that provides the type definitions for this object occurrence. The then associated <a href="../../ifckernel/lexical/ifctypeobject.htm">IfcTypeObject</a>, or its subtypes, contains the specific information (or type, or style), that is common to all instances of <span class="self-ref">IfcObject</span>, or its subtypes, referring to the same type.
+
+<blockquote>
+IFC4 CHANGE  New inverse relationship, the link to <a href="../../ifckernel/lexical/ifcreldefinesbytype.htm">IfcRelDefinesByType</a> had previously be included in the inverse relationship <a href="../../ifckernel/lexical/ifcreldefines.htm">IfcRelDefines</a>. Change made with upward compatibility for file based exchange.
+</blockquote>
+</td><td>X</td></tr>
+</table>
+</details>
+</section>
+<section>
+<h5 class="num">Definitions applying to Product Data View</h5>
+<p><a href="../../../annex/annex-d/product-data-view/ifcobject.htm"><img style="border: 0px" src="../../../img/diagram.png" />&nbsp;Instance diagram</a></p><hr />
+<h5>IfcObject</h5><details open="open">
+<summary>Concept usage</summary>
+<a id="document-association" />
+<p class="use-head">Document Association</p>
+<p>The <a href="../../templates/document-association.htm">Document Association</a> concept applies to this entity.</p><br/><br/>
+
+<a id="classification-association" />
+<p class="use-head">Classification Association</p>
+<p>The <a href="../../templates/classification-association.htm">Classification Association</a> concept applies to this entity.</p><br/><br/>
+
+<a id="899807c8-64b0-429a-b479-a5b906199515" />
+<p class="use-head">UserDefined_ProjectLibraryAssociation</p>
+<p>The <a href="../../templates/899807c8-64b0-429a-b479-a5b906199515.htm"></a> concept applies to this entity.</p><br/><br/>
+
+<a id="0a78914c-dd3e-4ded-ba56-5d00988d8025" />
+<p class="use-head">UserDefined_DeComposition</p>
+<p>The <a href="../../templates/0a78914c-dd3e-4ded-ba56-5d00988d8025.htm"></a> concept applies to this entity.</p><br/><br/>
+
+<a id="object-typing" />
+<p class="use-head">Object Typing</p>
+<p>The <a href="../../templates/object-typing.htm">Object Typing</a> concept applies to this entity.</p><br/><br/>
+
+</details>
+<details><summary>mvdXML Specification</summary>
+<div class="xsd"><code class="xsd">
+&lt;?xml version=&quot;1.0&quot;?&gt;<br/>
+&lt;ConceptRoot xmlns:xsi=&quot;http://www.w3.org/2001/XMLSchema-instance&quot; xmlns:xsd=&quot;http://www.w3.org/2001/XMLSchema&quot; uuid=&quot;f654a528-757b-4103-b93a-a7f7b1b61f01&quot; name=&quot;IfcObject&quot; status=&quot;sample&quot; applicableRootEntity=&quot;IfcObject&quot;&gt;<br/>
+&nbsp;&nbsp;&lt;Applicability uuid=&quot;00000000-0000-0000-0000-000000000000&quot; status=&quot;sample&quot;&gt;<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&lt;Template ref=&quot;55e979a0-eb19-42d7-a735-35ccbe0ef91c&quot; /&gt;<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&lt;TemplateRules operator=&quot;and&quot; /&gt;<br/>
+&nbsp;&nbsp;&lt;/Applicability&gt;<br/>
+&nbsp;&nbsp;&lt;Concepts&gt;<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&lt;Concept uuid=&quot;fc09ee1f-7aa8-4ed9-b140-d49fb60e1021&quot; name=&quot;Document Association&quot; status=&quot;sample&quot; override=&quot;false&quot;&gt;<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;Template ref=&quot;7dadae9c-0026-44d3-ade7-9a843fe2ef0b&quot; /&gt;<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&lt;/Concept&gt;<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&lt;Concept uuid=&quot;59bad0b9-3d53-4ed6-8343-745ae3905eae&quot; name=&quot;Classification Association&quot; status=&quot;sample&quot; override=&quot;false&quot;&gt;<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;Template ref=&quot;4a224609-6578-4c75-afcf-8affa86e5ef2&quot; /&gt;<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&lt;/Concept&gt;<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&lt;Concept uuid=&quot;43dd9b3d-e3b7-4aba-8f45-2073ed16567d&quot; name=&quot;UserDefined_ProjectLibraryAssociation&quot; status=&quot;sample&quot; override=&quot;false&quot;&gt;<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;Template ref=&quot;899807c8-64b0-429a-b479-a5b906199515&quot; /&gt;<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&lt;/Concept&gt;<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&lt;Concept uuid=&quot;591e165e-785d-4071-9db9-4733d117da55&quot; name=&quot;UserDefined_DeComposition&quot; status=&quot;sample&quot; override=&quot;false&quot;&gt;<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;Template ref=&quot;0a78914c-dd3e-4ded-ba56-5d00988d8025&quot; /&gt;<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&lt;/Concept&gt;<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&lt;Concept uuid=&quot;81596ae4-67d6-4c80-9fd3-2b8c41825519&quot; name=&quot;Object Typing&quot; status=&quot;sample&quot; override=&quot;false&quot;&gt;<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;Template ref=&quot;35a2e10e-20df-40f4-ab2f-dacf0a6744f4&quot; /&gt;<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&lt;/Concept&gt;<br/>
+&nbsp;&nbsp;&lt;/Concepts&gt;<br/>
+&lt;/ConceptRoot&gt;<br/>
+
+</code></div></details>
+<section>
+<details>
+<summary>Concept inheritance</summary>
+<p><table class="attributes">
+<tr><th><b>#</b></th><th><b>Concept</b></th><th><b>Template</b></th><th><b>Model View</b></th></tr>
+<tr><td colspan="3"><a href="../../ifckernel/lexical/ifcobject.htm"><span class="self-ref">IfcObject</span></a></td></tr><tr><td> </td><td><a href="../../ifckernel/lexical/ifcobject.htm#document-association">Document Association</a></td><td><a href="../../templates/document-association.htm">Document Association</a></td><td>Product Data View</td></tr>
+<tr><td> </td><td><a href="../../ifckernel/lexical/ifcobject.htm#classification-association">Classification Association</a></td><td><a href="../../templates/classification-association.htm">Classification Association</a></td><td>Product Data View</td></tr>
+<tr><td> </td><td><a href="../../ifckernel/lexical/ifcobject.htm#899807c8-64b0-429a-b479-a5b906199515">UserDefined_ProjectLibraryAssociation</a></td><td><a href="../../templates/899807c8-64b0-429a-b479-a5b906199515.htm"></a></td><td>Product Data View</td></tr>
+<tr><td> </td><td><a href="../../ifckernel/lexical/ifcobject.htm#0a78914c-dd3e-4ded-ba56-5d00988d8025">UserDefined_DeComposition</a></td><td><a href="../../templates/0a78914c-dd3e-4ded-ba56-5d00988d8025.htm"></a></td><td>Product Data View</td></tr>
+<tr><td> </td><td><a href="../../ifckernel/lexical/ifcobject.htm#object-typing">Object Typing</a></td><td><a href="../../templates/object-typing.htm">Object Typing</a></td><td>Product Data View</td></tr>
+
+</table>
+</details>
+</section>
+</section>
+<section>
+<h5 class="num">Formal representations</h5>
+<details><summary>XML Specification</summary><div class="xsd"><code class="xsd">&nbsp;&lt;xs:element name=&quot;<a href="../../ifckernel/lexical/ifcobject.htm">IfcObject</a>&quot; type=&quot;ifc:<a href="../../ifckernel/lexical/ifcobject.htm">IfcObject</a>&quot; abstract=&quot;true&quot; substitutionGroup=&quot;ifc:<a href="../../ifckernel/lexical/ifcobjectdefinition.htm">IfcObjectDefinition</a>&quot; nillable=&quot;true&quot;/&gt;<br/>
+&nbsp;&lt;xs:complexType name=&quot;<a href="../../ifckernel/lexical/ifcobject.htm">IfcObject</a>&quot; abstract=&quot;true&quot;&gt;<br/>
+&nbsp;&nbsp;&lt;xs:complexContent&gt;<br/>
+&nbsp;&nbsp;&nbsp;&lt;xs:extension base=&quot;ifc:<a href="../../ifckernel/lexical/ifcobjectdefinition.htm">IfcObjectDefinition</a>&quot;&gt;<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&lt;xs:sequence&gt;<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xs:element name=&quot;IsTypedBy&quot; type=&quot;ifc:<a href="../../ifckernel/lexical/ifcreldefinesbytype.htm">IfcRelDefinesByType</a>&quot; nillable=&quot;true&quot; minOccurs=&quot;0&quot; maxOccurs=&quot;1&quot;/&gt;<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&lt;/xs:sequence&gt;<br/>
+&nbsp;&nbsp;&nbsp;&lt;/xs:extension&gt;<br/>
+&nbsp;&nbsp;&lt;/xs:complexContent&gt;<br/>
+&nbsp;&lt;/xs:complexType&gt;<br/>
+</code></div></details>
+<details><summary>EXPRESS Specification</summary><div class="express"><code class="express">
+<span class="keyword">ENTITY</span> IfcObject<br/>
+&nbsp;<span class="keyword">SUBTYPE OF</span> (<a href="../../ifckernel/lexical/ifcobjectdefinition.htm">IfcObjectDefinition</a>)<b>;</b><br/>
+&nbsp;&nbsp;ObjectType : <span class="keyword">OPTIONAL</span> <span class="self-ref">IfcStrippedOptional</span>;<br/>
+&nbsp;<span class="keyword">INVERSE</span><br/>
+&nbsp;&nbsp;IsTypedBy : <span class="keyword">SET</span> [0:1] OF <a href="../../ifckernel/lexical/ifcreldefinesbytype.htm">IfcRelDefinesByType</a> <span class="keyword">FOR</span> RelatedObjects;<br/>
+&nbsp;<span class="keyword">WHERE</span><br/>
+&nbsp;&nbsp;UniquePropertySetNames : ((SIZEOF(IsDefinedBy) = 0) OR <a href="../../ifckernel/lexical/ifcuniquedefinitionnames.htm">IfcUniqueDefinitionNames</a>(IsDefinedBy));<br/><span class="keyword">END_ENTITY;</span><br/>
+<p class="std"><a href="../../../annex/annex-d/ifckernel/diagram_0001.htm" ><img src="../../../img/diagram.png" style="border: 0px" title="Link to EXPRESS-G diagram" alt="Link to EXPRESS-G diagram">&nbsp;EXPRESS-G diagram</a></p>
+</code></div>
+</details>
+</section>
+<p><img src="../../../img/external.png" style="border: 0px" title="References" alt="References"/>&nbsp; References: <a href="../../ifckernel/lexical/ifcreldefinesbytype.htm">IfcRelDefinesByType</a>
+</p>
+<p><a href="../../../link/ifcobject.htm" target="_top" ><img src="../../../img/permlink.png" style="border: 0px" title="Link to this page" alt="Link to this page"/>&nbsp; Link to this page</a></p>
+<p></p>
+  </body>
+</html>

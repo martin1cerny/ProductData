@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<ifcXML xmlns:ifc="http://www.buildingsmart-tech.org/ifcXML/IFC4/final" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" id="ifcXML4" xsi:schemaLocation="http://www.buildingsmart-tech.org/ifcXML/IFC4/final http://www.buildingsmart-tech.org/ifcXML/IFC4/final/ifcXML4.xsd" xmlns="http://www.buildingsmart-tech.org/ifcXML/IFC4/final">
+<ifcXML xmlns:ifc="http://www.buildingsmart-tech.org/ifc/IFC4/Add2TC1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" id="ifcXML" xmlns="http://www.buildingsmart-tech.org/ifc/IFC4/Add2TC1" xsi:schemaLocation="http://www.buildingsmart-tech.org/ifc/IFC4/Add2TC1 https://standards.buildingsmart.org/IFC/RELEASE/IFC4/ADD2_TC1/XML/IFC4.xsd">
 	<header>
 		<name>CAFM-Connect products</name>
 		<time_stamp>2016-08-25T11:50:44.6683136+02:00</time_stamp>

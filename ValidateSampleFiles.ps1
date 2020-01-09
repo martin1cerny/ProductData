@@ -1,5 +1,5 @@
-﻿$BaseFolder = "C:\projects\productdata"
-#$BaseFolder = "C:\Development\GitHub\buildingSMART\ProductData"
+﻿#$BaseFolder = "C:\projects\productdata"
+$BaseFolder = "C:\Development\GitHub\buildingSMART\ProductData"
 $ValidatorExe="$BaseFolder\Tools\SchemaValidator\bin\Release\net48\SchemaValidator.exe"
 $SampleFiles = Get-ChildItem -Path "$BaseFolder\SampleFiles"  -Recurse -Include *.ifc,*.ifcXML
 $ExitCode=0
