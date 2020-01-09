@@ -17,7 +17,6 @@
 
   <body>
 
-<p>CEN TC 442-WG2-TG3-P1</p>
 
 <script type="text/javascript">
 <!--
@@ -45,44 +44,35 @@
 </details>
 <section>
 <h5 class="num">Semantic definitions at the entity</h5>
-<details open="open"><summary>Entity definition</summary> 
-
-
-<p>An <span class="self-ref">IfcDocumentReference</span> is a reference 
-to the location of a document. The reference is given by a system 
-interpretable <i>Location</i> attribute (a URL string) where the document can be found, and an optional inherited
- internal reference <i>Identification</i>, which refers to a system
- interpretable position within the document. The optional inherited
-<i>Name</i> attribute is meant to have meaning for human readers. Optional 
-document metadata can also be captured through reference to 
-<i>IfcDocumentInformation</i>.</p>
-
-
-
+<details open="open"><summary>Entity definition</summary><p>An <span class="self-ref">IfcDocumentReference</span> is a reference to the location of a document. The reference is given by a system interpretable <i>Location</i> attribute (a URL string) where the document can be found, and an optional inherited internal reference <i>Identification</i>, which refers to a system interpretable position within the document. The optional inherited <i>Name</i> attribute is meant to have meaning for human readers. Optional document metadata can also be captured through reference to <i>IfcDocumentInformation</i>.</p>
 <blockquote class="history">
-HISTORY&nbsp; New entity in IFC2.0
+<p>HISTORY  New entity in IFC2.0</p>
 </blockquote>
-
-
-
-
-
 </details>
 <details open="open"><summary>Attribute definitions</summary><table class="attributes">
 <tr><th>#</th><th>Attribute</th><th>Type</th><th>Cardinality</th><th>Description</th>
 <th>P</th></tr>
 <tr><td>4</td><td>Description</td><td><a href="../../ifcmeasureresource/lexical/ifctext.htm">IfcText</a></td><td>? </td><td>
 Description of the document reference for informational purposes.
-<blockquote class="change-ifc2x4">IFC4 CHANGE&nbsp; New attribute added at the end of the attribute list.</blockquote></td><td>X</td></tr>
+
+<blockquote>
+IFC4 CHANGE  New attribute added at the end of the attribute list.
+</blockquote>
+</td><td>X</td></tr>
 <tr><td>5</td><td>ReferencedDocument</td><td><span class="self-ref">-</span></td><td></td><td>
 <i>This attribute is out of scope for this model view definition and shall not be set.</i></td><td></td></tr>
 <tr><td></td><td><i>DocumentRefForObjects</i></td><td><a href="../../ifckernel/lexical/ifcrelassociatesdocument.htm">IfcRelAssociatesDocument</a><br/>@RelatingDocument</td><td>S[0:?]</td><td>The document reference with which objects are associated.
-<blockquote class="change-ifc2x4">IFC4 CHANGE&nbsp; New inverse attribute.</blockquote></td><td></td></tr>
+
+<blockquote>
+IFC4 CHANGE  New inverse attribute.
+</blockquote>
+</td><td></td></tr>
 </table>
 </details>
 <details open="open"><summary>Formal Propositions</summary><table class="propositions">
 <tr><th>Rule</th><th>Description</th></tr>
-<tr><td>WR1</td><td>A name should only be given, if no document information (including the document name) is attached</td></tr>
+<tr><td>WR1</td><td>A name should only be given, if no document information (including the document name) is attached
+</td></tr>
 </table>
 
 </details>
@@ -99,31 +89,44 @@ Description of the document reference for informational purposes.
 <tr><td colspan="6"><i><a href="../../ifcexternalreferenceresource/lexical/ifcexternalreference.htm">IfcExternalReference</a></i></td></tr>
 <tr><td>1</td><td>Location</td><td><a href="../../ifcexternalreferenceresource/lexical/ifcurireference.htm">IfcURIReference</a></td><td>? </td><td>
 Location, where the external source (classification, document or library) can be accessed by electronic means. The electronic location is provided as an URI, and would normally be given as an URL location string.
-<blockquote class="change-ifc2x4">
-IFC4 CHANGE&nbsp; The data type has been changed from <a href="../../ifcmeasureresource/lexical/ifclabel.htm">IfcLabel</a> to <a href="../../ifcexternalreferenceresource/lexical/ifcurireference.htm">IfcURIReference</a><br>.
+
+<blockquote>
+IFC4 CHANGE  The data type has been changed from <a href="../../ifcmeasureresource/lexical/ifclabel.htm">IfcLabel</a> to <a href="../../ifcexternalreferenceresource/lexical/ifcurireference.htm">IfcURIReference</a><br>
+.
 </blockquote>
 </td><td>X</td></tr>
 <tr><td>2</td><td>Identification</td><td><a href="../../ifcmeasureresource/lexical/ifcidentifier.htm">IfcIdentifier</a></td><td>? </td><td>
-The <i>Identification</i> provides a unique identifier of the referenced item within the external source (classification, document or library). It may be provided as 
+The <i>Identification</i> provides a unique identifier of the referenced item within the external source (classification, document or library). It may be provided as
 <ul>
- <li>a key, e.g. a classification notation, like NF2.3</li>
- <li>a handle</li>
- <li>a uuid or guid</li>
+<li>a key, e.g. a classification notation, like NF2.3</li>
+<li>a handle</li>
+<li>a uuid or guid</li>
 </ul>
 It may be human readable (such as a key) or not (such as a handle or uuid) depending on the context of its usage (which has to be determined by local agreement).
-<blockquote class="change-ifc2x4">
-IFC4 CHANGE  Attribute renamed from <i>ItemReference</i> for consistency.<br>
-</blockquote></td><td>X</td></tr>
+
+<blockquote>
+IFC4 CHANGE Attribute renamed from <i>ItemReference</i> for consistency.
+</blockquote>
+</td><td>X</td></tr>
 <tr><td>3</td><td>Name</td><td><a href="../../ifcmeasureresource/lexical/ifclabel.htm">IfcLabel</a></td><td>? </td><td>
-Optional name to further specify the reference. It can provide a human readable identifier (which does not necessarily need to have a counterpart in the internal structure of the document).</td><td>X</td></tr>
+Optional name to further specify the reference. It can provide a human readable identifier (which does not necessarily need to have a counterpart in the internal structure of the document).
+</td><td>X</td></tr>
 <tr><td colspan="6"><a href="../../ifcexternalreferenceresource/lexical/ifcdocumentreference.htm">IfcDocumentReference</a></td></tr>
 <tr><td>4</td><td>Description</td><td><a href="../../ifcmeasureresource/lexical/ifctext.htm">IfcText</a></td><td>? </td><td>
 Description of the document reference for informational purposes.
-<blockquote class="change-ifc2x4">IFC4 CHANGE&nbsp; New attribute added at the end of the attribute list.</blockquote></td><td>X</td></tr>
+
+<blockquote>
+IFC4 CHANGE  New attribute added at the end of the attribute list.
+</blockquote>
+</td><td>X</td></tr>
 <tr><td>5</td><td>ReferencedDocument</td><td><span class="self-ref">-</span></td><td></td><td>
 <i>This attribute is out of scope for this model view definition and shall not be set.</i></td><td></td></tr>
 <tr><td></td><td><i>DocumentRefForObjects</i></td><td><a href="../../ifckernel/lexical/ifcrelassociatesdocument.htm">IfcRelAssociatesDocument</a><br/>@RelatingDocument</td><td>S[0:?]</td><td>The document reference with which objects are associated.
-<blockquote class="change-ifc2x4">IFC4 CHANGE&nbsp; New inverse attribute.</blockquote></td><td></td></tr>
+
+<blockquote>
+IFC4 CHANGE  New inverse attribute.
+</blockquote>
+</td><td></td></tr>
 </table>
 </details>
 </section>
@@ -155,6 +158,6 @@ Description of the document reference for informational purposes.
 <p><img src="../../../img/external.png" style="border: 0px" title="References" alt="References"/>&nbsp; References: <a href="../../ifcexternalreferenceresource/lexical/ifcdocumentselect.htm">IfcDocumentSelect</a>
 </p>
 <p><a href="../../../link/ifcdocumentreference.htm" target="_top" ><img src="../../../img/permlink.png" style="border: 0px" title="Link to this page" alt="Link to this page"/>&nbsp; Link to this page</a></p>
-<p>CEN TC 442-WG2-TG3-P1</p>
+<p></p>
   </body>
 </html>

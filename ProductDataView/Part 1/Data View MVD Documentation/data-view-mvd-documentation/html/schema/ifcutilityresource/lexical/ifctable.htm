@@ -17,7 +17,6 @@
 
   <body>
 
-<p>CEN TC 442-WG2-TG3-P1</p>
 
 <script type="text/javascript">
 <!--
@@ -44,33 +43,19 @@
 </details>
 <section>
 <h5 class="num">Semantic definitions at the entity</h5>
-<details open="open"><summary>Entity definition</summary>
-
-<p>An <span class="self-ref">IfcTable</span> is a data structure for the provision of information in the form of rows and columns. Each instance may have <i>IfcTableColumn</i> instances that define the name, description and units for each column. The rows of information are stored as a list of <i>IfcTableRow</i> objects.</p> 
-
-<p>Limitation: For backwards compatibility, the rows of an <span class="self-ref">IfcTable</span> object are constrained to have the same number of cells. The first row of the table provides the number of cells. All other rows are forced to include the same number of cells. This is enforced by the WR2.</p> 
-
-<p>Figure 9 illustrates table use.</p>
-<table>
-<tr><td><img src="../../../figures/ifctable_image1.gif" width="426" height="192"></td></tr>
-<tr><td><p class="figure">Figure 9 &mdash; Table use</p></td></tr>
-</table>
-
-<p>Figure 10 depicts how tables were structured prior to IFC4.</p>
-<table>
-<tr><td><img src="../../../figures/ifctable_image2.gif" width="426" height="192"></td></tr>
-<tr><td><p class="figure">Figure 10 &mdash; Table use alternative</p></td></tr>
-</table>
-
-<blockquote class="history"> 
-HISTORY&nbsp; New entity in IFC1.5.
+<details open="open"><summary>Entity definition</summary><p>An <span class="self-ref">IfcTable</span> is a data structure for the provision of information in the form of rows and columns. Each instance may have <i>IfcTableColumn</i> instances that define the name, description and units for each column. The rows of information are stored as a list of <i>IfcTableRow</i> objects.</p>
+<p>Limitation: For backwards compatibility, the rows of an <span class="self-ref">IfcTable</span> object are constrained to have the same number of cells. The first row of the table provides the number of cells. All other rows are forced to include the same number of cells. This is enforced by the WR2.</p>
+<p>Figure 1 illustrates table use.</p>
+<p>!(../../../figures/ifctable_image1.gif &quot;Figure 1 &mdash; Table use&quot;)</p>
+<p>Figure 2 depicts how tables were structured prior to IFC4.</p>
+<p>!(../../../figures/ifctable_image2.gif &quot;Figure 2 &mdash; Table use alternative&quot;)</p>
+<blockquote class="history">
+<p>HISTORY  New entity in IFC1.5.</p>
 </blockquote>
-
 <blockquote class="change-ifc2x4">
-IFC4 CHANGE&nbsp; Columns attribute added.
+<p>IFC4 CHANGE  Columns attribute added.</p>
 </blockquote>
-
-</details>
+</details>
 <details open="open"><summary>Attribute definitions</summary><table class="attributes">
 <tr><th>#</th><th>Attribute</th><th>Type</th><th>Cardinality</th><th>Description</th>
 <th>P</th></tr>
@@ -80,11 +65,14 @@ IFC4 CHANGE&nbsp; Columns attribute added.
 <i>This attribute is out of scope for this model view definition and shall not be set.</i></td><td></td></tr>
 <tr><td>3</td><td>Columns</td><td><span class="self-ref">-</span></td><td></td><td>
 <i>This attribute is out of scope for this model view definition and shall not be set.</i></td><td></td></tr>
-<tr><td></td><td>NumberOfCellsInRow<br/>:=HIINDEX(Rows[1].RowCells)</td><td><a href="../../ifcmeasureresource/lexical/ifcinteger.htm">IfcInteger</a></td><td></td><td>The number of cells in each row, this complies to the number of columns in a table. See WR2 that ensures that each row has the same number of cells. The actual value is derived from the first member of the Rows list.</td>
+<tr><td></td><td>NumberOfCellsInRow<br/>:=HIINDEX(Rows[1].RowCells)</td><td><a href="../../ifcmeasureresource/lexical/ifcinteger.htm">IfcInteger</a></td><td></td><td>The number of cells in each row, this complies to the number of columns in a table. See WR2 that ensures that each row has the same number of cells. The actual value is derived from the first member of the Rows list.
+</td>
 <td>X</td></tr>
-<tr><td></td><td>NumberOfHeadings<br/>:=SIZEOF(QUERY( Temp <* Rows | Temp.IsHeading))</td><td><a href="../../ifcmeasureresource/lexical/ifcinteger.htm">IfcInteger</a></td><td></td><td>The number of headings in a table. This is restricted by WR3 to max. one.</td>
+<tr><td></td><td>NumberOfHeadings<br/>:=SIZEOF(QUERY( Temp <* Rows | Temp.IsHeading))</td><td><a href="../../ifcmeasureresource/lexical/ifcinteger.htm">IfcInteger</a></td><td></td><td>The number of headings in a table. This is restricted by WR3 to max. one.
+</td>
 <td>X</td></tr>
-<tr><td></td><td>NumberOfDataRows<br/>:=SIZEOF(QUERY( Temp <* Rows | NOT(Temp.IsHeading)))</td><td><a href="../../ifcmeasureresource/lexical/ifcinteger.htm">IfcInteger</a></td><td></td><td>The number of rows in a table that contains data, i.e. total number of rows minus number of heading rows in table.</td>
+<tr><td></td><td>NumberOfDataRows<br/>:=SIZEOF(QUERY( Temp <* Rows | NOT(Temp.IsHeading)))</td><td><a href="../../ifcmeasureresource/lexical/ifcinteger.htm">IfcInteger</a></td><td></td><td>The number of rows in a table that contains data, i.e. total number of rows minus number of heading rows in table.
+</td>
 <td>X</td></tr>
 </table>
 </details>
@@ -113,11 +101,14 @@ IFC4 CHANGE&nbsp; Columns attribute added.
 <i>This attribute is out of scope for this model view definition and shall not be set.</i></td><td></td></tr>
 <tr><td>3</td><td>Columns</td><td><span class="self-ref">-</span></td><td></td><td>
 <i>This attribute is out of scope for this model view definition and shall not be set.</i></td><td></td></tr>
-<tr><td></td><td>NumberOfCellsInRow<br/>:=HIINDEX(Rows[1].RowCells)</td><td><a href="../../ifcmeasureresource/lexical/ifcinteger.htm">IfcInteger</a></td><td></td><td>The number of cells in each row, this complies to the number of columns in a table. See WR2 that ensures that each row has the same number of cells. The actual value is derived from the first member of the Rows list.</td>
+<tr><td></td><td>NumberOfCellsInRow<br/>:=HIINDEX(Rows[1].RowCells)</td><td><a href="../../ifcmeasureresource/lexical/ifcinteger.htm">IfcInteger</a></td><td></td><td>The number of cells in each row, this complies to the number of columns in a table. See WR2 that ensures that each row has the same number of cells. The actual value is derived from the first member of the Rows list.
+</td>
 <td>X</td></tr>
-<tr><td></td><td>NumberOfHeadings<br/>:=SIZEOF(QUERY( Temp <* Rows | Temp.IsHeading))</td><td><a href="../../ifcmeasureresource/lexical/ifcinteger.htm">IfcInteger</a></td><td></td><td>The number of headings in a table. This is restricted by WR3 to max. one.</td>
+<tr><td></td><td>NumberOfHeadings<br/>:=SIZEOF(QUERY( Temp <* Rows | Temp.IsHeading))</td><td><a href="../../ifcmeasureresource/lexical/ifcinteger.htm">IfcInteger</a></td><td></td><td>The number of headings in a table. This is restricted by WR3 to max. one.
+</td>
 <td>X</td></tr>
-<tr><td></td><td>NumberOfDataRows<br/>:=SIZEOF(QUERY( Temp <* Rows | NOT(Temp.IsHeading)))</td><td><a href="../../ifcmeasureresource/lexical/ifcinteger.htm">IfcInteger</a></td><td></td><td>The number of rows in a table that contains data, i.e. total number of rows minus number of heading rows in table.</td>
+<tr><td></td><td>NumberOfDataRows<br/>:=SIZEOF(QUERY( Temp <* Rows | NOT(Temp.IsHeading)))</td><td><a href="../../ifcmeasureresource/lexical/ifcinteger.htm">IfcInteger</a></td><td></td><td>The number of rows in a table that contains data, i.e. total number of rows minus number of heading rows in table.
+</td>
 <td>X</td></tr>
 </table>
 </details>
@@ -150,6 +141,6 @@ IFC4 CHANGE&nbsp; Columns attribute added.
 <p><img src="../../../img/external.png" style="border: 0px" title="References" alt="References"/>&nbsp; References: <a href="../../ifcconstraintresource/lexical/ifcmetricvalueselect.htm">IfcMetricValueSelect</a>
 </p>
 <p><a href="../../../link/ifctable.htm" target="_top" ><img src="../../../img/permlink.png" style="border: 0px" title="Link to this page" alt="Link to this page"/>&nbsp; Link to this page</a></p>
-<p>CEN TC 442-WG2-TG3-P1</p>
+<p></p>
   </body>
 </html>

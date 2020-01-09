@@ -17,7 +17,6 @@
 
   <body>
 
-<p>CEN TC 442-WG2-TG3-P1</p>
 
 <script type="text/javascript">
 <!--
@@ -34,25 +33,26 @@
 </details>
 <section>
 <h5 class="num">Semantic definitions at the type</h5>
-<details open="open"><summary>Type definition</summary>
+<details open="open"><summary>Type definition</summary><p>An <span class="self-ref">IfcGloballyUniqueId</span> holds an encoded string identifier that is used to uniquely identify an IFC object. An <span class="self-ref">IfcGloballyUniqueId</span> is a Globally Unique Identifier (GUID) which is an auto-generated 128-bit number. Since this identifier is required for all IFC object instances, it is desirable to compress it to reduce overhead. The encoding of the base 64 character set is shown below:</p>
+<blockquote>
+<p><font face="Courier New" size="-1">                   1         2         3         4         5         6</font></p>
+</blockquote>
+<pre><code>	&lt;br&gt;&amp;nbsp;0123456789012345678901234567890123456789012345678901234567890123&lt;br&gt;
 
-<p>An <span class="self-ref">IfcGloballyUniqueId</span> holds an encoded string identifier that is used to uniquely identify an IFC object. An <span class="self-ref">IfcGloballyUniqueId</span> is a Globally Unique Identifier (GUID) which is an auto-generated 128-bit number. Since this identifier is required for all IFC object instances, it is desirable to compress it to reduce overhead. The encoding of the base 64 character set is shown below:
-	</p>
-    <blockquote>
-		<p><font FACE="Courier New" size="-1">        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;1&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;2&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;3&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;4&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;5&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;6
-		<br />&nbsp;0123456789012345678901234567890123456789012345678901234567890123<br />
-		"0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz_$";
-        </font></p>
-    </blockquote>
+	&quot;0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz_$&quot;;
 
+    &lt;/font&gt;
+</code></pre>
+<blockquote>
+</blockquote>
 <p>The resulting string is a fixed 22 character length string to be exchanged within the IFC exchange file structure.</p>
-	
-<blockquote class="note">NOTE&nbsp; Refer to the BuildingSMART website (<a href="http://www.buildingsmart-tech.org">www.buildingsmart-tech.org</a>) for more information and sample encoding algorithms.</blockquote>
-
-<blockquote class="history">
-HISTORY&nbsp; New type in IFC1.5.1.
-</blockquote>
-</details>
+<blockquote class="note">
+<p>NOTE  Refer to the BuildingSMART website (<a href="http://www.buildingsmart-tech.org">www.buildingsmart-tech.org</a>) for more information and sample encoding algorithms.</p>
+</blockquote>
+<blockquote class="history">
+<p>HISTORY  New type in IFC1.5.1.</p>
+</blockquote>
+</details>
 </section>
 <section>
 <h5 class="num">Formal representations</h5>
@@ -73,6 +73,6 @@ HISTORY&nbsp; New type in IFC1.5.1.
 <p><img src="../../../img/external.png" style="border: 0px" title="References" alt="References"/>&nbsp; References: <a href="../../ifckernel/lexical/ifcroot.htm">IfcRoot</a>
 </p>
 <p><a href="../../../link/ifcgloballyuniqueid.htm" target="_top" ><img src="../../../img/permlink.png" style="border: 0px" title="Link to this page" alt="Link to this page"/>&nbsp; Link to this page</a></p>
-<p>CEN TC 442-WG2-TG3-P1</p>
+<p></p>
   </body>
 </html>

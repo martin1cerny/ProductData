@@ -11,17 +11,16 @@
     <title>IfcRelAssociatesClassification</title>
 
     <style type="text/css">
-      body { counter-reset: index1 5 index2 1 index3 3 index4 11 index5 0; }
+      body { counter-reset: index1 5 index2 2 index3 3 index4 11 index5 0; }
     </style>
   </head>
 
   <body>
 
-<p>CEN TC 442-WG2-TG3-P1</p>
 
 <script type="text/javascript">
 <!--
-    parent.index.location.replace("../../toc-5.htm#5.1.3.12");
+    parent.index.location.replace("../../toc-5.htm#5.2.3.12");
 //-->
 </script>
 
@@ -44,46 +43,26 @@
 </details>
 <section>
 <h5 class="num">Semantic definitions at the entity</h5>
-<details open="open"><summary>Entity definition</summary><p>The objectified relationship
-<span class="self-ref">IfcRelAssociatesClassification</span> handles the assignment of a
-classification item (items of the select
-<a href="../../ifcexternalreferenceresource/lexical/ifcclassificationselect.htm">IfcClassificationSelect</a>) to objects occurrences (subtypes of
-<a href="../../ifckernel/lexical/ifcobject.htm">IfcObject</a>) or object types (subtypes of
-<a href="../../ifckernel/lexical/ifctypeobject.htm">IfcTypeObject</a>).</p>
-<p>The relationship is used to assign a classification item, or a
-classification system itself to objects. Depending on the type of
-the <i>RelatingClassification</i> it is either:</p>
+<details open="open"><summary>Entity definition</summary><p>The objectified relationship <span class="self-ref">IfcRelAssociatesClassification</span> handles the assignment of a classification item (items of the select <a href="../../ifcexternalreferenceresource/lexical/ifcclassificationselect.htm">IfcClassificationSelect</a>) to objects occurrences (subtypes of <a href="../../ifckernel/lexical/ifcobject.htm">IfcObject</a>) or object types (subtypes of <a href="../../ifckernel/lexical/ifctypeobject.htm">IfcTypeObject</a>).</p>
+<p>The relationship is used to assign a classification item, or a classification system itself to objects. Depending on the type of the <i>RelatingClassification</i> it is either:</p>
 <ul>
-<li>a reference to an classification item within an external
-classification system, or</li>
+<li>a reference to an classification item within an external classification system, or</li>
 <li>a reference to the classification system itself</li>
 </ul>
-
 <blockquote class="note">
-NOTE&nbsp; The reference to a classification item
-includes a link to the classification system within which the item
-is declared. It assigns the meaning of the classification item to
-the object (ocurrence or type). The reference to the classification
-system provides the information that the object (occurrence or
-type) is governed by the classification system but no assignment of
-a particular items has been done yet.
+<p>NOTE  The reference to a classification item includes a link to the classification system within which the item is declared. It assigns the meaning of the classification item to the object (ocurrence or type). The reference to the classification system provides the information that the object (occurrence or type) is governed by the classification system but no assignment of a particular items has been done yet.</p>
 </blockquote>
-
-<p>The inherited attribute <i>RelatedObjects</i> define the objects
-or object types to which the classification is applied. The
-attribute <i>RelatingClassification</i> is the reference to a
-classification, applied to the object(s). A single
-<i>RelatingClassification</i> can thereby be applied to one or
-multiple objects.</p>
-
+<p>The inherited attribute <i>RelatedObjects</i> define the objects or object types to which the classification is applied. The attribute <i>RelatingClassification</i> is the reference to a classification, applied to the object(s). A single <i>RelatingClassification</i> can thereby be applied to one or multiple objects.</p>
 <blockquote class="history">
-HISTORY&nbsp; New entity in IFC2x.
-</blockquote></details>
+<p>HISTORY  New entity in IFC2x.</p>
+</blockquote>
+</details>
 <details open="open"><summary>Attribute definitions</summary><table class="attributes">
 <tr><th>#</th><th>Attribute</th><th>Type</th><th>Cardinality</th><th>Description</th>
 <th>P</th></tr>
 <tr><td>6</td><td>RelatingClassification</td><td><a href="../../ifcexternalreferenceresource/lexical/ifcclassificationselect.htm">IfcClassificationSelect</a></td><td></td><td>
-Classification applied to the objects.</td><td>X</td></tr>
+Classification applied to the objects.
+</td><td>X</td></tr>
 </table>
 </details>
 </section>
@@ -113,10 +92,15 @@ Optional name for use by the participating software systems or users. For some s
 <tr><td colspan="6"><i><a href="../../ifckernel/lexical/ifcrelassociates.htm">IfcRelAssociates</a></i></td></tr>
 <tr><td>5</td><td>RelatedObjects</td><td><a href="../../ifckernel/lexical/ifcdefinitionselect.htm">IfcDefinitionSelect</a></td><td>S[1:?]</td><td>
 Set of object or property definitions to which the external references or information is associated. It includes object and type objects, property set templates, property templates and property sets and contexts.
-<blockquote class="change-ifc2x4">IFC4 CHANGE&nbsp; The attribute datatype has been changed from <a href="../../ifckernel/lexical/ifcroot.htm">IfcRoot</a> to <a href="../../ifckernel/lexical/ifcdefinitionselect.htm">IfcDefinitionSelect</a>.</blockquote></td><td>X</td></tr>
+
+<blockquote>
+IFC4 CHANGE  The attribute datatype has been changed from <a href="../../ifckernel/lexical/ifcroot.htm">IfcRoot</a> to <a href="../../ifckernel/lexical/ifcdefinitionselect.htm">IfcDefinitionSelect</a>.
+</blockquote>
+</td><td>X</td></tr>
 <tr><td colspan="6"><a href="../../ifckernel/lexical/ifcrelassociatesclassification.htm">IfcRelAssociatesClassification</a></td></tr>
 <tr><td>6</td><td>RelatingClassification</td><td><a href="../../ifcexternalreferenceresource/lexical/ifcclassificationselect.htm">IfcClassificationSelect</a></td><td></td><td>
-Classification applied to the objects.</td><td>X</td></tr>
+Classification applied to the objects.
+</td><td>X</td></tr>
 </table>
 </details>
 </section>
@@ -151,6 +135,6 @@ Classification applied to the objects.</td><td>X</td></tr>
 <a href="../../ifcexternalreferenceresource/lexical/ifcclassificationreference.htm">IfcClassificationReference</a>
 </p>
 <p><a href="../../../link/ifcrelassociatesclassification.htm" target="_top" ><img src="../../../img/permlink.png" style="border: 0px" title="Link to this page" alt="Link to this page"/>&nbsp; Link to this page</a></p>
-<p>CEN TC 442-WG2-TG3-P1</p>
+<p></p>
   </body>
 </html>

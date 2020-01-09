@@ -17,7 +17,6 @@
 
   <body>
 
-<p>CEN TC 442-WG2-TG3-P1</p>
 
 <script type="text/javascript">
 <!--
@@ -35,32 +34,29 @@
 </details>
 <section>
 <h5 class="num">Semantic definitions at the entity</h5>
-<details open="open"><summary>Entity definition</summary><p>An <span class="self-ref">IfcConstraint</span> is used to define a constraint or limiting value or boundary condition that may be applied to an object or to the value of a property. </p> 
-
+<details open="open"><summary>Entity definition</summary><p>An <span class="self-ref">IfcConstraint</span> is used to define a constraint or limiting value or boundary condition that may be applied to an object or to the value of a property.</p>
 <p>Constraints may be subdivided into user-defined constraints and system-defined constraints. User-defined constraints are applied by a user and are restricted to high-level definitions such as object properties. System-defined constraints may apply to any object attribute, are typically defined by an application to enforce data validation or parametric behavior, and are intended to be enforced by applications but not to be directly editable by an end-user.</p>
-
-<p><span class="self-ref">IfcConstraint</span> may be associated with any subtype of <a href="../../ifckernel/lexical/ifcobjectdefinition.htm">IfcObjectDefinition</a> or <a href="../../ifckernel/lexical/ifcpropertydefinition.htm">IfcPropertyDefinition</a> through the <a href="../../ifccontrolextension/lexical/ifcrelassociatesconstraint.htm">IfcRelAssociatesConstraint</a> relationship to indicate a system-defined constraint, or may be associated with <i>IfcResourceObjectSelect</i> (such as <i>IfcPropertySingleValue</i>) by <i>IfcResourceConstraintRelationship</i> to indicate a user-defined constraint.</p> 
-
-<p>A constraint must have a name applied through the <i>IfcConstraint.Name</i> attribute and optionally, a description through <i>IfcConstraint.Description</i>. The grade of the constraint (hard, soft, advisory) must be specified through <i>IfcConstraint.ConstraintGrade</i> or <i>IfcConstraint.UserDefinedGrade</i> whilst the source, creating actor and time at which the constraint is created may be optionally asserted through <i>IfcConstraint.ConstraintSource</i>, <i>IfcConstraint.CreatingActor</i> and <i>IfcConstraint.CreationTime</i>.</p> 
-
+<p><span class="self-ref">IfcConstraint</span> may be associated with any subtype of <a href="../../ifckernel/lexical/ifcobjectdefinition.htm">IfcObjectDefinition</a> or <a href="../../ifckernel/lexical/ifcpropertydefinition.htm">IfcPropertyDefinition</a> through the <a href="../../ifccontrolextension/lexical/ifcrelassociatesconstraint.htm">IfcRelAssociatesConstraint</a> relationship to indicate a system-defined constraint, or may be associated with <i>IfcResourceObjectSelect</i> (such as <i>IfcPropertySingleValue</i>) by <i>IfcResourceConstraintRelationship</i> to indicate a user-defined constraint.</p>
+<p>A constraint must have a name applied through the <i>IfcConstraint.Name</i> attribute and optionally, a description through <i>IfcConstraint.Description</i>. The grade of the constraint (hard, soft, advisory) must be specified through <i>IfcConstraint.ConstraintGrade</i> or <i>IfcConstraint.UserDefinedGrade</i> whilst the source, creating actor and time at which the constraint is created may be optionally asserted through <i>IfcConstraint.ConstraintSource</i>, <i>IfcConstraint.CreatingActor</i> and <i>IfcConstraint.CreationTime</i>.</p>
 <p>A constraint may also have additional external information (such as classification or document information) associated to it by <i>IfcExternalReferenceRelationship</i>, accessible through inverse attribute <i>IfcConstraint.HasExternalReferences</i></p>
-
 <blockquote class="history">
-HISTORY&nbsp; New entity in IFC2.0
-</blockquote> 
-
+<p>HISTORY  New entity in IFC2.0</p>
+</blockquote>
 <blockquote class="change-ifc2x4">
-IFC4 CHANGE&nbsp; CreationTime changed to IfcDateTime for ISO 8601 representation, HasExternalReferences new inverse attribute.
-</blockquote></details>
+<p>IFC4 CHANGE  CreationTime changed to IfcDateTime for ISO 8601 representation, HasExternalReferences new inverse attribute.</p>
+</blockquote>
+</details>
 <details open="open"><summary>Attribute definitions</summary><table class="attributes">
 <tr><th>#</th><th>Attribute</th><th>Type</th><th>Cardinality</th><th>Description</th>
 <th>P</th></tr>
 <tr><td>1</td><td>Name</td><td><a href="../../ifcmeasureresource/lexical/ifclabel.htm">IfcLabel</a></td><td></td><td>
-A human-readable name to be used for the constraint.</td><td>X</td></tr>
+A human-readable name to be used for the constraint.
+</td><td>X</td></tr>
 <tr><td>2</td><td>Description</td><td><span class="self-ref">-</span></td><td></td><td>
 <i>This attribute is out of scope for this model view definition and shall not be set.</i></td><td></td></tr>
 <tr><td>3</td><td>ConstraintGrade</td><td><a href="../../ifcconstraintresource/lexical/ifcconstraintenum.htm">IfcConstraintEnum</a></td><td></td><td>
-Enumeration that qualifies the type of constraint.</td><td>X</td></tr>
+Enumeration that qualifies the type of constraint.
+</td><td>X</td></tr>
 <tr><td>4</td><td>ConstraintSource</td><td><span class="self-ref">-</span></td><td></td><td>
 <i>This attribute is out of scope for this model view definition and shall not be set.</i></td><td></td></tr>
 <tr><td>5</td><td>CreatingActor</td><td><span class="self-ref">-</span></td><td></td><td>
@@ -73,7 +69,8 @@ Enumeration that qualifies the type of constraint.</td><td>X</td></tr>
 </details>
 <details open="open"><summary>Formal Propositions</summary><table class="propositions">
 <tr><th>Rule</th><th>Description</th></tr>
-<tr><td>WR11</td><td>The attribute UserDefinedGrade must be asserted when the value of the IfcConstraintGradeEnum is set to USERDEFINED.</td></tr>
+<tr><td>WR11</td><td>The attribute UserDefinedGrade must be asserted when the value of the IfcConstraintGradeEnum is set to USERDEFINED.
+</td></tr>
 </table>
 
 </details>
@@ -89,11 +86,13 @@ Enumeration that qualifies the type of constraint.</td><td>X</td></tr>
 <tr><th>#</th><th>Attribute</th><th>Type</th><th>Cardinality</th><th>Description</th><th>P</th></tr>
 <tr><td colspan="6"><i><a href="../../ifcconstraintresource/lexical/ifcconstraint.htm">IfcConstraint</a></i></td></tr>
 <tr><td>1</td><td>Name</td><td><a href="../../ifcmeasureresource/lexical/ifclabel.htm">IfcLabel</a></td><td></td><td>
-A human-readable name to be used for the constraint.</td><td>X</td></tr>
+A human-readable name to be used for the constraint.
+</td><td>X</td></tr>
 <tr><td>2</td><td>Description</td><td><span class="self-ref">-</span></td><td></td><td>
 <i>This attribute is out of scope for this model view definition and shall not be set.</i></td><td></td></tr>
 <tr><td>3</td><td>ConstraintGrade</td><td><a href="../../ifcconstraintresource/lexical/ifcconstraintenum.htm">IfcConstraintEnum</a></td><td></td><td>
-Enumeration that qualifies the type of constraint.</td><td>X</td></tr>
+Enumeration that qualifies the type of constraint.
+</td><td>X</td></tr>
 <tr><td>4</td><td>ConstraintSource</td><td><span class="self-ref">-</span></td><td></td><td>
 <i>This attribute is out of scope for this model view definition and shall not be set.</i></td><td></td></tr>
 <tr><td>5</td><td>CreatingActor</td><td><span class="self-ref">-</span></td><td></td><td>
@@ -139,6 +138,6 @@ Enumeration that qualifies the type of constraint.</td><td>X</td></tr>
 <p><img src="../../../img/external.png" style="border: 0px" title="References" alt="References"/>&nbsp; References: <a href="../../ifccontrolextension/lexical/ifcrelassociatesconstraint.htm">IfcRelAssociatesConstraint</a>
 </p>
 <p><a href="../../../link/ifcconstraint.htm" target="_top" ><img src="../../../img/permlink.png" style="border: 0px" title="Link to this page" alt="Link to this page"/>&nbsp; Link to this page</a></p>
-<p>CEN TC 442-WG2-TG3-P1</p>
+<p></p>
   </body>
 </html>

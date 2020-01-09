@@ -17,7 +17,6 @@
 
   <body>
 
-<p>CEN TC 442-WG2-TG3-P1</p>
 
 <script type="text/javascript">
 <!--
@@ -28,32 +27,25 @@
 <h2 class="std">8.4 IfcMeasureResource</h2>
 <h3 class="std">8.4.1 Schema Definition</h3>
 <p>The <i>IfcMeasureResource</i> schema specifies units and defined measure types that may be assigned to quantities.</p>
-
-<blockquote class="note">NOTE&nbsp; The fundamental unit types used in this schema are based on the SI system defined in ISO 1000+A1, 1992, 1998. Units in measurement systems other than SI may be derived using this schema. Many definitions declared in the <i>IfcMeasureResource</i> schema is adapted from <a class="int-ref" href="../../bibliography.htm#iso-10303-41">ISO 10303-41</a></blockquote> 
-
 <blockquote class="note">
-NOTE&nbsp; In the definitions of the unit exponents the use of superscript font has been omitted. Therefore, m2 means square metre, m3 means cubic meter.
-</blockquote> 
+<p>NOTE  The fundamental unit types used in this schema are based on the SI system defined in ISO 1000+A1, 1992, 1998. Units in measurement systems other than SI may be derived using this schema. Many definitions declared in the <i>IfcMeasureResource</i> schema is adapted from <a href="../../bibliography.htm#iso-10303-41" class="int-ref">ISO 10303-41</a></p>
+</blockquote>
+<blockquote class="note">
+<p>NOTE  In the definitions of the unit exponents the use of superscript font has been omitted. Therefore, m2 means square metre, m3 means cubic meter.</p>
+</blockquote>
 <p>In different types of units there are five basic cases:</p>
 <ul>
-<li>Basic SI-units, which cover a number of fundamental units of mainly physical quantities defined by <a class="int-ref" href="../../bibliography.htm#iso-1000">ISO-1000</a> such as meter or millimeter as unit for length measure or square meter as a unit for area measure. The unit may have a scaling prefix (for example: milli, kilo).</li>
+<li>Basic SI-units, which cover a number of fundamental units of mainly physical quantities defined by <a href="../../bibliography.htm#iso-1000" class="int-ref">ISO-1000</a> such as meter or millimeter as unit for length measure or square meter as a unit for area measure. The unit may have a scaling prefix (for example: milli, kilo).</li>
 <li>Derived SI-units, which are defined as a derivation of the basic SI-units, for example, Newton (kg m / s2) as a unit of force. Both basic and derived SI-units are in the IFCs represented by IfcSIUnit.</li>
 <li>Conversion based units, which can be derived from SI-units by a scaling factor; e.g. inch which can be defined using SI-unit for length measure, i.e. an inch is 25.4 millimeters.</li>
-<li>Derived units, which can be defined as a derivation or combination of a number of basic units. In a derived unit each of the basic unit "component" has a dimensional exponent in defining the derived unit; e.g. kg / m2, where kilogram (kg) has dimensional exponent 1 and meter (m) has exponent -2.</li>
+<li>Derived units, which can be defined as a derivation or combination of a number of basic units. In a derived unit each of the basic unit &quot;component&quot; has a dimensional exponent in defining the derived unit; e.g. kg / m2, where kilogram (kg) has dimensional exponent 1 and meter (m) has exponent -2.</li>
 <li>Context dependent units, which cannot be defined as conversion based unit using SI-units.</li>
 </ul>
 <p>With regard to the usage of the measure defined types (for example, <i>IfcLengthMeasure</i>, <i>IfcTimeMeasure</i>) as attribute datatypes in this specification, there are three basic cases:</p>
 <ol>
 <li>The datatype of an attribute of an entity type is a measure defined type as such without possibility on an instance level to define the unit of the measure value:
 <blockquote><code>
-ENTITY IfcBoundingBox<br/>
-SUBTYPE OF(IfcGeometricRepresentationItem);<br/>
-Corner : IfcCartesianPoint;<br/>
-XDim : IfcPositiveLengthMeasure;<br/>
-YDim : IfcPositiveLengthMeasure;<br/>
-ZDim : IfcPositiveLengthMeasure;<br/>
-END_ENTITY;<br/>
-</code></blockquote>
+ENTITY IfcBoundingBox<br>SUBTYPE OF(IfcGeometricRepresentationItem);<br>Corner : IfcCartesianPoint;<br>XDim : IfcPositiveLengthMeasure;<br>YDim : IfcPositiveLengthMeasure;<br>ZDim : IfcPositiveLengthMeasure;<br>END_ENTITY;<br></code></blockquote>
 In this case, it is the global unit assignment for the corresponding unit for the measure type that defines the unit for all the usages of this defined measure type (except for cases 2 and 3 below).
 </li>
 <li>The datatype of an attribute is IfcMeasureWithUnit, which allows for definition of unit per instance of that entity type, independent and possibly overriding the global unit assignment:
@@ -70,20 +62,16 @@ In this case the relevant measure defined type (from the IfcMeasureWithUnit.Valu
 </li>
 <li>The entity type has a separate "unit" attribute which allows for defining the unit for another attribute of the entity type for representing the actual value:
 <blockquote><code>
-ENTITY IfcPropertySingleValue<br/>
-SUBTYPE OF (IfcSimpleProperty);<br/>
-NominalValue : IfcValue;<br/>
-Unit : OPTIONAL IfcUnit;<br/>
-END_ENTITY;<br/>
-</code></blockquote></li></ol>
-<p>Although in the cases 2 and 3 different units could be used for different instances of the same entity type or for the same measure type in attributes of different entity types, it is recommended not to mix different units for same measure defined types, if it can be avoided. Below some examples of each of the above basic cases are given.</p>
+ENTITY IfcPropertySingleValue<br>SUBTYPE OF (IfcSimpleProperty);<br>NominalValue : IfcValue;<br>Unit : OPTIONAL IfcUnit;<br>END_ENTITY;<br></code></blockquote></li></ol>
+Although in the cases 2 and 3 different units could be used for different instances of the same entity type or for the same measure type in attributes of different entity types, it is recommended not to mix different units for same measure defined types, if it can be avoided. Below some examples of each of the above basic cases are given.
 <blockquote class="note">
-NOTE&nbsp; In the example instantiations in the form of IFC data exchange files, mainly the measure and unit -relevant attributes are given the values; the other attributes are given no values (in the form of $-sign) independent of whether they should actually have values because of being nonoptional attributes.
+<p>NOTE  In the example instantiations in the form of IFC data exchange files, mainly the measure and unit -relevant attributes are given the values; the other attributes are given no values (in the form of $-sign) independent of whether they should actually have values because of being nonoptional attributes.</p>
 </blockquote>
-
-<p>Table 2 indicates measures, units, and corresponding data types.</p>
-<blockquote><small>
-<table class="gridtable" >
+<p>Table 1 indicates measures, units, and corresponding data types.</p>
+<blockquote>
+<small>
+</small></blockquote>
+<table class="gridtable">
 <tr><td><b>Measure</b></td><td><b>Type</b></td><td><b>Unit</b></td><td><b>Symbol</b></td><td><b>Derivation</b></td><td><b>IfcSiUnitEnum</b></td><td><b>IfcUnitEnum</b></td><td><b>IfcDerivedUnitEnum</b></td><td><b>Defined value types</b></td></tr>
  <tr><td>Absorbed dose, specific energy<br>impact, kerma, absorbed dose index</td><td>SI / Derived</td><td>gray</td><td>Gy</td><td>J / kg</td><td>GRAY</td><td>ABSORBEDDOSEUNIT</td><td></td><td>IfcAbsorbedDoseMeasure</td></tr>
  <tr><td>Acceleration</td><td>Derived</td><td></td><td></td><td>m / s2</td><td></td><td></td><td>ACCELERATIONUNIT</td><td>IfcAccelerationMeasure</td></tr>
@@ -193,10 +181,11 @@ NOTE&nbsp; In the example instantiations in the form of IFC data exchange files,
  <tr><td>Warping constant</td><td></td><td></td><td></td><td>m6</td><td></td><td></td><td>WARPINGCONSTANTUNIT</td><td>IfcWarpingConstantMeasure</td></tr>
  <tr><td>Warping moment</td><td>Derived</td><td></td><td></td><td>N · m2</td><td></td><td></td><td>WARPINGMOMENTUNIT</td><td>IfcWarpingMomentMeasure</td></tr>
 </table>
-</small></blockquote>
-<p class="table"><p class="table">Table 2 &mdash; Measures and units</p><p><a href="../../annex/annex-d/ifcmeasureresource/index.htm" ><img src="../../img/diagram.png" style="border: 0px" title="Link to EXPRESS-G diagram" alt="Link to EXPRESS-G diagram">&nbsp;EXPRESS-G diagram</a></p>
+
+<p class="table">Table 1 &mdash; Measures and units</p>
+<p><a href="../../annex/annex-d/ifcmeasureresource/index.htm" ><img src="../../img/diagram.png" style="border: 0px" title="Link to EXPRESS-G diagram" alt="Link to EXPRESS-G diagram">&nbsp;EXPRESS-G diagram</a></p>
 </p>
 <p><a href="../../link/ifcmeasureresource.htm" target="_top" ><img src="../../img/permlink.png" style="border: 0px" title="Link to this page" alt="Link to this page"/>&nbsp; Link to this page</a></p>
-<p>CEN TC 442-WG2-TG3-P1</p>
+<p></p>
   </body>
 </html>

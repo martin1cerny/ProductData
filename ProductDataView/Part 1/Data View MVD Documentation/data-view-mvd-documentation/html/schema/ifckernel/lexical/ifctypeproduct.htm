@@ -11,17 +11,16 @@
     <title>IfcTypeProduct</title>
 
     <style type="text/css">
-      body { counter-reset: index1 5 index2 1 index3 3 index4 21 index5 0; }
+      body { counter-reset: index1 5 index2 2 index3 3 index4 21 index5 0; }
     </style>
   </head>
 
   <body>
 
-<p>CEN TC 442-WG2-TG3-P1</p>
 
 <script type="text/javascript">
 <!--
-    parent.index.location.replace("../../toc-5.htm#5.1.3.22");
+    parent.index.location.replace("../../toc-5.htm#5.2.3.22");
 //-->
 </script>
 
@@ -43,34 +42,24 @@
 </details>
 <section>
 <h5 class="num">Semantic definitions at the entity</h5>
-<details open="open"><summary>Entity definition</summary><p><span class="self-ref">IfcTypeProduct</span> defines a type definition of a product without being already inserted into a
-project structure (without having a placement), and not being included in the geometric representation context of the
-project. It is used to define a product specification, that is, the specific product information that is common to all occurrences
-of that product type.</p>
-
-<p>An <span class="self-ref">IfcTypeProduct</span> may have a list of property set attached and an optional set of product representations. Values of these properties and the representation maps are common to all occurrences of that product type. The type-occurrence relationship is realized using the objectified relationship
-<a href="../../ifckernel/lexical/ifcreldefinesbytype.htm">IfcRelDefinesByType</a>.</p>
-
+<details open="open"><summary>Entity definition</summary><p><span class="self-ref">IfcTypeProduct</span> defines a type definition of a product without being already inserted into a project structure (without having a placement), and not being included in the geometric representation context of the project. It is used to define a product specification, that is, the specific product information that is common to all occurrences of that product type.</p>
+<p>An <span class="self-ref">IfcTypeProduct</span> may have a list of property set attached and an optional set of product representations. Values of these properties and the representation maps are common to all occurrences of that product type. The type-occurrence relationship is realized using the objectified relationship <a href="../../ifckernel/lexical/ifcreldefinesbytype.htm">IfcRelDefinesByType</a>.</p>
 <blockquote class="note">
-NOTE&nbsp; The product representations are defined as representation maps, which may be assigned by a product instance through the representation item(s) being an <i>IfcShapeRepresentation</i> and having <i>Items</i> of type <i>IfcMappedItem</i>.
+<p>NOTE  The product representations are defined as representation maps, which may be assigned by a product instance through the representation item(s) being an <i>IfcShapeRepresentation</i> and having <i>Items</i> of type <i>IfcMappedItem</i>.</p>
 </blockquote>
-
 <p>The representations at the occurrence level (represented by subtypes of <i>IfcProduct</i>) can override the specific representations at the type level:</p>
 <ul>
- <li>for geometric representations, a Cartesian transformation operator can be applied at the occurrence level.</li>
- <li>for property sets, a property within an occurrence property set, assigned at the product occurrence, overrides the same property assigned to the product type.</li>
+<li>for geometric representations, a Cartesian transformation operator can be applied at the occurrence level.</li>
+<li>for property sets, a property within an occurrence property set, assigned at the product occurrence, overrides the same property assigned to the product type.</li>
 </ul>
-
-<p>An <span class="self-ref">IfcTypeProduct</span> may be exchanged without being
-already assigned to subtypes of <i>IfcProduct</i>.</p>
-
+<p>An <span class="self-ref">IfcTypeProduct</span> may be exchanged without being already assigned to subtypes of <i>IfcProduct</i>.</p>
 <blockquote class="history">
-HISTORY&nbsp; New entity in IFC2x.
+<p>HISTORY  New entity in IFC2x.</p>
 </blockquote>
-
 <blockquote class="change-ifc2x4">
-IFC4 CHANGE&nbsp; The entity <span class="self-ref">IfcTypeProduct</span> shall not be instantiated from IFC4 onwards. It will be changed into an ABSTRACT supertype in future releases of IFC.
-</blockquote></details>
+<p>IFC4 CHANGE  The entity <span class="self-ref">IfcTypeProduct</span> shall not be instantiated from IFC4 onwards. It will be changed into an ABSTRACT supertype in future releases of IFC.</p>
+</blockquote>
+</details>
 <details open="open"><summary>Attribute definitions</summary><table class="attributes">
 <tr><th>#</th><th>Attribute</th><th>Type</th><th>Cardinality</th><th>Description</th>
 <th>P</th></tr>
@@ -82,7 +71,8 @@ IFC4 CHANGE&nbsp; The entity <span class="self-ref">IfcTypeProduct</span> shall 
 </details>
 <details open="open"><summary>Formal Propositions</summary><table class="propositions">
 <tr><th>Rule</th><th>Description</th></tr>
-<tr><td>ApplicableOccurrence</td><td>The product type (or style), if assigned to an object, shall only be assigned to object being a sub type of <i>IfcProduct</i>.</td></tr>
+<tr><td>ApplicableOccurrence</td><td>The product type (or style), if assigned to an object, shall only be assigned to object being a sub type of <i>IfcProduct</i>.
+</td></tr>
 </table>
 
 </details>
@@ -112,23 +102,29 @@ Optional name for use by the participating software systems or users. For some s
 <i>This attribute is out of scope for this model view definition and shall not be set.</i></td><td></td></tr>
 <tr><td colspan="6"><i><a href="../../ifckernel/lexical/ifcobjectdefinition.htm">IfcObjectDefinition</a></i></td></tr>
 <tr><td></td><td><i>HasContext</i></td><td><a href="../../ifckernel/lexical/ifcreldeclares.htm">IfcRelDeclares</a><br/>@RelatedDefinitions</td><td>S[0:1]</td><td>References to the context providing context information such as project unit or representation context. It should only be asserted for the uppermost non-spatial object.
-
-<blockquote class="change-ifc2x4">IFC4 CHANGE&nbsp; The inverse attribute datatype has been added.</blockquote></td><td>X</td></tr>
+<blockquote class="change-ifc2x4">
+IFC4 CHANGE  The inverse attribute datatype has been added.
+</blockquote>
+</td><td>X</td></tr>
 <tr><td></td><td><i>IsDecomposedBy</i></td><td><a href="../../ifckernel/lexical/ifcrelaggregates.htm">IfcRelAggregates</a><br/>@RelatingObject</td><td>S[0:?]</td><td>References to the decomposition relationship being an aggregation. It determines that this object definition is whole within an unordered whole/part decomposition relationship. An object definitions can be aggregated by several other objects (occurrences or parts).
-
-<blockquote class="change-ifc2x4">IFC4 CHANGE&nbsp; The inverse attribute datatype has been changed from the supertype <a href="../../ifckernel/lexical/ifcreldecomposes.htm">IfcRelDecomposes</a> to subtype <a href="../../ifckernel/lexical/ifcrelaggregates.htm">IfcRelAggregates</a>.</blockquote>
+<blockquote class="change-ifc2x4">
+IFC4 CHANGE  The inverse attribute datatype has been changed from the supertype <a href="../../ifckernel/lexical/ifcreldecomposes.htm">IfcRelDecomposes</a> to subtype <a href="../../ifckernel/lexical/ifcrelaggregates.htm">IfcRelAggregates</a>.
+</blockquote>
 </td><td>X</td></tr>
 <tr><td></td><td><i>Decomposes</i></td><td><a href="../../ifckernel/lexical/ifcrelaggregates.htm">IfcRelAggregates</a><br/>@RelatedObjects</td><td>S[0:1]</td><td>References to the decomposition relationship being an aggregation. It determines that this object definition is a part within an unordered whole/part decomposition relationship. An object definitions can only be part of a single decomposition (to allow hierarchical strutures only).
-
-<blockquote class="change-ifc2x4">IFC4 CHANGE&nbsp; The inverse attribute datatype has been changed from the supertype <a href="../../ifckernel/lexical/ifcreldecomposes.htm">IfcRelDecomposes</a> to subtype <a href="../../ifckernel/lexical/ifcrelaggregates.htm">IfcRelAggregates</a>.</blockquote>
+<blockquote class="change-ifc2x4">
+IFC4 CHANGE  The inverse attribute datatype has been changed from the supertype <a href="../../ifckernel/lexical/ifcreldecomposes.htm">IfcRelDecomposes</a> to subtype <a href="../../ifckernel/lexical/ifcrelaggregates.htm">IfcRelAggregates</a>.
+</blockquote>
 </td><td>X</td></tr>
-<tr><td></td><td><i>HasAssociations</i></td><td><a href="../../ifckernel/lexical/ifcrelassociates.htm">IfcRelAssociates</a><br/>@RelatedObjects</td><td>S[0:?]</td><td>Reference to the relationship objects, that associates external references or other resource definitions to the object.. Examples are the association to library, documentation or classification.</td><td>X</td></tr>
+<tr><td></td><td><i>HasAssociations</i></td><td><a href="../../ifckernel/lexical/ifcrelassociates.htm">IfcRelAssociates</a><br/>@RelatedObjects</td><td>S[0:?]</td><td>Reference to the relationship objects, that associates external references or other resource definitions to the object.. Examples are the association to library, documentation or classification.
+</td><td>X</td></tr>
 <tr><td colspan="6"><a href="../../ifckernel/lexical/ifctypeobject.htm">IfcTypeObject</a></td></tr>
 <tr><td>5</td><td>ApplicableOccurrence</td><td><span class="self-ref">-</span></td><td></td><td>
 <i>This attribute is out of scope for this model view definition and shall not be set.</i></td><td></td></tr>
 <tr><td>6</td><td>HasPropertySets</td><td><span class="self-ref">-</span></td><td></td><td>
 <i>This attribute is out of scope for this model view definition and shall not be set.</i></td><td></td></tr>
-<tr><td></td><td><i>Types</i></td><td><a href="../../ifckernel/lexical/ifcreldefinesbytype.htm">IfcRelDefinesByType</a><br/>@RelatingType</td><td>S[0:1]</td><td>Reference to the relationship IfcRelDefinedByType and thus to those occurrence objects, which are defined by this type.</td><td></td></tr>
+<tr><td></td><td><i>Types</i></td><td><a href="../../ifckernel/lexical/ifcreldefinesbytype.htm">IfcRelDefinesByType</a><br/>@RelatingType</td><td>S[0:1]</td><td>Reference to the relationship IfcRelDefinedByType and thus to those occurrence objects, which are defined by this type.
+</td><td></td></tr>
 <tr><td colspan="6"><a href="../../ifckernel/lexical/ifctypeproduct.htm">IfcTypeProduct</a></td></tr>
 <tr><td>7</td><td>RepresentationMaps</td><td><span class="self-ref">-</span></td><td></td><td>
 <i>This attribute is out of scope for this model view definition and shall not be set.</i></td><td></td></tr>
@@ -165,6 +161,6 @@ Optional name for use by the participating software systems or users. For some s
 </section>
 </p>
 <p><a href="../../../link/ifctypeproduct.htm" target="_top" ><img src="../../../img/permlink.png" style="border: 0px" title="Link to this page" alt="Link to this page"/>&nbsp; Link to this page</a></p>
-<p>CEN TC 442-WG2-TG3-P1</p>
+<p></p>
   </body>
 </html>
