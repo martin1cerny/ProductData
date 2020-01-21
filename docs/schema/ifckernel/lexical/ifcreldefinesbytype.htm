@@ -45,21 +45,18 @@
 <section>
 <h5 class="num">Semantic definitions at the entity</h5>
 <details open="open"><summary>Entity definition</summary><p>The objectified relationship <span class="self-ref">IfcRelDefinesByType</span> defines the relationship between an object type and object occurrences. The <span class="self-ref">IfcRelDefinesByType</span> is a 1-to-N relationship, as it allows for the assignment of one type information to a single or to many objects. Those objects then share the same object type, and the property sets and properties assigned to the object type.</p>
-<p>The <span class="self-ref">IfcRelDefinesByType</span> links the object type definition with the object occurrence. Both may define properties by assigning an <i>IfcPropertySet</i>, including one or many subtypes of <i>IfcProperty</i> to either the object type or object occurrence, as shown in Figure 5.</p>
+<p>The <span class="self-ref">IfcRelDefinesByType</span> links the object type definition with the object occurrence. Both may define properties by assigning an <a href="../../ifckernel/lexical/ifcpropertyset.htm">IfcPropertySet</a>, including one or many subtypes of <a href="../../ifcpropertyresource/lexical/ifcproperty.htm">IfcProperty</a> to either the object type or object occurrence, as shown in Figure 4.</p>
 <p>There are several scenarios to define the same property set on the object type definition and object occurrence side:</p>
 <ol>
 <li>All properties for all object occurrences of a common object type have the same value - then only the object type definition has a property set assigned.</li>
 <li>All properties for all object occurrences are different, that is there are no common property values for the object type definition - then each of the object occurrence has a property set assigned.</li>
 <li>Some properties within the same property set have common values and are assigned to the object type definition and some are occurrence specific and assigned (with potentially different values) to the object occurrences - then:
-<ul>
-<li>The sum of all properties within a given property set applicable to an object occurrence is the union of properties assigned to the object type definition plus the properties assigned to the object occurrence.</li>
-<li>If the object occurrence has a property with the same <i>IfcProperty.Name</i> in an <i>IfcPropertySet</i>, as the corresponding object type definition, then the occurrence property value overrides the type property value.</li>
-</ul>
-</li>
+\\\* The sum of all properties within a given property set applicable to an object occurrence is the union of properties assigned to the object type definition plus the properties assigned to the object occurrence.
+\\\* If the object occurrence has a property with the same <i>IfcProperty.Name</i> in an <a href="../../ifckernel/lexical/ifcpropertyset.htm">IfcPropertySet</a>, as the corresponding object type definition, then the occurrence property value overrides the type property value.</li>
 </ol>
 <table border="0" cellpadding="0" cellspacing="0" summary="relationship usage">
 <tr><td valign="top"><img src="../../../figures/ifcreldefinesbytype_fig-1.png" alt="instance diagram" border="0"></td></tr>
-<td valign="top"><p class="figure">Figure 5 &mdash; Type definition relationships</p></td>
+<td valign="top"><p class="figure">Figure 4 &mdash; Type definition relationships</p></td>
 </table>
 <p>The following table provides an example of assigning</p>
 <table border="1" cellpadding="2" cellspacing="2" summary="example for property assignment">
@@ -89,12 +86,8 @@
 <td><small>FALSE</small></td>
 </tr>
 </table>
-<blockquote class="history">
-<p>HISTORY  New entity in IFC2x.</p>
-</blockquote>
-<blockquote class="change-ifc2x4">
-<p>IFC4 CHANGE  The attribute <i>RelatedObjects</i> had been demoted from the supertype <a href="../../ifckernel/lexical/ifcreldefines.htm">IfcRelDefines</a> to <span class="self-ref">IfcRelDefinesByType</span>.</p>
-</blockquote>
+
+
 </details>
 <details open="open"><summary>Attribute definitions</summary><table class="attributes">
 <tr><th>#</th><th>Attribute</th><th>Type</th><th>Cardinality</th><th>Description</th>
@@ -139,7 +132,6 @@ Reference to the type (or style) information for that object or set of objects.
 </td><td>X</td></tr>
 </table>
 </details>
-</section>
 </section>
 <section>
 <h5 class="num">Formal representations</h5>

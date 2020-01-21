@@ -56,12 +56,8 @@
 <li>Including the classification system structure within the dataset: Here a hierarchical tree of <a href="../../ifcexternalreferenceresource/lexical/ifcclassificationreference.htm">IfcClassificationReference</a>'s is included that defines the classification system including the relationship between the classification items. The <i>ReferencedSource</i> attribute of <a href="../../ifcexternalreferenceresource/lexical/ifcclassificationreference.htm">IfcClassificationReference</a> links the classification item to the parent item, and the parent item finally to the <span class="self-ref">IfcClassification</span>.</li>
 <li>Referencing the classification system by a classification key or id: Here the <a href="../../ifcexternalreferenceresource/lexical/ifcclassificationreference.htm">IfcClassificationReference</a> is used to assign a classification id or key as <i>Identification</i> attribute and it may link by <i>ReferencedSource</i> attribute directly to the <span class="self-ref">IfcClassification</span>.</li>
 </ol>
-<blockquote class="history">
-<p>HISTORY  New entity in IFC1.5</p>
-</blockquote>
-<blockquote class="change-ifc2x4">
-<p>IFC 2x4 CHANGE  Attribute <i>Edition</i> made optional. Attributes: <i>Description</i>, <i>Location</i>, and <i>ReferenceTokens</i> and inverse attribute <i>HasReferences</i> added.</p>
-</blockquote>
+
+
 </details>
 <details open="open"><summary>Attribute definitions</summary><table class="attributes">
 <tr><th>#</th><th>Attribute</th><th>Type</th><th>Cardinality</th><th>Description</th>
@@ -77,18 +73,14 @@ The edition or version of the classification system from which the classificatio
 <blockquote class="note">
 NOTE  the version labeling system is specific to the classification system.
 </blockquote>
-<blockquote class="change-ifc2x4">
-IFC4 CHANGE The attribute has been changed to be optional.
-</blockquote>
+
 </td><td>X</td></tr>
 <tr><td>3</td><td>EditionDate</td><td><a href="../../ifcdatetimeresource/lexical/ifcdate.htm">IfcDate</a></td><td>? </td><td>
 The date on which the edition of the classification used became valid.
 <blockquote class="note">
 NOTE  The indication of edition may be sufficient to identify the classification source uniquely but the edition date is provided as an optional attribute to enable more precise identification where required.
 </blockquote>
-<blockquote class="change-ifc2x4">
-IFC4 CHANGE The data type has been changed to <a href="../../ifcdatetimeresource/lexical/ifcdate.htm">IfcDate</a>, the date string according to ISO8601.
-</blockquote>
+
 </td><td>X</td></tr>
 <tr><td>4</td><td>Name</td><td><a href="../../ifcmeasureresource/lexical/ifclabel.htm">IfcLabel</a></td><td></td><td>
 The name or label by which the classification used is normally known.
@@ -99,21 +91,17 @@ NOTE  Examples of names include CI/SfB, Masterformat, BSAB, Uniclass, STABU, DI
 <tr><td>5</td><td>Description</td><td><a href="../../ifcmeasureresource/lexical/ifctext.htm">IfcText</a></td><td>? </td><td>
 Additional description provided for the classification.
 
-<blockquote>
-IFC4 CHANGE  New attribute added at the end of the attribute list.
-</blockquote>
+
 </td><td>X</td></tr>
 <tr><td>6</td><td>Location</td><td><a href="../../ifcexternalreferenceresource/lexical/ifcurireference.htm">IfcURIReference</a></td><td>? </td><td>
 Resource identifier or locator, provided as URI, URN or URL, of the classification.<br>
 
-<blockquote>
-IFC4 CHANGE  New attribute added at the end of the attribute list.
-</blockquote>
+
 </td><td>X</td></tr>
 <tr><td>7</td><td>ReferenceTokens</td><td><a href="../../ifcmeasureresource/lexical/ifcidentifier.htm">IfcIdentifier</a></td><td>? L[1:?]</td><td>
 The delimiter tokens that are used to mark the boundaries of individual facets (substrings) in a classification reference.
 This typically applies then the <span class="self-ref">IfcClassification</span> is used in
-conjuction with <a href="../../ifcexternalreferenceresource/lexical/ifcclassificationreference.htm">IfcClassificationReference</a>'s. If only one <i>ReferenceToken</i> is provided, it applies to all boundaries of individual facets, if more than one <i>ReferenceToken</i> are provided, the first token applies to the first boundary, the second token to the second boundary, and the n<sup>th</sup> token to the n<sup>th</sup> and any additional boundary.
+conjuction with <a href="../../ifcexternalreferenceresource/lexical/ifcclassificationreference.htm">IfcClassificationReference</a>'s. If only one <i>ReferenceToken</i> is provided, it applies to all boundaries of individual facets, if more than one <i>ReferenceToken</i> are provided, the first token applies to the first boundary, the second token to the second boundary, and the n\\\<sup>th\\\</sup> token to the n\\\<sup>th\\\</sup> and any additional boundary.
 <blockquote class="note">
 NOTE  Tokens are typically recommended within the classification itself and each token will have a particular role.
 </blockquote>
@@ -123,15 +111,11 @@ EXAMPLE 1 To indicate that the facet delimiter used for DIN277-2 reference key 
 <blockquote class="example">
 EXAMPLE 2 The use of <i>ReferenceTokens</i> can also be extended to include masks. The use need to be agreed in view definitions or implementer agreements that stipulates a &quot;mask syntax&quot; that should be used.
 </blockquote>
-<blockquote class="change-ifc2x4">
-IFC4 CHANGE  New attribute added at the end of the attribute list.
-</blockquote>
+
 </td><td>X</td></tr>
 <tr><td></td><td><i>ClassificationForObjects</i></td><td><a href="../../ifckernel/lexical/ifcrelassociatesclassification.htm">IfcRelAssociatesClassification</a><br/>@RelatingClassification</td><td>S[0:?]</td><td>The classification with which objects are associated.
 
-<blockquote>
-IFC4 CHANGE  New inverse attribute.
-</blockquote>
+
 </td><td></td></tr>
 <tr><td></td><td><i>HasReferences</i></td><td><a href="../../ifcexternalreferenceresource/lexical/ifcclassificationreference.htm">IfcClassificationReference</a><br/>@ReferencedSource</td><td>S[0:?]</td><td>The classification references to which the classification applies. It can either be the final classification notation, or an intermediate classification item.
 </td><td></td></tr>
@@ -160,18 +144,14 @@ The edition or version of the classification system from which the classificatio
 <blockquote class="note">
 NOTE  the version labeling system is specific to the classification system.
 </blockquote>
-<blockquote class="change-ifc2x4">
-IFC4 CHANGE The attribute has been changed to be optional.
-</blockquote>
+
 </td><td>X</td></tr>
 <tr><td>3</td><td>EditionDate</td><td><a href="../../ifcdatetimeresource/lexical/ifcdate.htm">IfcDate</a></td><td>? </td><td>
 The date on which the edition of the classification used became valid.
 <blockquote class="note">
 NOTE  The indication of edition may be sufficient to identify the classification source uniquely but the edition date is provided as an optional attribute to enable more precise identification where required.
 </blockquote>
-<blockquote class="change-ifc2x4">
-IFC4 CHANGE The data type has been changed to <a href="../../ifcdatetimeresource/lexical/ifcdate.htm">IfcDate</a>, the date string according to ISO8601.
-</blockquote>
+
 </td><td>X</td></tr>
 <tr><td>4</td><td>Name</td><td><a href="../../ifcmeasureresource/lexical/ifclabel.htm">IfcLabel</a></td><td></td><td>
 The name or label by which the classification used is normally known.
@@ -182,21 +162,17 @@ NOTE  Examples of names include CI/SfB, Masterformat, BSAB, Uniclass, STABU, DI
 <tr><td>5</td><td>Description</td><td><a href="../../ifcmeasureresource/lexical/ifctext.htm">IfcText</a></td><td>? </td><td>
 Additional description provided for the classification.
 
-<blockquote>
-IFC4 CHANGE  New attribute added at the end of the attribute list.
-</blockquote>
+
 </td><td>X</td></tr>
 <tr><td>6</td><td>Location</td><td><a href="../../ifcexternalreferenceresource/lexical/ifcurireference.htm">IfcURIReference</a></td><td>? </td><td>
 Resource identifier or locator, provided as URI, URN or URL, of the classification.<br>
 
-<blockquote>
-IFC4 CHANGE  New attribute added at the end of the attribute list.
-</blockquote>
+
 </td><td>X</td></tr>
 <tr><td>7</td><td>ReferenceTokens</td><td><a href="../../ifcmeasureresource/lexical/ifcidentifier.htm">IfcIdentifier</a></td><td>? L[1:?]</td><td>
 The delimiter tokens that are used to mark the boundaries of individual facets (substrings) in a classification reference.
 This typically applies then the <span class="self-ref">IfcClassification</span> is used in
-conjuction with <a href="../../ifcexternalreferenceresource/lexical/ifcclassificationreference.htm">IfcClassificationReference</a>'s. If only one <i>ReferenceToken</i> is provided, it applies to all boundaries of individual facets, if more than one <i>ReferenceToken</i> are provided, the first token applies to the first boundary, the second token to the second boundary, and the n<sup>th</sup> token to the n<sup>th</sup> and any additional boundary.
+conjuction with <a href="../../ifcexternalreferenceresource/lexical/ifcclassificationreference.htm">IfcClassificationReference</a>'s. If only one <i>ReferenceToken</i> is provided, it applies to all boundaries of individual facets, if more than one <i>ReferenceToken</i> are provided, the first token applies to the first boundary, the second token to the second boundary, and the n\\\<sup>th\\\</sup> token to the n\\\<sup>th\\\</sup> and any additional boundary.
 <blockquote class="note">
 NOTE  Tokens are typically recommended within the classification itself and each token will have a particular role.
 </blockquote>
@@ -206,21 +182,16 @@ EXAMPLE 1 To indicate that the facet delimiter used for DIN277-2 reference key 
 <blockquote class="example">
 EXAMPLE 2 The use of <i>ReferenceTokens</i> can also be extended to include masks. The use need to be agreed in view definitions or implementer agreements that stipulates a &quot;mask syntax&quot; that should be used.
 </blockquote>
-<blockquote class="change-ifc2x4">
-IFC4 CHANGE  New attribute added at the end of the attribute list.
-</blockquote>
+
 </td><td>X</td></tr>
 <tr><td></td><td><i>ClassificationForObjects</i></td><td><a href="../../ifckernel/lexical/ifcrelassociatesclassification.htm">IfcRelAssociatesClassification</a><br/>@RelatingClassification</td><td>S[0:?]</td><td>The classification with which objects are associated.
 
-<blockquote>
-IFC4 CHANGE  New inverse attribute.
-</blockquote>
+
 </td><td></td></tr>
 <tr><td></td><td><i>HasReferences</i></td><td><a href="../../ifcexternalreferenceresource/lexical/ifcclassificationreference.htm">IfcClassificationReference</a><br/>@ReferencedSource</td><td>S[0:?]</td><td>The classification references to which the classification applies. It can either be the final classification notation, or an intermediate classification item.
 </td><td></td></tr>
 </table>
 </details>
-</section>
 </section>
 <section>
 <h5 class="num">Formal representations</h5>

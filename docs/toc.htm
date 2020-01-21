@@ -27,16 +27,19 @@
 <p>
 <a class="listing-link" href="schema/chapter-1.htm">1. Scope</a><br />
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a class="listing-link" href="schema/views/product-data-view/index.htm" >1.1 Product Data View</a><br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a class="listing-link" href="schema/views/product-data-view/data-sheet-exchange.htm" >1.1.1 Data sheet exchange</a><br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a class="listing-link" href="schema/views/product-data-view/data-template-exchange.htm" >1.1.2 Data template exchange</a><br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a class="listing-link" href="schema/views/product-data-view/product-catalogue-exchange.htm" >1.1.3 Product catalogue exchange</a><br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a class="listing-link" href="schema/views/product-data-view/product-requirement-request-exchange.htm" >1.1.4 Product requirement request exchange</a><br />
 <a class="listing-link" href="schema/chapter-2.htm">2. Normative references</a><br />
 <a class="listing-link" href="schema/chapter-3.htm">3. Terms, definitions, and abbreviated terms</a><br />
 <a class="listing-link" href="schema/chapter-3.htm#terms">3.1 Terms and definitions</a><br />
 <a class="listing-link" href="schema/chapter-3.htm#abbreviated">3.2 Abbreviated terms</a><br />
 <a class="listing-link" href="schema/chapter-4.htm">4. Fundamental concepts and assumptions</a><br />
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="schema/templates/object-association.htm">4.1 Object Association</a><br />
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="schema/templates/classification-association.htm">4.1.1 Classification Association</a><br />
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="schema/templates/document-association.htm">4.1.2 Document Association</a><br />
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="schema/templates/object-definition.htm">4.2 Object Definition</a><br />
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="schema/templates/object-typing.htm">4.2.1 Object Typing</a><br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="schema/templates/exchange-requirements.htm">4.1 Exchange Requirements</a><br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="schema/templates/completely-defined-product.htm">4.1.1 Completely defined product</a><br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="schema/templates/data-template.htm">4.1.2 Data template</a><br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="schema/templates/header.htm">4.2 Header</a><br />
 <a class="listing-link" href="schema/chapter-5.htm">5. Core data schemas</a><br />
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a class="listing-link" href="schema/ifccontrolextension/content.htm">5.1 IfcControlExtension</a><br />
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;5.1.1 Schema Definition<br />
@@ -55,36 +58,25 @@
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a class="listing-link" href="schema/ifckernel/lexical/ifcobjectdefinition.htm">5.2.3.4 IfcObjectDefinition</a><br />
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a class="listing-link" href="schema/ifckernel/lexical/ifcprojectlibrary.htm">5.2.3.5 IfcProjectLibrary</a><br />
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a class="listing-link" href="schema/ifckernel/lexical/ifcpropertydefinition.htm">5.2.3.6 IfcPropertyDefinition</a><br />
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a class="listing-link" href="schema/ifckernel/lexical/ifcpropertysettemplate.htm">5.2.3.7 IfcPropertySetTemplate</a><br />
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a class="listing-link" href="schema/ifckernel/lexical/ifcpropertytemplate.htm">5.2.3.8 IfcPropertyTemplate</a><br />
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a class="listing-link" href="schema/ifckernel/lexical/ifcpropertytemplatedefinition.htm">5.2.3.9 IfcPropertyTemplateDefinition</a><br />
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a class="listing-link" href="schema/ifckernel/lexical/ifcrelaggregates.htm">5.2.3.10 IfcRelAggregates</a><br />
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a class="listing-link" href="schema/ifckernel/lexical/ifcrelassociates.htm">5.2.3.11 IfcRelAssociates</a><br />
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a class="listing-link" href="schema/ifckernel/lexical/ifcrelassociatesclassification.htm">5.2.3.12 IfcRelAssociatesClassification</a><br />
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a class="listing-link" href="schema/ifckernel/lexical/ifcrelassociatesdocument.htm">5.2.3.13 IfcRelAssociatesDocument</a><br />
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a class="listing-link" href="schema/ifckernel/lexical/ifcrelationship.htm">5.2.3.14 IfcRelationship</a><br />
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a class="listing-link" href="schema/ifckernel/lexical/ifcreldeclares.htm">5.2.3.15 IfcRelDeclares</a><br />
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a class="listing-link" href="schema/ifckernel/lexical/ifcreldecomposes.htm">5.2.3.16 IfcRelDecomposes</a><br />
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a class="listing-link" href="schema/ifckernel/lexical/ifcreldefines.htm">5.2.3.17 IfcRelDefines</a><br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a class="listing-link" href="schema/ifckernel/lexical/ifcpropertyset.htm">5.2.3.7 IfcPropertySet</a><br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a class="listing-link" href="schema/ifckernel/lexical/ifcpropertysetdefinition.htm">5.2.3.8 IfcPropertySetDefinition</a><br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a class="listing-link" href="schema/ifckernel/lexical/ifcpropertysettemplate.htm">5.2.3.9 IfcPropertySetTemplate</a><br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a class="listing-link" href="schema/ifckernel/lexical/ifcpropertytemplate.htm">5.2.3.10 IfcPropertyTemplate</a><br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a class="listing-link" href="schema/ifckernel/lexical/ifcpropertytemplatedefinition.htm">5.2.3.11 IfcPropertyTemplateDefinition</a><br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a class="listing-link" href="schema/ifckernel/lexical/ifcrelassociates.htm">5.2.3.12 IfcRelAssociates</a><br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a class="listing-link" href="schema/ifckernel/lexical/ifcrelassociatesclassification.htm">5.2.3.13 IfcRelAssociatesClassification</a><br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a class="listing-link" href="schema/ifckernel/lexical/ifcrelassociatesdocument.htm">5.2.3.14 IfcRelAssociatesDocument</a><br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a class="listing-link" href="schema/ifckernel/lexical/ifcrelationship.htm">5.2.3.15 IfcRelationship</a><br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a class="listing-link" href="schema/ifckernel/lexical/ifcreldefines.htm">5.2.3.16 IfcRelDefines</a><br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a class="listing-link" href="schema/ifckernel/lexical/ifcreldefinesbytemplate.htm">5.2.3.17 IfcRelDefinesByTemplate</a><br />
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a class="listing-link" href="schema/ifckernel/lexical/ifcreldefinesbytype.htm">5.2.3.18 IfcRelDefinesByType</a><br />
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a class="listing-link" href="schema/ifckernel/lexical/ifcroot.htm">5.2.3.19 IfcRoot</a><br />
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a class="listing-link" href="schema/ifckernel/lexical/ifcsimplepropertytemplate.htm">5.2.3.20 IfcSimplePropertyTemplate</a><br />
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a class="listing-link" href="schema/ifckernel/lexical/ifctypeobject.htm">5.2.3.21 IfcTypeObject</a><br />
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a class="listing-link" href="schema/ifckernel/lexical/ifctypeproduct.htm">5.2.3.22 IfcTypeProduct</a><br />
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;5.2.4 Functions<br />
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a class="listing-link" href="schema/ifckernel/lexical/ifcuniquedefinitionnames.htm">5.2.4.1 IfcUniqueDefinitionNames</a><br />
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a class="listing-link" href="schema/ifckernel/lexical/ifcuniquepropertysetnames.htm">5.2.4.2 IfcUniquePropertySetNames</a><br />
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a class="listing-link" href="schema/ifckernel/lexical/ifcuniquepropertytemplatenames.htm">5.2.4.3 IfcUniquePropertyTemplateNames</a><br />
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;5.2.5 Rules<br />
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a class="listing-link" href="schema/ifckernel/lexical/ifcsingleprojectinstance.htm">5.2.5.1 IfcSingleProjectInstance</a><br />
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;5.2.6 Property Sets<br />
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a class="listing-link" href="schema/ifcproductextension/content.htm">5.3 IfcProductExtension</a><br />
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;5.3.1 Schema Definition<br />
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;5.3.2 Types<br />
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;5.3.3 Entities<br />
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a class="listing-link" href="schema/ifcproductextension/lexical/ifcelementtype.htm">5.3.3.1 IfcElementType</a><br />
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;5.3.4 Property Sets<br />
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;5.3.5 Quantity Sets<br />
 <a class="listing-link" href="schema/chapter-6.htm">6. Shared element data schemas</a><br />
 <a class="listing-link" href="schema/chapter-7.htm">7. Domain specific data schemas</a><br />
 <a class="listing-link" href="schema/chapter-8.htm">8. Resource definition data schemas</a><br />
@@ -112,9 +104,10 @@
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;8.3.3 Entities<br />
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a class="listing-link" href="schema/ifcexternalreferenceresource/lexical/ifcclassification.htm">8.3.3.1 IfcClassification</a><br />
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a class="listing-link" href="schema/ifcexternalreferenceresource/lexical/ifcclassificationreference.htm">8.3.3.2 IfcClassificationReference</a><br />
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a class="listing-link" href="schema/ifcexternalreferenceresource/lexical/ifcdocumentreference.htm">8.3.3.3 IfcDocumentReference</a><br />
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a class="listing-link" href="schema/ifcexternalreferenceresource/lexical/ifcexternalinformation.htm">8.3.3.4 IfcExternalInformation</a><br />
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a class="listing-link" href="schema/ifcexternalreferenceresource/lexical/ifcexternalreference.htm">8.3.3.5 IfcExternalReference</a><br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a class="listing-link" href="schema/ifcexternalreferenceresource/lexical/ifcdocumentinformation.htm">8.3.3.3 IfcDocumentInformation</a><br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a class="listing-link" href="schema/ifcexternalreferenceresource/lexical/ifcdocumentreference.htm">8.3.3.4 IfcDocumentReference</a><br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a class="listing-link" href="schema/ifcexternalreferenceresource/lexical/ifcexternalinformation.htm">8.3.3.5 IfcExternalInformation</a><br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a class="listing-link" href="schema/ifcexternalreferenceresource/lexical/ifcexternalreference.htm">8.3.3.6 IfcExternalReference</a><br />
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a class="listing-link" href="schema/ifcmeasureresource/content.htm">8.4 IfcMeasureResource</a><br />
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;8.4.1 Schema Definition<br />
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;8.4.2 Types<br />
@@ -122,18 +115,32 @@
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a class="listing-link" href="schema/ifcmeasureresource/lexical/ifcinteger.htm">8.4.2.2 IfcInteger</a><br />
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a class="listing-link" href="schema/ifcmeasureresource/lexical/ifclabel.htm">8.4.2.3 IfcLabel</a><br />
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a class="listing-link" href="schema/ifcmeasureresource/lexical/ifctext.htm">8.4.2.4 IfcText</a><br />
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a class="listing-link" href="schema/ifcmeasureresource/lexical/ifcsimplevalue.htm">8.4.2.5 IfcSimpleValue</a><br />
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a class="listing-link" href="schema/ifcmeasureresource/lexical/ifcunit.htm">8.4.2.6 IfcUnit</a><br />
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a class="listing-link" href="schema/ifcmeasureresource/lexical/ifcvalue.htm">8.4.2.7 IfcValue</a><br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a class="listing-link" href="schema/ifcmeasureresource/lexical/ifcderivedunitenum.htm">8.4.2.5 IfcDerivedUnitEnum</a><br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a class="listing-link" href="schema/ifcmeasureresource/lexical/ifcunitenum.htm">8.4.2.6 IfcUnitEnum</a><br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a class="listing-link" href="schema/ifcmeasureresource/lexical/ifcsimplevalue.htm">8.4.2.7 IfcSimpleValue</a><br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a class="listing-link" href="schema/ifcmeasureresource/lexical/ifcunit.htm">8.4.2.8 IfcUnit</a><br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a class="listing-link" href="schema/ifcmeasureresource/lexical/ifcvalue.htm">8.4.2.9 IfcValue</a><br />
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;8.4.3 Entities<br />
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a class="listing-link" href="schema/ifcmeasureresource/lexical/ifcmeasurewithunit.htm">8.4.3.1 IfcMeasureWithUnit</a><br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a class="listing-link" href="schema/ifcmeasureresource/lexical/ifcderivedunit.htm">8.4.3.1 IfcDerivedUnit</a><br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a class="listing-link" href="schema/ifcmeasureresource/lexical/ifcderivedunitelement.htm">8.4.3.2 IfcDerivedUnitElement</a><br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a class="listing-link" href="schema/ifcmeasureresource/lexical/ifcdimensionalexponents.htm">8.4.3.3 IfcDimensionalExponents</a><br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a class="listing-link" href="schema/ifcmeasureresource/lexical/ifcmeasurewithunit.htm">8.4.3.4 IfcMeasureWithUnit</a><br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a class="listing-link" href="schema/ifcmeasureresource/lexical/ifcmonetaryunit.htm">8.4.3.5 IfcMonetaryUnit</a><br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a class="listing-link" href="schema/ifcmeasureresource/lexical/ifcnamedunit.htm">8.4.3.6 IfcNamedUnit</a><br />
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;8.4.4 Functions<br />
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a class="listing-link" href="schema/ifcutilityresource/content.htm">8.5 IfcUtilityResource</a><br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a class="listing-link" href="schema/ifcpropertyresource/content.htm">8.5 IfcPropertyResource</a><br />
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;8.5.1 Schema Definition<br />
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;8.5.2 Types<br />
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a class="listing-link" href="schema/ifcutilityresource/lexical/ifcgloballyuniqueid.htm">8.5.2.1 IfcGloballyUniqueId</a><br />
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;8.5.3 Entities<br />
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a class="listing-link" href="schema/ifcutilityresource/lexical/ifctable.htm">8.5.3.1 IfcTable</a><br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a class="listing-link" href="schema/ifcpropertyresource/lexical/ifcproperty.htm">8.5.3.1 IfcProperty</a><br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a class="listing-link" href="schema/ifcpropertyresource/lexical/ifcpropertyabstraction.htm">8.5.3.2 IfcPropertyAbstraction</a><br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;8.5.4 Functions<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a class="listing-link" href="schema/ifcutilityresource/content.htm">8.6 IfcUtilityResource</a><br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;8.6.1 Schema Definition<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;8.6.2 Types<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a class="listing-link" href="schema/ifcutilityresource/lexical/ifcgloballyuniqueid.htm">8.6.2.1 IfcGloballyUniqueId</a><br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;8.6.3 Entities<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a class="listing-link" href="schema/ifcutilityresource/lexical/ifctable.htm">8.6.3.1 IfcTable</a><br />
 <a class="listing-link" href="annex/annex-a.htm">Annex A. Computer interpretable listings</a><br />
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a class="listing-link" href="annex/annex-a/product-data-view/index.htm" >A.1 Product Data View</a><br />
 <a class="listing-link" href="annex/annex-b.htm">Annex B. Alphabetical listings</a><br />
@@ -193,7 +200,6 @@
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;D.1.1 Core data schemas<br />
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a class="listing-link" href="annex/annex-d/ifccontrolextension/index.htm" >D.1.1.1 IfcControlExtension</a><br />
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a class="listing-link" href="annex/annex-d/ifckernel/index.htm" >D.1.1.2 IfcKernel</a><br />
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a class="listing-link" href="annex/annex-d/ifcproductextension/index.htm" >D.1.1.3 IfcProductExtension</a><br />
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;D.1.2 Shared element data schemas<br />
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;D.1.3 Domain specific data schemas<br />
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;D.1.4 Resource definition data schemas<br />
@@ -201,15 +207,15 @@
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a class="listing-link" href="annex/annex-d/ifcdatetimeresource/index.htm" >D.1.4.2 IfcDateTimeResource</a><br />
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a class="listing-link" href="annex/annex-d/ifcexternalreferenceresource/index.htm" >D.1.4.3 IfcExternalReferenceResource</a><br />
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a class="listing-link" href="annex/annex-d/ifcmeasureresource/index.htm" >D.1.4.4 IfcMeasureResource</a><br />
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a class="listing-link" href="annex/annex-d/ifcutilityresource/index.htm" >D.1.4.5 IfcUtilityResource</a><br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a class="listing-link" href="annex/annex-d/ifcpropertyresource/index.htm" >D.1.4.5 IfcPropertyResource</a><br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a class="listing-link" href="annex/annex-d/ifcutilityresource/index.htm" >D.1.4.6 IfcUtilityResource</a><br />
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;D.2 Instance diagrams<br />
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;D.2.1 Product Data View<br />
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a class="listing-link" href="annex/annex-d/product-data-view/ifccomplexpropertytemplate.htm" >D.2.1.1 IfcComplexPropertyTemplate</a><br />
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a class="listing-link" href="annex/annex-d/product-data-view/ifcobject.htm" >D.2.1.2 IfcObject</a><br />
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a class="listing-link" href="annex/annex-d/product-data-view/ifcprojectlibrary.htm" >D.2.1.3 IfcProjectLibrary</a><br />
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a class="listing-link" href="annex/annex-d/product-data-view/ifcpropertysettemplate.htm" >D.2.1.4 IfcPropertySetTemplate</a><br />
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a class="listing-link" href="annex/annex-d/product-data-view/ifcpropertytemplate.htm" >D.2.1.5 IfcPropertyTemplate</a><br />
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a class="listing-link" href="annex/annex-d/product-data-view/ifcsimplepropertytemplate.htm" >D.2.1.6 IfcSimplePropertyTemplate</a><br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a class="listing-link" href="annex/annex-d/product-data-view/ifcobject.htm" >D.2.1.1 IfcObject</a><br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a class="listing-link" href="annex/annex-d/product-data-view/ifcprojectlibrary.htm" >D.2.1.2 IfcProjectLibrary</a><br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a class="listing-link" href="annex/annex-d/product-data-view/ifcpropertysettemplate.htm" >D.2.1.3 IfcPropertySetTemplate</a><br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a class="listing-link" href="annex/annex-d/product-data-view/ifcpropertytemplate.htm" >D.2.1.4 IfcPropertyTemplate</a><br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a class="listing-link" href="annex/annex-d/product-data-view/ifcsimplepropertytemplate.htm" >D.2.1.5 IfcSimplePropertyTemplate</a><br />
 <a class="listing-link" href="annex/annex-e.htm">Annex E. Examples</a><br />
 <a class="listing-link" href="annex/annex-f.htm">Annex F. Change logs</a><br />
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a class="listing-link" href="annex/annex-f/ifc2x3-to-ifc4/index.htm" >F.1 IFC2x3 to IFC4</a><br />
@@ -230,12 +236,11 @@
 </p>
 <h1 class="std">Figures</h1>
 <p>
-<a class="listing-link" href="schema/templates/classification-association.htm">Figure 1 &mdash; Classification Association instance diagram</a><br />
-<a class="listing-link" href="schema/templates/document-association.htm">Figure 2 &mdash; Document Association instance diagram</a><br />
-<a class="listing-link" href="schema/templates/object-typing.htm">Figure 3 &mdash; Object Typing instance diagram</a><br />
-<a class="listing-link" href="schema/ifckernel/lexical/ifcpropertysettemplate.htm">Figure 4 &mdash; Property set template relationships</a><br />
-<a class="listing-link" href="schema/ifckernel/lexical/ifcreldefinesbytype.htm">Figure 5 &mdash; Type definition relationships</a><br />
-<a class="listing-link" href="schema/ifckernel/lexical/ifcsimplepropertytemplate.htm">Figure 6 &mdash; Property template relationships</a><br />
+<a class="listing-link" href="schema/templates/completely-defined-product.htm">Figure 1 &mdash; Completely defined product instance diagram</a><br />
+<a class="listing-link" href="schema/templates/data-template.htm">Figure 2 &mdash; Data template instance diagram</a><br />
+<a class="listing-link" href="schema/ifckernel/lexical/ifcpropertysettemplate.htm">Figure 3 &mdash; Property set template relationships</a><br />
+<a class="listing-link" href="schema/ifckernel/lexical/ifcreldefinesbytype.htm">Figure 4 &mdash; Type definition relationships</a><br />
+<a class="listing-link" href="schema/ifckernel/lexical/ifcsimplepropertytemplate.htm">Figure 5 &mdash; Property template relationships</a><br />
 </p>
 <p></p>
 <h1 class="std">Tables</h1>

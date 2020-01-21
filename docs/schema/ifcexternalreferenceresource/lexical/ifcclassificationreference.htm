@@ -47,11 +47,9 @@
 <h5 class="num">Semantic definitions at the entity</h5>
 <details open="open"><summary>Entity definition</summary><p>An <span class="self-ref">IfcClassificationReference</span> is a reference into a classification system or source (see <a href="../../ifcexternalreferenceresource/lexical/ifcclassification.htm">IfcClassification</a>) for a specific classification key (or notation).</p>
 <p>The inherited attributes have the following meaning:</p>
-<ul>
-<li><i>Identification</i>: holds the key provided for a specific references to classification items (or tables).</li>
-<li><i>Name</i>: allows for a human interpretable designation of a classification notation.</li>
-<li><i>Location</i>: optionally holds a direct URI link into the classification system (or source) to hyperlink the classification key.</li>
-</ul>
+<p>\\\* <i>Identification</i>: holds the key provided for a specific references to classification items (or tables).
+\\\* <i>Name</i>: allows for a human interpretable designation of a classification notation.
+\\\* <i>Location</i>: optionally holds a direct URI link into the classification system (or source) to hyperlink the classification key.</p>
 <p>The <span class="self-ref">IfcClassificationReference</span> can either be assigned directly to the <a href="../../ifcexternalreferenceresource/lexical/ifcclassification.htm">IfcClassification</a>, such as if no classification hierarchy has to be included, or it references the parent classification notation, if the fully classification hierarchy is included in the data set. The first is refered to as &quot;lightweight classification&quot;, and the second as &quot;full classification&quot;. The attribute <i>ReferencedSource</i> then holds the following information (choice by <a href="../../ifcexternalreferenceresource/lexical/ifcclassificationreferenceselect.htm">IfcClassificationReferenceSelect</a>):</p>
 <ol>
 <li>being of type <a href="../../ifcexternalreferenceresource/lexical/ifcclassification.htm">IfcClassification</a>: direct reference to the classification system (with meta information provided);</li>
@@ -60,12 +58,8 @@
 <blockquote class="example">
 <p>EXAMPLE  The <span class="self-ref">IfcClassificationReference</span> can be used as a form of 'lightweight' classification through the '<i>Identification</i>' attribute inherited from the abstract <a href="../../ifcexternalreferenceresource/lexical/ifcexternalreference.htm">IfcExternalReference</a> class. In this case, the '<i>Identification</i>' could take (for instance) the Uniclass notation &quot;L6814&quot; which, if the classification was well understood by all parties and was known to be taken from a particular classification source, would be sufficient. The <i>Name</i> attribute could be the title &quot;Tanking&quot;. This would remove the need for the overhead of the more complete classification structure of the model.</p>
 </blockquote>
-<blockquote class="history">
-<p>HISTORY  New entity in IFC2x.</p>
-</blockquote>
-<blockquote class="change-ifc2x4">
-<p>IFC4 CHANGE  The attribute <i>Description</i> and inverse attribute <i>HasReferences</i> are added. The attribute <i>Identification</i> has been renamed from ItemReference.</p>
-</blockquote>
+
+
 </details>
 <details open="open"><summary>Attribute definitions</summary><table class="attributes">
 <tr><th>#</th><th>Attribute</th><th>Type</th><th>Cardinality</th><th>Description</th>
@@ -73,35 +67,25 @@
 <tr><td>4</td><td>ReferencedSource</td><td><a href="../../ifcexternalreferenceresource/lexical/ifcclassificationreferenceselect.htm">IfcClassificationReferenceSelect</a></td><td>? </td><td>
 The classification system or source that is referenced.
 
-<blockquote>
-IFC4 CHANGE  Data type changed to <a href="../../ifcexternalreferenceresource/lexical/ifcclassificationreferenceselect.htm">IfcClassificationReferenceSelect</a>.
-</blockquote>
+
 </td><td>X</td></tr>
 <tr><td>5</td><td>Description</td><td><a href="../../ifcmeasureresource/lexical/ifctext.htm">IfcText</a></td><td>? </td><td>
 Description of the classification reference for informational purposes.
 
-<blockquote>
-IFC4 CHANGE  New attribute added at the end of the attribute list.
-</blockquote>
+
 </td><td>X</td></tr>
 <tr><td>6</td><td>Sort</td><td><a href="../../ifcmeasureresource/lexical/ifcidentifier.htm">IfcIdentifier</a></td><td>? </td><td>
 Optional identifier to sort the set of classification references within the referenced source (either a classification facet of higher level, or the classification system itself).
 
-<blockquote>
-IFC4 CHANGE  New attribute added at the end of the attribute list.
-</blockquote>
+
 </td><td>X</td></tr>
 <tr><td></td><td><i>ClassificationRefForObjects</i></td><td><a href="../../ifckernel/lexical/ifcrelassociatesclassification.htm">IfcRelAssociatesClassification</a><br/>@RelatingClassification</td><td>S[0:?]</td><td>The classification reference with which objects are associated.
 
-<blockquote>
-IFC4 CHANGE  New inverse attribute.
-</blockquote>
+
 </td><td></td></tr>
 <tr><td></td><td><i>HasReferences</i></td><td><a href="../../ifcexternalreferenceresource/lexical/ifcclassificationreference.htm">IfcClassificationReference</a><br/>@ReferencedSource</td><td>S[0:?]</td><td>The parent classification references to which this child classification reference applies. It can either be the final classification item leaf node, or an intermediate classification item.
 
-<blockquote>
-IFC4 CHANGE New inverse attribute.
-</blockquote>
+
 </td><td></td></tr>
 </table>
 </details>
@@ -119,23 +103,16 @@ IFC4 CHANGE New inverse attribute.
 <tr><td>1</td><td>Location</td><td><a href="../../ifcexternalreferenceresource/lexical/ifcurireference.htm">IfcURIReference</a></td><td>? </td><td>
 Location, where the external source (classification, document or library) can be accessed by electronic means. The electronic location is provided as an URI, and would normally be given as an URL location string.
 
-<blockquote>
-IFC4 CHANGE  The data type has been changed from <a href="../../ifcmeasureresource/lexical/ifclabel.htm">IfcLabel</a> to <a href="../../ifcexternalreferenceresource/lexical/ifcurireference.htm">IfcURIReference</a><br>
-.
-</blockquote>
+
 </td><td>X</td></tr>
 <tr><td>2</td><td>Identification</td><td><a href="../../ifcmeasureresource/lexical/ifcidentifier.htm">IfcIdentifier</a></td><td>? </td><td>
 The <i>Identification</i> provides a unique identifier of the referenced item within the external source (classification, document or library). It may be provided as
-<ul>
-<li>a key, e.g. a classification notation, like NF2.3</li>
-<li>a handle</li>
-<li>a uuid or guid</li>
-</ul>
+\\\* a key, e.g. a classification notation, like NF2.3
+\\\* a handle
+\\\* a uuid or guid
 It may be human readable (such as a key) or not (such as a handle or uuid) depending on the context of its usage (which has to be determined by local agreement).
 
-<blockquote>
-IFC4 CHANGE Attribute renamed from <i>ItemReference</i> for consistency.
-</blockquote>
+
 </td><td>X</td></tr>
 <tr><td>3</td><td>Name</td><td><a href="../../ifcmeasureresource/lexical/ifclabel.htm">IfcLabel</a></td><td>? </td><td>
 Optional name to further specify the reference. It can provide a human readable identifier (which does not necessarily need to have a counterpart in the internal structure of the document).
@@ -144,39 +121,28 @@ Optional name to further specify the reference. It can provide a human readable 
 <tr><td>4</td><td>ReferencedSource</td><td><a href="../../ifcexternalreferenceresource/lexical/ifcclassificationreferenceselect.htm">IfcClassificationReferenceSelect</a></td><td>? </td><td>
 The classification system or source that is referenced.
 
-<blockquote>
-IFC4 CHANGE  Data type changed to <a href="../../ifcexternalreferenceresource/lexical/ifcclassificationreferenceselect.htm">IfcClassificationReferenceSelect</a>.
-</blockquote>
+
 </td><td>X</td></tr>
 <tr><td>5</td><td>Description</td><td><a href="../../ifcmeasureresource/lexical/ifctext.htm">IfcText</a></td><td>? </td><td>
 Description of the classification reference for informational purposes.
 
-<blockquote>
-IFC4 CHANGE  New attribute added at the end of the attribute list.
-</blockquote>
+
 </td><td>X</td></tr>
 <tr><td>6</td><td>Sort</td><td><a href="../../ifcmeasureresource/lexical/ifcidentifier.htm">IfcIdentifier</a></td><td>? </td><td>
 Optional identifier to sort the set of classification references within the referenced source (either a classification facet of higher level, or the classification system itself).
 
-<blockquote>
-IFC4 CHANGE  New attribute added at the end of the attribute list.
-</blockquote>
+
 </td><td>X</td></tr>
 <tr><td></td><td><i>ClassificationRefForObjects</i></td><td><a href="../../ifckernel/lexical/ifcrelassociatesclassification.htm">IfcRelAssociatesClassification</a><br/>@RelatingClassification</td><td>S[0:?]</td><td>The classification reference with which objects are associated.
 
-<blockquote>
-IFC4 CHANGE  New inverse attribute.
-</blockquote>
+
 </td><td></td></tr>
 <tr><td></td><td><i>HasReferences</i></td><td><a href="../../ifcexternalreferenceresource/lexical/ifcclassificationreference.htm">IfcClassificationReference</a><br/>@ReferencedSource</td><td>S[0:?]</td><td>The parent classification references to which this child classification reference applies. It can either be the final classification item leaf node, or an intermediate classification item.
 
-<blockquote>
-IFC4 CHANGE New inverse attribute.
-</blockquote>
+
 </td><td></td></tr>
 </table>
 </details>
-</section>
 </section>
 <section>
 <h5 class="num">Formal representations</h5>

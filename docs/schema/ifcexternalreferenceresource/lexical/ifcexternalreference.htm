@@ -11,7 +11,7 @@
     <title>IfcExternalReference</title>
 
     <style type="text/css">
-      body { counter-reset: index1 8 index2 3 index3 3 index4 4 index5 0; }
+      body { counter-reset: index1 8 index2 3 index3 3 index4 5 index5 0; }
     </style>
   </head>
 
@@ -20,7 +20,7 @@
 
 <script type="text/javascript">
 <!--
-    parent.index.location.replace("../../toc-8.htm#8.3.3.5");
+    parent.index.location.replace("../../toc-8.htm#8.3.3.6");
 //-->
 </script>
 
@@ -37,12 +37,8 @@
 <details open="open"><summary>Entity definition</summary><p>An <span class="self-ref">IfcExternalReference</span> is the identification of information that is not explicitly represented in the current model or in the project database (as an implementation of the current model). Such information may be contained in classifications, documents or libraries. The <span class="self-ref">IfcExternalReference</span> identifies a particular item, such as a dictionary entry, a classification notation, or a document reference within the external source.</p>
 <p>Only the <i>Location</i> (as a URL) is given to describe the place where the information can be found. Also an optional <i>Identification</i> as a key to allow more specific references (as to sections or tables) is provided. The <i>Identification</i> defines a system interpretable method to identify the relevant part of information at the source. In addition a human interpretable <i>Name</i> can be assigned to identify the information subject, such as a classification code.</p>
 <p><span class="self-ref">IfcExternalReference</span> is an abstract supertype of all external reference entities.</p>
-<blockquote class="history">
-<p>HISTORY  New entity in IFC2x.</p>
-</blockquote>
-<blockquote class="change-ifc2x4">
-<p>IFC 2x4 CHANGE  Attribute <i>Identification</i> renamed from ItemReference, attribute <i>Location</i> datatype changed, and inverse attribute <i>ExternalReferenceForResources</i> added.</p>
-</blockquote>
+
+
 </details>
 <details open="open"><summary>Attribute definitions</summary><table class="attributes">
 <tr><th>#</th><th>Attribute</th><th>Type</th><th>Cardinality</th><th>Description</th>
@@ -50,23 +46,16 @@
 <tr><td>1</td><td>Location</td><td><a href="../../ifcexternalreferenceresource/lexical/ifcurireference.htm">IfcURIReference</a></td><td>? </td><td>
 Location, where the external source (classification, document or library) can be accessed by electronic means. The electronic location is provided as an URI, and would normally be given as an URL location string.
 
-<blockquote>
-IFC4 CHANGE  The data type has been changed from <a href="../../ifcmeasureresource/lexical/ifclabel.htm">IfcLabel</a> to <a href="../../ifcexternalreferenceresource/lexical/ifcurireference.htm">IfcURIReference</a><br>
-.
-</blockquote>
+
 </td><td>X</td></tr>
 <tr><td>2</td><td>Identification</td><td><a href="../../ifcmeasureresource/lexical/ifcidentifier.htm">IfcIdentifier</a></td><td>? </td><td>
 The <i>Identification</i> provides a unique identifier of the referenced item within the external source (classification, document or library). It may be provided as
-<ul>
-<li>a key, e.g. a classification notation, like NF2.3</li>
-<li>a handle</li>
-<li>a uuid or guid</li>
-</ul>
+\\\* a key, e.g. a classification notation, like NF2.3
+\\\* a handle
+\\\* a uuid or guid
 It may be human readable (such as a key) or not (such as a handle or uuid) depending on the context of its usage (which has to be determined by local agreement).
 
-<blockquote>
-IFC4 CHANGE Attribute renamed from <i>ItemReference</i> for consistency.
-</blockquote>
+
 </td><td>X</td></tr>
 <tr><td>3</td><td>Name</td><td><a href="../../ifcmeasureresource/lexical/ifclabel.htm">IfcLabel</a></td><td>? </td><td>
 Optional name to further specify the reference. It can provide a human readable identifier (which does not necessarily need to have a counterpart in the internal structure of the document).
@@ -95,30 +84,22 @@ Optional name to further specify the reference. It can provide a human readable 
 <tr><td>1</td><td>Location</td><td><a href="../../ifcexternalreferenceresource/lexical/ifcurireference.htm">IfcURIReference</a></td><td>? </td><td>
 Location, where the external source (classification, document or library) can be accessed by electronic means. The electronic location is provided as an URI, and would normally be given as an URL location string.
 
-<blockquote>
-IFC4 CHANGE  The data type has been changed from <a href="../../ifcmeasureresource/lexical/ifclabel.htm">IfcLabel</a> to <a href="../../ifcexternalreferenceresource/lexical/ifcurireference.htm">IfcURIReference</a><br>
-.
-</blockquote>
+
 </td><td>X</td></tr>
 <tr><td>2</td><td>Identification</td><td><a href="../../ifcmeasureresource/lexical/ifcidentifier.htm">IfcIdentifier</a></td><td>? </td><td>
 The <i>Identification</i> provides a unique identifier of the referenced item within the external source (classification, document or library). It may be provided as
-<ul>
-<li>a key, e.g. a classification notation, like NF2.3</li>
-<li>a handle</li>
-<li>a uuid or guid</li>
-</ul>
+\\\* a key, e.g. a classification notation, like NF2.3
+\\\* a handle
+\\\* a uuid or guid
 It may be human readable (such as a key) or not (such as a handle or uuid) depending on the context of its usage (which has to be determined by local agreement).
 
-<blockquote>
-IFC4 CHANGE Attribute renamed from <i>ItemReference</i> for consistency.
-</blockquote>
+
 </td><td>X</td></tr>
 <tr><td>3</td><td>Name</td><td><a href="../../ifcmeasureresource/lexical/ifclabel.htm">IfcLabel</a></td><td>? </td><td>
 Optional name to further specify the reference. It can provide a human readable identifier (which does not necessarily need to have a counterpart in the internal structure of the document).
 </td><td>X</td></tr>
 </table>
 </details>
-</section>
 </section>
 <section>
 <h5 class="num">Formal representations</h5>

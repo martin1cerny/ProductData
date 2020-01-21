@@ -41,22 +41,16 @@
 <h5 class="num">Semantic definitions at the entity</h5>
 <details open="open"><summary>Entity definition</summary><p>An <span class="self-ref">IfcProjectLibrary</span> collects all library elements that are included within a referenced project data set.</p>
 <p>Examples for project libraries include:</p>
-<ul>
-<li>type libraries (also called style or family libraries): a collection of subtypes of <a href="../../ifckernel/lexical/ifctypeobject.htm">IfcTypeObject</a></li>
-<li>property definition libraries: a collections of <a href="../../ifckernel/lexical/ifcpropertysettemplate.htm">IfcPropertySetTemplate</a> or <i>IfcPropertyTemplates</i></li>
-</ul>
+<p>\\\* type libraries (also called style or family libraries): a collection of subtypes of <a href="../../ifckernel/lexical/ifctypeobject.htm">IfcTypeObject</a>
+\\\* property definition libraries: a collections of <a href="../../ifckernel/lexical/ifcpropertysettemplate.htm">IfcPropertySetTemplate</a> or <i>IfcPropertyTemplates</i></p>
 <p>The inherited attributes <i>RepresentationContext</i> and <i>UnitsInContext</i> have the following meaning:</p>
-<ul>
-<li>Context of the representations used within the project library. When the project library includes shape representations for its library type objects, one or several geometric representation contexts need to be included that define the coordinate system, the coordinate space dimensions, and/or the precision factor,</li>
-<li>Units locally assigned to measure types used within the context of this project library.</li>
-</ul>
+<p>\\\* Context of the representations used within the project library. When the project library includes shape representations for its library type objects, one or several geometric representation contexts need to be included that define the coordinate system, the coordinate space dimensions, and/or the precision factor,
+\\\* Units locally assigned to measure types used within the context of this project library.</p>
 <blockquote class="note">
 <p>NOTE  It is generally discouraged to use a different length measure and plane angle measure in an included project library compared with the project itself. It may lead to unexpected results for the shape representation of items included in the project library.</p>
 </blockquote>
-<p>Instances of <span class="self-ref">IfcProjectLibrary</span> are assigned to the project context using the <a href="../../ifckernel/lexical/ifcreldeclares.htm">IfcRelDeclares</a> relationship and accessible through the inverse attribute <i>HasContext</i>. Individual object types and property (set) templates are assigned to the <span class="self-ref">IfcProjectLibrary</span> using the <a href="../../ifckernel/lexical/ifcreldeclares.htm">IfcRelDeclares</a> relationship and are accessible through the inverse attribute <i>Declares</i>. An <span class="self-ref">IfcProjectLibrary</span> may be decomposed into sub libraries using the relationship <i>IfcRelNests</i>. Sub libraries are accessed by the <span class="self-ref">IfcProjectLibrary</span> through the inverse attribute <i>IsNestedBy</i>.</p>
-<blockquote class="history">
-<p>HISTORY  New entity in IFC4.</p>
-</blockquote>
+<p>Instances of <span class="self-ref">IfcProjectLibrary</span> are assigned to the project context using the <i>IfcRelDeclares</i> relationship and accessible through the inverse attribute <i>HasContext</i>. Individual object types and property (set) templates are assigned to the <span class="self-ref">IfcProjectLibrary</span> using the <i>IfcRelDeclares</i> relationship and are accessible through the inverse attribute <i>Declares</i>. An <span class="self-ref">IfcProjectLibrary</span> may be decomposed into sub libraries using the relationship <i>IfcRelNests</i>. Sub libraries are accessed by the <span class="self-ref">IfcProjectLibrary</span> through the inverse attribute <i>IsNestedBy</i>.</p>
+
 </details>
 </section>
 <section>
@@ -82,23 +76,8 @@ Optional name for use by the participating software systems or users. For some s
 <tr><td>4</td><td>Description</td><td><span class="self-ref">-</span></td><td></td><td>
 <i>This attribute is out of scope for this model view definition and shall not be set.</i></td><td></td></tr>
 <tr><td colspan="6"><i><a href="../../ifckernel/lexical/ifcobjectdefinition.htm">IfcObjectDefinition</a></i></td></tr>
-<tr><td></td><td><i>HasContext</i></td><td><a href="../../ifckernel/lexical/ifcreldeclares.htm">IfcRelDeclares</a><br/>@RelatedDefinitions</td><td>S[0:1]</td><td>References to the context providing context information such as project unit or representation context. It should only be asserted for the uppermost non-spatial object.
-<blockquote class="change-ifc2x4">
-IFC4 CHANGE  The inverse attribute datatype has been added.
-</blockquote>
-</td><td>X</td></tr>
-<tr><td></td><td><i>IsDecomposedBy</i></td><td><a href="../../ifckernel/lexical/ifcrelaggregates.htm">IfcRelAggregates</a><br/>@RelatingObject</td><td>S[0:?]</td><td>References to the decomposition relationship being an aggregation. It determines that this object definition is whole within an unordered whole/part decomposition relationship. An object definitions can be aggregated by several other objects (occurrences or parts).
-<blockquote class="change-ifc2x4">
-IFC4 CHANGE  The inverse attribute datatype has been changed from the supertype <a href="../../ifckernel/lexical/ifcreldecomposes.htm">IfcRelDecomposes</a> to subtype <a href="../../ifckernel/lexical/ifcrelaggregates.htm">IfcRelAggregates</a>.
-</blockquote>
-</td><td>X</td></tr>
-<tr><td></td><td><i>Decomposes</i></td><td><a href="../../ifckernel/lexical/ifcrelaggregates.htm">IfcRelAggregates</a><br/>@RelatedObjects</td><td>S[0:1]</td><td>References to the decomposition relationship being an aggregation. It determines that this object definition is a part within an unordered whole/part decomposition relationship. An object definitions can only be part of a single decomposition (to allow hierarchical strutures only).
-<blockquote class="change-ifc2x4">
-IFC4 CHANGE  The inverse attribute datatype has been changed from the supertype <a href="../../ifckernel/lexical/ifcreldecomposes.htm">IfcRelDecomposes</a> to subtype <a href="../../ifckernel/lexical/ifcrelaggregates.htm">IfcRelAggregates</a>.
-</blockquote>
-</td><td>X</td></tr>
 <tr><td></td><td><i>HasAssociations</i></td><td><a href="../../ifckernel/lexical/ifcrelassociates.htm">IfcRelAssociates</a><br/>@RelatedObjects</td><td>S[0:?]</td><td>Reference to the relationship objects, that associates external references or other resource definitions to the object.. Examples are the association to library, documentation or classification.
-</td><td>X</td></tr>
+</td><td></td></tr>
 <tr><td colspan="6"><i><a href="../../ifckernel/lexical/ifccontext.htm">IfcContext</a></i></td></tr>
 <tr><td>5</td><td>ObjectType</td><td><span class="self-ref">-</span></td><td></td><td>
 <i>This attribute is out of scope for this model view definition and shall not be set.</i></td><td></td></tr>
@@ -110,67 +89,9 @@ IFC4 CHANGE  The inverse attribute datatype has been changed from the supertype
 <i>This attribute is out of scope for this model view definition and shall not be set.</i></td><td></td></tr>
 <tr><td>9</td><td>UnitsInContext</td><td><span class="self-ref">-</span></td><td></td><td>
 <i>This attribute is out of scope for this model view definition and shall not be set.</i></td><td></td></tr>
-<tr><td></td><td><i>Declares</i></td><td><a href="../../ifckernel/lexical/ifcreldeclares.htm">IfcRelDeclares</a><br/>@RelatingContext</td><td>S[0:?]</td><td>Reference to the <a href="../../ifckernel/lexical/ifcreldeclares.htm">IfcRelDeclares</a> relationship that assigns the uppermost entities of includes hierarchies to this context instance.
-<blockquote class="note">
-NOTE  The spatial hiearchy is assigned to <i>IfcProject</i> using the <a href="../../ifckernel/lexical/ifcrelaggregates.htm">IfcRelAggregates</a> relationship. This is a single exception due to compatibility reasons with earlier releases.
-</blockquote>
-</td><td></td></tr>
 <tr><td colspan="6"><a href="../../ifckernel/lexical/ifcprojectlibrary.htm">IfcProjectLibrary</a></td></tr>
 </table>
 </details>
-</section>
-<section>
-<h5 class="num">Definitions applying to Product Data View</h5>
-<p><a href="../../../annex/annex-d/product-data-view/ifcprojectlibrary.htm"><img style="border: 0px" src="../../../img/diagram.png" />&nbsp;Instance diagram</a></p><hr />
-<h5></h5><details open="open">
-<summary>Concept usage</summary>
-<a id="document-association" />
-<p class="use-head">Document Association</p>
-<p>The <a href="../../templates/document-association.htm">Document Association</a> concept applies to this entity.</p><br/><br/>
-
-<a id="classification-association" />
-<p class="use-head">Classification Association</p>
-<p>The <a href="../../templates/classification-association.htm">Classification Association</a> concept applies to this entity.</p><br/><br/>
-
-<a id="ae99fd79-e632-47c9-8ee1-5447eb95319e" />
-<p class="use-head">UserDefined_DeComposition</p>
-<p>The <a href="../../templates/ae99fd79-e632-47c9-8ee1-5447eb95319e.htm"></a> concept applies to this entity.</p><br/><br/>
-
-</details>
-<details><summary>mvdXML Specification</summary>
-<div class="xsd"><code class="xsd">
-&lt;?xml version=&quot;1.0&quot;?&gt;<br/>
-&lt;ConceptRoot xmlns:xsi=&quot;http://www.w3.org/2001/XMLSchema-instance&quot; xmlns:xsd=&quot;http://www.w3.org/2001/XMLSchema&quot; uuid=&quot;b2950f7e-cc60-4e84-a24c-11c2c431f1d1&quot; name=&quot;IfcProjectLibrary&quot; status=&quot;sample&quot; applicableRootEntity=&quot;IfcProjectLibrary&quot;&gt;<br/>
-&nbsp;&nbsp;&lt;Applicability uuid=&quot;00000000-0000-0000-0000-000000000000&quot; status=&quot;sample&quot;&gt;<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;&lt;Template ref=&quot;27567215-e904-4406-af64-5ea02bb40345&quot; /&gt;<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;&lt;TemplateRules operator=&quot;and&quot; /&gt;<br/>
-&nbsp;&nbsp;&lt;/Applicability&gt;<br/>
-&nbsp;&nbsp;&lt;Concepts&gt;<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;&lt;Concept uuid=&quot;02fac513-d6cd-4859-9150-31cd5fa4e40f&quot; name=&quot;Document Association&quot; status=&quot;sample&quot; override=&quot;false&quot;&gt;<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;Template ref=&quot;7dadae9c-0026-44d3-ade7-9a843fe2ef0b&quot; /&gt;<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;&lt;/Concept&gt;<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;&lt;Concept uuid=&quot;ca9fc9cc-22e9-4efc-9e46-503e4f3f0515&quot; name=&quot;Classification Association&quot; status=&quot;sample&quot; override=&quot;false&quot;&gt;<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;Template ref=&quot;4a224609-6578-4c75-afcf-8affa86e5ef2&quot; /&gt;<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;&lt;/Concept&gt;<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;&lt;Concept uuid=&quot;ac551c77-e868-4a6d-b982-eb42d35ef1b3&quot; name=&quot;UserDefined_DeComposition&quot; status=&quot;sample&quot; override=&quot;false&quot;&gt;<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;Template ref=&quot;ae99fd79-e632-47c9-8ee1-5447eb95319e&quot; /&gt;<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;&lt;/Concept&gt;<br/>
-&nbsp;&nbsp;&lt;/Concepts&gt;<br/>
-&lt;/ConceptRoot&gt;<br/>
-
-</code></div></details>
-<section>
-<details>
-<summary>Concept inheritance</summary>
-<p><table class="attributes">
-<tr><th><b>#</b></th><th><b>Concept</b></th><th><b>Template</b></th><th><b>Model View</b></th></tr>
-<tr><td colspan="3"><a href="../../ifckernel/lexical/ifcprojectlibrary.htm">IfcProjectLibrary</a></td></tr><tr><td> </td><td><a href="../../ifckernel/lexical/ifcprojectlibrary.htm#document-association">Document Association</a></td><td><a href="../../templates/document-association.htm">Document Association</a></td><td>Product Data View</td></tr>
-<tr><td> </td><td><a href="../../ifckernel/lexical/ifcprojectlibrary.htm#classification-association">Classification Association</a></td><td><a href="../../templates/classification-association.htm">Classification Association</a></td><td>Product Data View</td></tr>
-<tr><td> </td><td><a href="../../ifckernel/lexical/ifcprojectlibrary.htm#ae99fd79-e632-47c9-8ee1-5447eb95319e">UserDefined_DeComposition</a></td><td><a href="../../templates/ae99fd79-e632-47c9-8ee1-5447eb95319e.htm"></a></td><td>Product Data View</td></tr>
-
-</table>
-</details>
-</section>
 </section>
 <section>
 <h5 class="num">Formal representations</h5>

@@ -49,14 +49,10 @@
 <section>
 <h5 class="num">Semantic definitions at the entity</h5>
 <details open="open"><summary>Entity definition</summary><p>An <span class="self-ref">IfcMetric</span> is used to capture quantitative resultant metrics that can be applied to objectives.</p>
-<p><span class="self-ref">IfcMetric</span> is a subtype of <a href="../../ifcconstraintresource/lexical/ifcconstraint.htm">IfcConstraint</a> and may be associated with any subtype of <a href="../../ifckernel/lexical/ifcroot.htm">IfcRoot</a> through the <a href="../../ifccontrolextension/lexical/ifcrelassociatesconstraint.htm">IfcRelAssociatesConstraint</a> relationship in the <i>IfcControlExtension</i> schema, or may be associated with <i>IfcProperty</i> by <i>IfcResourceConstraintRelationship</i>.</p>
+<p><span class="self-ref">IfcMetric</span> is a subtype of <a href="../../ifcconstraintresource/lexical/ifcconstraint.htm">IfcConstraint</a> and may be associated with any subtype of <a href="../../ifckernel/lexical/ifcroot.htm">IfcRoot</a> through the <a href="../../ifccontrolextension/lexical/ifcrelassociatesconstraint.htm">IfcRelAssociatesConstraint</a> relationship in the <i>IfcControlExtension</i> schema, or may be associated with <a href="../../ifcpropertyresource/lexical/ifcproperty.htm">IfcProperty</a> by <i>IfcResourceConstraintRelationship</i>.</p>
 <p>The aim of <span class="self-ref">IfcMetric</span> is to capture the quantitative aspects of a constraint.</p>
-<blockquote class="history">
-<p>HISTORY  New entity in IFC2.0.</p>
-</blockquote>
-<blockquote class="change-ifc2x4">
-<p>IFC4 CHANGE  ReferencePath attribute added for indicating the value to be constrained along a path of attribute references.</p>
-</blockquote>
+
+
 </details>
 <details open="open"><summary>Attribute definitions</summary><table class="attributes">
 <tr><th>#</th><th>Attribute</th><th>Type</th><th>Cardinality</th><th>Description</th>
@@ -69,9 +65,7 @@ Enumeration that identifies the type of benchmark data.
 <tr><td>10</td><td>DataValue</td><td><a href="../../ifcconstraintresource/lexical/ifcmetricvalueselect.htm">IfcMetricValueSelect</a></td><td>? </td><td>
 The value to be compared on associated objects. A null value indicates comparison to null.
 
-<blockquote>
-IFC4 ADD1 CHANGE  This attribute is now optional.
-</blockquote>
+
 </td><td>X</td></tr>
 <tr><td>11</td><td>ReferencePath</td><td><span class="self-ref">-</span></td><td></td><td>
 <i>This attribute is out of scope for this model view definition and shall not be set.</i></td><td></td></tr>
@@ -113,15 +107,12 @@ Enumeration that identifies the type of benchmark data.
 <tr><td>10</td><td>DataValue</td><td><a href="../../ifcconstraintresource/lexical/ifcmetricvalueselect.htm">IfcMetricValueSelect</a></td><td>? </td><td>
 The value to be compared on associated objects. A null value indicates comparison to null.
 
-<blockquote>
-IFC4 ADD1 CHANGE  This attribute is now optional.
-</blockquote>
+
 </td><td>X</td></tr>
 <tr><td>11</td><td>ReferencePath</td><td><span class="self-ref">-</span></td><td></td><td>
 <i>This attribute is out of scope for this model view definition and shall not be set.</i></td><td></td></tr>
 </table>
 </details>
-</section>
 </section>
 <section>
 <h5 class="num">Formal representations</h5>

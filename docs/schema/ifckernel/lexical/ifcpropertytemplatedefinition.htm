@@ -11,7 +11,7 @@
     <title>IfcPropertyTemplateDefinition</title>
 
     <style type="text/css">
-      body { counter-reset: index1 5 index2 2 index3 3 index4 8 index5 0; }
+      body { counter-reset: index1 5 index2 2 index3 3 index4 10 index5 0; }
     </style>
   </head>
 
@@ -20,7 +20,7 @@
 
 <script type="text/javascript">
 <!--
-    parent.index.location.replace("../../toc-5.htm#5.2.3.9");
+    parent.index.location.replace("../../toc-5.htm#5.2.3.11");
 //-->
 </script>
 
@@ -41,14 +41,10 @@
 <section>
 <h5 class="num">Semantic definitions at the entity</h5>
 <details open="open"><summary>Entity definition</summary><p><span class="self-ref">IfcPropertyTemplateDefinition</span> is a generalization of all property and property set templates. Templates define the collection, types, names, applicable measure types and units of individual properties used in a project. The property template definition can be either:</p>
-<ul>
-<li><strong>Property set template</strong> - <a href="../../ifckernel/lexical/ifcpropertysettemplate.htm">IfcPropertySetTemplate</a>, a collection of property templates that determine the definition of properties used within a project context.</li>
-<li><strong>Property template</strong> - <a href="../../ifckernel/lexical/ifcpropertytemplate.htm">IfcPropertyTemplate</a>, a single template that determines the definition of a particular property used in the same project context. The template may determine the name, description, data type, the unit, or a standard expression for each property that is based on that template.</li>
-</ul>
+<p>\\\* \\\<i>\\\<i>Property set template\\\</i>\\\</i> - <a href="../../ifckernel/lexical/ifcpropertysettemplate.htm">IfcPropertySetTemplate</a>, a collection of property templates that determine the definition of properties used within a project context.
+\\\* \\\<i>\\\<i>Property template\\\</i>\\\</i> - <a href="../../ifckernel/lexical/ifcpropertytemplate.htm">IfcPropertyTemplate</a>, a single template that determines the definition of a particular property used in the same project context. The template may determine the name, description, data type, the unit, or a standard expression for each property that is based on that template.</p>
 <p>The subtypes of <span class="self-ref">IfcPropertyTemplateDefinition</span> are declared within a project context. The uppermost template definition (e.g. the <a href="../../ifckernel/lexical/ifcpropertysettemplate.htm">IfcPropertySetTemplate</a> including several <a href="../../ifckernel/lexical/ifcpropertytemplate.htm">IfcPropertyTemplate</a>'s) should be related to the context, either <i>IfcProject</i>, or <a href="../../ifckernel/lexical/ifcprojectlibrary.htm">IfcProjectLibrary</a>, using the inherited <i>HasContext</i> inverse attribute.</p>
-<blockquote class="history">
-<p>HISTORY  New entity in IFC4.</p>
-</blockquote>
+
 </details>
 </section>
 <section>
@@ -75,13 +71,11 @@ Optional name for use by the participating software systems or users. For some s
 <tr><td>4</td><td>Description</td><td><span class="self-ref">-</span></td><td></td><td>
 <i>This attribute is out of scope for this model view definition and shall not be set.</i></td><td></td></tr>
 <tr><td colspan="6"><i><a href="../../ifckernel/lexical/ifcpropertydefinition.htm">IfcPropertyDefinition</a></i></td></tr>
-<tr><td></td><td><i>HasContext</i></td><td><a href="../../ifckernel/lexical/ifcreldeclares.htm">IfcRelDeclares</a><br/>@RelatedDefinitions</td><td>S[0:1]</td><td></td><td>X</td></tr>
 <tr><td></td><td><i>HasAssociations</i></td><td><a href="../../ifckernel/lexical/ifcrelassociates.htm">IfcRelAssociates</a><br/>@RelatedObjects</td><td>S[0:?]</td><td>Reference to the relationship IfcRelAssociates and thus to those externally defined concepts, like classifications, documents, or library information, which are associated to the property definition.
 </td><td>X</td></tr>
 <tr><td colspan="6"><i><a href="../../ifckernel/lexical/ifcpropertytemplatedefinition.htm">IfcPropertyTemplateDefinition</a></i></td></tr>
 </table>
 </details>
-</section>
 </section>
 <section>
 <h5 class="num">Formal representations</h5>

@@ -11,7 +11,7 @@
     <title>IfcPropertyTemplate</title>
 
     <style type="text/css">
-      body { counter-reset: index1 5 index2 2 index3 3 index4 7 index5 0; }
+      body { counter-reset: index1 5 index2 2 index3 3 index4 9 index5 0; }
     </style>
   </head>
 
@@ -20,7 +20,7 @@
 
 <script type="text/javascript">
 <!--
-    parent.index.location.replace("../../toc-5.htm#5.2.3.8");
+    parent.index.location.replace("../../toc-5.htm#5.2.3.10");
 //-->
 </script>
 
@@ -41,27 +41,17 @@
 <section>
 <h5 class="num">Semantic definitions at the entity</h5>
 <details open="open"><summary>Entity definition</summary><p>The <span class="self-ref">IfcPropertyTemplate</span> is an abstract supertype comprising the templates for all dynamically extensible properties, either as an <a href="../../ifckernel/lexical/ifccomplexpropertytemplate.htm">IfcComplexPropertyTemplate</a>, or an <a href="../../ifckernel/lexical/ifcsimplepropertytemplate.htm">IfcSimplePropertyTemplate</a>. These templates determine the structure of:</p>
-<ul>
-<li>in case of <a href="../../ifckernel/lexical/ifccomplexpropertytemplate.htm">IfcComplexPropertyTemplate</a>
-<ul>
-<li>an <i>IfcComplexProperty</i></li>
-<li>an <i>IfcPhysicalComplexQuantity</i></li>
-</ul>
-</li>
-<li>in case of <a href="../../ifckernel/lexical/ifcsimplepropertytemplate.htm">IfcSimplePropertyTemplate</a>
-<ul>
-<li>a subtype of <i>IfcSimpleProperty</i></li>
-<li>a subtype of <i>IfcPhysicalSimpleQuantity</i></li>
-</ul>
-</li>
-</ul>
+<p>\\\* in case of <a href="../../ifckernel/lexical/ifccomplexpropertytemplate.htm">IfcComplexPropertyTemplate</a>
+\\\* an <i>IfcComplexProperty</i>
+\\\* an <i>IfcPhysicalComplexQuantity</i>
+\\\* in case of <a href="../../ifckernel/lexical/ifcsimplepropertytemplate.htm">IfcSimplePropertyTemplate</a>
+\\\* a subtype of <i>IfcSimpleProperty</i>
+\\\* a subtype of <i>IfcPhysicalSimpleQuantity</i></p>
 <p>The individual property templates are interpreted according to their <i>Name</i> attribute and may have a predefined property type, property unit, and property data type. A template however shall not have measure values, or quantity values assigned.</p>
 <blockquote class="note">
 <p>NOTE  Property templates can form part of a property library used and attached as part of a project library. In general the <a href="../../ifckernel/lexical/ifcpropertysettemplate.htm">IfcPropertySetTemplate</a>, containing the subtypes of <span class="self-ref">IfcPropertyTemplate</span> would be directly linked to the <a href="../../ifckernel/lexical/ifcprojectlibrary.htm">IfcProjectLibrary</a>.</p>
 </blockquote>
-<blockquote class="history">
-<p>HISTORY  New entity in IFC4.</p>
-</blockquote>
+
 </details>
 <details open="open"><summary>Attribute definitions</summary><table class="attributes">
 <tr><th>#</th><th>Attribute</th><th>Type</th><th>Cardinality</th><th>Description</th>
@@ -98,7 +88,6 @@ Optional name for use by the participating software systems or users. For some s
 <tr><td>4</td><td>Description</td><td><span class="self-ref">-</span></td><td></td><td>
 <i>This attribute is out of scope for this model view definition and shall not be set.</i></td><td></td></tr>
 <tr><td colspan="6"><i><a href="../../ifckernel/lexical/ifcpropertydefinition.htm">IfcPropertyDefinition</a></i></td></tr>
-<tr><td></td><td><i>HasContext</i></td><td><a href="../../ifckernel/lexical/ifcreldeclares.htm">IfcRelDeclares</a><br/>@RelatedDefinitions</td><td>S[0:1]</td><td></td><td>X</td></tr>
 <tr><td></td><td><i>HasAssociations</i></td><td><a href="../../ifckernel/lexical/ifcrelassociates.htm">IfcRelAssociates</a><br/>@RelatedObjects</td><td>S[0:?]</td><td>Reference to the relationship IfcRelAssociates and thus to those externally defined concepts, like classifications, documents, or library information, which are associated to the property definition.
 </td><td>X</td></tr>
 <tr><td colspan="6"><i><a href="../../ifckernel/lexical/ifcpropertytemplatedefinition.htm">IfcPropertyTemplateDefinition</a></i></td></tr>
@@ -109,67 +98,6 @@ Optional name for use by the participating software systems or users. For some s
 </td><td>X</td></tr>
 </table>
 </details>
-</section>
-<section>
-<h5 class="num">Definitions applying to Product Data View</h5>
-<p><a href="../../../annex/annex-d/product-data-view/ifcpropertytemplate.htm"><img style="border: 0px" src="../../../img/diagram.png" />&nbsp;Instance diagram</a></p><hr />
-<h5>IfcPropertyTemplate</h5><details open="open">
-<summary>Concept usage</summary>
-<a id="30ef4e25-5247-4fd2-be08-dda21ca8051d" />
-<p class="use-head">UserDefined_RelationComplexProperty</p>
-<p>The <a href="../../templates/30ef4e25-5247-4fd2-be08-dda21ca8051d.htm"></a> concept applies to this entity.</p><br/><br/>
-
-<a id="b91d7421-fa16-4322-9c2a-5a12672a846f" />
-<p class="use-head">UserDefined_ConstraintAssociation</p>
-<p>The <a href="../../templates/b91d7421-fa16-4322-9c2a-5a12672a846f.htm"></a> concept applies to this entity.</p><br/><br/>
-
-<a id="dd3efb18-47cf-4f01-b810-af3f3d6792f1" />
-<p class="use-head">UserDefined_Document Association</p>
-<p>The <a href="../../templates/dd3efb18-47cf-4f01-b810-af3f3d6792f1.htm"></a> concept applies to this entity.</p><br/><br/>
-
-<a id="0bba125e-878c-4dc0-9a6c-c077ef60447e" />
-<p class="use-head">UserDefined_Classification Association</p>
-<p>The <a href="../../templates/0bba125e-878c-4dc0-9a6c-c077ef60447e.htm"></a> concept applies to this entity.</p><br/><br/>
-
-</details>
-<details><summary>mvdXML Specification</summary>
-<div class="xsd"><code class="xsd">
-&lt;?xml version=&quot;1.0&quot;?&gt;<br/>
-&lt;ConceptRoot xmlns:xsi=&quot;http://www.w3.org/2001/XMLSchema-instance&quot; xmlns:xsd=&quot;http://www.w3.org/2001/XMLSchema&quot; uuid=&quot;d6ab8d57-7bb6-4ded-9050-1c7e828a2421&quot; name=&quot;IfcPropertyTemplate&quot; status=&quot;sample&quot; applicableRootEntity=&quot;IfcPropertyTemplate&quot;&gt;<br/>
-&nbsp;&nbsp;&lt;Applicability uuid=&quot;00000000-0000-0000-0000-000000000000&quot; status=&quot;sample&quot;&gt;<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;&lt;Template ref=&quot;a111544d-5b24-41cc-98c8-9440633f0fbe&quot; /&gt;<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;&lt;TemplateRules operator=&quot;and&quot; /&gt;<br/>
-&nbsp;&nbsp;&lt;/Applicability&gt;<br/>
-&nbsp;&nbsp;&lt;Concepts&gt;<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;&lt;Concept uuid=&quot;49b7a147-cdf4-4400-bfc7-4c232e702fd7&quot; name=&quot;UserDefined_RelationComplexProperty&quot; status=&quot;sample&quot; override=&quot;false&quot;&gt;<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;Template ref=&quot;30ef4e25-5247-4fd2-be08-dda21ca8051d&quot; /&gt;<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;&lt;/Concept&gt;<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;&lt;Concept uuid=&quot;f360bd28-4ec6-4773-8350-19d8c935b3e4&quot; name=&quot;UserDefined_ConstraintAssociation&quot; status=&quot;sample&quot; override=&quot;false&quot;&gt;<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;Template ref=&quot;b91d7421-fa16-4322-9c2a-5a12672a846f&quot; /&gt;<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;&lt;/Concept&gt;<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;&lt;Concept uuid=&quot;f036f372-4c1f-437b-8cc9-bf506552ce0b&quot; name=&quot;UserDefined_Document Association&quot; status=&quot;sample&quot; override=&quot;false&quot;&gt;<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;Template ref=&quot;dd3efb18-47cf-4f01-b810-af3f3d6792f1&quot; /&gt;<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;&lt;/Concept&gt;<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;&lt;Concept uuid=&quot;202419c4-7b00-42b3-855f-70a570ab7fb9&quot; name=&quot;UserDefined_Classification Association&quot; status=&quot;sample&quot; override=&quot;false&quot;&gt;<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;Template ref=&quot;0bba125e-878c-4dc0-9a6c-c077ef60447e&quot; /&gt;<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;&lt;/Concept&gt;<br/>
-&nbsp;&nbsp;&lt;/Concepts&gt;<br/>
-&lt;/ConceptRoot&gt;<br/>
-
-</code></div></details>
-<section>
-<details>
-<summary>Concept inheritance</summary>
-<p><table class="attributes">
-<tr><th><b>#</b></th><th><b>Concept</b></th><th><b>Template</b></th><th><b>Model View</b></th></tr>
-<tr><td colspan="3"><a href="../../ifckernel/lexical/ifcpropertytemplate.htm"><span class="self-ref">IfcPropertyTemplate</span></a></td></tr><tr><td> </td><td><a href="../../ifckernel/lexical/ifcpropertytemplate.htm#30ef4e25-5247-4fd2-be08-dda21ca8051d">UserDefined_RelationComplexProperty</a></td><td><a href="../../templates/30ef4e25-5247-4fd2-be08-dda21ca8051d.htm"></a></td><td>Product Data View</td></tr>
-<tr><td> </td><td><a href="../../ifckernel/lexical/ifcpropertytemplate.htm#b91d7421-fa16-4322-9c2a-5a12672a846f">UserDefined_ConstraintAssociation</a></td><td><a href="../../templates/b91d7421-fa16-4322-9c2a-5a12672a846f.htm"></a></td><td>Product Data View</td></tr>
-<tr><td> </td><td><a href="../../ifckernel/lexical/ifcpropertytemplate.htm#dd3efb18-47cf-4f01-b810-af3f3d6792f1">UserDefined_Document Association</a></td><td><a href="../../templates/dd3efb18-47cf-4f01-b810-af3f3d6792f1.htm"></a></td><td>Product Data View</td></tr>
-<tr><td> </td><td><a href="../../ifckernel/lexical/ifcpropertytemplate.htm#0bba125e-878c-4dc0-9a6c-c077ef60447e">UserDefined_Classification Association</a></td><td><a href="../../templates/0bba125e-878c-4dc0-9a6c-c077ef60447e.htm"></a></td><td>Product Data View</td></tr>
-
-</table>
-</details>
-</section>
 </section>
 <section>
 <h5 class="num">Formal representations</h5>

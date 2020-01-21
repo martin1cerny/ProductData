@@ -11,7 +11,7 @@
     <title>IfcExternalInformation</title>
 
     <style type="text/css">
-      body { counter-reset: index1 8 index2 3 index3 3 index4 3 index5 0; }
+      body { counter-reset: index1 8 index2 3 index3 3 index4 4 index5 0; }
     </style>
   </head>
 
@@ -20,7 +20,7 @@
 
 <script type="text/javascript">
 <!--
-    parent.index.location.replace("../../toc-8.htm#8.3.3.4");
+    parent.index.location.replace("../../toc-8.htm#8.3.3.5");
 //-->
 </script>
 
@@ -41,9 +41,7 @@
 <h5 class="num">Semantic definitions at the entity</h5>
 <details open="open"><summary>Entity definition</summary><p>An <span class="self-ref">IfcExternalInformation</span> is the identification of an information source that is not explicitly represented in the current model or in the project database (as an implementation of the current model). The <span class="self-ref">IfcExternalInformation</span> identifies the external source (classification, document, or library), but not the particular items such as a dictionary entry, a classification notation, or a document reference within the external source</p>
 <p>The <span class="self-ref">IfcExternalInformation</span> is an abstract supertype of all external information entities.</p>
-<blockquote class="history">
-<p>HISTORY  New entity in IFC4.</p>
-</blockquote>
+
 </details>
 </section>
 <section>
@@ -51,6 +49,7 @@
 <details open="open"><summary>Entity inheritance</summary><img src="../../../diagrams/ifcexternalinformation.png" usemap="#f"/>
 <map name="f">
 <area shape="rect" coords="18,30,206,42" href="../../../schema/ifcexternalreferenceresource/lexical/ifcclassification.htm" alt="IfcClassification" />
+<area shape="rect" coords="18,54,206,66" href="../../../schema/ifcexternalreferenceresource/lexical/ifcdocumentinformation.htm" alt="IfcDocumentInformation" />
 </map>
 </details>
 <details><summary>Attribute inheritance</summary><table class="attributes">
@@ -58,7 +57,6 @@
 <tr><td colspan="6"><i><a href="../../ifcexternalreferenceresource/lexical/ifcexternalinformation.htm">IfcExternalInformation</a></i></td></tr>
 </table>
 </details>
-</section>
 </section>
 <section>
 <h5 class="num">Formal representations</h5>
@@ -71,7 +69,7 @@
 </code></div></details>
 <details><summary>EXPRESS Specification</summary><div class="express"><code class="express">
 <span class="keyword">ENTITY</span> IfcExternalInformation<br/>
-&nbsp;<span class="keyword">ABSTRACT</span> <span class="keyword">SUPERTYPE OF</span>(<a href="../../ifcexternalreferenceresource/lexical/ifcclassification.htm">IfcClassification</a>)<b>;</b><br/>
+&nbsp;<span class="keyword">ABSTRACT</span> <span class="keyword">SUPERTYPE OF</span>(<span class="keyword">ONEOF</span>(<a href="../../ifcexternalreferenceresource/lexical/ifcclassification.htm">IfcClassification</a>, <a href="../../ifcexternalreferenceresource/lexical/ifcdocumentinformation.htm">IfcDocumentInformation</a>))<b>;</b><br/>
 <span class="keyword">END_ENTITY;</span><br/>
 <p class="std"><a href="../../../annex/annex-d/ifcexternalreferenceresource/diagram_0001.htm" ><img src="../../../img/diagram.png" style="border: 0px" title="Link to EXPRESS-G diagram" alt="Link to EXPRESS-G diagram">&nbsp;EXPRESS-G diagram</a></p>
 </code></div>

@@ -11,7 +11,7 @@
     <title>IfcRelAssociates</title>
 
     <style type="text/css">
-      body { counter-reset: index1 5 index2 2 index3 3 index4 10 index5 0; }
+      body { counter-reset: index1 5 index2 2 index3 3 index4 11 index5 0; }
     </style>
   </head>
 
@@ -20,7 +20,7 @@
 
 <script type="text/javascript">
 <!--
-    parent.index.location.replace("../../toc-5.htm#5.2.3.11");
+    parent.index.location.replace("../../toc-5.htm#5.2.3.12");
 //-->
 </script>
 
@@ -52,12 +52,8 @@
 <p>EXAMPLE  The classification information for a particular space within a building may be associated to the <i>IfcSpace</i> object (subtype of <a href="../../ifckernel/lexical/ifcobject.htm">IfcObject</a>), defining a particular occurrence of space. Therefore the association of the DIN notation 'NF 1.5' may be associated by a subtype of <span class="self-ref">IfcRelAssociates</span> to the object.</p>
 </blockquote>
 <p>The association relationship establishs an association between one to many objects or property templates and the associated information. The subtypes of <span class="self-ref">IfcRelAssociates</span> establish the particular semantic meaning of the association relationship.</p>
-<blockquote class="history">
-<p>HISTORY  New entity in IFC2x.</p>
-</blockquote>
-<blockquote class="change-ifc2x4">
-<p>IFC4 CHANGE  Entity has been changed into an ABSTRACT supertype</p>
-</blockquote>
+
+
 </details>
 <details open="open"><summary>Attribute definitions</summary><table class="attributes">
 <tr><th>#</th><th>Attribute</th><th>Type</th><th>Cardinality</th><th>Description</th>
@@ -65,9 +61,7 @@
 <tr><td>5</td><td>RelatedObjects</td><td><a href="../../ifckernel/lexical/ifcdefinitionselect.htm">IfcDefinitionSelect</a></td><td>S[1:?]</td><td>
 Set of object or property definitions to which the external references or information is associated. It includes object and type objects, property set templates, property templates and property sets and contexts.
 
-<blockquote>
-IFC4 CHANGE  The attribute datatype has been changed from <a href="../../ifckernel/lexical/ifcroot.htm">IfcRoot</a> to <a href="../../ifckernel/lexical/ifcdefinitionselect.htm">IfcDefinitionSelect</a>.
-</blockquote>
+
 </td><td>X</td></tr>
 </table>
 </details>
@@ -101,13 +95,10 @@ Optional name for use by the participating software systems or users. For some s
 <tr><td>5</td><td>RelatedObjects</td><td><a href="../../ifckernel/lexical/ifcdefinitionselect.htm">IfcDefinitionSelect</a></td><td>S[1:?]</td><td>
 Set of object or property definitions to which the external references or information is associated. It includes object and type objects, property set templates, property templates and property sets and contexts.
 
-<blockquote>
-IFC4 CHANGE  The attribute datatype has been changed from <a href="../../ifckernel/lexical/ifcroot.htm">IfcRoot</a> to <a href="../../ifckernel/lexical/ifcdefinitionselect.htm">IfcDefinitionSelect</a>.
-</blockquote>
+
 </td><td>X</td></tr>
 </table>
 </details>
-</section>
 </section>
 <section>
 <h5 class="num">Formal representations</h5>
