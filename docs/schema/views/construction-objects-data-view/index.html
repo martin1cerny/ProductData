@@ -1,0 +1,143 @@
+﻿<!DOCTYPE HTML>
+
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+    <link rel="stylesheet" type="text/css" href="../../../ifc-styles.css">
+
+    <link rel="stylesheet" type="text/css" href="../../../details-shim.css">
+    <script type="text/javascript" src="../../../details-shim.js"></script>
+    <title>Construction Objects Data View</title>
+
+    <style type="text/css">
+      body { counter-reset: index1 1 index2 1 index3 0 index4 -1 index5 0; }
+    </style>
+  </head>
+
+  <body>
+
+
+<script type="text/javascript">
+<!--
+    parent.index.location.replace("../../toc-1.html#");
+//-->
+</script>
+
+<h3><a id="construction objects data view" name="construction objects data view">1.1 Construction Objects Data View</a></h3>
+<table class="gridtable">
+<tr><th>Code</th><th>Version</th><th>Status</th><th>Author</th><th>Copyright</th></tr>
+<tr><td>COD.1</td><td>0.9</td><td>Candidate</td><td>CEN-TC442-WG2-TG3</td><td>CEN - European Committee for Standardization</td></tr>
+</table>
+<p>The scope of this standard is to define the syntactic characteristics of a generic document produced to carry data and information basing on EN ISO 16739, EN ISO 23386 and EN ISO 23387 standards. The work has been also designed in accordance with other ongoing CEN TC442 WG4 works such as N17_NWIP 1: Properties - Part 1 Description methodology for BIM and other digital processes, N19_NWIP 3: Part 1 General structure of a product data template, N20_NWIP 4: Part 2 Framework for product data templates under CPR.</p>
+<p>The application of such standards will allow manufacturers to structure, govern, update, maintain and transport their product information through a machine-readable format. In addition, several stakeholders of the process will be able to take the most out from their software technologies, avoiding data replication as well as saving time and improving both quality and transparency. The scenario within which this standard will apply will affects in fact a wide spectrum of professionalism: from producers to designers, from constructors to facility and property managers.</p>
+<p>The syntactic approach considers as primary objective the ability to re-use specifications given in the international standard EN ISO 16739. This specific goal is going to be reached by the delivery of a new Model View Definition, as intended at buildingSMART.org, named “Construction Objects Data View” which will be made available alongside the others MVD already issued. Software houses and software application developers will find this work use and implementation simple and profitable because based on a widely accepted standard like EN ISO 16739.</p>
+<p>Because digital data transmittal needs agreed structured data, predefined schemas and agreed property definitions, this standard conceptually splits between Data Template and a Data Sheet. Data Template is going to be defined as the demanded data schema, still missing data but possibly including limitations or required ranges, while Data Sheet represents rather the answer including completed or partially filled data. The first might represent level of information need requirements and definitions, general requests, while the second might represent catalogs, offering of products, selected or filtered data, approved data and so on. Data Sheet may be used as the input to be added into informative modeling storages as well as information to be saved in related repositories as Common Data Environments or Asset Information Models.</p>
+<p>The work aims above all the scope of filling the technological gap still today preventing an effective digital dialogue between production and construction chains. Unfortunately, such a dialog is traditionally based on documentation, no matter if printed or digital, which for the most cases is not digitally computable. A secondary work objective is to constitute itself as a syntax suitable for the digital management of the contents requested by the Construction Products Regulation (CPR) which lays down harmonized rules for the distribution of construction products in the EU market, particularly covering demand of comparison of products performance, characteristics, certification, CE marking and conformity declarations.</p>
+<h3 id="purpose" class="num">Purposes for product data exchange</h3>
+<p>The following purposes where identified in the context of digital product data exchange.</p>
+<h4 id="purpose" class="num">Detailed digital description of a product</h4>
+<p>In order to identify a product and understand the function of a product a technical description is needed. This standard allows the exchange of a product description, technical and business properties, geometry, assets like pictures and mounting instructions in a digital data sheet.
+This digital product description could be used for design, specification, quotation processes and complete an as built model.</p>
+<h4 id="purpose" class="num">Bills of quantity (templates)</h4>
+<p>With digital product data it is easy to create bills of quantities of different</p>
+<h4 id="purpose" class="num">Procurement and Product purchase</h4>
+<p>Description of this use case to be inserted here. (purchase orders, delivery forms)
+Direct Procurement: Part 1 (When you buy exactly one know product)</p>
+<ul>
+<li>Related to eBusiness processes</li>
+</ul>
+<h4 id="purpose" class="num">Construction site management (Logistic)</h4>
+<p>During construction phases, site managers assure day by day operations to keep the construction project on time and on budget. They also manage quality controls and the correspondence between built progresses and design’s prescriptions.
+All players operating on site, both supervisors and contractors, exchange data related to products. Contractors receive design specification and according to them require product data to suppliers. All suppliers shall comply technical requirements and site inspectors should verify through technical check during site procurement and quality check during installations.
+All data related to construction products, within construction site management will be variously demanded: technical specification, purchase orders, installation procedures, compliance with standards, checklists, etc.<br>
+Exchange of product data sheet also involve commissioning team, originally informed during materials approval and then responsible of certifications related to corrects performances, functionalities and warranty.</p>
+<h4 id="purpose" class="num">As Built and handover</h4>
+<p>Import delivered real life products easily in their as-built-bim-models to document them for a later stage of development</p>
+<ul>
+<li>Reorder spare parts, product maintenance</li>
+<li>Declaration of performances, of conformity, …</li>
+<li>Onsite assembly</li>
+</ul>
+<h4 id="purpose" class="num">Safety &amp; Risk management</h4>
+<p>Jobsites are complex environments, with workers interacting in challenging physical environments. Safety management has impacts on most construction operations: quality control, scheduling, cost control/budgeting and installations procedures. During all these phases, operators interact exchanging required documents in conformity to standards and regulations.
+About particular products commonly adopted like paints, silicones, thinners or premixed concretes, the Safety Coordinator at Execution Stage should approve their Safety Data Sheets provided by Manufacturers.
+On the construction site, however, the Health, Safety and Environment Coordinator deals not only with products but also with tools and machines through which the Contractor take advantages. Just think for example to work equipment, safety life lines and harnesses, lifting ropes, scaffoldings, cranes etc.
+Presence on site of such tools involves exchange of data and information actually only partially digitalized: CE certification or mark, operation and maintenance manual, periodic checks, authorizations and, sometimes, structural validation.</p>
+<h4 id="purpose" class="num">Provide digital product declaration</h4>
+<p>Description of this use case to be inserted here.</p>
+<ul>
+<li>DoP: Declaration of performance</li>
+<li>DoC: Declaration of conformity</li>
+<li>EPD: Environmental Product Declaration</li>
+<li>Compliance to Smart CE marking (under investigation)</li>
+</ul>
+<p>See appendix 9.9.</p>
+<p><img src="Figure1.png" alt="Figure1"></p>
+<h4 id="purpose" class="num">Manufacturer digital information exchange (independent of online markets)</h4>
+<p>Manufacturers provide products’ catalogues through their website. All kinds of data can be easily shared online, but a complete digital revolution forecast possibility to express and exchange machine readable information.<br>
+Currently websites allow download sections with geometric and not geometric informative attributes. Tridimensional parametric models are often linked to authoring BIM formats with few possibilities of ensuring interoperability and unique structured language. Another disadvantage consists in data redundancy due to difficulty in representing information with a single digital format.
+All these inconveniences bring to subsequent need of standards for representing machine readable data and for demanding the guaranty of interoperability to software houses. This also brings to an update of manufacturers’ website in terms of exchange of data and possibility to store new structured Product Data Sheets in external servers.
+And Relationship between manufacturers and agents/distributors/shops/vendors (e.g. digital exchange of product libraries in the supply change)</p>
+<p>-Local Online store on the website of a manufacturer</p>
+<p>Digital Request: Part 2
+Response: Part 1 or Part 2, depending on the format, the users of the website uses</p>
+<h4 id="purpose" class="num">Ability to check contract/design deliverables</h4>
+<p>This use case shall be described further.
+Is it the check of the As Built Product against the selected product?
+Product delivery validation
+Part 1</p>
+<h5>IfcObject</h5>
+<table class="gridtable">
+<tr><th>Field</th><th>Mapping</th><th>Definition</th>
+<th>1 - Data template exchange</th><th>2 - Product requirement request exchange</th><th>3 - Product catalogue exchange</th><th>4 - Data sheet exchange</th></tr>
+<tr><th>(Query)</th><th>\<a href="../../ifckernel/lexical/ifcobject.html">IfcObject</a><br>
+</th><th></th><th></th><th></th><th></th><th></th></tr>
+<tr><td>Completely defined product</td><td>\<a href="../../ifckernel/lexical/ifcobject.html">IfcObject</a>.ObjectType<br></td><td>The type denotes a particular type that indicates the object further. The use has to be established at the level of instantiable subtypes. In particular it holds the user defined type, if the enumeration of the attribute _PredefinedType_ is set to USERDEFINED.</td><td></td><td></td><td></td><td></td></tr></table>
+<h5>IfcPropertySetTemplate</h5>
+<table class="gridtable">
+<tr><th>Field</th><th>Mapping</th><th>Definition</th>
+<th>1 - Data template exchange</th><th>2 - Product requirement request exchange</th><th>3 - Product catalogue exchange</th><th>4 - Data sheet exchange</th></tr>
+<tr><th>(Query)</th><th>\<a href="../../ifckernel/lexical/ifcprojectlibrary.html">IfcProjectLibrary</a><br>
+</th><th></th><th></th><th></th><th></th><th></th></tr>
+<tr><td>Data template</td><td>\<a href="../../ifckernel/lexical/ifcpropertysettemplate.html">IfcPropertySetTemplate</a>.HasPropertyTemplates[*]<br>\<a href="../../ifckernel/lexical/ifccomplexpropertytemplate.html">IfcComplexPropertyTemplate</a>.HasPropertyTemplates[*]<br>\<a href="../../ifckernel/lexical/ifcsimplepropertytemplate.html">IfcSimplePropertyTemplate</a><br></td><td>Reference to a set of property templates. It should only be provided, if the _PropertyType_ is set to <small>COMPLEX</small>.</td><td></td><td></td><td></td><td></td></tr></table>
+<table class="gridtable">
+<tr><th>Field</th><th>Mapping</th><th>Definition</th>
+<th>1 - Data template exchange</th><th>2 - Product requirement request exchange</th><th>3 - Product catalogue exchange</th><th>4 - Data sheet exchange</th></tr>
+<tr><th>(Query)</th><th>\<a href="../../ifckernel/lexical/ifcprojectlibrary.html">IfcProjectLibrary</a><br>
+</th><th></th><th></th><th></th><th></th><th></th></tr>
+<tr><td>Header</td><td></td><td></td><td><img width="16" src="../../../img/attr-mandatory.png" title="" /></td><td><img width="16" src="../../../img/attr-mandatory.png" title="" /></td><td><img width="16" src="../../../img/attr-mandatory.png" title="" /></td><td><img width="16" src="../../../img/attr-mandatory.png" title="" /></td></tr></table>
+<h5>IfcComplexPropertyTemplate</h5>
+<table class="gridtable">
+<tr><th>Field</th><th>Mapping</th><th>Definition</th>
+<th>1 - Data template exchange</th><th>2 - Product requirement request exchange</th><th>3 - Product catalogue exchange</th><th>4 - Data sheet exchange</th></tr>
+<tr><th>(Query)</th><th>\<a href="../../ifckernel/lexical/ifcpropertysettemplate.html">IfcPropertySetTemplate</a>.HasPropertyTemplates[*]<br>\<a href="../../ifckernel/lexical/ifccomplexpropertytemplate.html">IfcComplexPropertyTemplate</a>.HasPropertyTemplates[*]<br>\<a href="../../ifckernel/lexical/ifcsimplepropertytemplate.html">IfcSimplePropertyTemplate</a><br></th><th></th><th></th><th></th><th></th><th></th></tr>
+<tr><td></td><td></td><td></td><td><img width="16" src="../../../img/attr-mandatory.png" title="" /></td><td></td><td></td><td></td></tr></table>
+<h5>IfcPropertyTemplate</h5>
+<table class="gridtable">
+<tr><th>Field</th><th>Mapping</th><th>Definition</th>
+<th>1 - Data template exchange</th><th>2 - Product requirement request exchange</th><th>3 - Product catalogue exchange</th><th>4 - Data sheet exchange</th></tr>
+<tr><th>(Query)</th><th>\<a href="../../ifckernel/lexical/ifcpropertytemplate.html">IfcPropertyTemplate</a><br>
+</th><th></th><th></th><th></th><th></th><th></th></tr>
+<tr><td>UserDefined_RelationComplexProperty</td><td>\<a href="../../ifckernel/lexical/ifcpropertytemplate.html">IfcPropertyTemplate</a>.PartOfComplexTemplate[*]<br>\<a href="../../ifckernel/lexical/ifccomplexpropertytemplate.html">IfcComplexPropertyTemplate</a><br></td><td>Reference to a complex property templates. It should only be provided, if the _PropertyType_ of the referenced complex property template is set to <small>COMPLEX</small>.</td><td></td><td></td><td></td><td><img width="16" src="../../../img/attr-mandatory.png" title="" /></td></tr><tr><td>UserDefined_ConstraintAssociation</td><td>\<a href="../../ifckernel/lexical/ifcpropertytemplate.html">IfcPropertyTemplate</a>.HasAssociations[*]<br>\<a href="../../ifccontrolextension/lexical/ifcrelassociatesconstraint.html">IfcRelAssociatesConstraint</a>.RelatingConstraint<br>\<a href="../../ifcconstraintresource/lexical/ifcmetric.html">IfcMetric</a>.DataValue<br>\<a href="../../ifcconstraintresource/lexical/ifcmetricvalueselect.html">IfcMetricValueSelect</a><br></td><td>The value to be compared on associated objects. A null value indicates comparison to null.
+{ .change-ifc4}
+> IFC4 ADD1 CHANGE&nbsp; This attribute is now optional.</td><td></td><td></td><td></td><td></td></tr><tr><td>UserDefined_Document Association</td><td>\<a href="../../ifckernel/lexical/ifcpropertytemplate.html">IfcPropertyTemplate</a>.HasAssociations[*]<br>\<a href="../../ifckernel/lexical/ifcrelassociatesdocument.html">IfcRelAssociatesDocument</a>.Name<br>\<a href="../../ifcmeasureresource/lexical/ifclabel.html">IfcLabel</a><br></td><td>Optional name for use by the participating software systems or users. For some subtypes of IfcRoot the insertion of the Name attribute may be required. This would be enforced by a where rule.</td><td></td><td></td><td></td><td></td></tr><tr><td>UserDefined_Classification Association</td><td>\<a href="../../ifckernel/lexical/ifcpropertytemplate.html">IfcPropertyTemplate</a>.HasAssociations[*]<br>\<a href="../../ifckernel/lexical/ifcrelassociatesclassification.html">IfcRelAssociatesClassification</a>.RelatingClassification<br>\<a href="../../ifcexternalreferenceresource/lexical/ifcclassificationreference.html">IfcClassificationReference</a>.Location<br>\<a href="../../ifcexternalreferenceresource/lexical/ifcurireference.html">IfcURIReference</a><br></td><td>Location, where the external source (classification, document or library) can be accessed by electronic means. The electronic location is provided as an URI, and would normally be given as an URL location string.
+{ .change-ifc2x4}
+> IFC4 CHANGE&nbsp; The data type has been changed from _IfcLabel_ to _IfcURIReference_  
+> .</td><td></td><td></td><td></td><td></td></tr></table>
+<h5>IfcSimplePropertyTemplate</h5>
+<table class="gridtable">
+<tr><th>Field</th><th>Mapping</th><th>Definition</th>
+<th>1 - Data template exchange</th><th>2 - Product requirement request exchange</th><th>3 - Product catalogue exchange</th><th>4 - Data sheet exchange</th></tr>
+<tr><th>(Query)</th><th>\<a href="../../ifckernel/lexical/ifcsimplepropertytemplate.html">IfcSimplePropertyTemplate</a><br>
+</th><th></th><th></th><th></th><th></th><th></th></tr>
+<tr><td>UserDefined_RelationPropertySetTemplate</td><td>\<a href="../../ifckernel/lexical/ifcsimplepropertytemplate.html">IfcSimplePropertyTemplate</a>.PartOfPsetTemplate[*]<br>\<a href="../../ifckernel/lexical/ifcpropertysettemplate.html">IfcPropertySetTemplate</a><br></td><td>Reference to the _IfcPropertySetTemplate_ that defines the scope for the _IfcPropertyTemplate_. A single _IfcPropertyTemplate_ can be defined within the scope of zero, one or many _IfcPropertySetTemplate_'.</td><td></td><td></td><td></td><td><img width="16" src="../../../img/attr-mandatory.png" title="" /></td></tr><tr><td>UserDefined_AssociationUnitMeasureType</td><td>\<a href="../../ifckernel/lexical/ifcsimplepropertytemplate.html">IfcSimplePropertyTemplate</a>.PrimaryUnit<br>\<a href="../../ifcmeasureresource/lexical/ifcunit.html">IfcUnit</a><br></td><td>Primary unit assigned to the definition of the property. It should be provided, if the _PropertyType_ is set to:
+\\\\\\\\\* <small>P_SINGLEVALUE</small>: determining the _IfcPropertySingleValue.Unit_
+\\\\\\\\\* <small>P_ENUMERATEDVALUE</small>: determining the _IfcPropertyEnumeration.Unit_
+\\\\\\\\\* <small>P_BOUNDEDVALUE</small>: determining the _IfcPropertyBoundedValue.Unit_
+\\\\\\\\\* <small>P_LISTVALUE</small>: determining the _IfcPropertyListValue.Unit_
+\\\\\\\\\* <small>P_TABLEVALUE</small>: determining the _IfcPropertyTableValue.DefiningUnit_</td><td></td><td></td><td></td><td></td></tr><tr><td>UserDefined_PropertyValueSelect</td><td>\<a href="../../ifckernel/lexical/ifcsimplepropertytemplate.html">IfcSimplePropertyTemplate</a>.TemplateType<br>\<a href="../../ifckernel/lexical/ifcsimplepropertytemplatetypeenum.html">IfcSimplePropertyTemplateTypeEnum</a><br></td><td>Property type defining whether the property template defines a property with a single value, a bounded value, a list value, a table value, an enumerated value, or a reference value. Or the quantity type defining whether the template defines a quantity with a length, area, volume, weight or time value.
+> NOTE&nbsp; the value of this property determines the correct use of the _PrimaryUnit_, _SecondaryUnit_, _PrimaryDataType_, _SecondaryDataType_, and _Expression_ attributes.</td><td></td><td></td><td></td><td></td></tr></table>
+<p></p>
+  </body>
+</html>
