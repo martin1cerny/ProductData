@@ -90,33 +90,33 @@ Part 1</p>
 <h5>IfcObject</h5>
 <table class="gridtable">
 <tr><th>Field</th><th>Mapping</th><th>Definition</th>
-<th>1 - Data template exchange</th><th>2 - Product requirement request exchange</th><th>3 - Product catalogue exchange</th><th>4 - Data sheet exchange</th></tr>
+<th>1 - Data template exchange</th><th>2 - Requirement request exchange</th><th>3 - Product catalogue exchange</th><th>4 - Data sheet exchange</th></tr>
 <tr><th>(Query)</th><th>\<a href="../../ifckernel/lexical/ifcobject.html">IfcObject</a><br>
 </th><th></th><th></th><th></th><th></th><th></th></tr>
 <tr><td>Completely defined product</td><td>\<a href="../../ifckernel/lexical/ifcobject.html">IfcObject</a>.ObjectType<br></td><td>The type denotes a particular type that indicates the object further. The use has to be established at the level of instantiable subtypes. In particular it holds the user defined type, if the enumeration of the attribute _PredefinedType_ is set to USERDEFINED.</td><td></td><td></td><td></td><td></td></tr></table>
 <h5>IfcPropertySetTemplate</h5>
 <table class="gridtable">
 <tr><th>Field</th><th>Mapping</th><th>Definition</th>
-<th>1 - Data template exchange</th><th>2 - Product requirement request exchange</th><th>3 - Product catalogue exchange</th><th>4 - Data sheet exchange</th></tr>
+<th>1 - Data template exchange</th><th>2 - Requirement request exchange</th><th>3 - Product catalogue exchange</th><th>4 - Data sheet exchange</th></tr>
 <tr><th>(Query)</th><th>\<a href="../../ifckernel/lexical/ifcprojectlibrary.html">IfcProjectLibrary</a><br>
 </th><th></th><th></th><th></th><th></th><th></th></tr>
 <tr><td>Data template</td><td>\<a href="../../ifckernel/lexical/ifcpropertysettemplate.html">IfcPropertySetTemplate</a>.HasPropertyTemplates[*]<br>\<a href="../../ifckernel/lexical/ifccomplexpropertytemplate.html">IfcComplexPropertyTemplate</a>.HasPropertyTemplates[*]<br>\<a href="../../ifckernel/lexical/ifcsimplepropertytemplate.html">IfcSimplePropertyTemplate</a><br></td><td>Reference to a set of property templates. It should only be provided, if the _PropertyType_ is set to <small>COMPLEX</small>.</td><td></td><td></td><td></td><td></td></tr></table>
 <table class="gridtable">
 <tr><th>Field</th><th>Mapping</th><th>Definition</th>
-<th>1 - Data template exchange</th><th>2 - Product requirement request exchange</th><th>3 - Product catalogue exchange</th><th>4 - Data sheet exchange</th></tr>
+<th>1 - Data template exchange</th><th>2 - Requirement request exchange</th><th>3 - Product catalogue exchange</th><th>4 - Data sheet exchange</th></tr>
 <tr><th>(Query)</th><th>\<a href="../../ifckernel/lexical/ifcprojectlibrary.html">IfcProjectLibrary</a><br>
 </th><th></th><th></th><th></th><th></th><th></th></tr>
 <tr><td>Header</td><td></td><td></td><td><img width="16" src="../../../img/attr-mandatory.png" title="" /></td><td><img width="16" src="../../../img/attr-mandatory.png" title="" /></td><td><img width="16" src="../../../img/attr-mandatory.png" title="" /></td><td><img width="16" src="../../../img/attr-mandatory.png" title="" /></td></tr></table>
 <h5>IfcComplexPropertyTemplate</h5>
 <table class="gridtable">
 <tr><th>Field</th><th>Mapping</th><th>Definition</th>
-<th>1 - Data template exchange</th><th>2 - Product requirement request exchange</th><th>3 - Product catalogue exchange</th><th>4 - Data sheet exchange</th></tr>
+<th>1 - Data template exchange</th><th>2 - Requirement request exchange</th><th>3 - Product catalogue exchange</th><th>4 - Data sheet exchange</th></tr>
 <tr><th>(Query)</th><th>\<a href="../../ifckernel/lexical/ifcpropertysettemplate.html">IfcPropertySetTemplate</a>.HasPropertyTemplates[*]<br>\<a href="../../ifckernel/lexical/ifccomplexpropertytemplate.html">IfcComplexPropertyTemplate</a>.HasPropertyTemplates[*]<br>\<a href="../../ifckernel/lexical/ifcsimplepropertytemplate.html">IfcSimplePropertyTemplate</a><br></th><th></th><th></th><th></th><th></th><th></th></tr>
 <tr><td></td><td></td><td></td><td><img width="16" src="../../../img/attr-mandatory.png" title="" /></td><td></td><td></td><td></td></tr></table>
 <h5>IfcPropertyTemplate</h5>
 <table class="gridtable">
 <tr><th>Field</th><th>Mapping</th><th>Definition</th>
-<th>1 - Data template exchange</th><th>2 - Product requirement request exchange</th><th>3 - Product catalogue exchange</th><th>4 - Data sheet exchange</th></tr>
+<th>1 - Data template exchange</th><th>2 - Requirement request exchange</th><th>3 - Product catalogue exchange</th><th>4 - Data sheet exchange</th></tr>
 <tr><th>(Query)</th><th>\<a href="../../ifckernel/lexical/ifcpropertytemplate.html">IfcPropertyTemplate</a><br>
 </th><th></th><th></th><th></th><th></th><th></th></tr>
 <tr><td>UserDefined_RelationComplexProperty</td><td>\<a href="../../ifckernel/lexical/ifcpropertytemplate.html">IfcPropertyTemplate</a>.PartOfComplexTemplate[*]<br>\<a href="../../ifckernel/lexical/ifccomplexpropertytemplate.html">IfcComplexPropertyTemplate</a><br></td><td>Reference to a complex property templates. It should only be provided, if the _PropertyType_ of the referenced complex property template is set to <small>COMPLEX</small>.</td><td></td><td></td><td></td><td><img width="16" src="../../../img/attr-mandatory.png" title="" /></td></tr><tr><td>UserDefined_ConstraintAssociation</td><td>\<a href="../../ifckernel/lexical/ifcpropertytemplate.html">IfcPropertyTemplate</a>.HasAssociations[*]<br>\<a href="../../ifccontrolextension/lexical/ifcrelassociatesconstraint.html">IfcRelAssociatesConstraint</a>.RelatingConstraint<br>\<a href="../../ifcconstraintresource/lexical/ifcmetric.html">IfcMetric</a>.DataValue<br>\<a href="../../ifcconstraintresource/lexical/ifcmetricvalueselect.html">IfcMetricValueSelect</a><br></td><td>The value to be compared on associated objects. A null value indicates comparison to null.
@@ -128,15 +128,15 @@ Part 1</p>
 <h5>IfcSimplePropertyTemplate</h5>
 <table class="gridtable">
 <tr><th>Field</th><th>Mapping</th><th>Definition</th>
-<th>1 - Data template exchange</th><th>2 - Product requirement request exchange</th><th>3 - Product catalogue exchange</th><th>4 - Data sheet exchange</th></tr>
+<th>1 - Data template exchange</th><th>2 - Requirement request exchange</th><th>3 - Product catalogue exchange</th><th>4 - Data sheet exchange</th></tr>
 <tr><th>(Query)</th><th>\<a href="../../ifckernel/lexical/ifcsimplepropertytemplate.html">IfcSimplePropertyTemplate</a><br>
 </th><th></th><th></th><th></th><th></th><th></th></tr>
 <tr><td>UserDefined_RelationPropertySetTemplate</td><td>\<a href="../../ifckernel/lexical/ifcsimplepropertytemplate.html">IfcSimplePropertyTemplate</a>.PartOfPsetTemplate[*]<br>\<a href="../../ifckernel/lexical/ifcpropertysettemplate.html">IfcPropertySetTemplate</a><br></td><td>Reference to the _IfcPropertySetTemplate_ that defines the scope for the _IfcPropertyTemplate_. A single _IfcPropertyTemplate_ can be defined within the scope of zero, one or many _IfcPropertySetTemplate_'.</td><td></td><td></td><td></td><td><img width="16" src="../../../img/attr-mandatory.png" title="" /></td></tr><tr><td>UserDefined_AssociationUnitMeasureType</td><td>\<a href="../../ifckernel/lexical/ifcsimplepropertytemplate.html">IfcSimplePropertyTemplate</a>.PrimaryUnit<br>\<a href="../../ifcmeasureresource/lexical/ifcunit.html">IfcUnit</a><br></td><td>Primary unit assigned to the definition of the property. It should be provided, if the _PropertyType_ is set to:
-\\\\\\\\\* <small>P_SINGLEVALUE</small>: determining the _IfcPropertySingleValue.Unit_
-\\\\\\\\\* <small>P_ENUMERATEDVALUE</small>: determining the _IfcPropertyEnumeration.Unit_
-\\\\\\\\\* <small>P_BOUNDEDVALUE</small>: determining the _IfcPropertyBoundedValue.Unit_
-\\\\\\\\\* <small>P_LISTVALUE</small>: determining the _IfcPropertyListValue.Unit_
-\\\\\\\\\* <small>P_TABLEVALUE</small>: determining the _IfcPropertyTableValue.DefiningUnit_</td><td></td><td></td><td></td><td></td></tr><tr><td>UserDefined_PropertyValueSelect</td><td>\<a href="../../ifckernel/lexical/ifcsimplepropertytemplate.html">IfcSimplePropertyTemplate</a>.TemplateType<br>\<a href="../../ifckernel/lexical/ifcsimplepropertytemplatetypeenum.html">IfcSimplePropertyTemplateTypeEnum</a><br></td><td>Property type defining whether the property template defines a property with a single value, a bounded value, a list value, a table value, an enumerated value, or a reference value. Or the quantity type defining whether the template defines a quantity with a length, area, volume, weight or time value.
+\\\\\\\\\\* <small>P_SINGLEVALUE</small>: determining the _IfcPropertySingleValue.Unit_
+\\\\\\\\\\* <small>P_ENUMERATEDVALUE</small>: determining the _IfcPropertyEnumeration.Unit_
+\\\\\\\\\\* <small>P_BOUNDEDVALUE</small>: determining the _IfcPropertyBoundedValue.Unit_
+\\\\\\\\\\* <small>P_LISTVALUE</small>: determining the _IfcPropertyListValue.Unit_
+\\\\\\\\\\* <small>P_TABLEVALUE</small>: determining the _IfcPropertyTableValue.DefiningUnit_</td><td></td><td></td><td></td><td></td></tr><tr><td>UserDefined_PropertyValueSelect</td><td>\<a href="../../ifckernel/lexical/ifcsimplepropertytemplate.html">IfcSimplePropertyTemplate</a>.TemplateType<br>\<a href="../../ifckernel/lexical/ifcsimplepropertytemplatetypeenum.html">IfcSimplePropertyTemplateTypeEnum</a><br></td><td>Property type defining whether the property template defines a property with a single value, a bounded value, a list value, a table value, an enumerated value, or a reference value. Or the quantity type defining whether the template defines a quantity with a length, area, volume, weight or time value.
 > NOTE&nbsp; the value of this property determines the correct use of the _PrimaryUnit_, _SecondaryUnit_, _PrimaryDataType_, _SecondaryDataType_, and _Expression_ attributes.</td><td></td><td></td><td></td><td></td></tr></table>
 <p></p>
   </body>
