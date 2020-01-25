@@ -73,7 +73,7 @@ Presence on site of such tools involves exchange of data and information actuall
 <li>Compliance to Smart CE marking (under investigation)</li>
 </ul>
 <p>See appendix 9.9.</p>
-<p><img src="Figure1.png" alt="Figure1"></p>
+<p><img src="../../../figures/GenericProcessForExchange.png" alt="Generic process for exchange of construction object information"></p>
 <h4 id="purpose" class="num">Manufacturer digital information exchange (independent of online markets)</h4>
 <p>Manufacturers provide products’ catalogues through their website. All kinds of data can be easily shared online, but a complete digital revolution forecast possibility to express and exchange machine readable information.<br>
 Currently websites allow download sections with geometric and not geometric informative attributes. Tridimensional parametric models are often linked to authoring BIM formats with few possibilities of ensuring interoperability and unique structured language. Another disadvantage consists in data redundancy due to difficulty in representing information with a single digital format.
@@ -132,11 +132,11 @@ Part 1</p>
 <tr><th>(Query)</th><th>\<a href="../../ifckernel/lexical/ifcsimplepropertytemplate.html">IfcSimplePropertyTemplate</a><br>
 </th><th></th><th></th><th></th><th></th><th></th></tr>
 <tr><td>UserDefined_RelationPropertySetTemplate</td><td>\<a href="../../ifckernel/lexical/ifcsimplepropertytemplate.html">IfcSimplePropertyTemplate</a>.PartOfPsetTemplate[*]<br>\<a href="../../ifckernel/lexical/ifcpropertysettemplate.html">IfcPropertySetTemplate</a><br></td><td>Reference to the _IfcPropertySetTemplate_ that defines the scope for the _IfcPropertyTemplate_. A single _IfcPropertyTemplate_ can be defined within the scope of zero, one or many _IfcPropertySetTemplate_'.</td><td></td><td></td><td></td><td><img width="16" src="../../../img/attr-mandatory.png" title="" /></td></tr><tr><td>UserDefined_AssociationUnitMeasureType</td><td>\<a href="../../ifckernel/lexical/ifcsimplepropertytemplate.html">IfcSimplePropertyTemplate</a>.PrimaryUnit<br>\<a href="../../ifcmeasureresource/lexical/ifcunit.html">IfcUnit</a><br></td><td>Primary unit assigned to the definition of the property. It should be provided, if the _PropertyType_ is set to:
-\\\\\\\\\\* <small>P_SINGLEVALUE</small>: determining the _IfcPropertySingleValue.Unit_
-\\\\\\\\\\* <small>P_ENUMERATEDVALUE</small>: determining the _IfcPropertyEnumeration.Unit_
-\\\\\\\\\\* <small>P_BOUNDEDVALUE</small>: determining the _IfcPropertyBoundedValue.Unit_
-\\\\\\\\\\* <small>P_LISTVALUE</small>: determining the _IfcPropertyListValue.Unit_
-\\\\\\\\\\* <small>P_TABLEVALUE</small>: determining the _IfcPropertyTableValue.DefiningUnit_</td><td></td><td></td><td></td><td></td></tr><tr><td>UserDefined_PropertyValueSelect</td><td>\<a href="../../ifckernel/lexical/ifcsimplepropertytemplate.html">IfcSimplePropertyTemplate</a>.TemplateType<br>\<a href="../../ifckernel/lexical/ifcsimplepropertytemplatetypeenum.html">IfcSimplePropertyTemplateTypeEnum</a><br></td><td>Property type defining whether the property template defines a property with a single value, a bounded value, a list value, a table value, an enumerated value, or a reference value. Or the quantity type defining whether the template defines a quantity with a length, area, volume, weight or time value.
+\\\\\\\\\\\* <small>P_SINGLEVALUE</small>: determining the _IfcPropertySingleValue.Unit_
+\\\\\\\\\\\* <small>P_ENUMERATEDVALUE</small>: determining the _IfcPropertyEnumeration.Unit_
+\\\\\\\\\\\* <small>P_BOUNDEDVALUE</small>: determining the _IfcPropertyBoundedValue.Unit_
+\\\\\\\\\\\* <small>P_LISTVALUE</small>: determining the _IfcPropertyListValue.Unit_
+\\\\\\\\\\\* <small>P_TABLEVALUE</small>: determining the _IfcPropertyTableValue.DefiningUnit_</td><td></td><td></td><td></td><td></td></tr><tr><td>UserDefined_PropertyValueSelect</td><td>\<a href="../../ifckernel/lexical/ifcsimplepropertytemplate.html">IfcSimplePropertyTemplate</a>.TemplateType<br>\<a href="../../ifckernel/lexical/ifcsimplepropertytemplatetypeenum.html">IfcSimplePropertyTemplateTypeEnum</a><br></td><td>Property type defining whether the property template defines a property with a single value, a bounded value, a list value, a table value, an enumerated value, or a reference value. Or the quantity type defining whether the template defines a quantity with a length, area, volume, weight or time value.
 > NOTE&nbsp; the value of this property determines the correct use of the _PrimaryUnit_, _SecondaryUnit_, _PrimaryDataType_, _SecondaryDataType_, and _Expression_ attributes.</td><td></td><td></td><td></td><td></td></tr></table>
 <p></p>
   </body>

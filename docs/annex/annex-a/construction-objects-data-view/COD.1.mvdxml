@@ -1,5 +1,5 @@
 <?xml version="1.0"?>
-<mvdXML xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" uuid="d36a45a5-8142-42e8-b3c3-b34ffaea2c25" name="" xsi:schemaLocation="http://standards.buildingsmart.org/MVD/RELEASE/mvdXML/v1-1/mvdXML_V1.1.xsd" xmlns="http://buildingsmart-tech.org/mvd/XML/1.1">
+<mvdXML xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" uuid="2951940f-ed54-4a0e-9727-39a618a42594" name="" xsi:schemaLocation="http://standards.buildingsmart.org/MVD/RELEASE/mvdXML/v1-1/mvdXML_V1.1.xsd" xmlns="http://buildingsmart-tech.org/mvd/XML/1.1">
   <Templates>
     <ConceptTemplate uuid="4cefca0c-dee0-4d15-85d1-8757011e49c4" name="Exchange Requirements" status="draft" applicableSchema="IFC4">
       <SubTemplates>
@@ -23,7 +23,7 @@ In addition, the following classes from EN ISO 16739 shall be implemented to tra
 
 One or more products that are fully defined and can be ordered, delivered to the site and installed into the building. These products are subsets of the completely defined product and shall be described with the same format, based on the appropriate LOIN for the project.
 
-\\\\\\*\\\\\\*7.2.4	Ordered product\\\\\\*\\\\\\*
+\\\\\\\*\\\\\\\*7.2.4	Ordered product\\\\\\\*\\\\\\\*
 
 Expression to be described here by Team 1
 
@@ -34,7 +34,7 @@ Completely defined product
 + LOIN Definition for the order process 
 (e.g. Information about procurement) 
 
-\\\\\\*\\\\\\*7.2.5	Delivered product\\\\\\*\\\\\\*
+\\\\\\\*\\\\\\\*7.2.5	Delivered product\\\\\\\*\\\\\\\*
 
 Expression to be described here by Team 1
 Clarify, if the definition of the delivered product should be defined in this standard, or if it would be part of the LOIN work, perhaps as following
@@ -43,12 +43,12 @@ Completely defined product
 + LOIN Definition for the delivery process 
 (e.g. Information about serials and logistics) 
 
-\\\\\\*\\\\\\*7.2.6	Installed product\\\\\\*\\\\\\*Expression to be described here by Team 1
+\\\\\\\*\\\\\\\*7.2.6	Installed product\\\\\\\*\\\\\\\*Expression to be described here by Team 1
 Clarify, if the definition of the InstalledProduct should be defined in this standard, or if it would be part of the LOIN work, perhaps as following
 Installed product = 
 CompletelyDefinedProduct
 + LOIN Definition for the installation process 
-(e.g. Relation to SpatialStructure)\\\\\\*\\\\\\*\\\\\\*\\\\\\*]]></Body>
+(e.g. Relation to SpatialStructure)\\\\\\\*\\\\\\\*\\\\\\\*\\\\\\\*]]></Body>
             </Definition>
           </Definitions>
           <Rules>
@@ -136,6 +136,7 @@ _Remark: The following table contains content, that was originally placed later 
 .tg .tg-0gzz{background-color:#3166ff;border-color:inherit;text-align:left;vertical-align:middle}
 .tg .tg-0pky{border-color:inherit;text-align:left;vertical-align:top}
 </style>{ .tg}
+{ .tg}
 { .tg}
 { .tg}
 { .tg}
@@ -273,10 +274,12 @@ _Remark: The following table contains content, that was originally placed later 
 
 
 
-Remark: The Table lists the basic classes, that are needed to describe a product within IFC. There are some other classes which are technical needed. These classes should be included in the official   documentation of the \\\\\\*\\\\\\*“Product Data View”.\\\\\\*\\\\\\*  
+
+
+Remark: The Table lists the basic classes, that are needed to describe a product within IFC. There are some other classes which are technical needed. These classes should be included in the official   documentation of the \\\\\\\*\\\\\\\*“Product Data View”.\\\\\\\*\\\\\\\*  
   
   
-\\\\\\*\\\\\\*7.2.1 Specification “Header”\\\\\\*\\\\\\*The file starts with the declaration of the XML version 1.0 and the encoding UTF-8. Then follows the header section. 
+\\\\\\\*\\\\\\\*7.2.1 Specification “Header”\\\\\\\*\\\\\\\*The file starts with the declaration of the XML version 1.0 and the encoding UTF-8. Then follows the header section. 
 
 The header is structured as follows:
 
@@ -289,6 +292,7 @@ The Header contains the declaration of the metadata of the file according to thi
 .tg .tg-kgcf{font-size:12px;text-align:left;vertical-align:middle}
 .tg .tg-7xpr{font-weight:bold;font-size:12px;font-family:"Courier New", Courier, monospace !important;;text-align:left;vertical-align:middle}
 </style>{ .tg}
+{ .tg}
 { .tg}
 { .tg}
 { .tg}
@@ -364,10 +368,12 @@ The Header contains the declaration of the metadata of the file according to thi
 
 
 
+
+
   
   
   
-\\\\\\*\\\\\\*7.2.2 Relation to ISO 12006-3-based product data templates\\\\\\*\\\\\\*
+\\\\\\\*\\\\\\\*7.2.2 Relation to ISO 12006-3-based product data templates\\\\\\\*\\\\\\\*
 
 Establish and publish a concept, how IFD (ISO 12006-3) and IFC (ISO 16739..) work seamlessly together (see the following figures)
 
@@ -401,6 +407,7 @@ Reference to the prEN 23386 here.
 .tg .tg-nfv5{font-weight:bold;font-size:12px;background-color:#3166ff;text-align:left;vertical-align:middle}
 .tg .tg-qnlb{font-weight:bold;font-size:12px;background-color:#3166ff;text-align:left;vertical-align:top}
 </style>{ .tg}
+{ .tg}
 { .tg}
 { .tg}
 { .tg}
@@ -463,6 +470,8 @@ Reference to the prEN 23386 here.
 
 
 
+
+
 Table 4: Mapping of entities
   
   
@@ -473,6 +482,7 @@ Table 4: Mapping of entities
 .tg .tg-cly1{text-align:left;vertical-align:middle}
 .tg .tg-nfv5{font-weight:bold;font-size:12px;background-color:#3166ff;text-align:left;vertical-align:middle}
 </style>{ .tg}
+{ .tg}
 { .tg}
 { .tg}
 { .tg}
@@ -525,10 +535,12 @@ Table 4: Mapping of entities
 
 
 
+
+
 Table 5: Mapping of properties
   
   
-\\\\\\*\\\\\\*7.2.3 Negotiation of the product data templates\\\\\\*\\\\\\*
+\\\\\\\*\\\\\\\*7.2.3 Negotiation of the product data templates\\\\\\\*\\\\\\\*
 
 Introduction here:
 
@@ -551,7 +563,7 @@ We are also discussing a possible workflow, how a template-based request for inf
 
 There is no possibility in BCF tor manager transaction codes per property with BCF.
 
--	Formal: Can we use BCF in this standard, as BCF is not yet an official standard of ISO or CEN?\\\\\\*\\\\\\*\\\\\\*\\\\\\*]]></Body>
+-	Formal: Can we use BCF in this standard, as BCF is not yet an official standard of ISO or CEN?\\\\\\\*\\\\\\\*\\\\\\\*\\\\\\\*]]></Body>
             </Definition>
           </Definitions>
           <Rules>
@@ -893,7 +905,7 @@ Description of this use case to be inserted here.
 
 See appendix 9.9.
 
-![Figure1](Figure1.png)
+![Generic process for exchange of construction object information](../../../../figures/GenericProcessForExchange.png)
 
 {#purpose .num}
 #### Manufacturer digital information exchange (independent of online markets)
