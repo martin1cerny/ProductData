@@ -28,9 +28,9 @@
 <p>The smart transport of product data needs a clear and common understanding of the format to express the data of the products itself. The product data can be transferred in several ways, e.g. via direct database connect, or via webservices or file transfer. In all cases, the sender and the receiver of the product data need a basic standard to implement the data transfer.</p>
 <p>Normally an IFC files is known as a structure to transport a data model of a construction like a building (or a bridge). This model contains the geometrical and alphanumeric information of the complete building. The model contains also the information about the products that should be used to build up the building. The IFC language is capable to store the information of this “built-in” products properly.</p>
 <p>This standard uses the IFC language to store and transport product data on the way from the manufacturers to their customers.</p>
-<p>To store product data in an IFC file only some parts of the existing IFC namespace is needed, since many aspects of the BIM data are not needed to express product data. The subset of IFC structures for storing and transporting product data is described in the Model View Definition (MVD) \\\*\\\*“Product Data View”\\\*\\\*(PDV).\\\*\\\*\\\*\\\*</p>
+<p>To store product data in an IFC file only some parts of the existing IFC namespace is needed, since many aspects of the BIM data are not needed to express product data. The subset of IFC structures for storing and transporting product data is described in the Model View Definition (MVD) \\\\\\\\\*\\\\\\\\\*“Product Data View”\\\\\\\\\*\\\\\\\\\*(PDV).\\\\\\\\\*\\\\\\\\\*\\\\\\\\\*\\\\\\\\\*</p>
 <p>The following sections focusses on a definition of a file format. This file can be the foundation to transfer data over different transport channels.</p>
-<p>The file is based on IFC (Industry Foundation Classes). IFC was developed by the worldwide organization buildingSMART. IFC is standardized as \\\*\\\*ISO 16739\\\*\\\* and as \\\*\\\*EN ISO 16739\\\*\\\*.</p>
+<p>The file is based on IFC (Industry Foundation Classes). IFC was developed by the worldwide organization buildingSMART. IFC is standardized as \\\\\\\\\*\\\\\\\\\*ISO 16739\\\\\\\\\*\\\\\\\\\* and as \\\\\\\\\*\\\\\\\\\*EN ISO 16739\\\\\\\\\*\\\\\\\\\*.</p>
 <p>Product data contains three types of data:</p>
 <blockquote>
 <ol>
@@ -69,13 +69,88 @@
 </table>
 <p>The IFC language contains hundreds of entities to provide a standardizes data exchange for the whole construction industry. For exchanging product data based on the specification of this paper, only some of these entities are needed. These entities are defined in this specification. The IFC specification is located here: <a href="http://www.buildingsmart-tech.org" target="_top">http://www.buildingsmart-tech.org</a> . All elements are well documented there. In this paper, we describe the use of the elements and attributes for the use case of transporting product data templates (PDT) and corresponding product data (PD).</p>
 <p>The product data shall be transportable from the sender (e.g. the manufacturer) to the receiver (e.g. customer). The product data templates (PDT) is an empty form. The receiver can hand the empty form over to the sender, to make clear, which information shall be delivered. The sender then fills the information into the form and gives it back to the receiver.</p>
-<p>The \\\*\\\*“Product Data View”\\\*\\\* contains the classes from the parts IfcKernel, IfcProductExtension, and IfcExternalreferenceResource. In the following table, the main classes are described, that all together define the \\\*\\\*“Product Data View”\\\*\\\*.</p>
+<p>The \\\\\\\\\*\\\\\\\\\*“Product Data View”\\\\\\\\\*\\\\\\\\\* contains the classes from the parts IfcKernel, IfcProductExtension, and IfcExternalreferenceResource. In the following table, the main classes are described, that all together define the \\\\\\\\\*\\\\\\\\\*“Product Data View”\\\\\\\\\*\\\\\\\\\*.</p>
 <details open="open"><summary>Concept templates</summary><table class="gridtable">
 <tr><th>Template</th>
 <th>Construction Objects Data View</th>
 </tr>
 <tr><td>
-<a href="../schema/templates/header.html">Header</a>
+<a href="../schema/templates/classification.html">Classification</a>
+</td>
+<td>X</td>
+</tr>
+<tr><td>
+&nbsp;
+<a href="../schema/templates/classification-declaration.html">Classification declaration</a>
+</td>
+<td>X</td>
+</tr>
+<tr><td>
+&nbsp;
+<a href="../schema/templates/classification-of-construction-object-types.html">Classification of construction object types</a>
+</td>
+<td>X</td>
+</tr>
+<tr><td>
+&nbsp;
+<a href="../schema/templates/classification-of-construction-objects.html">Classification of construction objects</a>
+</td>
+<td>X</td>
+</tr>
+<tr><td>
+&nbsp;
+<a href="../schema/templates/classification-of-construction-systems.html">Classification of construction systems</a>
+</td>
+<td>X</td>
+</tr>
+<tr><td>
+&nbsp;
+<a href="../schema/templates/classification-of-data-templates.html">Classification of data templates</a>
+</td>
+<td>X</td>
+</tr>
+<tr><td>
+&nbsp;
+<a href="../schema/templates/classification-of-material.html">Classification of material</a>
+</td>
+<td>X</td>
+</tr>
+<tr><td>
+<a href="../schema/templates/declarations.html">Declarations</a>
+</td>
+<td>X</td>
+</tr>
+<tr><td>
+&nbsp;
+<a href="../schema/templates/declaration-for-sheets.html">Declaration for sheets</a>
+</td>
+<td>X</td>
+</tr>
+<tr><td>
+&nbsp;
+<a href="../schema/templates/declaration-for-templates.html">Declaration for templates</a>
+</td>
+<td>X</td>
+</tr>
+<tr><td>
+<a href="../schema/templates/material-information.html">Material Information</a>
+</td>
+<td>X</td>
+</tr>
+<tr><td>
+&nbsp;
+<a href="../schema/templates/material-data.html">Material Data</a>
+</td>
+<td>X</td>
+</tr>
+<tr><td>
+&nbsp;
+<a href="../schema/templates/material-object-assignment.html">Material Object Assignment</a>
+</td>
+<td>X</td>
+</tr>
+<tr><td>
+<a href="../schema/templates/transport.html">Transport</a>
 </td>
 <td>X</td>
 </tr>
@@ -86,29 +161,11 @@
 <tr><th>Template</th>
 <th>Construction Objects Data View</th>
 </tr>
-<tr><td>
-<a href="../schema/templates/exchange-requirements.html">Exchange Requirements</a>
-</td>
-<td>X</td>
-</tr>
-<tr><td>
-&nbsp;
-<a href="../schema/templates/completely-defined-product.html">Completely defined product</a>
-</td>
-<td>X</td>
-</tr>
-<tr><td>
-&nbsp;
-<a href="../schema/templates/data-template.html">Data template</a>
-</td>
-<td>X</td>
-</tr>
 </table>
 </details>
 <p>
 </p>
 <p><a href="https://github.com/buildingSMART/ProductData/issues/new?&title=chapter-4:%22" target="_blank" ><img src="../img/external.png" style="border: 0px" title="Report issue" alt="Report issue"/>&nbsp; Report an issue</a></p>
 <p><a href="../link/chapter-4.html" target="_blank" ><img src="../img/permlink.png" style="border: 0px" title="Link to this page" alt="Link to this page"/>&nbsp; Link to this page</a></p>
-<p></p>
   </body>
 </html>

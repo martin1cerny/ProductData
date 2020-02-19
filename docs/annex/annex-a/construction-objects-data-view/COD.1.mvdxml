@@ -1,67 +1,369 @@
 <?xml version="1.0"?>
-<mvdXML xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" uuid="2951940f-ed54-4a0e-9727-39a618a42594" name="" xsi:schemaLocation="http://standards.buildingsmart.org/MVD/RELEASE/mvdXML/v1-1/mvdXML_V1.1.xsd" xmlns="http://buildingsmart-tech.org/mvd/XML/1.1">
+<mvdXML xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" uuid="9d097c7f-b710-4562-8eb9-a3b34f94804e" name="" xsi:schemaLocation="http://standards.buildingsmart.org/MVD/RELEASE/mvdXML/v1-1/mvdXML_V1.1.xsd" xmlns="http://buildingsmart-tech.org/mvd/XML/1.1">
   <Templates>
-    <ConceptTemplate uuid="4cefca0c-dee0-4d15-85d1-8757011e49c4" name="Exchange Requirements" status="draft" applicableSchema="IFC4">
+    <ConceptTemplate uuid="bf7206d4-80c6-469d-93a5-336283a2a935" name="Classification" status="draft" applicableSchema="IFC4" applicableEntity="IfcContext">
+      <Definitions>
+        <Definition>
+          <Body><![CDATA[The EN ISO 16739 allows the usage of several classes implicitly (e.g. IfcDoor). If the type objects shall be classified by another classification system, the this can be done according to the fundamental concept of “Classification Association” that is described in chapter 4.4.1 in EN ISO 16739.]]></Body>
+        </Definition>
+      </Definitions>
       <SubTemplates>
-        <ConceptTemplate uuid="18b3ad56-c476-4728-acfe-f52c04862e23" name="Completely defined product" status="draft" applicableSchema="IFC4" applicableEntity="IfcObject">
-          <Definitions>
-            <Definition>
-              <Body><![CDATA[Structure for (3) to be described here by Team 1.
-
-The file for the completely defined products shall implement and embed the product data templates based on the definition in chapter 6.1.
-
-In addition, the following classes from EN ISO 16739 shall be implemented to transport the product data itself:
-
--	IfcPropertySet
--	IfcSimpleProperty
--	IfcComplexProperty
--	IfcDocumentInformation 
--	IfcDocumentReference 
--	Occurrence objects derived from IfcProduct (IfcDoor, IfcWindow, IfcDamper, …)
--	IfcGroup (for assemblies)
--	Type objects (Matchcodes?)
-
-One or more products that are fully defined and can be ordered, delivered to the site and installed into the building. These products are subsets of the completely defined product and shall be described with the same format, based on the appropriate LOIN for the project.
-
-\\\\\\\*\\\\\\\*7.2.4	Ordered product\\\\\\\*\\\\\\\*
-
-Expression to be described here by Team 1
-
-<font size:="" 8px="">Clarify, if the definition of the delivered product should be defined in this standard, or if it would be part of the LOIN work, perhaps as following</font>
-
-Ordered product = 
-Completely defined product
-+ LOIN Definition for the order process 
-(e.g. Information about procurement) 
-
-\\\\\\\*\\\\\\\*7.2.5	Delivered product\\\\\\\*\\\\\\\*
-
-Expression to be described here by Team 1
-Clarify, if the definition of the delivered product should be defined in this standard, or if it would be part of the LOIN work, perhaps as following
-Delivered product = 
-Completely defined product
-+ LOIN Definition for the delivery process 
-(e.g. Information about serials and logistics) 
-
-\\\\\\\*\\\\\\\*7.2.6	Installed product\\\\\\\*\\\\\\\*Expression to be described here by Team 1
-Clarify, if the definition of the InstalledProduct should be defined in this standard, or if it would be part of the LOIN work, perhaps as following
-Installed product = 
-CompletelyDefinedProduct
-+ LOIN Definition for the installation process 
-(e.g. Relation to SpatialStructure)\\\\\\\*\\\\\\\*\\\\\\\*\\\\\\\*]]></Body>
-            </Definition>
-          </Definitions>
+        <ConceptTemplate uuid="fb699395-46b5-4eb8-ae96-b94012380099" name="Classification declaration" applicableSchema="IFC4" applicableEntity="IfcProjectLibrary">
           <Rules>
-            <AttributeRule AttributeName="ObjectType" />
-            <AttributeRule AttributeName="IsTypedBy">
+            <AttributeRule AttributeName="HasAssociations">
               <EntityRules>
-                <EntityRule EntityName="IfcRelDefinesByType">
+                <EntityRule EntityName="IfcRelAssociatesClassification">
                   <AttributeRules>
-                    <AttributeRule AttributeName="RelatingType">
+                    <AttributeRule AttributeName="RelatingClassification">
+                      <EntityRules>
+                        <EntityRule EntityName="IfcClassification">
+                          <AttributeRules>
+                            <AttributeRule AttributeName="HasReferences">
+                              <EntityRules>
+                                <EntityRule EntityName="IfcClassificationReference" />
+                              </EntityRules>
+                            </AttributeRule>
+                          </AttributeRules>
+                        </EntityRule>
+                      </EntityRules>
+                    </AttributeRule>
+                  </AttributeRules>
+                </EntityRule>
+              </EntityRules>
+            </AttributeRule>
+          </Rules>
+        </ConceptTemplate>
+        <ConceptTemplate uuid="221e03e4-b661-4f7a-82fe-2d0baff62915" name="Classification of construction object types" applicableSchema="IFC4" applicableEntity="IfcContext">
+          <Rules>
+            <AttributeRule AttributeName="Declares">
+              <EntityRules>
+                <EntityRule EntityName="IfcRelDeclares">
+                  <AttributeRules>
+                    <AttributeRule AttributeName="RelatedDefinitions">
                       <EntityRules>
                         <EntityRule EntityName="IfcTypeObject">
                           <AttributeRules>
-                            <AttributeRule AttributeName="HasPropertySets">
+                            <AttributeRule AttributeName="HasAssociations">
+                              <EntityRules>
+                                <EntityRule EntityName="IfcRelAssociatesClassification">
+                                  <AttributeRules>
+                                    <AttributeRule AttributeName="RelatingClassification">
+                                      <EntityRules>
+                                        <EntityRule EntityName="IfcClassificationReference" />
+                                      </EntityRules>
+                                    </AttributeRule>
+                                  </AttributeRules>
+                                </EntityRule>
+                              </EntityRules>
+                            </AttributeRule>
+                          </AttributeRules>
+                        </EntityRule>
+                      </EntityRules>
+                    </AttributeRule>
+                  </AttributeRules>
+                </EntityRule>
+              </EntityRules>
+            </AttributeRule>
+          </Rules>
+        </ConceptTemplate>
+        <ConceptTemplate uuid="82ec3852-f1bf-4bdf-b096-1f762812270d" name="Classification of construction objects" applicableSchema="IFC4" applicableEntity="IfcContext">
+          <Rules>
+            <AttributeRule AttributeName="HasAssignments">
+              <EntityRules>
+                <EntityRule EntityName="IfcRelAssignsToProduct">
+                  <AttributeRules>
+                    <AttributeRule AttributeName="RelatingProduct" />
+                    <AttributeRule AttributeName="RelatedObjects">
+                      <EntityRules>
+                        <EntityRule EntityName="IfcObject">
+                          <AttributeRules>
+                            <AttributeRule AttributeName="HasAssociations">
+                              <EntityRules>
+                                <EntityRule EntityName="IfcRelAssociatesClassification">
+                                  <AttributeRules>
+                                    <AttributeRule AttributeName="RelatingClassification">
+                                      <EntityRules>
+                                        <EntityRule EntityName="IfcClassificationReference" />
+                                      </EntityRules>
+                                    </AttributeRule>
+                                  </AttributeRules>
+                                </EntityRule>
+                              </EntityRules>
+                            </AttributeRule>
+                          </AttributeRules>
+                        </EntityRule>
+                      </EntityRules>
+                    </AttributeRule>
+                  </AttributeRules>
+                </EntityRule>
+              </EntityRules>
+            </AttributeRule>
+          </Rules>
+        </ConceptTemplate>
+        <ConceptTemplate uuid="53b2705b-f492-48bf-9b2c-e23ec01c9acc" name="Classification of construction systems" applicableSchema="IFC4" applicableEntity="IfcContext">
+          <Rules>
+            <AttributeRule AttributeName="HasAssignments">
+              <EntityRules>
+                <EntityRule EntityName="IfcRelAssignsToGroup">
+                  <AttributeRules>
+                    <AttributeRule AttributeName="RelatingGroup">
+                      <EntityRules>
+                        <EntityRule EntityName="IfcSystem">
+                          <AttributeRules>
+                            <AttributeRule AttributeName="HasAssociations">
+                              <EntityRules>
+                                <EntityRule EntityName="IfcRelAssociatesClassification">
+                                  <AttributeRules>
+                                    <AttributeRule AttributeName="RelatingClassification">
+                                      <EntityRules>
+                                        <EntityRule EntityName="IfcClassificationReference" />
+                                      </EntityRules>
+                                    </AttributeRule>
+                                  </AttributeRules>
+                                </EntityRule>
+                              </EntityRules>
+                            </AttributeRule>
+                          </AttributeRules>
+                        </EntityRule>
+                      </EntityRules>
+                    </AttributeRule>
+                  </AttributeRules>
+                </EntityRule>
+              </EntityRules>
+            </AttributeRule>
+          </Rules>
+        </ConceptTemplate>
+        <ConceptTemplate uuid="f26b428b-d38a-47b3-a60d-d2ba54a6c764" name="Classification of data templates" applicableSchema="IFC4" applicableEntity="IfcContext">
+          <Rules>
+            <AttributeRule AttributeName="Declares">
+              <EntityRules>
+                <EntityRule EntityName="IfcRelDeclares">
+                  <AttributeRules>
+                    <AttributeRule AttributeName="RelatedDefinitions">
+                      <EntityRules>
+                        <EntityRule EntityName="IfcPropertySetTemplate">
+                          <AttributeRules>
+                            <AttributeRule AttributeName="HasAssociations">
+                              <EntityRules>
+                                <EntityRule EntityName="IfcRelAssociatesClassification">
+                                  <AttributeRules>
+                                    <AttributeRule AttributeName="RelatingClassification">
+                                      <EntityRules>
+                                        <EntityRule EntityName="IfcClassificationReference" />
+                                      </EntityRules>
+                                    </AttributeRule>
+                                  </AttributeRules>
+                                </EntityRule>
+                              </EntityRules>
+                            </AttributeRule>
+                          </AttributeRules>
+                        </EntityRule>
+                      </EntityRules>
+                    </AttributeRule>
+                  </AttributeRules>
+                </EntityRule>
+              </EntityRules>
+            </AttributeRule>
+          </Rules>
+        </ConceptTemplate>
+        <ConceptTemplate uuid="1b12aeea-eac8-48d2-bd0f-726fabe40404" name="Classification of material" applicableSchema="IFC4" applicableEntity="IfcMaterial">
+          <Rules>
+            <AttributeRule AttributeName="HasAssociations">
+              <EntityRules>
+                <EntityRule EntityName="IfcRelAssociatesMaterial">
+                  <AttributeRules>
+                    <AttributeRule AttributeName="RelatingMaterial">
+                      <EntityRules>
+                        <EntityRule EntityName="IfcMaterial">
+                          <AttributeRules>
+                            <AttributeRule AttributeName="HasExternalReferences">
+                              <EntityRules>
+                                <EntityRule EntityName="IfcExternalReferenceRelationship">
+                                  <AttributeRules>
+                                    <AttributeRule AttributeName="RelatingReference">
+                                      <EntityRules>
+                                        <EntityRule EntityName="IfcClassificationReference" />
+                                      </EntityRules>
+                                    </AttributeRule>
+                                  </AttributeRules>
+                                </EntityRule>
+                              </EntityRules>
+                            </AttributeRule>
+                          </AttributeRules>
+                        </EntityRule>
+                      </EntityRules>
+                    </AttributeRule>
+                  </AttributeRules>
+                </EntityRule>
+              </EntityRules>
+            </AttributeRule>
+          </Rules>
+        </ConceptTemplate>
+      </SubTemplates>
+    </ConceptTemplate>
+    <ConceptTemplate uuid="94cfa683-4321-4216-b540-287923b7e28a" name="Declarations" status="draft" applicableSchema="IFC4" applicableEntity="IfcContext">
+      <Definitions>
+        <Definition>
+          <Body><![CDATA[The data files contain declarations, that are used to structure the content of the file. These declarations are the header, the IfcProjectLibrary and the IfcProject.
+
+If the file should transport product data, the file shall contain all three parts: header, IfcProjectLibrary and IfcProject. This ensures that the product data stays interpretable over a long time, even if the content of the product data templates have changed during this time (catalogue/template embedding).
+
+The following sections define the details of the three parts of the file.
+
+
+The data structures contain structures, that are used to declare the content. These declarations are the IfcProjectLibrary and the IfcProject.
+
+For the declaration of templates and type objects the IfcProjectLibrary shall be used. For the declaration of sheets, the IfcProject shall be used.
+
+The cardinality  of the classes shall be as following:
+
+<style type="text/css">
+.tg  {border-collapse:collapse;border-spacing:0;}
+.tg td{font-family:Arial, sans-serif;font-size:14px;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;border-color:black;}
+.tg th{font-family:Arial, sans-serif;font-size:14px;font-weight:normal;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;border-color:black;}
+.tg .tg-w2dt{font-size:12px;text-align:center;vertical-align:middle}
+</style>{ .tg}
+{ .tg}
+{ .tg}
+{ .tg}
+<table class="tg">
+  <tr>
+    <th class="tg-w2dt"><br>&nbsp;&nbsp;Type of exchange<br>&nbsp;&nbsp;</th>
+    <th class="tg-w2dt"><br>&nbsp;&nbsp;IfcProjectLibrary<br>&nbsp;&nbsp;</th>
+    <th class="tg-w2dt"><br>&nbsp;&nbsp;IfcProject<br>&nbsp;&nbsp;</th>
+  </tr>
+  <tr>
+    <td class="tg-w2dt"><br>&nbsp;&nbsp;Data templates<br>&nbsp;&nbsp;</td>
+    <td class="tg-w2dt"><br>&nbsp;&nbsp;[1:?]<br>&nbsp;&nbsp;</td>
+    <td class="tg-w2dt"><br>&nbsp;&nbsp;-<br>&nbsp;&nbsp;</td>
+  </tr>
+  <tr>
+    <td class="tg-w2dt"><br>&nbsp;&nbsp;Data sheets<br>&nbsp;&nbsp;</td>
+    <td class="tg-w2dt"><br>&nbsp;&nbsp;[1:?]<br>&nbsp;&nbsp;</td>
+    <td class="tg-w2dt"><br>&nbsp;&nbsp;[1:1]<br>&nbsp;&nbsp;</td>
+  </tr>
+<caption align"bottom"="">Table 2: Cardinality of declarations</caption>
+</table>
+
+
+
+
+
+
+
+
+
+This ensures that the data sheets stay interpretable over a long time, even if the content of the data templates have changed during this time and the external source is not available anymore (Template embedding).]]></Body>
+        </Definition>
+      </Definitions>
+      <SubTemplates>
+        <ConceptTemplate uuid="117dafcd-232b-4a98-929e-a21c28a1a6a8" name="Declaration for sheets" status="candidate" applicableSchema="IFC4" applicableEntity="IfcContext">
+          <Rules>
+            <AttributeRule AttributeName="Declares">
+              <EntityRules>
+                <EntityRule EntityName="IfcRelDeclares">
+                  <AttributeRules>
+                    <AttributeRule AttributeName="RelatedDefinitions">
+                      <EntityRules>
+                        <EntityRule EntityName="IfcProject">
+                          <AttributeRules>
+                            <AttributeRule AttributeName="HasAssociations">
+                              <EntityRules>
+                                <EntityRule EntityName="IfcRelAssociatesLibrary">
+                                  <AttributeRules>
+                                    <AttributeRule AttributeName="RelatingLibrary">
+                                      <EntityRules>
+                                        <EntityRule EntityName="IfcLibraryInformation">
+                                          <AttributeRules>
+                                            <AttributeRule AttributeName="Publisher">
+                                              <EntityRules>
+                                                <EntityRule EntityName="IfcPersonAndOrganization" />
+                                              </EntityRules>
+                                            </AttributeRule>
+                                          </AttributeRules>
+                                        </EntityRule>
+                                      </EntityRules>
+                                    </AttributeRule>
+                                  </AttributeRules>
+                                </EntityRule>
+                              </EntityRules>
+                            </AttributeRule>
+                          </AttributeRules>
+                        </EntityRule>
+                      </EntityRules>
+                    </AttributeRule>
+                  </AttributeRules>
+                </EntityRule>
+              </EntityRules>
+            </AttributeRule>
+          </Rules>
+        </ConceptTemplate>
+        <ConceptTemplate uuid="c9ffd9bf-be54-46f4-a685-72396aa0273f" name="Declaration for templates" applicableSchema="IFC4" applicableEntity="IfcContext">
+          <Rules>
+            <AttributeRule AttributeName="Declares">
+              <EntityRules>
+                <EntityRule EntityName="IfcRelDeclares">
+                  <AttributeRules>
+                    <AttributeRule AttributeName="RelatedDefinitions">
+                      <EntityRules>
+                        <EntityRule EntityName="IfcProjectLibrary">
+                          <AttributeRules>
+                            <AttributeRule AttributeName="HasAssociations">
+                              <EntityRules>
+                                <EntityRule EntityName="IfcRelAssociatesLibrary">
+                                  <AttributeRules>
+                                    <AttributeRule AttributeName="RelatingLibrary">
+                                      <EntityRules>
+                                        <EntityRule EntityName="IfcLibraryInformation">
+                                          <AttributeRules>
+                                            <AttributeRule AttributeName="Publisher">
+                                              <EntityRules>
+                                                <EntityRule EntityName="IfcPersonAndOrganization" />
+                                              </EntityRules>
+                                            </AttributeRule>
+                                          </AttributeRules>
+                                        </EntityRule>
+                                      </EntityRules>
+                                    </AttributeRule>
+                                  </AttributeRules>
+                                </EntityRule>
+                              </EntityRules>
+                            </AttributeRule>
+                          </AttributeRules>
+                        </EntityRule>
+                      </EntityRules>
+                    </AttributeRule>
+                  </AttributeRules>
+                </EntityRule>
+              </EntityRules>
+            </AttributeRule>
+          </Rules>
+        </ConceptTemplate>
+      </SubTemplates>
+    </ConceptTemplate>
+    <ConceptTemplate uuid="f3dc81e8-c707-4089-8856-91ad410054d2" name="Material Information" applicableSchema="IFC4" applicableEntity="IfcMaterial">
+      <Definitions>
+        <Definition>
+          <Body><![CDATA[Information about the concept Material]]></Body>
+        </Definition>
+      </Definitions>
+      <SubTemplates>
+        <ConceptTemplate uuid="b510e76e-9028-40bc-ac44-31291ba7f1db" name="Material Data" applicableSchema="IFC4" applicableEntity="IfcMaterial">
+          <Definitions>
+            <Definition>
+              <Body><![CDATA[Information about the concept Material Data]]></Body>
+            </Definition>
+          </Definitions>
+          <Rules>
+            <AttributeRule AttributeName="HasProperties">
+              <EntityRules>
+                <EntityRule EntityName="IfcMaterialProperties">
+                  <AttributeRules>
+                    <AttributeRule AttributeName="Properties">
+                      <EntityRules>
+                        <EntityRule EntityName="IfcSimpleProperty">
+                          <AttributeRules>
+                            <AttributeRule AttributeName="PartOfPset">
                               <EntityRules>
                                 <EntityRule EntityName="IfcPropertySet">
                                   <AttributeRules>
@@ -84,517 +386,40 @@ CompletelyDefinedProduct
                             </AttributeRule>
                           </AttributeRules>
                         </EntityRule>
+                        <EntityRule EntityName="IfcComplexProperty" />
                       </EntityRules>
                     </AttributeRule>
                   </AttributeRules>
                 </EntityRule>
+              </EntityRules>
+            </AttributeRule>
+            <AttributeRule AttributeName="Name">
+              <EntityRules>
+                <EntityRule EntityName="IfcLabel" />
+              </EntityRules>
+            </AttributeRule>
+            <AttributeRule AttributeName="Description">
+              <EntityRules>
+                <EntityRule EntityName="IfcText" />
               </EntityRules>
             </AttributeRule>
           </Rules>
         </ConceptTemplate>
-        <ConceptTemplate uuid="d06bf192-fe82-443b-bda6-98f2049eb3dd" name="Data template" status="draft" applicableSchema="IFC4" applicableEntity="IfcPropertySetTemplate">
+        <ConceptTemplate uuid="8873cf28-bc3b-4e0e-b8be-ea10a96b3e20" name="Material Object Assignment" applicableSchema="IFC4" applicableEntity="IfcMaterial">
           <Definitions>
             <Definition>
-              <Body><![CDATA[Structure for (0) to be described here by Team 1.
-The following classes from EN ISO 16739 shall be implemented to transport the product data templates.
--	IfcProject 
--	IfcProjectLibrary
--	UnitsInContext
--	IfcClassification
--	IfcClassificationReference
--	IfcPropertySetTemplate
--	IfcSimplePropertyTemplate
--	IfcComplexPropertyTemplate
--	IfcTable
--	Type objects
-The content of the data templates shall be loaded from a template based on EN ISO/DIS 23386 and ISO/DIS 23387.
-
------------------------------------------------------------> REFERENCE IMG: Figure 4
-
-Each element of the figures 2 corresponds to an element in ISO 16739. The documentation of ISO 16739 will not be repeated in this document. The following chapters describe the additional concepts and definitions for each element for the intended usage for product data.
-
-Describe here the reference to the LOIN system.
-
-In the IFC 4 documentation there are “Fundamental concepts and assumptions”. These are a set of classes, that can be used to fulfil a specific need, within the usage of IFC as a whole.
-
-The following list contains a selection from the IFC 4 baseline concepts and assumption for expression a product data template.
-
--	Project context
--	Project units
--	Project library information
-
-On top of the existing baseline concepts and assumption in IFC 4 baseline, we define new, extended concepts and assumption for these concepts, that are not in IFC 4 baseline yet. These new, extended concepts have to work with the existing classes and properties of the IFC 4, ADD 2, TC 1 (4.0.2.1) schema.
-
--	Concept for PropertySetTemplate (including PropertyTemplate)
-  
-  
-_Remark: The following table contains content, that was originally placed later on in the document. It was moved here because it makes more sense here, according to the new structure of the document._<style type="text/css">
-.tg  {border-collapse:collapse;border-spacing:0;}
-.tg td{font-family:Arial, sans-serif;font-size:12px;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;border-color:black;}
-.tg th{font-family:Arial, sans-serif;font-size:12px;font-weight:normal;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;border-color:black;}
-.tg .tg-lboi{border-color:inherit;text-align:left;vertical-align:middle}
-.tg .tg-0gzz{background-color:#3166ff;border-color:inherit;text-align:left;vertical-align:middle}
-.tg .tg-0pky{border-color:inherit;text-align:left;vertical-align:top}
-</style>{ .tg}
-{ .tg}
-{ .tg}
-{ .tg}
-{ .tg}
-{ .tg}
-{ .tg}
-{ .tg}
-<table class="tg" style="undefined;table-layout: fixed; width: 872px">
-<colgroup>
-<col style="width: 297px">
-<col style="width: 449px">
-<col style="width: 63px">
-<col style="width: 63px">
-</colgroup>
-  <tr>
-    <th class="tg-0gzz"><span style="font-weight:bold">Classes of the Product Data View</span><br><span style="font-weight:bold">in alphabetical order</span></th>
-    <th class="tg-0gzz"><span style="font-weight:bold">Description</span></th>
-    <th class="tg-0gzz"><span style="font-weight:bold">Template</span></th>
-    <th class="tg-0gzz"><span style="font-weight:bold">Data</span></th>
-  </tr>
-  <tr>
-    <td class="tg-lboi">IfcClassification</td>
-    <td class="tg-lboi">Description of a classification system per ISO 12006-3-2015 <br>(eg. Uniclass, Omniclass, VDI 2552-9 (wip))<br></td>
-    <td class="tg-lboi"></td>
-    <td class="tg-lboi"></td>
-  </tr>
-  <tr>
-    <td class="tg-lboi">IfcClassificationReference</td>
-    <td class="tg-lboi">Description of hierarchical structures within a classification<br></td>
-    <td class="tg-lboi"></td>
-    <td class="tg-lboi"></td>
-  </tr>
-  <tr>
-    <td class="tg-lboi">IfcComplexProperty</td>
-    <td class="tg-lboi">Values of the complex property of a product (instance) <br>with connection link to IfcComplexPropertyTemplate<br></td>
-    <td class="tg-lboi"></td>
-    <td class="tg-lboi"></td>
-  </tr>
-  <tr>
-    <td class="tg-0pky">IfcComplexPropertyTemplate</td>
-    <td class="tg-0pky">Template for the exact definition of multiple values for one property <br>with connection Link to an external dictionary with a GUID as the key<br></td>
-    <td class="tg-0pky"></td>
-    <td class="tg-0pky"></td>
-  </tr>
-  <tr>
-    <td class="tg-0pky">IfcDocumentInformation</td>
-    <td class="tg-0pky">Metadata of a document that is embedded in the IFCZIP file <br>(eg. PDF, Excel, Word, VDI3805, JPG, PNG, etc.)<br></td>
-    <td class="tg-0pky"></td>
-    <td class="tg-0pky"></td>
-  </tr>
-  <tr>
-    <td class="tg-0pky">IfcElementXX<br>(eg.IfcDoor, IfcPump, IfcTransportElement)</td>
-    <td class="tg-0pky">Base class for a product<br></td>
-    <td class="tg-0pky"></td>
-    <td class="tg-0pky"></td>
-  </tr>
-  <tr>
-    <td class="tg-0pky">IfcElementXXType<br>(eg. IfcDoorType, IfcTransportElementType)</td>
-    <td class="tg-0pky">Subclasses for product types (Per ISO 12006-2-2015: Type Of Classes)<br></td>
-    <td class="tg-0pky"></td>
-    <td class="tg-0pky"></td>
-  </tr>
-  <tr>
-    <td class="tg-0pky">IfcProject</td>
-    <td class="tg-0pky">Main project for the data part<br></td>
-    <td class="tg-0pky"></td>
-    <td class="tg-0pky"></td>
-  </tr>
-  <tr>
-    <td class="tg-0pky">IfcProjectLibrary</td>
-    <td class="tg-0pky">Main project library for thetemplate part<br></td>
-    <td class="tg-0pky"></td>
-    <td class="tg-0pky"></td>
-  </tr>
-  <tr>
-    <td class="tg-0pky">IfcPropertySet</td>
-    <td class="tg-0pky">Grouping properties for a well-defined aspect and attached to a <br>product class with connection link to IfcPropertySetTemplate </td>
-    <td class="tg-0pky"></td>
-    <td class="tg-0pky"></td>
-  </tr>
-  <tr>
-    <td class="tg-0pky">IfcPropertySetTemplate</td>
-    <td class="tg-0pky">Template for grouping properties for a well-defined aspect and <br>attached to a product class with connection<br>Link to an external dictionary with a GUID as the key</td>
-    <td class="tg-0pky"></td>
-    <td class="tg-0pky"></td>
-  </tr>
-  <tr>
-    <td class="tg-0pky">IfcRelAggregates</td>
-    <td class="tg-0pky">Definition of hierarchical structures for the delivery of data <br>for preassembled products, which are sold from the manufacturer <br>as one product, eg. door systems containing several sub products <br>like spare parts</td>
-    <td class="tg-0pky"></td>
-    <td class="tg-0pky"></td>
-  </tr>
-  <tr>
-    <td class="tg-0pky">IfcRelAssociatesClassification</td>
-    <td class="tg-0pky">Relation of the product to the classification system(s)<br></td>
-    <td class="tg-0pky"></td>
-    <td class="tg-0pky"></td>
-  </tr>
-  <tr>
-    <td class="tg-0pky">IfcRelAssociatesDocument</td>
-    <td class="tg-0pky">Relation of the document to a product or sub product<br></td>
-    <td class="tg-0pky"></td>
-    <td class="tg-0pky"></td>
-  </tr>
-  <tr>
-    <td class="tg-0pky">IfcSimpleProperty</td>
-    <td class="tg-0pky">Value of the property of a product (instance) with connection <br>link to IfcSimplePropertyTemplate<br></td>
-    <td class="tg-0pky"></td>
-    <td class="tg-0pky"></td>
-  </tr>
-  <tr>
-    <td class="tg-0pky">IfcSimplePropertyTemplate</td>
-    <td class="tg-0pky">Template for the exact definition of an attribute of a product with <br>connection Link to an external dictionary with a GUID as the key<br></td>
-    <td class="tg-0pky"></td>
-    <td class="tg-0pky"></td>
-  </tr>
-  <tr>
-    <td class="tg-0pky">UnitsInContext / IfcSIUnit</td>
-    <td class="tg-0pky">Definition of units for values of the attributes in templates <br>and instances (e.g. kilogram, meter, watt, foot)<br></td>
-    <td class="tg-0pky"></td>
-    <td class="tg-0pky"></td>
-  </tr>
-</table>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-Remark: The Table lists the basic classes, that are needed to describe a product within IFC. There are some other classes which are technical needed. These classes should be included in the official   documentation of the \\\\\\\*\\\\\\\*“Product Data View”.\\\\\\\*\\\\\\\*  
-  
-  
-\\\\\\\*\\\\\\\*7.2.1 Specification “Header”\\\\\\\*\\\\\\\*The file starts with the declaration of the XML version 1.0 and the encoding UTF-8. Then follows the header section. 
-
-The header is structured as follows:
-
-The Header contains the declaration of the metadata of the file according to this specification.
-
-<style type="text/css">
-.tg  {border-collapse:collapse;border-spacing:0;}
-.tg td{font-family:Arial, sans-serif;font-size:12px;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;border-color:black;}
-.tg th{font-family:Arial, sans-serif;font-size:12px;font-weight:normal;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;border-color:black;}
-.tg .tg-kgcf{font-size:12px;text-align:left;vertical-align:middle}
-.tg .tg-7xpr{font-weight:bold;font-size:12px;font-family:"Courier New", Courier, monospace !important;;text-align:left;vertical-align:middle}
-</style>{ .tg}
-{ .tg}
-{ .tg}
-{ .tg}
-{ .tg}
-{ .tg}
-{ .tg}
-{ .tg}
-<table class="tg">
-  <tr>
-    <th class="tg-kgcf"><br>&nbsp;&nbsp;Element/attribute<br>&nbsp;&nbsp;</th>
-    <th class="tg-kgcf"><br>&nbsp;&nbsp;content<br>&nbsp;&nbsp;</th>
-    <th class="tg-kgcf"><br>&nbsp;&nbsp;maximum length<br>&nbsp;&nbsp;</th>
-    <th class="tg-kgcf"><br>&nbsp;&nbsp;required?<br>&nbsp;&nbsp;</th>
-  </tr>
-  <tr>
-    <td class="tg-7xpr"><br>&nbsp;&nbsp;name<br>&nbsp;&nbsp;</td>
-    <td class="tg-kgcf"><br>&nbsp;&nbsp;filename without<br>&nbsp;&nbsp;file extension<br>&nbsp;&nbsp;</td>
-    <td class="tg-kgcf"><br>&nbsp;&nbsp;255<br>&nbsp;&nbsp;</td>
-    <td class="tg-kgcf"><br>&nbsp;&nbsp;yes<br>&nbsp;&nbsp;</td>
-  </tr>
-  <tr>
-    <td class="tg-7xpr"><br>&nbsp;&nbsp;time_stamp<br>&nbsp;&nbsp;</td>
-    <td class="tg-kgcf"><br>&nbsp;&nbsp;date and time at<br>&nbsp;&nbsp;which the file was created. The date and time shall be inserted in the format<br>&nbsp;&nbsp;ISO 8601. There shall be provided a value for the time zone.<br>&nbsp;&nbsp;</td>
-    <td class="tg-kgcf"><br>&nbsp;&nbsp;25<br>&nbsp;&nbsp;(ISO 8601)<br>&nbsp;&nbsp;</td>
-    <td class="tg-kgcf"><br>&nbsp;&nbsp;yes<br>&nbsp;&nbsp;</td>
-  </tr>
-  <tr>
-    <td class="tg-7xpr"><br>&nbsp;&nbsp;author<br>&nbsp;&nbsp;</td>
-    <td class="tg-kgcf"><br>&nbsp;&nbsp;name of person(s),<br>&nbsp;&nbsp;that has/have created the file<br>&nbsp;&nbsp;</td>
-    <td class="tg-kgcf"><br>&nbsp;&nbsp;255<br>&nbsp;&nbsp;</td>
-    <td class="tg-kgcf"><br>&nbsp;&nbsp;yes<br>&nbsp;&nbsp;</td>
-  </tr>
-  <tr>
-    <td class="tg-7xpr"><br>&nbsp;&nbsp;organization<br>&nbsp;&nbsp;</td>
-    <td class="tg-kgcf"><br>&nbsp;&nbsp;name of<br>&nbsp;&nbsp;organization, that has created the file<br>&nbsp;&nbsp;</td>
-    <td class="tg-kgcf"><br>&nbsp;&nbsp;255<br>&nbsp;&nbsp;</td>
-    <td class="tg-kgcf"><br>&nbsp;&nbsp;yes<br>&nbsp;&nbsp;</td>
-  </tr>
-  <tr>
-    <td class="tg-7xpr"><br>&nbsp;&nbsp;authorization<br>&nbsp;&nbsp;</td>
-    <td class="tg-kgcf"><br>&nbsp;&nbsp;name of person, that<br>&nbsp;&nbsp;has validated and released the file<br>&nbsp;&nbsp;</td>
-    <td class="tg-kgcf"><br>&nbsp;&nbsp;255<br>&nbsp;&nbsp;</td>
-    <td class="tg-kgcf"><br>&nbsp;&nbsp;yes<br>&nbsp;&nbsp;</td>
-  </tr>
-  <tr>
-    <td class="tg-7xpr"><br>&nbsp;&nbsp;originating_system<br>&nbsp;&nbsp;</td>
-    <td class="tg-kgcf"><br>&nbsp;&nbsp;name of application,<br>&nbsp;&nbsp;that has created the file, including the version of the application<br>&nbsp;&nbsp;</td>
-    <td class="tg-kgcf"><br>&nbsp;&nbsp;255<br>&nbsp;&nbsp;</td>
-    <td class="tg-kgcf"><br>&nbsp;&nbsp;yes<br>&nbsp;&nbsp;</td>
-  </tr>
-  <tr>
-    <td class="tg-7xpr"><br>&nbsp;&nbsp;preprocessor_version<br>&nbsp;&nbsp;</td>
-    <td class="tg-kgcf"><br>&nbsp;&nbsp;name of used<br>&nbsp;&nbsp;IFC-Toolkit, including version of the toolkit<br>&nbsp;&nbsp;</td>
-    <td class="tg-kgcf"><br>&nbsp;&nbsp;255<br>&nbsp;&nbsp;</td>
-    <td class="tg-kgcf"><br>&nbsp;&nbsp;no<br>&nbsp;&nbsp;</td>
-  </tr>
-  <tr>
-    <td class="tg-7xpr"><br>&nbsp;&nbsp;documentation<br>&nbsp;&nbsp;</td>
-    <td class="tg-kgcf"><br>&nbsp;&nbsp;URI to the technical<br>&nbsp;&nbsp;documentation (tbd, optimal would be a GitHub repository)<br>&nbsp;&nbsp;</td>
-    <td class="tg-kgcf"><br>&nbsp;&nbsp;255<br>&nbsp;&nbsp;</td>
-    <td class="tg-kgcf"><br>&nbsp;&nbsp;yes<br>&nbsp;&nbsp;</td>
-  </tr>
-</table>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-  
-  
-  
-\\\\\\\*\\\\\\\*7.2.2 Relation to ISO 12006-3-based product data templates\\\\\\\*\\\\\\\*
-
-Establish and publish a concept, how IFD (ISO 12006-3) and IFC (ISO 16739..) work seamlessly together (see the following figures)
-
-Reference to the prEN 23387 here.
-
-Differentiate between the technical discussions based on IFC 4, ADD 2 and the discussions about possible developments of IFC in the future (we need the support now, based on the published IFC version, ISO 16739).
-Concept for a connection between IFC and IFC
-
-The mapping of IFC to IFC is based on these assumptions
--	Single Language
--	Single Version
--	PDT Snapshot in time
--	All metadata elements are technically addressed by a unique identifier (GUID)
-
-Reference to the prEN 23386 here.
-
-
-
------------------------------------------------------------> REFERENCE IMG: Figure 6: IFD and IFC work seamlessly together (eliminate the term bSDD here)
-
------------------------------------------------------------> REFERENCE IMG: Figure 7:
-
------------------------------------------------------------> REFERENCE IMG: Figure 8: Mapping of structures between structures in IFD (EN ISO 12006-3:2007 ) and IFC (EN ISO 16739).
-
-
-<style type="text/css">
-.tg  {border-collapse:collapse;border-spacing:0;}
-.tg td{font-family:Arial, sans-serif;font-size:12px;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;border-color:black;}
-.tg th{font-family:Arial, sans-serif;font-size:12px;font-weight:normal;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;border-color:black;}
-.tg .tg-z9od{font-size:12px;text-align:left;vertical-align:top}
-.tg .tg-nfv5{font-weight:bold;font-size:12px;background-color:#3166ff;text-align:left;vertical-align:middle}
-.tg .tg-qnlb{font-weight:bold;font-size:12px;background-color:#3166ff;text-align:left;vertical-align:top}
-</style>{ .tg}
-{ .tg}
-{ .tg}
-{ .tg}
-{ .tg}
-{ .tg}
-{ .tg}
-{ .tg}
-<table class="tg">
-  <tr>
-    <th class="tg-nfv5"><br>  ISO 12006-3<br>  </th>
-    <th class="tg-qnlb"><br>  IFC entity<br>  ISO 16739<br>  </th>
-    <th class="tg-qnlb"><br>  Description of integration<br>  </th>
-  </tr>
-  <tr>
-    <td class="tg-z9od"><br>  Classification<br>  <span style="color:rgb(254, 0, 0)">Change to XTD</span><br><span style="color:rgb(254, 0, 0)">  notation of ISO 12006-3</span><br>  </td>
-    <td class="tg-z9od"><br>&nbsp;&nbsp;IfcClassification<br>&nbsp;&nbsp;IfcClassificationReference<br>&nbsp;&nbsp;</td>
-    <td class="tg-z9od"><br>&nbsp;&nbsp;Classification systems and classification<br>&nbsp;&nbsp;nodes based on a simple hierarchical classification as described in ISO<br>&nbsp;&nbsp;12006-2<br>&nbsp;&nbsp;</td>
-  </tr>
-  <tr>
-    <td class="tg-z9od"><br>&nbsp;&nbsp;subject<br>&nbsp;&nbsp;</td>
-    <td class="tg-z9od"><br>&nbsp;&nbsp;IfcRelAssociatesClassification<br>&nbsp;&nbsp;IfcElementXX<br>&nbsp;&nbsp;IfcElementTypeXX<br>&nbsp;&nbsp;</td>
-    <td class="tg-z9od"><br>&nbsp;&nbsp;Description of a single subject in a catalogue<br>&nbsp;&nbsp;system and in an instance file<br>&nbsp;&nbsp;</td>
-  </tr>
-  <tr>
-    <td class="tg-z9od"><br>&nbsp;&nbsp;nest<br>&nbsp;&nbsp;</td>
-    <td class="tg-z9od"><br>&nbsp;&nbsp;IfcPropertySetTemplate<br>&nbsp;&nbsp;</td>
-    <td class="tg-z9od"><br>&nbsp;&nbsp;A group of properties<br>&nbsp;&nbsp;</td>
-  </tr>
-  <tr>
-    <td class="tg-z9od"><br>&nbsp;&nbsp;property<br>&nbsp;&nbsp;</td>
-    <td class="tg-z9od"><br>&nbsp;&nbsp;IfcPropertyTemplate<br>&nbsp;&nbsp;</td>
-    <td class="tg-z9od"><br>&nbsp;&nbsp;A single property<br>&nbsp;&nbsp;</td>
-  </tr>
-  <tr>
-    <td class="tg-z9od"><br>&nbsp;&nbsp;measure<br>&nbsp;&nbsp;</td>
-    <td class="tg-z9od"><br>&nbsp;&nbsp;EnumerationValues<br>&nbsp;&nbsp;</td>
-    <td class="tg-z9od"><br>&nbsp;&nbsp;Information about the value of the property<br>&nbsp;&nbsp;</td>
-  </tr>
-  <tr>
-    <td class="tg-z9od"><br>&nbsp;&nbsp;Unit*<br>&nbsp;&nbsp;</td>
-    <td class="tg-z9od"><br>&nbsp;&nbsp;UnitsInContext / IfcSIUnit<br>&nbsp;&nbsp;</td>
-    <td class="tg-z9od"><br>&nbsp;&nbsp;Technical definition of the unit, in which the<br>&nbsp;&nbsp;value of the property should be interpreted<br>&nbsp;&nbsp;</td>
-  </tr>
-  <tr>
-    <td class="tg-z9od"><br>&nbsp;&nbsp;bag<br>&nbsp;&nbsp;</td>
-    <td class="tg-z9od"><br>&nbsp;&nbsp;?<br>&nbsp;&nbsp;</td>
-    <td class="tg-z9od"><br>&nbsp;&nbsp;I am unsure, how to<br>&nbsp;&nbsp;interpret a bag. Could this be an expression for a domain specific view? If<br>&nbsp;&nbsp;yes, that it should be addressable in an MVDXML file (and not in an IFC file)<br>&nbsp;&nbsp;</td>
-  </tr>
-</table>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-Table 4: Mapping of entities
-  
-  
-<style type="text/css">
-.tg  {border-collapse:collapse;border-spacing:0;}
-.tg td{font-family:Arial, sans-serif;font-size:14px;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;border-color:black;}
-.tg th{font-family:Arial, sans-serif;font-size:14px;font-weight:normal;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;border-color:black;}
-.tg .tg-cly1{text-align:left;vertical-align:middle}
-.tg .tg-nfv5{font-weight:bold;font-size:12px;background-color:#3166ff;text-align:left;vertical-align:middle}
-</style>{ .tg}
-{ .tg}
-{ .tg}
-{ .tg}
-{ .tg}
-{ .tg}
-{ .tg}
-{ .tg}
-<table class="tg">
-  <tr>
-    <th class="tg-nfv5"><br>  ISO 12006-3<br>  </th>
-    <th class="tg-nfv5"><br>  IFC property<br>  ISO 16739<br>  </th>
-    <th class="tg-nfv5"><br>  Description of integration<br>  </th>
-  </tr>
-  <tr>
-    <td class="tg-cly1"><br>&nbsp;&nbsp;classification.guid<br>&nbsp;&nbsp;</td>
-    <td class="tg-cly1"><br>  IfcClassification.<span style="color:rgb(254, 0, 0)">GlobalId</span><br>  IfcClassificationReference<br>  </td>
-    <td class="tg-cly1"><br>&nbsp;&nbsp;Add the optional attribute „GlobalId” in IfcClassification<br>&nbsp;&nbsp;</td>
-  </tr>
-  <tr>
-    <td class="tg-cly1"><br>&nbsp;&nbsp;classification.guid<br>&nbsp;&nbsp;</td>
-    <td class="tg-cly1"><br>  IfcRelAssociatesClassification.<span style="color:rgb(254, 0, 0)">GlobalId</span><br>  </td>
-    <td class="tg-cly1"><br>&nbsp;&nbsp;Add the optional attribute „GlobalId” in IfcRelAssociatesClassification<br>&nbsp;&nbsp;</td>
-  </tr>
-  <tr>
-    <td class="tg-cly1"><br>&nbsp;&nbsp;measure.guid<br>&nbsp;&nbsp;</td>
-    <td class="tg-cly1"><br>  EnumerationValues. <span style="color:rgb(254, 0, 0)">GlobalId</span><br>  </td>
-    <td class="tg-cly1"><br>&nbsp;&nbsp;Add the optional attribute „GlobalId” in EnumerationValues<br>&nbsp;&nbsp;</td>
-  </tr>
-  <tr>
-    <td class="tg-cly1"><br>&nbsp;&nbsp;value.guid<br>&nbsp;&nbsp;</td>
-    <td class="tg-cly1"><br>  IfcLabel-wrapper.<span style="color:rgb(254, 0, 0)">GlobalId</span><br>  </td>
-    <td class="tg-cly1"><br>&nbsp;&nbsp;Add the optional attribute „GlobalId” in IfcLabel-wrapper<br>&nbsp;&nbsp;</td>
-  </tr>
-  <tr>
-    <td class="tg-cly1"><br>&nbsp;&nbsp;unit.guid<br>&nbsp;&nbsp;</td>
-    <td class="tg-cly1"><br>  IfcUnit.<span style="color:rgb(254, 0, 0)">GlobalId</span> (…)<br>  </td>
-    <td class="tg-cly1"><br>&nbsp;&nbsp;Add the optional<br>&nbsp;&nbsp;attribute „GlobalId” in IfcUnit<br>&nbsp;&nbsp;(and all other Unit classes)<br>&nbsp;&nbsp;</td>
-  </tr>
-</table>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-Table 5: Mapping of properties
-  
-  
-\\\\\\\*\\\\\\\*7.2.3 Negotiation of the product data templates\\\\\\\*\\\\\\\*
-
-Introduction here:
-
-
------------------------------------------------------------> REFERENCE IMG: BIM product data exchange workflow
-
-Open questions: 
--	More information vom BCF (Klaus Linhard)
--	We need a standard to save this transactions codes in IFC.
-
-We are also discussing a possible workflow, how a template-based request for information can be answered by a structured IFC-file. Please look at the attached illustration of a possible workflow. In our meeting yesterday, the group discussed, if the BCF-format could be an envelope for this workflow. The main question was, if the transaction codes per property could be managed by BCF. We think about these four codes, that could be a possible answer per property for a request for information:
-
->1. NO, I do no not want to give you the requested value
->2. NO, I cannot give you the requested value
->3. I Do not understand you
->4. YES, I will give you the requested value
-
--	Could BCF establish such a transaction code per item(property) or would we manage this inside the
--	template/sheet structure in IFC?
-
-There is no possibility in BCF tor manager transaction codes per property with BCF.
-
--	Formal: Can we use BCF in this standard, as BCF is not yet an official standard of ISO or CEN?\\\\\\\*\\\\\\\*\\\\\\\*\\\\\\\*]]></Body>
+              <Body><![CDATA[Information about the concept Material Object Assignement]]></Body>
             </Definition>
           </Definitions>
           <Rules>
-            <AttributeRule AttributeName="HasPropertyTemplates">
+            <AttributeRule AttributeName="AssociatedTo">
               <EntityRules>
-                <EntityRule EntityName="IfcComplexPropertyTemplate">
+                <EntityRule EntityName="IfcRelAssociatesMaterial">
                   <AttributeRules>
-                    <AttributeRule AttributeName="HasPropertyTemplates">
+                    <AttributeRule AttributeName="RelatedObjects">
                       <EntityRules>
-                        <EntityRule EntityName="IfcSimplePropertyTemplate" />
-                      </EntityRules>
-                    </AttributeRule>
-                  </AttributeRules>
-                </EntityRule>
-              </EntityRules>
-            </AttributeRule>
-            <AttributeRule AttributeName="HasAssociations">
-              <EntityRules>
-                <EntityRule EntityName="IfcRelAssociatesClassification">
-                  <AttributeRules>
-                    <AttributeRule AttributeName="RelatingClassification">
-                      <EntityRules>
-                        <EntityRule EntityName="IfcClassificationReference">
-                          <AttributeRules>
-                            <AttributeRule AttributeName="ReferencedSource">
-                              <EntityRules>
-                                <EntityRule EntityName="IfcClassification" />
-                              </EntityRules>
-                            </AttributeRule>
-                          </AttributeRules>
-                        </EntityRule>
+                        <EntityRule EntityName="IfcTypeObject" />
+                        <EntityRule EntityName="IfcObject" />
                       </EntityRules>
                     </AttributeRule>
                   </AttributeRules>
@@ -605,238 +430,45 @@ There is no possibility in BCF tor manager transaction codes per property with B
         </ConceptTemplate>
       </SubTemplates>
     </ConceptTemplate>
-    <ConceptTemplate uuid="94cfa683-4321-4216-b540-287923b7e28a" name="Header" status="draft" applicableSchema="IFC4" applicableEntity="IfcProjectLibrary" />
+    <ConceptTemplate uuid="9f63432b-cdc8-4438-8bbf-035ee92c5842" name="Transport" status="candidate" applicableSchema="IFC4" applicableEntity="IfcProjectLibrary">
+      <Definitions>
+        <Definition>
+          <Body><![CDATA[All exchanges can be transported over these protocols:
+
+1.	As a physical file with manual exchange via eMail, Harddrives, oder similar
+2.	As a data structure in the payload of an online exchange, eg. an API, a messaging system or similar.
+
+This standard does not define how exactly the exchange is done. It defines the standard for the structure of the file or the payload. The file or the payload can be stored in a compressd format according to the specification. The file extension is then \\\\*.ifczip. The specifications for ifczip can be found here:
+
+•	http://www.buildingsmart-tech.org/specifications/ifc-overview/ifc-overview-summary
+•	http://www.buildingsmart-tech.org/implementation/ifc-implementation/ifc-impl-agreements/cv-2x3-154
+
+It is explicitly allowed to embed an IFC file in Step format (.ifc) or in XML format Format (.ifcxml) in an ifczip file.
+The specification contains the following principles:
+
+1.	The ifczip file contains exactly one model file (.ifc or .ifcxml). The file extension is \\\\*.ifczip
+2.	According to this rule, it is allowed to embed additional other files in an ifczip file. Therefore, an ifczip file can be a container, which can transport many additional files in itself.
+3.	Such a container offers several advantages, such as
+•	transport of photo documentations
+•	transport of plant documentation
+•	transport of permits and notifications
+•	transport of operating documents, e.g. test and maintenance reports
+
+In the BIM context, such a transport is particularly useful if the documents have a reference to the structure.
+
+In order to be able to exchange data without consultation, each transported document should be registered in a structured, electronic table of contents. The recipient of the container can first read the table of contents and then select and remove the files.
+
+For this purpose, two things must be specified for the sender and receiver of such a container file:
+•	syntax of the table of contents
+•	specifications for the semantic identification of documents
+Since the current specification of the ifczip format provides exactly one model file in the root folder of the ifczip file, it makes sense to save the table of contents and the catalogue of document types in this model file.
+For this purpose, the IFC data model (based on IFC4) provides the entity IfcDocumentInformation. For each file transported in the container, an element of type IfcDocumentInformation is written.]]></Body>
+        </Definition>
+      </Definitions>
+    </ConceptTemplate>
     <ConceptTemplate uuid="678fe87d-6f4f-44d4-bf7f-33819709c5a1" name="_Construction Objects Data View" applicableSchema="IFC4">
       <SubTemplates>
-        <ConceptTemplate uuid="55e979a0-eb19-42d7-a735-35ccbe0ef91c" name="NOTDEFINED" applicableSchema="IFC4" applicableEntity="IfcObject" />
-        <ConceptTemplate uuid="27567215-e904-4406-af64-5ea02bb40345" name="NOTDEFINED" applicableSchema="IFC4" applicableEntity="IfcProjectLibrary" />
-        <ConceptTemplate uuid="0146c0bf-68d2-4fa9-8f03-aca65a3dd6da" name="NOTDEFINED" applicableSchema="IFC4" applicableEntity="IfcPropertySetTemplate" />
-        <ConceptTemplate uuid="a111544d-5b24-41cc-98c8-9440633f0fbe" name="NOTDEFINED" applicableSchema="IFC4" applicableEntity="IfcPropertyTemplate" />
-        <ConceptTemplate uuid="30ef4e25-5247-4fd2-be08-dda21ca8051d" name="NOTDEFINED" applicableSchema="IFC4" applicableEntity="IfcPropertyTemplate">
-          <Rules>
-            <AttributeRule AttributeName="PartOfComplexTemplate">
-              <EntityRules>
-                <EntityRule EntityName="IfcComplexPropertyTemplate" />
-              </EntityRules>
-            </AttributeRule>
-          </Rules>
-        </ConceptTemplate>
-        <ConceptTemplate uuid="b91d7421-fa16-4322-9c2a-5a12672a846f" name="NOTDEFINED" applicableSchema="IFC4" applicableEntity="IfcPropertyTemplate">
-          <Rules>
-            <AttributeRule AttributeName="HasAssociations">
-              <EntityRules>
-                <EntityRule EntityName="IfcRelAssociatesConstraint">
-                  <AttributeRules>
-                    <AttributeRule AttributeName="RelatingConstraint">
-                      <EntityRules>
-                        <EntityRule EntityName="IfcMetric">
-                          <AttributeRules>
-                            <AttributeRule AttributeName="DataValue">
-                              <EntityRules>
-                                <EntityRule EntityName="IfcMetricValueSelect" />
-                                <EntityRule EntityName="IfcTable" />
-                                <EntityRule EntityName="IfcMeasureWithUnit">
-                                  <AttributeRules>
-                                    <AttributeRule AttributeName="ValueComponent">
-                                      <EntityRules>
-                                        <EntityRule EntityName="IfcValue" />
-                                      </EntityRules>
-                                    </AttributeRule>
-                                    <AttributeRule AttributeName="UnitComponent">
-                                      <EntityRules>
-                                        <EntityRule EntityName="IfcUnit" />
-                                      </EntityRules>
-                                    </AttributeRule>
-                                  </AttributeRules>
-                                </EntityRule>
-                              </EntityRules>
-                            </AttributeRule>
-                          </AttributeRules>
-                        </EntityRule>
-                      </EntityRules>
-                    </AttributeRule>
-                  </AttributeRules>
-                </EntityRule>
-              </EntityRules>
-            </AttributeRule>
-          </Rules>
-        </ConceptTemplate>
-        <ConceptTemplate uuid="dd3efb18-47cf-4f01-b810-af3f3d6792f1" name="NOTDEFINED" applicableSchema="IFC4" applicableEntity="IfcPropertyTemplate">
-          <Rules>
-            <AttributeRule AttributeName="HasAssociations">
-              <EntityRules>
-                <EntityRule EntityName="IfcRelAssociatesDocument">
-                  <AttributeRules>
-                    <AttributeRule AttributeName="Name">
-                      <EntityRules>
-                        <EntityRule EntityName="IfcLabel" />
-                      </EntityRules>
-                    </AttributeRule>
-                    <AttributeRule AttributeName="RelatingDocument">
-                      <EntityRules>
-                        <EntityRule EntityName="IfcDocumentReference">
-                          <AttributeRules>
-                            <AttributeRule AttributeName="Location">
-                              <EntityRules>
-                                <EntityRule EntityName="IfcURIReference" />
-                              </EntityRules>
-                            </AttributeRule>
-                            <AttributeRule AttributeName="Identification">
-                              <EntityRules>
-                                <EntityRule EntityName="IfcIdentifier" />
-                              </EntityRules>
-                            </AttributeRule>
-                            <AttributeRule AttributeName="Name">
-                              <EntityRules>
-                                <EntityRule EntityName="IfcLabel" />
-                              </EntityRules>
-                            </AttributeRule>
-                            <AttributeRule AttributeName="Description">
-                              <EntityRules>
-                                <EntityRule EntityName="IfcText" />
-                              </EntityRules>
-                            </AttributeRule>
-                          </AttributeRules>
-                        </EntityRule>
-                      </EntityRules>
-                    </AttributeRule>
-                  </AttributeRules>
-                </EntityRule>
-              </EntityRules>
-            </AttributeRule>
-          </Rules>
-        </ConceptTemplate>
-        <ConceptTemplate uuid="0bba125e-878c-4dc0-9a6c-c077ef60447e" name="NOTDEFINED" applicableSchema="IFC4" applicableEntity="IfcPropertyTemplate">
-          <Rules>
-            <AttributeRule AttributeName="HasAssociations">
-              <EntityRules>
-                <EntityRule EntityName="IfcRelAssociatesClassification">
-                  <AttributeRules>
-                    <AttributeRule AttributeName="RelatingClassification">
-                      <EntityRules>
-                        <EntityRule EntityName="IfcClassificationReference">
-                          <AttributeRules>
-                            <AttributeRule AttributeName="Location">
-                              <EntityRules>
-                                <EntityRule EntityName="IfcURIReference" />
-                              </EntityRules>
-                            </AttributeRule>
-                            <AttributeRule AttributeName="Identification">
-                              <EntityRules>
-                                <EntityRule EntityName="IfcIdentifier" />
-                              </EntityRules>
-                            </AttributeRule>
-                            <AttributeRule AttributeName="Name">
-                              <EntityRules>
-                                <EntityRule EntityName="IfcLabel" />
-                              </EntityRules>
-                            </AttributeRule>
-                            <AttributeRule AttributeName="ReferencedSource">
-                              <EntityRules>
-                                <EntityRule EntityName="IfcClassification">
-                                  <AttributeRules>
-                                    <AttributeRule AttributeName="Source">
-                                      <EntityRules>
-                                        <EntityRule EntityName="IfcLabel" />
-                                      </EntityRules>
-                                    </AttributeRule>
-                                    <AttributeRule AttributeName="Edition">
-                                      <EntityRules>
-                                        <EntityRule EntityName="IfcLabel" />
-                                      </EntityRules>
-                                    </AttributeRule>
-                                    <AttributeRule AttributeName="EditionDate">
-                                      <EntityRules>
-                                        <EntityRule EntityName="IfcDate" />
-                                      </EntityRules>
-                                    </AttributeRule>
-                                    <AttributeRule AttributeName="Name">
-                                      <EntityRules>
-                                        <EntityRule EntityName="IfcLabel" />
-                                      </EntityRules>
-                                    </AttributeRule>
-                                    <AttributeRule AttributeName="Description">
-                                      <EntityRules>
-                                        <EntityRule EntityName="IfcText" />
-                                      </EntityRules>
-                                    </AttributeRule>
-                                    <AttributeRule AttributeName="Location">
-                                      <EntityRules>
-                                        <EntityRule EntityName="IfcURIReference" />
-                                      </EntityRules>
-                                    </AttributeRule>
-                                    <AttributeRule AttributeName="ReferenceTokens">
-                                      <EntityRules>
-                                        <EntityRule EntityName="IfcIdentifier" />
-                                      </EntityRules>
-                                    </AttributeRule>
-                                  </AttributeRules>
-                                </EntityRule>
-                              </EntityRules>
-                            </AttributeRule>
-                            <AttributeRule AttributeName="Description">
-                              <EntityRules>
-                                <EntityRule EntityName="IfcText" />
-                              </EntityRules>
-                            </AttributeRule>
-                            <AttributeRule AttributeName="Sort">
-                              <EntityRules>
-                                <EntityRule EntityName="IfcIdentifier" />
-                              </EntityRules>
-                            </AttributeRule>
-                          </AttributeRules>
-                        </EntityRule>
-                      </EntityRules>
-                    </AttributeRule>
-                  </AttributeRules>
-                </EntityRule>
-              </EntityRules>
-            </AttributeRule>
-          </Rules>
-        </ConceptTemplate>
-        <ConceptTemplate uuid="32cff947-6a43-4d37-9552-f1ccb94cf72b" name="NOTDEFINED" applicableSchema="IFC4" applicableEntity="IfcSimplePropertyTemplate" />
-        <ConceptTemplate uuid="203c069a-49b5-4702-aaf3-9137c72a8d60" name="NOTDEFINED" applicableSchema="IFC4" applicableEntity="IfcSimplePropertyTemplate">
-          <Rules>
-            <AttributeRule AttributeName="PartOfPsetTemplate">
-              <EntityRules>
-                <EntityRule EntityName="IfcPropertySetTemplate" />
-              </EntityRules>
-            </AttributeRule>
-          </Rules>
-        </ConceptTemplate>
-        <ConceptTemplate uuid="1697f22f-03e1-42c2-9137-6f3e35ca6535" name="NOTDEFINED" applicableSchema="IFC4" applicableEntity="IfcSimplePropertyTemplate">
-          <Rules>
-            <AttributeRule AttributeName="PrimaryUnit">
-              <EntityRules>
-                <EntityRule EntityName="IfcUnit" />
-              </EntityRules>
-            </AttributeRule>
-            <AttributeRule AttributeName="SecondaryUnit">
-              <EntityRules>
-                <EntityRule EntityName="IfcUnit" />
-              </EntityRules>
-            </AttributeRule>
-            <AttributeRule AttributeName="PrimaryMeasureType">
-              <EntityRules>
-                <EntityRule EntityName="IfcLabel" />
-              </EntityRules>
-            </AttributeRule>
-            <AttributeRule AttributeName="SecondaryMeasureType">
-              <EntityRules>
-                <EntityRule EntityName="IfcLabel" />
-              </EntityRules>
-            </AttributeRule>
-          </Rules>
-        </ConceptTemplate>
-        <ConceptTemplate uuid="6a175f03-ad5e-4058-b03d-58919b9aa97c" name="NOTDEFINED" applicableSchema="IFC4" applicableEntity="IfcSimplePropertyTemplate">
-          <Rules>
-            <AttributeRule AttributeName="TemplateType">
-              <EntityRules>
-                <EntityRule EntityName="IfcSimplePropertyTemplateTypeEnum" />
-              </EntityRules>
-            </AttributeRule>
-          </Rules>
-        </ConceptTemplate>
+        <ConceptTemplate uuid="f21cd56e-777d-4142-9ff0-352b743cd6be" name="NOTDEFINED" applicableSchema="IFC4" applicableEntity="IfcContext" />
       </SubTemplates>
     </ConceptTemplate>
   </Templates>
@@ -852,86 +484,197 @@ The syntactic approach considers as primary objective the ability to re-use spec
 
 Because digital data transmittal needs agreed structured data, predefined schemas and agreed property definitions, this standard conceptually splits between Data Template and a Data Sheet. Data Template is going to be defined as the demanded data schema, still missing data but possibly including limitations or required ranges, while Data Sheet represents rather the answer including completed or partially filled data. The first might represent level of information need requirements and definitions, general requests, while the second might represent catalogs, offering of products, selected or filtered data, approved data and so on. Data Sheet may be used as the input to be added into informative modeling storages as well as information to be saved in related repositories as Common Data Environments or Asset Information Models.
 
-The work aims above all the scope of filling the technological gap still today preventing an effective digital dialogue between production and construction chains. Unfortunately, such a dialog is traditionally based on documentation, no matter if printed or digital, which for the most cases is not digitally computable. A secondary work objective is to constitute itself as a syntax suitable for the digital management of the contents requested by the Construction Products Regulation (CPR) which lays down harmonized rules for the distribution of construction products in the EU market, particularly covering demand of comparison of products performance, characteristics, certification, CE marking and conformity declarations.
+The work aims above all the scope of filling the technological gap still today preventing an effective digital dialogue between production and construction chains. Unfortunately, such a dialog is traditionally based on documentation, no matter if printed or digital, which for the most cases is not digitally computable. A secondary work objective is to constitute itself as a syntax suitable for the digital management of the contents requested by the Construction Products Regulation (CPR) which lays down harmonized rules for the distribution of construction products in the EU market, particularly covering demand of comparison of products performance, characteristics, certification, CE marking and conformity declarations. 
+
+The smart transport of product data needs a clear and common understanding of the format to express the data of the products itself. The product data can be transferred in several ways, e.g. via direct database connect, or via webservices or file transfer. In all cases, the sender and the receiver of the product data need a basic standard to implement the data transfer.
+
+Normally an IFC files is known as a structure to transport a data model of a construction like a building (or a bridge). This model contains the geometrical and alphanumeric information of the complete building. The model contains also the information about the products that should be used to build up the building. The IFC language is capable to store the information of this “built-in” products properly.
+
+This standard uses the IFC language to store and transport product data on the way from the manufacturers to their customers. 
+
+To store product data in an IFC file only some parts of the existing IFC namespace is needed, since many aspects of the BIM data are not needed to express product data. The subset of IFC structures for storing and transporting product data is described in the Construction Objects Data View (COD).
+
+The following sections focusses on a definition of a file format. This file can be the foundation to transfer data over different transport channels.
+
+The file is based on IFC (Industry Foundation Classes). IFC was developed by the worldwide organization buildingSMART. IFC is standardized as EN ISO 16739.1:2018.
+  
+  
+Product data contains three types of data:
+1.	Alphanumeric Information (Lists)
+2.	Information in Documents (Files)
+3.	Geometric Information (Visual Representation)
+
+The existing proposals for new work items in CEN/TC442-WG4 describe the needs for transporting alphanumeric information. We propose to consider also the transport of Files. The transport of geometric information can be realized by including existing files with the geometric representation as a file in the IFCZIP-Container. With IFC this could be extended in a next step to an intelligent connected geometric representation. 
+
+The product data file is specified as follows:
+
+<style type="text/css">
+.tg  {border-collapse:collapse;border-spacing:0;}
+.tg td{font-family:Arial, sans-serif;font-size:14px;padding:2px 2px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;border-color:black;}
+.tg th{font-family:Arial, sans-serif;font-size:14px;font-weight:normal;padding:2px 2px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;border-color:black;}
+.tg .tg-rykj{font-size:12px;text-align:left;vertical-align:middle}
+</style>{ .tg}
+{ .tg}
+{ .tg}
+{ .tg}
+<table class="tg">
+  <tr>
+    <th class="tg-rykj"><br>&nbsp;&nbsp;Standard<br>&nbsp;&nbsp;</th>
+    <th class="tg-rykj"><br>&nbsp;&nbsp;EN ISO 16739<br>&nbsp;&nbsp;</th>
+  </tr>
+  <tr>
+    <td class="tg-rykj"><br>&nbsp;&nbsp;Language <br>&nbsp;&nbsp;</td>
+    <td class="tg-rykj"><br>&nbsp;&nbsp;IFC (Industry Foundation Classes)<br>&nbsp;&nbsp;</td>
+  </tr>
+  <tr>
+    <td class="tg-rykj"><br>&nbsp;&nbsp;Language Version<br>&nbsp;&nbsp;</td>
+    <td class="tg-rykj"><br>&nbsp;&nbsp;IFC 4, ADD 2<br>&nbsp;&nbsp;</td>
+  </tr>
+  <tr>
+    <td class="tg-rykj"><br>&nbsp;&nbsp;Language Type<br>&nbsp;&nbsp;</td>
+    <td class="tg-rykj"><br>&nbsp;&nbsp;ifcXML<br>&nbsp;&nbsp;</td>
+  </tr>
+  <tr>
+    <td class="tg-rykj"><br>&nbsp;&nbsp;File Type<br>&nbsp;&nbsp;</td>
+    <td class="tg-rykj"><br>&nbsp;&nbsp;ifcZIP<br>&nbsp;&nbsp;</td>
+  </tr>
+</table>
+
+
+
+
+
+
+
+
+
+The IFC language contains hundreds of entities to provide a standardizes data exchange for the whole construction industry. For exchanging product data based on the specification of this paper, only some of these entities are needed. These entities are defined in this specification. The IFC specification is located here: https://technical.buildingsmart.org . All elements are well documented there. In this paper, we describe the use of the elements and attributes for the use case of transporting construction objects data templates (DT) and corresponding construction objects data (PD).
+
+The product data shall be transportable from the sender (e.g. the manufacturer) to the receiver (e.g. customer). The construction objects data templates (DT) is an empty form. The receiver can hand the empty form over to the sender, to make clear, which information shall be delivered. The sender then fills the information into the form and gives it back to the receiver.
 
 {#purpose .num}
-### Purposes for product data exchange
+## Generic Process for construction objects data
 
-The following purposes where identified in the context of digital product data exchange.
+Based on the identified purposes, the format support different exchanges within the life cycle of a costruction object. The following figure describes the main stages of the construction objects, from the requirements expressed as objects in a design model to the registration as products in an AsBuilt model.
+
+<figure>
+  <img src="../../../../figures/figure2_genericprinciplesforselection.png" width="650" alt="Generic Principles for Selection">
+  <figcaption>Figure 2 : Generic principles for a selection process of construction objects (e.g. products)
+  </figcaption>
+</figure>
+
+The digital information exchange of data for construction objects can be realized using following kinds of exchanges.
+  
+<style type="text/css">
+.tg  {border-collapse:collapse;border-spacing:0;}
+.tg td{font-family:Arial, sans-serif;font-size:14px;padding:2px 2px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;border-color:black;}
+.tg th{font-family:Arial, sans-serif;font-size:14px;font-weight:normal;padding:2px 2px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;border-color:black;}
+.tg .tg-b5ef{font-size:12px;background-color:#c0c0c0;text-align:left;vertical-align:top}
+.tg .tg-w2dt{font-size:12px;text-align:center;vertical-align:middle}
+.tg .tg-z9od{font-size:12px;text-align:left;vertical-align:top}
+.tg .tg-rykj{font-size:12px;text-align:left;vertical-align:middle}
+.tg .tg-hdjr{font-size:12px;background-color:#c0c0c0;text-align:left;vertical-align:middle}
+</style>{ .tg}
+{ .tg}
+{ .tg}
+{ .tg}
+<table class="tg">
+  <tr>
+    <th class="tg-hdjr"><br>  Exchange code<br>  </th>
+    <th class="tg-hdjr"><br>  Exchange name<br>  </th>
+    <th class="tg-b5ef"><br>  Exchange description<br>  </th>
+  </tr>
+  <tr>
+    <td class="tg-w2dt"><br>  DT<br>  </td>
+    <td class="tg-rykj"><br>  Data template<br>  </td>
+    <td class="tg-z9od"><br>  Definition of the<br>  structures of data templates for construction objects, retrieved from<br>  dictionaries<br>  </td>
+  </tr>
+  <tr>
+    <td class="tg-w2dt"><br>  RR<br>  </td>
+    <td class="tg-rykj"><br>  requirement request<br>  </td>
+    <td class="tg-z9od"><br>  Request of<br>  requirements, that are either created seperatly or are derived from design<br>  models as generic or specific objects<br>  </td>
+  </tr>
+  <tr>
+    <td class="tg-w2dt"><br>  CA<br>  </td>
+    <td class="tg-rykj"><br>  Catalogue<br>  </td>
+    <td class="tg-z9od"><br>  Information about construction<br>  objects with their configuration options, e.g. product catalogues, based on<br>  information from the manufacturer<br>  </td>
+  </tr>
+  <tr>
+    <td class="tg-w2dt"><br>  DS<br>  </td>
+    <td class="tg-rykj"><br>  Data sheet<br>  </td>
+    <td class="tg-z9od"><br>  Information about instances<br>  of construction objects that are selected for ordering, delivery and<br>  installation without any configuration options<br>  </td>
+  </tr>
+  <caption align="bottom" align="left">Table 1: Kinds of digital exchange for data descriptions of construction objects
+  </caption>
+</table>
+
+
+
+
+
+
+
+
+
 
 {#purpose .num}
-#### Detailed digital description of a product
-In order to identify a product and understand the function of a product a technical description is needed. This standard allows the exchange of a product description, technical and business properties, geometry, assets like pictures and mounting instructions in a digital data sheet.
-This digital product description could be used for design, specification, quotation processes and complete an as built model. 
+## Relation of part 1 and part 2
+
+
+The relation of this standard (Part1) the Part 2 is as following:
+
+•	The use case "Detailed description of a product (pre-design programs, technical specifications, offers)" will be covered by Part 1 and Part 2 together
+•	The NWIP shall make clear, that there is also a Part 1 and both parts are needed to support all use cases (Part 1 and Part 2)
+•	The part 2 will define the way, how a (requirements) request can be formulated with ISO 16739. These requests shall be applicable to product libraries based on Part 1.
+•	The part 2 will define a way, to create a constraint-based product library for highly configurable products to support an interactive selection process. The application of a request to a "Part1-Library" and to a "Part2-Library" shall response same products as the result.
+•	The name "Product Library" is kind of a synonym to the term "product catalogue".
+•	A "Part1-Library" can be automatically transformed to a "Part2-Library" and vice versa; so, these can be seen as different representations of the same content. This does not mean, that such a transformation (esp. from P1=>P2) includes all rules a product can offer, it would just include those rules, that can be extracted from a variant-based product-list from P1.
+•	It is up to the manufacturers to choose the way, they want to represent their products ("Part1-Library" and/or "Part2-Library"), they just shall be sure, that all requests can be applied to both types of libraries. We think, that those manufacturers, who are willing to expose all configuration rule in the design process, will probably implement P2 in the end, but the implementation of P1 could be a first step, since some manufacturers have already share product lists with us, that can easily be express in the P1-way. So, it would be good to offer transformation paths from P1 to P2.
+
 
 {#purpose .num}
-#### Bills of quantity (templates)
-With digital product data it is easy to create bills of quantities of different 
+## Exchange requirements
 
-{#purpose .num}
-#### Procurement and Product purchase
-Description of this use case to be inserted here. (purchase orders, delivery forms)
-Direct Procurement: Part 1 (When you buy exactly one know product)
-- Related to eBusiness processes
+The standard contains four definitions of information exchange requirements. 
 
-{#purpose .num}
-#### Construction site management (Logistic)
-During construction phases, site managers assure day by day operations to keep the construction project on time and on budget. They also manage quality controls and the correspondence between built progresses and design’s prescriptions. 
-All players operating on site, both supervisors and contractors, exchange data related to products. Contractors receive design specification and according to them require product data to suppliers. All suppliers shall comply technical requirements and site inspectors should verify through technical check during site procurement and quality check during installations.
-All data related to construction products, within construction site management will be variously demanded: technical specification, purchase orders, installation procedures, compliance with standards, checklists, etc.  
-Exchange of product data sheet also involve commissioning team, originally informed during materials approval and then responsible of certifications related to corrects performances, functionalities and warranty.
+Each element of the exchange requirements corresponds to an element in EN ISO 16739.1:2018. The documentation of EN ISO 16739.1:2018 (IFC 4, ADD 2, TC 1, Version 4.0.2.1) will not be repeated in this document. 
 
-{#purpose .num}
-#### As Built and handover
-Import delivered real life products easily in their as-built-bim-models to document them for a later stage of development
-- Reorder spare parts, product maintenance
-- Declaration of performances, of conformity, …
-- Onsite assembly
+The elements from ISO EN 16739.1:2018 that are applicable for the exchange requirements are defined in detail in the chapter Technical specification in the included HTML documentation.
 
-{#purpose .num}
-#### Safety & Risk management
-Jobsites are complex environments, with workers interacting in challenging physical environments. Safety management has impacts on most construction operations: quality control, scheduling, cost control/budgeting and installations procedures. During all these phases, operators interact exchanging required documents in conformity to standards and regulations. 
-About particular products commonly adopted like paints, silicones, thinners or premixed concretes, the Safety Coordinator at Execution Stage should approve their Safety Data Sheets provided by Manufacturers.
-On the construction site, however, the Health, Safety and Environment Coordinator deals not only with products but also with tools and machines through which the Contractor take advantages. Just think for example to work equipment, safety life lines and harnesses, lifting ropes, scaffoldings, cranes etc.
-Presence on site of such tools involves exchange of data and information actually only partially digitalized: CE certification or mark, operation and maintenance manual, periodic checks, authorizations and, sometimes, structural validation.
+Based on a discussion by Pierre-François & Klaus in Tokyo the following picture illustrates the relation of the different file types
 
-{#purpose .num}
-#### Provide digital product declaration
-Description of this use case to be inserted here.
-- DoP: Declaration of performance
-- DoC: Declaration of conformity
-- EPD: Environmental Product Declaration
-- Compliance to Smart CE marking (under investigation)
+\\\*\\\*Building file\\\*\\\*
 
-See appendix 9.9.
+The file that stored the information about the building as a whole
 
-![Generic process for exchange of construction object information](../../../../figures/GenericProcessForExchange.png)
+\\\*\\\*Catalogue file\\\*\\\*
 
-{#purpose .num}
-#### Manufacturer digital information exchange (independent of online markets)
-Manufacturers provide products’ catalogues through their website. All kinds of data can be easily shared online, but a complete digital revolution forecast possibility to express and exchange machine readable information.  
-Currently websites allow download sections with geometric and not geometric informative attributes. Tridimensional parametric models are often linked to authoring BIM formats with few possibilities of ensuring interoperability and unique structured language. Another disadvantage consists in data redundancy due to difficulty in representing information with a single digital format.
-All these inconveniences bring to subsequent need of standards for representing machine readable data and for demanding the guaranty of interoperability to software houses. This also brings to an update of manufacturers’ website in terms of exchange of data and possibility to store new structured Product Data Sheets in external servers. 
-And Relationship between manufacturers and agents/distributors/shops/vendors (e.g. digital exchange of product libraries in the supply change)
+The file that stores the information about products with their configuration option.
 
--Local Online store on the website of a manufacturer
+\\\*\\\*Request/Selection Application\\\*\\\*
 
-Digital Request: Part 2
-Response: Part 1 or Part 2, depending on the format, the users of the website uses
+A software application that can handle the incoming requests and the selection process against a product catalogue.
 
-{#purpose .num}
-#### Ability to check contract/design deliverables 
-This use case shall be described further.
-Is it the check of the As Built Product against the selected product?
-Product delivery validation
-Part 1]]></Body>
+\\\*\\\*Inserting application\\\*\\\*
+
+A software application, that can insert a completely defined product into the building file.
+
+\\\*\\\*Selection application\\\*\\\*
+
+A software application, that can select a completely defined product out of a catalogue by user interaction and returns the completely defined product.
+
+<figure>
+  <img src="../../../../figures/figure3_relation.png" width="650" alt="Relation between the exchanges in a project">
+  <figcaption>Figure 3 : Relation between the exchanges in a project
+  </figcaption>
+</figure>]]></Body>
         </Definition>
       </Definitions>
       <ExchangeRequirements>
         <ExchangeRequirement uuid="e4d15dda-78aa-4713-83be-aa79730fc9a4" name="1 - Data template exchange" code="COD.1.DT" version="0.9" status="candidate" author="CEN-TC442-WG2-TG3" owner="CEN-TC442-WG2" copyright="CEN - European Committee for Standardization" applicability="both">
           <Definitions>
             <Definition>
-              <Body><![CDATA[The information exchange requirements "Data template exchange" defines the structure of templates that can be used for the definition of the information structure for construction objects to be exchanged. Data templates essentially contain the definitions of characteristics and their grouping for a specific purpose. This standard does not specify specific property definitions, but rather provides the basis for stakeholders to agree among themselves to exchange property definitions and their grouping.
+              <Body><![CDATA[The "Data template exchange" defines the structure of templates that can be used for the definition of the information structure for construction objects to be exchanged. Data templates essentially contain the definitions of characteristics and their grouping for a specific purpose. This standard does not specify specific property definitions, but rather provides the basis for stakeholders to agree among themselves to exchange property definitions and their grouping.
 
 The content of the data templates shall be loadable from a template based on EN ISO/DIS 23386 and ISO/DIS 23387.]]></Body>
             </Definition>
@@ -957,7 +700,6 @@ The content of the data templates shall be loadable from a template based on EN 
               <Body><![CDATA[The "Data sheet exchange" describes how concrete data on Constructions objects (e.g. building products) can be structured and exchanged. The description of data sheets for construction objects requires that the data templates as defined above have been agreed upon and are applied.
 
 With data sheets, concrete construction objects can be described digitally, e.g. a digital description of concrete, existing, completely defined products (heating types) or real existing product instances (heating), based on the agreed data templates.
-
 Data sheets of Construction objects contain
 
 - Descriptive characteristics based on the characteristic definition from the data templates
@@ -970,51 +712,36 @@ One or more products that are fully defined and can be ordered, delivered to the
         </ExchangeRequirement>
       </ExchangeRequirements>
       <Roots>
-        <ConceptRoot uuid="f654a528-757b-4103-b93a-a7f7b1b61f01" name="IfcObject" status="draft" applicableRootEntity="IfcObject">
-          <Applicability>
-            <Template ref="55e979a0-eb19-42d7-a735-35ccbe0ef91c" />
-            <TemplateRules operator="and" />
-          </Applicability>
-          <Concepts>
-            <Concept uuid="45ca7c35-e57b-4630-8d3e-b145bc6729f9" name="Completely defined product" status="draft" override="false">
-              <Template ref="18b3ad56-c476-4728-acfe-f52c04862e23" />
-              <TemplateRules operator="and">
-                <TemplateRule />
-              </TemplateRules>
-            </Concept>
-          </Concepts>
-        </ConceptRoot>
-        <ConceptRoot uuid="8196acdf-d178-48df-9dc4-4425392c633f" name="IfcPropertySetTemplate" applicableRootEntity="IfcProjectLibrary">
+        <ConceptRoot uuid="8f963b24-99b3-4f58-be4e-34d01046f112" name="Declarations" status="draft" applicableRootEntity="IfcContext">
           <Applicability>
             <Template ref="94cfa683-4321-4216-b540-287923b7e28a" />
             <TemplateRules operator="and" />
           </Applicability>
           <Concepts>
-            <Concept uuid="cfce75a0-6f4d-4886-ae47-633ec828e778" name="Data template" override="false">
-              <Template ref="d06bf192-fe82-443b-bda6-98f2049eb3dd" />
+            <Concept uuid="7f53a0ea-b54a-4f3e-9886-f596f1f3cca9" name="Declaration for sheets" status="draft" override="false">
+              <Template ref="117dafcd-232b-4a98-929e-a21c28a1a6a8" />
+              <Requirements>
+                <Requirement applicability="import" requirement="mandatory" exchangeRequirement="c0115c7f-1284-40d7-9644-1d2b022eb5a5" />
+                <Requirement applicability="export" requirement="mandatory" exchangeRequirement="c0115c7f-1284-40d7-9644-1d2b022eb5a5" />
+                <Requirement applicability="import" requirement="excluded" exchangeRequirement="e4d15dda-78aa-4713-83be-aa79730fc9a4" />
+                <Requirement applicability="export" requirement="excluded" exchangeRequirement="e4d15dda-78aa-4713-83be-aa79730fc9a4" />
+              </Requirements>
               <TemplateRules operator="and">
+                <TemplateRule />
                 <TemplateRule />
               </TemplateRules>
             </Concept>
-          </Concepts>
-        </ConceptRoot>
-        <ConceptRoot uuid="b2950f7e-cc60-4e84-a24c-11c2c431f1d1" name="IfcProjectLibrary" applicableRootEntity="IfcProjectLibrary">
-          <Applicability>
-            <Template ref="27567215-e904-4406-af64-5ea02bb40345" />
-            <TemplateRules operator="and" />
-          </Applicability>
-          <Concepts>
-            <Concept uuid="7d4d9c6f-0206-4bb9-8329-fd423dff6252" name="Header" status="draft" override="false">
-              <Template ref="94cfa683-4321-4216-b540-287923b7e28a" />
+            <Concept uuid="923115b4-3dd1-40b7-a8ca-298c6c988539" name="Declaration for templates" override="false">
+              <Template ref="c9ffd9bf-be54-46f4-a685-72396aa0273f" />
               <Requirements>
+                <Requirement applicability="import" requirement="mandatory" exchangeRequirement="e4d15dda-78aa-4713-83be-aa79730fc9a4" />
+                <Requirement applicability="import" requirement="mandatory" exchangeRequirement="a71689da-72bc-45bb-99a3-22e41734990c" />
+                <Requirement applicability="import" requirement="mandatory" exchangeRequirement="e6342739-6d02-429d-8e0f-a0d5f229efc9" />
+                <Requirement applicability="import" requirement="mandatory" exchangeRequirement="c0115c7f-1284-40d7-9644-1d2b022eb5a5" />
                 <Requirement applicability="export" requirement="mandatory" exchangeRequirement="c0115c7f-1284-40d7-9644-1d2b022eb5a5" />
-                <Requirement applicability="export" requirement="mandatory" exchangeRequirement="e4d15dda-78aa-4713-83be-aa79730fc9a4" />
                 <Requirement applicability="export" requirement="mandatory" exchangeRequirement="e6342739-6d02-429d-8e0f-a0d5f229efc9" />
                 <Requirement applicability="export" requirement="mandatory" exchangeRequirement="a71689da-72bc-45bb-99a3-22e41734990c" />
-                <Requirement applicability="import" requirement="mandatory" exchangeRequirement="c0115c7f-1284-40d7-9644-1d2b022eb5a5" />
-                <Requirement applicability="import" requirement="mandatory" exchangeRequirement="e4d15dda-78aa-4713-83be-aa79730fc9a4" />
-                <Requirement applicability="import" requirement="mandatory" exchangeRequirement="e6342739-6d02-429d-8e0f-a0d5f229efc9" />
-                <Requirement applicability="import" requirement="mandatory" exchangeRequirement="a71689da-72bc-45bb-99a3-22e41734990c" />
+                <Requirement applicability="export" requirement="mandatory" exchangeRequirement="e4d15dda-78aa-4713-83be-aa79730fc9a4" />
               </Requirements>
               <TemplateRules operator="and">
                 <TemplateRule />
@@ -1022,63 +749,91 @@ One or more products that are fully defined and can be ordered, delivered to the
             </Concept>
           </Concepts>
         </ConceptRoot>
-        <ConceptRoot uuid="00fe8d45-5ce8-4243-a7ff-f2a2d874b1af" name="IfcComplexPropertyTemplate" status="draft" applicableRootEntity="IfcPropertySetTemplate">
+        <ConceptRoot uuid="aef7baa9-99f6-4e48-8653-23007cdc2d41" name="Classification" applicableRootEntity="IfcContext">
           <Applicability>
-            <Template ref="d06bf192-fe82-443b-bda6-98f2049eb3dd" />
+            <Template ref="f21cd56e-777d-4142-9ff0-352b743cd6be" />
             <TemplateRules operator="and" />
           </Applicability>
           <Concepts>
-            <Concept uuid="1faa8935-11cc-4819-8c68-d0056fefa715" override="false">
-              <Template ref="0146c0bf-68d2-4fa9-8f03-aca65a3dd6da" />
+            <Concept uuid="fed42f40-742f-43a0-bdb6-9e0dd3f65a10" name="Classification declaration" override="false">
+              <Template ref="fb699395-46b5-4eb8-ae96-b94012380099" />
+              <TemplateRules operator="and">
+                <TemplateRule />
+                <TemplateRule />
+                <TemplateRule />
+                <TemplateRule />
+                <TemplateRule />
+                <TemplateRule />
+                <TemplateRule />
+              </TemplateRules>
+            </Concept>
+            <Concept uuid="290ef775-9c4b-444f-9f36-338aee25e531" name="Classification of construction object types" override="false">
+              <Template ref="221e03e4-b661-4f7a-82fe-2d0baff62915" />
+              <TemplateRules operator="and">
+                <TemplateRule />
+              </TemplateRules>
+            </Concept>
+            <Concept uuid="e34186f1-77a8-4ef9-8a0e-a6d3b5f431aa" name="Classification of construction objects" override="false">
+              <Template ref="82ec3852-f1bf-4bdf-b096-1f762812270d" />
+              <TemplateRules operator="and">
+                <TemplateRule />
+              </TemplateRules>
+            </Concept>
+            <Concept uuid="1559f79d-37f3-49e6-b750-5f7e4f739ca7" name="Classification of construction systems" override="false">
+              <Template ref="53b2705b-f492-48bf-9b2c-e23ec01c9acc" />
+              <TemplateRules operator="and">
+                <TemplateRule />
+              </TemplateRules>
+            </Concept>
+            <Concept uuid="2417e76f-bcc7-4f1c-b2cd-f9cb248fcac3" name="Classification of data templates" override="false">
+              <Template ref="f26b428b-d38a-47b3-a60d-d2ba54a6c764" />
+              <TemplateRules operator="and">
+                <TemplateRule />
+              </TemplateRules>
+            </Concept>
+            <Concept uuid="0d6f5d95-83ad-4979-b37e-16d66332fcfa" name="Classification of material" override="false">
+              <Template ref="1b12aeea-eac8-48d2-bd0f-726fabe40404" />
+              <TemplateRules operator="and">
+                <TemplateRule />
+              </TemplateRules>
+            </Concept>
+          </Concepts>
+        </ConceptRoot>
+        <ConceptRoot uuid="a202b9ba-8649-4472-a641-4453673dccbc" name="Material Information" applicableRootEntity="IfcMaterial">
+          <Applicability>
+            <Template ref="1b12aeea-eac8-48d2-bd0f-726fabe40404" />
+            <TemplateRules operator="and" />
+          </Applicability>
+          <Concepts>
+            <Concept uuid="d35392c9-c20d-40a0-b160-d1fd8683791e" name="Material data" override="false">
+              <Template ref="b510e76e-9028-40bc-ac44-31291ba7f1db" />
+              <TemplateRules operator="and">
+                <TemplateRule />
+              </TemplateRules>
+            </Concept>
+            <Concept uuid="55428923-7172-4d21-b2ab-0c525b751582" name="Material object assignment" override="false">
+              <Template ref="8873cf28-bc3b-4e0e-b8be-ea10a96b3e20" />
+              <TemplateRules operator="and">
+                <TemplateRule />
+              </TemplateRules>
+            </Concept>
+          </Concepts>
+        </ConceptRoot>
+        <ConceptRoot uuid="c5ff2e6c-976f-49a1-986f-259398a342e8" name="Transport" applicableRootEntity="IfcProjectLibrary">
+          <Applicability>
+            <Template ref="bf7206d4-80c6-469d-93a5-336283a2a935" />
+            <TemplateRules operator="and" />
+          </Applicability>
+          <Concepts>
+            <Concept uuid="7ed50688-edce-429f-a6b4-1edf0245eeba" name="Transport" override="false">
+              <Template ref="9f63432b-cdc8-4438-8bbf-035ee92c5842" />
               <Requirements>
-                <Requirement applicability="import" requirement="mandatory" exchangeRequirement="e4d15dda-78aa-4713-83be-aa79730fc9a4" />
                 <Requirement applicability="export" requirement="mandatory" exchangeRequirement="e4d15dda-78aa-4713-83be-aa79730fc9a4" />
+                <Requirement applicability="import" requirement="mandatory" exchangeRequirement="e4d15dda-78aa-4713-83be-aa79730fc9a4" />
               </Requirements>
-            </Concept>
-          </Concepts>
-        </ConceptRoot>
-        <ConceptRoot uuid="d6ab8d57-7bb6-4ded-9050-1c7e828a2421" name="IfcPropertyTemplate" applicableRootEntity="IfcPropertyTemplate">
-          <Applicability>
-            <Template ref="a111544d-5b24-41cc-98c8-9440633f0fbe" />
-            <TemplateRules operator="and" />
-          </Applicability>
-          <Concepts>
-            <Concept uuid="49b7a147-cdf4-4400-bfc7-4c232e702fd7" name="UserDefined_RelationComplexProperty" override="false">
-              <Template ref="30ef4e25-5247-4fd2-be08-dda21ca8051d" />
-              <Requirements>
-                <Requirement applicability="export" requirement="mandatory" exchangeRequirement="c0115c7f-1284-40d7-9644-1d2b022eb5a5" />
-                <Requirement applicability="import" requirement="mandatory" exchangeRequirement="c0115c7f-1284-40d7-9644-1d2b022eb5a5" />
-              </Requirements>
-            </Concept>
-            <Concept uuid="f360bd28-4ec6-4773-8350-19d8c935b3e4" name="UserDefined_ConstraintAssociation" override="false">
-              <Template ref="b91d7421-fa16-4322-9c2a-5a12672a846f" />
-            </Concept>
-            <Concept uuid="f036f372-4c1f-437b-8cc9-bf506552ce0b" name="UserDefined_Document Association" override="false">
-              <Template ref="dd3efb18-47cf-4f01-b810-af3f3d6792f1" />
-            </Concept>
-            <Concept uuid="202419c4-7b00-42b3-855f-70a570ab7fb9" name="UserDefined_Classification Association" override="false">
-              <Template ref="0bba125e-878c-4dc0-9a6c-c077ef60447e" />
-            </Concept>
-          </Concepts>
-        </ConceptRoot>
-        <ConceptRoot uuid="5bf25c11-2e18-41d7-b58c-40710ff42c71" name="IfcSimplePropertyTemplate" applicableRootEntity="IfcSimplePropertyTemplate">
-          <Applicability>
-            <Template ref="32cff947-6a43-4d37-9552-f1ccb94cf72b" />
-            <TemplateRules operator="and" />
-          </Applicability>
-          <Concepts>
-            <Concept uuid="5e313058-507d-4100-bcb2-a252f9088672" name="UserDefined_RelationPropertySetTemplate" override="false">
-              <Template ref="203c069a-49b5-4702-aaf3-9137c72a8d60" />
-              <Requirements>
-                <Requirement applicability="export" requirement="mandatory" exchangeRequirement="c0115c7f-1284-40d7-9644-1d2b022eb5a5" />
-                <Requirement applicability="import" requirement="mandatory" exchangeRequirement="c0115c7f-1284-40d7-9644-1d2b022eb5a5" />
-              </Requirements>
-            </Concept>
-            <Concept uuid="67073752-bc06-4598-a83e-81bbd3e0c2fc" name="UserDefined_AssociationUnitMeasureType" override="false">
-              <Template ref="1697f22f-03e1-42c2-9137-6f3e35ca6535" />
-            </Concept>
-            <Concept uuid="c63cce72-8f5f-40e7-8434-31f0bc5f7d4c" name="UserDefined_PropertyValueSelect" override="false">
-              <Template ref="6a175f03-ad5e-4058-b03d-58919b9aa97c" />
+              <TemplateRules operator="and">
+                <TemplateRule />
+              </TemplateRules>
             </Concept>
           </Concepts>
         </ConceptRoot>

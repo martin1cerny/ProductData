@@ -21,17 +21,17 @@
     <cnf:inverse select="IsDefinedBy" exp-attribute="double-tag" />
     <cnf:inverse select="Declares" exp-attribute="double-tag" />
   </cnf:entity>
-  <cnf:entity select="IfcDerivedUnitElement">
-    <cnf:attribute select="Unit" exp-attribute="attribute-tag" />
+  <cnf:entity select="IfcLibraryReference">
+    <cnf:attribute select="ReferencedLibrary" exp-attribute="attribute-tag" />
   </cnf:entity>
-  <cnf:entity select="IfcDocumentReference">
-    <cnf:attribute select="ReferencedDocument" exp-attribute="attribute-tag" />
+  <cnf:entity select="IfcMaterial">
+    <cnf:inverse select="HasRepresentation" exp-attribute="attribute-tag" />
   </cnf:entity>
-  <cnf:entity select="IfcMetric">
-    <cnf:attribute select="ReferencePath" exp-attribute="attribute-tag" />
+  <cnf:entity select="IfcMaterialDefinition">
+    <cnf:inverse select="HasProperties" exp-attribute="double-tag" />
   </cnf:entity>
-  <cnf:entity select="IfcNamedUnit">
-    <cnf:attribute select="Dimensions" exp-attribute="attribute-tag" />
+  <cnf:entity select="IfcMaterialProperties">
+    <cnf:attribute select="Material" keep="false" />
   </cnf:entity>
   <cnf:entity select="IfcObject">
     <cnf:inverse select="IsDeclaredBy" exp-attribute="attribute-tag" />
@@ -42,20 +42,29 @@
     <cnf:inverse select="IsNestedBy" exp-attribute="double-tag" />
     <cnf:inverse select="IsDecomposedBy" exp-attribute="double-tag" />
   </cnf:entity>
-  <cnf:entity select="IfcRelAssociatesConstraint">
-    <cnf:attribute select="RelatingConstraint" exp-attribute="attribute-tag" />
+  <cnf:entity select="IfcPerson">
+    <cnf:attribute select="MiddleNames" tagless="true" />
+    <cnf:attribute select="PrefixTitles" tagless="true" />
+    <cnf:attribute select="SuffixTitles" tagless="true" />
+  </cnf:entity>
+  <cnf:entity select="IfcPersonAndOrganization">
+    <cnf:attribute select="ThePerson" exp-attribute="attribute-tag" />
+    <cnf:attribute select="TheOrganization" exp-attribute="attribute-tag" />
+  </cnf:entity>
+  <cnf:entity select="IfcProduct">
+    <cnf:attribute select="ObjectPlacement" exp-attribute="attribute-tag" />
+    <cnf:attribute select="Representation" exp-attribute="attribute-tag" />
+  </cnf:entity>
+  <cnf:entity select="IfcRelAssignsToGroup">
+    <cnf:attribute select="RelatingGroup" exp-attribute="attribute-tag" />
+  </cnf:entity>
+  <cnf:entity select="IfcRelDeclares">
+    <cnf:attribute select="RelatingContext" keep="false" />
   </cnf:entity>
   <cnf:entity select="IfcRelDefinesByTemplate">
     <cnf:attribute select="RelatingTemplate" exp-attribute="attribute-tag" />
   </cnf:entity>
-  <cnf:entity select="IfcRelDefinesByType">
-    <cnf:attribute select="RelatedObjects" keep="false" />
-    <cnf:attribute select="RelatingType" exp-attribute="attribute-tag" />
-  </cnf:entity>
   <cnf:entity select="IfcRoot">
     <cnf:attribute select="OwnerHistory" exp-attribute="attribute-tag" />
-  </cnf:entity>
-  <cnf:entity select="IfcSimplePropertyTemplate">
-    <cnf:attribute select="Enumerators" exp-attribute="attribute-tag" />
   </cnf:entity>
 </cnf:configuration>

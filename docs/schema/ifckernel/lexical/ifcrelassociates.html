@@ -11,7 +11,7 @@
     <title>IfcRelAssociates</title>
 
     <style type="text/css">
-      body { counter-reset: index1 5 index2 2 index3 3 index4 11 index5 0; }
+      body { counter-reset: index1 5 index2 1 index3 3 index4 16 index5 0; }
     </style>
   </head>
 
@@ -20,7 +20,7 @@
 
 <script type="text/javascript">
 <!--
-    parent.index.location.replace("../../toc-5.html#5.2.3.12");
+    parent.index.location.replace("../../toc-5.html#5.1.3.17");
 //-->
 </script>
 
@@ -43,7 +43,7 @@
 <h5 class="num">Semantic definitions at the entity</h5>
 <details open="open"><summary>Entity definition</summary><p>The association relationship <span class="self-ref">IfcRelAssociates</span> refers to sources of information (most notably a classification, library, document, approval, contraint, or material). The information associated may reside internally or externally of the project data. There is no dependency implied by the association.</p>
 <blockquote class="example">
-<p>EXAMPLE  Further external information may be provided to the tank equipment (as subtype of <i>IfcProduct</i>) in terms of its classification and instruction documents, the source of the additional information is held external to the project data model.</p>
+<p>EXAMPLE  Further external information may be provided to the tank equipment (as subtype of <a href="../../ifckernel/lexical/ifcproduct.html">IfcProduct</a>) in terms of its classification and instruction documents, the source of the additional information is held external to the project data model.</p>
 </blockquote>
 <p>Association relationships can be established to objects (occurrences as subtypes of <a href="../../ifckernel/lexical/ifcobject.html">IfcObject</a>) or to types (as subtypes of <a href="../../ifckernel/lexical/ifctypeobject.html">IfcTypeObject</a>). Some associations (such as approval, or document) may also be applied to property templates (as subtypes of <a href="../../ifckernel/lexical/ifcpropertydefinition.html">IfcPropertyDefinition</a>).</p>
 <blockquote class="example">
@@ -72,8 +72,8 @@ Set of object or property definitions to which the external references or inform
 <details open="open"><summary>Entity inheritance</summary><img src="../../../diagrams/ifcrelassociates.png" usemap="#f"/>
 <map name="f">
 <area shape="rect" coords="42,78,230,90" href="../../../schema/ifckernel/lexical/ifcrelassociatesclassification.html" alt="IfcRelAssociatesClassification" />
-<area shape="rect" coords="42,102,230,114" href="../../../schema/ifccontrolextension/lexical/ifcrelassociatesconstraint.html" alt="IfcRelAssociatesConstraint" />
-<area shape="rect" coords="42,126,230,138" href="../../../schema/ifckernel/lexical/ifcrelassociatesdocument.html" alt="IfcRelAssociatesDocument" />
+<area shape="rect" coords="42,102,230,114" href="../../../schema/ifckernel/lexical/ifcrelassociateslibrary.html" alt="IfcRelAssociatesLibrary" />
+<area shape="rect" coords="42,126,230,138" href="../../../schema/ifcproductextension/lexical/ifcrelassociatesmaterial.html" alt="IfcRelAssociatesMaterial" />
 <area shape="rect" coords="18,30,254,42" href="../../../schema/ifckernel/lexical/ifcrelationship.html" alt="IfcRelationship" />
 <area shape="rect" coords="6,6,266,18" href="../../../schema/ifckernel/lexical/ifcroot.html" alt="IfcRoot" />
 </map>
@@ -86,9 +86,8 @@ Assignment of a globally unique identifier within the entire software world.
 </td><td>X</td></tr>
 <tr><td>2</td><td>OwnerHistory</td><td><span class="self-ref">-</span></td><td></td><td>
 <i>This attribute is out of scope for this model view definition and shall not be set.</i></td><td></td></tr>
-<tr><td>3</td><td>Name</td><td><a href="../../ifcmeasureresource/lexical/ifclabel.html">IfcLabel</a></td><td>? </td><td>
-Optional name for use by the participating software systems or users. For some subtypes of IfcRoot the insertion of the Name attribute may be required. This would be enforced by a where rule.
-</td><td>X</td></tr>
+<tr><td>3</td><td>Name</td><td><span class="self-ref">-</span></td><td></td><td>
+<i>This attribute is out of scope for this model view definition and shall not be set.</i></td><td></td></tr>
 <tr><td>4</td><td>Description</td><td><span class="self-ref">-</span></td><td></td><td>
 <i>This attribute is out of scope for this model view definition and shall not be set.</i></td><td></td></tr>
 <tr><td colspan="6"><i><a href="../../ifckernel/lexical/ifcrelationship.html">IfcRelationship</a></i></td></tr>
@@ -123,11 +122,11 @@ Set of object or property definitions to which the external references or inform
 </code></div></details>
 <details><summary>EXPRESS Specification</summary><div class="express"><code class="express">
 <span class="keyword">ENTITY</span> IfcRelAssociates<br/>
-&nbsp;<span class="keyword">ABSTRACT</span> <span class="keyword">SUPERTYPE OF</span>(<span class="keyword">ONEOF</span>(<a href="../../ifckernel/lexical/ifcrelassociatesclassification.html">IfcRelAssociatesClassification</a>, <a href="../../ifccontrolextension/lexical/ifcrelassociatesconstraint.html">IfcRelAssociatesConstraint</a>, <a href="../../ifckernel/lexical/ifcrelassociatesdocument.html">IfcRelAssociatesDocument</a>))<br/>
+&nbsp;<span class="keyword">ABSTRACT</span> <span class="keyword">SUPERTYPE OF</span>(<span class="keyword">ONEOF</span>(<a href="../../ifckernel/lexical/ifcrelassociatesclassification.html">IfcRelAssociatesClassification</a>, <a href="../../ifckernel/lexical/ifcrelassociateslibrary.html">IfcRelAssociatesLibrary</a>, <a href="../../ifcproductextension/lexical/ifcrelassociatesmaterial.html">IfcRelAssociatesMaterial</a>))<br/>
 &nbsp;<span class="keyword">SUBTYPE OF</span> (<a href="../../ifckernel/lexical/ifcrelationship.html">IfcRelationship</a>)<b>;</b><br/>
 &nbsp;&nbsp;RelatedObjects : <span class="keyword">SET</span> [1:?] <span class="keyword">OF</span> <a href="../../ifckernel/lexical/ifcdefinitionselect.html">IfcDefinitionSelect</a>;<br/>
 <span class="keyword">END_ENTITY;</span><br/>
-<p class="std"><a href="../../../annex/annex-d/ifckernel/diagram_0005.html" ><img src="../../../img/diagram.png" style="border: 0px" title="Link to EXPRESS-G diagram" alt="Link to EXPRESS-G diagram">&nbsp;EXPRESS-G diagram</a></p>
+<p class="std"><a href="../../../annex/annex-d/ifckernel/diagram_0000.html" ><img src="../../../img/diagram.png" style="border: 0px" title="Link to EXPRESS-G diagram" alt="Link to EXPRESS-G diagram">&nbsp;EXPRESS-G diagram</a></p>
 </code></div>
 </details>
 <details><summary>JSON Specification</summary><div class="xsd"><code class="xsd">public class <a href="../../ifckernel/lexical/ifcrelassociates.html">IfcRelAssociates</a> extends <a href="../../ifckernel/lexical/ifcrelationship.html">IfcRelationship</a><br/>
@@ -141,6 +140,5 @@ Set of object or property definitions to which the external references or inform
 </p>
 <p><a href="https://github.com/buildingSMART/ProductData/issues/new?&title=ifcrelassociates:%22" target="_blank" ><img src="../../../img/external.png" style="border: 0px" title="Report issue" alt="Report issue"/>&nbsp; Report an issue</a></p>
 <p><a href="../../../link/ifcrelassociates.html" target="_blank" ><img src="../../../img/permlink.png" style="border: 0px" title="Link to this page" alt="Link to this page"/>&nbsp; Link to this page</a></p>
-<p></p>
   </body>
 </html>

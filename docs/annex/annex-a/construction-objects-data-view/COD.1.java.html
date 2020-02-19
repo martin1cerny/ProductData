@@ -17,40 +17,13 @@
 
   <body>
 
-&nbsp;public class <a href="../../../schema/ifccontrolextension/lexical/ifcrelassociatesconstraint.html">IfcRelAssociatesConstraint</a> extends <a href="../../../schema/ifckernel/lexical/ifcrelassociates.html">IfcRelAssociates</a><br/>
-&nbsp;{<br/>
-&nbsp;&nbsp;private string Intent;<br/>
-&nbsp;&nbsp;private <a href="../../../schema/ifcconstraintresource/lexical/ifcconstraint.html">IfcConstraint</a> RelatingConstraint;<br/>
-&nbsp;}<br/>
-&nbsp;<br/>
-<br/>
-&nbsp;public enum <a href="../../../schema/ifckernel/lexical/ifcsimplepropertytemplatetypeenum.html">IfcSimplePropertyTemplateTypeEnum</a><br/>
-&nbsp;{<br/>
-&nbsp;&nbsp;P_SINGLEVALUE,<br/>
-&nbsp;&nbsp;P_ENUMERATEDVALUE,<br/>
-&nbsp;&nbsp;P_BOUNDEDVALUE,<br/>
-&nbsp;&nbsp;P_LISTVALUE,<br/>
-&nbsp;&nbsp;P_TABLEVALUE,<br/>
-&nbsp;&nbsp;P_REFERENCEVALUE,<br/>
-&nbsp;&nbsp;Q_LENGTH,<br/>
-&nbsp;&nbsp;Q_AREA,<br/>
-&nbsp;&nbsp;Q_VOLUME,<br/>
-&nbsp;&nbsp;Q_COUNT,<br/>
-&nbsp;&nbsp;Q_WEIGHT,<br/>
-&nbsp;&nbsp;Q_TIME,<br/>
-&nbsp;}<br/>
-&nbsp;<br/>
-<br/>
 &nbsp;public interface <a href="../../../schema/ifckernel/lexical/ifcdefinitionselect.html">IfcDefinitionSelect</a><br/>
 &nbsp;{<br/>
 &nbsp;}<br/>
 &nbsp;<br/>
 <br/>
-&nbsp;public class <a href="../../../schema/ifckernel/lexical/ifccomplexpropertytemplate.html">IfcComplexPropertyTemplate</a> extends <a href="../../../schema/ifckernel/lexical/ifcpropertytemplate.html">IfcPropertyTemplate</a><br/>
+&nbsp;public interface <a href="../../../schema/ifckernel/lexical/ifcproductselect.html">IfcProductSelect</a><br/>
 &nbsp;{<br/>
-&nbsp;&nbsp;private string UsageName;<br/>
-&nbsp;&nbsp;private <span class="self-ref">IfcStrippedOptional</span> TemplateType;<br/>
-&nbsp;&nbsp;private <a href="../../../schema/ifckernel/lexical/ifcpropertytemplate.html">IfcPropertyTemplate</a>[] HasPropertyTemplates;<br/>
 &nbsp;}<br/>
 &nbsp;<br/>
 <br/>
@@ -62,7 +35,13 @@
 &nbsp;&nbsp;private <span class="self-ref">IfcStrippedOptional</span>[] RepresentationContexts;<br/>
 &nbsp;&nbsp;private <span class="self-ref">IfcStrippedOptional</span> UnitsInContext;<br/>
 &nbsp;&nbsp;private <span class="self-ref">IfcStrippedOptional</span>[] IsDefinedBy;<br/>
-&nbsp;&nbsp;private <span class="self-ref">IfcStrippedOptional</span>[] Declares;<br/>
+&nbsp;&nbsp;private <a href="../../../schema/ifckernel/lexical/ifcreldeclares.html">IfcRelDeclares</a>[] Declares;<br/>
+&nbsp;}<br/>
+&nbsp;<br/>
+<br/>
+&nbsp;public class <a href="../../../schema/ifckernel/lexical/ifcgroup.html">IfcGroup</a> extends <a href="../../../schema/ifckernel/lexical/ifcobject.html">IfcObject</a><br/>
+&nbsp;{<br/>
+&nbsp;&nbsp;private <a href="../../../schema/ifckernel/lexical/ifcrelassignstogroup.html">IfcRelAssignsToGroup</a>[] IsGroupedBy;<br/>
 &nbsp;}<br/>
 &nbsp;<br/>
 <br/>
@@ -71,20 +50,33 @@
 &nbsp;&nbsp;private string ObjectType;<br/>
 &nbsp;&nbsp;private <span class="self-ref">IfcStrippedOptional</span>[] IsDeclaredBy;<br/>
 &nbsp;&nbsp;private <span class="self-ref">IfcStrippedOptional</span>[] Declares;<br/>
-&nbsp;&nbsp;private <a href="../../../schema/ifckernel/lexical/ifcreldefinesbytype.html">IfcRelDefinesByType</a>[] IsTypedBy;<br/>
+&nbsp;&nbsp;private <span class="self-ref">IfcStrippedOptional</span>[] IsTypedBy;<br/>
 &nbsp;&nbsp;private <span class="self-ref">IfcStrippedOptional</span>[] IsDefinedBy;<br/>
 &nbsp;}<br/>
 &nbsp;<br/>
 <br/>
 &nbsp;public class <a href="../../../schema/ifckernel/lexical/ifcobjectdefinition.html">IfcObjectDefinition</a> extends <a href="../../../schema/ifckernel/lexical/ifcroot.html">IfcRoot</a><br/>
 &nbsp;{<br/>
-&nbsp;&nbsp;private <span class="self-ref">IfcStrippedOptional</span>[] HasAssignments;<br/>
+&nbsp;&nbsp;private <a href="../../../schema/ifckernel/lexical/ifcrelassigns.html">IfcRelAssigns</a>[] HasAssignments;<br/>
 &nbsp;&nbsp;private <span class="self-ref">IfcStrippedOptional</span>[] Nests;<br/>
 &nbsp;&nbsp;private <span class="self-ref">IfcStrippedOptional</span>[] IsNestedBy;<br/>
-&nbsp;&nbsp;private <span class="self-ref">IfcStrippedOptional</span>[] HasContext;<br/>
+&nbsp;&nbsp;private <a href="../../../schema/ifckernel/lexical/ifcreldeclares.html">IfcRelDeclares</a>[] HasContext;<br/>
 &nbsp;&nbsp;private <span class="self-ref">IfcStrippedOptional</span>[] IsDecomposedBy;<br/>
 &nbsp;&nbsp;private <span class="self-ref">IfcStrippedOptional</span>[] Decomposes;<br/>
 &nbsp;&nbsp;private <a href="../../../schema/ifckernel/lexical/ifcrelassociates.html">IfcRelAssociates</a>[] HasAssociations;<br/>
+&nbsp;}<br/>
+&nbsp;<br/>
+<br/>
+&nbsp;public class <a href="../../../schema/ifckernel/lexical/ifcproduct.html">IfcProduct</a> extends <a href="../../../schema/ifckernel/lexical/ifcobject.html">IfcObject</a><br/>
+&nbsp;{<br/>
+&nbsp;&nbsp;private <span class="self-ref">IfcStrippedOptional</span> ObjectPlacement;<br/>
+&nbsp;&nbsp;private <span class="self-ref">IfcStrippedOptional</span> Representation;<br/>
+&nbsp;&nbsp;private <a href="../../../schema/ifckernel/lexical/ifcrelassignstoproduct.html">IfcRelAssignsToProduct</a>[] ReferencedBy;<br/>
+&nbsp;}<br/>
+&nbsp;<br/>
+<br/>
+&nbsp;public class <a href="../../../schema/ifckernel/lexical/ifcproject.html">IfcProject</a> extends <a href="../../../schema/ifckernel/lexical/ifccontext.html">IfcContext</a><br/>
+&nbsp;{<br/>
 &nbsp;}<br/>
 &nbsp;<br/>
 <br/>
@@ -95,7 +87,7 @@
 <br/>
 &nbsp;public class <a href="../../../schema/ifckernel/lexical/ifcpropertydefinition.html">IfcPropertyDefinition</a> extends <a href="../../../schema/ifckernel/lexical/ifcroot.html">IfcRoot</a><br/>
 &nbsp;{<br/>
-&nbsp;&nbsp;private <span class="self-ref">IfcStrippedOptional</span>[] HasContext;<br/>
+&nbsp;&nbsp;private <a href="../../../schema/ifckernel/lexical/ifcreldeclares.html">IfcRelDeclares</a>[] HasContext;<br/>
 &nbsp;&nbsp;private <a href="../../../schema/ifckernel/lexical/ifcrelassociates.html">IfcRelAssociates</a>[] HasAssociations;<br/>
 &nbsp;}<br/>
 &nbsp;<br/>
@@ -125,13 +117,32 @@
 <br/>
 &nbsp;public class <a href="../../../schema/ifckernel/lexical/ifcpropertytemplate.html">IfcPropertyTemplate</a> extends <a href="../../../schema/ifckernel/lexical/ifcpropertytemplatedefinition.html">IfcPropertyTemplateDefinition</a><br/>
 &nbsp;{<br/>
-&nbsp;&nbsp;private <a href="../../../schema/ifckernel/lexical/ifccomplexpropertytemplate.html">IfcComplexPropertyTemplate</a>[] PartOfComplexTemplate;<br/>
+&nbsp;&nbsp;private <span class="self-ref">IfcStrippedOptional</span>[] PartOfComplexTemplate;<br/>
 &nbsp;&nbsp;private <a href="../../../schema/ifckernel/lexical/ifcpropertysettemplate.html">IfcPropertySetTemplate</a>[] PartOfPsetTemplate;<br/>
 &nbsp;}<br/>
 &nbsp;<br/>
 <br/>
 &nbsp;public class <a href="../../../schema/ifckernel/lexical/ifcpropertytemplatedefinition.html">IfcPropertyTemplateDefinition</a> extends <a href="../../../schema/ifckernel/lexical/ifcpropertydefinition.html">IfcPropertyDefinition</a><br/>
 &nbsp;{<br/>
+&nbsp;}<br/>
+&nbsp;<br/>
+<br/>
+&nbsp;public class <a href="../../../schema/ifckernel/lexical/ifcrelassigns.html">IfcRelAssigns</a> extends <a href="../../../schema/ifckernel/lexical/ifcrelationship.html">IfcRelationship</a><br/>
+&nbsp;{<br/>
+&nbsp;&nbsp;private <a href="../../../schema/ifckernel/lexical/ifcobjectdefinition.html">IfcObjectDefinition</a>[] RelatedObjects;<br/>
+&nbsp;&nbsp;private <span class="self-ref">IfcStrippedOptional</span> RelatedObjectsType;<br/>
+&nbsp;}<br/>
+&nbsp;<br/>
+<br/>
+&nbsp;public class <a href="../../../schema/ifckernel/lexical/ifcrelassignstogroup.html">IfcRelAssignsToGroup</a> extends <a href="../../../schema/ifckernel/lexical/ifcrelassigns.html">IfcRelAssigns</a><br/>
+&nbsp;{<br/>
+&nbsp;&nbsp;private <a href="../../../schema/ifckernel/lexical/ifcgroup.html">IfcGroup</a> RelatingGroup;<br/>
+&nbsp;}<br/>
+&nbsp;<br/>
+<br/>
+&nbsp;public class <a href="../../../schema/ifckernel/lexical/ifcrelassignstoproduct.html">IfcRelAssignsToProduct</a> extends <a href="../../../schema/ifckernel/lexical/ifcrelassigns.html">IfcRelAssigns</a><br/>
+&nbsp;{<br/>
+&nbsp;&nbsp;private <a href="../../../schema/ifckernel/lexical/ifcproductselect.html">IfcProductSelect</a> RelatingProduct;<br/>
 &nbsp;}<br/>
 &nbsp;<br/>
 <br/>
@@ -147,14 +158,21 @@
 &nbsp;}<br/>
 &nbsp;<br/>
 <br/>
-&nbsp;public class <a href="../../../schema/ifckernel/lexical/ifcrelassociatesdocument.html">IfcRelAssociatesDocument</a> extends <a href="../../../schema/ifckernel/lexical/ifcrelassociates.html">IfcRelAssociates</a><br/>
+&nbsp;public class <a href="../../../schema/ifckernel/lexical/ifcrelassociateslibrary.html">IfcRelAssociatesLibrary</a> extends <a href="../../../schema/ifckernel/lexical/ifcrelassociates.html">IfcRelAssociates</a><br/>
 &nbsp;{<br/>
-&nbsp;&nbsp;private <a href="../../../schema/ifcexternalreferenceresource/lexical/ifcdocumentselect.html">IfcDocumentSelect</a> RelatingDocument;<br/>
+&nbsp;&nbsp;private <a href="../../../schema/ifcexternalreferenceresource/lexical/ifclibraryselect.html">IfcLibrarySelect</a> RelatingLibrary;<br/>
 &nbsp;}<br/>
 &nbsp;<br/>
 <br/>
 &nbsp;public class <a href="../../../schema/ifckernel/lexical/ifcrelationship.html">IfcRelationship</a> extends <a href="../../../schema/ifckernel/lexical/ifcroot.html">IfcRoot</a><br/>
 &nbsp;{<br/>
+&nbsp;}<br/>
+&nbsp;<br/>
+<br/>
+&nbsp;public class <a href="../../../schema/ifckernel/lexical/ifcreldeclares.html">IfcRelDeclares</a> extends <a href="../../../schema/ifckernel/lexical/ifcrelationship.html">IfcRelationship</a><br/>
+&nbsp;{<br/>
+&nbsp;&nbsp;private <a href="../../../schema/ifckernel/lexical/ifccontext.html">IfcContext</a> RelatingContext;<br/>
+&nbsp;&nbsp;private <a href="../../../schema/ifckernel/lexical/ifcdefinitionselect.html">IfcDefinitionSelect</a>[] RelatedDefinitions;<br/>
 &nbsp;}<br/>
 &nbsp;<br/>
 <br/>
@@ -170,13 +188,6 @@
 &nbsp;}<br/>
 &nbsp;<br/>
 <br/>
-&nbsp;public class <a href="../../../schema/ifckernel/lexical/ifcreldefinesbytype.html">IfcRelDefinesByType</a> extends <a href="../../../schema/ifckernel/lexical/ifcreldefines.html">IfcRelDefines</a><br/>
-&nbsp;{<br/>
-&nbsp;&nbsp;private <a href="../../../schema/ifckernel/lexical/ifcobject.html">IfcObject</a>[] RelatedObjects;<br/>
-&nbsp;&nbsp;private <a href="../../../schema/ifckernel/lexical/ifctypeobject.html">IfcTypeObject</a> RelatingType;<br/>
-&nbsp;}<br/>
-&nbsp;<br/>
-<br/>
 &nbsp;public class <a href="../../../schema/ifckernel/lexical/ifcroot.html">IfcRoot</a> extends IfcBase<br/>
 &nbsp;{<br/>
 &nbsp;&nbsp;private string GlobalId;<br/>
@@ -186,88 +197,71 @@
 &nbsp;}<br/>
 &nbsp;<br/>
 <br/>
-&nbsp;public class <a href="../../../schema/ifckernel/lexical/ifcsimplepropertytemplate.html">IfcSimplePropertyTemplate</a> extends <a href="../../../schema/ifckernel/lexical/ifcpropertytemplate.html">IfcPropertyTemplate</a><br/>
-&nbsp;{<br/>
-&nbsp;&nbsp;private <a href="../../../schema/ifckernel/lexical/ifcsimplepropertytemplatetypeenum.html">IfcSimplePropertyTemplateTypeEnum</a> TemplateType;<br/>
-&nbsp;&nbsp;private string PrimaryMeasureType;<br/>
-&nbsp;&nbsp;private string SecondaryMeasureType;<br/>
-&nbsp;&nbsp;private <span class="self-ref">IfcStrippedOptional</span> Enumerators;<br/>
-&nbsp;&nbsp;private <a href="../../../schema/ifcmeasureresource/lexical/ifcunit.html">IfcUnit</a> PrimaryUnit;<br/>
-&nbsp;&nbsp;private <a href="../../../schema/ifcmeasureresource/lexical/ifcunit.html">IfcUnit</a> SecondaryUnit;<br/>
-&nbsp;&nbsp;private string Expression;<br/>
-&nbsp;&nbsp;private <span class="self-ref">IfcStrippedOptional</span> AccessState;<br/>
-&nbsp;}<br/>
-&nbsp;<br/>
-<br/>
 &nbsp;public class <a href="../../../schema/ifckernel/lexical/ifctypeobject.html">IfcTypeObject</a> extends <a href="../../../schema/ifckernel/lexical/ifcobjectdefinition.html">IfcObjectDefinition</a><br/>
 &nbsp;{<br/>
 &nbsp;&nbsp;private string ApplicableOccurrence;<br/>
 &nbsp;&nbsp;private <a href="../../../schema/ifckernel/lexical/ifcpropertysetdefinition.html">IfcPropertySetDefinition</a>[] HasPropertySets;<br/>
-&nbsp;&nbsp;private <a href="../../../schema/ifckernel/lexical/ifcreldefinesbytype.html">IfcRelDefinesByType</a>[] Types;<br/>
+&nbsp;&nbsp;private <span class="self-ref">IfcStrippedOptional</span>[] Types;<br/>
 &nbsp;}<br/>
 &nbsp;<br/>
 <br/>
-&nbsp;public enum <a href="../../../schema/ifcconstraintresource/lexical/ifcbenchmarkenum.html">IfcBenchmarkEnum</a><br/>
+&nbsp;public class <a href="../../../schema/ifckernel/lexical/ifctypeproduct.html">IfcTypeProduct</a> extends <a href="../../../schema/ifckernel/lexical/ifctypeobject.html">IfcTypeObject</a><br/>
 &nbsp;{<br/>
-&nbsp;&nbsp;GREATERTHAN,<br/>
-&nbsp;&nbsp;GREATERTHANOREQUALTO,<br/>
-&nbsp;&nbsp;LESSTHAN,<br/>
-&nbsp;&nbsp;LESSTHANOREQUALTO,<br/>
-&nbsp;&nbsp;EQUALTO,<br/>
-&nbsp;&nbsp;NOTEQUALTO,<br/>
-&nbsp;&nbsp;INCLUDES,<br/>
-&nbsp;&nbsp;NOTINCLUDES,<br/>
-&nbsp;&nbsp;INCLUDEDIN,<br/>
-&nbsp;&nbsp;NOTINCLUDEDIN,<br/>
+&nbsp;&nbsp;private <span class="self-ref">IfcStrippedOptional</span>[] RepresentationMaps;<br/>
+&nbsp;&nbsp;private string Tag;<br/>
+&nbsp;&nbsp;private <a href="../../../schema/ifckernel/lexical/ifcrelassignstoproduct.html">IfcRelAssignsToProduct</a>[] ReferencedBy;<br/>
 &nbsp;}<br/>
 &nbsp;<br/>
 <br/>
-&nbsp;public enum <a href="../../../schema/ifcconstraintresource/lexical/ifcconstraintenum.html">IfcConstraintEnum</a><br/>
+&nbsp;public class <a href="../../../schema/ifcproductextension/lexical/ifcrelassociatesmaterial.html">IfcRelAssociatesMaterial</a> extends <a href="../../../schema/ifckernel/lexical/ifcrelassociates.html">IfcRelAssociates</a><br/>
 &nbsp;{<br/>
-&nbsp;&nbsp;HARD,<br/>
-&nbsp;&nbsp;SOFT,<br/>
-&nbsp;&nbsp;ADVISORY,<br/>
-&nbsp;&nbsp;USERDEFINED,<br/>
-&nbsp;&nbsp;NOTDEFINED,<br/>
+&nbsp;&nbsp;private <a href="../../../schema/ifcmaterialresource/lexical/ifcmaterialselect.html">IfcMaterialSelect</a> RelatingMaterial;<br/>
 &nbsp;}<br/>
 &nbsp;<br/>
 <br/>
-&nbsp;public interface <a href="../../../schema/ifcconstraintresource/lexical/ifcmetricvalueselect.html">IfcMetricValueSelect</a><br/>
+&nbsp;public class <a href="../../../schema/ifcproductextension/lexical/ifcsystem.html">IfcSystem</a> extends <a href="../../../schema/ifckernel/lexical/ifcgroup.html">IfcGroup</a><br/>
+&nbsp;{<br/>
+&nbsp;&nbsp;private <span class="self-ref">IfcStrippedOptional</span>[] ServicesBuildings;<br/>
+&nbsp;}<br/>
+&nbsp;<br/>
+<br/>
+&nbsp;public interface <a href="../../../schema/ifcactorresource/lexical/ifcactorselect.html">IfcActorSelect</a><br/>
 &nbsp;{<br/>
 &nbsp;}<br/>
 &nbsp;<br/>
 <br/>
-&nbsp;public class <a href="../../../schema/ifcconstraintresource/lexical/ifcconstraint.html">IfcConstraint</a> extends IfcBase<br/>
+&nbsp;public class <a href="../../../schema/ifcactorresource/lexical/ifcorganization.html">IfcOrganization</a> extends IfcBase<br/>
 &nbsp;{<br/>
+&nbsp;&nbsp;private string Identification;<br/>
 &nbsp;&nbsp;private string Name;<br/>
 &nbsp;&nbsp;private string Description;<br/>
-&nbsp;&nbsp;private <a href="../../../schema/ifcconstraintresource/lexical/ifcconstraintenum.html">IfcConstraintEnum</a> ConstraintGrade;<br/>
-&nbsp;&nbsp;private string ConstraintSource;<br/>
-&nbsp;&nbsp;private <span class="self-ref">IfcStrippedOptional</span> CreatingActor;<br/>
-&nbsp;&nbsp;private string CreationTime;<br/>
-&nbsp;&nbsp;private string UserDefinedGrade;<br/>
-&nbsp;&nbsp;private <span class="self-ref">IfcStrippedOptional</span>[] HasExternalReferences;<br/>
-&nbsp;&nbsp;private <span class="self-ref">IfcStrippedOptional</span>[] PropertiesForConstraint;<br/>
+&nbsp;&nbsp;private <span class="self-ref">IfcStrippedOptional</span>[] Roles;<br/>
+&nbsp;&nbsp;private <span class="self-ref">IfcStrippedOptional</span>[] Addresses;<br/>
+&nbsp;&nbsp;private <span class="self-ref">IfcStrippedOptional</span>[] IsRelatedBy;<br/>
+&nbsp;&nbsp;private <span class="self-ref">IfcStrippedOptional</span>[] Relates;<br/>
+&nbsp;&nbsp;private <a href="../../../schema/ifcactorresource/lexical/ifcpersonandorganization.html">IfcPersonAndOrganization</a>[] Engages;<br/>
 &nbsp;}<br/>
 &nbsp;<br/>
 <br/>
-&nbsp;public class <a href="../../../schema/ifcconstraintresource/lexical/ifcmetric.html">IfcMetric</a> extends <a href="../../../schema/ifcconstraintresource/lexical/ifcconstraint.html">IfcConstraint</a><br/>
+&nbsp;public class <a href="../../../schema/ifcactorresource/lexical/ifcperson.html">IfcPerson</a> extends IfcBase<br/>
 &nbsp;{<br/>
-&nbsp;&nbsp;private <a href="../../../schema/ifcconstraintresource/lexical/ifcbenchmarkenum.html">IfcBenchmarkEnum</a> Benchmark;<br/>
-&nbsp;&nbsp;private string ValueSource;<br/>
-&nbsp;&nbsp;private <a href="../../../schema/ifcconstraintresource/lexical/ifcmetricvalueselect.html">IfcMetricValueSelect</a> DataValue;<br/>
-&nbsp;&nbsp;private <span class="self-ref">IfcStrippedOptional</span> ReferencePath;<br/>
+&nbsp;&nbsp;private string Identification;<br/>
+&nbsp;&nbsp;private string FamilyName;<br/>
+&nbsp;&nbsp;private string GivenName;<br/>
+&nbsp;&nbsp;private string[] MiddleNames;<br/>
+&nbsp;&nbsp;private string[] PrefixTitles;<br/>
+&nbsp;&nbsp;private string[] SuffixTitles;<br/>
+&nbsp;&nbsp;private <span class="self-ref">IfcStrippedOptional</span>[] Roles;<br/>
+&nbsp;&nbsp;private <span class="self-ref">IfcStrippedOptional</span>[] Addresses;<br/>
+&nbsp;&nbsp;private <a href="../../../schema/ifcactorresource/lexical/ifcpersonandorganization.html">IfcPersonAndOrganization</a>[] EngagedIn;<br/>
 &nbsp;}<br/>
 &nbsp;<br/>
 <br/>
-&nbsp;/* <a href="../../../schema/ifcdatetimeresource/lexical/ifcdate.html">IfcDate</a> : STRING (Java does not support structures, so usage of defined types are inline for efficiency.) */<br/>
-&nbsp;<br/>
-<br/>
-&nbsp;/* <a href="../../../schema/ifcexternalreferenceresource/lexical/ifcurireference.html">IfcURIReference</a> : STRING (Java does not support structures, so usage of defined types are inline for efficiency.) */<br/>
-&nbsp;<br/>
-<br/>
-&nbsp;public interface <a href="../../../schema/ifcexternalreferenceresource/lexical/ifcclassificationreferenceselect.html">IfcClassificationReferenceSelect</a><br/>
+&nbsp;public class <a href="../../../schema/ifcactorresource/lexical/ifcpersonandorganization.html">IfcPersonAndOrganization</a> extends IfcBase<br/>
 &nbsp;{<br/>
+&nbsp;&nbsp;private <a href="../../../schema/ifcactorresource/lexical/ifcperson.html">IfcPerson</a> ThePerson;<br/>
+&nbsp;&nbsp;private <a href="../../../schema/ifcactorresource/lexical/ifcorganization.html">IfcOrganization</a> TheOrganization;<br/>
+&nbsp;&nbsp;private <span class="self-ref">IfcStrippedOptional</span>[] Roles;<br/>
 &nbsp;}<br/>
 &nbsp;<br/>
 <br/>
@@ -276,7 +270,7 @@
 &nbsp;}<br/>
 &nbsp;<br/>
 <br/>
-&nbsp;public interface <a href="../../../schema/ifcexternalreferenceresource/lexical/ifcdocumentselect.html">IfcDocumentSelect</a><br/>
+&nbsp;public interface <a href="../../../schema/ifcexternalreferenceresource/lexical/ifclibraryselect.html">IfcLibrarySelect</a><br/>
 &nbsp;{<br/>
 &nbsp;}<br/>
 &nbsp;<br/>
@@ -297,45 +291,11 @@
 <br/>
 &nbsp;public class <a href="../../../schema/ifcexternalreferenceresource/lexical/ifcclassificationreference.html">IfcClassificationReference</a> extends <a href="../../../schema/ifcexternalreferenceresource/lexical/ifcexternalreference.html">IfcExternalReference</a><br/>
 &nbsp;{<br/>
-&nbsp;&nbsp;private <a href="../../../schema/ifcexternalreferenceresource/lexical/ifcclassificationreferenceselect.html">IfcClassificationReferenceSelect</a> ReferencedSource;<br/>
+&nbsp;&nbsp;private <span class="self-ref">IfcStrippedOptional</span> ReferencedSource;<br/>
 &nbsp;&nbsp;private string Description;<br/>
 &nbsp;&nbsp;private string Sort;<br/>
 &nbsp;&nbsp;private <a href="../../../schema/ifckernel/lexical/ifcrelassociatesclassification.html">IfcRelAssociatesClassification</a>[] ClassificationRefForObjects;<br/>
 &nbsp;&nbsp;private <a href="../../../schema/ifcexternalreferenceresource/lexical/ifcclassificationreference.html">IfcClassificationReference</a>[] HasReferences;<br/>
-&nbsp;}<br/>
-&nbsp;<br/>
-<br/>
-&nbsp;public class <a href="../../../schema/ifcexternalreferenceresource/lexical/ifcdocumentinformation.html">IfcDocumentInformation</a> extends <a href="../../../schema/ifcexternalreferenceresource/lexical/ifcexternalinformation.html">IfcExternalInformation</a><br/>
-&nbsp;{<br/>
-&nbsp;&nbsp;private string Identification;<br/>
-&nbsp;&nbsp;private string Name;<br/>
-&nbsp;&nbsp;private string Description;<br/>
-&nbsp;&nbsp;private string Location;<br/>
-&nbsp;&nbsp;private string Purpose;<br/>
-&nbsp;&nbsp;private string IntendedUse;<br/>
-&nbsp;&nbsp;private string Scope;<br/>
-&nbsp;&nbsp;private string Revision;<br/>
-&nbsp;&nbsp;private <span class="self-ref">IfcStrippedOptional</span> DocumentOwner;<br/>
-&nbsp;&nbsp;private <span class="self-ref">IfcStrippedOptional</span>[] Editors;<br/>
-&nbsp;&nbsp;private string CreationTime;<br/>
-&nbsp;&nbsp;private string LastRevisionTime;<br/>
-&nbsp;&nbsp;private string ElectronicFormat;<br/>
-&nbsp;&nbsp;private string ValidFrom;<br/>
-&nbsp;&nbsp;private string ValidUntil;<br/>
-&nbsp;&nbsp;private <span class="self-ref">IfcStrippedOptional</span> Confidentiality;<br/>
-&nbsp;&nbsp;private <span class="self-ref">IfcStrippedOptional</span> Status;<br/>
-&nbsp;&nbsp;private <a href="../../../schema/ifckernel/lexical/ifcrelassociatesdocument.html">IfcRelAssociatesDocument</a>[] DocumentInfoForObjects;<br/>
-&nbsp;&nbsp;private <a href="../../../schema/ifcexternalreferenceresource/lexical/ifcdocumentreference.html">IfcDocumentReference</a>[] HasDocumentReferences;<br/>
-&nbsp;&nbsp;private <span class="self-ref">IfcStrippedOptional</span>[] IsPointedTo;<br/>
-&nbsp;&nbsp;private <span class="self-ref">IfcStrippedOptional</span>[] IsPointer;<br/>
-&nbsp;}<br/>
-&nbsp;<br/>
-<br/>
-&nbsp;public class <a href="../../../schema/ifcexternalreferenceresource/lexical/ifcdocumentreference.html">IfcDocumentReference</a> extends <a href="../../../schema/ifcexternalreferenceresource/lexical/ifcexternalreference.html">IfcExternalReference</a><br/>
-&nbsp;{<br/>
-&nbsp;&nbsp;private string Description;<br/>
-&nbsp;&nbsp;private <a href="../../../schema/ifcexternalreferenceresource/lexical/ifcdocumentinformation.html">IfcDocumentInformation</a> ReferencedDocument;<br/>
-&nbsp;&nbsp;private <a href="../../../schema/ifckernel/lexical/ifcrelassociatesdocument.html">IfcRelAssociatesDocument</a>[] DocumentRefForObjects;<br/>
 &nbsp;}<br/>
 &nbsp;<br/>
 <br/>
@@ -353,10 +313,71 @@
 &nbsp;}<br/>
 &nbsp;<br/>
 <br/>
-&nbsp;/* <a href="../../../schema/ifcmeasureresource/lexical/ifcidentifier.html">IfcIdentifier</a> : STRING (Java does not support structures, so usage of defined types are inline for efficiency.) */<br/>
+&nbsp;public class <a href="../../../schema/ifcexternalreferenceresource/lexical/ifclibraryinformation.html">IfcLibraryInformation</a> extends <a href="../../../schema/ifcexternalreferenceresource/lexical/ifcexternalinformation.html">IfcExternalInformation</a><br/>
+&nbsp;{<br/>
+&nbsp;&nbsp;private string Name;<br/>
+&nbsp;&nbsp;private string Version;<br/>
+&nbsp;&nbsp;private <a href="../../../schema/ifcactorresource/lexical/ifcactorselect.html">IfcActorSelect</a> Publisher;<br/>
+&nbsp;&nbsp;private string VersionDate;<br/>
+&nbsp;&nbsp;private string Location;<br/>
+&nbsp;&nbsp;private string Description;<br/>
+&nbsp;&nbsp;private <a href="../../../schema/ifckernel/lexical/ifcrelassociateslibrary.html">IfcRelAssociatesLibrary</a>[] LibraryInfoForObjects;<br/>
+&nbsp;&nbsp;private <a href="../../../schema/ifcexternalreferenceresource/lexical/ifclibraryreference.html">IfcLibraryReference</a>[] HasLibraryReferences;<br/>
+&nbsp;}<br/>
 &nbsp;<br/>
 <br/>
-&nbsp;/* <a href="../../../schema/ifcmeasureresource/lexical/ifcinteger.html">IfcInteger</a> : INTEGER (Java does not support structures, so usage of defined types are inline for efficiency.) */<br/>
+&nbsp;public class <a href="../../../schema/ifcexternalreferenceresource/lexical/ifclibraryreference.html">IfcLibraryReference</a> extends <a href="../../../schema/ifcexternalreferenceresource/lexical/ifcexternalreference.html">IfcExternalReference</a><br/>
+&nbsp;{<br/>
+&nbsp;&nbsp;private string Description;<br/>
+&nbsp;&nbsp;private <a href="../../../schema/ifcmeasureresource/lexical/ifcidentifier.html">IfcIdentifier</a> Language;<br/>
+&nbsp;&nbsp;private <a href="../../../schema/ifcexternalreferenceresource/lexical/ifclibraryinformation.html">IfcLibraryInformation</a> ReferencedLibrary;<br/>
+&nbsp;&nbsp;private <a href="../../../schema/ifckernel/lexical/ifcrelassociateslibrary.html">IfcRelAssociatesLibrary</a>[] LibraryRefForObjects;<br/>
+&nbsp;}<br/>
+&nbsp;<br/>
+<br/>
+&nbsp;public interface <a href="../../../schema/ifcmaterialresource/lexical/ifcmaterialselect.html">IfcMaterialSelect</a><br/>
+&nbsp;{<br/>
+&nbsp;}<br/>
+&nbsp;<br/>
+<br/>
+&nbsp;public class <a href="../../../schema/ifcmaterialresource/lexical/ifcmaterial.html">IfcMaterial</a> extends <a href="../../../schema/ifcmaterialresource/lexical/ifcmaterialdefinition.html">IfcMaterialDefinition</a><br/>
+&nbsp;{<br/>
+&nbsp;&nbsp;private string Name;<br/>
+&nbsp;&nbsp;private string Description;<br/>
+&nbsp;&nbsp;private string Category;<br/>
+&nbsp;&nbsp;private <span class="self-ref">IfcStrippedOptional</span>[] HasRepresentation;<br/>
+&nbsp;&nbsp;private <span class="self-ref">IfcStrippedOptional</span>[] IsRelatedWith;<br/>
+&nbsp;&nbsp;private <span class="self-ref">IfcStrippedOptional</span>[] RelatesTo;<br/>
+&nbsp;}<br/>
+&nbsp;<br/>
+<br/>
+&nbsp;public class <a href="../../../schema/ifcmaterialresource/lexical/ifcmaterialdefinition.html">IfcMaterialDefinition</a> extends IfcBase<br/>
+&nbsp;{<br/>
+&nbsp;&nbsp;private <a href="../../../schema/ifcproductextension/lexical/ifcrelassociatesmaterial.html">IfcRelAssociatesMaterial</a>[] AssociatedTo;<br/>
+&nbsp;&nbsp;private <span class="self-ref">IfcStrippedOptional</span>[] HasExternalReferences;<br/>
+&nbsp;&nbsp;private <a href="../../../schema/ifcmaterialresource/lexical/ifcmaterialproperties.html">IfcMaterialProperties</a>[] HasProperties;<br/>
+&nbsp;}<br/>
+&nbsp;<br/>
+<br/>
+&nbsp;public class <a href="../../../schema/ifcmaterialresource/lexical/ifcmateriallist.html">IfcMaterialList</a> extends IfcBase<br/>
+&nbsp;{<br/>
+&nbsp;&nbsp;private <a href="../../../schema/ifcmaterialresource/lexical/ifcmaterial.html">IfcMaterial</a>[] Materials;<br/>
+&nbsp;}<br/>
+&nbsp;<br/>
+<br/>
+&nbsp;public class <a href="../../../schema/ifcmaterialresource/lexical/ifcmaterialproperties.html">IfcMaterialProperties</a> extends <a href="../../../schema/ifcpropertyresource/lexical/ifcextendedproperties.html">IfcExtendedProperties</a><br/>
+&nbsp;{<br/>
+&nbsp;&nbsp;private <a href="../../../schema/ifcmaterialresource/lexical/ifcmaterialdefinition.html">IfcMaterialDefinition</a> Material;<br/>
+&nbsp;}<br/>
+&nbsp;<br/>
+<br/>
+&nbsp;public class <a href="../../../schema/ifcmaterialresource/lexical/ifcmaterialusagedefinition.html">IfcMaterialUsageDefinition</a> extends IfcBase<br/>
+&nbsp;{<br/>
+&nbsp;&nbsp;private <a href="../../../schema/ifcproductextension/lexical/ifcrelassociatesmaterial.html">IfcRelAssociatesMaterial</a>[] AssociatedTo;<br/>
+&nbsp;}<br/>
+&nbsp;<br/>
+<br/>
+&nbsp;/* <a href="../../../schema/ifcmeasureresource/lexical/ifcidentifier.html">IfcIdentifier</a> : STRING (Java does not support structures, so usage of defined types are inline for efficiency.) */<br/>
 &nbsp;<br/>
 <br/>
 &nbsp;/* <a href="../../../schema/ifcmeasureresource/lexical/ifclabel.html">IfcLabel</a> : STRING (Java does not support structures, so usage of defined types are inline for efficiency.) */<br/>
@@ -365,105 +386,7 @@
 &nbsp;/* <a href="../../../schema/ifcmeasureresource/lexical/ifctext.html">IfcText</a> : STRING (Java does not support structures, so usage of defined types are inline for efficiency.) */<br/>
 &nbsp;<br/>
 <br/>
-&nbsp;public enum <a href="../../../schema/ifcmeasureresource/lexical/ifcderivedunitenum.html">IfcDerivedUnitEnum</a><br/>
-&nbsp;{<br/>
-&nbsp;&nbsp;ANGULARVELOCITYUNIT,<br/>
-&nbsp;&nbsp;AREADENSITYUNIT,<br/>
-&nbsp;&nbsp;COMPOUNDPLANEANGLEUNIT,<br/>
-&nbsp;&nbsp;DYNAMICVISCOSITYUNIT,<br/>
-&nbsp;&nbsp;HEATFLUXDENSITYUNIT,<br/>
-&nbsp;&nbsp;INTEGERCOUNTRATEUNIT,<br/>
-&nbsp;&nbsp;ISOTHERMALMOISTURECAPACITYUNIT,<br/>
-&nbsp;&nbsp;KINEMATICVISCOSITYUNIT,<br/>
-&nbsp;&nbsp;LINEARVELOCITYUNIT,<br/>
-&nbsp;&nbsp;MASSDENSITYUNIT,<br/>
-&nbsp;&nbsp;MASSFLOWRATEUNIT,<br/>
-&nbsp;&nbsp;MOISTUREDIFFUSIVITYUNIT,<br/>
-&nbsp;&nbsp;MOLECULARWEIGHTUNIT,<br/>
-&nbsp;&nbsp;SPECIFICHEATCAPACITYUNIT,<br/>
-&nbsp;&nbsp;THERMALADMITTANCEUNIT,<br/>
-&nbsp;&nbsp;THERMALCONDUCTANCEUNIT,<br/>
-&nbsp;&nbsp;THERMALRESISTANCEUNIT,<br/>
-&nbsp;&nbsp;THERMALTRANSMITTANCEUNIT,<br/>
-&nbsp;&nbsp;VAPORPERMEABILITYUNIT,<br/>
-&nbsp;&nbsp;VOLUMETRICFLOWRATEUNIT,<br/>
-&nbsp;&nbsp;ROTATIONALFREQUENCYUNIT,<br/>
-&nbsp;&nbsp;TORQUEUNIT,<br/>
-&nbsp;&nbsp;MOMENTOFINERTIAUNIT,<br/>
-&nbsp;&nbsp;LINEARMOMENTUNIT,<br/>
-&nbsp;&nbsp;LINEARFORCEUNIT,<br/>
-&nbsp;&nbsp;PLANARFORCEUNIT,<br/>
-&nbsp;&nbsp;MODULUSOFELASTICITYUNIT,<br/>
-&nbsp;&nbsp;SHEARMODULUSUNIT,<br/>
-&nbsp;&nbsp;LINEARSTIFFNESSUNIT,<br/>
-&nbsp;&nbsp;ROTATIONALSTIFFNESSUNIT,<br/>
-&nbsp;&nbsp;MODULUSOFSUBGRADEREACTIONUNIT,<br/>
-&nbsp;&nbsp;ACCELERATIONUNIT,<br/>
-&nbsp;&nbsp;CURVATUREUNIT,<br/>
-&nbsp;&nbsp;HEATINGVALUEUNIT,<br/>
-&nbsp;&nbsp;IONCONCENTRATIONUNIT,<br/>
-&nbsp;&nbsp;LUMINOUSINTENSITYDISTRIBUTIONUNIT,<br/>
-&nbsp;&nbsp;MASSPERLENGTHUNIT,<br/>
-&nbsp;&nbsp;MODULUSOFLINEARSUBGRADEREACTIONUNIT,<br/>
-&nbsp;&nbsp;MODULUSOFROTATIONALSUBGRADEREACTIONUNIT,<br/>
-&nbsp;&nbsp;PHUNIT,<br/>
-&nbsp;&nbsp;ROTATIONALMASSUNIT,<br/>
-&nbsp;&nbsp;SECTIONAREAINTEGRALUNIT,<br/>
-&nbsp;&nbsp;SECTIONMODULUSUNIT,<br/>
-&nbsp;&nbsp;SOUNDPOWERLEVELUNIT,<br/>
-&nbsp;&nbsp;SOUNDPOWERUNIT,<br/>
-&nbsp;&nbsp;SOUNDPRESSURELEVELUNIT,<br/>
-&nbsp;&nbsp;SOUNDPRESSUREUNIT,<br/>
-&nbsp;&nbsp;TEMPERATUREGRADIENTUNIT,<br/>
-&nbsp;&nbsp;TEMPERATURERATEOFCHANGEUNIT,<br/>
-&nbsp;&nbsp;THERMALEXPANSIONCOEFFICIENTUNIT,<br/>
-&nbsp;&nbsp;WARPINGCONSTANTUNIT,<br/>
-&nbsp;&nbsp;WARPINGMOMENTUNIT,<br/>
-&nbsp;&nbsp;USERDEFINED,<br/>
-&nbsp;}<br/>
-&nbsp;<br/>
-<br/>
-&nbsp;public enum <a href="../../../schema/ifcmeasureresource/lexical/ifcunitenum.html">IfcUnitEnum</a><br/>
-&nbsp;{<br/>
-&nbsp;&nbsp;ABSORBEDDOSEUNIT,<br/>
-&nbsp;&nbsp;AMOUNTOFSUBSTANCEUNIT,<br/>
-&nbsp;&nbsp;AREAUNIT,<br/>
-&nbsp;&nbsp;DOSEEQUIVALENTUNIT,<br/>
-&nbsp;&nbsp;ELECTRICCAPACITANCEUNIT,<br/>
-&nbsp;&nbsp;ELECTRICCHARGEUNIT,<br/>
-&nbsp;&nbsp;ELECTRICCONDUCTANCEUNIT,<br/>
-&nbsp;&nbsp;ELECTRICCURRENTUNIT,<br/>
-&nbsp;&nbsp;ELECTRICRESISTANCEUNIT,<br/>
-&nbsp;&nbsp;ELECTRICVOLTAGEUNIT,<br/>
-&nbsp;&nbsp;ENERGYUNIT,<br/>
-&nbsp;&nbsp;FORCEUNIT,<br/>
-&nbsp;&nbsp;FREQUENCYUNIT,<br/>
-&nbsp;&nbsp;ILLUMINANCEUNIT,<br/>
-&nbsp;&nbsp;INDUCTANCEUNIT,<br/>
-&nbsp;&nbsp;LENGTHUNIT,<br/>
-&nbsp;&nbsp;LUMINOUSFLUXUNIT,<br/>
-&nbsp;&nbsp;LUMINOUSINTENSITYUNIT,<br/>
-&nbsp;&nbsp;MAGNETICFLUXDENSITYUNIT,<br/>
-&nbsp;&nbsp;MAGNETICFLUXUNIT,<br/>
-&nbsp;&nbsp;MASSUNIT,<br/>
-&nbsp;&nbsp;PLANEANGLEUNIT,<br/>
-&nbsp;&nbsp;POWERUNIT,<br/>
-&nbsp;&nbsp;PRESSUREUNIT,<br/>
-&nbsp;&nbsp;RADIOACTIVITYUNIT,<br/>
-&nbsp;&nbsp;SOLIDANGLEUNIT,<br/>
-&nbsp;&nbsp;THERMODYNAMICTEMPERATUREUNIT,<br/>
-&nbsp;&nbsp;TIMEUNIT,<br/>
-&nbsp;&nbsp;VOLUMEUNIT,<br/>
-&nbsp;&nbsp;USERDEFINED,<br/>
-&nbsp;}<br/>
-&nbsp;<br/>
-<br/>
 &nbsp;public interface <a href="../../../schema/ifcmeasureresource/lexical/ifcsimplevalue.html">IfcSimpleValue</a><br/>
-&nbsp;{<br/>
-&nbsp;}<br/>
-&nbsp;<br/>
-<br/>
-&nbsp;public interface <a href="../../../schema/ifcmeasureresource/lexical/ifcunit.html">IfcUnit</a><br/>
 &nbsp;{<br/>
 &nbsp;}<br/>
 &nbsp;<br/>
@@ -473,51 +396,18 @@
 &nbsp;}<br/>
 &nbsp;<br/>
 <br/>
-&nbsp;public class <a href="../../../schema/ifcmeasureresource/lexical/ifcderivedunit.html">IfcDerivedUnit</a> extends IfcBase<br/>
+&nbsp;public class <a href="../../../schema/ifcpropertyresource/lexical/ifccomplexproperty.html">IfcComplexProperty</a> extends <a href="../../../schema/ifcpropertyresource/lexical/ifcproperty.html">IfcProperty</a><br/>
 &nbsp;{<br/>
-&nbsp;&nbsp;private <a href="../../../schema/ifcmeasureresource/lexical/ifcderivedunitelement.html">IfcDerivedUnitElement</a>[] Elements;<br/>
-&nbsp;&nbsp;private <a href="../../../schema/ifcmeasureresource/lexical/ifcderivedunitenum.html">IfcDerivedUnitEnum</a> UnitType;<br/>
-&nbsp;&nbsp;private string UserDefinedType;<br/>
-&nbsp;&nbsp;private <a href="../../../schema/ifcmeasureresource/lexical/ifcdimensionalexponents.html">IfcDimensionalExponents</a> Dimensions;<br/>
+&nbsp;&nbsp;private string UsageName;<br/>
+&nbsp;&nbsp;private <a href="../../../schema/ifcpropertyresource/lexical/ifcproperty.html">IfcProperty</a>[] HasProperties;<br/>
 &nbsp;}<br/>
 &nbsp;<br/>
 <br/>
-&nbsp;public class <a href="../../../schema/ifcmeasureresource/lexical/ifcderivedunitelement.html">IfcDerivedUnitElement</a> extends IfcBase<br/>
+&nbsp;public class <a href="../../../schema/ifcpropertyresource/lexical/ifcextendedproperties.html">IfcExtendedProperties</a> extends <a href="../../../schema/ifcpropertyresource/lexical/ifcpropertyabstraction.html">IfcPropertyAbstraction</a><br/>
 &nbsp;{<br/>
-&nbsp;&nbsp;private <a href="../../../schema/ifcmeasureresource/lexical/ifcnamedunit.html">IfcNamedUnit</a> Unit;<br/>
-&nbsp;&nbsp;private INTEGER Exponent;<br/>
-&nbsp;}<br/>
-&nbsp;<br/>
-<br/>
-&nbsp;public class <a href="../../../schema/ifcmeasureresource/lexical/ifcdimensionalexponents.html">IfcDimensionalExponents</a> extends IfcBase<br/>
-&nbsp;{<br/>
-&nbsp;&nbsp;private INTEGER LengthExponent;<br/>
-&nbsp;&nbsp;private INTEGER MassExponent;<br/>
-&nbsp;&nbsp;private INTEGER TimeExponent;<br/>
-&nbsp;&nbsp;private INTEGER ElectricCurrentExponent;<br/>
-&nbsp;&nbsp;private INTEGER ThermodynamicTemperatureExponent;<br/>
-&nbsp;&nbsp;private INTEGER AmountOfSubstanceExponent;<br/>
-&nbsp;&nbsp;private INTEGER LuminousIntensityExponent;<br/>
-&nbsp;}<br/>
-&nbsp;<br/>
-<br/>
-&nbsp;public class <a href="../../../schema/ifcmeasureresource/lexical/ifcmeasurewithunit.html">IfcMeasureWithUnit</a> extends IfcBase<br/>
-&nbsp;{<br/>
-&nbsp;&nbsp;private <a href="../../../schema/ifcmeasureresource/lexical/ifcvalue.html">IfcValue</a> ValueComponent;<br/>
-&nbsp;&nbsp;private <a href="../../../schema/ifcmeasureresource/lexical/ifcunit.html">IfcUnit</a> UnitComponent;<br/>
-&nbsp;}<br/>
-&nbsp;<br/>
-<br/>
-&nbsp;public class <a href="../../../schema/ifcmeasureresource/lexical/ifcmonetaryunit.html">IfcMonetaryUnit</a> extends IfcBase<br/>
-&nbsp;{<br/>
-&nbsp;&nbsp;private string Currency;<br/>
-&nbsp;}<br/>
-&nbsp;<br/>
-<br/>
-&nbsp;public class <a href="../../../schema/ifcmeasureresource/lexical/ifcnamedunit.html">IfcNamedUnit</a> extends IfcBase<br/>
-&nbsp;{<br/>
-&nbsp;&nbsp;private <a href="../../../schema/ifcmeasureresource/lexical/ifcdimensionalexponents.html">IfcDimensionalExponents</a> Dimensions;<br/>
-&nbsp;&nbsp;private <a href="../../../schema/ifcmeasureresource/lexical/ifcunitenum.html">IfcUnitEnum</a> UnitType;<br/>
+&nbsp;&nbsp;private string Name;<br/>
+&nbsp;&nbsp;private string Description;<br/>
+&nbsp;&nbsp;private <a href="../../../schema/ifcpropertyresource/lexical/ifcproperty.html">IfcProperty</a>[] Properties;<br/>
 &nbsp;}<br/>
 &nbsp;<br/>
 <br/>
@@ -528,7 +418,7 @@
 &nbsp;&nbsp;private <a href="../../../schema/ifckernel/lexical/ifcpropertyset.html">IfcPropertySet</a>[] PartOfPset;<br/>
 &nbsp;&nbsp;private <span class="self-ref">IfcStrippedOptional</span>[] PropertyForDependance;<br/>
 &nbsp;&nbsp;private <span class="self-ref">IfcStrippedOptional</span>[] PropertyDependsOn;<br/>
-&nbsp;&nbsp;private <span class="self-ref">IfcStrippedOptional</span>[] PartOfComplex;<br/>
+&nbsp;&nbsp;private <a href="../../../schema/ifcpropertyresource/lexical/ifccomplexproperty.html">IfcComplexProperty</a>[] PartOfComplex;<br/>
 &nbsp;&nbsp;private <span class="self-ref">IfcStrippedOptional</span>[] HasConstraints;<br/>
 &nbsp;&nbsp;private <span class="self-ref">IfcStrippedOptional</span>[] HasApprovals;<br/>
 &nbsp;}<br/>
@@ -540,18 +430,12 @@
 &nbsp;}<br/>
 &nbsp;<br/>
 <br/>
-&nbsp;/* <a href="../../../schema/ifcutilityresource/lexical/ifcgloballyuniqueid.html">IfcGloballyUniqueId</a> : STRING (Java does not support structures, so usage of defined types are inline for efficiency.) */<br/>
+&nbsp;public class <a href="../../../schema/ifcpropertyresource/lexical/ifcsimpleproperty.html">IfcSimpleProperty</a> extends <a href="../../../schema/ifcpropertyresource/lexical/ifcproperty.html">IfcProperty</a><br/>
+&nbsp;{<br/>
+&nbsp;}<br/>
 &nbsp;<br/>
 <br/>
-&nbsp;public class <a href="../../../schema/ifcutilityresource/lexical/ifctable.html">IfcTable</a> extends IfcBase<br/>
-&nbsp;{<br/>
-&nbsp;&nbsp;private string Name;<br/>
-&nbsp;&nbsp;private <span class="self-ref">IfcStrippedOptional</span>[] Rows;<br/>
-&nbsp;&nbsp;private <span class="self-ref">IfcStrippedOptional</span>[] Columns;<br/>
-&nbsp;&nbsp;private int NumberOfCellsInRow;<br/>
-&nbsp;&nbsp;private int NumberOfHeadings;<br/>
-&nbsp;&nbsp;private int NumberOfDataRows;<br/>
-&nbsp;}<br/>
+&nbsp;/* <a href="../../../schema/ifcutilityresource/lexical/ifcgloballyuniqueid.html">IfcGloballyUniqueId</a> : STRING (Java does not support structures, so usage of defined types are inline for efficiency.) */<br/>
 &nbsp;<br/>
 <br/>
 <p></p>
