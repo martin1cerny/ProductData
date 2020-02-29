@@ -36,9 +36,9 @@
 <section>
 <h5 class="num">Semantic definitions at the entity</h5>
 <details open="open"><summary>Entity definition</summary><p><span class="self-ref">IfcPropertyDefinition</span> defines the generalization of all characteristics (i.e. a grouping of individual properties), that may be assigned to objects. Currently, subtypes of <span class="self-ref">IfcPropertyDefinition</span> include property set occurrences, property set templates, and property templates.</p>
-<p>\\\\\\\\\\\* \\\\\\\\\\\*\\\\\\\\\\\*Property set template\\\\\\\\\\\*\\\\\\\\\\\* - <a href="../../ifckernel/lexical/ifcpropertysettemplate.html">IfcPropertySetTemplate</a>, a collection of property templates that determine the definition of properties used within a project context.
-\\\\\\\\\\\* \\\\\\\\\\\*\\\\\\\\\\\*Property template\\\\\\\\\\\*\\\\\\\\\\\* - <a href="../../ifckernel/lexical/ifcpropertytemplate.html">IfcPropertyTemplate</a>, a single template that determines the definition of a particular property used in the same project context. The template may determine the name, description, data type, the unit, or a standard expression for each property that is based on that template.
-\\\\\\\\\\\* \\\\\\\\\\\*\\\\\\\\\\\*Property set occurrence\\\\\\\\\\\*\\\\\\\\\\\* - <a href="../../ifckernel/lexical/ifcpropertyset.html">IfcPropertySet</a>, a set of individual properties (that may or may not be determined by a property template) holding individual values, measure types and units, and are associated to an object occurrence or object type.</p>
+<p>\\\\\\\\\\\\\* \\\\\\\\\\\\\<i>\\\\\\\\\\\\\<i>Property set template\\\\\\\\\\\\\</i>\\\\\\\\\\\\\</i> - <a href="../../ifckernel/lexical/ifcpropertysettemplate.html">IfcPropertySetTemplate</a>, a collection of property templates that determine the definition of properties used within a project context.
+\\\\\\\\\\\\\* \\\\\\\\\\\\\<i>\\\\\\\\\\\\\<i>Property template\\\\\\\\\\\\\</i>\\\\\\\\\\\\\</i> - <a href="../../ifckernel/lexical/ifcpropertytemplate.html">IfcPropertyTemplate</a>, a single template that determines the definition of a particular property used in the same project context. The template may determine the name, description, data type, the unit, or a standard expression for each property that is based on that template.
+\\\\\\\\\\\\\* \\\\\\\\\\\\\<i>\\\\\\\\\\\\\<i>Property set occurrence\\\\\\\\\\\\\</i>\\\\\\\\\\\\\</i> - <i>IfcPropertySet</i>, a set of individual properties (that may or may not be determined by a property template) holding individual values, measure types and units, and are associated to an object occurrence or object type.</p>
 <blockquote class="note">
 <p>NOTE  The subtype hierarchy of <span class="self-ref">IfcPropertyDefinition</span> also includes statically defined property sets as <i>IfcPreDefinedPropertySet</i>. Those are rarely used collections of fixed attributes combined in an entity definition. The <i>IfcPreDefinedPropertySet</i> can not be determined by an <a href="../../ifckernel/lexical/ifcpropertysettemplate.html">IfcPropertySetTemplate</a>.</p>
 </blockquote>
@@ -46,9 +46,9 @@
 <p>NOTE  Individual properties, (subtypes of <a href="../../ifcpropertyresource/lexical/ifcproperty.html">IfcProperty</a>), are currently not included in the subtype hierarchy of <span class="self-ref">IfcPropertyDefinition</span>. This anomaly is due to upward compatibility reasons with earlier releases of this standard.</p>
 </blockquote>
 <p>Property definitions define information that is shared among multiple instances of objects, either object occurrences or object types. <span class="self-ref">IfcPropertyDefinition</span>'s (by their instantiable subtypes) can participate within the following relationships:</p>
-<p>\\\\\\\\\\\* \\\\\\\\\\\*\\\\\\\\\\\*Assignment to a project context\\\\\\\\\\\*\\\\\\\\\\\* - an <i>HasContext</i> relationship to <a href="../../ifckernel/lexical/ifcreldeclares.html">IfcRelDeclares</a> that establishes the project context in which this property definition is declared. This relationship is predominately applicable to subtypes of <a href="../../ifckernel/lexical/ifcpropertytemplatedefinition.html">IfcPropertyTemplateDefinition</a>.
-\\\\\\\\\\\* \\\\\\\\\\\*\\\\\\\\\\\*Association to external resources\\\\\\\\\\\*\\\\\\\\\\\* - an <i>HasAssociation</i> relationship to <a href="../../ifckernel/lexical/ifcrelassociates.html">IfcRelAssociates</a> that refers to external sources of information (most notably a classification or document) and creates a uni-directional association. There is no dependency implied by the association.</p>
-<p>Subtypes are included in more specific relationships, see <a href="../../ifckernel/lexical/ifcpropertysetdefinition.html">IfcPropertySetDefinition</a> and <a href="../../ifckernel/lexical/ifcpropertytemplatedefinition.html">IfcPropertyTemplateDefinition</a> for details.</p>
+<p>\\\\\\\\\\\\\* \\\\\\\\\\\\\<i>\\\\\\\\\\\\\<i>Assignment to a project context\\\\\\\\\\\\\</i>\\\\\\\\\\\\\</i> - an <i>HasContext</i> relationship to <a href="../../ifckernel/lexical/ifcreldeclares.html">IfcRelDeclares</a> that establishes the project context in which this property definition is declared. This relationship is predominately applicable to subtypes of <a href="../../ifckernel/lexical/ifcpropertytemplatedefinition.html">IfcPropertyTemplateDefinition</a>.
+\\\\\\\\\\\\\* \\\\\\\\\\\\\<i>\\\\\\\\\\\\\<i>Association to external resources\\\\\\\\\\\\\</i>\\\\\\\\\\\\\</i> - an <i>HasAssociation</i> relationship to <a href="../../ifckernel/lexical/ifcrelassociates.html">IfcRelAssociates</a> that refers to external sources of information (most notably a classification or document) and creates a uni-directional association. There is no dependency implied by the association.</p>
+<p>Subtypes are included in more specific relationships, see <i>IfcPropertySetDefinition</i> and <a href="../../ifckernel/lexical/ifcpropertytemplatedefinition.html">IfcPropertyTemplateDefinition</a> for details.</p>
 
 </details>
 <details open="open"><summary>Attribute definitions</summary><table class="attributes">
@@ -64,9 +64,8 @@
 <h5 class="num">Inherited definitions from supertypes</h5>
 <details open="open"><summary>Entity inheritance</summary><img src="../../../diagrams/ifcpropertydefinition.png" usemap="#f"/>
 <map name="f">
-<area shape="rect" coords="30,54,218,66" href="../../../schema/ifckernel/lexical/ifcpropertysetdefinition.html" alt="IfcPropertySetDefinition" />
-<area shape="rect" coords="290,54,478,66" href="../../../schema/ifckernel/lexical/ifcpropertytemplatedefinition.html" alt="IfcPropertyTemplateDefinition" />
-<area shape="rect" coords="6,6,502,18" href="../../../schema/ifckernel/lexical/ifcroot.html" alt="IfcRoot" />
+<area shape="rect" coords="30,54,218,66" href="../../../schema/ifckernel/lexical/ifcpropertytemplatedefinition.html" alt="IfcPropertyTemplateDefinition" />
+<area shape="rect" coords="6,6,242,18" href="../../../schema/ifckernel/lexical/ifcroot.html" alt="IfcRoot" />
 </map>
 </details>
 <details><summary>Attribute inheritance</summary><table class="attributes">
@@ -75,10 +74,16 @@
 <tr><td>1</td><td>GlobalId</td><td><a href="../../ifcutilityresource/lexical/ifcgloballyuniqueid.html">IfcGloballyUniqueId</a></td><td></td><td>
 Assignment of a globally unique identifier within the entire software world.
 </td><td>X</td></tr>
-<tr><td>2</td><td>OwnerHistory</td><td><span class="self-ref">-</span></td><td></td><td>
-<i>This attribute is out of scope for this model view definition and shall not be set.</i></td><td></td></tr>
-<tr><td>3</td><td>Name</td><td><span class="self-ref">-</span></td><td></td><td>
-<i>This attribute is out of scope for this model view definition and shall not be set.</i></td><td></td></tr>
+<tr><td>2</td><td>OwnerHistory</td><td><a href="../../ifcutilityresource/lexical/ifcownerhistory.html">IfcOwnerHistory</a></td><td>? </td><td>
+Assignment of the information about the current ownership of that object, including owning actor, application, local identification and information captured about the recent changes of the object,
+<blockquote class="note">
+NOTE  only the last modification in stored - either as addition, deletion or modification.
+</blockquote>
+
+</td><td>X</td></tr>
+<tr><td>3</td><td>Name</td><td><a href="../../ifcmeasureresource/lexical/ifclabel.html">IfcLabel</a></td><td>? </td><td>
+Optional name for use by the participating software systems or users. For some subtypes of IfcRoot the insertion of the Name attribute may be required. This would be enforced by a where rule.
+</td><td>X</td></tr>
 <tr><td>4</td><td>Description</td><td><span class="self-ref">-</span></td><td></td><td>
 <i>This attribute is out of scope for this model view definition and shall not be set.</i></td><td></td></tr>
 <tr><td colspan="6"><i><a href="../../ifckernel/lexical/ifcpropertydefinition.html">IfcPropertyDefinition</a></i></td></tr>
@@ -99,7 +104,7 @@ Assignment of a globally unique identifier within the entire software world.
 </code></div></details>
 <details><summary>EXPRESS Specification</summary><div class="express"><code class="express">
 <span class="keyword">ENTITY</span> IfcPropertyDefinition<br/>
-&nbsp;<span class="keyword">ABSTRACT</span> <span class="keyword">SUPERTYPE OF</span>(<span class="keyword">ONEOF</span>(<a href="../../ifckernel/lexical/ifcpropertysetdefinition.html">IfcPropertySetDefinition</a>, <a href="../../ifckernel/lexical/ifcpropertytemplatedefinition.html">IfcPropertyTemplateDefinition</a>))<br/>
+&nbsp;<span class="keyword">ABSTRACT</span> <span class="keyword">SUPERTYPE OF</span>(<a href="../../ifckernel/lexical/ifcpropertytemplatedefinition.html">IfcPropertyTemplateDefinition</a>)<br/>
 &nbsp;<span class="keyword">SUBTYPE OF</span> (<a href="../../ifckernel/lexical/ifcroot.html">IfcRoot</a>)<b>;</b><br/>
 &nbsp;<span class="keyword">INVERSE</span><br/>
 &nbsp;&nbsp;HasContext : <span class="keyword">SET</span> [0:1] OF <a href="../../ifckernel/lexical/ifcreldeclares.html">IfcRelDeclares</a> <span class="keyword">FOR</span> RelatedDefinitions;<br/>

@@ -79,6 +79,19 @@ of the material. The information contained in this document is subject to change
 &nbsp;&nbsp;&lt;/xs:complexContent&gt;<br/>
 &nbsp;&lt;/xs:complexType&gt;<br/>
 &nbsp;&lt;!-- element and complex type declarations (for ENTITY definitions) --&gt;<br/>
+&nbsp;&lt;xs:element name=&quot;<a href="../../../schema/ifcutilityresource/lexical/ifcapplication.html">IfcApplication</a>&quot; type=&quot;ifc:<a href="../../../schema/ifcutilityresource/lexical/ifcapplication.html">IfcApplication</a>&quot; substitutionGroup=&quot;ifc:Entity&quot; nillable=&quot;true&quot;/&gt;<br/>
+&nbsp;&lt;xs:complexType name=&quot;<a href="../../../schema/ifcutilityresource/lexical/ifcapplication.html">IfcApplication</a>&quot;&gt;<br/>
+&nbsp;&nbsp;&lt;xs:complexContent&gt;<br/>
+&nbsp;&nbsp;&nbsp;&lt;xs:extension base=&quot;ifc:Entity&quot;&gt;<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&lt;xs:sequence&gt;<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xs:element name=&quot;ApplicationDeveloper&quot; type=&quot;ifc:<a href="../../../schema/ifcactorresource/lexical/ifcorganization.html">IfcOrganization</a>&quot; nillable=&quot;true&quot;/&gt;<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&lt;/xs:sequence&gt;<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&lt;xs:attribute name=&quot;Version&quot; type=&quot;ifc:<a href="../../../schema/ifcmeasureresource/lexical/ifclabel.html">IfcLabel</a>&quot; use=&quot;optional&quot;/&gt;<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&lt;xs:attribute name=&quot;ApplicationFullName&quot; type=&quot;ifc:<a href="../../../schema/ifcmeasureresource/lexical/ifclabel.html">IfcLabel</a>&quot; use=&quot;optional&quot;/&gt;<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&lt;xs:attribute name=&quot;ApplicationIdentifier&quot; type=&quot;ifc:<a href="../../../schema/ifcmeasureresource/lexical/ifcidentifier.html">IfcIdentifier</a>&quot; use=&quot;optional&quot;/&gt;<br/>
+&nbsp;&nbsp;&nbsp;&lt;/xs:extension&gt;<br/>
+&nbsp;&nbsp;&lt;/xs:complexContent&gt;<br/>
+&nbsp;&lt;/xs:complexType&gt;<br/>
 &nbsp;&lt;xs:element name=&quot;<a href="../../../schema/ifcexternalreferenceresource/lexical/ifcclassification.html">IfcClassification</a>&quot; type=&quot;ifc:<a href="../../../schema/ifcexternalreferenceresource/lexical/ifcclassification.html">IfcClassification</a>&quot; substitutionGroup=&quot;ifc:<a href="../../../schema/ifcexternalreferenceresource/lexical/ifcexternalinformation.html">IfcExternalInformation</a>&quot; nillable=&quot;true&quot;/&gt;<br/>
 &nbsp;&lt;xs:complexType name=&quot;<a href="../../../schema/ifcexternalreferenceresource/lexical/ifcclassification.html">IfcClassification</a>&quot;&gt;<br/>
 &nbsp;&nbsp;&lt;xs:complexContent&gt;<br/>
@@ -105,26 +118,6 @@ of the material. The information contained in this document is subject to change
 &nbsp;&nbsp;&nbsp;&lt;xs:extension base=&quot;ifc:<a href="../../../schema/ifcexternalreferenceresource/lexical/ifcexternalreference.html">IfcExternalReference</a>&quot;/&gt;<br/>
 &nbsp;&nbsp;&lt;/xs:complexContent&gt;<br/>
 &nbsp;&lt;/xs:complexType&gt;<br/>
-&nbsp;&lt;xs:element name=&quot;<a href="../../../schema/ifcpropertyresource/lexical/ifccomplexproperty.html">IfcComplexProperty</a>&quot; type=&quot;ifc:<a href="../../../schema/ifcpropertyresource/lexical/ifccomplexproperty.html">IfcComplexProperty</a>&quot; substitutionGroup=&quot;ifc:<a href="../../../schema/ifcpropertyresource/lexical/ifcproperty.html">IfcProperty</a>&quot; nillable=&quot;true&quot;/&gt;<br/>
-&nbsp;&lt;xs:complexType name=&quot;<a href="../../../schema/ifcpropertyresource/lexical/ifccomplexproperty.html">IfcComplexProperty</a>&quot;&gt;<br/>
-&nbsp;&nbsp;&lt;xs:complexContent&gt;<br/>
-&nbsp;&nbsp;&nbsp;&lt;xs:extension base=&quot;ifc:<a href="../../../schema/ifcpropertyresource/lexical/ifcproperty.html">IfcProperty</a>&quot;&gt;<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;&lt;xs:sequence&gt;<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xs:element name=&quot;HasProperties&quot;&gt;<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xs:complexType&gt;<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xs:sequence&gt;<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xs:element ref=&quot;ifc:<a href="../../../schema/ifcpropertyresource/lexical/ifcproperty.html">IfcProperty</a>&quot; maxOccurs=&quot;unbounded&quot;/&gt;<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/xs:sequence&gt;<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xs:attribute ref=&quot;ifc:itemType&quot; fixed=&quot;ifc:<a href="../../../schema/ifcpropertyresource/lexical/ifcproperty.html">IfcProperty</a>&quot;/&gt;<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xs:attribute ref=&quot;ifc:cType&quot; fixed=&quot;set&quot;/&gt;<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xs:attribute ref=&quot;ifc:arraySize&quot; use=&quot;optional&quot;/&gt;<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/xs:complexType&gt;<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/xs:element&gt;<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;&lt;/xs:sequence&gt;<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;&lt;xs:attribute name=&quot;UsageName&quot; type=&quot;ifc:<a href="../../../schema/ifcmeasureresource/lexical/ifcidentifier.html">IfcIdentifier</a>&quot; use=&quot;optional&quot;/&gt;<br/>
-&nbsp;&nbsp;&nbsp;&lt;/xs:extension&gt;<br/>
-&nbsp;&nbsp;&lt;/xs:complexContent&gt;<br/>
-&nbsp;&lt;/xs:complexType&gt;<br/>
 &nbsp;&lt;xs:element name=&quot;<a href="../../../schema/ifckernel/lexical/ifccontext.html">IfcContext</a>&quot; type=&quot;ifc:<a href="../../../schema/ifckernel/lexical/ifccontext.html">IfcContext</a>&quot; abstract=&quot;true&quot; substitutionGroup=&quot;ifc:<a href="../../../schema/ifckernel/lexical/ifcobjectdefinition.html">IfcObjectDefinition</a>&quot; nillable=&quot;true&quot;/&gt;<br/>
 &nbsp;&lt;xs:complexType name=&quot;<a href="../../../schema/ifckernel/lexical/ifccontext.html">IfcContext</a>&quot; abstract=&quot;true&quot;&gt;<br/>
 &nbsp;&nbsp;&lt;xs:complexContent&gt;<br/>
@@ -141,6 +134,7 @@ of the material. The information contained in this document is subject to change
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/xs:complexType&gt;<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/xs:element&gt;<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;&lt;/xs:sequence&gt;<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&lt;xs:attribute name=&quot;Phase&quot; type=&quot;ifc:<a href="../../../schema/ifcmeasureresource/lexical/ifclabel.html">IfcLabel</a>&quot; use=&quot;optional&quot;/&gt;<br/>
 &nbsp;&nbsp;&nbsp;&lt;/xs:extension&gt;<br/>
 &nbsp;&nbsp;&lt;/xs:complexContent&gt;<br/>
 &nbsp;&lt;/xs:complexType&gt;<br/>
@@ -207,7 +201,35 @@ of the material. The information contained in this document is subject to change
 &nbsp;&nbsp;&lt;xs:complexContent&gt;<br/>
 &nbsp;&nbsp;&nbsp;&lt;xs:extension base=&quot;ifc:<a href="../../../schema/ifcmaterialresource/lexical/ifcmaterialdefinition.html">IfcMaterialDefinition</a>&quot;&gt;<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;&lt;xs:attribute name=&quot;Name&quot; type=&quot;ifc:<a href="../../../schema/ifcmeasureresource/lexical/ifclabel.html">IfcLabel</a>&quot; use=&quot;optional&quot;/&gt;<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;&lt;xs:attribute name=&quot;Description&quot; type=&quot;ifc:<a href="../../../schema/ifcmeasureresource/lexical/ifctext.html">IfcText</a>&quot; use=&quot;optional&quot;/&gt;<br/>
+&nbsp;&nbsp;&nbsp;&lt;/xs:extension&gt;<br/>
+&nbsp;&nbsp;&lt;/xs:complexContent&gt;<br/>
+&nbsp;&lt;/xs:complexType&gt;<br/>
+&nbsp;&lt;xs:element name=&quot;<a href="../../../schema/ifcmaterialresource/lexical/ifcmaterialconstituent.html">IfcMaterialConstituent</a>&quot; type=&quot;ifc:<a href="../../../schema/ifcmaterialresource/lexical/ifcmaterialconstituent.html">IfcMaterialConstituent</a>&quot; substitutionGroup=&quot;ifc:<a href="../../../schema/ifcmaterialresource/lexical/ifcmaterialdefinition.html">IfcMaterialDefinition</a>&quot; nillable=&quot;true&quot;/&gt;<br/>
+&nbsp;&lt;xs:complexType name=&quot;<a href="../../../schema/ifcmaterialresource/lexical/ifcmaterialconstituent.html">IfcMaterialConstituent</a>&quot;&gt;<br/>
+&nbsp;&nbsp;&lt;xs:complexContent&gt;<br/>
+&nbsp;&nbsp;&nbsp;&lt;xs:extension base=&quot;ifc:<a href="../../../schema/ifcmaterialresource/lexical/ifcmaterialdefinition.html">IfcMaterialDefinition</a>&quot;&gt;<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&lt;xs:sequence&gt;<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xs:element name=&quot;Material&quot; type=&quot;ifc:<a href="../../../schema/ifcmaterialresource/lexical/ifcmaterial.html">IfcMaterial</a>&quot; nillable=&quot;true&quot;/&gt;<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&lt;/xs:sequence&gt;<br/>
+&nbsp;&nbsp;&nbsp;&lt;/xs:extension&gt;<br/>
+&nbsp;&nbsp;&lt;/xs:complexContent&gt;<br/>
+&nbsp;&lt;/xs:complexType&gt;<br/>
+&nbsp;&lt;xs:element name=&quot;<a href="../../../schema/ifcmaterialresource/lexical/ifcmaterialconstituentset.html">IfcMaterialConstituentSet</a>&quot; type=&quot;ifc:<a href="../../../schema/ifcmaterialresource/lexical/ifcmaterialconstituentset.html">IfcMaterialConstituentSet</a>&quot; substitutionGroup=&quot;ifc:<a href="../../../schema/ifcmaterialresource/lexical/ifcmaterialdefinition.html">IfcMaterialDefinition</a>&quot; nillable=&quot;true&quot;/&gt;<br/>
+&nbsp;&lt;xs:complexType name=&quot;<a href="../../../schema/ifcmaterialresource/lexical/ifcmaterialconstituentset.html">IfcMaterialConstituentSet</a>&quot;&gt;<br/>
+&nbsp;&nbsp;&lt;xs:complexContent&gt;<br/>
+&nbsp;&nbsp;&nbsp;&lt;xs:extension base=&quot;ifc:<a href="../../../schema/ifcmaterialresource/lexical/ifcmaterialdefinition.html">IfcMaterialDefinition</a>&quot;&gt;<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&lt;xs:sequence&gt;<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xs:element name=&quot;MaterialConstituents&quot; nillable=&quot;true&quot; minOccurs=&quot;0&quot;&gt;<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xs:complexType&gt;<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xs:sequence&gt;<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xs:element ref=&quot;ifc:<a href="../../../schema/ifcmaterialresource/lexical/ifcmaterialconstituent.html">IfcMaterialConstituent</a>&quot; maxOccurs=&quot;unbounded&quot;/&gt;<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/xs:sequence&gt;<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xs:attribute ref=&quot;ifc:itemType&quot; fixed=&quot;ifc:<a href="../../../schema/ifcmaterialresource/lexical/ifcmaterialconstituent.html">IfcMaterialConstituent</a>&quot;/&gt;<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xs:attribute ref=&quot;ifc:cType&quot; fixed=&quot;set&quot;/&gt;<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xs:attribute ref=&quot;ifc:arraySize&quot; use=&quot;optional&quot;/&gt;<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/xs:complexType&gt;<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/xs:element&gt;<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&lt;/xs:sequence&gt;<br/>
 &nbsp;&nbsp;&nbsp;&lt;/xs:extension&gt;<br/>
 &nbsp;&nbsp;&lt;/xs:complexContent&gt;<br/>
 &nbsp;&lt;/xs:complexType&gt;<br/>
@@ -230,6 +252,36 @@ of the material. The information contained in this document is subject to change
 &nbsp;&nbsp;&nbsp;&lt;/xs:extension&gt;<br/>
 &nbsp;&nbsp;&lt;/xs:complexContent&gt;<br/>
 &nbsp;&lt;/xs:complexType&gt;<br/>
+&nbsp;&lt;xs:element name=&quot;<a href="../../../schema/ifcmaterialresource/lexical/ifcmateriallayer.html">IfcMaterialLayer</a>&quot; type=&quot;ifc:<a href="../../../schema/ifcmaterialresource/lexical/ifcmateriallayer.html">IfcMaterialLayer</a>&quot; substitutionGroup=&quot;ifc:<a href="../../../schema/ifcmaterialresource/lexical/ifcmaterialdefinition.html">IfcMaterialDefinition</a>&quot; nillable=&quot;true&quot;/&gt;<br/>
+&nbsp;&lt;xs:complexType name=&quot;<a href="../../../schema/ifcmaterialresource/lexical/ifcmateriallayer.html">IfcMaterialLayer</a>&quot;&gt;<br/>
+&nbsp;&nbsp;&lt;xs:complexContent&gt;<br/>
+&nbsp;&nbsp;&nbsp;&lt;xs:extension base=&quot;ifc:<a href="../../../schema/ifcmaterialresource/lexical/ifcmaterialdefinition.html">IfcMaterialDefinition</a>&quot;&gt;<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&lt;xs:sequence&gt;<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xs:element name=&quot;Material&quot; type=&quot;ifc:<a href="../../../schema/ifcmaterialresource/lexical/ifcmaterial.html">IfcMaterial</a>&quot; nillable=&quot;true&quot; minOccurs=&quot;0&quot;/&gt;<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&lt;/xs:sequence&gt;<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&lt;xs:attribute name=&quot;LayerThickness&quot; type=&quot;ifc:<a href="../../../schema/ifcmeasureresource/lexical/ifcnonnegativelengthmeasure.html">IfcNonNegativeLengthMeasure</a>&quot; use=&quot;optional&quot;/&gt;<br/>
+&nbsp;&nbsp;&nbsp;&lt;/xs:extension&gt;<br/>
+&nbsp;&nbsp;&lt;/xs:complexContent&gt;<br/>
+&nbsp;&lt;/xs:complexType&gt;<br/>
+&nbsp;&lt;xs:element name=&quot;<a href="../../../schema/ifcmaterialresource/lexical/ifcmateriallayerset.html">IfcMaterialLayerSet</a>&quot; type=&quot;ifc:<a href="../../../schema/ifcmaterialresource/lexical/ifcmateriallayerset.html">IfcMaterialLayerSet</a>&quot; substitutionGroup=&quot;ifc:<a href="../../../schema/ifcmaterialresource/lexical/ifcmaterialdefinition.html">IfcMaterialDefinition</a>&quot; nillable=&quot;true&quot;/&gt;<br/>
+&nbsp;&lt;xs:complexType name=&quot;<a href="../../../schema/ifcmaterialresource/lexical/ifcmateriallayerset.html">IfcMaterialLayerSet</a>&quot;&gt;<br/>
+&nbsp;&nbsp;&lt;xs:complexContent&gt;<br/>
+&nbsp;&nbsp;&nbsp;&lt;xs:extension base=&quot;ifc:<a href="../../../schema/ifcmaterialresource/lexical/ifcmaterialdefinition.html">IfcMaterialDefinition</a>&quot;&gt;<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&lt;xs:sequence&gt;<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xs:element name=&quot;MaterialLayers&quot;&gt;<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xs:complexType&gt;<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xs:sequence&gt;<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xs:element ref=&quot;ifc:<a href="../../../schema/ifcmaterialresource/lexical/ifcmateriallayer.html">IfcMaterialLayer</a>&quot; maxOccurs=&quot;unbounded&quot;/&gt;<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/xs:sequence&gt;<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xs:attribute ref=&quot;ifc:itemType&quot; fixed=&quot;ifc:<a href="../../../schema/ifcmaterialresource/lexical/ifcmateriallayer.html">IfcMaterialLayer</a>&quot;/&gt;<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xs:attribute ref=&quot;ifc:cType&quot; fixed=&quot;list&quot;/&gt;<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xs:attribute ref=&quot;ifc:arraySize&quot; use=&quot;optional&quot;/&gt;<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/xs:complexType&gt;<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/xs:element&gt;<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&lt;/xs:sequence&gt;<br/>
+&nbsp;&nbsp;&nbsp;&lt;/xs:extension&gt;<br/>
+&nbsp;&nbsp;&lt;/xs:complexContent&gt;<br/>
+&nbsp;&lt;/xs:complexType&gt;<br/>
 &nbsp;&lt;xs:element name=&quot;<a href="../../../schema/ifcmaterialresource/lexical/ifcmateriallist.html">IfcMaterialList</a>&quot; type=&quot;ifc:<a href="../../../schema/ifcmaterialresource/lexical/ifcmateriallist.html">IfcMaterialList</a>&quot; substitutionGroup=&quot;ifc:Entity&quot; nillable=&quot;true&quot;/&gt;<br/>
 &nbsp;&lt;xs:complexType name=&quot;<a href="../../../schema/ifcmaterialresource/lexical/ifcmateriallist.html">IfcMaterialList</a>&quot;&gt;<br/>
 &nbsp;&nbsp;&lt;xs:complexContent&gt;<br/>
@@ -241,6 +293,36 @@ of the material. The information contained in this document is subject to change
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xs:element ref=&quot;ifc:<a href="../../../schema/ifcmaterialresource/lexical/ifcmaterial.html">IfcMaterial</a>&quot; maxOccurs=&quot;unbounded&quot;/&gt;<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/xs:sequence&gt;<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xs:attribute ref=&quot;ifc:itemType&quot; fixed=&quot;ifc:<a href="../../../schema/ifcmaterialresource/lexical/ifcmaterial.html">IfcMaterial</a>&quot;/&gt;<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xs:attribute ref=&quot;ifc:cType&quot; fixed=&quot;list&quot;/&gt;<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xs:attribute ref=&quot;ifc:arraySize&quot; use=&quot;optional&quot;/&gt;<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/xs:complexType&gt;<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/xs:element&gt;<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&lt;/xs:sequence&gt;<br/>
+&nbsp;&nbsp;&nbsp;&lt;/xs:extension&gt;<br/>
+&nbsp;&nbsp;&lt;/xs:complexContent&gt;<br/>
+&nbsp;&lt;/xs:complexType&gt;<br/>
+&nbsp;&lt;xs:element name=&quot;<a href="../../../schema/ifcmaterialresource/lexical/ifcmaterialprofile.html">IfcMaterialProfile</a>&quot; type=&quot;ifc:<a href="../../../schema/ifcmaterialresource/lexical/ifcmaterialprofile.html">IfcMaterialProfile</a>&quot; substitutionGroup=&quot;ifc:<a href="../../../schema/ifcmaterialresource/lexical/ifcmaterialdefinition.html">IfcMaterialDefinition</a>&quot; nillable=&quot;true&quot;/&gt;<br/>
+&nbsp;&lt;xs:complexType name=&quot;<a href="../../../schema/ifcmaterialresource/lexical/ifcmaterialprofile.html">IfcMaterialProfile</a>&quot;&gt;<br/>
+&nbsp;&nbsp;&lt;xs:complexContent&gt;<br/>
+&nbsp;&nbsp;&nbsp;&lt;xs:extension base=&quot;ifc:<a href="../../../schema/ifcmaterialresource/lexical/ifcmaterialdefinition.html">IfcMaterialDefinition</a>&quot;&gt;<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&lt;xs:sequence&gt;<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xs:element name=&quot;Material&quot; type=&quot;ifc:<a href="../../../schema/ifcmaterialresource/lexical/ifcmaterial.html">IfcMaterial</a>&quot; nillable=&quot;true&quot; minOccurs=&quot;0&quot;/&gt;<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xs:element name=&quot;Profile&quot; type=&quot;ifc:<a href="../../../schema/ifcprofileresource/lexical/ifcprofiledef.html">IfcProfileDef</a>&quot; nillable=&quot;true&quot;/&gt;<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&lt;/xs:sequence&gt;<br/>
+&nbsp;&nbsp;&nbsp;&lt;/xs:extension&gt;<br/>
+&nbsp;&nbsp;&lt;/xs:complexContent&gt;<br/>
+&nbsp;&lt;/xs:complexType&gt;<br/>
+&nbsp;&lt;xs:element name=&quot;<a href="../../../schema/ifcmaterialresource/lexical/ifcmaterialprofileset.html">IfcMaterialProfileSet</a>&quot; type=&quot;ifc:<a href="../../../schema/ifcmaterialresource/lexical/ifcmaterialprofileset.html">IfcMaterialProfileSet</a>&quot; substitutionGroup=&quot;ifc:<a href="../../../schema/ifcmaterialresource/lexical/ifcmaterialdefinition.html">IfcMaterialDefinition</a>&quot; nillable=&quot;true&quot;/&gt;<br/>
+&nbsp;&lt;xs:complexType name=&quot;<a href="../../../schema/ifcmaterialresource/lexical/ifcmaterialprofileset.html">IfcMaterialProfileSet</a>&quot;&gt;<br/>
+&nbsp;&nbsp;&lt;xs:complexContent&gt;<br/>
+&nbsp;&nbsp;&nbsp;&lt;xs:extension base=&quot;ifc:<a href="../../../schema/ifcmaterialresource/lexical/ifcmaterialdefinition.html">IfcMaterialDefinition</a>&quot;&gt;<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&lt;xs:sequence&gt;<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xs:element name=&quot;MaterialProfiles&quot;&gt;<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xs:complexType&gt;<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xs:sequence&gt;<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xs:element ref=&quot;ifc:<a href="../../../schema/ifcmaterialresource/lexical/ifcmaterialprofile.html">IfcMaterialProfile</a>&quot; maxOccurs=&quot;unbounded&quot;/&gt;<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/xs:sequence&gt;<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xs:attribute ref=&quot;ifc:itemType&quot; fixed=&quot;ifc:<a href="../../../schema/ifcmaterialresource/lexical/ifcmaterialprofile.html">IfcMaterialProfile</a>&quot;/&gt;<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xs:attribute ref=&quot;ifc:cType&quot; fixed=&quot;list&quot;/&gt;<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xs:attribute ref=&quot;ifc:arraySize&quot; use=&quot;optional&quot;/&gt;<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/xs:complexType&gt;<br/>
@@ -281,6 +363,18 @@ of the material. The information contained in this document is subject to change
 &nbsp;&nbsp;&nbsp;&lt;/xs:extension&gt;<br/>
 &nbsp;&nbsp;&lt;/xs:complexContent&gt;<br/>
 &nbsp;&lt;/xs:complexType&gt;<br/>
+&nbsp;&lt;xs:element name=&quot;<a href="../../../schema/ifcutilityresource/lexical/ifcownerhistory.html">IfcOwnerHistory</a>&quot; type=&quot;ifc:<a href="../../../schema/ifcutilityresource/lexical/ifcownerhistory.html">IfcOwnerHistory</a>&quot; substitutionGroup=&quot;ifc:Entity&quot; nillable=&quot;true&quot;/&gt;<br/>
+&nbsp;&lt;xs:complexType name=&quot;<a href="../../../schema/ifcutilityresource/lexical/ifcownerhistory.html">IfcOwnerHistory</a>&quot;&gt;<br/>
+&nbsp;&nbsp;&lt;xs:complexContent&gt;<br/>
+&nbsp;&nbsp;&nbsp;&lt;xs:extension base=&quot;ifc:Entity&quot;&gt;<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&lt;xs:sequence&gt;<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xs:element name=&quot;OwningUser&quot; type=&quot;ifc:<a href="../../../schema/ifcactorresource/lexical/ifcpersonandorganization.html">IfcPersonAndOrganization</a>&quot; nillable=&quot;true&quot;/&gt;<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xs:element name=&quot;OwningApplication&quot; type=&quot;ifc:<a href="../../../schema/ifcutilityresource/lexical/ifcapplication.html">IfcApplication</a>&quot; nillable=&quot;true&quot;/&gt;<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&lt;/xs:sequence&gt;<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&lt;xs:attribute name=&quot;CreationDate&quot; type=&quot;ifc:<a href="../../../schema/ifcdatetimeresource/lexical/ifctimestamp.html">IfcTimeStamp</a>&quot; use=&quot;optional&quot;/&gt;<br/>
+&nbsp;&nbsp;&nbsp;&lt;/xs:extension&gt;<br/>
+&nbsp;&nbsp;&lt;/xs:complexContent&gt;<br/>
+&nbsp;&lt;/xs:complexType&gt;<br/>
 &nbsp;&lt;xs:element name=&quot;<a href="../../../schema/ifcactorresource/lexical/ifcperson.html">IfcPerson</a>&quot; type=&quot;ifc:<a href="../../../schema/ifcactorresource/lexical/ifcperson.html">IfcPerson</a>&quot; substitutionGroup=&quot;ifc:Entity&quot; nillable=&quot;true&quot;/&gt;<br/>
 &nbsp;&lt;xs:complexType name=&quot;<a href="../../../schema/ifcactorresource/lexical/ifcperson.html">IfcPerson</a>&quot;&gt;<br/>
 &nbsp;&nbsp;&lt;xs:complexContent&gt;<br/>
@@ -302,6 +396,14 @@ of the material. The information contained in this document is subject to change
 &nbsp;&lt;xs:complexType name=&quot;<a href="../../../schema/ifckernel/lexical/ifcproduct.html">IfcProduct</a>&quot; abstract=&quot;true&quot;&gt;<br/>
 &nbsp;&nbsp;&lt;xs:complexContent&gt;<br/>
 &nbsp;&nbsp;&nbsp;&lt;xs:extension base=&quot;ifc:<a href="../../../schema/ifckernel/lexical/ifcobject.html">IfcObject</a>&quot;/&gt;<br/>
+&nbsp;&nbsp;&lt;/xs:complexContent&gt;<br/>
+&nbsp;&lt;/xs:complexType&gt;<br/>
+&nbsp;&lt;xs:element name=&quot;<a href="../../../schema/ifcprofileresource/lexical/ifcprofiledef.html">IfcProfileDef</a>&quot; type=&quot;ifc:<a href="../../../schema/ifcprofileresource/lexical/ifcprofiledef.html">IfcProfileDef</a>&quot; substitutionGroup=&quot;ifc:Entity&quot; nillable=&quot;true&quot;/&gt;<br/>
+&nbsp;&lt;xs:complexType name=&quot;<a href="../../../schema/ifcprofileresource/lexical/ifcprofiledef.html">IfcProfileDef</a>&quot;&gt;<br/>
+&nbsp;&nbsp;&lt;xs:complexContent&gt;<br/>
+&nbsp;&nbsp;&nbsp;&lt;xs:extension base=&quot;ifc:Entity&quot;&gt;<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&lt;xs:attribute name=&quot;ProfileType&quot; type=&quot;ifc:<a href="../../../schema/ifcprofileresource/lexical/ifcprofiletypeenum.html">IfcProfileTypeEnum</a>&quot; use=&quot;optional&quot;/&gt;<br/>
+&nbsp;&nbsp;&nbsp;&lt;/xs:extension&gt;<br/>
 &nbsp;&nbsp;&lt;/xs:complexContent&gt;<br/>
 &nbsp;&lt;/xs:complexType&gt;<br/>
 &nbsp;&lt;xs:element name=&quot;<a href="../../../schema/ifckernel/lexical/ifcproject.html">IfcProject</a>&quot; type=&quot;ifc:<a href="../../../schema/ifckernel/lexical/ifcproject.html">IfcProject</a>&quot; substitutionGroup=&quot;ifc:<a href="../../../schema/ifckernel/lexical/ifccontext.html">IfcContext</a>&quot; nillable=&quot;true&quot;/&gt;<br/>
@@ -334,31 +436,6 @@ of the material. The information contained in this document is subject to change
 &nbsp;&lt;xs:complexType name=&quot;<a href="../../../schema/ifckernel/lexical/ifcpropertydefinition.html">IfcPropertyDefinition</a>&quot; abstract=&quot;true&quot;&gt;<br/>
 &nbsp;&nbsp;&lt;xs:complexContent&gt;<br/>
 &nbsp;&nbsp;&nbsp;&lt;xs:extension base=&quot;ifc:<a href="../../../schema/ifckernel/lexical/ifcroot.html">IfcRoot</a>&quot;/&gt;<br/>
-&nbsp;&nbsp;&lt;/xs:complexContent&gt;<br/>
-&nbsp;&lt;/xs:complexType&gt;<br/>
-&nbsp;&lt;xs:element name=&quot;<a href="../../../schema/ifckernel/lexical/ifcpropertyset.html">IfcPropertySet</a>&quot; type=&quot;ifc:<a href="../../../schema/ifckernel/lexical/ifcpropertyset.html">IfcPropertySet</a>&quot; substitutionGroup=&quot;ifc:<a href="../../../schema/ifckernel/lexical/ifcpropertysetdefinition.html">IfcPropertySetDefinition</a>&quot; nillable=&quot;true&quot;/&gt;<br/>
-&nbsp;&lt;xs:complexType name=&quot;<a href="../../../schema/ifckernel/lexical/ifcpropertyset.html">IfcPropertySet</a>&quot;&gt;<br/>
-&nbsp;&nbsp;&lt;xs:complexContent&gt;<br/>
-&nbsp;&nbsp;&nbsp;&lt;xs:extension base=&quot;ifc:<a href="../../../schema/ifckernel/lexical/ifcpropertysetdefinition.html">IfcPropertySetDefinition</a>&quot;&gt;<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;&lt;xs:sequence&gt;<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xs:element name=&quot;HasProperties&quot;&gt;<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xs:complexType&gt;<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xs:sequence&gt;<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xs:element ref=&quot;ifc:<a href="../../../schema/ifcpropertyresource/lexical/ifcproperty.html">IfcProperty</a>&quot; maxOccurs=&quot;unbounded&quot;/&gt;<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/xs:sequence&gt;<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xs:attribute ref=&quot;ifc:itemType&quot; fixed=&quot;ifc:<a href="../../../schema/ifcpropertyresource/lexical/ifcproperty.html">IfcProperty</a>&quot;/&gt;<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xs:attribute ref=&quot;ifc:cType&quot; fixed=&quot;set&quot;/&gt;<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xs:attribute ref=&quot;ifc:arraySize&quot; use=&quot;optional&quot;/&gt;<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/xs:complexType&gt;<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/xs:element&gt;<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;&lt;/xs:sequence&gt;<br/>
-&nbsp;&nbsp;&nbsp;&lt;/xs:extension&gt;<br/>
-&nbsp;&nbsp;&lt;/xs:complexContent&gt;<br/>
-&nbsp;&lt;/xs:complexType&gt;<br/>
-&nbsp;&lt;xs:element name=&quot;<a href="../../../schema/ifckernel/lexical/ifcpropertysetdefinition.html">IfcPropertySetDefinition</a>&quot; type=&quot;ifc:<a href="../../../schema/ifckernel/lexical/ifcpropertysetdefinition.html">IfcPropertySetDefinition</a>&quot; abstract=&quot;true&quot; substitutionGroup=&quot;ifc:<a href="../../../schema/ifckernel/lexical/ifcpropertydefinition.html">IfcPropertyDefinition</a>&quot; nillable=&quot;true&quot;/&gt;<br/>
-&nbsp;&lt;xs:complexType name=&quot;<a href="../../../schema/ifckernel/lexical/ifcpropertysetdefinition.html">IfcPropertySetDefinition</a>&quot; abstract=&quot;true&quot;&gt;<br/>
-&nbsp;&nbsp;&lt;xs:complexContent&gt;<br/>
-&nbsp;&nbsp;&nbsp;&lt;xs:extension base=&quot;ifc:<a href="../../../schema/ifckernel/lexical/ifcpropertydefinition.html">IfcPropertyDefinition</a>&quot;/&gt;<br/>
 &nbsp;&nbsp;&lt;/xs:complexContent&gt;<br/>
 &nbsp;&lt;/xs:complexType&gt;<br/>
 &nbsp;&lt;xs:element name=&quot;<a href="../../../schema/ifckernel/lexical/ifcpropertysettemplate.html">IfcPropertySetTemplate</a>&quot; type=&quot;ifc:<a href="../../../schema/ifckernel/lexical/ifcpropertysettemplate.html">IfcPropertySetTemplate</a>&quot; substitutionGroup=&quot;ifc:<a href="../../../schema/ifckernel/lexical/ifcpropertytemplatedefinition.html">IfcPropertyTemplateDefinition</a>&quot; nillable=&quot;true&quot;/&gt;<br/>
@@ -511,32 +588,6 @@ of the material. The information contained in this document is subject to change
 &nbsp;&nbsp;&nbsp;&lt;/xs:extension&gt;<br/>
 &nbsp;&nbsp;&lt;/xs:complexContent&gt;<br/>
 &nbsp;&lt;/xs:complexType&gt;<br/>
-&nbsp;&lt;xs:element name=&quot;<a href="../../../schema/ifckernel/lexical/ifcreldefines.html">IfcRelDefines</a>&quot; type=&quot;ifc:<a href="../../../schema/ifckernel/lexical/ifcreldefines.html">IfcRelDefines</a>&quot; abstract=&quot;true&quot; substitutionGroup=&quot;ifc:<a href="../../../schema/ifckernel/lexical/ifcrelationship.html">IfcRelationship</a>&quot; nillable=&quot;true&quot;/&gt;<br/>
-&nbsp;&lt;xs:complexType name=&quot;<a href="../../../schema/ifckernel/lexical/ifcreldefines.html">IfcRelDefines</a>&quot; abstract=&quot;true&quot;&gt;<br/>
-&nbsp;&nbsp;&lt;xs:complexContent&gt;<br/>
-&nbsp;&nbsp;&nbsp;&lt;xs:extension base=&quot;ifc:<a href="../../../schema/ifckernel/lexical/ifcrelationship.html">IfcRelationship</a>&quot;/&gt;<br/>
-&nbsp;&nbsp;&lt;/xs:complexContent&gt;<br/>
-&nbsp;&lt;/xs:complexType&gt;<br/>
-&nbsp;&lt;xs:element name=&quot;<a href="../../../schema/ifckernel/lexical/ifcreldefinesbytemplate.html">IfcRelDefinesByTemplate</a>&quot; type=&quot;ifc:<a href="../../../schema/ifckernel/lexical/ifcreldefinesbytemplate.html">IfcRelDefinesByTemplate</a>&quot; substitutionGroup=&quot;ifc:<a href="../../../schema/ifckernel/lexical/ifcreldefines.html">IfcRelDefines</a>&quot; nillable=&quot;true&quot;/&gt;<br/>
-&nbsp;&lt;xs:complexType name=&quot;<a href="../../../schema/ifckernel/lexical/ifcreldefinesbytemplate.html">IfcRelDefinesByTemplate</a>&quot;&gt;<br/>
-&nbsp;&nbsp;&lt;xs:complexContent&gt;<br/>
-&nbsp;&nbsp;&nbsp;&lt;xs:extension base=&quot;ifc:<a href="../../../schema/ifckernel/lexical/ifcreldefines.html">IfcRelDefines</a>&quot;&gt;<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;&lt;xs:sequence&gt;<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xs:element name=&quot;RelatedPropertySets&quot;&gt;<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xs:complexType&gt;<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xs:sequence&gt;<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xs:element ref=&quot;ifc:<a href="../../../schema/ifckernel/lexical/ifcpropertysetdefinition.html">IfcPropertySetDefinition</a>&quot; maxOccurs=&quot;unbounded&quot;/&gt;<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/xs:sequence&gt;<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xs:attribute ref=&quot;ifc:itemType&quot; fixed=&quot;ifc:<a href="../../../schema/ifckernel/lexical/ifcpropertysetdefinition.html">IfcPropertySetDefinition</a>&quot;/&gt;<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xs:attribute ref=&quot;ifc:cType&quot; fixed=&quot;set&quot;/&gt;<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xs:attribute ref=&quot;ifc:arraySize&quot; use=&quot;optional&quot;/&gt;<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/xs:complexType&gt;<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/xs:element&gt;<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xs:element name=&quot;RelatingTemplate&quot; type=&quot;ifc:<a href="../../../schema/ifckernel/lexical/ifcpropertysettemplate.html">IfcPropertySetTemplate</a>&quot; nillable=&quot;true&quot;/&gt;<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;&lt;/xs:sequence&gt;<br/>
-&nbsp;&nbsp;&nbsp;&lt;/xs:extension&gt;<br/>
-&nbsp;&nbsp;&lt;/xs:complexContent&gt;<br/>
-&nbsp;&lt;/xs:complexType&gt;<br/>
 &nbsp;&lt;xs:element name=&quot;<a href="../../../schema/ifckernel/lexical/ifcrelationship.html">IfcRelationship</a>&quot; type=&quot;ifc:<a href="../../../schema/ifckernel/lexical/ifcrelationship.html">IfcRelationship</a>&quot; abstract=&quot;true&quot; substitutionGroup=&quot;ifc:<a href="../../../schema/ifckernel/lexical/ifcroot.html">IfcRoot</a>&quot; nillable=&quot;true&quot;/&gt;<br/>
 &nbsp;&lt;xs:complexType name=&quot;<a href="../../../schema/ifckernel/lexical/ifcrelationship.html">IfcRelationship</a>&quot; abstract=&quot;true&quot;&gt;<br/>
 &nbsp;&nbsp;&lt;xs:complexContent&gt;<br/>
@@ -547,14 +598,12 @@ of the material. The information contained in this document is subject to change
 &nbsp;&lt;xs:complexType name=&quot;<a href="../../../schema/ifckernel/lexical/ifcroot.html">IfcRoot</a>&quot; abstract=&quot;true&quot;&gt;<br/>
 &nbsp;&nbsp;&lt;xs:complexContent&gt;<br/>
 &nbsp;&nbsp;&nbsp;&lt;xs:extension base=&quot;ifc:Entity&quot;&gt;<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&lt;xs:sequence&gt;<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xs:element name=&quot;OwnerHistory&quot; type=&quot;ifc:<a href="../../../schema/ifcutilityresource/lexical/ifcownerhistory.html">IfcOwnerHistory</a>&quot; nillable=&quot;true&quot; minOccurs=&quot;0&quot;/&gt;<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&lt;/xs:sequence&gt;<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;&lt;xs:attribute name=&quot;GlobalId&quot; type=&quot;ifc:<a href="../../../schema/ifcutilityresource/lexical/ifcgloballyuniqueid.html">IfcGloballyUniqueId</a>&quot; use=&quot;optional&quot;/&gt;<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&lt;xs:attribute name=&quot;Name&quot; type=&quot;ifc:<a href="../../../schema/ifcmeasureresource/lexical/ifclabel.html">IfcLabel</a>&quot; use=&quot;optional&quot;/&gt;<br/>
 &nbsp;&nbsp;&nbsp;&lt;/xs:extension&gt;<br/>
-&nbsp;&nbsp;&lt;/xs:complexContent&gt;<br/>
-&nbsp;&lt;/xs:complexType&gt;<br/>
-&nbsp;&lt;xs:element name=&quot;<a href="../../../schema/ifcpropertyresource/lexical/ifcsimpleproperty.html">IfcSimpleProperty</a>&quot; type=&quot;ifc:<a href="../../../schema/ifcpropertyresource/lexical/ifcsimpleproperty.html">IfcSimpleProperty</a>&quot; abstract=&quot;true&quot; substitutionGroup=&quot;ifc:<a href="../../../schema/ifcpropertyresource/lexical/ifcproperty.html">IfcProperty</a>&quot; nillable=&quot;true&quot;/&gt;<br/>
-&nbsp;&lt;xs:complexType name=&quot;<a href="../../../schema/ifcpropertyresource/lexical/ifcsimpleproperty.html">IfcSimpleProperty</a>&quot; abstract=&quot;true&quot;&gt;<br/>
-&nbsp;&nbsp;&lt;xs:complexContent&gt;<br/>
-&nbsp;&nbsp;&nbsp;&lt;xs:extension base=&quot;ifc:<a href="../../../schema/ifcpropertyresource/lexical/ifcproperty.html">IfcProperty</a>&quot;/&gt;<br/>
 &nbsp;&nbsp;&lt;/xs:complexContent&gt;<br/>
 &nbsp;&lt;/xs:complexType&gt;<br/>
 &nbsp;&lt;xs:element name=&quot;<a href="../../../schema/ifcproductextension/lexical/ifcsystem.html">IfcSystem</a>&quot; type=&quot;ifc:<a href="../../../schema/ifcproductextension/lexical/ifcsystem.html">IfcSystem</a>&quot; substitutionGroup=&quot;ifc:<a href="../../../schema/ifckernel/lexical/ifcgroup.html">IfcGroup</a>&quot; nillable=&quot;true&quot;/&gt;<br/>
@@ -614,21 +663,13 @@ of the material. The information contained in this document is subject to change
 &nbsp;&nbsp;&nbsp;&lt;xs:element ref=&quot;ifc:<a href="../../../schema/ifckernel/lexical/ifctypeproduct.html">IfcTypeProduct</a>&quot;/&gt;<br/>
 &nbsp;&nbsp;&lt;/xs:choice&gt;<br/>
 &nbsp;&lt;/xs:group&gt;<br/>
-&nbsp;&lt;xs:group name=&quot;<a href="../../../schema/ifcmeasureresource/lexical/ifcsimplevalue.html">IfcSimpleValue</a>&quot;&gt;<br/>
-&nbsp;&nbsp;&lt;xs:choice&gt;<br/>
-&nbsp;&nbsp;&nbsp;&lt;xs:element ref=&quot;ifc:<a href="../../../schema/ifcmeasureresource/lexical/ifcidentifier.html">IfcIdentifier</a>-wrapper&quot;/&gt;<br/>
-&nbsp;&nbsp;&nbsp;&lt;xs:element ref=&quot;ifc:<a href="../../../schema/ifcmeasureresource/lexical/ifclabel.html">IfcLabel</a>-wrapper&quot;/&gt;<br/>
-&nbsp;&nbsp;&nbsp;&lt;xs:element ref=&quot;ifc:<a href="../../../schema/ifcmeasureresource/lexical/ifctext.html">IfcText</a>-wrapper&quot;/&gt;<br/>
-&nbsp;&nbsp;&lt;/xs:choice&gt;<br/>
-&nbsp;&lt;/xs:group&gt;<br/>
-&nbsp;&lt;xs:group name=&quot;<a href="../../../schema/ifcmeasureresource/lexical/ifcvalue.html">IfcValue</a>&quot;&gt;<br/>
-&nbsp;&nbsp;&lt;xs:choice&gt;<br/>
-&nbsp;&nbsp;&nbsp;&lt;xs:element ref=&quot;ifc:<a href="../../../schema/ifcmeasureresource/lexical/ifcidentifier.html">IfcIdentifier</a>-wrapper&quot;/&gt;<br/>
-&nbsp;&nbsp;&nbsp;&lt;xs:element ref=&quot;ifc:<a href="../../../schema/ifcmeasureresource/lexical/ifclabel.html">IfcLabel</a>-wrapper&quot;/&gt;<br/>
-&nbsp;&nbsp;&nbsp;&lt;xs:element ref=&quot;ifc:<a href="../../../schema/ifcmeasureresource/lexical/ifctext.html">IfcText</a>-wrapper&quot;/&gt;<br/>
-&nbsp;&nbsp;&lt;/xs:choice&gt;<br/>
-&nbsp;&lt;/xs:group&gt;<br/>
 &nbsp;&lt;!-- enumeration type declarations (for ENUMERATION data type definitions) --&gt;<br/>
+&nbsp;&lt;xs:simpleType name=&quot;<a href="../../../schema/ifcprofileresource/lexical/ifcprofiletypeenum.html">IfcProfileTypeEnum</a>&quot;&gt;<br/>
+&nbsp;&nbsp;&lt;xs:restriction base=&quot;xs:string&quot;&gt;<br/>
+&nbsp;&nbsp;&nbsp;&lt;xs:enumeration value=&quot;curve&quot;/&gt;<br/>
+&nbsp;&nbsp;&nbsp;&lt;xs:enumeration value=&quot;area&quot;/&gt;<br/>
+&nbsp;&nbsp;&lt;/xs:restriction&gt;<br/>
+&nbsp;&lt;/xs:simpleType&gt;<br/>
 &nbsp;&lt;!-- simple type declarations (for TYPE defined data type definitions) --&gt;<br/>
 &nbsp;&lt;xs:simpleType name=&quot;<a href="../../../schema/ifcutilityresource/lexical/ifcgloballyuniqueid.html">IfcGloballyUniqueId</a>&quot;&gt;<br/>
 &nbsp;&nbsp;&lt;xs:restriction base=&quot;xs:normalizedString&quot;&gt;<br/>
@@ -646,8 +687,14 @@ of the material. The information contained in this document is subject to change
 &nbsp;&nbsp;&nbsp;&lt;xs:maxLength value=&quot;255&quot;/&gt;<br/>
 &nbsp;&nbsp;&lt;/xs:restriction&gt;<br/>
 &nbsp;&lt;/xs:simpleType&gt;<br/>
-&nbsp;&lt;xs:simpleType name=&quot;<a href="../../../schema/ifcmeasureresource/lexical/ifctext.html">IfcText</a>&quot;&gt;<br/>
-&nbsp;&nbsp;&lt;xs:restriction base=&quot;xs:normalizedString&quot;/&gt;<br/>
+&nbsp;&lt;xs:simpleType name=&quot;<a href="../../../schema/ifcmeasureresource/lexical/ifclengthmeasure.html">IfcLengthMeasure</a>&quot;&gt;<br/>
+&nbsp;&nbsp;&lt;xs:restriction base=&quot;xs:double&quot;/&gt;<br/>
+&nbsp;&lt;/xs:simpleType&gt;<br/>
+&nbsp;&lt;xs:simpleType name=&quot;<a href="../../../schema/ifcmeasureresource/lexical/ifcnonnegativelengthmeasure.html">IfcNonNegativeLengthMeasure</a>&quot;&gt;<br/>
+&nbsp;&nbsp;&lt;xs:restriction base=&quot;ifc:<a href="../../../schema/ifcmeasureresource/lexical/ifclengthmeasure.html">IfcLengthMeasure</a>&quot;/&gt;<br/>
+&nbsp;&lt;/xs:simpleType&gt;<br/>
+&nbsp;&lt;xs:simpleType name=&quot;<a href="../../../schema/ifcdatetimeresource/lexical/ifctimestamp.html">IfcTimeStamp</a>&quot;&gt;<br/>
+&nbsp;&nbsp;&lt;xs:restriction base=&quot;xs:long&quot;/&gt;<br/>
 &nbsp;&lt;/xs:simpleType&gt;<br/>
 &nbsp;&lt;!-- base entity and entity attribute declaration (for embeded base schema definitions) --&gt;<br/>
 &nbsp;&lt;xs:element name=&quot;Entity&quot; type=&quot;ifc:Entity&quot; abstract=&quot;true&quot; nillable=&quot;true&quot;/&gt;<br/>
@@ -731,24 +778,6 @@ of the material. The information contained in this document is subject to change
 &nbsp;&nbsp;&lt;xs:complexType&gt;<br/>
 &nbsp;&nbsp;&nbsp;&lt;xs:simpleContent&gt;<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;&lt;xs:extension base=&quot;ifc:<a href="../../../schema/ifcmeasureresource/lexical/ifcidentifier.html">IfcIdentifier</a>&quot;&gt;<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xs:attributeGroup ref=&quot;ifc:instanceAttributes&quot;/&gt;<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;&lt;/xs:extension&gt;<br/>
-&nbsp;&nbsp;&nbsp;&lt;/xs:simpleContent&gt;<br/>
-&nbsp;&nbsp;&lt;/xs:complexType&gt;<br/>
-&nbsp;&lt;/xs:element&gt;<br/>
-&nbsp;&lt;xs:element name=&quot;<a href="../../../schema/ifcmeasureresource/lexical/ifclabel.html">IfcLabel</a>-wrapper&quot; nillable=&quot;true&quot;&gt;<br/>
-&nbsp;&nbsp;&lt;xs:complexType&gt;<br/>
-&nbsp;&nbsp;&nbsp;&lt;xs:simpleContent&gt;<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;&lt;xs:extension base=&quot;ifc:<a href="../../../schema/ifcmeasureresource/lexical/ifclabel.html">IfcLabel</a>&quot;&gt;<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xs:attributeGroup ref=&quot;ifc:instanceAttributes&quot;/&gt;<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;&lt;/xs:extension&gt;<br/>
-&nbsp;&nbsp;&nbsp;&lt;/xs:simpleContent&gt;<br/>
-&nbsp;&nbsp;&lt;/xs:complexType&gt;<br/>
-&nbsp;&lt;/xs:element&gt;<br/>
-&nbsp;&lt;xs:element name=&quot;<a href="../../../schema/ifcmeasureresource/lexical/ifctext.html">IfcText</a>-wrapper&quot; nillable=&quot;true&quot;&gt;<br/>
-&nbsp;&nbsp;&lt;xs:complexType&gt;<br/>
-&nbsp;&nbsp;&nbsp;&lt;xs:simpleContent&gt;<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;&lt;xs:extension base=&quot;ifc:<a href="../../../schema/ifcmeasureresource/lexical/ifctext.html">IfcText</a>&quot;&gt;<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xs:attributeGroup ref=&quot;ifc:instanceAttributes&quot;/&gt;<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;&lt;/xs:extension&gt;<br/>
 &nbsp;&nbsp;&nbsp;&lt;/xs:simpleContent&gt;<br/>

@@ -11,7 +11,7 @@
     <title>IfcPropertyTemplateDefinition</title>
 
     <style type="text/css">
-      body { counter-reset: index1 5 index2 1 index3 3 index4 12 index5 0; }
+      body { counter-reset: index1 5 index2 1 index3 3 index4 10 index5 0; }
     </style>
   </head>
 
@@ -20,7 +20,7 @@
 
 <script type="text/javascript">
 <!--
-    parent.index.location.replace("../../toc-5.html#5.1.3.13");
+    parent.index.location.replace("../../toc-5.html#5.1.3.11");
 //-->
 </script>
 
@@ -42,8 +42,8 @@
 <section>
 <h5 class="num">Semantic definitions at the entity</h5>
 <details open="open"><summary>Entity definition</summary><p><span class="self-ref">IfcPropertyTemplateDefinition</span> is a generalization of all property and property set templates. Templates define the collection, types, names, applicable measure types and units of individual properties used in a project. The property template definition can be either:</p>
-<p>\\\\\\\\\\\* \\\\\\\\\\\*\\\\\\\\\\\*Property set template\\\\\\\\\\\*\\\\\\\\\\\* - <a href="../../ifckernel/lexical/ifcpropertysettemplate.html">IfcPropertySetTemplate</a>, a collection of property templates that determine the definition of properties used within a project context.
-\\\\\\\\\\\* \\\\\\\\\\\*\\\\\\\\\\\*Property template\\\\\\\\\\\*\\\\\\\\\\\* - <a href="../../ifckernel/lexical/ifcpropertytemplate.html">IfcPropertyTemplate</a>, a single template that determines the definition of a particular property used in the same project context. The template may determine the name, description, data type, the unit, or a standard expression for each property that is based on that template.</p>
+<p>\\\\\\\\\\\\\* \\\\\\\\\\\\\<i>\\\\\\\\\\\\\<i>Property set template\\\\\\\\\\\\\</i>\\\\\\\\\\\\\</i> - <a href="../../ifckernel/lexical/ifcpropertysettemplate.html">IfcPropertySetTemplate</a>, a collection of property templates that determine the definition of properties used within a project context.
+\\\\\\\\\\\\\* \\\\\\\\\\\\\<i>\\\\\\\\\\\\\<i>Property template\\\\\\\\\\\\\</i>\\\\\\\\\\\\\</i> - <a href="../../ifckernel/lexical/ifcpropertytemplate.html">IfcPropertyTemplate</a>, a single template that determines the definition of a particular property used in the same project context. The template may determine the name, description, data type, the unit, or a standard expression for each property that is based on that template.</p>
 <p>The subtypes of <span class="self-ref">IfcPropertyTemplateDefinition</span> are declared within a project context. The uppermost template definition (e.g. the <a href="../../ifckernel/lexical/ifcpropertysettemplate.html">IfcPropertySetTemplate</a> including several <a href="../../ifckernel/lexical/ifcpropertytemplate.html">IfcPropertyTemplate</a>'s) should be related to the context, either <a href="../../ifckernel/lexical/ifcproject.html">IfcProject</a>, or <a href="../../ifckernel/lexical/ifcprojectlibrary.html">IfcProjectLibrary</a>, using the inherited <i>HasContext</i> inverse attribute.</p>
 
 </details>
@@ -64,10 +64,16 @@
 <tr><td>1</td><td>GlobalId</td><td><a href="../../ifcutilityresource/lexical/ifcgloballyuniqueid.html">IfcGloballyUniqueId</a></td><td></td><td>
 Assignment of a globally unique identifier within the entire software world.
 </td><td>X</td></tr>
-<tr><td>2</td><td>OwnerHistory</td><td><span class="self-ref">-</span></td><td></td><td>
-<i>This attribute is out of scope for this model view definition and shall not be set.</i></td><td></td></tr>
-<tr><td>3</td><td>Name</td><td><span class="self-ref">-</span></td><td></td><td>
-<i>This attribute is out of scope for this model view definition and shall not be set.</i></td><td></td></tr>
+<tr><td>2</td><td>OwnerHistory</td><td><a href="../../ifcutilityresource/lexical/ifcownerhistory.html">IfcOwnerHistory</a></td><td>? </td><td>
+Assignment of the information about the current ownership of that object, including owning actor, application, local identification and information captured about the recent changes of the object,
+<blockquote class="note">
+NOTE  only the last modification in stored - either as addition, deletion or modification.
+</blockquote>
+
+</td><td>X</td></tr>
+<tr><td>3</td><td>Name</td><td><a href="../../ifcmeasureresource/lexical/ifclabel.html">IfcLabel</a></td><td>? </td><td>
+Optional name for use by the participating software systems or users. For some subtypes of IfcRoot the insertion of the Name attribute may be required. This would be enforced by a where rule.
+</td><td>X</td></tr>
 <tr><td>4</td><td>Description</td><td><span class="self-ref">-</span></td><td></td><td>
 <i>This attribute is out of scope for this model view definition and shall not be set.</i></td><td></td></tr>
 <tr><td colspan="6"><i><a href="../../ifckernel/lexical/ifcpropertydefinition.html">IfcPropertyDefinition</a></i></td></tr>

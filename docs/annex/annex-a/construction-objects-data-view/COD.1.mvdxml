@@ -1,6 +1,219 @@
 <?xml version="1.0"?>
-<mvdXML xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" uuid="309953d9-301a-454d-89b5-e28c39493f28" name="" xsi:schemaLocation="http://standards.buildingsmart.org/MVD/RELEASE/mvdXML/v1-1/mvdXML_V1.1.xsd" xmlns="http://buildingsmart-tech.org/mvd/XML/1.1">
+<mvdXML xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" uuid="477865c7-aa7c-45cb-b8ad-6d5cdf7155bb" name="" xsi:schemaLocation="http://standards.buildingsmart.org/MVD/RELEASE/mvdXML/v1-1/mvdXML_V1.1.xsd" xmlns="http://buildingsmart-tech.org/mvd/XML/1.1">
   <Templates>
+    <ConceptTemplate uuid="9f63432b-cdc8-4438-8bbf-035ee92c5842" name="Transport" status="candidate" applicableSchema="IFC4" applicableEntity="IfcProjectLibrary">
+      <Definitions>
+        <Definition>
+          <Body><![CDATA[All exchanges can be transported over these protocols:
+
+1.	As a physical file with manual exchange via eMail, Harddrives, oder similar
+2.	As a data structure in the payload of an online exchange, eg. an API, a messaging system or similar.
+
+This standard does not define how exactly the exchange is done. It defines the standard for the structure of the file or the payload. The file or the payload can be stored in a compressd format according to the specification. The file extension is then \\\\\\\*.ifczip. The specifications for ifczip can be found here:
+
+•	http://www.buildingsmart-tech.org/specifications/ifc-overview/ifc-overview-summary
+•	http://www.buildingsmart-tech.org/implementation/ifc-implementation/ifc-impl-agreements/cv-2x3-154
+
+It is explicitly allowed to embed an IFC file in Step format (.ifc) or in XML format Format (.ifcxml) in an ifczip file.
+The specification contains the following principles:
+
+1.	The ifczip file contains exactly one model file (.ifc or .ifcxml). The file extension is \\\\\\\*.ifczip
+2.	According to this rule, it is allowed to embed additional other files in an ifczip file. Therefore, an ifczip file can be a container, which can transport many additional files in itself.
+3.	Such a container offers several advantages, such as
+•	transport of photo documentations
+•	transport of plant documentation
+•	transport of permits and notifications
+•	transport of operating documents, e.g. test and maintenance reports
+
+In the BIM context, such a transport is particularly useful if the documents have a reference to the structure.
+
+In order to be able to exchange data without consultation, each transported document should be registered in a structured, electronic table of contents. The recipient of the container can first read the table of contents and then select and remove the files.
+
+For this purpose, two things must be specified for the sender and receiver of such a container file:
+•	syntax of the table of contents
+•	specifications for the semantic identification of documents
+Since the current specification of the ifczip format provides exactly one model file in the root folder of the ifczip file, it makes sense to save the table of contents and the catalogue of document types in this model file.
+For this purpose, the IFC data model (based on IFC4) provides the entity IfcDocumentInformation. For each file transported in the container, an element of type IfcDocumentInformation is written.]]></Body>
+        </Definition>
+      </Definitions>
+    </ConceptTemplate>
+    <ConceptTemplate uuid="94cfa683-4321-4216-b540-287923b7e28a" name="Declarations" status="draft" applicableSchema="IFC4" applicableEntity="IfcContext">
+      <Definitions>
+        <Definition>
+          <Body><![CDATA[The data files contain declarations, that are used to structure the content of the file. These declarations are the header, the IfcProjectLibrary and the IfcProject.
+
+If the file should transport product data, the file shall contain all three parts: header, IfcProjectLibrary and IfcProject. This ensures that the product data stays interpretable over a long time, even if the content of the product data templates have changed during this time (catalogue/template embedding).
+
+The following sections define the details of the three parts of the file.
+
+
+The data structures contain structures, that are used to declare the content. These declarations are the IfcProjectLibrary and the IfcProject.
+
+For the declaration of templates and type objects the IfcProjectLibrary shall be used. For the declaration of sheets, the IfcProject shall be used.
+
+The cardinality  of the classes shall be as following:
+
+<style type="text/css">
+.tg  {border-collapse:collapse;border-spacing:0;}
+.tg td{font-family:Arial, sans-serif;font-size:14px;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;border-color:black;}
+.tg th{font-family:Arial, sans-serif;font-size:14px;font-weight:normal;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;border-color:black;}
+.tg .tg-w2dt{font-size:12px;text-align:center;vertical-align:middle}
+</style>{ .tg}
+{ .tg}
+{ .tg}
+{ .tg}
+{ .tg}
+{ .tg}
+{ .tg}
+<table class="tg">
+  <tr>
+    <th class="tg-w2dt"><br>&nbsp;&nbsp;Type of exchange<br>&nbsp;&nbsp;</th>
+    <th class="tg-w2dt"><br>&nbsp;&nbsp;IfcProjectLibrary<br>&nbsp;&nbsp;</th>
+    <th class="tg-w2dt"><br>&nbsp;&nbsp;IfcProject<br>&nbsp;&nbsp;</th>
+  </tr>
+  <tr>
+    <td class="tg-w2dt"><br>&nbsp;&nbsp;Data templates<br>&nbsp;&nbsp;</td>
+    <td class="tg-w2dt"><br>&nbsp;&nbsp;[1:?]<br>&nbsp;&nbsp;</td>
+    <td class="tg-w2dt"><br>&nbsp;&nbsp;-<br>&nbsp;&nbsp;</td>
+  </tr>
+  <tr>
+    <td class="tg-w2dt"><br>&nbsp;&nbsp;Data sheets<br>&nbsp;&nbsp;</td>
+    <td class="tg-w2dt"><br>&nbsp;&nbsp;[1:?]<br>&nbsp;&nbsp;</td>
+    <td class="tg-w2dt"><br>&nbsp;&nbsp;[1:1]<br>&nbsp;&nbsp;</td>
+  </tr>
+<caption align"bottom"="">Table 2: Cardinality of declarations</caption>
+</table>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+This ensures that the data sheets stay interpretable over a long time, even if the content of the data templates have changed during this time and the external source is not available anymore (Template embedding).]]></Body>
+        </Definition>
+      </Definitions>
+      <SubTemplates>
+        <ConceptTemplate uuid="117dafcd-232b-4a98-929e-a21c28a1a6a8" name="Declaration for sheets" status="candidate" applicableSchema="IFC4" applicableEntity="IfcContext">
+          <Rules>
+            <AttributeRule AttributeName="Declares">
+              <EntityRules>
+                <EntityRule EntityName="IfcRelDeclares">
+                  <AttributeRules>
+                    <AttributeRule AttributeName="RelatedDefinitions">
+                      <EntityRules>
+                        <EntityRule EntityName="IfcProject">
+                          <AttributeRules>
+                            <AttributeRule AttributeName="HasAssociations">
+                              <EntityRules>
+                                <EntityRule EntityName="IfcRelAssociatesLibrary">
+                                  <AttributeRules>
+                                    <AttributeRule AttributeName="RelatingLibrary">
+                                      <EntityRules>
+                                        <EntityRule EntityName="IfcLibraryInformation">
+                                          <AttributeRules>
+                                            <AttributeRule AttributeName="Publisher">
+                                              <EntityRules>
+                                                <EntityRule EntityName="IfcPersonAndOrganization" />
+                                              </EntityRules>
+                                            </AttributeRule>
+                                          </AttributeRules>
+                                        </EntityRule>
+                                      </EntityRules>
+                                    </AttributeRule>
+                                  </AttributeRules>
+                                </EntityRule>
+                              </EntityRules>
+                            </AttributeRule>
+                          </AttributeRules>
+                        </EntityRule>
+                      </EntityRules>
+                    </AttributeRule>
+                  </AttributeRules>
+                </EntityRule>
+              </EntityRules>
+            </AttributeRule>
+          </Rules>
+        </ConceptTemplate>
+        <ConceptTemplate uuid="c9ffd9bf-be54-46f4-a685-72396aa0273f" name="Declaration for templates" applicableSchema="IFC4" applicableEntity="IfcContext">
+          <Rules>
+            <AttributeRule AttributeName="Declares">
+              <EntityRules>
+                <EntityRule EntityName="IfcRelDeclares">
+                  <AttributeRules>
+                    <AttributeRule AttributeName="RelatedDefinitions">
+                      <EntityRules>
+                        <EntityRule EntityName="IfcProjectLibrary">
+                          <AttributeRules>
+                            <AttributeRule AttributeName="HasAssociations">
+                              <EntityRules>
+                                <EntityRule EntityName="IfcRelAssociatesLibrary">
+                                  <AttributeRules>
+                                    <AttributeRule AttributeName="RelatingLibrary">
+                                      <EntityRules>
+                                        <EntityRule EntityName="IfcLibraryInformation">
+                                          <AttributeRules>
+                                            <AttributeRule AttributeName="Publisher">
+                                              <EntityRules>
+                                                <EntityRule EntityName="IfcPersonAndOrganization" />
+                                              </EntityRules>
+                                            </AttributeRule>
+                                          </AttributeRules>
+                                        </EntityRule>
+                                      </EntityRules>
+                                    </AttributeRule>
+                                  </AttributeRules>
+                                </EntityRule>
+                              </EntityRules>
+                            </AttributeRule>
+                            <AttributeRule AttributeName="GlobalId">
+                              <EntityRules>
+                                <EntityRule EntityName="IfcGloballyUniqueId" />
+                              </EntityRules>
+                            </AttributeRule>
+                            <AttributeRule AttributeName="Phase">
+                              <EntityRules>
+                                <EntityRule EntityName="IfcLabel" />
+                              </EntityRules>
+                            </AttributeRule>
+                            <AttributeRule AttributeName="Name">
+                              <EntityRules>
+                                <EntityRule EntityName="IfcLabel" />
+                              </EntityRules>
+                            </AttributeRule>
+                            <AttributeRule AttributeName="OwnerHistory">
+                              <EntityRules>
+                                <EntityRule EntityName="IfcOwnerHistory">
+                                  <AttributeRules>
+                                    <AttributeRule AttributeName="CreationDate">
+                                      <EntityRules>
+                                        <EntityRule EntityName="IfcTimeStamp" />
+                                      </EntityRules>
+                                    </AttributeRule>
+                                  </AttributeRules>
+                                </EntityRule>
+                              </EntityRules>
+                            </AttributeRule>
+                          </AttributeRules>
+                        </EntityRule>
+                      </EntityRules>
+                    </AttributeRule>
+                  </AttributeRules>
+                </EntityRule>
+              </EntityRules>
+            </AttributeRule>
+          </Rules>
+        </ConceptTemplate>
+      </SubTemplates>
+    </ConceptTemplate>
     <ConceptTemplate uuid="bf7206d4-80c6-469d-93a5-336283a2a935" name="Classification" status="draft" applicableSchema="IFC4" applicableEntity="IfcContext">
       <Definitions>
         <Definition>
@@ -8,7 +221,7 @@
         </Definition>
       </Definitions>
       <SubTemplates>
-        <ConceptTemplate uuid="fb699395-46b5-4eb8-ae96-b94012380099" name="Classification declaration" applicableSchema="IFC4" applicableEntity="IfcProjectLibrary">
+        <ConceptTemplate uuid="fb699395-46b5-4eb8-ae96-b94012380099" name="Classification declaration" status="draft" applicableSchema="IFC4" applicableEntity="IfcProjectLibrary">
           <Rules>
             <AttributeRule AttributeName="HasAssociations">
               <EntityRules>
@@ -33,7 +246,7 @@
             </AttributeRule>
           </Rules>
         </ConceptTemplate>
-        <ConceptTemplate uuid="221e03e4-b661-4f7a-82fe-2d0baff62915" name="Classification of construction object types" applicableSchema="IFC4" applicableEntity="IfcContext">
+        <ConceptTemplate uuid="221e03e4-b661-4f7a-82fe-2d0baff62915" name="Classification of construction object types" status="draft" applicableSchema="IFC4" applicableEntity="IfcContext">
           <Rules>
             <AttributeRule AttributeName="Declares">
               <EntityRules>
@@ -166,98 +379,11 @@
             </AttributeRule>
           </Rules>
         </ConceptTemplate>
-        <ConceptTemplate uuid="1b12aeea-eac8-48d2-bd0f-726fabe40404" name="Classification of material" applicableSchema="IFC4" applicableEntity="IfcMaterial">
-          <Rules>
-            <AttributeRule AttributeName="HasAssociations">
-              <EntityRules>
-                <EntityRule EntityName="IfcRelAssociatesMaterial">
-                  <AttributeRules>
-                    <AttributeRule AttributeName="RelatingMaterial">
-                      <EntityRules>
-                        <EntityRule EntityName="IfcMaterial">
-                          <AttributeRules>
-                            <AttributeRule AttributeName="HasExternalReferences">
-                              <EntityRules>
-                                <EntityRule EntityName="IfcExternalReferenceRelationship">
-                                  <AttributeRules>
-                                    <AttributeRule AttributeName="RelatingReference">
-                                      <EntityRules>
-                                        <EntityRule EntityName="IfcClassificationReference" />
-                                      </EntityRules>
-                                    </AttributeRule>
-                                  </AttributeRules>
-                                </EntityRule>
-                              </EntityRules>
-                            </AttributeRule>
-                          </AttributeRules>
-                        </EntityRule>
-                      </EntityRules>
-                    </AttributeRule>
-                  </AttributeRules>
-                </EntityRule>
-              </EntityRules>
-            </AttributeRule>
-          </Rules>
-        </ConceptTemplate>
       </SubTemplates>
     </ConceptTemplate>
-    <ConceptTemplate uuid="94cfa683-4321-4216-b540-287923b7e28a" name="Declarations" status="draft" applicableSchema="IFC4" applicableEntity="IfcContext">
-      <Definitions>
-        <Definition>
-          <Body><![CDATA[The data files contain declarations, that are used to structure the content of the file. These declarations are the header, the IfcProjectLibrary and the IfcProject.
-
-If the file should transport product data, the file shall contain all three parts: header, IfcProjectLibrary and IfcProject. This ensures that the product data stays interpretable over a long time, even if the content of the product data templates have changed during this time (catalogue/template embedding).
-
-The following sections define the details of the three parts of the file.
-
-
-The data structures contain structures, that are used to declare the content. These declarations are the IfcProjectLibrary and the IfcProject.
-
-For the declaration of templates and type objects the IfcProjectLibrary shall be used. For the declaration of sheets, the IfcProject shall be used.
-
-The cardinality  of the classes shall be as following:
-
-<style type="text/css">
-.tg  {border-collapse:collapse;border-spacing:0;}
-.tg td{font-family:Arial, sans-serif;font-size:14px;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;border-color:black;}
-.tg th{font-family:Arial, sans-serif;font-size:14px;font-weight:normal;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;border-color:black;}
-.tg .tg-w2dt{font-size:12px;text-align:center;vertical-align:middle}
-</style>{ .tg}
-{ .tg}
-{ .tg}
-{ .tg}
-<table class="tg">
-  <tr>
-    <th class="tg-w2dt"><br>&nbsp;&nbsp;Type of exchange<br>&nbsp;&nbsp;</th>
-    <th class="tg-w2dt"><br>&nbsp;&nbsp;IfcProjectLibrary<br>&nbsp;&nbsp;</th>
-    <th class="tg-w2dt"><br>&nbsp;&nbsp;IfcProject<br>&nbsp;&nbsp;</th>
-  </tr>
-  <tr>
-    <td class="tg-w2dt"><br>&nbsp;&nbsp;Data templates<br>&nbsp;&nbsp;</td>
-    <td class="tg-w2dt"><br>&nbsp;&nbsp;[1:?]<br>&nbsp;&nbsp;</td>
-    <td class="tg-w2dt"><br>&nbsp;&nbsp;-<br>&nbsp;&nbsp;</td>
-  </tr>
-  <tr>
-    <td class="tg-w2dt"><br>&nbsp;&nbsp;Data sheets<br>&nbsp;&nbsp;</td>
-    <td class="tg-w2dt"><br>&nbsp;&nbsp;[1:?]<br>&nbsp;&nbsp;</td>
-    <td class="tg-w2dt"><br>&nbsp;&nbsp;[1:1]<br>&nbsp;&nbsp;</td>
-  </tr>
-<caption align"bottom"="">Table 2: Cardinality of declarations</caption>
-</table>
-
-
-
-
-
-
-
-
-
-This ensures that the data sheets stay interpretable over a long time, even if the content of the data templates have changed during this time and the external source is not available anymore (Template embedding).]]></Body>
-        </Definition>
-      </Definitions>
+    <ConceptTemplate uuid="dda36654-5e5b-4611-abf4-90a55d0c5cc3" name="Material" status="candidate" applicableSchema="IFC4" applicableEntity="IfcContext">
       <SubTemplates>
-        <ConceptTemplate uuid="117dafcd-232b-4a98-929e-a21c28a1a6a8" name="Declaration for sheets" status="candidate" applicableSchema="IFC4" applicableEntity="IfcContext">
+        <ConceptTemplate uuid="a1b77971-e1dd-4bed-8a15-f92485e2c7b6" name="Material constituent definition" status="draft" applicableSchema="IFC4" applicableEntity="IfcContext">
           <Rules>
             <AttributeRule AttributeName="Declares">
               <EntityRules>
@@ -265,19 +391,78 @@ This ensures that the data sheets stay interpretable over a long time, even if t
                   <AttributeRules>
                     <AttributeRule AttributeName="RelatedDefinitions">
                       <EntityRules>
-                        <EntityRule EntityName="IfcProject">
+                        <EntityRule EntityName="IfcObject">
                           <AttributeRules>
                             <AttributeRule AttributeName="HasAssociations">
                               <EntityRules>
-                                <EntityRule EntityName="IfcRelAssociatesLibrary">
+                                <EntityRule EntityName="IfcRelAssociatesMaterial">
                                   <AttributeRules>
-                                    <AttributeRule AttributeName="RelatingLibrary">
+                                    <AttributeRule AttributeName="RelatingMaterial">
                                       <EntityRules>
-                                        <EntityRule EntityName="IfcLibraryInformation">
+                                        <EntityRule EntityName="IfcMaterialConstituent">
                                           <AttributeRules>
-                                            <AttributeRule AttributeName="Publisher">
+                                            <AttributeRule AttributeName="ToMaterialConstituentSet">
                                               <EntityRules>
-                                                <EntityRule EntityName="IfcPersonAndOrganization" />
+                                                <EntityRule EntityName="IfcMaterialConstituentSet">
+                                                  <AttributeRules>
+                                                    <AttributeRule AttributeName="HasProperties">
+                                                      <EntityRules>
+                                                        <EntityRule EntityName="IfcMaterialProperties">
+                                                          <AttributeRules>
+                                                            <AttributeRule AttributeName="Properties">
+                                                              <EntityRules>
+                                                                <EntityRule EntityName="IfcProperty" />
+                                                                <EntityRule EntityName="IfcProperty" />
+                                                              </EntityRules>
+                                                            </AttributeRule>
+                                                          </AttributeRules>
+                                                        </EntityRule>
+                                                      </EntityRules>
+                                                    </AttributeRule>
+                                                  </AttributeRules>
+                                                </EntityRule>
+                                              </EntityRules>
+                                            </AttributeRule>
+                                            <AttributeRule AttributeName="Material">
+                                              <EntityRules>
+                                                <EntityRule EntityName="IfcMaterial">
+                                                  <AttributeRules>
+                                                    <AttributeRule AttributeName="HasProperties">
+                                                      <EntityRules>
+                                                        <EntityRule EntityName="IfcMaterialProperties" />
+                                                      </EntityRules>
+                                                    </AttributeRule>
+                                                  </AttributeRules>
+                                                </EntityRule>
+                                              </EntityRules>
+                                            </AttributeRule>
+                                            <AttributeRule AttributeName="AssociatedTo">
+                                              <EntityRules>
+                                                <EntityRule EntityName="IfcRelAssociatesMaterial">
+                                                  <AttributeRules>
+                                                    <AttributeRule AttributeName="RelatingMaterial">
+                                                      <EntityRules>
+                                                        <EntityRule EntityName="IfcMaterial">
+                                                          <AttributeRules>
+                                                            <AttributeRule AttributeName="HasProperties">
+                                                              <EntityRules>
+                                                                <EntityRule EntityName="IfcMaterialProperties">
+                                                                  <AttributeRules>
+                                                                    <AttributeRule AttributeName="Properties">
+                                                                      <EntityRules>
+                                                                        <EntityRule EntityName="IfcProperty" />
+                                                                      </EntityRules>
+                                                                    </AttributeRule>
+                                                                  </AttributeRules>
+                                                                </EntityRule>
+                                                              </EntityRules>
+                                                            </AttributeRule>
+                                                          </AttributeRules>
+                                                        </EntityRule>
+                                                      </EntityRules>
+                                                    </AttributeRule>
+                                                  </AttributeRules>
+                                                </EntityRule>
                                               </EntityRules>
                                             </AttributeRule>
                                           </AttributeRules>
@@ -298,7 +483,7 @@ This ensures that the data sheets stay interpretable over a long time, even if t
             </AttributeRule>
           </Rules>
         </ConceptTemplate>
-        <ConceptTemplate uuid="c9ffd9bf-be54-46f4-a685-72396aa0273f" name="Declaration for templates" applicableSchema="IFC4" applicableEntity="IfcContext">
+        <ConceptTemplate uuid="94e9cae4-5d06-40cc-be8a-4a9cddd79325" name="Material layer definition" status="draft" applicableSchema="IFC4" applicableEntity="IfcContext">
           <Rules>
             <AttributeRule AttributeName="Declares">
               <EntityRules>
@@ -306,19 +491,98 @@ This ensures that the data sheets stay interpretable over a long time, even if t
                   <AttributeRules>
                     <AttributeRule AttributeName="RelatedDefinitions">
                       <EntityRules>
-                        <EntityRule EntityName="IfcProjectLibrary">
+                        <EntityRule EntityName="IfcObject">
                           <AttributeRules>
                             <AttributeRule AttributeName="HasAssociations">
                               <EntityRules>
-                                <EntityRule EntityName="IfcRelAssociatesLibrary">
+                                <EntityRule EntityName="IfcRelAssociatesMaterial">
                                   <AttributeRules>
-                                    <AttributeRule AttributeName="RelatingLibrary">
+                                    <AttributeRule AttributeName="RelatingMaterial">
                                       <EntityRules>
-                                        <EntityRule EntityName="IfcLibraryInformation">
+                                        <EntityRule EntityName="IfcMaterialLayer">
                                           <AttributeRules>
-                                            <AttributeRule AttributeName="Publisher">
+                                            <AttributeRule AttributeName="ToMaterialLayerSet">
                                               <EntityRules>
-                                                <EntityRule EntityName="IfcPersonAndOrganization" />
+                                                <EntityRule EntityName="IfcMaterialLayerSet">
+                                                  <AttributeRules>
+                                                    <AttributeRule AttributeName="AssociatedTo">
+                                                      <EntityRules>
+                                                        <EntityRule EntityName="IfcRelAssociatesMaterial">
+                                                          <AttributeRules>
+                                                            <AttributeRule AttributeName="RelatingMaterial">
+                                                              <EntityRules>
+                                                                <EntityRule EntityName="IfcMaterial">
+                                                                  <AttributeRules>
+                                                                    <AttributeRule AttributeName="HasProperties">
+                                                                      <EntityRules>
+                                                                        <EntityRule EntityName="IfcMaterialProperties">
+                                                                          <AttributeRules>
+                                                                            <AttributeRule AttributeName="Properties">
+                                                                              <EntityRules>
+                                                                                <EntityRule EntityName="IfcProperty" />
+                                                                              </EntityRules>
+                                                                            </AttributeRule>
+                                                                          </AttributeRules>
+                                                                        </EntityRule>
+                                                                      </EntityRules>
+                                                                    </AttributeRule>
+                                                                  </AttributeRules>
+                                                                </EntityRule>
+                                                              </EntityRules>
+                                                            </AttributeRule>
+                                                          </AttributeRules>
+                                                        </EntityRule>
+                                                      </EntityRules>
+                                                    </AttributeRule>
+                                                    <AttributeRule AttributeName="HasProperties">
+                                                      <EntityRules>
+                                                        <EntityRule EntityName="IfcMaterialProperties">
+                                                          <AttributeRules>
+                                                            <AttributeRule AttributeName="Properties">
+                                                              <EntityRules>
+                                                                <EntityRule EntityName="IfcProperty" />
+                                                              </EntityRules>
+                                                            </AttributeRule>
+                                                          </AttributeRules>
+                                                        </EntityRule>
+                                                      </EntityRules>
+                                                    </AttributeRule>
+                                                  </AttributeRules>
+                                                </EntityRule>
+                                              </EntityRules>
+                                            </AttributeRule>
+                                            <AttributeRule AttributeName="Material">
+                                              <EntityRules>
+                                                <EntityRule EntityName="IfcMaterial" />
+                                              </EntityRules>
+                                            </AttributeRule>
+                                            <AttributeRule AttributeName="AssociatedTo">
+                                              <EntityRules>
+                                                <EntityRule EntityName="IfcRelAssociatesMaterial">
+                                                  <AttributeRules>
+                                                    <AttributeRule AttributeName="RelatingMaterial">
+                                                      <EntityRules>
+                                                        <EntityRule EntityName="IfcMaterial">
+                                                          <AttributeRules>
+                                                            <AttributeRule AttributeName="HasProperties">
+                                                              <EntityRules>
+                                                                <EntityRule EntityName="IfcMaterialProperties">
+                                                                  <AttributeRules>
+                                                                    <AttributeRule AttributeName="Properties">
+                                                                      <EntityRules>
+                                                                        <EntityRule EntityName="IfcProperty" />
+                                                                      </EntityRules>
+                                                                    </AttributeRule>
+                                                                  </AttributeRules>
+                                                                </EntityRule>
+                                                              </EntityRules>
+                                                            </AttributeRule>
+                                                          </AttributeRules>
+                                                        </EntityRule>
+                                                      </EntityRules>
+                                                    </AttributeRule>
+                                                  </AttributeRules>
+                                                </EntityRule>
                                               </EntityRules>
                                             </AttributeRule>
                                           </AttributeRules>
@@ -339,41 +603,143 @@ This ensures that the data sheets stay interpretable over a long time, even if t
             </AttributeRule>
           </Rules>
         </ConceptTemplate>
-      </SubTemplates>
-    </ConceptTemplate>
-    <ConceptTemplate uuid="f3dc81e8-c707-4089-8856-91ad410054d2" name="Material Information" applicableSchema="IFC4" applicableEntity="IfcMaterial">
-      <Definitions>
-        <Definition>
-          <Body><![CDATA[Information about the concept Material]]></Body>
-        </Definition>
-      </Definitions>
-      <SubTemplates>
-        <ConceptTemplate uuid="b510e76e-9028-40bc-ac44-31291ba7f1db" name="Material Data" applicableSchema="IFC4" applicableEntity="IfcMaterial">
-          <Definitions>
-            <Definition>
-              <Body><![CDATA[Information about the concept Material Data]]></Body>
-            </Definition>
-          </Definitions>
+        <ConceptTemplate uuid="509461ca-f24f-41ff-8cc8-cc98c52c3c18" name="Material of construction object types" status="draft" applicableSchema="IFC4" applicableEntity="IfcContext">
           <Rules>
-            <AttributeRule AttributeName="HasProperties">
+            <AttributeRule AttributeName="Declares">
               <EntityRules>
-                <EntityRule EntityName="IfcMaterialProperties">
+                <EntityRule EntityName="IfcRelDeclares">
                   <AttributeRules>
-                    <AttributeRule AttributeName="Properties">
+                    <AttributeRule AttributeName="RelatedDefinitions">
                       <EntityRules>
-                        <EntityRule EntityName="IfcSimpleProperty">
+                        <EntityRule EntityName="IfcTypeObject">
                           <AttributeRules>
-                            <AttributeRule AttributeName="PartOfPset">
+                            <AttributeRule AttributeName="HasAssociations">
                               <EntityRules>
-                                <EntityRule EntityName="IfcPropertySet">
+                                <EntityRule EntityName="IfcRelAssociatesMaterial">
                                   <AttributeRules>
-                                    <AttributeRule AttributeName="IsDefinedBy">
+                                    <AttributeRule AttributeName="RelatingMaterial">
                                       <EntityRules>
-                                        <EntityRule EntityName="IfcRelDefinesByTemplate">
+                                        <EntityRule EntityName="IfcMaterialDefinition" />
+                                      </EntityRules>
+                                    </AttributeRule>
+                                  </AttributeRules>
+                                </EntityRule>
+                              </EntityRules>
+                            </AttributeRule>
+                          </AttributeRules>
+                        </EntityRule>
+                      </EntityRules>
+                    </AttributeRule>
+                  </AttributeRules>
+                </EntityRule>
+              </EntityRules>
+            </AttributeRule>
+          </Rules>
+        </ConceptTemplate>
+        <ConceptTemplate uuid="252580ef-fa1c-420d-97cf-c81c3be33e94" name="Material of construction objects" applicableSchema="IFC4" applicableEntity="IfcContext">
+          <Rules>
+            <AttributeRule AttributeName="Declares">
+              <EntityRules>
+                <EntityRule EntityName="IfcRelDeclares">
+                  <AttributeRules>
+                    <AttributeRule AttributeName="RelatedDefinitions">
+                      <EntityRules>
+                        <EntityRule EntityName="IfcObject">
+                          <AttributeRules>
+                            <AttributeRule AttributeName="HasAssociations">
+                              <EntityRules>
+                                <EntityRule EntityName="IfcRelAssociatesMaterial">
+                                  <AttributeRules>
+                                    <AttributeRule AttributeName="RelatingMaterial">
+                                      <EntityRules>
+                                        <EntityRule EntityName="IfcMaterialDefinition" />
+                                      </EntityRules>
+                                    </AttributeRule>
+                                  </AttributeRules>
+                                </EntityRule>
+                              </EntityRules>
+                            </AttributeRule>
+                          </AttributeRules>
+                        </EntityRule>
+                      </EntityRules>
+                    </AttributeRule>
+                  </AttributeRules>
+                </EntityRule>
+              </EntityRules>
+            </AttributeRule>
+          </Rules>
+        </ConceptTemplate>
+        <ConceptTemplate uuid="44f330b4-61fe-4927-98a9-850e03d63f7d" name="Material profile definition" status="draft" applicableSchema="IFC4" applicableEntity="IfcContext">
+          <Rules>
+            <AttributeRule AttributeName="Declares">
+              <EntityRules>
+                <EntityRule EntityName="IfcRelDeclares">
+                  <AttributeRules>
+                    <AttributeRule AttributeName="RelatedDefinitions">
+                      <EntityRules>
+                        <EntityRule EntityName="IfcObject">
+                          <AttributeRules>
+                            <AttributeRule AttributeName="HasAssociations">
+                              <EntityRules>
+                                <EntityRule EntityName="IfcRelAssociatesMaterial">
+                                  <AttributeRules>
+                                    <AttributeRule AttributeName="RelatingMaterial">
+                                      <EntityRules>
+                                        <EntityRule EntityName="IfcMaterialProfile">
                                           <AttributeRules>
-                                            <AttributeRule AttributeName="RelatingTemplate">
+                                            <AttributeRule AttributeName="ToMaterialProfileSet">
                                               <EntityRules>
-                                                <EntityRule EntityName="IfcPropertySetTemplate" />
+                                                <EntityRule EntityName="IfcMaterialProfileSet">
+                                                  <AttributeRules>
+                                                    <AttributeRule AttributeName="HasProperties">
+                                                      <EntityRules>
+                                                        <EntityRule EntityName="IfcMaterialProperties">
+                                                          <AttributeRules>
+                                                            <AttributeRule AttributeName="Properties">
+                                                              <EntityRules>
+                                                                <EntityRule EntityName="IfcProperty" />
+                                                              </EntityRules>
+                                                            </AttributeRule>
+                                                          </AttributeRules>
+                                                        </EntityRule>
+                                                      </EntityRules>
+                                                    </AttributeRule>
+                                                  </AttributeRules>
+                                                </EntityRule>
+                                              </EntityRules>
+                                            </AttributeRule>
+                                            <AttributeRule AttributeName="HasProperties">
+                                              <EntityRules>
+                                                <EntityRule EntityName="IfcMaterialProperties">
+                                                  <AttributeRules>
+                                                    <AttributeRule AttributeName="Properties">
+                                                      <EntityRules>
+                                                        <EntityRule EntityName="IfcProperty" />
+                                                      </EntityRules>
+                                                    </AttributeRule>
+                                                  </AttributeRules>
+                                                </EntityRule>
+                                              </EntityRules>
+                                            </AttributeRule>
+                                            <AttributeRule AttributeName="Material">
+                                              <EntityRules>
+                                                <EntityRule EntityName="IfcMaterial">
+                                                  <AttributeRules>
+                                                    <AttributeRule AttributeName="HasProperties">
+                                                      <EntityRules>
+                                                        <EntityRule EntityName="IfcMaterialProperties">
+                                                          <AttributeRules>
+                                                            <AttributeRule AttributeName="Properties">
+                                                              <EntityRules>
+                                                                <EntityRule EntityName="IfcProperty" />
+                                                              </EntityRules>
+                                                            </AttributeRule>
+                                                          </AttributeRules>
+                                                        </EntityRule>
+                                                      </EntityRules>
+                                                    </AttributeRule>
+                                                  </AttributeRules>
+                                                </EntityRule>
                                               </EntityRules>
                                             </AttributeRule>
                                           </AttributeRules>
@@ -386,40 +752,6 @@ This ensures that the data sheets stay interpretable over a long time, even if t
                             </AttributeRule>
                           </AttributeRules>
                         </EntityRule>
-                        <EntityRule EntityName="IfcComplexProperty" />
-                      </EntityRules>
-                    </AttributeRule>
-                  </AttributeRules>
-                </EntityRule>
-              </EntityRules>
-            </AttributeRule>
-            <AttributeRule AttributeName="Name">
-              <EntityRules>
-                <EntityRule EntityName="IfcLabel" />
-              </EntityRules>
-            </AttributeRule>
-            <AttributeRule AttributeName="Description">
-              <EntityRules>
-                <EntityRule EntityName="IfcText" />
-              </EntityRules>
-            </AttributeRule>
-          </Rules>
-        </ConceptTemplate>
-        <ConceptTemplate uuid="8873cf28-bc3b-4e0e-b8be-ea10a96b3e20" name="Material Object Assignment" applicableSchema="IFC4" applicableEntity="IfcMaterial">
-          <Definitions>
-            <Definition>
-              <Body><![CDATA[Information about the concept Material Object Assignement]]></Body>
-            </Definition>
-          </Definitions>
-          <Rules>
-            <AttributeRule AttributeName="AssociatedTo">
-              <EntityRules>
-                <EntityRule EntityName="IfcRelAssociatesMaterial">
-                  <AttributeRules>
-                    <AttributeRule AttributeName="RelatedObjects">
-                      <EntityRules>
-                        <EntityRule EntityName="IfcTypeObject" />
-                        <EntityRule EntityName="IfcObject" />
                       </EntityRules>
                     </AttributeRule>
                   </AttributeRules>
@@ -429,45 +761,10 @@ This ensures that the data sheets stay interpretable over a long time, even if t
           </Rules>
         </ConceptTemplate>
       </SubTemplates>
-    </ConceptTemplate>
-    <ConceptTemplate uuid="9f63432b-cdc8-4438-8bbf-035ee92c5842" name="Transport" status="candidate" applicableSchema="IFC4" applicableEntity="IfcProjectLibrary">
-      <Definitions>
-        <Definition>
-          <Body><![CDATA[All exchanges can be transported over these protocols:
-
-1.	As a physical file with manual exchange via eMail, Harddrives, oder similar
-2.	As a data structure in the payload of an online exchange, eg. an API, a messaging system or similar.
-
-This standard does not define how exactly the exchange is done. It defines the standard for the structure of the file or the payload. The file or the payload can be stored in a compressd format according to the specification. The file extension is then \\\\*.ifczip. The specifications for ifczip can be found here:
-
-•	http://www.buildingsmart-tech.org/specifications/ifc-overview/ifc-overview-summary
-•	http://www.buildingsmart-tech.org/implementation/ifc-implementation/ifc-impl-agreements/cv-2x3-154
-
-It is explicitly allowed to embed an IFC file in Step format (.ifc) or in XML format Format (.ifcxml) in an ifczip file.
-The specification contains the following principles:
-
-1.	The ifczip file contains exactly one model file (.ifc or .ifcxml). The file extension is \\\\*.ifczip
-2.	According to this rule, it is allowed to embed additional other files in an ifczip file. Therefore, an ifczip file can be a container, which can transport many additional files in itself.
-3.	Such a container offers several advantages, such as
-•	transport of photo documentations
-•	transport of plant documentation
-•	transport of permits and notifications
-•	transport of operating documents, e.g. test and maintenance reports
-
-In the BIM context, such a transport is particularly useful if the documents have a reference to the structure.
-
-In order to be able to exchange data without consultation, each transported document should be registered in a structured, electronic table of contents. The recipient of the container can first read the table of contents and then select and remove the files.
-
-For this purpose, two things must be specified for the sender and receiver of such a container file:
-•	syntax of the table of contents
-•	specifications for the semantic identification of documents
-Since the current specification of the ifczip format provides exactly one model file in the root folder of the ifczip file, it makes sense to save the table of contents and the catalogue of document types in this model file.
-For this purpose, the IFC data model (based on IFC4) provides the entity IfcDocumentInformation. For each file transported in the container, an element of type IfcDocumentInformation is written.]]></Body>
-        </Definition>
-      </Definitions>
     </ConceptTemplate>
     <ConceptTemplate uuid="678fe87d-6f4f-44d4-bf7f-33819709c5a1" name="_Construction Objects Data View" applicableSchema="IFC4">
       <SubTemplates>
+        <ConceptTemplate uuid="dcffecbd-a68f-4ad9-a144-ea1bfef097cb" name="Material object association" applicableSchema="IFC4" applicableEntity="IfcContext" />
         <ConceptTemplate uuid="f21cd56e-777d-4142-9ff0-352b743cd6be" name="NOTDEFINED" applicableSchema="IFC4" applicableEntity="IfcContext" />
       </SubTemplates>
     </ConceptTemplate>
@@ -517,6 +814,9 @@ The product data file is specified as follows:
 { .tg}
 { .tg}
 { .tg}
+{ .tg}
+{ .tg}
+{ .tg}
 <table class="tg">
   <tr>
     <th class="tg-rykj"><br>&nbsp;&nbsp;Standard<br>&nbsp;&nbsp;</th>
@@ -539,6 +839,12 @@ The product data file is specified as follows:
     <td class="tg-rykj"><br>&nbsp;&nbsp;ifcZIP<br>&nbsp;&nbsp;</td>
   </tr>
 </table>
+
+
+
+
+
+
 
 
 
@@ -575,6 +881,9 @@ The digital information exchange of data for construction objects can be realize
 .tg .tg-rykj{font-size:12px;text-align:left;vertical-align:middle}
 .tg .tg-hdjr{font-size:12px;background-color:#c0c0c0;text-align:left;vertical-align:middle}
 </style>{ .tg}
+{ .tg}
+{ .tg}
+{ .tg}
 { .tg}
 { .tg}
 { .tg}
@@ -617,6 +926,12 @@ The digital information exchange of data for construction objects can be realize
 
 
 
+
+
+
+
+
+
 {#purpose .num}
 ## Relation of part 1 and part 2
 
@@ -643,23 +958,23 @@ The elements from ISO EN 16739.1:2018 that are applicable for the exchange requi
 
 Based on a discussion by Pierre-François & Klaus in Tokyo the following picture illustrates the relation of the different file types
 
-\\\*\\\*Building file\\\*\\\*
+\\\\\\*\\\\\\*Building file\\\\\\*\\\\\\*
 
 The file that stored the information about the building as a whole
 
-\\\*\\\*Catalogue file\\\*\\\*
+\\\\\\*\\\\\\*Catalogue file\\\\\\*\\\\\\*
 
 The file that stores the information about products with their configuration option.
 
-\\\*\\\*Request/Selection Application\\\*\\\*
+\\\\\\*\\\\\\*Request/Selection Application\\\\\\*\\\\\\*
 
 A software application that can handle the incoming requests and the selection process against a product catalogue.
 
-\\\*\\\*Inserting application\\\*\\\*
+\\\\\\*\\\\\\*Inserting application\\\\\\*\\\\\\*
 
 A software application, that can insert a completely defined product into the building file.
 
-\\\*\\\*Selection application\\\*\\\*
+\\\\\\*\\\\\\*Selection application\\\\\\*\\\\\\*
 
 A software application, that can select a completely defined product out of a catalogue by user interaction and returns the completely defined product.
 
@@ -712,6 +1027,44 @@ One or more products that are fully defined and can be ordered, delivered to the
         </ExchangeRequirement>
       </ExchangeRequirements>
       <Roots>
+        <ConceptRoot uuid="47814901-57bf-4831-83e8-e510e3142d6a" name="Material" applicableRootEntity="IfcContext">
+          <Applicability>
+            <Template ref="dcffecbd-a68f-4ad9-a144-ea1bfef097cb" />
+            <TemplateRules operator="and" />
+          </Applicability>
+          <Concepts>
+            <Concept uuid="c7703053-da7f-4010-95c9-f26fa0c2b29d" name="Material constituent definition" override="false">
+              <Template ref="a1b77971-e1dd-4bed-8a15-f92485e2c7b6" />
+              <TemplateRules operator="and">
+                <TemplateRule />
+              </TemplateRules>
+            </Concept>
+            <Concept uuid="a68042c6-c2b6-4718-8426-a6d8615cc980" name="Material layer definition" override="false">
+              <Template ref="94e9cae4-5d06-40cc-be8a-4a9cddd79325" />
+              <TemplateRules operator="and">
+                <TemplateRule />
+              </TemplateRules>
+            </Concept>
+            <Concept uuid="fb030e0c-987f-4f4a-9e74-24ce75c58966" name="Material of construction object types" override="false">
+              <Template ref="509461ca-f24f-41ff-8cc8-cc98c52c3c18" />
+              <TemplateRules operator="and">
+                <TemplateRule />
+              </TemplateRules>
+            </Concept>
+            <Concept uuid="eff5d768-abfb-4054-930d-9a47a1fc6ea0" name="Material of construction objects" override="false">
+              <Template ref="252580ef-fa1c-420d-97cf-c81c3be33e94" />
+              <TemplateRules operator="and">
+                <TemplateRule />
+              </TemplateRules>
+            </Concept>
+            <Concept uuid="2dd69a28-c69c-4438-9d16-72a673f43118" name="Material profile definition" override="false">
+              <Template ref="44f330b4-61fe-4927-98a9-850e03d63f7d" />
+              <TemplateRules operator="and">
+                <TemplateRule />
+              </TemplateRules>
+            </Concept>
+          </Concepts>
+        </ConceptRoot>
         <ConceptRoot uuid="8f963b24-99b3-4f58-be4e-34d01046f112" name="Declarations" status="draft" applicableRootEntity="IfcContext">
           <Applicability>
             <Template ref="94cfa683-4321-4216-b540-287923b7e28a" />
@@ -731,7 +1084,7 @@ One or more products that are fully defined and can be ordered, delivered to the
                 <TemplateRule />
               </TemplateRules>
             </Concept>
-            <Concept uuid="923115b4-3dd1-40b7-a8ca-298c6c988539" name="Declaration for templates" override="false">
+            <Concept uuid="923115b4-3dd1-40b7-a8ca-298c6c988539" name="Declaration for templates" status="draft" override="false">
               <Template ref="c9ffd9bf-be54-46f4-a685-72396aa0273f" />
               <Requirements>
                 <Requirement applicability="import" requirement="mandatory" exchangeRequirement="e4d15dda-78aa-4713-83be-aa79730fc9a4" />
@@ -767,6 +1120,12 @@ One or more products that are fully defined and can be ordered, delivered to the
                 <TemplateRule />
               </TemplateRules>
             </Concept>
+            <Concept uuid="2417e76f-bcc7-4f1c-b2cd-f9cb248fcac3" name="Classification of data templates" override="false">
+              <Template ref="f26b428b-d38a-47b3-a60d-d2ba54a6c764" />
+              <TemplateRules operator="and">
+                <TemplateRule />
+              </TemplateRules>
+            </Concept>
             <Concept uuid="290ef775-9c4b-444f-9f36-338aee25e531" name="Classification of construction object types" override="false">
               <Template ref="221e03e4-b661-4f7a-82fe-2d0baff62915" />
               <TemplateRules operator="and">
@@ -781,38 +1140,6 @@ One or more products that are fully defined and can be ordered, delivered to the
             </Concept>
             <Concept uuid="1559f79d-37f3-49e6-b750-5f7e4f739ca7" name="Classification of construction systems" override="false">
               <Template ref="53b2705b-f492-48bf-9b2c-e23ec01c9acc" />
-              <TemplateRules operator="and">
-                <TemplateRule />
-              </TemplateRules>
-            </Concept>
-            <Concept uuid="2417e76f-bcc7-4f1c-b2cd-f9cb248fcac3" name="Classification of data templates" override="false">
-              <Template ref="f26b428b-d38a-47b3-a60d-d2ba54a6c764" />
-              <TemplateRules operator="and">
-                <TemplateRule />
-              </TemplateRules>
-            </Concept>
-            <Concept uuid="0d6f5d95-83ad-4979-b37e-16d66332fcfa" name="Classification of material" override="false">
-              <Template ref="1b12aeea-eac8-48d2-bd0f-726fabe40404" />
-              <TemplateRules operator="and">
-                <TemplateRule />
-              </TemplateRules>
-            </Concept>
-          </Concepts>
-        </ConceptRoot>
-        <ConceptRoot uuid="a202b9ba-8649-4472-a641-4453673dccbc" name="Material Information" applicableRootEntity="IfcMaterial">
-          <Applicability>
-            <Template ref="1b12aeea-eac8-48d2-bd0f-726fabe40404" />
-            <TemplateRules operator="and" />
-          </Applicability>
-          <Concepts>
-            <Concept uuid="d35392c9-c20d-40a0-b160-d1fd8683791e" name="Material data" override="false">
-              <Template ref="b510e76e-9028-40bc-ac44-31291ba7f1db" />
-              <TemplateRules operator="and">
-                <TemplateRule />
-              </TemplateRules>
-            </Concept>
-            <Concept uuid="55428923-7172-4d21-b2ab-0c525b751582" name="Material object assignment" override="false">
-              <Template ref="8873cf28-bc3b-4e0e-b8be-ea10a96b3e20" />
               <TemplateRules operator="and">
                 <TemplateRule />
               </TemplateRules>

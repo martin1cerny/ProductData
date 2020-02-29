@@ -48,9 +48,9 @@
 </blockquote>
 <p>A group can hold any collection of objects, the relationship <a href="../../ifckernel/lexical/ifcrelassignstogroup.html">IfcRelAssignsToGroup</a> is used to establish the group collection. Objects within a group are products, processes, controls, resources, actors or other groups, thus groups can be nested. An object can be part of zero, one, or many groups. Grouping relationships are not required to be hierarchical nor do they imply a dependency.</p>
 <p>Groups are assigned to other objects (such as a process or a resource) by the relationship object that refers to the corresponding object:</p>
-<p>\\\\\\\\\\\* Process: assigned using <i>IfcRelAssignsToProcess</i>
-\\\\\\\\\\\* Resource: assigned using <i>IfcRelAssignsToResource</i>
-\\\\\\\\\\\* Controls: affecting the group using <i>IfcRelAssignsToControl</i></p>
+<p>\\\\\\\\\\\\\* Process: assigned using <i>IfcRelAssignsToProcess</i>
+\\\\\\\\\\\\\* Resource: assigned using <i>IfcRelAssignsToResource</i>
+\\\\\\\\\\\\\* Controls: affecting the group using <i>IfcRelAssignsToControl</i></p>
 <p>A group can be exchanged without having already objects within the group collection.</p>
 <p><span class="self-ref">IfcGroup</span> does not define an own object coordinate system, nor does it have an independent shape representation.</p>
 <blockquote class="note">
@@ -85,10 +85,16 @@
 <tr><td>1</td><td>GlobalId</td><td><a href="../../ifcutilityresource/lexical/ifcgloballyuniqueid.html">IfcGloballyUniqueId</a></td><td></td><td>
 Assignment of a globally unique identifier within the entire software world.
 </td><td>X</td></tr>
-<tr><td>2</td><td>OwnerHistory</td><td><span class="self-ref">-</span></td><td></td><td>
-<i>This attribute is out of scope for this model view definition and shall not be set.</i></td><td></td></tr>
-<tr><td>3</td><td>Name</td><td><span class="self-ref">-</span></td><td></td><td>
-<i>This attribute is out of scope for this model view definition and shall not be set.</i></td><td></td></tr>
+<tr><td>2</td><td>OwnerHistory</td><td><a href="../../ifcutilityresource/lexical/ifcownerhistory.html">IfcOwnerHistory</a></td><td>? </td><td>
+Assignment of the information about the current ownership of that object, including owning actor, application, local identification and information captured about the recent changes of the object,
+<blockquote class="note">
+NOTE  only the last modification in stored - either as addition, deletion or modification.
+</blockquote>
+
+</td><td>X</td></tr>
+<tr><td>3</td><td>Name</td><td><a href="../../ifcmeasureresource/lexical/ifclabel.html">IfcLabel</a></td><td>? </td><td>
+Optional name for use by the participating software systems or users. For some subtypes of IfcRoot the insertion of the Name attribute may be required. This would be enforced by a where rule.
+</td><td>X</td></tr>
 <tr><td>4</td><td>Description</td><td><span class="self-ref">-</span></td><td></td><td>
 <i>This attribute is out of scope for this model view definition and shall not be set.</i></td><td></td></tr>
 <tr><td colspan="6"><i><a href="../../ifckernel/lexical/ifcobjectdefinition.html">IfcObjectDefinition</a></i></td></tr>

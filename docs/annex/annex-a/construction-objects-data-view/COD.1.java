@@ -73,20 +73,6 @@
 	}
 	
 
-	public class IfcPropertySet extends IfcPropertySetDefinition
-	{
-		private IfcProperty[] HasProperties;
-	}
-	
-
-	public class IfcPropertySetDefinition extends IfcPropertyDefinition
-	{
-		private IfcTypeObject[] DefinesType;
-		private IfcRelDefinesByTemplate[] IsDefinedBy;
-		private IfcRelDefinesByProperties[] DefinesOccurrence;
-	}
-	
-
 	public class IfcPropertySetTemplate extends IfcPropertyTemplateDefinition
 	{
 		private IfcPropertySetTemplateTypeEnum TemplateType;
@@ -154,18 +140,6 @@
 	{
 		private IfcContext RelatingContext;
 		private IfcDefinitionSelect[] RelatedDefinitions;
-	}
-	
-
-	public class IfcRelDefines extends IfcRelationship
-	{
-	}
-	
-
-	public class IfcRelDefinesByTemplate extends IfcRelDefines
-	{
-		private IfcPropertySetDefinition[] RelatedPropertySets;
-		private IfcPropertySetTemplate RelatingTemplate;
 	}
 	
 
@@ -244,6 +218,9 @@
 		private IfcOrganization TheOrganization;
 		private IfcActorRole[] Roles;
 	}
+	
+
+	/* IfcTimeStamp : INTEGER (Java does not support structures, so usage of defined types are inline for efficiency.) */
 	
 
 	public interface IfcClassificationSelect
@@ -332,6 +309,25 @@
 	}
 	
 
+	public class IfcMaterialConstituent extends IfcMaterialDefinition
+	{
+		private string Name;
+		private string Description;
+		private IfcMaterial Material;
+		private IfcRatioMeasure Fraction;
+		private string Category;
+		private IfcMaterialConstituentSet ToMaterialConstituentSet;
+	}
+	
+
+	public class IfcMaterialConstituentSet extends IfcMaterialDefinition
+	{
+		private string Name;
+		private string Description;
+		private IfcMaterialConstituent[] MaterialConstituents;
+	}
+	
+
 	public class IfcMaterialDefinition extends IfcBase
 	{
 		private IfcRelAssociatesMaterial[] AssociatedTo;
@@ -340,9 +336,52 @@
 	}
 	
 
+	public class IfcMaterialLayer extends IfcMaterialDefinition
+	{
+		private IfcMaterial Material;
+		private IfcLengthMeasure LayerThickness;
+		private int IsVentilated;
+		private string Name;
+		private string Description;
+		private string Category;
+		private int Priority;
+		private IfcMaterialLayerSet ToMaterialLayerSet;
+	}
+	
+
+	public class IfcMaterialLayerSet extends IfcMaterialDefinition
+	{
+		private IfcMaterialLayer[] MaterialLayers;
+		private string LayerSetName;
+		private string Description;
+		private double TotalThickness;
+	}
+	
+
 	public class IfcMaterialList extends IfcBase
 	{
 		private IfcMaterial[] Materials;
+	}
+	
+
+	public class IfcMaterialProfile extends IfcMaterialDefinition
+	{
+		private string Name;
+		private string Description;
+		private IfcMaterial Material;
+		private IfcProfileDef Profile;
+		private int Priority;
+		private string Category;
+		private IfcMaterialProfileSet ToMaterialProfileSet;
+	}
+	
+
+	public class IfcMaterialProfileSet extends IfcMaterialDefinition
+	{
+		private string Name;
+		private string Description;
+		private IfcMaterialProfile[] MaterialProfiles;
+		private IfcCompositeProfileDef CompositeProfile;
 	}
 	
 
@@ -364,23 +403,25 @@
 	/* IfcLabel : STRING (Java does not support structures, so usage of defined types are inline for efficiency.) */
 	
 
-	/* IfcText : STRING (Java does not support structures, so usage of defined types are inline for efficiency.) */
+	/* IfcLengthMeasure : REAL (Java does not support structures, so usage of defined types are inline for efficiency.) */
 	
 
-	public interface IfcSimpleValue
+	/* IfcNonNegativeLengthMeasure : IfcLengthMeasure (Java does not support structures, so usage of defined types are inline for efficiency.) */
+	
+
+	public enum IfcProfileTypeEnum
 	{
+		CURVE,
+		AREA,
 	}
 	
 
-	public interface IfcValue
+	public class IfcProfileDef extends IfcBase
 	{
-	}
-	
-
-	public class IfcComplexProperty extends IfcProperty
-	{
-		private string UsageName;
-		private IfcProperty[] HasProperties;
+		private IfcProfileTypeEnum ProfileType;
+		private string ProfileName;
+		private IfcExternalReferenceRelationship[] HasExternalReference;
+		private IfcProfileProperties[] HasProperties;
 	}
 	
 
@@ -411,11 +452,28 @@
 	}
 	
 
-	public class IfcSimpleProperty extends IfcProperty
+	/* IfcGloballyUniqueId : STRING (Java does not support structures, so usage of defined types are inline for efficiency.) */
+	
+
+	public class IfcApplication extends IfcBase
 	{
+		private IfcOrganization ApplicationDeveloper;
+		private string Version;
+		private string ApplicationFullName;
+		private string ApplicationIdentifier;
 	}
 	
 
-	/* IfcGloballyUniqueId : STRING (Java does not support structures, so usage of defined types are inline for efficiency.) */
+	public class IfcOwnerHistory extends IfcBase
+	{
+		private IfcPersonAndOrganization OwningUser;
+		private IfcApplication OwningApplication;
+		private IfcStateEnum State;
+		private IfcChangeActionEnum ChangeAction;
+		private int LastModifiedDate;
+		private IfcPersonAndOrganization LastModifyingUser;
+		private IfcApplication LastModifyingApplication;
+		private int CreationDate;
+	}
 	
 

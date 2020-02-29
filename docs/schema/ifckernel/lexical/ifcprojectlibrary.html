@@ -42,11 +42,11 @@
 <h5 class="num">Semantic definitions at the entity</h5>
 <details open="open"><summary>Entity definition</summary><p>An <span class="self-ref">IfcProjectLibrary</span> collects all library elements that are included within a referenced project data set.</p>
 <p>Examples for project libraries include:</p>
-<p>\\\\\\\\\\\* type libraries (also called style or family libraries): a collection of subtypes of <a href="../../ifckernel/lexical/ifctypeobject.html">IfcTypeObject</a>
-\\\\\\\\\\\* property definition libraries: a collections of <a href="../../ifckernel/lexical/ifcpropertysettemplate.html">IfcPropertySetTemplate</a> or <i>IfcPropertyTemplates</i></p>
+<p>\\\\\\\\\\\\\* type libraries (also called style or family libraries): a collection of subtypes of <a href="../../ifckernel/lexical/ifctypeobject.html">IfcTypeObject</a>
+\\\\\\\\\\\\\* property definition libraries: a collections of <a href="../../ifckernel/lexical/ifcpropertysettemplate.html">IfcPropertySetTemplate</a> or <i>IfcPropertyTemplates</i></p>
 <p>The inherited attributes <i>RepresentationContext</i> and <i>UnitsInContext</i> have the following meaning:</p>
-<p>\\\\\\\\\\\* Context of the representations used within the project library. When the project library includes shape representations for its library type objects, one or several geometric representation contexts need to be included that define the coordinate system, the coordinate space dimensions, and/or the precision factor,
-\\\\\\\\\\\* Units locally assigned to measure types used within the context of this project library.</p>
+<p>\\\\\\\\\\\\\* Context of the representations used within the project library. When the project library includes shape representations for its library type objects, one or several geometric representation contexts need to be included that define the coordinate system, the coordinate space dimensions, and/or the precision factor,
+\\\\\\\\\\\\\* Units locally assigned to measure types used within the context of this project library.</p>
 <blockquote class="note">
 <p>NOTE  It is generally discouraged to use a different length measure and plane angle measure in an included project library compared with the project itself. It may lead to unexpected results for the shape representation of items included in the project library.</p>
 </blockquote>
@@ -69,10 +69,16 @@
 <tr><td>1</td><td>GlobalId</td><td><a href="../../ifcutilityresource/lexical/ifcgloballyuniqueid.html">IfcGloballyUniqueId</a></td><td></td><td>
 Assignment of a globally unique identifier within the entire software world.
 </td><td>X</td></tr>
-<tr><td>2</td><td>OwnerHistory</td><td><span class="self-ref">-</span></td><td></td><td>
-<i>This attribute is out of scope for this model view definition and shall not be set.</i></td><td></td></tr>
-<tr><td>3</td><td>Name</td><td><span class="self-ref">-</span></td><td></td><td>
-<i>This attribute is out of scope for this model view definition and shall not be set.</i></td><td></td></tr>
+<tr><td>2</td><td>OwnerHistory</td><td><a href="../../ifcutilityresource/lexical/ifcownerhistory.html">IfcOwnerHistory</a></td><td>? </td><td>
+Assignment of the information about the current ownership of that object, including owning actor, application, local identification and information captured about the recent changes of the object,
+<blockquote class="note">
+NOTE  only the last modification in stored - either as addition, deletion or modification.
+</blockquote>
+
+</td><td>X</td></tr>
+<tr><td>3</td><td>Name</td><td><a href="../../ifcmeasureresource/lexical/ifclabel.html">IfcLabel</a></td><td>? </td><td>
+Optional name for use by the participating software systems or users. For some subtypes of IfcRoot the insertion of the Name attribute may be required. This would be enforced by a where rule.
+</td><td>X</td></tr>
 <tr><td>4</td><td>Description</td><td><span class="self-ref">-</span></td><td></td><td>
 <i>This attribute is out of scope for this model view definition and shall not be set.</i></td><td></td></tr>
 <tr><td colspan="6"><i><a href="../../ifckernel/lexical/ifcobjectdefinition.html">IfcObjectDefinition</a></i></td></tr>
@@ -88,8 +94,9 @@ Assignment of a globally unique identifier within the entire software world.
 <i>This attribute is out of scope for this model view definition and shall not be set.</i></td><td></td></tr>
 <tr><td>6</td><td>LongName</td><td><span class="self-ref">-</span></td><td></td><td>
 <i>This attribute is out of scope for this model view definition and shall not be set.</i></td><td></td></tr>
-<tr><td>7</td><td>Phase</td><td><span class="self-ref">-</span></td><td></td><td>
-<i>This attribute is out of scope for this model view definition and shall not be set.</i></td><td></td></tr>
+<tr><td>7</td><td>Phase</td><td><a href="../../ifcmeasureresource/lexical/ifclabel.html">IfcLabel</a></td><td>? </td><td>
+Current project phase, or life-cycle phase of this project. Applicable values have to be agreed upon by view definitions or implementer agreements.
+</td><td>X</td></tr>
 <tr><td>8</td><td>RepresentationContexts</td><td><span class="self-ref">-</span></td><td></td><td>
 <i>This attribute is out of scope for this model view definition and shall not be set.</i></td><td></td></tr>
 <tr><td>9</td><td>UnitsInContext</td><td><span class="self-ref">-</span></td><td></td><td>

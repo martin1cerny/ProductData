@@ -8,6 +8,9 @@
   <cnf:type select="NUMBER" map="xs:double" />
   <cnf:type select="BINARY" map="xs:hexBinary" />
   <cnf:type select="IfcStrippedOptional" keep="false" />
+  <cnf:entity select="IfcApplication">
+    <cnf:attribute select="ApplicationDeveloper" exp-attribute="attribute-tag" />
+  </cnf:entity>
   <cnf:entity select="IfcClassification">
     <cnf:attribute select="ReferenceTokens" exp-attribute="double-tag" />
     <cnf:inverse select="HasReferences" exp-attribute="double-tag" />
@@ -27,8 +30,21 @@
   <cnf:entity select="IfcMaterial">
     <cnf:inverse select="HasRepresentation" exp-attribute="attribute-tag" />
   </cnf:entity>
+  <cnf:entity select="IfcMaterialConstituent">
+    <cnf:attribute select="Material" exp-attribute="attribute-tag" />
+  </cnf:entity>
   <cnf:entity select="IfcMaterialDefinition">
     <cnf:inverse select="HasProperties" exp-attribute="double-tag" />
+  </cnf:entity>
+  <cnf:entity select="IfcMaterialLayer">
+    <cnf:attribute select="Material" exp-attribute="attribute-tag" />
+  </cnf:entity>
+  <cnf:entity select="IfcMaterialProfile">
+    <cnf:attribute select="Material" exp-attribute="attribute-tag" />
+    <cnf:attribute select="Profile" exp-attribute="attribute-tag" />
+  </cnf:entity>
+  <cnf:entity select="IfcMaterialProfileSet">
+    <cnf:attribute select="CompositeProfile" exp-attribute="attribute-tag" />
   </cnf:entity>
   <cnf:entity select="IfcMaterialProperties">
     <cnf:attribute select="Material" keep="false" />
@@ -41,6 +57,12 @@
   <cnf:entity select="IfcObjectDefinition">
     <cnf:inverse select="IsNestedBy" exp-attribute="double-tag" />
     <cnf:inverse select="IsDecomposedBy" exp-attribute="double-tag" />
+  </cnf:entity>
+  <cnf:entity select="IfcOwnerHistory">
+    <cnf:attribute select="OwningUser" exp-attribute="attribute-tag" />
+    <cnf:attribute select="OwningApplication" exp-attribute="attribute-tag" />
+    <cnf:attribute select="LastModifyingUser" exp-attribute="attribute-tag" />
+    <cnf:attribute select="LastModifyingApplication" exp-attribute="attribute-tag" />
   </cnf:entity>
   <cnf:entity select="IfcPerson">
     <cnf:attribute select="MiddleNames" tagless="true" />
@@ -55,14 +77,14 @@
     <cnf:attribute select="ObjectPlacement" exp-attribute="attribute-tag" />
     <cnf:attribute select="Representation" exp-attribute="attribute-tag" />
   </cnf:entity>
+  <cnf:entity select="IfcProfileDef">
+    <cnf:inverse select="HasProperties" exp-attribute="double-tag" />
+  </cnf:entity>
   <cnf:entity select="IfcRelAssignsToGroup">
     <cnf:attribute select="RelatingGroup" exp-attribute="attribute-tag" />
   </cnf:entity>
   <cnf:entity select="IfcRelDeclares">
     <cnf:attribute select="RelatingContext" keep="false" />
-  </cnf:entity>
-  <cnf:entity select="IfcRelDefinesByTemplate">
-    <cnf:attribute select="RelatingTemplate" exp-attribute="attribute-tag" />
   </cnf:entity>
   <cnf:entity select="IfcRoot">
     <cnf:attribute select="OwnerHistory" exp-attribute="attribute-tag" />

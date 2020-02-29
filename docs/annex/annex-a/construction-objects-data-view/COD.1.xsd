@@ -60,6 +60,19 @@ of the material. The information contained in this document is subject to change
 		</xs:complexContent>
 	</xs:complexType>
 	<!-- element and complex type declarations (for ENTITY definitions) -->
+	<xs:element name="IfcApplication" type="ifc:IfcApplication" substitutionGroup="ifc:Entity" nillable="true"/>
+	<xs:complexType name="IfcApplication">
+		<xs:complexContent>
+			<xs:extension base="ifc:Entity">
+				<xs:sequence>
+					<xs:element name="ApplicationDeveloper" type="ifc:IfcOrganization" nillable="true"/>
+				</xs:sequence>
+				<xs:attribute name="Version" type="ifc:IfcLabel" use="optional"/>
+				<xs:attribute name="ApplicationFullName" type="ifc:IfcLabel" use="optional"/>
+				<xs:attribute name="ApplicationIdentifier" type="ifc:IfcIdentifier" use="optional"/>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
 	<xs:element name="IfcClassification" type="ifc:IfcClassification" substitutionGroup="ifc:IfcExternalInformation" nillable="true"/>
 	<xs:complexType name="IfcClassification">
 		<xs:complexContent>
@@ -86,26 +99,6 @@ of the material. The information contained in this document is subject to change
 			<xs:extension base="ifc:IfcExternalReference"/>
 		</xs:complexContent>
 	</xs:complexType>
-	<xs:element name="IfcComplexProperty" type="ifc:IfcComplexProperty" substitutionGroup="ifc:IfcProperty" nillable="true"/>
-	<xs:complexType name="IfcComplexProperty">
-		<xs:complexContent>
-			<xs:extension base="ifc:IfcProperty">
-				<xs:sequence>
-					<xs:element name="HasProperties">
-						<xs:complexType>
-							<xs:sequence>
-								<xs:element ref="ifc:IfcProperty" maxOccurs="unbounded"/>
-							</xs:sequence>
-							<xs:attribute ref="ifc:itemType" fixed="ifc:IfcProperty"/>
-							<xs:attribute ref="ifc:cType" fixed="set"/>
-							<xs:attribute ref="ifc:arraySize" use="optional"/>
-						</xs:complexType>
-					</xs:element>
-				</xs:sequence>
-				<xs:attribute name="UsageName" type="ifc:IfcIdentifier" use="optional"/>
-			</xs:extension>
-		</xs:complexContent>
-	</xs:complexType>
 	<xs:element name="IfcContext" type="ifc:IfcContext" abstract="true" substitutionGroup="ifc:IfcObjectDefinition" nillable="true"/>
 	<xs:complexType name="IfcContext" abstract="true">
 		<xs:complexContent>
@@ -122,6 +115,7 @@ of the material. The information contained in this document is subject to change
 						</xs:complexType>
 					</xs:element>
 				</xs:sequence>
+				<xs:attribute name="Phase" type="ifc:IfcLabel" use="optional"/>
 			</xs:extension>
 		</xs:complexContent>
 	</xs:complexType>
@@ -188,7 +182,35 @@ of the material. The information contained in this document is subject to change
 		<xs:complexContent>
 			<xs:extension base="ifc:IfcMaterialDefinition">
 				<xs:attribute name="Name" type="ifc:IfcLabel" use="optional"/>
-				<xs:attribute name="Description" type="ifc:IfcText" use="optional"/>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:element name="IfcMaterialConstituent" type="ifc:IfcMaterialConstituent" substitutionGroup="ifc:IfcMaterialDefinition" nillable="true"/>
+	<xs:complexType name="IfcMaterialConstituent">
+		<xs:complexContent>
+			<xs:extension base="ifc:IfcMaterialDefinition">
+				<xs:sequence>
+					<xs:element name="Material" type="ifc:IfcMaterial" nillable="true"/>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:element name="IfcMaterialConstituentSet" type="ifc:IfcMaterialConstituentSet" substitutionGroup="ifc:IfcMaterialDefinition" nillable="true"/>
+	<xs:complexType name="IfcMaterialConstituentSet">
+		<xs:complexContent>
+			<xs:extension base="ifc:IfcMaterialDefinition">
+				<xs:sequence>
+					<xs:element name="MaterialConstituents" nillable="true" minOccurs="0">
+						<xs:complexType>
+							<xs:sequence>
+								<xs:element ref="ifc:IfcMaterialConstituent" maxOccurs="unbounded"/>
+							</xs:sequence>
+							<xs:attribute ref="ifc:itemType" fixed="ifc:IfcMaterialConstituent"/>
+							<xs:attribute ref="ifc:cType" fixed="set"/>
+							<xs:attribute ref="ifc:arraySize" use="optional"/>
+						</xs:complexType>
+					</xs:element>
+				</xs:sequence>
 			</xs:extension>
 		</xs:complexContent>
 	</xs:complexType>
@@ -211,6 +233,36 @@ of the material. The information contained in this document is subject to change
 			</xs:extension>
 		</xs:complexContent>
 	</xs:complexType>
+	<xs:element name="IfcMaterialLayer" type="ifc:IfcMaterialLayer" substitutionGroup="ifc:IfcMaterialDefinition" nillable="true"/>
+	<xs:complexType name="IfcMaterialLayer">
+		<xs:complexContent>
+			<xs:extension base="ifc:IfcMaterialDefinition">
+				<xs:sequence>
+					<xs:element name="Material" type="ifc:IfcMaterial" nillable="true" minOccurs="0"/>
+				</xs:sequence>
+				<xs:attribute name="LayerThickness" type="ifc:IfcNonNegativeLengthMeasure" use="optional"/>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:element name="IfcMaterialLayerSet" type="ifc:IfcMaterialLayerSet" substitutionGroup="ifc:IfcMaterialDefinition" nillable="true"/>
+	<xs:complexType name="IfcMaterialLayerSet">
+		<xs:complexContent>
+			<xs:extension base="ifc:IfcMaterialDefinition">
+				<xs:sequence>
+					<xs:element name="MaterialLayers">
+						<xs:complexType>
+							<xs:sequence>
+								<xs:element ref="ifc:IfcMaterialLayer" maxOccurs="unbounded"/>
+							</xs:sequence>
+							<xs:attribute ref="ifc:itemType" fixed="ifc:IfcMaterialLayer"/>
+							<xs:attribute ref="ifc:cType" fixed="list"/>
+							<xs:attribute ref="ifc:arraySize" use="optional"/>
+						</xs:complexType>
+					</xs:element>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
 	<xs:element name="IfcMaterialList" type="ifc:IfcMaterialList" substitutionGroup="ifc:Entity" nillable="true"/>
 	<xs:complexType name="IfcMaterialList">
 		<xs:complexContent>
@@ -222,6 +274,36 @@ of the material. The information contained in this document is subject to change
 								<xs:element ref="ifc:IfcMaterial" maxOccurs="unbounded"/>
 							</xs:sequence>
 							<xs:attribute ref="ifc:itemType" fixed="ifc:IfcMaterial"/>
+							<xs:attribute ref="ifc:cType" fixed="list"/>
+							<xs:attribute ref="ifc:arraySize" use="optional"/>
+						</xs:complexType>
+					</xs:element>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:element name="IfcMaterialProfile" type="ifc:IfcMaterialProfile" substitutionGroup="ifc:IfcMaterialDefinition" nillable="true"/>
+	<xs:complexType name="IfcMaterialProfile">
+		<xs:complexContent>
+			<xs:extension base="ifc:IfcMaterialDefinition">
+				<xs:sequence>
+					<xs:element name="Material" type="ifc:IfcMaterial" nillable="true" minOccurs="0"/>
+					<xs:element name="Profile" type="ifc:IfcProfileDef" nillable="true"/>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:element name="IfcMaterialProfileSet" type="ifc:IfcMaterialProfileSet" substitutionGroup="ifc:IfcMaterialDefinition" nillable="true"/>
+	<xs:complexType name="IfcMaterialProfileSet">
+		<xs:complexContent>
+			<xs:extension base="ifc:IfcMaterialDefinition">
+				<xs:sequence>
+					<xs:element name="MaterialProfiles">
+						<xs:complexType>
+							<xs:sequence>
+								<xs:element ref="ifc:IfcMaterialProfile" maxOccurs="unbounded"/>
+							</xs:sequence>
+							<xs:attribute ref="ifc:itemType" fixed="ifc:IfcMaterialProfile"/>
 							<xs:attribute ref="ifc:cType" fixed="list"/>
 							<xs:attribute ref="ifc:arraySize" use="optional"/>
 						</xs:complexType>
@@ -262,6 +344,18 @@ of the material. The information contained in this document is subject to change
 			</xs:extension>
 		</xs:complexContent>
 	</xs:complexType>
+	<xs:element name="IfcOwnerHistory" type="ifc:IfcOwnerHistory" substitutionGroup="ifc:Entity" nillable="true"/>
+	<xs:complexType name="IfcOwnerHistory">
+		<xs:complexContent>
+			<xs:extension base="ifc:Entity">
+				<xs:sequence>
+					<xs:element name="OwningUser" type="ifc:IfcPersonAndOrganization" nillable="true"/>
+					<xs:element name="OwningApplication" type="ifc:IfcApplication" nillable="true"/>
+				</xs:sequence>
+				<xs:attribute name="CreationDate" type="ifc:IfcTimeStamp" use="optional"/>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
 	<xs:element name="IfcPerson" type="ifc:IfcPerson" substitutionGroup="ifc:Entity" nillable="true"/>
 	<xs:complexType name="IfcPerson">
 		<xs:complexContent>
@@ -283,6 +377,14 @@ of the material. The information contained in this document is subject to change
 	<xs:complexType name="IfcProduct" abstract="true">
 		<xs:complexContent>
 			<xs:extension base="ifc:IfcObject"/>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:element name="IfcProfileDef" type="ifc:IfcProfileDef" substitutionGroup="ifc:Entity" nillable="true"/>
+	<xs:complexType name="IfcProfileDef">
+		<xs:complexContent>
+			<xs:extension base="ifc:Entity">
+				<xs:attribute name="ProfileType" type="ifc:IfcProfileTypeEnum" use="optional"/>
+			</xs:extension>
 		</xs:complexContent>
 	</xs:complexType>
 	<xs:element name="IfcProject" type="ifc:IfcProject" substitutionGroup="ifc:IfcContext" nillable="true"/>
@@ -315,31 +417,6 @@ of the material. The information contained in this document is subject to change
 	<xs:complexType name="IfcPropertyDefinition" abstract="true">
 		<xs:complexContent>
 			<xs:extension base="ifc:IfcRoot"/>
-		</xs:complexContent>
-	</xs:complexType>
-	<xs:element name="IfcPropertySet" type="ifc:IfcPropertySet" substitutionGroup="ifc:IfcPropertySetDefinition" nillable="true"/>
-	<xs:complexType name="IfcPropertySet">
-		<xs:complexContent>
-			<xs:extension base="ifc:IfcPropertySetDefinition">
-				<xs:sequence>
-					<xs:element name="HasProperties">
-						<xs:complexType>
-							<xs:sequence>
-								<xs:element ref="ifc:IfcProperty" maxOccurs="unbounded"/>
-							</xs:sequence>
-							<xs:attribute ref="ifc:itemType" fixed="ifc:IfcProperty"/>
-							<xs:attribute ref="ifc:cType" fixed="set"/>
-							<xs:attribute ref="ifc:arraySize" use="optional"/>
-						</xs:complexType>
-					</xs:element>
-				</xs:sequence>
-			</xs:extension>
-		</xs:complexContent>
-	</xs:complexType>
-	<xs:element name="IfcPropertySetDefinition" type="ifc:IfcPropertySetDefinition" abstract="true" substitutionGroup="ifc:IfcPropertyDefinition" nillable="true"/>
-	<xs:complexType name="IfcPropertySetDefinition" abstract="true">
-		<xs:complexContent>
-			<xs:extension base="ifc:IfcPropertyDefinition"/>
 		</xs:complexContent>
 	</xs:complexType>
 	<xs:element name="IfcPropertySetTemplate" type="ifc:IfcPropertySetTemplate" substitutionGroup="ifc:IfcPropertyTemplateDefinition" nillable="true"/>
@@ -492,32 +569,6 @@ of the material. The information contained in this document is subject to change
 			</xs:extension>
 		</xs:complexContent>
 	</xs:complexType>
-	<xs:element name="IfcRelDefines" type="ifc:IfcRelDefines" abstract="true" substitutionGroup="ifc:IfcRelationship" nillable="true"/>
-	<xs:complexType name="IfcRelDefines" abstract="true">
-		<xs:complexContent>
-			<xs:extension base="ifc:IfcRelationship"/>
-		</xs:complexContent>
-	</xs:complexType>
-	<xs:element name="IfcRelDefinesByTemplate" type="ifc:IfcRelDefinesByTemplate" substitutionGroup="ifc:IfcRelDefines" nillable="true"/>
-	<xs:complexType name="IfcRelDefinesByTemplate">
-		<xs:complexContent>
-			<xs:extension base="ifc:IfcRelDefines">
-				<xs:sequence>
-					<xs:element name="RelatedPropertySets">
-						<xs:complexType>
-							<xs:sequence>
-								<xs:element ref="ifc:IfcPropertySetDefinition" maxOccurs="unbounded"/>
-							</xs:sequence>
-							<xs:attribute ref="ifc:itemType" fixed="ifc:IfcPropertySetDefinition"/>
-							<xs:attribute ref="ifc:cType" fixed="set"/>
-							<xs:attribute ref="ifc:arraySize" use="optional"/>
-						</xs:complexType>
-					</xs:element>
-					<xs:element name="RelatingTemplate" type="ifc:IfcPropertySetTemplate" nillable="true"/>
-				</xs:sequence>
-			</xs:extension>
-		</xs:complexContent>
-	</xs:complexType>
 	<xs:element name="IfcRelationship" type="ifc:IfcRelationship" abstract="true" substitutionGroup="ifc:IfcRoot" nillable="true"/>
 	<xs:complexType name="IfcRelationship" abstract="true">
 		<xs:complexContent>
@@ -528,14 +579,12 @@ of the material. The information contained in this document is subject to change
 	<xs:complexType name="IfcRoot" abstract="true">
 		<xs:complexContent>
 			<xs:extension base="ifc:Entity">
+				<xs:sequence>
+					<xs:element name="OwnerHistory" type="ifc:IfcOwnerHistory" nillable="true" minOccurs="0"/>
+				</xs:sequence>
 				<xs:attribute name="GlobalId" type="ifc:IfcGloballyUniqueId" use="optional"/>
+				<xs:attribute name="Name" type="ifc:IfcLabel" use="optional"/>
 			</xs:extension>
-		</xs:complexContent>
-	</xs:complexType>
-	<xs:element name="IfcSimpleProperty" type="ifc:IfcSimpleProperty" abstract="true" substitutionGroup="ifc:IfcProperty" nillable="true"/>
-	<xs:complexType name="IfcSimpleProperty" abstract="true">
-		<xs:complexContent>
-			<xs:extension base="ifc:IfcProperty"/>
 		</xs:complexContent>
 	</xs:complexType>
 	<xs:element name="IfcSystem" type="ifc:IfcSystem" substitutionGroup="ifc:IfcGroup" nillable="true"/>
@@ -595,21 +644,13 @@ of the material. The information contained in this document is subject to change
 			<xs:element ref="ifc:IfcTypeProduct"/>
 		</xs:choice>
 	</xs:group>
-	<xs:group name="IfcSimpleValue">
-		<xs:choice>
-			<xs:element ref="ifc:IfcIdentifier-wrapper"/>
-			<xs:element ref="ifc:IfcLabel-wrapper"/>
-			<xs:element ref="ifc:IfcText-wrapper"/>
-		</xs:choice>
-	</xs:group>
-	<xs:group name="IfcValue">
-		<xs:choice>
-			<xs:element ref="ifc:IfcIdentifier-wrapper"/>
-			<xs:element ref="ifc:IfcLabel-wrapper"/>
-			<xs:element ref="ifc:IfcText-wrapper"/>
-		</xs:choice>
-	</xs:group>
 	<!-- enumeration type declarations (for ENUMERATION data type definitions) -->
+	<xs:simpleType name="IfcProfileTypeEnum">
+		<xs:restriction base="xs:string">
+			<xs:enumeration value="curve"/>
+			<xs:enumeration value="area"/>
+		</xs:restriction>
+	</xs:simpleType>
 	<!-- simple type declarations (for TYPE defined data type definitions) -->
 	<xs:simpleType name="IfcGloballyUniqueId">
 		<xs:restriction base="xs:normalizedString">
@@ -627,8 +668,14 @@ of the material. The information contained in this document is subject to change
 			<xs:maxLength value="255"/>
 		</xs:restriction>
 	</xs:simpleType>
-	<xs:simpleType name="IfcText">
-		<xs:restriction base="xs:normalizedString"/>
+	<xs:simpleType name="IfcLengthMeasure">
+		<xs:restriction base="xs:double"/>
+	</xs:simpleType>
+	<xs:simpleType name="IfcNonNegativeLengthMeasure">
+		<xs:restriction base="ifc:IfcLengthMeasure"/>
+	</xs:simpleType>
+	<xs:simpleType name="IfcTimeStamp">
+		<xs:restriction base="xs:long"/>
 	</xs:simpleType>
 	<!-- base entity and entity attribute declaration (for embeded base schema definitions) -->
 	<xs:element name="Entity" type="ifc:Entity" abstract="true" nillable="true"/>
@@ -712,24 +759,6 @@ of the material. The information contained in this document is subject to change
 		<xs:complexType>
 			<xs:simpleContent>
 				<xs:extension base="ifc:IfcIdentifier">
-					<xs:attributeGroup ref="ifc:instanceAttributes"/>
-				</xs:extension>
-			</xs:simpleContent>
-		</xs:complexType>
-	</xs:element>
-	<xs:element name="IfcLabel-wrapper" nillable="true">
-		<xs:complexType>
-			<xs:simpleContent>
-				<xs:extension base="ifc:IfcLabel">
-					<xs:attributeGroup ref="ifc:instanceAttributes"/>
-				</xs:extension>
-			</xs:simpleContent>
-		</xs:complexType>
-	</xs:element>
-	<xs:element name="IfcText-wrapper" nillable="true">
-		<xs:complexType>
-			<xs:simpleContent>
-				<xs:extension base="ifc:IfcText">
 					<xs:attributeGroup ref="ifc:instanceAttributes"/>
 				</xs:extension>
 			</xs:simpleContent>

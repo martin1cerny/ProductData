@@ -11,7 +11,7 @@
     <title>IfcPropertyTemplate</title>
 
     <style type="text/css">
-      body { counter-reset: index1 5 index2 1 index3 3 index4 11 index5 0; }
+      body { counter-reset: index1 5 index2 1 index3 3 index4 9 index5 0; }
     </style>
   </head>
 
@@ -20,7 +20,7 @@
 
 <script type="text/javascript">
 <!--
-    parent.index.location.replace("../../toc-5.html#5.1.3.12");
+    parent.index.location.replace("../../toc-5.html#5.1.3.10");
 //-->
 </script>
 
@@ -42,12 +42,12 @@
 <section>
 <h5 class="num">Semantic definitions at the entity</h5>
 <details open="open"><summary>Entity definition</summary><p>The <span class="self-ref">IfcPropertyTemplate</span> is an abstract supertype comprising the templates for all dynamically extensible properties, either as an <i>IfcComplexPropertyTemplate</i>, or an <i>IfcSimplePropertyTemplate</i>. These templates determine the structure of:</p>
-<p>\\\\\\\\\\\* in case of <i>IfcComplexPropertyTemplate</i>
-\\\\\\\\\\\* an <a href="../../ifcpropertyresource/lexical/ifccomplexproperty.html">IfcComplexProperty</a>
-\\\\\\\\\\\* an <i>IfcPhysicalComplexQuantity</i>
-\\\\\\\\\\\* in case of <i>IfcSimplePropertyTemplate</i>
-\\\\\\\\\\\* a subtype of <a href="../../ifcpropertyresource/lexical/ifcsimpleproperty.html">IfcSimpleProperty</a>
-\\\\\\\\\\\* a subtype of <i>IfcPhysicalSimpleQuantity</i></p>
+<p>\\\\\\\\\\\\\* in case of <i>IfcComplexPropertyTemplate</i>
+\\\\\\\\\\\\\* an <i>IfcComplexProperty</i>
+\\\\\\\\\\\\\* an <i>IfcPhysicalComplexQuantity</i>
+\\\\\\\\\\\\\* in case of <i>IfcSimplePropertyTemplate</i>
+\\\\\\\\\\\\\* a subtype of <i>IfcSimpleProperty</i>
+\\\\\\\\\\\\\* a subtype of <i>IfcPhysicalSimpleQuantity</i></p>
 <p>The individual property templates are interpreted according to their <i>Name</i> attribute and may have a predefined property type, property unit, and property data type. A template however shall not have measure values, or quantity values assigned.</p>
 <blockquote class="note">
 <p>NOTE  Property templates can form part of a property library used and attached as part of a project library. In general the <a href="../../ifckernel/lexical/ifcpropertysettemplate.html">IfcPropertySetTemplate</a>, containing the subtypes of <span class="self-ref">IfcPropertyTemplate</span> would be directly linked to the <a href="../../ifckernel/lexical/ifcprojectlibrary.html">IfcProjectLibrary</a>.</p>
@@ -77,10 +77,16 @@
 <tr><td>1</td><td>GlobalId</td><td><a href="../../ifcutilityresource/lexical/ifcgloballyuniqueid.html">IfcGloballyUniqueId</a></td><td></td><td>
 Assignment of a globally unique identifier within the entire software world.
 </td><td>X</td></tr>
-<tr><td>2</td><td>OwnerHistory</td><td><span class="self-ref">-</span></td><td></td><td>
-<i>This attribute is out of scope for this model view definition and shall not be set.</i></td><td></td></tr>
-<tr><td>3</td><td>Name</td><td><span class="self-ref">-</span></td><td></td><td>
-<i>This attribute is out of scope for this model view definition and shall not be set.</i></td><td></td></tr>
+<tr><td>2</td><td>OwnerHistory</td><td><a href="../../ifcutilityresource/lexical/ifcownerhistory.html">IfcOwnerHistory</a></td><td>? </td><td>
+Assignment of the information about the current ownership of that object, including owning actor, application, local identification and information captured about the recent changes of the object,
+<blockquote class="note">
+NOTE  only the last modification in stored - either as addition, deletion or modification.
+</blockquote>
+
+</td><td>X</td></tr>
+<tr><td>3</td><td>Name</td><td><a href="../../ifcmeasureresource/lexical/ifclabel.html">IfcLabel</a></td><td>? </td><td>
+Optional name for use by the participating software systems or users. For some subtypes of IfcRoot the insertion of the Name attribute may be required. This would be enforced by a where rule.
+</td><td>X</td></tr>
 <tr><td>4</td><td>Description</td><td><span class="self-ref">-</span></td><td></td><td>
 <i>This attribute is out of scope for this model view definition and shall not be set.</i></td><td></td></tr>
 <tr><td colspan="6"><i><a href="../../ifckernel/lexical/ifcpropertydefinition.html">IfcPropertyDefinition</a></i></td></tr>

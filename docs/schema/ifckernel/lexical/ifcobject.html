@@ -40,15 +40,15 @@
 <p>NOTE  Examples of <span class="self-ref">IfcObject</span> include physically tangible items such as wall, beam or covering, physically existing items such as spaces, or conceptual items such as grids or virtual boundaries. It also stands for processes such as work tasks, for controls such as cost items, or for actors such as persons involved in the design process.</p>
 </blockquote>
 <p>Objects can be named, using the inherited <i>Name</i> attribute, which should be a user recognizable label for the object occurrance. Further explanations to the object can be given using the inherited <i>Description</i> attribute. The <i>ObjectType</i> attribute is used:</p>
-<p>\\\\\\\\\\\* to store the user defined value for all subtypes of <span class="self-ref">IfcObject</span>, where a <i>PredefinedType</i> attribute is given, and its value is set to USERDEFINED.
-\\\\\\\\\\\* to provide a type information (could be seen as a very lightweight classifier) of the subtype of <span class="self-ref">IfcObject</span>, if no <i>PredefinedType</i> attribute is given. This is often the case, if no comprehensive list of predefined types is available.</p>
+<p>\\\\\\\\\\\\\* to store the user defined value for all subtypes of <span class="self-ref">IfcObject</span>, where a <i>PredefinedType</i> attribute is given, and its value is set to USERDEFINED.
+\\\\\\\\\\\\\* to provide a type information (could be seen as a very lightweight classifier) of the subtype of <span class="self-ref">IfcObject</span>, if no <i>PredefinedType</i> attribute is given. This is often the case, if no comprehensive list of predefined types is available.</p>
 <p>Objects are independent pieces of information that might contain or reference other pieces of information. There are several relationships in which objects can be involved:</p>
-<p>\\\\\\\\\\\* \\\\\\\\\\\*\\\\\\\\\\\*Association to external/internal resource information\\\\\\\\\\\*\\\\\\\\\\\* - an association relationship that refers to external/internal sources of information. See supertype <a href="../../ifckernel/lexical/ifcobjectdefinition.html">IfcObjectDefinition</a> for more information.
-\\\\\\\\\\\* \\\\\\\\\\\*\\\\\\\\\\\*Assignment of other objects\\\\\\\\\\\*\\\\\\\\\\\* - an assignment relationship that refers to other types of objects. See supertype <a href="../../ifckernel/lexical/ifcobjectdefinition.html">IfcObjectDefinition</a> for more information.
-\\\\\\\\\\\* \\\\\\\\\\\*\\\\\\\\\\\*Aggregation of other objects\\\\\\\\\\\*\\\\\\\\\\\* - an aggregation relationship that establishes a whole/part relation. Objects can either be a whole, or a part, or both. See supertype <a href="../../ifckernel/lexical/ifcobjectdefinition.html">IfcObjectDefinition</a> for more information.
-\\\\\\\\\\\* \\\\\\\\\\\*\\\\\\\\\\\*Assignment of a type\\\\\\\\\\\*\\\\\\\\\\\* : <i>IsTypedBy</i> - a definition relationship <i>IfcRelDefinesByType</i> that uses a type definition to define the common characteristics of this occurrences, potentially including the common shape representation and common properties of all object occurrences assigned to this type. It is a specific - occurrence relationship with implied dependencies (as the occurrence properties depend on the properties of the type, but may override them).
-\\\\\\\\\\\* \\\\\\\\\\\*\\\\\\\\\\\*Assignment of a partial type\\\\\\\\\\\*\\\\\\\\\\\* : <i>IsDeclaredBy</i>, <i>Declares</i> - a definition relationship <i>IfcRelDefinesByObject</i> that uses a component of a type definition (a part of a type, called the &quot;declaring part&quot;) to define a component of an occurence (part of occurrence, called the &quot;reflected part&quot;). This is also refered to as a &quot;deep copy&quot;. The common characteristics of all parts in the occurrence are defined by parts in the type. It is a specific - occurrence relationship with implied dependencies (as the occurrence properties depend on the properties of the type, but may override them).<br>
-\\\\\\\\\\\* \\\\\\\\\\\*\\\\\\\\\\\*Assignment of property sets\\\\\\\\\\\*\\\\\\\\\\\* : <i>IsDefinedBy</i> - a definition relationship <i>IfcRelDefinesByProperties</i> that assignes property set definitions to the object occurrence.</p>
+<p>\\\\\\\\\\\\\* \\\\\\\\\\\\\<i>\\\\\\\\\\\\\<i>Association to external/internal resource information\\\\\\\\\\\\\</i>\\\\\\\\\\\\\</i> - an association relationship that refers to external/internal sources of information. See supertype <a href="../../ifckernel/lexical/ifcobjectdefinition.html">IfcObjectDefinition</a> for more information.
+\\\\\\\\\\\\\* \\\\\\\\\\\\\<i>\\\\\\\\\\\\\<i>Assignment of other objects\\\\\\\\\\\\\</i>\\\\\\\\\\\\\</i> - an assignment relationship that refers to other types of objects. See supertype <a href="../../ifckernel/lexical/ifcobjectdefinition.html">IfcObjectDefinition</a> for more information.
+\\\\\\\\\\\\\* \\\\\\\\\\\\\<i>\\\\\\\\\\\\\<i>Aggregation of other objects\\\\\\\\\\\\\</i>\\\\\\\\\\\\\</i> - an aggregation relationship that establishes a whole/part relation. Objects can either be a whole, or a part, or both. See supertype <a href="../../ifckernel/lexical/ifcobjectdefinition.html">IfcObjectDefinition</a> for more information.
+\\\\\\\\\\\\\* \\\\\\\\\\\\\<i>\\\\\\\\\\\\\<i>Assignment of a type\\\\\\\\\\\\\</i>\\\\\\\\\\\\\</i> : <i>IsTypedBy</i> - a definition relationship <i>IfcRelDefinesByType</i> that uses a type definition to define the common characteristics of this occurrences, potentially including the common shape representation and common properties of all object occurrences assigned to this type. It is a specific - occurrence relationship with implied dependencies (as the occurrence properties depend on the properties of the type, but may override them).
+\\\\\\\\\\\\\* \\\\\\\\\\\\\<i>\\\\\\\\\\\\\<i>Assignment of a partial type\\\\\\\\\\\\\</i>\\\\\\\\\\\\\</i> : <i>IsDeclaredBy</i>, <i>Declares</i> - a definition relationship <i>IfcRelDefinesByObject</i> that uses a component of a type definition (a part of a type, called the &quot;declaring part&quot;) to define a component of an occurence (part of occurrence, called the &quot;reflected part&quot;). This is also refered to as a &quot;deep copy&quot;. The common characteristics of all parts in the occurrence are defined by parts in the type. It is a specific - occurrence relationship with implied dependencies (as the occurrence properties depend on the properties of the type, but may override them).<br>
+\\\\\\\\\\\\\* \\\\\\\\\\\\\<i>\\\\\\\\\\\\\<i>Assignment of property sets\\\\\\\\\\\\\</i>\\\\\\\\\\\\\</i> : <i>IsDefinedBy</i> - a definition relationship <i>IfcRelDefinesByProperties</i> that assignes property set definitions to the object occurrence.</p>
 <blockquote class="note">
 <p>NOTE  See <i>IfcRelDefinesByType</i> for an explanatory figure. Also see there for how to override type properties by occurrence properties. See <i>IfcRelDefinesByObject</i> for an explanatory figure for the assignment of a partial type.</p>
 </blockquote>
@@ -84,10 +84,16 @@ Informal Propositions:</p>
 <tr><td>1</td><td>GlobalId</td><td><a href="../../ifcutilityresource/lexical/ifcgloballyuniqueid.html">IfcGloballyUniqueId</a></td><td></td><td>
 Assignment of a globally unique identifier within the entire software world.
 </td><td>X</td></tr>
-<tr><td>2</td><td>OwnerHistory</td><td><span class="self-ref">-</span></td><td></td><td>
-<i>This attribute is out of scope for this model view definition and shall not be set.</i></td><td></td></tr>
-<tr><td>3</td><td>Name</td><td><span class="self-ref">-</span></td><td></td><td>
-<i>This attribute is out of scope for this model view definition and shall not be set.</i></td><td></td></tr>
+<tr><td>2</td><td>OwnerHistory</td><td><a href="../../ifcutilityresource/lexical/ifcownerhistory.html">IfcOwnerHistory</a></td><td>? </td><td>
+Assignment of the information about the current ownership of that object, including owning actor, application, local identification and information captured about the recent changes of the object,
+<blockquote class="note">
+NOTE  only the last modification in stored - either as addition, deletion or modification.
+</blockquote>
+
+</td><td>X</td></tr>
+<tr><td>3</td><td>Name</td><td><a href="../../ifcmeasureresource/lexical/ifclabel.html">IfcLabel</a></td><td>? </td><td>
+Optional name for use by the participating software systems or users. For some subtypes of IfcRoot the insertion of the Name attribute may be required. This would be enforced by a where rule.
+</td><td>X</td></tr>
 <tr><td>4</td><td>Description</td><td><span class="self-ref">-</span></td><td></td><td>
 <i>This attribute is out of scope for this model view definition and shall not be set.</i></td><td></td></tr>
 <tr><td colspan="6"><i><a href="../../ifckernel/lexical/ifcobjectdefinition.html">IfcObjectDefinition</a></i></td></tr>
@@ -120,7 +126,7 @@ Assignment of a globally unique identifier within the entire software world.
 &nbsp;&nbsp;ObjectType : <span class="keyword">OPTIONAL</span> <span class="self-ref">IfcStrippedOptional</span>;<br/>
 &nbsp;<span class="keyword">INVERSE</span><br/>
 &nbsp;<span class="keyword">WHERE</span><br/>
-&nbsp;&nbsp;UniquePropertySetNames : ((SIZEOF(IsDefinedBy) = 0) OR <a href="../../ifckernel/lexical/ifcuniquedefinitionnames.html">IfcUniqueDefinitionNames</a>(IsDefinedBy));<br/><span class="keyword">END_ENTITY;</span><br/>
+&nbsp;&nbsp;UniquePropertySetNames : ((SIZEOF(IsDefinedBy) = 0) OR <span class="self-ref">IfcStrippedOptional</span>(IsDefinedBy));<br/><span class="keyword">END_ENTITY;</span><br/>
 <p class="std"><a href="../../../annex/annex-d/ifckernel/diagram_0000.html" ><img src="../../../img/diagram.png" style="border: 0px" title="Link to EXPRESS-G diagram" alt="Link to EXPRESS-G diagram">&nbsp;EXPRESS-G diagram</a></p>
 </code></div>
 </details>

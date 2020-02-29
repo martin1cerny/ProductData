@@ -11,7 +11,7 @@
     <title>IfcPropertySetTemplate</title>
 
     <style type="text/css">
-      body { counter-reset: index1 5 index2 1 index3 3 index4 10 index5 0; }
+      body { counter-reset: index1 5 index2 1 index3 3 index4 8 index5 0; }
     </style>
   </head>
 
@@ -20,7 +20,7 @@
 
 <script type="text/javascript">
 <!--
-    parent.index.location.replace("../../toc-5.html#5.1.3.11");
+    parent.index.location.replace("../../toc-5.html#5.1.3.9");
 //-->
 </script>
 
@@ -41,17 +41,17 @@
 </details>
 <section>
 <h5 class="num">Semantic definitions at the entity</h5>
-<details open="open"><summary>Entity definition</summary><p><span class="self-ref">IfcPropertySetTemplate</span> defines the template for all dynamically extensible property sets represented by <a href="../../ifckernel/lexical/ifcpropertyset.html">IfcPropertySet</a>. The property set template is a container of property templates within a property tree. The individual property templates are interpreted according to their <i>Name</i> attribute and shall have no values assigned.</p>
+<details open="open"><summary>Entity definition</summary><p><span class="self-ref">IfcPropertySetTemplate</span> defines the template for all dynamically extensible property sets represented by <i>IfcPropertySet</i>. The property set template is a container of property templates within a property tree. The individual property templates are interpreted according to their <i>Name</i> attribute and shall have no values assigned.</p>
 <blockquote class="note">
 <p>NOTE  By convention an <span class="self-ref">IfcPropertySetTemplate</span> can also be used as a template for an <i>IfcElementQuantity</i>, being a particular type of a property set definition.</p>
 </blockquote>
 <p>Property set templates can form part of a property library used and declared within a project. Depending on the <i>TemplateType</i> the <span class="self-ref">IfcPropertySetTemplate</span> defines a template for:</p>
-<p>\\\\\\\\\\\* &quot;Pset_&quot; - occurrences of <a href="../../ifckernel/lexical/ifcpropertyset.html">IfcPropertySet</a>
-\\\\\\\\\\\* &quot;QTO_&quot; - occurrences of <i>IfcElementQuantity</i></p>
-<p>The inherited <i>HasContext</i> inverse relation to <a href="../../ifckernel/lexical/ifcreldeclares.html">IfcRelDeclares</a> is used to declare the <span class="self-ref">IfcPropertySetTemplate</span> within a project library. If included in an exchange data set it can then be traversed through the <a href="../../ifckernel/lexical/ifcprojectlibrary.html">IfcProjectLibrary</a>. The <i>Defines</i> inverse relation to <a href="../../ifckernel/lexical/ifcreldefinesbytemplate.html">IfcRelDefinesByTemplate</a> is provided to keep the definition relationship between the <span class="self-ref">IfcPropertySetTemplate</span> and the one to many <a href="../../ifckernel/lexical/ifcpropertyset.html">IfcPropertySet</a>'s, for which it provides the template. Figure 11 illustrates relationships used for property set templates.</p>
+<p>\\\\\\\\\\\\\* &quot;Pset_&quot; - occurrences of <i>IfcPropertySet</i>
+\\\\\\\\\\\\\* &quot;QTO_&quot; - occurrences of <i>IfcElementQuantity</i></p>
+<p>The inherited <i>HasContext</i> inverse relation to <a href="../../ifckernel/lexical/ifcreldeclares.html">IfcRelDeclares</a> is used to declare the <span class="self-ref">IfcPropertySetTemplate</span> within a project library. If included in an exchange data set it can then be traversed through the <a href="../../ifckernel/lexical/ifcprojectlibrary.html">IfcProjectLibrary</a>. The <i>Defines</i> inverse relation to <i>IfcRelDefinesByTemplate</i> is provided to keep the definition relationship between the <span class="self-ref">IfcPropertySetTemplate</span> and the one to many <i>IfcPropertySet</i>'s, for which it provides the template. Figure 13 illustrates relationships used for property set templates.</p>
 <p> </p>
-<p><table><tr><td style="width: 600px"><img src="../../../figures/ifcpropertysettemplate_fig-1.png" alt="&quot;property set template&quot;" title="Figure 11 &mdash; Property set template relationships"></td></tr><tr><td><p class="figure">Figure 11 &mdash; Property set template relationships</p></td></tr></table></p>
-<p>Between <a href="../../ifcpropertyresource/lexical/ifcproperty.html">IfcProperty</a>'s within the <i>HasProperties</i> set of <a href="../../ifckernel/lexical/ifcpropertyset.html">IfcPropertySet</a> having the same <i>Name</i> attribute value as the <a href="../../ifckernel/lexical/ifcpropertytemplate.html">IfcPropertyTemplate</a>'s within the <i>HasPropertyTemplates</i> set of <span class="self-ref">IfcPropertySetTemplate</span> an implicit definition relationship is established that assigns the template to the individual properties.</p>
+<p><table><tr><td style="width: 600px"><img src="../../../figures/ifcpropertysettemplate_fig-1.png" alt="&quot;property set template&quot;" title="Figure 13 &mdash; Property set template relationships"></td></tr><tr><td><p class="figure">Figure 13 &mdash; Property set template relationships</p></td></tr></table></p>
+<p>Between <a href="../../ifcpropertyresource/lexical/ifcproperty.html">IfcProperty</a>'s within the <i>HasProperties</i> set of <i>IfcPropertySet</i> having the same <i>Name</i> attribute value as the <a href="../../ifckernel/lexical/ifcpropertytemplate.html">IfcPropertyTemplate</a>'s within the <i>HasPropertyTemplates</i> set of <span class="self-ref">IfcPropertySetTemplate</span> an implicit definition relationship is established that assigns the template to the individual properties.</p>
 
 </details>
 <details open="open"><summary>Attribute definitions</summary><table class="attributes">
@@ -64,8 +64,6 @@
 <tr><td>7</td><td>HasPropertyTemplates</td><td><a href="../../ifckernel/lexical/ifcpropertytemplate.html">IfcPropertyTemplate</a></td><td>S[1:?]</td><td>
 Set of <a href="../../ifckernel/lexical/ifcpropertytemplate.html">IfcPropertyTemplate</a>'s that are defined within the scope of the <span class="self-ref">IfcPropertySetTemplate</span>.
 </td><td>X</td></tr>
-<tr><td></td><td><i>Defines</i></td><td><a href="../../ifckernel/lexical/ifcreldefinesbytemplate.html">IfcRelDefinesByTemplate</a><br/>@RelatingTemplate</td><td>S[0:?]</td><td>Relation to the property sets, via the objectified relationship <a href="../../ifckernel/lexical/ifcreldefinesbytemplate.html">IfcRelDefinesByTemplate</a>, that, if given, utilize the definition template.
-</td><td></td></tr>
 </table>
 </details>
 <details open="open"><summary>Formal Propositions</summary><table class="propositions">
@@ -93,10 +91,16 @@ Set of <a href="../../ifckernel/lexical/ifcpropertytemplate.html">IfcPropertyTem
 <tr><td>1</td><td>GlobalId</td><td><a href="../../ifcutilityresource/lexical/ifcgloballyuniqueid.html">IfcGloballyUniqueId</a></td><td></td><td>
 Assignment of a globally unique identifier within the entire software world.
 </td><td>X</td></tr>
-<tr><td>2</td><td>OwnerHistory</td><td><span class="self-ref">-</span></td><td></td><td>
-<i>This attribute is out of scope for this model view definition and shall not be set.</i></td><td></td></tr>
-<tr><td>3</td><td>Name</td><td><span class="self-ref">-</span></td><td></td><td>
-<i>This attribute is out of scope for this model view definition and shall not be set.</i></td><td></td></tr>
+<tr><td>2</td><td>OwnerHistory</td><td><a href="../../ifcutilityresource/lexical/ifcownerhistory.html">IfcOwnerHistory</a></td><td>? </td><td>
+Assignment of the information about the current ownership of that object, including owning actor, application, local identification and information captured about the recent changes of the object,
+<blockquote class="note">
+NOTE  only the last modification in stored - either as addition, deletion or modification.
+</blockquote>
+
+</td><td>X</td></tr>
+<tr><td>3</td><td>Name</td><td><a href="../../ifcmeasureresource/lexical/ifclabel.html">IfcLabel</a></td><td>? </td><td>
+Optional name for use by the participating software systems or users. For some subtypes of IfcRoot the insertion of the Name attribute may be required. This would be enforced by a where rule.
+</td><td>X</td></tr>
 <tr><td>4</td><td>Description</td><td><span class="self-ref">-</span></td><td></td><td>
 <i>This attribute is out of scope for this model view definition and shall not be set.</i></td><td></td></tr>
 <tr><td colspan="6"><i><a href="../../ifckernel/lexical/ifcpropertydefinition.html">IfcPropertyDefinition</a></i></td></tr>
@@ -112,8 +116,6 @@ Assignment of a globally unique identifier within the entire software world.
 <tr><td>7</td><td>HasPropertyTemplates</td><td><a href="../../ifckernel/lexical/ifcpropertytemplate.html">IfcPropertyTemplate</a></td><td>S[1:?]</td><td>
 Set of <a href="../../ifckernel/lexical/ifcpropertytemplate.html">IfcPropertyTemplate</a>'s that are defined within the scope of the <span class="self-ref">IfcPropertySetTemplate</span>.
 </td><td>X</td></tr>
-<tr><td></td><td><i>Defines</i></td><td><a href="../../ifckernel/lexical/ifcreldefinesbytemplate.html">IfcRelDefinesByTemplate</a><br/>@RelatingTemplate</td><td>S[0:?]</td><td>Relation to the property sets, via the objectified relationship <a href="../../ifckernel/lexical/ifcreldefinesbytemplate.html">IfcRelDefinesByTemplate</a>, that, if given, utilize the definition template.
-</td><td></td></tr>
 </table>
 </details>
 </section>
@@ -146,9 +148,8 @@ Set of <a href="../../ifckernel/lexical/ifcpropertytemplate.html">IfcPropertyTem
 &nbsp;&nbsp;ApplicableEntity : <span class="keyword">OPTIONAL</span> <span class="self-ref">IfcStrippedOptional</span>;<br/>
 &nbsp;&nbsp;HasPropertyTemplates : <span class="keyword">SET</span> [1:?] <span class="keyword">OF</span> <a href="../../ifckernel/lexical/ifcpropertytemplate.html">IfcPropertyTemplate</a>;<br/>
 &nbsp;<span class="keyword">INVERSE</span><br/>
-&nbsp;&nbsp;Defines : <span class="keyword">SET</span> [0:?] OF <a href="../../ifckernel/lexical/ifcreldefinesbytemplate.html">IfcRelDefinesByTemplate</a> <span class="keyword">FOR</span> RelatingTemplate;<br/>
 &nbsp;<span class="keyword">WHERE</span><br/>
-&nbsp;&nbsp;ExistsName : EXISTS(SELF\<a href="../../ifckernel/lexical/ifcroot.html">IfcRoot</a>.Name);<br/>&nbsp;&nbsp;UniquePropertyNames : <a href="../../ifckernel/lexical/ifcuniquepropertytemplatenames.html">IfcUniquePropertyTemplateNames</a>(HasPropertyTemplates);<br/><span class="keyword">END_ENTITY;</span><br/>
+&nbsp;&nbsp;ExistsName : EXISTS(SELF\<a href="../../ifckernel/lexical/ifcroot.html">IfcRoot</a>.Name);<br/>&nbsp;&nbsp;UniquePropertyNames : <span class="self-ref">IfcStrippedOptional</span>(HasPropertyTemplates);<br/><span class="keyword">END_ENTITY;</span><br/>
 <p class="std"><a href="../../../annex/annex-d/ifckernel/diagram_0000.html" ><img src="../../../img/diagram.png" style="border: 0px" title="Link to EXPRESS-G diagram" alt="Link to EXPRESS-G diagram">&nbsp;EXPRESS-G diagram</a></p>
 </code></div>
 </details>
@@ -157,12 +158,11 @@ Set of <a href="../../ifckernel/lexical/ifcpropertytemplate.html">IfcPropertyTem
 &nbsp;private <span class="self-ref">IfcStrippedOptional</span> TemplateType;<br/>
 &nbsp;private string ApplicableEntity;<br/>
 &nbsp;private <a href="../../ifckernel/lexical/ifcpropertytemplate.html">IfcPropertyTemplate</a>[] HasPropertyTemplates;<br/>
-&nbsp;private <a href="../../ifckernel/lexical/ifcreldefinesbytemplate.html">IfcRelDefinesByTemplate</a>[] Defines;<br/>
+&nbsp;private <span class="self-ref">IfcStrippedOptional</span>[] Defines;<br/>
 }<br/>
 </code></div></details>
 </section>
 <p><img src="../../../img/external.png" style="border: 0px" title="References" alt="References"/>&nbsp; References: <a href="../../ifckernel/lexical/ifcpropertytemplate.html">IfcPropertyTemplate</a>
-<a href="../../ifckernel/lexical/ifcreldefinesbytemplate.html">IfcRelDefinesByTemplate</a>
 </p>
 <p><a href="https://github.com/buildingSMART/ProductData/issues/new?&title=ifcpropertysettemplate:%22" target="_blank" ><img src="../../../img/external.png" style="border: 0px" title="Report issue" alt="Report issue"/>&nbsp; Report an issue</a></p>
 <p><a href="../../../link/ifcpropertysettemplate.html" target="_blank" ><img src="../../../img/permlink.png" style="border: 0px" title="Link to this page" alt="Link to this page"/>&nbsp; Link to this page</a></p>
