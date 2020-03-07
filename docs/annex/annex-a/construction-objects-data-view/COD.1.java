@@ -8,6 +8,11 @@
 	}
 	
 
+	public interface IfcPropertySetDefinitionSelect
+	{
+	}
+	
+
 	public class IfcContext extends IfcObjectDefinition
 	{
 		private string ObjectType;
@@ -56,11 +61,6 @@
 	}
 	
 
-	public class IfcProject extends IfcContext
-	{
-	}
-	
-
 	public class IfcProjectLibrary extends IfcContext
 	{
 	}
@@ -70,6 +70,14 @@
 	{
 		private IfcRelDeclares[] HasContext;
 		private IfcRelAssociates[] HasAssociations;
+	}
+	
+
+	public class IfcPropertySetDefinition extends IfcPropertyDefinition
+	{
+		private IfcTypeObject[] DefinesType;
+		private IfcRelDefinesByTemplate[] IsDefinedBy;
+		private IfcRelDefinesByProperties[] DefinesOccurrence;
 	}
 	
 
@@ -140,6 +148,25 @@
 	{
 		private IfcContext RelatingContext;
 		private IfcDefinitionSelect[] RelatedDefinitions;
+	}
+	
+
+	public class IfcRelDefines extends IfcRelationship
+	{
+	}
+	
+
+	public class IfcRelDefinesByProperties extends IfcRelDefines
+	{
+		private IfcObjectDefinition[] RelatedObjects;
+		private IfcPropertySetDefinitionSelect RelatingPropertyDefinition;
+	}
+	
+
+	public class IfcRelDefinesByType extends IfcRelDefines
+	{
+		private IfcObject[] RelatedObjects;
+		private IfcTypeObject RelatingType;
 	}
 	
 
@@ -223,6 +250,9 @@
 	/* IfcTimeStamp : INTEGER (Java does not support structures, so usage of defined types are inline for efficiency.) */
 	
 
+	/* IfcURIReference : STRING (Java does not support structures, so usage of defined types are inline for efficiency.) */
+	
+
 	public interface IfcClassificationSelect
 	{
 	}
@@ -290,6 +320,13 @@
 		private IfcIdentifier Language;
 		private IfcLibraryInformation ReferencedLibrary;
 		private IfcRelAssociatesLibrary[] LibraryRefForObjects;
+	}
+	
+
+	public class IfcObjectPlacement extends IfcBase
+	{
+		private IfcProduct[] PlacesObject;
+		private IfcLocalPlacement[] ReferencedByPlacements;
 	}
 	
 
@@ -407,6 +444,19 @@
 	
 
 	/* IfcNonNegativeLengthMeasure : IfcLengthMeasure (Java does not support structures, so usage of defined types are inline for efficiency.) */
+	
+
+	/* IfcText : STRING (Java does not support structures, so usage of defined types are inline for efficiency.) */
+	
+
+	public interface IfcSimpleValue
+	{
+	}
+	
+
+	public interface IfcValue
+	{
+	}
 	
 
 	public enum IfcProfileTypeEnum

@@ -37,8 +37,8 @@
 <h5 class="num">Semantic definitions at the entity</h5>
 <details open="open"><summary>Entity definition</summary><p><span class="self-ref">IfcRelationship</span> is the abstract generalization of all objectified relationships in IFC. Objectified relationships are the preferred way to handle relationships among objects. This allows to keep relationship specific properties directly at the relationship and opens the possibility to later handle relationship specific behavior.</p>
 <p>There are two different types of relationships, 1-to-1 relationships and 1-to-many relationship. used within the subtypes of <span class="self-ref">IfcRelationship</span>. The following convention applies to all subtypes:</p>
-<p>\\\\\\\\\\\\\* The two sides of the objectified relationship are named   Relating+&lt;name of relating object&gt; and   Related+&lt;name of related object&gt;
-\\\\\\\\\\\\\* In case of the 1-to-many relationship, the related side of the relationship shall be an aggregate being a set 1:N</p>
+<p>\\\\\\\\\\\\\\* The two sides of the objectified relationship are named   Relating+&lt;name of relating object&gt; and   Related+&lt;name of related object&gt;
+\\\\\\\\\\\\\\* In case of the 1-to-many relationship, the related side of the relationship shall be an aggregate being a set 1:N</p>
 
 </details>
 </section>
@@ -49,6 +49,7 @@
 <area shape="rect" coords="30,54,218,66" href="../../../schema/ifckernel/lexical/ifcrelassigns.html" alt="IfcRelAssigns" />
 <area shape="rect" coords="290,54,478,66" href="../../../schema/ifckernel/lexical/ifcrelassociates.html" alt="IfcRelAssociates" />
 <area shape="rect" coords="550,54,738,66" href="../../../schema/ifckernel/lexical/ifcreldeclares.html" alt="IfcRelDeclares" />
+<area shape="rect" coords="550,78,738,90" href="../../../schema/ifckernel/lexical/ifcreldefines.html" alt="IfcRelDefines" />
 <area shape="rect" coords="6,6,762,18" href="../../../schema/ifckernel/lexical/ifcroot.html" alt="IfcRoot" />
 </map>
 </details>
@@ -68,8 +69,9 @@ NOTE  only the last modification in stored - either as addition, deletion or mo
 <tr><td>3</td><td>Name</td><td><a href="../../ifcmeasureresource/lexical/ifclabel.html">IfcLabel</a></td><td>? </td><td>
 Optional name for use by the participating software systems or users. For some subtypes of IfcRoot the insertion of the Name attribute may be required. This would be enforced by a where rule.
 </td><td>X</td></tr>
-<tr><td>4</td><td>Description</td><td><span class="self-ref">-</span></td><td></td><td>
-<i>This attribute is out of scope for this model view definition and shall not be set.</i></td><td></td></tr>
+<tr><td>4</td><td>Description</td><td><a href="../../ifcmeasureresource/lexical/ifctext.html">IfcText</a></td><td>? </td><td>
+Optional description, provided for exchanging informative comments.
+</td><td>X</td></tr>
 <tr><td colspan="6"><i><a href="../../ifckernel/lexical/ifcrelationship.html">IfcRelationship</a></i></td></tr>
 </table>
 </details>
@@ -85,7 +87,7 @@ Optional name for use by the participating software systems or users. For some s
 </code></div></details>
 <details><summary>EXPRESS Specification</summary><div class="express"><code class="express">
 <span class="keyword">ENTITY</span> IfcRelationship<br/>
-&nbsp;<span class="keyword">ABSTRACT</span> <span class="keyword">SUPERTYPE OF</span>(<span class="keyword">ONEOF</span>(<a href="../../ifckernel/lexical/ifcrelassigns.html">IfcRelAssigns</a>, <a href="../../ifckernel/lexical/ifcrelassociates.html">IfcRelAssociates</a>, <a href="../../ifckernel/lexical/ifcreldeclares.html">IfcRelDeclares</a>))<br/>
+&nbsp;<span class="keyword">ABSTRACT</span> <span class="keyword">SUPERTYPE OF</span>(<span class="keyword">ONEOF</span>(<a href="../../ifckernel/lexical/ifcrelassigns.html">IfcRelAssigns</a>, <a href="../../ifckernel/lexical/ifcrelassociates.html">IfcRelAssociates</a>, <a href="../../ifckernel/lexical/ifcreldeclares.html">IfcRelDeclares</a>, <a href="../../ifckernel/lexical/ifcreldefines.html">IfcRelDefines</a>))<br/>
 &nbsp;<span class="keyword">SUBTYPE OF</span> (<a href="../../ifckernel/lexical/ifcroot.html">IfcRoot</a>)<b>;</b><br/>
 <span class="keyword">END_ENTITY;</span><br/>
 <p class="std"><a href="../../../annex/annex-d/ifckernel/diagram_0000.html" ><img src="../../../img/diagram.png" style="border: 0px" title="Link to EXPRESS-G diagram" alt="Link to EXPRESS-G diagram">&nbsp;EXPRESS-G diagram</a></p>

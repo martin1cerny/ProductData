@@ -41,7 +41,7 @@
 </details>
 <section>
 <h5 class="num">Semantic definitions at the entity</h5>
-<details open="open"><summary>Entity definition</summary><p><span class="self-ref">IfcContext</span> is the generalization of a project context in which objects, type objects, property sets, and properties are defined. The <a href="../../ifckernel/lexical/ifcproject.html">IfcProject</a> as subtype of <span class="self-ref">IfcContext</span> provides the context for all information on a construction project, it may include one or several <a href="../../ifckernel/lexical/ifcprojectlibrary.html">IfcProjectLibrary</a>'s as subtype of <span class="self-ref">IfcContext</span> to register the included libraries for the project. A library of products that is referenced is declared within the <a href="../../ifckernel/lexical/ifcprojectlibrary.html">IfcProjectLibrary</a> as the context of that library.</p>
+<details open="open"><summary>Entity definition</summary><p><span class="self-ref">IfcContext</span> is the generalization of a project context in which objects, type objects, property sets, and properties are defined. The <i>IfcProject</i> as subtype of <span class="self-ref">IfcContext</span> provides the context for all information on a construction project, it may include one or several <a href="../../ifckernel/lexical/ifcprojectlibrary.html">IfcProjectLibrary</a>'s as subtype of <span class="self-ref">IfcContext</span> to register the included libraries for the project. A library of products that is referenced is declared within the <a href="../../ifckernel/lexical/ifcprojectlibrary.html">IfcProjectLibrary</a> as the context of that library.</p>
 <p>Context definitions can be named, using the inherited <i>Name</i> attribute, which should be a user recognizable key or number for the context. The <i>LongName</i> can add a full name. Further explanations to the context can be given using the inherited <i>Description</i> attribute.</p>
 <p>A Context is declared by the relationship object <a href="../../ifckernel/lexical/ifcreldeclares.html">IfcRelDeclares</a> that refers to the corresponding objects within the context. More specific relationships are introduced at the level of subtypes.</p>
 
@@ -60,9 +60,13 @@ Current project phase, or life-cycle phase of this project. Applicable values ha
 <i>This attribute is out of scope for this model view definition and shall not be set.</i></td><td></td></tr>
 <tr><td>9</td><td>UnitsInContext</td><td><span class="self-ref">-</span></td><td></td><td>
 <i>This attribute is out of scope for this model view definition and shall not be set.</i></td><td></td></tr>
+<tr><td></td><td><i>IsDefinedBy</i></td><td><a href="../../ifckernel/lexical/ifcreldefinesbyproperties.html">IfcRelDefinesByProperties</a><br/>@RelatedObjects</td><td>S[0:?]</td><td>Set of relationships to property set definitions attached to this context. Those statically or dynamically defined properties contain alphanumeric information content that further defines the context.
+
+
+</td><td></td></tr>
 <tr><td></td><td><i>Declares</i></td><td><a href="../../ifckernel/lexical/ifcreldeclares.html">IfcRelDeclares</a><br/>@RelatingContext</td><td>S[0:?]</td><td>Reference to the <a href="../../ifckernel/lexical/ifcreldeclares.html">IfcRelDeclares</a> relationship that assigns the uppermost entities of includes hierarchies to this context instance.
 <blockquote class="note">
-NOTE  The spatial hiearchy is assigned to <a href="../../ifckernel/lexical/ifcproject.html">IfcProject</a> using the <i>IfcRelAggregates</i> relationship. This is a single exception due to compatibility reasons with earlier releases.
+NOTE  The spatial hiearchy is assigned to <i>IfcProject</i> using the <i>IfcRelAggregates</i> relationship. This is a single exception due to compatibility reasons with earlier releases.
 </blockquote>
 </td><td>X</td></tr>
 </table>
@@ -72,10 +76,9 @@ NOTE  The spatial hiearchy is assigned to <a href="../../ifckernel/lexical/ifcp
 <h5 class="num">Inherited definitions from supertypes</h5>
 <details open="open"><summary>Entity inheritance</summary><img src="../../../diagrams/ifccontext.png" usemap="#f"/>
 <map name="f">
-<area shape="rect" coords="42,78,230,90" href="../../../schema/ifckernel/lexical/ifcproject.html" alt="IfcProject" />
-<area shape="rect" coords="302,78,490,90" href="../../../schema/ifckernel/lexical/ifcprojectlibrary.html" alt="IfcProjectLibrary" />
-<area shape="rect" coords="18,30,514,42" href="../../../schema/ifckernel/lexical/ifcobjectdefinition.html" alt="IfcObjectDefinition" />
-<area shape="rect" coords="6,6,526,18" href="../../../schema/ifckernel/lexical/ifcroot.html" alt="IfcRoot" />
+<area shape="rect" coords="42,78,230,90" href="../../../schema/ifckernel/lexical/ifcprojectlibrary.html" alt="IfcProjectLibrary" />
+<area shape="rect" coords="18,30,254,42" href="../../../schema/ifckernel/lexical/ifcobjectdefinition.html" alt="IfcObjectDefinition" />
+<area shape="rect" coords="6,6,266,18" href="../../../schema/ifckernel/lexical/ifcroot.html" alt="IfcRoot" />
 </map>
 </details>
 <details><summary>Attribute inheritance</summary><table class="attributes">
@@ -94,8 +97,9 @@ NOTE  only the last modification in stored - either as addition, deletion or mo
 <tr><td>3</td><td>Name</td><td><a href="../../ifcmeasureresource/lexical/ifclabel.html">IfcLabel</a></td><td>? </td><td>
 Optional name for use by the participating software systems or users. For some subtypes of IfcRoot the insertion of the Name attribute may be required. This would be enforced by a where rule.
 </td><td>X</td></tr>
-<tr><td>4</td><td>Description</td><td><span class="self-ref">-</span></td><td></td><td>
-<i>This attribute is out of scope for this model view definition and shall not be set.</i></td><td></td></tr>
+<tr><td>4</td><td>Description</td><td><a href="../../ifcmeasureresource/lexical/ifctext.html">IfcText</a></td><td>? </td><td>
+Optional description, provided for exchanging informative comments.
+</td><td>X</td></tr>
 <tr><td colspan="6"><i><a href="../../ifckernel/lexical/ifcobjectdefinition.html">IfcObjectDefinition</a></i></td></tr>
 <tr><td></td><td><i>HasAssignments</i></td><td><a href="../../ifckernel/lexical/ifcrelassigns.html">IfcRelAssigns</a><br/>@RelatedObjects</td><td>S[0:?]</td><td>Reference to the relationship objects, that assign (by an association relationship) other subtypes of IfcObject to this object instance. Examples are the association to products, processes, controls, resources or groups.
 </td><td>X</td></tr>
@@ -116,9 +120,13 @@ Current project phase, or life-cycle phase of this project. Applicable values ha
 <i>This attribute is out of scope for this model view definition and shall not be set.</i></td><td></td></tr>
 <tr><td>9</td><td>UnitsInContext</td><td><span class="self-ref">-</span></td><td></td><td>
 <i>This attribute is out of scope for this model view definition and shall not be set.</i></td><td></td></tr>
+<tr><td></td><td><i>IsDefinedBy</i></td><td><a href="../../ifckernel/lexical/ifcreldefinesbyproperties.html">IfcRelDefinesByProperties</a><br/>@RelatedObjects</td><td>S[0:?]</td><td>Set of relationships to property set definitions attached to this context. Those statically or dynamically defined properties contain alphanumeric information content that further defines the context.
+
+
+</td><td></td></tr>
 <tr><td></td><td><i>Declares</i></td><td><a href="../../ifckernel/lexical/ifcreldeclares.html">IfcRelDeclares</a><br/>@RelatingContext</td><td>S[0:?]</td><td>Reference to the <a href="../../ifckernel/lexical/ifcreldeclares.html">IfcRelDeclares</a> relationship that assigns the uppermost entities of includes hierarchies to this context instance.
 <blockquote class="note">
-NOTE  The spatial hiearchy is assigned to <a href="../../ifckernel/lexical/ifcproject.html">IfcProject</a> using the <i>IfcRelAggregates</i> relationship. This is a single exception due to compatibility reasons with earlier releases.
+NOTE  The spatial hiearchy is assigned to <i>IfcProject</i> using the <i>IfcRelAggregates</i> relationship. This is a single exception due to compatibility reasons with earlier releases.
 </blockquote>
 </td><td>X</td></tr>
 </table>
@@ -149,7 +157,7 @@ NOTE  The spatial hiearchy is assigned to <a href="../../ifckernel/lexical/ifcp
 </code></div></details>
 <details><summary>EXPRESS Specification</summary><div class="express"><code class="express">
 <span class="keyword">ENTITY</span> IfcContext<br/>
-&nbsp;<span class="keyword">ABSTRACT</span> <span class="keyword">SUPERTYPE OF</span>(<span class="keyword">ONEOF</span>(<a href="../../ifckernel/lexical/ifcproject.html">IfcProject</a>, <a href="../../ifckernel/lexical/ifcprojectlibrary.html">IfcProjectLibrary</a>))<br/>
+&nbsp;<span class="keyword">ABSTRACT</span> <span class="keyword">SUPERTYPE OF</span>(<a href="../../ifckernel/lexical/ifcprojectlibrary.html">IfcProjectLibrary</a>)<br/>
 &nbsp;<span class="keyword">SUBTYPE OF</span> (<a href="../../ifckernel/lexical/ifcobjectdefinition.html">IfcObjectDefinition</a>)<b>;</b><br/>
 &nbsp;&nbsp;ObjectType : <span class="keyword">OPTIONAL</span> <span class="self-ref">IfcStrippedOptional</span>;<br/>
 &nbsp;&nbsp;LongName : <span class="keyword">OPTIONAL</span> <span class="self-ref">IfcStrippedOptional</span>;<br/>
@@ -157,6 +165,7 @@ NOTE  The spatial hiearchy is assigned to <a href="../../ifckernel/lexical/ifcp
 &nbsp;&nbsp;RepresentationContexts : <span class="keyword">OPTIONAL</span> <span class="keyword">SET</span> [1:?] <span class="keyword">OF</span> <span class="self-ref">IfcStrippedOptional</span>;<br/>
 &nbsp;&nbsp;UnitsInContext : <span class="keyword">OPTIONAL</span> <span class="self-ref">IfcStrippedOptional</span>;<br/>
 &nbsp;<span class="keyword">INVERSE</span><br/>
+&nbsp;&nbsp;IsDefinedBy : <span class="keyword">SET</span> [0:?] <span class="keyword">OF</span> <a href="../../ifckernel/lexical/ifcreldefinesbyproperties.html">IfcRelDefinesByProperties</a> <span class="keyword">FOR</span> RelatedObjects;<br/>
 &nbsp;&nbsp;Declares : <span class="keyword">SET</span> [0:?] OF <a href="../../ifckernel/lexical/ifcreldeclares.html">IfcRelDeclares</a> <span class="keyword">FOR</span> RelatingContext;<br/>
 <span class="keyword">END_ENTITY;</span><br/>
 <p class="std"><a href="../../../annex/annex-d/ifckernel/diagram_0000.html" ><img src="../../../img/diagram.png" style="border: 0px" title="Link to EXPRESS-G diagram" alt="Link to EXPRESS-G diagram">&nbsp;EXPRESS-G diagram</a></p>
@@ -169,7 +178,7 @@ NOTE  The spatial hiearchy is assigned to <a href="../../ifckernel/lexical/ifcp
 &nbsp;private string Phase;<br/>
 &nbsp;private <span class="self-ref">IfcStrippedOptional</span>[] RepresentationContexts;<br/>
 &nbsp;private <span class="self-ref">IfcStrippedOptional</span> UnitsInContext;<br/>
-&nbsp;private <span class="self-ref">IfcStrippedOptional</span>[] IsDefinedBy;<br/>
+&nbsp;private <a href="../../ifckernel/lexical/ifcreldefinesbyproperties.html">IfcRelDefinesByProperties</a>[] IsDefinedBy;<br/>
 &nbsp;private <a href="../../ifckernel/lexical/ifcreldeclares.html">IfcRelDeclares</a>[] Declares;<br/>
 }<br/>
 </code></div></details>

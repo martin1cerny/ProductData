@@ -1,5 +1,5 @@
 <?xml version="1.0"?>
-<mvdXML xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" uuid="477865c7-aa7c-45cb-b8ad-6d5cdf7155bb" name="" xsi:schemaLocation="http://standards.buildingsmart.org/MVD/RELEASE/mvdXML/v1-1/mvdXML_V1.1.xsd" xmlns="http://buildingsmart-tech.org/mvd/XML/1.1">
+<mvdXML xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" uuid="28c858cd-e42e-414e-80ab-06dbd54bedca" name="" xsi:schemaLocation="http://standards.buildingsmart.org/MVD/RELEASE/mvdXML/v1-1/mvdXML_V1.1.xsd" xmlns="http://buildingsmart-tech.org/mvd/XML/1.1">
   <Templates>
     <ConceptTemplate uuid="9f63432b-cdc8-4438-8bbf-035ee92c5842" name="Transport" status="candidate" applicableSchema="IFC4" applicableEntity="IfcProjectLibrary">
       <Definitions>
@@ -9,7 +9,7 @@
 1.	As a physical file with manual exchange via eMail, Harddrives, oder similar
 2.	As a data structure in the payload of an online exchange, eg. an API, a messaging system or similar.
 
-This standard does not define how exactly the exchange is done. It defines the standard for the structure of the file or the payload. The file or the payload can be stored in a compressd format according to the specification. The file extension is then \\\\\\\*.ifczip. The specifications for ifczip can be found here:
+This standard does not define how exactly the exchange is done. It defines the standard for the structure of the file or the payload. The file or the payload can be stored in a compressd format according to the specification. The file extension is then \\\\\\\\\*.ifczip. The specifications for ifczip can be found here:
 
 •	http://www.buildingsmart-tech.org/specifications/ifc-overview/ifc-overview-summary
 •	http://www.buildingsmart-tech.org/implementation/ifc-implementation/ifc-impl-agreements/cv-2x3-154
@@ -17,7 +17,7 @@ This standard does not define how exactly the exchange is done. It defines the s
 It is explicitly allowed to embed an IFC file in Step format (.ifc) or in XML format Format (.ifcxml) in an ifczip file.
 The specification contains the following principles:
 
-1.	The ifczip file contains exactly one model file (.ifc or .ifcxml). The file extension is \\\\\\\*.ifczip
+1.	The ifczip file contains exactly one model file (.ifc or .ifcxml). The file extension is \\\\\\\\\*.ifczip
 2.	According to this rule, it is allowed to embed additional other files in an ifczip file. Therefore, an ifczip file can be a container, which can transport many additional files in itself.
 3.	Such a container offers several advantages, such as
 •	transport of photo documentations
@@ -65,6 +65,8 @@ The cardinality  of the classes shall be as following:
 { .tg}
 { .tg}
 { .tg}
+{ .tg}
+{ .tg}
 <table class="tg">
   <tr>
     <th class="tg-w2dt"><br>&nbsp;&nbsp;Type of exchange<br>&nbsp;&nbsp;</th>
@@ -98,108 +100,61 @@ The cardinality  of the classes shall be as following:
 
 
 
+
+
+
+
 This ensures that the data sheets stay interpretable over a long time, even if the content of the data templates have changed during this time and the external source is not available anymore (Template embedding).]]></Body>
         </Definition>
       </Definitions>
       <SubTemplates>
-        <ConceptTemplate uuid="117dafcd-232b-4a98-929e-a21c28a1a6a8" name="Declaration for sheets" status="candidate" applicableSchema="IFC4" applicableEntity="IfcContext">
+        <ConceptTemplate uuid="117dafcd-232b-4a98-929e-a21c28a1a6a8" name="Declaration for data sheet exchange" status="candidate" applicableSchema="IFC4" />
+        <ConceptTemplate uuid="c9ffd9bf-be54-46f4-a685-72396aa0273f" name="Declaration for data template exchange" status="candidate" applicableSchema="IFC4" applicableEntity="IfcProjectLibrary">
           <Rules>
-            <AttributeRule AttributeName="Declares">
+            <AttributeRule AttributeName="GlobalId">
               <EntityRules>
-                <EntityRule EntityName="IfcRelDeclares">
+                <EntityRule EntityName="IfcGloballyUniqueId" />
+              </EntityRules>
+            </AttributeRule>
+            <AttributeRule AttributeName="OwnerHistory">
+              <EntityRules>
+                <EntityRule EntityName="IfcOwnerHistory">
                   <AttributeRules>
-                    <AttributeRule AttributeName="RelatedDefinitions">
+                    <AttributeRule AttributeName="CreationDate">
                       <EntityRules>
-                        <EntityRule EntityName="IfcProject">
-                          <AttributeRules>
-                            <AttributeRule AttributeName="HasAssociations">
-                              <EntityRules>
-                                <EntityRule EntityName="IfcRelAssociatesLibrary">
-                                  <AttributeRules>
-                                    <AttributeRule AttributeName="RelatingLibrary">
-                                      <EntityRules>
-                                        <EntityRule EntityName="IfcLibraryInformation">
-                                          <AttributeRules>
-                                            <AttributeRule AttributeName="Publisher">
-                                              <EntityRules>
-                                                <EntityRule EntityName="IfcPersonAndOrganization" />
-                                              </EntityRules>
-                                            </AttributeRule>
-                                          </AttributeRules>
-                                        </EntityRule>
-                                      </EntityRules>
-                                    </AttributeRule>
-                                  </AttributeRules>
-                                </EntityRule>
-                              </EntityRules>
-                            </AttributeRule>
-                          </AttributeRules>
-                        </EntityRule>
+                        <EntityRule EntityName="IfcTimeStamp" />
                       </EntityRules>
                     </AttributeRule>
                   </AttributeRules>
                 </EntityRule>
               </EntityRules>
             </AttributeRule>
-          </Rules>
-        </ConceptTemplate>
-        <ConceptTemplate uuid="c9ffd9bf-be54-46f4-a685-72396aa0273f" name="Declaration for templates" applicableSchema="IFC4" applicableEntity="IfcContext">
-          <Rules>
-            <AttributeRule AttributeName="Declares">
+            <AttributeRule AttributeName="Name">
               <EntityRules>
-                <EntityRule EntityName="IfcRelDeclares">
+                <EntityRule EntityName="IfcLabel" />
+              </EntityRules>
+            </AttributeRule>
+            <AttributeRule AttributeName="Phase">
+              <EntityRules>
+                <EntityRule EntityName="IfcLabel" />
+              </EntityRules>
+            </AttributeRule>
+            <AttributeRule AttributeName="HasAssociations">
+              <EntityRules>
+                <EntityRule EntityName="IfcRelAssociatesLibrary">
                   <AttributeRules>
-                    <AttributeRule AttributeName="RelatedDefinitions">
+                    <AttributeRule AttributeName="RelatingLibrary">
                       <EntityRules>
-                        <EntityRule EntityName="IfcProjectLibrary">
+                        <EntityRule EntityName="IfcLibraryInformation">
                           <AttributeRules>
-                            <AttributeRule AttributeName="HasAssociations">
+                            <AttributeRule AttributeName="Publisher">
                               <EntityRules>
-                                <EntityRule EntityName="IfcRelAssociatesLibrary">
-                                  <AttributeRules>
-                                    <AttributeRule AttributeName="RelatingLibrary">
-                                      <EntityRules>
-                                        <EntityRule EntityName="IfcLibraryInformation">
-                                          <AttributeRules>
-                                            <AttributeRule AttributeName="Publisher">
-                                              <EntityRules>
-                                                <EntityRule EntityName="IfcPersonAndOrganization" />
-                                              </EntityRules>
-                                            </AttributeRule>
-                                          </AttributeRules>
-                                        </EntityRule>
-                                      </EntityRules>
-                                    </AttributeRule>
-                                  </AttributeRules>
-                                </EntityRule>
+                                <EntityRule EntityName="IfcPersonAndOrganization" />
                               </EntityRules>
                             </AttributeRule>
-                            <AttributeRule AttributeName="GlobalId">
+                            <AttributeRule AttributeName="Location">
                               <EntityRules>
-                                <EntityRule EntityName="IfcGloballyUniqueId" />
-                              </EntityRules>
-                            </AttributeRule>
-                            <AttributeRule AttributeName="Phase">
-                              <EntityRules>
-                                <EntityRule EntityName="IfcLabel" />
-                              </EntityRules>
-                            </AttributeRule>
-                            <AttributeRule AttributeName="Name">
-                              <EntityRules>
-                                <EntityRule EntityName="IfcLabel" />
-                              </EntityRules>
-                            </AttributeRule>
-                            <AttributeRule AttributeName="OwnerHistory">
-                              <EntityRules>
-                                <EntityRule EntityName="IfcOwnerHistory">
-                                  <AttributeRules>
-                                    <AttributeRule AttributeName="CreationDate">
-                                      <EntityRules>
-                                        <EntityRule EntityName="IfcTimeStamp" />
-                                      </EntityRules>
-                                    </AttributeRule>
-                                  </AttributeRules>
-                                </EntityRule>
+                                <EntityRule EntityName="IfcURIReference" />
                               </EntityRules>
                             </AttributeRule>
                           </AttributeRules>
@@ -279,7 +234,7 @@ This ensures that the data sheets stay interpretable over a long time, even if t
             </AttributeRule>
           </Rules>
         </ConceptTemplate>
-        <ConceptTemplate uuid="82ec3852-f1bf-4bdf-b096-1f762812270d" name="Classification of construction objects" applicableSchema="IFC4" applicableEntity="IfcContext">
+        <ConceptTemplate uuid="82ec3852-f1bf-4bdf-b096-1f762812270d" name="Classification of construction objects" status="draft" applicableSchema="IFC4" applicableEntity="IfcContext">
           <Rules>
             <AttributeRule AttributeName="HasAssignments">
               <EntityRules>
@@ -313,7 +268,7 @@ This ensures that the data sheets stay interpretable over a long time, even if t
             </AttributeRule>
           </Rules>
         </ConceptTemplate>
-        <ConceptTemplate uuid="53b2705b-f492-48bf-9b2c-e23ec01c9acc" name="Classification of construction systems" applicableSchema="IFC4" applicableEntity="IfcContext">
+        <ConceptTemplate uuid="53b2705b-f492-48bf-9b2c-e23ec01c9acc" name="Classification of construction systems" status="draft" applicableSchema="IFC4" applicableEntity="IfcContext">
           <Rules>
             <AttributeRule AttributeName="HasAssignments">
               <EntityRules>
@@ -346,7 +301,7 @@ This ensures that the data sheets stay interpretable over a long time, even if t
             </AttributeRule>
           </Rules>
         </ConceptTemplate>
-        <ConceptTemplate uuid="f26b428b-d38a-47b3-a60d-d2ba54a6c764" name="Classification of data templates" applicableSchema="IFC4" applicableEntity="IfcContext">
+        <ConceptTemplate uuid="f26b428b-d38a-47b3-a60d-d2ba54a6c764" name="Classification of data templates" status="draft" applicableSchema="IFC4" applicableEntity="IfcContext">
           <Rules>
             <AttributeRule AttributeName="Declares">
               <EntityRules>
@@ -762,6 +717,64 @@ This ensures that the data sheets stay interpretable over a long time, even if t
         </ConceptTemplate>
       </SubTemplates>
     </ConceptTemplate>
+    <ConceptTemplate uuid="c1ef97fe-f47a-49a1-9e32-ce841d73ade2" name="Construction objects" status="candidate" applicableSchema="IFC4">
+      <SubTemplates>
+        <ConceptTemplate uuid="cc9148e8-6891-449a-81f9-d17f51308fec" name="Instances" status="candidate" applicableSchema="IFC4" applicableEntity="IfcObject">
+          <Definitions>
+            <Definition>
+              <Body><![CDATA[In the case, a delivered product has an individual information (e.g. a serial number), the product shall to be stored as an instance object. Every instance object in the construction objects data structure shall be stored in a class of EN ISO 16739 that is derived from IfcObject (e.g. an IfcDoor or an IfcPump). Every instance object has to be related to its corresponding type object.
+If the EN ISO 16739 does not provide an appropriate class in IfcObjects, the product has to be stored in IfcBuildingElementProxy and shall be further classified with the concept of classification (6.6) and with the concept of the Properties (6.7).
+In addition to the documentation of IfcProduct and derived classes in the official documentation of ISO 16739, the following information shall be provided in the context of this standard for each product:
+
+
+
+
+Systems are groups of type objects or instance objects, that are connected to fulfil a specific purpose/service in the building.
+
+
+TODO
+Create an example figure that illustrates a system of construction objects (Heating system)]]></Body>
+            </Definition>
+          </Definitions>
+          <Rules>
+            <AttributeRule AttributeName="Name">
+              <EntityRules>
+                <EntityRule EntityName="IfcLabel" />
+              </EntityRules>
+            </AttributeRule>
+            <AttributeRule AttributeName="Description">
+              <EntityRules>
+                <EntityRule EntityName="IfcText" />
+              </EntityRules>
+            </AttributeRule>
+            <AttributeRule AttributeName="ObjectType">
+              <EntityRules>
+                <EntityRule EntityName="IfcLabel" />
+              </EntityRules>
+            </AttributeRule>
+            <AttributeRule AttributeName="ObjectPlacement">
+              <EntityRules>
+                <EntityRule EntityName="IfcObjectPlacement" />
+              </EntityRules>
+            </AttributeRule>
+            <AttributeRule AttributeName="IsDefinedBy" />
+            <AttributeRule AttributeName="IsTypedBy">
+              <EntityRules>
+                <EntityRule EntityName="IfcRelDefinesByType">
+                  <AttributeRules>
+                    <AttributeRule AttributeName="RelatingType">
+                      <EntityRules>
+                        <EntityRule EntityName="IfcTypeObject" />
+                      </EntityRules>
+                    </AttributeRule>
+                  </AttributeRules>
+                </EntityRule>
+              </EntityRules>
+            </AttributeRule>
+          </Rules>
+        </ConceptTemplate>
+      </SubTemplates>
+    </ConceptTemplate>
     <ConceptTemplate uuid="678fe87d-6f4f-44d4-bf7f-33819709c5a1" name="_Construction Objects Data View" applicableSchema="IFC4">
       <SubTemplates>
         <ConceptTemplate uuid="dcffecbd-a68f-4ad9-a144-ea1bfef097cb" name="Material object association" applicableSchema="IFC4" applicableEntity="IfcContext" />
@@ -817,6 +830,8 @@ The product data file is specified as follows:
 { .tg}
 { .tg}
 { .tg}
+{ .tg}
+{ .tg}
 <table class="tg">
   <tr>
     <th class="tg-rykj"><br>&nbsp;&nbsp;Standard<br>&nbsp;&nbsp;</th>
@@ -839,6 +854,10 @@ The product data file is specified as follows:
     <td class="tg-rykj"><br>&nbsp;&nbsp;ifcZIP<br>&nbsp;&nbsp;</td>
   </tr>
 </table>
+
+
+
+
 
 
 
@@ -881,6 +900,8 @@ The digital information exchange of data for construction objects can be realize
 .tg .tg-rykj{font-size:12px;text-align:left;vertical-align:middle}
 .tg .tg-hdjr{font-size:12px;background-color:#c0c0c0;text-align:left;vertical-align:middle}
 </style>{ .tg}
+{ .tg}
+{ .tg}
 { .tg}
 { .tg}
 { .tg}
@@ -932,6 +953,10 @@ The digital information exchange of data for construction objects can be realize
 
 
 
+
+
+
+
 {#purpose .num}
 ## Relation of part 1 and part 2
 
@@ -958,23 +983,23 @@ The elements from ISO EN 16739.1:2018 that are applicable for the exchange requi
 
 Based on a discussion by Pierre-François & Klaus in Tokyo the following picture illustrates the relation of the different file types
 
-\\\\\\*\\\\\\*Building file\\\\\\*\\\\\\*
+\\\\\\\\*\\\\\\\\*Building file\\\\\\\\*\\\\\\\\*
 
 The file that stored the information about the building as a whole
 
-\\\\\\*\\\\\\*Catalogue file\\\\\\*\\\\\\*
+\\\\\\\\*\\\\\\\\*Catalogue file\\\\\\\\*\\\\\\\\*
 
 The file that stores the information about products with their configuration option.
 
-\\\\\\*\\\\\\*Request/Selection Application\\\\\\*\\\\\\*
+\\\\\\\\*\\\\\\\\*Request/Selection Application\\\\\\\\*\\\\\\\\*
 
 A software application that can handle the incoming requests and the selection process against a product catalogue.
 
-\\\\\\*\\\\\\*Inserting application\\\\\\*\\\\\\*
+\\\\\\\\*\\\\\\\\*Inserting application\\\\\\\\*\\\\\\\\*
 
 A software application, that can insert a completely defined product into the building file.
 
-\\\\\\*\\\\\\*Selection application\\\\\\*\\\\\\*
+\\\\\\\\*\\\\\\\\*Selection application\\\\\\\\*\\\\\\\\*
 
 A software application, that can select a completely defined product out of a catalogue by user interaction and returns the completely defined product.
 
@@ -986,30 +1011,8 @@ A software application, that can select a completely defined product out of a ca
         </Definition>
       </Definitions>
       <ExchangeRequirements>
-        <ExchangeRequirement uuid="e4d15dda-78aa-4713-83be-aa79730fc9a4" name="1 - Data template exchange" code="COD.1.DT" version="0.9" status="candidate" author="CEN-TC442-WG2-TG3" owner="CEN-TC442-WG2" copyright="CEN - European Committee for Standardization" applicability="both">
-          <Definitions>
-            <Definition>
-              <Body><![CDATA[The "Data template exchange" defines the structure of templates that can be used for the definition of the information structure for construction objects to be exchanged. Data templates essentially contain the definitions of characteristics and their grouping for a specific purpose. This standard does not specify specific property definitions, but rather provides the basis for stakeholders to agree among themselves to exchange property definitions and their grouping.
-
-The content of the data templates shall be loadable from a template based on EN ISO/DIS 23386 and ISO/DIS 23387.]]></Body>
-            </Definition>
-          </Definitions>
-        </ExchangeRequirement>
-        <ExchangeRequirement uuid="a71689da-72bc-45bb-99a3-22e41734990c" name="2 - Requirement request exchange" code="COD.1.PR" version="0.9" status="candidate" author="CEN-TC442-WG2-TG3" owner="CEN-TC442-WG2" copyright="CEN - European Committee for Standardization" applicability="both">
-          <Definitions>
-            <Definition>
-              <Body><![CDATA[The exchange of requirement requests is needed for, e.g. sending of concrete product requirements resulting from existing models in the design phase based on the agreed data templates. This exchange is described in detail in the part 2 of this standard.]]></Body>
-            </Definition>
-          </Definitions>
-        </ExchangeRequirement>
-        <ExchangeRequirement uuid="e6342739-6d02-429d-8e0f-a0d5f229efc9" name="3 - Product catalogue exchange" code="COD.1.PC" version="0.9" status="candidate" author="CEN-TC442-WG2-TG3" owner="CEN-TC442-WG2" copyright="CEN - European Committee for Standardization" applicability="both">
-          <Definitions>
-            <Definition>
-              <Body><![CDATA[The exchange of product catalogues is needed for, e.g. sending of concrete product offers based on the agreed data templates. This exchange is described in detail in the part 2 of this standard.]]></Body>
-            </Definition>
-          </Definitions>
-        </ExchangeRequirement>
-        <ExchangeRequirement uuid="c0115c7f-1284-40d7-9644-1d2b022eb5a5" name="4 - Data sheet exchange" code="COD.1.DS" version="0.9" status="candidate" author="CEN-TC442-WG2-TG3" owner="CEN-TC442-WG2" copyright="CEN - European Committee for Standardization" applicability="both">
+        <ExchangeRequirement uuid="4539261a-5a79-4274-ac72-3b6053e00cee" name="Catalogue of configured objects" applicability="both" />
+        <ExchangeRequirement uuid="c0115c7f-1284-40d7-9644-1d2b022eb5a5" name="Data sheet exchange" code="COD.1.DS" version="0.9" status="candidate" author="CEN-TC442-WG2-TG3" owner="CEN-TC442-WG2" copyright="CEN - European Committee for Standardization" applicability="both">
           <Definitions>
             <Definition>
               <Body><![CDATA[The "Data sheet exchange" describes how concrete data on Constructions objects (e.g. building products) can be structured and exchanged. The description of data sheets for construction objects requires that the data templates as defined above have been agreed upon and are applied.
@@ -1025,6 +1028,15 @@ One or more products that are fully defined and can be ordered, delivered to the
             </Definition>
           </Definitions>
         </ExchangeRequirement>
+        <ExchangeRequirement uuid="e4d15dda-78aa-4713-83be-aa79730fc9a4" name="Data template exchange" code="COD.1.DT" version="0.9" status="candidate" author="CEN-TC442-WG2-TG3" owner="CEN-TC442-WG2" copyright="CEN - European Committee for Standardization" applicability="both">
+          <Definitions>
+            <Definition>
+              <Body><![CDATA[The "Data template exchange" defines the structure of templates that can be used for the definition of the information structure for construction objects to be exchanged. Data templates essentially contain the definitions of characteristics and their grouping for a specific purpose. This standard does not specify specific property definitions, but rather provides the basis for stakeholders to agree among themselves to exchange property definitions and their grouping.
+
+The content of the data templates shall be loadable from a template based on EN ISO/DIS 23386 and ISO/DIS 23387.]]></Body>
+            </Definition>
+          </Definitions>
+        </ExchangeRequirement>
       </ExchangeRequirements>
       <Roots>
         <ConceptRoot uuid="47814901-57bf-4831-83e8-e510e3142d6a" name="Material" applicableRootEntity="IfcContext">
@@ -1033,7 +1045,7 @@ One or more products that are fully defined and can be ordered, delivered to the
             <TemplateRules operator="and" />
           </Applicability>
           <Concepts>
-            <Concept uuid="c7703053-da7f-4010-95c9-f26fa0c2b29d" name="Material constituent definition" override="false">
+            <Concept uuid="c7703053-da7f-4010-95c9-f26fa0c2b29d" name="Material constituent definition" status="draft" override="false">
               <Template ref="a1b77971-e1dd-4bed-8a15-f92485e2c7b6" />
               <TemplateRules operator="and">
                 <TemplateRule />
@@ -1051,7 +1063,7 @@ One or more products that are fully defined and can be ordered, delivered to the
                 <TemplateRule />
               </TemplateRules>
             </Concept>
-            <Concept uuid="eff5d768-abfb-4054-930d-9a47a1fc6ea0" name="Material of construction objects" override="false">
+            <Concept uuid="eff5d768-abfb-4054-930d-9a47a1fc6ea0" name="Material of construction objects" status="draft" override="false">
               <Template ref="252580ef-fa1c-420d-97cf-c81c3be33e94" />
               <TemplateRules operator="and">
                 <TemplateRule />
@@ -1076,8 +1088,8 @@ One or more products that are fully defined and can be ordered, delivered to the
               <Requirements>
                 <Requirement applicability="import" requirement="mandatory" exchangeRequirement="c0115c7f-1284-40d7-9644-1d2b022eb5a5" />
                 <Requirement applicability="export" requirement="mandatory" exchangeRequirement="c0115c7f-1284-40d7-9644-1d2b022eb5a5" />
-                <Requirement applicability="import" requirement="excluded" exchangeRequirement="e4d15dda-78aa-4713-83be-aa79730fc9a4" />
                 <Requirement applicability="export" requirement="excluded" exchangeRequirement="e4d15dda-78aa-4713-83be-aa79730fc9a4" />
+                <Requirement applicability="import" requirement="excluded" exchangeRequirement="e4d15dda-78aa-4713-83be-aa79730fc9a4" />
               </Requirements>
               <TemplateRules operator="and">
                 <TemplateRule />
@@ -1088,15 +1100,24 @@ One or more products that are fully defined and can be ordered, delivered to the
               <Template ref="c9ffd9bf-be54-46f4-a685-72396aa0273f" />
               <Requirements>
                 <Requirement applicability="import" requirement="mandatory" exchangeRequirement="e4d15dda-78aa-4713-83be-aa79730fc9a4" />
-                <Requirement applicability="import" requirement="mandatory" exchangeRequirement="a71689da-72bc-45bb-99a3-22e41734990c" />
-                <Requirement applicability="import" requirement="mandatory" exchangeRequirement="e6342739-6d02-429d-8e0f-a0d5f229efc9" />
                 <Requirement applicability="import" requirement="mandatory" exchangeRequirement="c0115c7f-1284-40d7-9644-1d2b022eb5a5" />
                 <Requirement applicability="export" requirement="mandatory" exchangeRequirement="c0115c7f-1284-40d7-9644-1d2b022eb5a5" />
-                <Requirement applicability="export" requirement="mandatory" exchangeRequirement="e6342739-6d02-429d-8e0f-a0d5f229efc9" />
-                <Requirement applicability="export" requirement="mandatory" exchangeRequirement="a71689da-72bc-45bb-99a3-22e41734990c" />
                 <Requirement applicability="export" requirement="mandatory" exchangeRequirement="e4d15dda-78aa-4713-83be-aa79730fc9a4" />
               </Requirements>
               <TemplateRules operator="and">
+                <TemplateRule />
+              </TemplateRules>
+            </Concept>
+            <Concept uuid="c0813b63-5595-4b48-b098-a25a3e4850a5" name="Declaration for units" status="draft" override="false">
+              <Template ref="cc9148e8-6891-449a-81f9-d17f51308fec" />
+              <Requirements>
+                <Requirement applicability="import" requirement="mandatory" exchangeRequirement="e4d15dda-78aa-4713-83be-aa79730fc9a4" />
+                <Requirement applicability="export" requirement="mandatory" exchangeRequirement="e4d15dda-78aa-4713-83be-aa79730fc9a4" />
+                <Requirement applicability="import" requirement="mandatory" exchangeRequirement="c0115c7f-1284-40d7-9644-1d2b022eb5a5" />
+                <Requirement applicability="export" requirement="mandatory" exchangeRequirement="c0115c7f-1284-40d7-9644-1d2b022eb5a5" />
+              </Requirements>
+              <TemplateRules operator="and">
+                <TemplateRule />
                 <TemplateRule />
               </TemplateRules>
             </Concept>
@@ -1152,13 +1173,56 @@ One or more products that are fully defined and can be ordered, delivered to the
             <TemplateRules operator="and" />
           </Applicability>
           <Concepts>
-            <Concept uuid="7ed50688-edce-429f-a6b4-1edf0245eeba" name="Transport" override="false">
+            <Concept uuid="7ed50688-edce-429f-a6b4-1edf0245eeba" name="Transport" status="candidate" override="false">
+              <Definitions>
+                <Definition>
+                  <Body><![CDATA[All exchanges can be transported over these protocols:
+
+1.	As a physical file with manual exchange via eMail, Harddrives, oder similar
+2.	As a data structure in the payload of an online exchange, eg. an API, a messaging system or similar.
+
+This standard does not define how exactly the exchange is done. It defines the standard for the structure of the file or the payload. The file or the payload can be stored in a compressd format according to the specification. The file extension is then \\\\\\\\\*.ifczip. The specifications for ifczip can be found here:
+
+•	http://www.buildingsmart-tech.org/specifications/ifc-overview/ifc-overview-summary
+•	http://www.buildingsmart-tech.org/implementation/ifc-implementation/ifc-impl-agreements/cv-2x3-154
+
+It is explicitly allowed to embed an IFC file in Step format (.ifc) or in XML format Format (.ifcxml) in an ifczip file.
+The specification contains the following principles:
+
+1.	The ifczip file contains exactly one model file (.ifc or .ifcxml). The file extension is \\\\\\\\\*.ifczip
+2.	According to this rule, it is allowed to embed additional other files in an ifczip file. Therefore, an ifczip file can be a container, which can transport many additional files in itself.
+3.	Such a container offers several advantages, such as
+•	transport of photo documentations
+•	transport of plant documentation
+•	transport of permits and notifications
+•	transport of operating documents, e.g. test and maintenance reports
+
+In the BIM context, such a transport is particularly useful if the documents have a reference to the structure.
+
+In order to be able to exchange data without consultation, each transported document should be registered in a structured, electronic table of contents. The recipient of the container can first read the table of contents and then select and remove the files.
+
+For this purpose, two things must be specified for the sender and receiver of such a container file:
+•	syntax of the table of contents
+•	specifications for the semantic identification of documents
+Since the current specification of the ifczip format provides exactly one model file in the root folder of the ifczip file, it makes sense to save the table of contents and the catalogue of document types in this model file.
+For this purpose, the IFC data model (based on IFC4) provides the entity IfcDocumentInformation. For each file transported in the container, an element of type IfcDocumentInformation is written.]]></Body>
+                </Definition>
+              </Definitions>
               <Template ref="9f63432b-cdc8-4438-8bbf-035ee92c5842" />
               <Requirements>
                 <Requirement applicability="export" requirement="mandatory" exchangeRequirement="e4d15dda-78aa-4713-83be-aa79730fc9a4" />
                 <Requirement applicability="import" requirement="mandatory" exchangeRequirement="e4d15dda-78aa-4713-83be-aa79730fc9a4" />
+                <Requirement applicability="import" requirement="mandatory" exchangeRequirement="c0115c7f-1284-40d7-9644-1d2b022eb5a5" />
+                <Requirement applicability="export" requirement="mandatory" exchangeRequirement="c0115c7f-1284-40d7-9644-1d2b022eb5a5" />
+                <Requirement applicability="import" requirement="mandatory" exchangeRequirement="4539261a-5a79-4274-ac72-3b6053e00cee" />
+                <Requirement applicability="export" requirement="mandatory" exchangeRequirement="4539261a-5a79-4274-ac72-3b6053e00cee" />
               </Requirements>
               <TemplateRules operator="and">
+                <TemplateRule />
+                <TemplateRule />
+                <TemplateRule />
+                <TemplateRule />
+                <TemplateRule />
                 <TemplateRule />
               </TemplateRules>
             </Concept>

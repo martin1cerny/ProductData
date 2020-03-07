@@ -86,6 +86,13 @@
   <cnf:entity select="IfcRelDeclares">
     <cnf:attribute select="RelatingContext" keep="false" />
   </cnf:entity>
+  <cnf:entity select="IfcRelDefinesByProperties">
+    <cnf:attribute select="RelatedObjects" keep="false" />
+  </cnf:entity>
+  <cnf:entity select="IfcRelDefinesByType">
+    <cnf:attribute select="RelatedObjects" keep="false" />
+    <cnf:attribute select="RelatingType" exp-attribute="attribute-tag" />
+  </cnf:entity>
   <cnf:entity select="IfcRoot">
     <cnf:attribute select="OwnerHistory" exp-attribute="attribute-tag" />
   </cnf:entity>

@@ -37,13 +37,13 @@
 <h5 class="num">Semantic definitions at the entity</h5>
 <details open="open"><summary>Entity definition</summary><p>An <span class="self-ref">IfcObjectDefinition</span> is the generalization of any semantically treated thing or process, either being a type or an occurrences. Object defintions can be named, using the inherited <i>Name</i> attribute, which should be a user recognizable label for the object occurrance. Further explanations to the object can be given using the inherited <i>Description</i> attribute. A context is a specific kind of object definition as it provides the project or library context in which object types and object occurrences are defined.</p>
 <p>Objects are independent pieces of information that might contain or reference other pieces of information. There are four essential kinds of relationships in which object definitons (by their instantiable subtypes) can be involved:</p>
-<p>\\\\\\\\\\\\\* \\\\\\\\\\\\\<i>\\\\\\\\\\\\\<i>Assignment of other objects\\\\\\\\\\\\\</i>\\\\\\\\\\\\\</i> - an assignment relationship (<a href="../../ifckernel/lexical/ifcrelassigns.html">IfcRelAssigns</a>) that refers to other types of objects and creates a bi-directional association. The semantic of the assignment is established at the level of the subtypes of the general <a href="../../ifckernel/lexical/ifcrelassigns.html">IfcRelAssigns</a> relationship. There is no dependency implied a priori by the assignment.
-\\\\\\\\\\\\\* \\\\\\\\\\\\\<i>\\\\\\\\\\\\\<i>Association to external resources\\\\\\\\\\\\\</i>\\\\\\\\\\\\\</i> - an association relationship (<a href="../../ifckernel/lexical/ifcrelassociates.html">IfcRelAssociates</a>) that refers to external sources of information (most notably a classification or document) and creates a uni-directional association. There is no dependency implied by the association.
-\\\\\\\\\\\\\* \\\\\\\\\\\\\<i>\\\\\\\\\\\\\<i>Aggregation of other objects\\\\\\\\\\\\\</i>\\\\\\\\\\\\\</i> - an aggregation relationship (<i>IfcRelAggregates</i>) that establishes an unordered, spatial whole/part relation and creates a bi-directional relation. There is an implied dependency established.
-\\\\\\\\\\\\\* \\\\\\\\\\\\\<i>\\\\\\\\\\\\\<i>Nesting of other objects\\\\\\\\\\\\\</i>\\\\\\\\\\\\\</i> - a nesting relationship (<i>IfcRelNests</i>) that establishes an ordered, non-spatial whole/part relation and creates a bi-directional relation. There is an implied dependency established.
-\\\\\\\\\\\\\* \\\\\\\\\\\\\<i>\\\\\\\\\\\\\<i>Declaration within a context\\\\\\\\\\\\\</i>\\\\\\\\\\\\\</i> - a relationship (<a href="../../ifckernel/lexical/ifcreldeclares.html">IfcRelDeclares</a>) of the uppermost object definition within the object definition tree (e.g. the summary object within an object nesting tree) to the context (a project or project library). It applies the units, representation context and other context information to this object definition and all dependent ones.</p>
+<p>\\\\\\\\\\\\\\* \\\\\\\\\\\\\\<i>\\\\\\\\\\\\\\<i>Assignment of other objects\\\\\\\\\\\\\\</i>\\\\\\\\\\\\\\</i> - an assignment relationship (<a href="../../ifckernel/lexical/ifcrelassigns.html">IfcRelAssigns</a>) that refers to other types of objects and creates a bi-directional association. The semantic of the assignment is established at the level of the subtypes of the general <a href="../../ifckernel/lexical/ifcrelassigns.html">IfcRelAssigns</a> relationship. There is no dependency implied a priori by the assignment.
+\\\\\\\\\\\\\\* \\\\\\\\\\\\\\<i>\\\\\\\\\\\\\\<i>Association to external resources\\\\\\\\\\\\\\</i>\\\\\\\\\\\\\\</i> - an association relationship (<a href="../../ifckernel/lexical/ifcrelassociates.html">IfcRelAssociates</a>) that refers to external sources of information (most notably a classification or document) and creates a uni-directional association. There is no dependency implied by the association.
+\\\\\\\\\\\\\\* \\\\\\\\\\\\\\<i>\\\\\\\\\\\\\\<i>Aggregation of other objects\\\\\\\\\\\\\\</i>\\\\\\\\\\\\\\</i> - an aggregation relationship (<i>IfcRelAggregates</i>) that establishes an unordered, spatial whole/part relation and creates a bi-directional relation. There is an implied dependency established.
+\\\\\\\\\\\\\\* \\\\\\\\\\\\\\<i>\\\\\\\\\\\\\\<i>Nesting of other objects\\\\\\\\\\\\\\</i>\\\\\\\\\\\\\\</i> - a nesting relationship (<i>IfcRelNests</i>) that establishes an ordered, non-spatial whole/part relation and creates a bi-directional relation. There is an implied dependency established.
+\\\\\\\\\\\\\\* \\\\\\\\\\\\\\<i>\\\\\\\\\\\\\\<i>Declaration within a context\\\\\\\\\\\\\\</i>\\\\\\\\\\\\\\</i> - a relationship (<a href="../../ifckernel/lexical/ifcreldeclares.html">IfcRelDeclares</a>) of the uppermost object definition within the object definition tree (e.g. the summary object within an object nesting tree) to the context (a project or project library). It applies the units, representation context and other context information to this object definition and all dependent ones.</p>
 <blockquote class="note">
-<p>NOTE  The link between the uppermost object in the spatial structure tree, that is <i>IfcSite</i> or <i>ifcBuilding</i>, and the context provided by <a href="../../ifckernel/lexical/ifcproject.html">IfcProject</a> is created using the <i>IfcRelAggregates</i> relationship. See <a href="../../ifckernel/lexical/ifcproject.html">IfcProject</a> for more information.</p>
+<p>NOTE  The link between the uppermost object in the spatial structure tree, that is <i>IfcSite</i> or <i>ifcBuilding</i>, and the context provided by <i>IfcProject</i> is created using the <i>IfcRelAggregates</i> relationship. See <i>IfcProject</i> for more information.</p>
 </blockquote>
 
 
@@ -87,8 +87,9 @@ NOTE  only the last modification in stored - either as addition, deletion or mo
 <tr><td>3</td><td>Name</td><td><a href="../../ifcmeasureresource/lexical/ifclabel.html">IfcLabel</a></td><td>? </td><td>
 Optional name for use by the participating software systems or users. For some subtypes of IfcRoot the insertion of the Name attribute may be required. This would be enforced by a where rule.
 </td><td>X</td></tr>
-<tr><td>4</td><td>Description</td><td><span class="self-ref">-</span></td><td></td><td>
-<i>This attribute is out of scope for this model view definition and shall not be set.</i></td><td></td></tr>
+<tr><td>4</td><td>Description</td><td><a href="../../ifcmeasureresource/lexical/ifctext.html">IfcText</a></td><td>? </td><td>
+Optional description, provided for exchanging informative comments.
+</td><td>X</td></tr>
 <tr><td colspan="6"><i><a href="../../ifckernel/lexical/ifcobjectdefinition.html">IfcObjectDefinition</a></i></td></tr>
 <tr><td></td><td><i>HasAssignments</i></td><td><a href="../../ifckernel/lexical/ifcrelassigns.html">IfcRelAssigns</a><br/>@RelatedObjects</td><td>S[0:?]</td><td>Reference to the relationship objects, that assign (by an association relationship) other subtypes of IfcObject to this object instance. Examples are the association to products, processes, controls, resources or groups.
 </td><td>X</td></tr>
@@ -134,6 +135,7 @@ Optional name for use by the participating software systems or users. For some s
 </code></div></details>
 </section>
 <p><img src="../../../img/external.png" style="border: 0px" title="References" alt="References"/>&nbsp; References: <a href="../../ifckernel/lexical/ifcrelassigns.html">IfcRelAssigns</a>
+<a href="../../ifckernel/lexical/ifcreldefinesbyproperties.html">IfcRelDefinesByProperties</a>
 <a href="../../ifckernel/lexical/ifcdefinitionselect.html">IfcDefinitionSelect</a>
 </p>
 <p><a href="https://github.com/buildingSMART/ProductData/issues/new?&title=ifcobjectdefinition:%22" target="_blank" ><img src="../../../img/external.png" style="border: 0px" title="Report issue" alt="Report issue"/>&nbsp; Report an issue</a></p>

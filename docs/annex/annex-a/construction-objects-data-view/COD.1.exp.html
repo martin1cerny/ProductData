@@ -37,8 +37,14 @@ SCHEMA IFC4;
 <span class="keyword">TYPE</span> IfcNonNegativeLengthMeasure = <a href="#ifclengthmeasure">IfcLengthMeasure</a>;<br/>&nbsp;<span class="keyword">WHERE</span><br/>
 &nbsp;&nbsp;NotNegative : SELF &gt;= 0.<br/><span class="keyword">END_TYPE;</span><br/>
 <br/>
+<a name="ifctext" />
+<span class="keyword">TYPE</span> IfcText = <span class="self-ref">STRING</span>;<br/><span class="keyword">END_TYPE;</span><br/>
+<br/>
 <a name="ifctimestamp" />
 <span class="keyword">TYPE</span> IfcTimeStamp = <span class="self-ref">INTEGER</span>;<br/><span class="keyword">END_TYPE;</span><br/>
+<br/>
+<a name="ifcurireference" />
+<span class="keyword">TYPE</span> IfcURIReference = <span class="self-ref">STRING</span>;<br/><span class="keyword">END_TYPE;</span><br/>
 <br/>
 <a name="ifcprofiletypeenum" />
 <span class="keyword">TYPE</span> IfcProfileTypeEnum = <span class="keyword">ENUMERATION OF</span> (<br/>
@@ -67,6 +73,18 @@ SCHEMA IFC4;
 <a name="ifcproductselect" />
 <span class="keyword">TYPE</span> IfcProductSelect = <span class="keyword">SELECT</span> (<br/>
 &nbsp;<a href="#ifcproduct">IfcProduct</a>, <br/>&nbsp;<a href="#ifctypeproduct">IfcTypeProduct</a>);<br/><span class="keyword">END_TYPE;</span><br/>
+<br/>
+<a name="ifcpropertysetdefinitionselect" />
+<span class="keyword">TYPE</span> IfcPropertySetDefinitionSelect = <span class="keyword">SELECT</span> (<br/>
+&nbsp;<a href="#ifcpropertysetdefinition">IfcPropertySetDefinition</a>);<br/><span class="keyword">END_TYPE;</span><br/>
+<br/>
+<a name="ifcsimplevalue" />
+<span class="keyword">TYPE</span> IfcSimpleValue = <span class="keyword">SELECT</span> (<br/>
+&nbsp;<a href="#ifcidentifier">IfcIdentifier</a>, <br/>&nbsp;<a href="#ifctext">IfcText</a>, <br/>&nbsp;<a href="#ifclabel">IfcLabel</a>, <br/>&nbsp;<a href="#ifctimestamp">IfcTimeStamp</a>);<br/><span class="keyword">END_TYPE;</span><br/>
+<br/>
+<a name="ifcvalue" />
+<span class="keyword">TYPE</span> IfcValue = <span class="keyword">SELECT</span> (<br/>
+&nbsp;<a href="#ifcsimplevalue">IfcSimpleValue</a>);<br/><span class="keyword">END_TYPE;</span><br/>
 <br/>
 <a name="ifcapplication" />
 <span class="keyword">ENTITY</span> IfcApplication<b>;</b><br/>
@@ -105,7 +123,7 @@ SCHEMA IFC4;
 <br/>
 <a name="ifccontext" />
 <span class="keyword">ENTITY</span> IfcContext<br/>
-&nbsp;<span class="keyword">ABSTRACT</span> <span class="keyword">SUPERTYPE OF</span>(<span class="keyword">ONEOF</span>(<a href="#ifcproject">IfcProject</a>, <a href="#ifcprojectlibrary">IfcProjectLibrary</a>))<br/>
+&nbsp;<span class="keyword">ABSTRACT</span> <span class="keyword">SUPERTYPE OF</span>(<a href="#ifcprojectlibrary">IfcProjectLibrary</a>)<br/>
 &nbsp;<span class="keyword">SUBTYPE OF</span> (<a href="#ifcobjectdefinition">IfcObjectDefinition</a>)<b>;</b><br/>
 &nbsp;&nbsp;ObjectType : <span class="keyword">OPTIONAL</span> <span class="self-ref">IfcStrippedOptional</span>;<br/>
 &nbsp;&nbsp;LongName : <span class="keyword">OPTIONAL</span> <span class="self-ref">IfcStrippedOptional</span>;<br/>
@@ -113,6 +131,7 @@ SCHEMA IFC4;
 &nbsp;&nbsp;RepresentationContexts : <span class="keyword">OPTIONAL</span> <span class="keyword">SET</span> [1:?] <span class="keyword">OF</span> <span class="self-ref">IfcStrippedOptional</span>;<br/>
 &nbsp;&nbsp;UnitsInContext : <span class="keyword">OPTIONAL</span> <span class="self-ref">IfcStrippedOptional</span>;<br/>
 &nbsp;<span class="keyword">INVERSE</span><br/>
+&nbsp;&nbsp;IsDefinedBy : <span class="keyword">SET</span> [0:?] <span class="keyword">OF</span> <a href="#ifcreldefinesbyproperties">IfcRelDefinesByProperties</a> <span class="keyword">FOR</span> RelatedObjects;<br/>
 &nbsp;&nbsp;Declares : <span class="keyword">SET</span> [0:?] OF <a href="#ifcreldeclares">IfcRelDeclares</a> <span class="keyword">FOR</span> RelatingContext;<br/>
 <span class="keyword">END_ENTITY;</span><br/>
 <br/>
@@ -155,7 +174,7 @@ SCHEMA IFC4;
 &nbsp;&nbsp;Version : <span class="keyword">OPTIONAL</span> <span class="self-ref">IfcStrippedOptional</span>;<br/>
 &nbsp;&nbsp;Publisher : <span class="keyword">OPTIONAL</span> <a href="#ifcactorselect">IfcActorSelect</a>;<br/>
 &nbsp;&nbsp;VersionDate : <span class="keyword">OPTIONAL</span> <span class="self-ref">IfcStrippedOptional</span>;<br/>
-&nbsp;&nbsp;Location : <span class="keyword">OPTIONAL</span> <span class="self-ref">IfcStrippedOptional</span>;<br/>
+&nbsp;&nbsp;Location : <span class="keyword">OPTIONAL</span> <a href="#ifcurireference">IfcURIReference</a>;<br/>
 &nbsp;&nbsp;Description : <span class="keyword">OPTIONAL</span> <span class="self-ref">IfcStrippedOptional</span>;<br/>
 &nbsp;<span class="keyword">INVERSE</span><br/>
 &nbsp;&nbsp;LibraryInfoForObjects : <span class="keyword">SET</span> [0:?] <span class="keyword">OF</span> <a href="#ifcrelassociateslibrary">IfcRelAssociatesLibrary</a> <span class="keyword">FOR</span> RelatingLibrary;<br/>
@@ -278,10 +297,12 @@ SCHEMA IFC4;
 <span class="keyword">ENTITY</span> IfcObject<br/>
 &nbsp;<span class="keyword">ABSTRACT</span> <span class="keyword">SUPERTYPE OF</span>(<span class="keyword">ONEOF</span>(<a href="#ifcgroup">IfcGroup</a>, <a href="#ifcproduct">IfcProduct</a>))<br/>
 &nbsp;<span class="keyword">SUBTYPE OF</span> (<a href="#ifcobjectdefinition">IfcObjectDefinition</a>)<b>;</b><br/>
-&nbsp;&nbsp;ObjectType : <span class="keyword">OPTIONAL</span> <span class="self-ref">IfcStrippedOptional</span>;<br/>
+&nbsp;&nbsp;ObjectType : <span class="keyword">OPTIONAL</span> <a href="#ifclabel">IfcLabel</a>;<br/>
 &nbsp;<span class="keyword">INVERSE</span><br/>
+&nbsp;&nbsp;IsTypedBy : <span class="keyword">SET</span> [0:1] OF <a href="#ifcreldefinesbytype">IfcRelDefinesByType</a> <span class="keyword">FOR</span> RelatedObjects;<br/>
+&nbsp;&nbsp;IsDefinedBy : <span class="keyword">SET</span> [0:?] OF <a href="#ifcreldefinesbyproperties">IfcRelDefinesByProperties</a> <span class="keyword">FOR</span> RelatedObjects;<br/>
 &nbsp;<span class="keyword">WHERE</span><br/>
-&nbsp;&nbsp;UniquePropertySetNames : ((SIZEOF(IsDefinedBy) = 0) OR <span class="self-ref">IfcStrippedOptional</span>(IsDefinedBy));<br/><span class="keyword">END_ENTITY;</span><br/>
+&nbsp;&nbsp;UniquePropertySetNames : ((SIZEOF(IsDefinedBy) = 0) OR <a href="#ifcuniquedefinitionnames">IfcUniqueDefinitionNames</a>(IsDefinedBy));<br/><span class="keyword">END_ENTITY;</span><br/>
 <br/>
 <a name="ifcobjectdefinition" />
 <span class="keyword">ENTITY</span> IfcObjectDefinition<br/>
@@ -291,6 +312,12 @@ SCHEMA IFC4;
 &nbsp;&nbsp;HasAssignments : <span class="keyword">SET</span> [0:?] OF <a href="#ifcrelassigns">IfcRelAssigns</a> <span class="keyword">FOR</span> RelatedObjects;<br/>
 &nbsp;&nbsp;HasContext : <span class="keyword">SET</span> [0:1] OF <a href="#ifcreldeclares">IfcRelDeclares</a> <span class="keyword">FOR</span> RelatedDefinitions;<br/>
 &nbsp;&nbsp;HasAssociations : <span class="keyword">SET</span> [0:?] OF <a href="#ifcrelassociates">IfcRelAssociates</a> <span class="keyword">FOR</span> RelatedObjects;<br/>
+<span class="keyword">END_ENTITY;</span><br/>
+<br/>
+<a name="ifcobjectplacement" />
+<span class="keyword">ENTITY</span> IfcObjectPlacement<br/>
+&nbsp;<span class="keyword">INVERSE</span><br/>
+&nbsp;&nbsp;PlacesObject : <span class="keyword">SET</span> [0:?] <span class="keyword">OF</span> <a href="#ifcproduct">IfcProduct</a> <span class="keyword">FOR</span> ObjectPlacement;<br/>
 <span class="keyword">END_ENTITY;</span><br/>
 <br/>
 <a name="ifcorganization" />
@@ -344,7 +371,7 @@ SCHEMA IFC4;
 <a name="ifcproduct" />
 <span class="keyword">ENTITY</span> IfcProduct<br/>
 &nbsp;<span class="keyword">SUBTYPE OF</span> (<a href="#ifcobject">IfcObject</a>)<b>;</b><br/>
-&nbsp;&nbsp;ObjectPlacement : <span class="keyword">OPTIONAL</span> <span class="self-ref">IfcStrippedOptional</span>;<br/>
+&nbsp;&nbsp;ObjectPlacement : <span class="keyword">OPTIONAL</span> <a href="#ifcobjectplacement">IfcObjectPlacement</a>;<br/>
 &nbsp;&nbsp;Representation : <span class="keyword">OPTIONAL</span> <span class="self-ref">IfcStrippedOptional</span>;<br/>
 &nbsp;<span class="keyword">INVERSE</span><br/>
 &nbsp;&nbsp;ReferencedBy : <span class="keyword">SET</span> [0:?] OF <a href="#ifcrelassignstoproduct">IfcRelAssignsToProduct</a> <span class="keyword">FOR</span> RelatingProduct;<br/>
@@ -360,15 +387,6 @@ SCHEMA IFC4;
 &nbsp;&nbsp;ProfileName : <span class="keyword">OPTIONAL</span> <span class="self-ref">IfcStrippedOptional</span>;<br/>
 &nbsp;<span class="keyword">INVERSE</span><br/>
 <span class="keyword">END_ENTITY;</span><br/>
-<br/>
-<a name="ifcproject" />
-<span class="keyword">ENTITY</span> IfcProject<br/>
-&nbsp;<span class="keyword">SUBTYPE OF</span> (<a href="#ifccontext">IfcContext</a>)<b>;</b><br/>
-&nbsp;<span class="keyword">WHERE</span><br/>
-&nbsp;&nbsp;HasName : EXISTS(SELF\<a href="#ifcroot">IfcRoot</a>.Name);<br/>&nbsp;&nbsp;CorrectContext : NOT(EXISTS(SELF\<a href="#ifccontext">IfcContext</a>.RepresentationContexts)) OR<br/>
-(SIZEOF(QUERY(Temp &lt;* SELF\<a href="#ifccontext">IfcContext</a>.RepresentationContexts |<br/>
- &#39;IFCREPRESENTATIONRESOURCE.<span class="self-ref">IfcStrippedOptional</span>&#39; IN TYPEOF(Temp)<br/>
-  )) = 0);<br/>&nbsp;&nbsp;NoDecomposition : SIZEOF(SELF\<a href="#ifcobjectdefinition">IfcObjectDefinition</a>.Decomposes) = 0;<br/><span class="keyword">END_ENTITY;</span><br/>
 <br/>
 <a name="ifcprojectlibrary" />
 <span class="keyword">ENTITY</span> IfcProjectLibrary<br/>
@@ -391,11 +409,19 @@ SCHEMA IFC4;
 <br/>
 <a name="ifcpropertydefinition" />
 <span class="keyword">ENTITY</span> IfcPropertyDefinition<br/>
-&nbsp;<span class="keyword">ABSTRACT</span> <span class="keyword">SUPERTYPE OF</span>(<a href="#ifcpropertytemplatedefinition">IfcPropertyTemplateDefinition</a>)<br/>
+&nbsp;<span class="keyword">ABSTRACT</span> <span class="keyword">SUPERTYPE OF</span>(<span class="keyword">ONEOF</span>(<a href="#ifcpropertysetdefinition">IfcPropertySetDefinition</a>, <a href="#ifcpropertytemplatedefinition">IfcPropertyTemplateDefinition</a>))<br/>
 &nbsp;<span class="keyword">SUBTYPE OF</span> (<a href="#ifcroot">IfcRoot</a>)<b>;</b><br/>
 &nbsp;<span class="keyword">INVERSE</span><br/>
 &nbsp;&nbsp;HasContext : <span class="keyword">SET</span> [0:1] OF <a href="#ifcreldeclares">IfcRelDeclares</a> <span class="keyword">FOR</span> RelatedDefinitions;<br/>
 &nbsp;&nbsp;HasAssociations : <span class="keyword">SET</span> [0:?] OF <a href="#ifcrelassociates">IfcRelAssociates</a> <span class="keyword">FOR</span> RelatedObjects;<br/>
+<span class="keyword">END_ENTITY;</span><br/>
+<br/>
+<a name="ifcpropertysetdefinition" />
+<span class="keyword">ENTITY</span> IfcPropertySetDefinition<br/>
+&nbsp;<span class="keyword">SUBTYPE OF</span> (<a href="#ifcpropertydefinition">IfcPropertyDefinition</a>)<b>;</b><br/>
+&nbsp;<span class="keyword">INVERSE</span><br/>
+&nbsp;&nbsp;DefinesType : <span class="keyword">SET</span> [0:?] OF <a href="#ifctypeobject">IfcTypeObject</a> <span class="keyword">FOR</span> HasPropertySets;<br/>
+&nbsp;&nbsp;DefinesOccurrence : <span class="keyword">SET</span> [0:?] <span class="keyword">OF</span> <a href="#ifcreldefinesbyproperties">IfcRelDefinesByProperties</a> <span class="keyword">FOR</span> RelatingPropertyDefinition;<br/>
 <span class="keyword">END_ENTITY;</span><br/>
 <br/>
 <a name="ifcpropertysettemplate" />
@@ -406,7 +432,7 @@ SCHEMA IFC4;
 &nbsp;&nbsp;HasPropertyTemplates : <span class="keyword">SET</span> [1:?] <span class="keyword">OF</span> <a href="#ifcpropertytemplate">IfcPropertyTemplate</a>;<br/>
 &nbsp;<span class="keyword">INVERSE</span><br/>
 &nbsp;<span class="keyword">WHERE</span><br/>
-&nbsp;&nbsp;ExistsName : EXISTS(SELF\<a href="#ifcroot">IfcRoot</a>.Name);<br/>&nbsp;&nbsp;UniquePropertyNames : <span class="self-ref">IfcStrippedOptional</span>(HasPropertyTemplates);<br/><span class="keyword">END_ENTITY;</span><br/>
+&nbsp;&nbsp;ExistsName : EXISTS(SELF\<a href="#ifcroot">IfcRoot</a>.Name);<br/>&nbsp;&nbsp;UniquePropertyNames : <a href="#ifcuniquepropertytemplatenames">IfcUniquePropertyTemplateNames</a>(HasPropertyTemplates);<br/><span class="keyword">END_ENTITY;</span><br/>
 <br/>
 <a name="ifcpropertytemplate" />
 <span class="keyword">ENTITY</span> IfcPropertyTemplate<br/>
@@ -428,7 +454,7 @@ SCHEMA IFC4;
 &nbsp;&nbsp;RelatedObjects : <span class="keyword">SET</span> [1:?] <span class="keyword">OF</span> <a href="#ifcobjectdefinition">IfcObjectDefinition</a>;<br/>
 &nbsp;&nbsp;RelatedObjectsType : <span class="keyword">OPTIONAL</span> <span class="self-ref">IfcStrippedOptional</span>;<br/>
 &nbsp;<span class="keyword">WHERE</span><br/>
-&nbsp;&nbsp;WR1 : <span class="self-ref">IfcStrippedOptional</span>(RelatedObjectsType, RelatedObjects);<br/><span class="keyword">END_ENTITY;</span><br/>
+&nbsp;&nbsp;WR1 : <a href="#ifccorrectobjectassignment">IfcCorrectObjectAssignment</a>(RelatedObjectsType, RelatedObjects);<br/><span class="keyword">END_ENTITY;</span><br/>
 <br/>
 <a name="ifcrelassignstogroup" />
 <span class="keyword">ENTITY</span> IfcRelAssignsToGroup<br/>
@@ -489,9 +515,30 @@ SCHEMA IFC4;
 &nbsp;<span class="keyword">WHERE</span><br/>
 &nbsp;&nbsp;NoSelfReference : SIZEOF(QUERY(Temp &lt;* RelatedDefinitions | RelatingContext :=: Temp)) = 0;<br/><span class="keyword">END_ENTITY;</span><br/>
 <br/>
+<a name="ifcreldefines" />
+<span class="keyword">ENTITY</span> IfcRelDefines<br/>
+&nbsp;<span class="keyword">ABSTRACT</span> <span class="keyword">SUPERTYPE OF</span>(<span class="keyword">ONEOF</span>(<a href="#ifcreldefinesbyproperties">IfcRelDefinesByProperties</a>, <a href="#ifcreldefinesbytype">IfcRelDefinesByType</a>))<br/>
+&nbsp;<span class="keyword">SUBTYPE OF</span> (<a href="#ifcrelationship">IfcRelationship</a>)<b>;</b><br/>
+<span class="keyword">END_ENTITY;</span><br/>
+<br/>
+<a name="ifcreldefinesbyproperties" />
+<span class="keyword">ENTITY</span> IfcRelDefinesByProperties<br/>
+&nbsp;<span class="keyword">SUBTYPE OF</span> (<a href="#ifcreldefines">IfcRelDefines</a>)<b>;</b><br/>
+&nbsp;&nbsp;RelatedObjects : <span class="keyword">SET</span> [1:?] OF <a href="#ifcobjectdefinition">IfcObjectDefinition</a>;<br/>
+&nbsp;&nbsp;RelatingPropertyDefinition : <a href="#ifcpropertysetdefinitionselect">IfcPropertySetDefinitionSelect</a>;<br/>
+&nbsp;<span class="keyword">WHERE</span><br/>
+&nbsp;&nbsp;NoRelatedTypeObject : SIZEOF(QUERY(Types &lt;* SELF\<a href="#ifcreldefinesbyproperties">IfcRelDefinesByProperties</a>.RelatedObjects |  &#39;IFCKERNEL.<a href="#ifctypeobject">IfcTypeObject</a>&#39; IN TYPEOF(Types))) = 0;<br/><span class="keyword">END_ENTITY;</span><br/>
+<br/>
+<a name="ifcreldefinesbytype" />
+<span class="keyword">ENTITY</span> IfcRelDefinesByType<br/>
+&nbsp;<span class="keyword">SUBTYPE OF</span> (<a href="#ifcreldefines">IfcRelDefines</a>)<b>;</b><br/>
+&nbsp;&nbsp;RelatedObjects : <span class="keyword">SET</span> [1:?] <span class="keyword">OF</span> <a href="#ifcobject">IfcObject</a>;<br/>
+&nbsp;&nbsp;RelatingType : <a href="#ifctypeobject">IfcTypeObject</a>;<br/>
+<span class="keyword">END_ENTITY;</span><br/>
+<br/>
 <a name="ifcrelationship" />
 <span class="keyword">ENTITY</span> IfcRelationship<br/>
-&nbsp;<span class="keyword">ABSTRACT</span> <span class="keyword">SUPERTYPE OF</span>(<span class="keyword">ONEOF</span>(<a href="#ifcrelassigns">IfcRelAssigns</a>, <a href="#ifcrelassociates">IfcRelAssociates</a>, <a href="#ifcreldeclares">IfcRelDeclares</a>))<br/>
+&nbsp;<span class="keyword">ABSTRACT</span> <span class="keyword">SUPERTYPE OF</span>(<span class="keyword">ONEOF</span>(<a href="#ifcrelassigns">IfcRelAssigns</a>, <a href="#ifcrelassociates">IfcRelAssociates</a>, <a href="#ifcreldeclares">IfcRelDeclares</a>, <a href="#ifcreldefines">IfcRelDefines</a>))<br/>
 &nbsp;<span class="keyword">SUBTYPE OF</span> (<a href="#ifcroot">IfcRoot</a>)<b>;</b><br/>
 <span class="keyword">END_ENTITY;</span><br/>
 <br/>
@@ -501,7 +548,7 @@ SCHEMA IFC4;
 &nbsp;&nbsp;GlobalId : <a href="#ifcgloballyuniqueid">IfcGloballyUniqueId</a>;<br/>
 &nbsp;&nbsp;OwnerHistory : <span class="keyword">OPTIONAL</span> <a href="#ifcownerhistory">IfcOwnerHistory</a>;<br/>
 &nbsp;&nbsp;Name : <span class="keyword">OPTIONAL</span> <a href="#ifclabel">IfcLabel</a>;<br/>
-&nbsp;&nbsp;Description : <span class="keyword">OPTIONAL</span> <span class="self-ref">IfcStrippedOptional</span>;<br/>
+&nbsp;&nbsp;Description : <span class="keyword">OPTIONAL</span> <a href="#ifctext">IfcText</a>;<br/>
 &nbsp;<span class="keyword">UNIQUE</span><br/>
 &nbsp;&nbsp;UR1 : GlobalId;<br/><span class="keyword">END_ENTITY;</span><br/>
 <br/>
@@ -518,8 +565,9 @@ SCHEMA IFC4;
 &nbsp;&nbsp;ApplicableOccurrence : <span class="keyword">OPTIONAL</span> <span class="self-ref">IfcStrippedOptional</span>;<br/>
 &nbsp;&nbsp;HasPropertySets : <span class="keyword">OPTIONAL</span> <span class="keyword">SET</span> [1:?] <span class="keyword">OF</span> <span class="self-ref">IfcStrippedOptional</span>;<br/>
 &nbsp;<span class="keyword">INVERSE</span><br/>
+&nbsp;&nbsp;Types : <span class="keyword">SET</span> [0:1] OF <a href="#ifcreldefinesbytype">IfcRelDefinesByType</a> <span class="keyword">FOR</span> RelatingType;<br/>
 &nbsp;<span class="keyword">WHERE</span><br/>
-&nbsp;&nbsp;NameRequired : EXISTS(SELF\<a href="#ifcroot">IfcRoot</a>.Name);<br/>&nbsp;&nbsp;UniquePropertySetNames : (NOT(EXISTS(HasPropertySets))) OR <span class="self-ref">IfcStrippedOptional</span>(HasPropertySets);<br/><span class="keyword">END_ENTITY;</span><br/>
+&nbsp;&nbsp;NameRequired : EXISTS(SELF\<a href="#ifcroot">IfcRoot</a>.Name);<br/>&nbsp;&nbsp;UniquePropertySetNames : (NOT(EXISTS(HasPropertySets))) OR <a href="#ifcuniquepropertysetnames">IfcUniquePropertySetNames</a>(HasPropertySets);<br/><span class="keyword">END_ENTITY;</span><br/>
 <br/>
 <a name="ifctypeproduct" />
 <span class="keyword">ENTITY</span> IfcTypeProduct<br/>
@@ -534,10 +582,58 @@ SCHEMA IFC4;
   NOT(&#39;IFCKERNEL.<a href="#ifcproduct">IfcProduct</a>&#39; IN TYPEOF(temp)))<br/>
 ) = 0);<br/><span class="keyword">END_ENTITY;</span><br/>
 <br/>
+<a name="ifccorrectobjectassignment" />
+<p>
+<span class="keyword">FUNCTION</span> IfcCorrectObjectAssignment<br/>
+
+&nbsp;&nbsp;(Constraint: <span class="self-ref">IfcStrippedOptional</span>; Objects : SET[1:?] OF <a href="#ifcobjectdefinition">IfcObjectDefinition</a>)<br/>&nbsp;&nbsp;: LOGICAL ;<br/>&nbsp;&nbsp;<br/>LOCAL<br/>&nbsp;&nbsp;Count : INTEGER := 0;<br/>END_LOCAL;<br/><br/>&nbsp;&nbsp;&nbsp;&nbsp;IF NOT(EXISTS(Constraint)) THEN <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;RETURN(TRUE);<br/>&nbsp;&nbsp;&nbsp;&nbsp;END_IF;<br/>&nbsp;&nbsp;<br/>&nbsp;&nbsp;&nbsp;&nbsp;CASE Constraint OF<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="self-ref">IfcStrippedOptional</span>.NOTDEFINED : RETURN(TRUE);<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="self-ref">IfcStrippedOptional</span>.PRODUCT :<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;BEGIN<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Count := SIZEOF(QUERY(temp &lt;* Objects | NOT('IFCKERNEL.<a href="#ifcproduct">IfcProduct</a>' IN TYPEOF(temp))));<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;RETURN(Count = 0);<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;END;<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="self-ref">IfcStrippedOptional</span>.PROCESS :<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;BEGIN<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Count := SIZEOF(QUERY(temp &lt;* Objects | NOT('IFCKERNEL.<span class="self-ref">IfcStrippedOptional</span>' IN TYPEOF(temp))));<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;RETURN(Count = 0);<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;END;<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="self-ref">IfcStrippedOptional</span>.CONTROL :<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;BEGIN<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Count := SIZEOF(QUERY(temp &lt;* Objects | NOT('IFCKERNEL.<span class="self-ref">IfcStrippedOptional</span>' IN TYPEOF(temp))));<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;RETURN(Count = 0);<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;END;<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="self-ref">IfcStrippedOptional</span>.RESOURCE :<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;BEGIN<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Count := SIZEOF(QUERY(temp &lt;* Objects | NOT('IFCKERNEL.<span class="self-ref">IfcStrippedOptional</span>' IN TYPEOF(temp))));<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;RETURN(Count = 0);<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;END;<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="self-ref">IfcStrippedOptional</span>.ACTOR :<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;BEGIN<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Count := SIZEOF(QUERY(temp &lt;* Objects | NOT('IFCKERNEL.<span class="self-ref">IfcStrippedOptional</span>' IN TYPEOF(temp))));<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;RETURN(Count = 0);<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;END;<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="self-ref">IfcStrippedOptional</span>.GROUP :<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;BEGIN<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Count := SIZEOF(QUERY(temp &lt;* Objects | NOT('IFCKERNEL.<a href="#ifcgroup">IfcGroup</a>' IN TYPEOF(temp))));<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;RETURN(Count = 0);<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;END;<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="self-ref">IfcStrippedOptional</span>.PROJECT :<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;BEGIN<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Count := SIZEOF(QUERY(temp &lt;* Objects | NOT('IFCKERNEL.<span class="self-ref">IfcStrippedOptional</span>' IN TYPEOF(temp))));<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;RETURN(Count = 0);<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;END;<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;OTHERWISE : RETURN(?);<br/>&nbsp;&nbsp;&nbsp;&nbsp;END_CASE;<br/>
+<br/>
+
+<span class="keyword">END_FUNCTION</span>;
+
+</p>
+
+<br/>
+<a name="ifcuniquedefinitionnames" />
+<p>
+<span class="keyword">FUNCTION</span> IfcUniqueDefinitionNames<br/>
+
+(Relations : SET [1:?] OF <a href="#ifcreldefinesbyproperties">IfcRelDefinesByProperties</a>)<br/>:LOGICAL;<br/><br/>LOCAL<br/>&nbsp;&nbsp;Definition : <a href="#ifcpropertysetdefinitionselect">IfcPropertySetDefinitionSelect</a>;<br/>&nbsp;&nbsp;DefinitionSet : <span class="self-ref">IfcStrippedOptional</span>;<br/>&nbsp;&nbsp;Properties : SET OF <a href="#ifcpropertysetdefinition">IfcPropertySetDefinition</a> := [];<br/>&nbsp;&nbsp;Result : LOGICAL;<br/>END_LOCAL;<br/><br/>IF SIZEOF(Relations) = 0 THEN<br/>&nbsp;&nbsp;RETURN(TRUE);<br/>END_IF;<br/><br/>REPEAT i:=1 TO HIINDEX(Relations);<br/>&nbsp;&nbsp;Definition := Relations[i].RelatingPropertyDefinition;<br/>&nbsp;&nbsp;IF 'IFC4.<a href="#ifcpropertysetdefinition">IfcPropertySetDefinition</a>' IN TYPEOF(Definition) THEN<br/>&nbsp;&nbsp;&nbsp;&nbsp;Properties := Properties + Definition;<br/>&nbsp;&nbsp;ELSE <br/>&nbsp;&nbsp;&nbsp;&nbsp;IF 'IFC4.<span class="self-ref">IfcStrippedOptional</span>' IN TYPEOF(Definition) THEN<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;BEGIN<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;DefinitionSet := Definition;<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;REPEAT j:= 1 TO HIINDEX(DefinitionSet);<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Properties := Properties + DefinitionSet[j];<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;END_REPEAT;<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;END;<br/>	END_IF;<br/>&nbsp;&nbsp;END_IF;<br/>END_REPEAT;<br/><br/>Result := <a href="#ifcuniquepropertysetnames">IfcUniquePropertySetNames</a>(Properties);<br/>RETURN (Result);
+<br/>
+
+<span class="keyword">END_FUNCTION</span>;
+
+</p>
+
+<br/>
+<a name="ifcuniquepropertysetnames" />
+<p>
+<span class="keyword">FUNCTION</span> IfcUniquePropertySetNames<br/>
+
+(Properties : SET [1:?] OF <a href="#ifcpropertysetdefinition">IfcPropertySetDefinition</a>)<br/>:LOGICAL;<br/><br/>LOCAL<br/>&nbsp;&nbsp;Names : SET OF <a href="#ifclabel">IfcLabel</a> := [];<br/>&nbsp;&nbsp;Unnamed : INTEGER := 0;<br/>END_LOCAL;<br/><br/>REPEAT i:=1 TO HIINDEX(Properties);<br/>&nbsp;&nbsp;IF 'IFC4.<span class="self-ref">IfcStrippedOptional</span>' IN TYPEOF(Properties[i]) THEN<br/>&nbsp;&nbsp;&nbsp;&nbsp;Names := Names + Properties[i]\<a href="#ifcroot">IfcRoot</a>.Name;<br/>&nbsp;&nbsp;ELSE<br/>&nbsp;&nbsp;&nbsp;&nbsp;Unnamed := Unnamed + 1;<br/>&nbsp;&nbsp;END_IF;<br/>END_REPEAT;<br/><br/>RETURN (SIZEOF(Names) + Unnamed = SIZEOF(Properties));
+<br/>
+
+<span class="keyword">END_FUNCTION</span>;
+
+</p>
+
+<br/>
+<a name="ifcuniquepropertytemplatenames" />
+<p>
+<span class="keyword">FUNCTION</span> IfcUniquePropertyTemplateNames<br/>
+
+(Properties : SET [1:?] OF <a href="#ifcpropertytemplate">IfcPropertyTemplate</a>)<br/>:LOGICAL;<br/><br/>LOCAL<br/>&nbsp;&nbsp;Names : SET OF <a href="#ifclabel">IfcLabel</a> := [];<br/>END_LOCAL;<br/><br/>REPEAT i:=1 TO HIINDEX(Properties);<br/>&nbsp;&nbsp;Names := Names + Properties[i].Name;<br/>END_REPEAT;<br/>RETURN (SIZEOF(Names) = SIZEOF(Properties));
+<br/>
+
+<span class="keyword">END_FUNCTION</span>;
+
+</p>
+
+<br/>
 <a name="ifcsingleprojectinstance" />
 <p>
 <span class="keyword">RULE</span> IfcSingleProjectInstance <b>FOR</b> (
-<a href="#ifcproject">IfcProject</a>
+<span class="self-ref">IfcStrippedOptional</span>
 );<br/>
 
 &nbsp;&nbsp;&nbsp;&nbsp;<span class="keyword">WHERE</span><br/>

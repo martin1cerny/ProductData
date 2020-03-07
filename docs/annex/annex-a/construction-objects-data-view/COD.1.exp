@@ -19,7 +19,7 @@ for incidental consequential damages in connection with the furnishing, performa
 of the material. The information contained in this document is subject to change without notice.
 
 Issue date:
-29 February 2020
+07 March 2020
 
 *)
 
@@ -45,7 +45,13 @@ TYPE IfcNonNegativeLengthMeasure = IfcLengthMeasure;
 	NotNegative : SELF >= 0.;
 END_TYPE;
 
+TYPE IfcText = STRING;
+END_TYPE;
+
 TYPE IfcTimeStamp = INTEGER;
+END_TYPE;
+
+TYPE IfcURIReference = STRING;
 END_TYPE;
 
 TYPE IfcProfileTypeEnum = ENUMERATION OF
@@ -85,6 +91,21 @@ TYPE IfcProductSelect = SELECT
 	,IfcTypeProduct);
 END_TYPE;
 
+TYPE IfcPropertySetDefinitionSelect = SELECT
+	(IfcPropertySetDefinition);
+END_TYPE;
+
+TYPE IfcSimpleValue = SELECT
+	(IfcIdentifier
+	,IfcLabel
+	,IfcText
+	,IfcTimeStamp);
+END_TYPE;
+
+TYPE IfcValue = SELECT
+	(IfcSimpleValue);
+END_TYPE;
+
 ENTITY IfcApplication;
 	ApplicationDeveloper : IfcOrganization;
 	Version : IfcLabel;
@@ -121,8 +142,7 @@ END_ENTITY;
 
 ENTITY IfcContext
  ABSTRACT SUPERTYPE OF (ONEOF
-    (IfcProject
-    ,IfcProjectLibrary))
+    (IfcProjectLibrary))
  SUBTYPE OF (IfcObjectDefinition);
 	ObjectType : OPTIONAL IfcStrippedOptional;
 	LongName : OPTIONAL IfcStrippedOptional;
@@ -130,6 +150,7 @@ ENTITY IfcContext
 	RepresentationContexts : OPTIONAL SET [1:?] OF IfcStrippedOptional;
 	UnitsInContext : OPTIONAL IfcStrippedOptional;
  INVERSE
+	IsDefinedBy : SET [0:?] OF IfcRelDefinesByProperties FOR RelatedObjects;
 	Declares : SET [0:?] OF IfcRelDeclares FOR RelatingContext;
 END_ENTITY;
 
@@ -173,7 +194,7 @@ ENTITY IfcLibraryInformation
 	Version : OPTIONAL IfcStrippedOptional;
 	Publisher : OPTIONAL IfcActorSelect;
 	VersionDate : OPTIONAL IfcStrippedOptional;
-	Location : OPTIONAL IfcStrippedOptional;
+	Location : OPTIONAL IfcURIReference;
 	Description : OPTIONAL IfcStrippedOptional;
  INVERSE
 	LibraryInfoForObjects : SET [0:?] OF IfcRelAssociatesLibrary FOR RelatingLibrary;
@@ -294,7 +315,10 @@ ENTITY IfcObject
     (IfcGroup
     ,IfcProduct))
  SUBTYPE OF (IfcObjectDefinition);
-	ObjectType : OPTIONAL IfcStrippedOptional;
+	ObjectType : OPTIONAL IfcLabel;
+ INVERSE
+	IsTypedBy : SET [0:1] OF IfcRelDefinesByType FOR RelatedObjects;
+	IsDefinedBy : SET [0:?] OF IfcRelDefinesByProperties FOR RelatedObjects;
  WHERE
 	UniquePropertySetNames : ((SIZEOF(IsDefinedBy) = 0) OR IfcUniqueDefinitionNames(IsDefinedBy));
 END_ENTITY;
@@ -309,6 +333,12 @@ ENTITY IfcObjectDefinition
 	HasAssignments : SET [0:?] OF IfcRelAssigns FOR RelatedObjects;
 	HasContext : SET [0:1] OF IfcRelDeclares FOR RelatedDefinitions;
 	HasAssociations : SET [0:?] OF IfcRelAssociates FOR RelatedObjects;
+END_ENTITY;
+
+ENTITY IfcObjectPlacement
+ ABSTRACT;
+ INVERSE
+	PlacesObject : SET [0:?] OF IfcProduct FOR ObjectPlacement;
 END_ENTITY;
 
 ENTITY IfcOrganization;
@@ -361,7 +391,7 @@ END_ENTITY;
 ENTITY IfcProduct
  ABSTRACT
  SUBTYPE OF (IfcObject);
-	ObjectPlacement : OPTIONAL IfcStrippedOptional;
+	ObjectPlacement : OPTIONAL IfcObjectPlacement;
 	Representation : OPTIONAL IfcStrippedOptional;
  INVERSE
 	ReferencedBy : SET [0:?] OF IfcRelAssignsToProduct FOR RelatingProduct;
@@ -375,17 +405,6 @@ END_ENTITY;
 ENTITY IfcProfileDef;
 	ProfileType : IfcProfileTypeEnum;
 	ProfileName : OPTIONAL IfcStrippedOptional;
-END_ENTITY;
-
-ENTITY IfcProject
- SUBTYPE OF (IfcContext);
- WHERE
-	HasName : EXISTS(SELF\IfcRoot.Name);
-	CorrectContext : NOT(EXISTS(SELF\IfcContext.RepresentationContexts)) OR
-(SIZEOF(QUERY(Temp <* SELF\IfcContext.RepresentationContexts |
- 'IFC4.IFCGEOMETRICREPRESENTATIONSUBCONTEXT' IN TYPEOF(Temp)
-  )) = 0);
-	NoDecomposition : SIZEOF(SELF\IfcObjectDefinition.Decomposes) = 0;
 END_ENTITY;
 
 ENTITY IfcProjectLibrary
@@ -407,11 +426,20 @@ END_ENTITY;
 
 ENTITY IfcPropertyDefinition
  ABSTRACT SUPERTYPE OF (ONEOF
-    (IfcPropertyTemplateDefinition))
+    (IfcPropertySetDefinition
+    ,IfcPropertyTemplateDefinition))
  SUBTYPE OF (IfcRoot);
  INVERSE
 	HasContext : SET [0:1] OF IfcRelDeclares FOR RelatedDefinitions;
 	HasAssociations : SET [0:?] OF IfcRelAssociates FOR RelatedObjects;
+END_ENTITY;
+
+ENTITY IfcPropertySetDefinition
+ ABSTRACT
+ SUBTYPE OF (IfcPropertyDefinition);
+ INVERSE
+	DefinesType : SET [0:?] OF IfcTypeObject FOR HasPropertySets;
+	DefinesOccurrence : SET [0:?] OF IfcRelDefinesByProperties FOR RelatingPropertyDefinition;
 END_ENTITY;
 
 ENTITY IfcPropertySetTemplate
@@ -509,11 +537,33 @@ ENTITY IfcRelDeclares
 	NoSelfReference : SIZEOF(QUERY(Temp <* RelatedDefinitions | RelatingContext :=: Temp)) = 0;
 END_ENTITY;
 
+ENTITY IfcRelDefines
+ ABSTRACT SUPERTYPE OF (ONEOF
+    (IfcRelDefinesByProperties
+    ,IfcRelDefinesByType))
+ SUBTYPE OF (IfcRelationship);
+END_ENTITY;
+
+ENTITY IfcRelDefinesByProperties
+ SUBTYPE OF (IfcRelDefines);
+	RelatedObjects : SET [1:?] OF IfcObjectDefinition;
+	RelatingPropertyDefinition : IfcPropertySetDefinitionSelect;
+ WHERE
+	NoRelatedTypeObject : SIZEOF(QUERY(Types <* SELF\IfcRelDefinesByProperties.RelatedObjects |  'IFC4.IFCTYPEOBJECT' IN TYPEOF(Types))) = 0;
+END_ENTITY;
+
+ENTITY IfcRelDefinesByType
+ SUBTYPE OF (IfcRelDefines);
+	RelatedObjects : SET [1:?] OF IfcObject;
+	RelatingType : IfcTypeObject;
+END_ENTITY;
+
 ENTITY IfcRelationship
  ABSTRACT SUPERTYPE OF (ONEOF
     (IfcRelAssigns
     ,IfcRelAssociates
-    ,IfcRelDeclares))
+    ,IfcRelDeclares
+    ,IfcRelDefines))
  SUBTYPE OF (IfcRoot);
 END_ENTITY;
 
@@ -525,7 +575,7 @@ ENTITY IfcRoot
 	GlobalId : IfcGloballyUniqueId;
 	OwnerHistory : OPTIONAL IfcOwnerHistory;
 	Name : OPTIONAL IfcLabel;
-	Description : OPTIONAL IfcStrippedOptional;
+	Description : OPTIONAL IfcText;
  UNIQUE
 	UR1 : GlobalId;
 END_ENTITY;
@@ -540,6 +590,8 @@ ENTITY IfcTypeObject
  SUBTYPE OF (IfcObjectDefinition);
 	ApplicableOccurrence : OPTIONAL IfcStrippedOptional;
 	HasPropertySets : OPTIONAL SET [1:?] OF IfcStrippedOptional;
+ INVERSE
+	Types : SET [0:1] OF IfcRelDefinesByType FOR RelatingType;
  WHERE
 	NameRequired : EXISTS(SELF\IfcRoot.Name);
 	UniquePropertySetNames : (NOT(EXISTS(HasPropertySets))) OR IfcUniquePropertySetNames(HasPropertySets);
@@ -557,6 +609,128 @@ ENTITY IfcTypeProduct
   NOT('IFC4.IFCPRODUCT' IN TYPEOF(temp)))
 ) = 0);
 END_ENTITY;
+
+FUNCTION IfcCorrectObjectAssignment
+(Constraint: IfcObjectTypeEnum; Objects : SET[1:?] OF IfcObjectDefinition)
+  : LOGICAL ;
+  
+LOCAL
+  Count : INTEGER := 0;
+END_LOCAL;
+
+    IF NOT(EXISTS(Constraint)) THEN 
+      RETURN(TRUE);
+    END_IF;
+  
+    CASE Constraint OF
+      IfcObjectTypeEnum.NOTDEFINED : RETURN(TRUE);
+      IfcObjectTypeEnum.PRODUCT :
+        BEGIN
+          Count := SIZEOF(QUERY(temp <* Objects | NOT('IFC4.IFCPRODUCT' IN TYPEOF(temp))));
+          RETURN(Count = 0);
+        END;
+      IfcObjectTypeEnum.PROCESS :
+        BEGIN
+          Count := SIZEOF(QUERY(temp <* Objects | NOT('IFC4.IFCPROCESS' IN TYPEOF(temp))));
+          RETURN(Count = 0);
+        END;
+      IfcObjectTypeEnum.CONTROL :
+        BEGIN
+          Count := SIZEOF(QUERY(temp <* Objects | NOT('IFC4.IFCCONTROL' IN TYPEOF(temp))));
+          RETURN(Count = 0);
+        END;
+      IfcObjectTypeEnum.RESOURCE :
+        BEGIN
+          Count := SIZEOF(QUERY(temp <* Objects | NOT('IFC4.IFCRESOURCE' IN TYPEOF(temp))));
+          RETURN(Count = 0);
+        END;
+      IfcObjectTypeEnum.ACTOR :
+        BEGIN
+          Count := SIZEOF(QUERY(temp <* Objects | NOT('IFC4.IFCACTOR' IN TYPEOF(temp))));
+          RETURN(Count = 0);
+        END;
+      IfcObjectTypeEnum.GROUP :
+        BEGIN
+          Count := SIZEOF(QUERY(temp <* Objects | NOT('IFC4.IFCGROUP' IN TYPEOF(temp))));
+          RETURN(Count = 0);
+        END;
+      IfcObjectTypeEnum.PROJECT :
+        BEGIN
+          Count := SIZEOF(QUERY(temp <* Objects | NOT('IFC4.IFCPROJECT' IN TYPEOF(temp))));
+          RETURN(Count = 0);
+        END;
+      OTHERWISE : RETURN(?);
+    END_CASE;
+END_FUNCTION;
+
+FUNCTION IfcUniqueDefinitionNames
+(Relations : SET [1:?] OF IfcRelDefinesByProperties)
+:LOGICAL;
+
+LOCAL
+  Definition : IfcPropertySetDefinitionSelect;
+  DefinitionSet : IfcPropertySetDefinitionSet;
+  Properties : SET OF IfcPropertySetDefinition := [];
+  Result : LOGICAL;
+END_LOCAL;
+
+IF SIZEOF(Relations) = 0 THEN
+  RETURN(TRUE);
+END_IF;
+
+REPEAT i:=1 TO HIINDEX(Relations);
+  Definition := Relations[i].RelatingPropertyDefinition;
+  IF 'IFC4.IFCPROPERTYSETDEFINITION' IN TYPEOF(Definition) THEN
+    Properties := Properties + Definition;
+  ELSE 
+    IF 'IFC4.IFCPROPERTYSETDEFINITIONSET' IN TYPEOF(Definition) THEN
+      BEGIN
+        DefinitionSet := Definition;
+        REPEAT j:= 1 TO HIINDEX(DefinitionSet);
+          Properties := Properties + DefinitionSet[j];
+        END_REPEAT;
+      END;
+	END_IF;
+  END_IF;
+END_REPEAT;
+
+Result := IfcUniquePropertySetNames(Properties);
+RETURN (Result);
+END_FUNCTION;
+
+FUNCTION IfcUniquePropertySetNames
+(Properties : SET [1:?] OF IfcPropertySetDefinition)
+:LOGICAL;
+
+LOCAL
+  Names : SET OF IfcLabel := [];
+  Unnamed : INTEGER := 0;
+END_LOCAL;
+
+REPEAT i:=1 TO HIINDEX(Properties);
+  IF 'IFC4.IFCPROPERTYSET' IN TYPEOF(Properties[i]) THEN
+    Names := Names + Properties[i]\IfcRoot.Name;
+  ELSE
+    Unnamed := Unnamed + 1;
+  END_IF;
+END_REPEAT;
+
+RETURN (SIZEOF(Names) + Unnamed = SIZEOF(Properties));
+END_FUNCTION;
+
+FUNCTION IfcUniquePropertyTemplateNames
+(Properties : SET [1:?] OF IfcPropertyTemplate)
+:LOGICAL;
+
+LOCAL
+  Names : SET OF IfcLabel := [];
+END_LOCAL;
+
+REPEAT i:=1 TO HIINDEX(Properties);
+  Names := Names + Properties[i].Name;
+END_REPEAT;
+RETURN (SIZEOF(Names) = SIZEOF(Properties));
+END_FUNCTION;
 
 RULE IfcSingleProjectInstance FOR
 	(IfcProject);

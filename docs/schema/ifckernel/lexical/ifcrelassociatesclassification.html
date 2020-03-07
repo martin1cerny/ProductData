@@ -46,8 +46,8 @@
 <h5 class="num">Semantic definitions at the entity</h5>
 <details open="open"><summary>Entity definition</summary><p>The objectified relationship <span class="self-ref">IfcRelAssociatesClassification</span> handles the assignment of a classification item (items of the select <a href="../../ifcexternalreferenceresource/lexical/ifcclassificationselect.html">IfcClassificationSelect</a>) to objects occurrences (subtypes of <a href="../../ifckernel/lexical/ifcobject.html">IfcObject</a>) or object types (subtypes of <a href="../../ifckernel/lexical/ifctypeobject.html">IfcTypeObject</a>).</p>
 <p>The relationship is used to assign a classification item, or a classification system itself to objects. Depending on the type of the <i>RelatingClassification</i> it is either:</p>
-<p>\\\\\\\\\\\\\* a reference to an classification item within an external classification system, or
-\\\\\\\\\\\\\* a reference to the classification system itself</p>
+<p>\\\\\\\\\\\\\\* a reference to an classification item within an external classification system, or
+\\\\\\\\\\\\\\* a reference to the classification system itself</p>
 <blockquote class="note">
 <p>NOTE  The reference to a classification item includes a link to the classification system within which the item is declared. It assigns the meaning of the classification item to the object (ocurrence or type). The reference to the classification system provides the information that the object (occurrence or type) is governed by the classification system but no assignment of a particular items has been done yet.</p>
 </blockquote>
@@ -88,8 +88,9 @@ NOTE  only the last modification in stored - either as addition, deletion or mo
 <tr><td>3</td><td>Name</td><td><a href="../../ifcmeasureresource/lexical/ifclabel.html">IfcLabel</a></td><td>? </td><td>
 Optional name for use by the participating software systems or users. For some subtypes of IfcRoot the insertion of the Name attribute may be required. This would be enforced by a where rule.
 </td><td>X</td></tr>
-<tr><td>4</td><td>Description</td><td><span class="self-ref">-</span></td><td></td><td>
-<i>This attribute is out of scope for this model view definition and shall not be set.</i></td><td></td></tr>
+<tr><td>4</td><td>Description</td><td><a href="../../ifcmeasureresource/lexical/ifctext.html">IfcText</a></td><td>? </td><td>
+Optional description, provided for exchanging informative comments.
+</td><td>X</td></tr>
 <tr><td colspan="6"><i><a href="../../ifckernel/lexical/ifcrelationship.html">IfcRelationship</a></i></td></tr>
 <tr><td colspan="6"><i><a href="../../ifckernel/lexical/ifcrelassociates.html">IfcRelAssociates</a></i></td></tr>
 <tr><td>5</td><td>RelatedObjects</td><td><a href="../../ifckernel/lexical/ifcdefinitionselect.html">IfcDefinitionSelect</a></td><td>S[1:?]</td><td>

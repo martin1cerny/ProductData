@@ -11,7 +11,7 @@
     <title>IfcProjectLibrary</title>
 
     <style type="text/css">
-      body { counter-reset: index1 5 index2 1 index3 3 index4 6 index5 0; }
+      body { counter-reset: index1 5 index2 1 index3 3 index4 5 index5 0; }
     </style>
   </head>
 
@@ -20,7 +20,7 @@
 
 <script type="text/javascript">
 <!--
-    parent.index.location.replace("../../toc-5.html#5.1.3.7");
+    parent.index.location.replace("../../toc-5.html#5.1.3.6");
 //-->
 </script>
 
@@ -42,11 +42,11 @@
 <h5 class="num">Semantic definitions at the entity</h5>
 <details open="open"><summary>Entity definition</summary><p>An <span class="self-ref">IfcProjectLibrary</span> collects all library elements that are included within a referenced project data set.</p>
 <p>Examples for project libraries include:</p>
-<p>\\\\\\\\\\\\\* type libraries (also called style or family libraries): a collection of subtypes of <a href="../../ifckernel/lexical/ifctypeobject.html">IfcTypeObject</a>
-\\\\\\\\\\\\\* property definition libraries: a collections of <a href="../../ifckernel/lexical/ifcpropertysettemplate.html">IfcPropertySetTemplate</a> or <i>IfcPropertyTemplates</i></p>
+<p>\\\\\\\\\\\\\\* type libraries (also called style or family libraries): a collection of subtypes of <a href="../../ifckernel/lexical/ifctypeobject.html">IfcTypeObject</a>
+\\\\\\\\\\\\\\* property definition libraries: a collections of <a href="../../ifckernel/lexical/ifcpropertysettemplate.html">IfcPropertySetTemplate</a> or <i>IfcPropertyTemplates</i></p>
 <p>The inherited attributes <i>RepresentationContext</i> and <i>UnitsInContext</i> have the following meaning:</p>
-<p>\\\\\\\\\\\\\* Context of the representations used within the project library. When the project library includes shape representations for its library type objects, one or several geometric representation contexts need to be included that define the coordinate system, the coordinate space dimensions, and/or the precision factor,
-\\\\\\\\\\\\\* Units locally assigned to measure types used within the context of this project library.</p>
+<p>\\\\\\\\\\\\\\* Context of the representations used within the project library. When the project library includes shape representations for its library type objects, one or several geometric representation contexts need to be included that define the coordinate system, the coordinate space dimensions, and/or the precision factor,
+\\\\\\\\\\\\\\* Units locally assigned to measure types used within the context of this project library.</p>
 <blockquote class="note">
 <p>NOTE  It is generally discouraged to use a different length measure and plane angle measure in an included project library compared with the project itself. It may lead to unexpected results for the shape representation of items included in the project library.</p>
 </blockquote>
@@ -79,8 +79,9 @@ NOTE  only the last modification in stored - either as addition, deletion or mo
 <tr><td>3</td><td>Name</td><td><a href="../../ifcmeasureresource/lexical/ifclabel.html">IfcLabel</a></td><td>? </td><td>
 Optional name for use by the participating software systems or users. For some subtypes of IfcRoot the insertion of the Name attribute may be required. This would be enforced by a where rule.
 </td><td>X</td></tr>
-<tr><td>4</td><td>Description</td><td><span class="self-ref">-</span></td><td></td><td>
-<i>This attribute is out of scope for this model view definition and shall not be set.</i></td><td></td></tr>
+<tr><td>4</td><td>Description</td><td><a href="../../ifcmeasureresource/lexical/ifctext.html">IfcText</a></td><td>? </td><td>
+Optional description, provided for exchanging informative comments.
+</td><td>X</td></tr>
 <tr><td colspan="6"><i><a href="../../ifckernel/lexical/ifcobjectdefinition.html">IfcObjectDefinition</a></i></td></tr>
 <tr><td></td><td><i>HasAssignments</i></td><td><a href="../../ifckernel/lexical/ifcrelassigns.html">IfcRelAssigns</a><br/>@RelatedObjects</td><td>S[0:?]</td><td>Reference to the relationship objects, that assign (by an association relationship) other subtypes of IfcObject to this object instance. Examples are the association to products, processes, controls, resources or groups.
 </td><td>X</td></tr>
@@ -101,9 +102,13 @@ Current project phase, or life-cycle phase of this project. Applicable values ha
 <i>This attribute is out of scope for this model view definition and shall not be set.</i></td><td></td></tr>
 <tr><td>9</td><td>UnitsInContext</td><td><span class="self-ref">-</span></td><td></td><td>
 <i>This attribute is out of scope for this model view definition and shall not be set.</i></td><td></td></tr>
+<tr><td></td><td><i>IsDefinedBy</i></td><td><a href="../../ifckernel/lexical/ifcreldefinesbyproperties.html">IfcRelDefinesByProperties</a><br/>@RelatedObjects</td><td>S[0:?]</td><td>Set of relationships to property set definitions attached to this context. Those statically or dynamically defined properties contain alphanumeric information content that further defines the context.
+
+
+</td><td></td></tr>
 <tr><td></td><td><i>Declares</i></td><td><a href="../../ifckernel/lexical/ifcreldeclares.html">IfcRelDeclares</a><br/>@RelatingContext</td><td>S[0:?]</td><td>Reference to the <a href="../../ifckernel/lexical/ifcreldeclares.html">IfcRelDeclares</a> relationship that assigns the uppermost entities of includes hierarchies to this context instance.
 <blockquote class="note">
-NOTE  The spatial hiearchy is assigned to <a href="../../ifckernel/lexical/ifcproject.html">IfcProject</a> using the <i>IfcRelAggregates</i> relationship. This is a single exception due to compatibility reasons with earlier releases.
+NOTE  The spatial hiearchy is assigned to <i>IfcProject</i> using the <i>IfcRelAggregates</i> relationship. This is a single exception due to compatibility reasons with earlier releases.
 </blockquote>
 </td><td>X</td></tr>
 <tr><td colspan="6"><a href="../../ifckernel/lexical/ifcprojectlibrary.html">IfcProjectLibrary</a></td></tr>

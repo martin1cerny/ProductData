@@ -1,7 +1,7 @@
 ISO-10303-21;
 HEADER;
 FILE_DESCRIPTION((''),'2;1');
-FILE_NAME('','2020-02-29T08:12:19',(''),(''),'buildingSMART IfcKit','IfcDoc 12.2.0.0','');
+FILE_NAME('','2020-03-07T09:57:27',(''),(''),'buildingSMART IfcKit','IfcDoc 12.2.0.0','');
 FILE_SCHEMA(('IFC'));
 ENDSEC;
 

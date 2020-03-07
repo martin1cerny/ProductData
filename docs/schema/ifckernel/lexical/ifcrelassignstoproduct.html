@@ -44,8 +44,8 @@
 <section>
 <h5 class="num">Semantic definitions at the entity</h5>
 <details open="open"><summary>Entity definition</summary><p>The objectified relationship <span class="self-ref">IfcRelAssignsToProduct</span> handles the assignment of objects (subtypes of <a href="../../ifckernel/lexical/ifcobject.html">IfcObject</a>) to a product (subtypes of <a href="../../ifckernel/lexical/ifcproduct.html">IfcProduct</a>). The <i>Name</i> attribute should be used to classify the usage of the <span class="self-ref">IfcRelAssignsToProduct</span> objectified relationship. The following <i>Name</i> values are proposed:</p>
-<p>\\\\\\\\\\\\\* 'Context' : Assignment of a context specific representation, such as of structural members to a different context representation (with potentially different decomposition breakdown) such as of building elements for a specific context specific representation. 
-\\\\\\\\\\\\\* 'View' : Assignment of a product (via <i>RelatingProduct</i>) that is decomposed according to a discipline view, to another product (via <i>RelatedObjects</i>) that is decomposed according to a different discipline view. An example is the assignment of the architectural slab to a different decomposition of the pre manufactured sections of a slab (under a precast concrete discipline view).</p>
+<p>\\\\\\\\\\\\\\* 'Context' : Assignment of a context specific representation, such as of structural members to a different context representation (with potentially different decomposition breakdown) such as of building elements for a specific context specific representation. 
+\\\\\\\\\\\\\\* 'View' : Assignment of a product (via <i>RelatingProduct</i>) that is decomposed according to a discipline view, to another product (via <i>RelatedObjects</i>) that is decomposed according to a different discipline view. An example is the assignment of the architectural slab to a different decomposition of the pre manufactured sections of a slab (under a precast concrete discipline view).</p>
 
 
 </details>
@@ -92,8 +92,9 @@ NOTE  only the last modification in stored - either as addition, deletion or mo
 <tr><td>3</td><td>Name</td><td><a href="../../ifcmeasureresource/lexical/ifclabel.html">IfcLabel</a></td><td>? </td><td>
 Optional name for use by the participating software systems or users. For some subtypes of IfcRoot the insertion of the Name attribute may be required. This would be enforced by a where rule.
 </td><td>X</td></tr>
-<tr><td>4</td><td>Description</td><td><span class="self-ref">-</span></td><td></td><td>
-<i>This attribute is out of scope for this model view definition and shall not be set.</i></td><td></td></tr>
+<tr><td>4</td><td>Description</td><td><a href="../../ifcmeasureresource/lexical/ifctext.html">IfcText</a></td><td>? </td><td>
+Optional description, provided for exchanging informative comments.
+</td><td>X</td></tr>
 <tr><td colspan="6"><i><a href="../../ifckernel/lexical/ifcrelationship.html">IfcRelationship</a></i></td></tr>
 <tr><td colspan="6"><i><a href="../../ifckernel/lexical/ifcrelassigns.html">IfcRelAssigns</a></i></td></tr>
 <tr><td>5</td><td>RelatedObjects</td><td><a href="../../ifckernel/lexical/ifcobjectdefinition.html">IfcObjectDefinition</a></td><td>S[1:?]</td><td>
