@@ -89,28 +89,25 @@
 </figure>
 <p>The digital information exchange of data for construction objects can be realized using following kinds of exchanges:</p>
 <table class="gridtable">
-  <tbody>
-    <tr>
-      <th>Exchange code</th>
-      <th>Exchange name</th>
-      <th>Exchange description</th>
-    </tr>
-    <tr>
-      <td>DT</td>
-      <td>Data template </td>
-      <td>Definition of the structures of data templates for construction objects, retrieved from dictionaries.</td>
-    </tr>
-      <td>CCCO</td>
-      <td>Catalogue of configured construction objects</td>
-      <td>Information about configured construction type objects, e.g. product catalogues as list of construction type objects, based on information from the manufacturer</td>
-    
-    <tr>
-      <td>DS </td>
-      <td>Data sheet</td>
-      <td>Information about instances of configured construction objects that are selected for ordering, delivery and  installation without any further configuration options</td>
-    </tr>
-  </tbody>
-  <caption align="bottom" align="left">Table 1: Kinds of digital exchange for data descriptions of construction objects</caption>
+<thead>
+<tr>
+<th>Exchange code</th>
+<th>Exchange name</th>
+<th>Exchange description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>DT</td>
+<td>Data template</td>
+<td>Definition of the structures of data templates for construction objects, retrieved from dictionaries.</td>
+</tr>
+<tr>
+<td>DS</td>
+<td>Data sheet</td>
+<td>Information about instances of configured construction objects that are selected for ordering, delivery and installation without any further configuration options</td>
+</tr>
+</tbody>
 </table>
 <p>The standard contains three definitions of information exchange requirements.  Each element of the exchange requirements corresponds to an element in EN ISO 16739.1:2018. The documentation of EN ISO 16739.1:2018 (IFC 4, ADD 2, TC 1, Version 4.0.2.1) will not be repeated in this document. The elements from ISO EN 16739.1:2018 that are applicable for the exchange requirements are defined in detail in the chapter Technical specification in the included HTML documentation.</p>
 <h5>Construction objects</h5>
@@ -153,13 +150,13 @@
 <li>As a physical file with manual exchange via eMail, Harddrives, oder similar</li>
 <li>As a data structure in the payload of an online exchange, eg. an API, a messaging system or similar.</li>
 </ol>
-<p>This standard does not define how exactly the exchange is done. It defines the standard for the structure of the file or the payload. The file or the payload can be stored in a compressd format according to the specification. The file extension is then \\\\\*.ifczip. The specifications for ifczip can be found here:</p>
+<p>This standard does not define how exactly the exchange is done. It defines the standard for the structure of the file or the payload. The file or the payload can be stored in a compressd format according to the specification. The file extension is then \\\\\\*.ifczip. The specifications for ifczip can be found here:</p>
 <p>•	http://www.buildingsmart-tech.org/specifications/ifc-overview/ifc-overview-summary
 •	http://www.buildingsmart-tech.org/implementation/ifc-implementation/ifc-impl-agreements/cv-2x3-154</p>
 <p>It is explicitly allowed to embed an IFC file in Step format (.ifc) or in XML format Format (.ifcxml) in an ifczip file.
 The specification contains the following principles:</p>
 <ol>
-<li>The ifczip file contains exactly one model file (.ifc or .ifcxml). The file extension is \\\\\*.ifczip</li>
+<li>The ifczip file contains exactly one model file (.ifc or .ifcxml). The file extension is \\\\\\*.ifczip</li>
 <li>According to this rule, it is allowed to embed additional other files in an ifczip file. Therefore, an ifczip file can be a container, which can transport many additional files in itself.</li>
 <li>Such a container offers several advantages, such as
 •	transport of photo documentations

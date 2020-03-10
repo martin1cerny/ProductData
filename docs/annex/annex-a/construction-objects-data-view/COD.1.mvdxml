@@ -1,5 +1,5 @@
 <?xml version="1.0"?>
-<mvdXML xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" uuid="30617b6f-dfb8-4cdb-b081-175405af0c09" name="" xsi:schemaLocation="http://standards.buildingsmart.org/MVD/RELEASE/mvdXML/v1-1/mvdXML_V1.1.xsd" xmlns="http://buildingsmart-tech.org/mvd/XML/1.1">
+<mvdXML xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" uuid="f447398c-ff5f-4fed-aa9e-7f044eeaff3f" name="" xsi:schemaLocation="http://standards.buildingsmart.org/MVD/RELEASE/mvdXML/v1-1/mvdXML_V1.1.xsd" xmlns="http://buildingsmart-tech.org/mvd/XML/1.1">
   <Templates>
     <ConceptTemplate uuid="bf7206d4-80c6-469d-93a5-336283a2a935" name="Classification" status="draft" applicableSchema="IFC4" applicableEntity="IfcContext">
       <Definitions>
@@ -258,6 +258,7 @@ The cardinality  of the classes shall be as following:
 { .tg}
 { .tg}
 { .tg}
+{ .tg}
 <table class="tg">
   <tr>
     <th class="tg-w2dt"><br>&nbsp;&nbsp;Type of exchange<br>&nbsp;&nbsp;</th>
@@ -276,6 +277,8 @@ The cardinality  of the classes shall be as following:
   </tr>
 <caption align"bottom"="">Table 2: Cardinality of declarations</caption>
 </table>
+
+
 
 
 
@@ -751,9 +754,9 @@ This ensures that the data sheets stay interpretable over a long time, even if t
           <Body><![CDATA[All exchanges can be transported over these protocols:
 
 1. As a physical file with manual exchange via eMail, Harddrives, oder similar
-2. As a data structure in the payload of an online exchange, eg. an API, a messaging system or similar.
+2. As a data structure in the payload of an online exchange, eg. an API, a BCF message, a messaging system or similar.
 
-This standard does not define how exactly the exchange is done. It defines the standard for the structure of the file or the payload. The file or the payload can be stored in a compressd format according to the specification. The file extension is then *.ifczip. The specifications for ifczip can be found here:
+This standard does not define how exactly the exchange is done. It defines the standard for the structure of the file or the payload. The file or the payload can be stored in a compressd format according to the specification. The file extension is then \*.ifczip. The specifications for ifczip can be found here:
 
 * http://www.buildingsmart-tech.org/specifications/ifc-overview/ifc-overview-summary
 * http://www.buildingsmart-tech.org/implementation/ifc-implementation/ifc-impl-agreements/cv-2x3-154
@@ -761,7 +764,7 @@ This standard does not define how exactly the exchange is done. It defines the s
 It is explicitly allowed to embed an IFC file in Step format (.ifc) or in XML format Format (.ifcxml) in an ifczip file.
 The specification contains the following principles:
 
-1. The ifczip file contains exactly one model file (.ifc or .ifcxml). The file extension is *.ifczip
+1. The ifczip file contains exactly one model file (.ifc or .ifcxml). The file extension is \*.ifczip
 2. According to this rule, it is allowed to embed additional other files in an ifczip file. Therefore, an ifczip file can be a container, which can transport many additional files in itself.
 3. Such a container offers several advantages, such as transport of photo documentations, transport of plant documentation,  transport of permits and notifications, transport of operating documents, e.g. test and maintenance reports
 
@@ -836,6 +839,7 @@ The product data file is specified as follows:
 { .tg}
 { .tg}
 { .tg}
+{ .tg}
 <table class="tg">
   <tr>
     <th class="tg-rykj"><br>&nbsp;&nbsp;Standard<br>&nbsp;&nbsp;</th>
@@ -859,6 +863,8 @@ The product data file is specified as follows:
   </tr>
 </table>
 
+
+
 The IFC language contains hundreds of entities to provide a standardizes data exchange for the whole construction industry. For exchanging product data based on the specification of this paper, only some of these entities are needed. These entities are defined in this specification. The IFC specification is located here: https://technical.buildingsmart.org . All elements are well documented there. In this paper, we describe the use of the elements and attributes for the use case of transporting construction objects data templates (DT) and corresponding construction objects data (PD).
 
 The product data shall be transportable from the sender (e.g. the manufacturer) to the receiver (e.g. customer). The construction objects data templates (DT) is an empty form. The receiver can hand the empty form over to the sender, to make clear, which information shall be delivered. The sender then fills the information into the form and gives it back to the receiver.
@@ -876,30 +882,14 @@ Based on the identified purposes, the standard supports different exchanges with
 
 The digital information exchange of data for construction objects can be realized using following kinds of exchanges:
   
-<table class="gridtable">
-  <tbody>
-    <tr>
-      <th>Exchange code</th>
-      <th>Exchange name</th>
-      <th>Exchange description</th>
-    </tr>
-    <tr>
-      <td>DT</td>
-      <td>Data template </td>
-      <td>Definition of the structures of data templates for construction objects, retrieved from dictionaries.</td>
-    </tr>
-      <td>CCCO</td>
-      <td>Catalogue of configured construction objects</td>
-      <td>Information about configured construction type objects, e.g. product catalogues as list of construction type objects, based on information from the manufacturer</td>
-    </tr>
-    <tr>
-      <td>DS </td>
-      <td>Data sheet</td>
-      <td>Information about instances of configured construction objects that are selected for ordering, delivery and  installation without any further configuration options</td>
-    </tr>
-  </tbody>
-  <caption align="bottom" align="left">Table 1: Kinds of digital exchange for data descriptions of construction objects</caption>
-</table>
+{ .gridtable}
+Exchange code | Exchange name | Exchange description
+------------- | ------------- | --------------------
+DT | Data template | Definition of the structures of data templates for construction objects, retrieved from dictionaries.
+DS | Data sheet | Information about instances of configured construction objects that are selected for ordering, delivery and installation without any further configuration options
+
+
+
 
 The standard contains three definitions of information exchange requirements.  Each element of the exchange requirements corresponds to an element in EN ISO 16739.1:2018. The documentation of EN ISO 16739.1:2018 (IFC 4, ADD 2, TC 1, Version 4.0.2.1) will not be repeated in this document. The elements from ISO EN 16739.1:2018 that are applicable for the exchange requirements are defined in detail in the chapter Technical specification in the included HTML documentation.]]></Body>
         </Definition>
@@ -1075,7 +1065,7 @@ The content of the data templates shall be loadable from a template based on EN 
 1.	As a physical file with manual exchange via eMail, Harddrives, oder similar
 2.	As a data structure in the payload of an online exchange, eg. an API, a messaging system or similar.
 
-This standard does not define how exactly the exchange is done. It defines the standard for the structure of the file or the payload. The file or the payload can be stored in a compressd format according to the specification. The file extension is then \\\\\\\\\\\*.ifczip. The specifications for ifczip can be found here:
+This standard does not define how exactly the exchange is done. It defines the standard for the structure of the file or the payload. The file or the payload can be stored in a compressd format according to the specification. The file extension is then \\\\\\\\\\\\*.ifczip. The specifications for ifczip can be found here:
 
 •	http://www.buildingsmart-tech.org/specifications/ifc-overview/ifc-overview-summary
 •	http://www.buildingsmart-tech.org/implementation/ifc-implementation/ifc-impl-agreements/cv-2x3-154
@@ -1083,7 +1073,7 @@ This standard does not define how exactly the exchange is done. It defines the s
 It is explicitly allowed to embed an IFC file in Step format (.ifc) or in XML format Format (.ifcxml) in an ifczip file.
 The specification contains the following principles:
 
-1.	The ifczip file contains exactly one model file (.ifc or .ifcxml). The file extension is \\\\\\\\\\\*.ifczip
+1.	The ifczip file contains exactly one model file (.ifc or .ifcxml). The file extension is \\\\\\\\\\\\*.ifczip
 2.	According to this rule, it is allowed to embed additional other files in an ifczip file. Therefore, an ifczip file can be a container, which can transport many additional files in itself.
 3.	Such a container offers several advantages, such as
 •	transport of photo documentations
