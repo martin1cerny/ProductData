@@ -1,5 +1,5 @@
 <?xml version="1.0"?>
-<mvdXML xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" uuid="4796b169-260e-48c8-8da0-c01c7f822ffb" name="" xsi:schemaLocation="http://standards.buildingsmart.org/MVD/RELEASE/mvdXML/v1-1/mvdXML_V1.1.xsd" xmlns="http://buildingsmart-tech.org/mvd/XML/1.1">
+<mvdXML xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" uuid="30617b6f-dfb8-4cdb-b081-175405af0c09" name="" xsi:schemaLocation="http://standards.buildingsmart.org/MVD/RELEASE/mvdXML/v1-1/mvdXML_V1.1.xsd" xmlns="http://buildingsmart-tech.org/mvd/XML/1.1">
   <Templates>
     <ConceptTemplate uuid="bf7206d4-80c6-469d-93a5-336283a2a935" name="Classification" status="draft" applicableSchema="IFC4" applicableEntity="IfcContext">
       <Definitions>
@@ -257,6 +257,7 @@ The cardinality  of the classes shall be as following:
 { .tg}
 { .tg}
 { .tg}
+{ .tg}
 <table class="tg">
   <tr>
     <th class="tg-w2dt"><br>&nbsp;&nbsp;Type of exchange<br>&nbsp;&nbsp;</th>
@@ -275,6 +276,8 @@ The cardinality  of the classes shall be as following:
   </tr>
 <caption align"bottom"="">Table 2: Cardinality of declarations</caption>
 </table>
+
+
 
 
 
@@ -747,34 +750,31 @@ This ensures that the data sheets stay interpretable over a long time, even if t
         <Definition>
           <Body><![CDATA[All exchanges can be transported over these protocols:
 
-1.	As a physical file with manual exchange via eMail, Harddrives, oder similar
-2.	As a data structure in the payload of an online exchange, eg. an API, a messaging system or similar.
+1. As a physical file with manual exchange via eMail, Harddrives, oder similar
+2. As a data structure in the payload of an online exchange, eg. an API, a messaging system or similar.
 
-This standard does not define how exactly the exchange is done. It defines the standard for the structure of the file or the payload. The file or the payload can be stored in a compressd format according to the specification. The file extension is then \\\\\\\\\\*.ifczip. The specifications for ifczip can be found here:
+This standard does not define how exactly the exchange is done. It defines the standard for the structure of the file or the payload. The file or the payload can be stored in a compressd format according to the specification. The file extension is then *.ifczip. The specifications for ifczip can be found here:
 
-•	http://www.buildingsmart-tech.org/specifications/ifc-overview/ifc-overview-summary
-•	http://www.buildingsmart-tech.org/implementation/ifc-implementation/ifc-impl-agreements/cv-2x3-154
+* http://www.buildingsmart-tech.org/specifications/ifc-overview/ifc-overview-summary
+* http://www.buildingsmart-tech.org/implementation/ifc-implementation/ifc-impl-agreements/cv-2x3-154
 
 It is explicitly allowed to embed an IFC file in Step format (.ifc) or in XML format Format (.ifcxml) in an ifczip file.
 The specification contains the following principles:
 
-1.	The ifczip file contains exactly one model file (.ifc or .ifcxml). The file extension is \\\\\\\\\\*.ifczip
-2.	According to this rule, it is allowed to embed additional other files in an ifczip file. Therefore, an ifczip file can be a container, which can transport many additional files in itself.
-3.	Such a container offers several advantages, such as
-•	transport of photo documentations
-•	transport of plant documentation
-•	transport of permits and notifications
-•	transport of operating documents, e.g. test and maintenance reports
+1. The ifczip file contains exactly one model file (.ifc or .ifcxml). The file extension is *.ifczip
+2. According to this rule, it is allowed to embed additional other files in an ifczip file. Therefore, an ifczip file can be a container, which can transport many additional files in itself.
+3. Such a container offers several advantages, such as transport of photo documentations, transport of plant documentation,  transport of permits and notifications, transport of operating documents, e.g. test and maintenance reports
 
 In the BIM context, such a transport is particularly useful if the documents have a reference to the structure.
 
 In order to be able to exchange data without consultation, each transported document should be registered in a structured, electronic table of contents. The recipient of the container can first read the table of contents and then select and remove the files.
 
 For this purpose, two things must be specified for the sender and receiver of such a container file:
-•	syntax of the table of contents
-•	specifications for the semantic identification of documents
-Since the current specification of the ifczip format provides exactly one model file in the root folder of the ifczip file, it makes sense to save the table of contents and the catalogue of document types in this model file.
-For this purpose, the IFC data model (based on IFC4) provides the entity IfcDocumentInformation. For each file transported in the container, an element of type IfcDocumentInformation is written.]]></Body>
+
+* syntax of the table of contents
+* specifications for the semantic identification of documents
+
+Since the current specification of the ifczip format provides exactly one model file in the root folder of the ifczip file, it makes sense to save the table of contents and the catalogue of document types in this model file. For this purpose, the IFC data model (based on IFC4) provides the entity IfcDocumentInformation. For each file transported in the container, an element of type IfcDocumentInformation is written.]]></Body>
         </Definition>
       </Definitions>
     </ConceptTemplate>
@@ -811,7 +811,6 @@ The following sections focusses on a definition of a file format. This file can 
 
 The file is based on IFC (Industry Foundation Classes). IFC was developed by the worldwide organization buildingSMART. IFC is standardized as EN ISO 16739.1:2018.
   
-  
 Product data contains three types of data:
 1.	Alphanumeric Information (Lists)
 2.	Information in Documents (Files)
@@ -827,6 +826,7 @@ The product data file is specified as follows:
 .tg th{font-family:Arial, sans-serif;font-size:14px;font-weight:normal;padding:2px 2px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;border-color:black;}
 .tg .tg-rykj{font-size:12px;text-align:left;vertical-align:middle}
 </style>{ .tg}
+{ .tg}
 { .tg}
 { .tg}
 { .tg}
@@ -859,34 +859,14 @@ The product data file is specified as follows:
   </tr>
 </table>
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 The IFC language contains hundreds of entities to provide a standardizes data exchange for the whole construction industry. For exchanging product data based on the specification of this paper, only some of these entities are needed. These entities are defined in this specification. The IFC specification is located here: https://technical.buildingsmart.org . All elements are well documented there. In this paper, we describe the use of the elements and attributes for the use case of transporting construction objects data templates (DT) and corresponding construction objects data (PD).
 
 The product data shall be transportable from the sender (e.g. the manufacturer) to the receiver (e.g. customer). The construction objects data templates (DT) is an empty form. The receiver can hand the empty form over to the sender, to make clear, which information shall be delivered. The sender then fills the information into the form and gives it back to the receiver.
 
 {#purpose .num}
-## Generic Process for construction objects data
+## Generic Process for construction objects data and Exchange requirements
 
-Based on the identified purposes, the format support different exchanges within the life cycle of a costruction object. The following figure describes the main stages of the construction objects, from the requirements expressed as objects in a design model to the registration as products in an AsBuilt model.
+Based on the identified purposes, the standard supports different exchanges within the life cycle of a construction object. The following figure describes the main stages of the construction objects, from the requirements expressed as objects in a design model to the registration as products in an AsBuilt model.
 
 <figure>
   <img src="../../../../figures/figure2_genericprinciplesforselection.png" width="650" alt="Generic Principles for Selection">
@@ -894,129 +874,34 @@ Based on the identified purposes, the format support different exchanges within 
   </figcaption>
 </figure>
 
-The digital information exchange of data for construction objects can be realized using following kinds of exchanges.
+The digital information exchange of data for construction objects can be realized using following kinds of exchanges:
   
-<style type="text/css">
-.tg  {border-collapse:collapse;border-spacing:0;}
-.tg td{font-family:Arial, sans-serif;font-size:14px;padding:2px 2px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;border-color:black;}
-.tg th{font-family:Arial, sans-serif;font-size:14px;font-weight:normal;padding:2px 2px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;border-color:black;}
-.tg .tg-b5ef{font-size:12px;background-color:#c0c0c0;text-align:left;vertical-align:top}
-.tg .tg-w2dt{font-size:12px;text-align:center;vertical-align:middle}
-.tg .tg-z9od{font-size:12px;text-align:left;vertical-align:top}
-.tg .tg-rykj{font-size:12px;text-align:left;vertical-align:middle}
-.tg .tg-hdjr{font-size:12px;background-color:#c0c0c0;text-align:left;vertical-align:middle}
-</style>{ .tg}
-{ .tg}
-{ .tg}
-{ .tg}
-{ .tg}
-{ .tg}
-{ .tg}
-{ .tg}
-{ .tg}
-{ .tg}
-<table class="tg">
-  <tr>
-    <th class="tg-hdjr"><br>  Exchange code<br>  </th>
-    <th class="tg-hdjr"><br>  Exchange name<br>  </th>
-    <th class="tg-b5ef"><br>  Exchange description<br>  </th>
-  </tr>
-  <tr>
-    <td class="tg-w2dt"><br>  DT<br>  </td>
-    <td class="tg-rykj"><br>  Data template<br>  </td>
-    <td class="tg-z9od"><br>  Definition of the<br>  structures of data templates for construction objects, retrieved from<br>  dictionaries<br>  </td>
-  </tr>
-  <tr>
-    <td class="tg-w2dt"><br>  RR<br>  </td>
-    <td class="tg-rykj"><br>  requirement request<br>  </td>
-    <td class="tg-z9od"><br>  Request of<br>  requirements, that are either created seperatly or are derived from design<br>  models as generic or specific objects<br>  </td>
-  </tr>
-  <tr>
-    <td class="tg-w2dt"><br>  CA<br>  </td>
-    <td class="tg-rykj"><br>  Catalogue<br>  </td>
-    <td class="tg-z9od"><br>  Information about construction<br>  objects with their configuration options, e.g. product catalogues, based on<br>  information from the manufacturer<br>  </td>
-  </tr>
-  <tr>
-    <td class="tg-w2dt"><br>  DS<br>  </td>
-    <td class="tg-rykj"><br>  Data sheet<br>  </td>
-    <td class="tg-z9od"><br>  Information about instances<br>  of construction objects that are selected for ordering, delivery and<br>  installation without any configuration options<br>  </td>
-  </tr>
-  <caption align="bottom" align="left">Table 1: Kinds of digital exchange for data descriptions of construction objects
-  </caption>
+<table class="gridtable">
+  <tbody>
+    <tr>
+      <th>Exchange code</th>
+      <th>Exchange name</th>
+      <th>Exchange description</th>
+    </tr>
+    <tr>
+      <td>DT</td>
+      <td>Data template </td>
+      <td>Definition of the structures of data templates for construction objects, retrieved from dictionaries.</td>
+    </tr>
+      <td>CCCO</td>
+      <td>Catalogue of configured construction objects</td>
+      <td>Information about configured construction type objects, e.g. product catalogues as list of construction type objects, based on information from the manufacturer</td>
+    </tr>
+    <tr>
+      <td>DS </td>
+      <td>Data sheet</td>
+      <td>Information about instances of configured construction objects that are selected for ordering, delivery and  installation without any further configuration options</td>
+    </tr>
+  </tbody>
+  <caption align="bottom" align="left">Table 1: Kinds of digital exchange for data descriptions of construction objects</caption>
 </table>
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-{#purpose .num}
-## Relation of part 1 and part 2
-
-
-The relation of this standard (Part1) the Part 2 is as following:
-
-•	The use case "Detailed description of a product (pre-design programs, technical specifications, offers)" will be covered by Part 1 and Part 2 together
-•	The NWIP shall make clear, that there is also a Part 1 and both parts are needed to support all use cases (Part 1 and Part 2)
-•	The part 2 will define the way, how a (requirements) request can be formulated with ISO 16739. These requests shall be applicable to product libraries based on Part 1.
-•	The part 2 will define a way, to create a constraint-based product library for highly configurable products to support an interactive selection process. The application of a request to a "Part1-Library" and to a "Part2-Library" shall response same products as the result.
-•	The name "Product Library" is kind of a synonym to the term "product catalogue".
-•	A "Part1-Library" can be automatically transformed to a "Part2-Library" and vice versa; so, these can be seen as different representations of the same content. This does not mean, that such a transformation (esp. from P1=>P2) includes all rules a product can offer, it would just include those rules, that can be extracted from a variant-based product-list from P1.
-•	It is up to the manufacturers to choose the way, they want to represent their products ("Part1-Library" and/or "Part2-Library"), they just shall be sure, that all requests can be applied to both types of libraries. We think, that those manufacturers, who are willing to expose all configuration rule in the design process, will probably implement P2 in the end, but the implementation of P1 could be a first step, since some manufacturers have already share product lists with us, that can easily be express in the P1-way. So, it would be good to offer transformation paths from P1 to P2.
-
-
-{#purpose .num}
-## Exchange requirements
-
-The standard contains four definitions of information exchange requirements. 
-
-Each element of the exchange requirements corresponds to an element in EN ISO 16739.1:2018. The documentation of EN ISO 16739.1:2018 (IFC 4, ADD 2, TC 1, Version 4.0.2.1) will not be repeated in this document. 
-
-The elements from ISO EN 16739.1:2018 that are applicable for the exchange requirements are defined in detail in the chapter Technical specification in the included HTML documentation.
-
-Based on a discussion by Pierre-François & Klaus in Tokyo the following picture illustrates the relation of the different file types
-
-\\\\\\\\\*\\\\\\\\\*Building file\\\\\\\\\*\\\\\\\\\*
-
-The file that stored the information about the building as a whole
-
-\\\\\\\\\*\\\\\\\\\*Catalogue file\\\\\\\\\*\\\\\\\\\*
-
-The file that stores the information about products with their configuration option.
-
-\\\\\\\\\*\\\\\\\\\*Request/Selection Application\\\\\\\\\*\\\\\\\\\*
-
-A software application that can handle the incoming requests and the selection process against a product catalogue.
-
-\\\\\\\\\*\\\\\\\\\*Inserting application\\\\\\\\\*\\\\\\\\\*
-
-A software application, that can insert a completely defined product into the building file.
-
-\\\\\\\\\*\\\\\\\\\*Selection application\\\\\\\\\*\\\\\\\\\*
-
-A software application, that can select a completely defined product out of a catalogue by user interaction and returns the completely defined product.
-
-<figure>
-  <img src="../../../../figures/figure3_relation.png" width="650" alt="Relation between the exchanges in a project">
-  <figcaption>Figure 3 : Relation between the exchanges in a project
-  </figcaption>
-</figure>]]></Body>
+The standard contains three definitions of information exchange requirements.  Each element of the exchange requirements corresponds to an element in EN ISO 16739.1:2018. The documentation of EN ISO 16739.1:2018 (IFC 4, ADD 2, TC 1, Version 4.0.2.1) will not be repeated in this document. The elements from ISO EN 16739.1:2018 that are applicable for the exchange requirements are defined in detail in the chapter Technical specification in the included HTML documentation.]]></Body>
         </Definition>
       </Definitions>
       <ExchangeRequirements>
@@ -1190,7 +1075,7 @@ The content of the data templates shall be loadable from a template based on EN 
 1.	As a physical file with manual exchange via eMail, Harddrives, oder similar
 2.	As a data structure in the payload of an online exchange, eg. an API, a messaging system or similar.
 
-This standard does not define how exactly the exchange is done. It defines the standard for the structure of the file or the payload. The file or the payload can be stored in a compressd format according to the specification. The file extension is then \\\\\\\\\\*.ifczip. The specifications for ifczip can be found here:
+This standard does not define how exactly the exchange is done. It defines the standard for the structure of the file or the payload. The file or the payload can be stored in a compressd format according to the specification. The file extension is then \\\\\\\\\\\*.ifczip. The specifications for ifczip can be found here:
 
 •	http://www.buildingsmart-tech.org/specifications/ifc-overview/ifc-overview-summary
 •	http://www.buildingsmart-tech.org/implementation/ifc-implementation/ifc-impl-agreements/cv-2x3-154
@@ -1198,7 +1083,7 @@ This standard does not define how exactly the exchange is done. It defines the s
 It is explicitly allowed to embed an IFC file in Step format (.ifc) or in XML format Format (.ifcxml) in an ifczip file.
 The specification contains the following principles:
 
-1.	The ifczip file contains exactly one model file (.ifc or .ifcxml). The file extension is \\\\\\\\\\*.ifczip
+1.	The ifczip file contains exactly one model file (.ifc or .ifcxml). The file extension is \\\\\\\\\\\*.ifczip
 2.	According to this rule, it is allowed to embed additional other files in an ifczip file. Therefore, an ifczip file can be a container, which can transport many additional files in itself.
 3.	Such a container offers several advantages, such as
 •	transport of photo documentations
