@@ -11,7 +11,7 @@
     <title>IfcComplexProperty</title>
 
     <style type="text/css">
-      body { counter-reset: index1 8 index2 6 index3 3 index4 0 index5 0; }
+      body { counter-reset: index1 8 index2 11 index3 3 index4 0 index5 0; }
     </style>
   </head>
 
@@ -20,7 +20,7 @@
 
 <script type="text/javascript">
 <!--
-    parent.index.location.replace("../../toc-8.html#8.6.3.1");
+    parent.index.location.replace("../../toc-8.html#8.11.3.1");
 //-->
 </script>
 
@@ -84,6 +84,10 @@ Set of properties that can be used within this complex property (may include oth
 <details><summary>Attribute inheritance</summary><table class="attributes">
 <tr><th>#</th><th>Attribute</th><th>Type</th><th>Cardinality</th><th>Description</th><th>C</th></tr>
 <tr><td colspan="6"><i><a href="../../ifcpropertyresource/lexical/ifcpropertyabstraction.html">IfcPropertyAbstraction</a></i></td></tr>
+<tr><td></td><td><i>HasExternalReferences</i></td><td><a href="../../ifcexternalreferenceresource/lexical/ifcexternalreferencerelationship.html">IfcExternalReferenceRelationship</a><br/>@RelatedResourceObjects</td><td>S[0:?]</td><td>Reference to an external reference, e.g. library, classification, or document information, that is associated to the property definition.
+
+
+</td><td></td></tr>
 <tr><td colspan="6"><i><a href="../../ifcpropertyresource/lexical/ifcproperty.html">IfcProperty</a></i></td></tr>
 <tr><td>1</td><td>Name</td><td><a href="../../ifcmeasureresource/lexical/ifcidentifier.html">IfcIdentifier</a></td><td></td><td>
 Name for this property. This label is the significant name string that defines the semantic meaning for the property.
@@ -93,7 +97,7 @@ Name for this property. This label is the significant name string that defines t
 <tr><td></td><td><i>PartOfPset</i></td><td><a href="../../ifckernel/lexical/ifcpropertyset.html">IfcPropertySet</a><br/>@HasProperties</td><td>S[0:?]</td><td>Reference to the <a href="../../ifckernel/lexical/ifcpropertyset.html">IfcPropertySet</a> by which the <span class="self-ref">IfcProperty</span> is referenced.
 
 
-</td><td>X</td></tr>
+</td><td></td></tr>
 <tr><td></td><td><i>PartOfComplex</i></td><td><a href="../../ifcpropertyresource/lexical/ifccomplexproperty.html">IfcComplexProperty</a><br/>@HasProperties</td><td>S[0:?]</td><td>Reference to the <a href="../../ifcpropertyresource/lexical/ifccomplexproperty.html">IfcComplexProperty</a> in which the <span class="self-ref">IfcProperty</span> is contained.
 
 

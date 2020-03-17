@@ -11,7 +11,7 @@
     <title>IfcOrganization</title>
 
     <style type="text/css">
-      body { counter-reset: index1 8 index2 1 index3 3 index4 0 index5 0; }
+      body { counter-reset: index1 8 index2 1 index3 3 index4 1 index5 0; }
     </style>
   </head>
 
@@ -20,7 +20,7 @@
 
 <script type="text/javascript">
 <!--
-    parent.index.location.replace("../../toc-8.html#8.1.3.1");
+    parent.index.location.replace("../../toc-8.html#8.1.3.2");
 //-->
 </script>
 
@@ -47,7 +47,7 @@
 <p>NOTE  The relationships between <span class="self-ref">IfcOrganization</span>'s, like between department within a company, can be expressed using the objectified relationship <i>IfcOrganizationRelationship</i>.</p>
 </blockquote>
 <blockquote class="note">
-<p>NOTE  Entity adapted from \\\\\\\\\\\\\\\*\\\\\\\\\\\\\\\*organization\\\\\\\\\\\\\\\*\\\\\\\\\\\\\\\* defined in ISO 10303-41.</p>
+<p>NOTE  Entity adapted from \\\\\\\\\\\\\\\\\<i>\\\\\\\\\\\\\\\\\<i>organization\\\\\\\\\\\\\\\\\</i>\\\\\\\\\\\\\\\\\</i> defined in ISO 10303-41.</p>
 </blockquote>
 
 
@@ -125,7 +125,7 @@ The word, or group of words, by which the organization is referred to.
 &nbsp;private string Identification;<br/>
 &nbsp;private string Name;<br/>
 &nbsp;private string Description;<br/>
-&nbsp;private <span class="self-ref">IfcStrippedOptional</span>[] Roles;<br/>
+&nbsp;private <a href="../../ifcactorresource/lexical/ifcactorrole.html">IfcActorRole</a>[] Roles;<br/>
 &nbsp;private <span class="self-ref">IfcStrippedOptional</span>[] Addresses;<br/>
 &nbsp;private <span class="self-ref">IfcStrippedOptional</span>[] IsRelatedBy;<br/>
 &nbsp;private <span class="self-ref">IfcStrippedOptional</span>[] Relates;<br/>
@@ -135,6 +135,7 @@ The word, or group of words, by which the organization is referred to.
 </section>
 <p><img src="../../../img/external.png" style="border: 0px" title="References" alt="References"/>&nbsp; References: <a href="../../ifcactorresource/lexical/ifcpersonandorganization.html">IfcPersonAndOrganization</a>
 <a href="../../ifcactorresource/lexical/ifcactorselect.html">IfcActorSelect</a>
+<a href="../../ifcexternalreferenceresource/lexical/ifcresourceobjectselect.html">IfcResourceObjectSelect</a>
 <a href="../../ifcutilityresource/lexical/ifcapplication.html">IfcApplication</a>
 </p>
 <p><a href="https://github.com/buildingSMART/ProductData/issues/new?&title=ifcorganization:%22" target="_blank" ><img src="../../../img/external.png" style="border: 0px" title="Report issue" alt="Report issue"/>&nbsp; Report an issue</a></p>

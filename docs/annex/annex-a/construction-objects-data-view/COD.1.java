@@ -13,6 +13,14 @@
 	}
 	
 
+	public class IfcComplexPropertyTemplate extends IfcPropertyTemplate
+	{
+		private string UsageName;
+		private IfcComplexPropertyTemplateTypeEnum TemplateType;
+		private IfcPropertyTemplate[] HasPropertyTemplates;
+	}
+	
+
 	public class IfcContext extends IfcObjectDefinition
 	{
 		private string ObjectType;
@@ -70,6 +78,12 @@
 	{
 		private IfcRelDeclares[] HasContext;
 		private IfcRelAssociates[] HasAssociations;
+	}
+	
+
+	public class IfcPropertySet extends IfcPropertySetDefinition
+	{
+		private IfcProperty[] HasProperties;
 	}
 	
 
@@ -133,6 +147,12 @@
 	}
 	
 
+	public class IfcRelAssociatesDocument extends IfcRelAssociates
+	{
+		private IfcDocumentSelect RelatingDocument;
+	}
+	
+
 	public class IfcRelAssociatesLibrary extends IfcRelAssociates
 	{
 		private IfcLibrarySelect RelatingLibrary;
@@ -179,6 +199,19 @@
 	}
 	
 
+	public class IfcSimplePropertyTemplate extends IfcPropertyTemplate
+	{
+		private IfcSimplePropertyTemplateTypeEnum TemplateType;
+		private string PrimaryMeasureType;
+		private string SecondaryMeasureType;
+		private IfcPropertyEnumeration Enumerators;
+		private IfcUnit PrimaryUnit;
+		private IfcUnit SecondaryUnit;
+		private string Expression;
+		private IfcStateEnum AccessState;
+	}
+	
+
 	public class IfcTypeObject extends IfcObjectDefinition
 	{
 		private string ApplicableOccurrence;
@@ -207,8 +240,45 @@
 	}
 	
 
+	public enum IfcRoleEnum
+	{
+		SUPPLIER,
+		MANUFACTURER,
+		CONTRACTOR,
+		SUBCONTRACTOR,
+		ARCHITECT,
+		STRUCTURALENGINEER,
+		COSTENGINEER,
+		CLIENT,
+		BUILDINGOWNER,
+		BUILDINGOPERATOR,
+		MECHANICALENGINEER,
+		ELECTRICALENGINEER,
+		PROJECTMANAGER,
+		FACILITIESMANAGER,
+		CIVILENGINEER,
+		COMMISSIONINGENGINEER,
+		ENGINEER,
+		OWNER,
+		CONSULTANT,
+		CONSTRUCTIONMANAGER,
+		FIELDCONSTRUCTIONMANAGER,
+		RESELLER,
+		USERDEFINED,
+	}
+	
+
 	public interface IfcActorSelect
 	{
+	}
+	
+
+	public class IfcActorRole extends IfcBase
+	{
+		private IfcRoleEnum Role;
+		private string UserDefinedRole;
+		private string Description;
+		private IfcExternalReferenceRelationship[] HasExternalReference;
 	}
 	
 
@@ -247,10 +317,132 @@
 	}
 	
 
+	public class IfcApproval extends IfcBase
+	{
+		private string Identifier;
+		private string Name;
+		private string Description;
+		private string TimeOfApproval;
+		private string Status;
+		private string Level;
+		private string Qualifier;
+		private IfcActorSelect RequestingApproval;
+		private IfcActorSelect GivingApproval;
+		private IfcExternalReferenceRelationship[] HasExternalReferences;
+		private IfcRelAssociatesApproval[] ApprovedObjects;
+		private IfcResourceApprovalRelationship[] ApprovedResources;
+		private IfcApprovalRelationship[] IsRelatedWith;
+		private IfcApprovalRelationship[] Relates;
+	}
+	
+
+	public enum IfcConstraintEnum
+	{
+		HARD,
+		SOFT,
+		ADVISORY,
+		USERDEFINED,
+		NOTDEFINED,
+	}
+	
+
+	public class IfcConstraint extends IfcBase
+	{
+		private string Name;
+		private string Description;
+		private IfcConstraintEnum ConstraintGrade;
+		private string ConstraintSource;
+		private IfcActorSelect CreatingActor;
+		private string CreationTime;
+		private string UserDefinedGrade;
+		private IfcExternalReferenceRelationship[] HasExternalReferences;
+		private IfcResourceConstraintRelationship[] PropertiesForConstraint;
+	}
+	
+
+	public class IfcAppliedValue extends IfcBase
+	{
+		private string Name;
+		private string Description;
+		private IfcAppliedValueSelect AppliedValue;
+		private IfcMeasureWithUnit UnitBasis;
+		private string ApplicableDate;
+		private string FixedUntilDate;
+		private string Category;
+		private string Condition;
+		private IfcArithmeticOperatorEnum ArithmeticOperator;
+		private IfcAppliedValue[] Components;
+		private IfcExternalReferenceRelationship[] HasExternalReference;
+	}
+	
+
+	/* IfcDate : STRING (Java does not support structures, so usage of defined types are inline for efficiency.) */
+	
+
+	/* IfcDateTime : STRING (Java does not support structures, so usage of defined types are inline for efficiency.) */
+	
+
 	/* IfcTimeStamp : INTEGER (Java does not support structures, so usage of defined types are inline for efficiency.) */
 	
 
+	public enum IfcDataOriginEnum
+	{
+		MEASURED,
+		PREDICTED,
+		SIMULATED,
+		USERDEFINED,
+		NOTDEFINED,
+	}
+	
+
+	public enum IfcTimeSeriesDataTypeEnum
+	{
+		CONTINUOUS,
+		DISCRETE,
+		DISCRETEBINARY,
+		PIECEWISEBINARY,
+		PIECEWISECONSTANT,
+		PIECEWISECONTINUOUS,
+		NOTDEFINED,
+	}
+	
+
+	public class IfcTimeSeries extends IfcBase
+	{
+		private string Name;
+		private string Description;
+		private string StartTime;
+		private string EndTime;
+		private IfcTimeSeriesDataTypeEnum TimeSeriesDataType;
+		private IfcDataOriginEnum DataOrigin;
+		private string UserDefinedDataOrigin;
+		private IfcUnit Unit;
+		private IfcExternalReferenceRelationship[] HasExternalReference;
+	}
+	
+
 	/* IfcURIReference : STRING (Java does not support structures, so usage of defined types are inline for efficiency.) */
+	
+
+	public enum IfcDocumentConfidentialityEnum
+	{
+		PUBLIC,
+		RESTRICTED,
+		CONFIDENTIAL,
+		PERSONAL,
+		USERDEFINED,
+		NOTDEFINED,
+	}
+	
+
+	public enum IfcDocumentStatusEnum
+	{
+		DRAFT,
+		FINALDRAFT,
+		FINAL,
+		REVISION,
+		NOTDEFINED,
+	}
 	
 
 	public interface IfcClassificationSelect
@@ -258,7 +450,17 @@
 	}
 	
 
+	public interface IfcDocumentSelect
+	{
+	}
+	
+
 	public interface IfcLibrarySelect
+	{
+	}
+	
+
+	public interface IfcResourceObjectSelect
 	{
 	}
 	
@@ -287,6 +489,40 @@
 	}
 	
 
+	public class IfcDocumentInformation extends IfcExternalInformation
+	{
+		private string Identification;
+		private string Name;
+		private string Description;
+		private string Location;
+		private string Purpose;
+		private string IntendedUse;
+		private string Scope;
+		private string Revision;
+		private IfcActorSelect DocumentOwner;
+		private IfcActorSelect[] Editors;
+		private string CreationTime;
+		private string LastRevisionTime;
+		private string ElectronicFormat;
+		private string ValidFrom;
+		private string ValidUntil;
+		private IfcDocumentConfidentialityEnum Confidentiality;
+		private IfcDocumentStatusEnum Status;
+		private IfcRelAssociatesDocument[] DocumentInfoForObjects;
+		private IfcDocumentReference[] HasDocumentReferences;
+		private IfcDocumentInformationRelationship[] IsPointedTo;
+		private IfcDocumentInformationRelationship[] IsPointer;
+	}
+	
+
+	public class IfcDocumentReference extends IfcExternalReference
+	{
+		private string Description;
+		private IfcDocumentInformation ReferencedDocument;
+		private IfcRelAssociatesDocument[] DocumentRefForObjects;
+	}
+	
+
 	public class IfcExternalInformation extends IfcBase
 	{
 	}
@@ -298,6 +534,13 @@
 		private string Identification;
 		private string Name;
 		private IfcExternalReferenceRelationship[] ExternalReferenceForResources;
+	}
+	
+
+	public class IfcExternalReferenceRelationship extends IfcResourceLevelRelationship
+	{
+		private IfcExternalReference RelatingReference;
+		private IfcResourceObjectSelect[] RelatedResourceObjects;
 	}
 	
 
@@ -320,6 +563,13 @@
 		private IfcIdentifier Language;
 		private IfcLibraryInformation ReferencedLibrary;
 		private IfcRelAssociatesLibrary[] LibraryRefForObjects;
+	}
+	
+
+	public class IfcResourceLevelRelationship extends IfcBase
+	{
+		private string Name;
+		private string Description;
 	}
 	
 
@@ -449,13 +699,174 @@
 	/* IfcText : STRING (Java does not support structures, so usage of defined types are inline for efficiency.) */
 	
 
+	public enum IfcDerivedUnitEnum
+	{
+		ANGULARVELOCITYUNIT,
+		AREADENSITYUNIT,
+		COMPOUNDPLANEANGLEUNIT,
+		DYNAMICVISCOSITYUNIT,
+		HEATFLUXDENSITYUNIT,
+		INTEGERCOUNTRATEUNIT,
+		ISOTHERMALMOISTURECAPACITYUNIT,
+		KINEMATICVISCOSITYUNIT,
+		LINEARVELOCITYUNIT,
+		MASSDENSITYUNIT,
+		MASSFLOWRATEUNIT,
+		MOISTUREDIFFUSIVITYUNIT,
+		MOLECULARWEIGHTUNIT,
+		SPECIFICHEATCAPACITYUNIT,
+		THERMALADMITTANCEUNIT,
+		THERMALCONDUCTANCEUNIT,
+		THERMALRESISTANCEUNIT,
+		THERMALTRANSMITTANCEUNIT,
+		VAPORPERMEABILITYUNIT,
+		VOLUMETRICFLOWRATEUNIT,
+		ROTATIONALFREQUENCYUNIT,
+		TORQUEUNIT,
+		MOMENTOFINERTIAUNIT,
+		LINEARMOMENTUNIT,
+		LINEARFORCEUNIT,
+		PLANARFORCEUNIT,
+		MODULUSOFELASTICITYUNIT,
+		SHEARMODULUSUNIT,
+		LINEARSTIFFNESSUNIT,
+		ROTATIONALSTIFFNESSUNIT,
+		MODULUSOFSUBGRADEREACTIONUNIT,
+		ACCELERATIONUNIT,
+		CURVATUREUNIT,
+		HEATINGVALUEUNIT,
+		IONCONCENTRATIONUNIT,
+		LUMINOUSINTENSITYDISTRIBUTIONUNIT,
+		MASSPERLENGTHUNIT,
+		MODULUSOFLINEARSUBGRADEREACTIONUNIT,
+		MODULUSOFROTATIONALSUBGRADEREACTIONUNIT,
+		PHUNIT,
+		ROTATIONALMASSUNIT,
+		SECTIONAREAINTEGRALUNIT,
+		SECTIONMODULUSUNIT,
+		SOUNDPOWERLEVELUNIT,
+		SOUNDPOWERUNIT,
+		SOUNDPRESSURELEVELUNIT,
+		SOUNDPRESSUREUNIT,
+		TEMPERATUREGRADIENTUNIT,
+		TEMPERATURERATEOFCHANGEUNIT,
+		THERMALEXPANSIONCOEFFICIENTUNIT,
+		WARPINGCONSTANTUNIT,
+		WARPINGMOMENTUNIT,
+		USERDEFINED,
+	}
+	
+
+	public enum IfcUnitEnum
+	{
+		ABSORBEDDOSEUNIT,
+		AMOUNTOFSUBSTANCEUNIT,
+		AREAUNIT,
+		DOSEEQUIVALENTUNIT,
+		ELECTRICCAPACITANCEUNIT,
+		ELECTRICCHARGEUNIT,
+		ELECTRICCONDUCTANCEUNIT,
+		ELECTRICCURRENTUNIT,
+		ELECTRICRESISTANCEUNIT,
+		ELECTRICVOLTAGEUNIT,
+		ENERGYUNIT,
+		FORCEUNIT,
+		FREQUENCYUNIT,
+		ILLUMINANCEUNIT,
+		INDUCTANCEUNIT,
+		LENGTHUNIT,
+		LUMINOUSFLUXUNIT,
+		LUMINOUSINTENSITYUNIT,
+		MAGNETICFLUXDENSITYUNIT,
+		MAGNETICFLUXUNIT,
+		MASSUNIT,
+		PLANEANGLEUNIT,
+		POWERUNIT,
+		PRESSUREUNIT,
+		RADIOACTIVITYUNIT,
+		SOLIDANGLEUNIT,
+		THERMODYNAMICTEMPERATUREUNIT,
+		TIMEUNIT,
+		VOLUMEUNIT,
+		USERDEFINED,
+	}
+	
+
 	public interface IfcSimpleValue
+	{
+	}
+	
+
+	public interface IfcUnit
 	{
 	}
 	
 
 	public interface IfcValue
 	{
+	}
+	
+
+	public class IfcContextDependentUnit extends IfcNamedUnit
+	{
+		private string Name;
+		private IfcExternalReferenceRelationship[] HasExternalReference;
+	}
+	
+
+	public class IfcConversionBasedUnit extends IfcNamedUnit
+	{
+		private string Name;
+		private IfcMeasureWithUnit ConversionFactor;
+		private IfcExternalReferenceRelationship[] HasExternalReference;
+	}
+	
+
+	public class IfcDerivedUnit extends IfcBase
+	{
+		private IfcDerivedUnitElement[] Elements;
+		private IfcDerivedUnitEnum UnitType;
+		private string UserDefinedType;
+		private IfcDimensionalExponents Dimensions;
+	}
+	
+
+	public class IfcDerivedUnitElement extends IfcBase
+	{
+		private IfcNamedUnit Unit;
+		private INTEGER Exponent;
+	}
+	
+
+	public class IfcDimensionalExponents extends IfcBase
+	{
+		private INTEGER LengthExponent;
+		private INTEGER MassExponent;
+		private INTEGER TimeExponent;
+		private INTEGER ElectricCurrentExponent;
+		private INTEGER ThermodynamicTemperatureExponent;
+		private INTEGER AmountOfSubstanceExponent;
+		private INTEGER LuminousIntensityExponent;
+	}
+	
+
+	public class IfcMeasureWithUnit extends IfcBase
+	{
+		private IfcValue ValueComponent;
+		private IfcUnit UnitComponent;
+	}
+	
+
+	public class IfcMonetaryUnit extends IfcBase
+	{
+		private string Currency;
+	}
+	
+
+	public class IfcNamedUnit extends IfcBase
+	{
+		private IfcDimensionalExponents Dimensions;
+		private IfcUnitEnum UnitType;
 	}
 	
 
@@ -472,6 +883,13 @@
 		private string ProfileName;
 		private IfcExternalReferenceRelationship[] HasExternalReference;
 		private IfcProfileProperties[] HasProperties;
+	}
+	
+
+	public class IfcComplexProperty extends IfcProperty
+	{
+		private string UsageName;
+		private IfcProperty[] HasProperties;
 	}
 	
 
@@ -499,6 +917,20 @@
 	public class IfcPropertyAbstraction extends IfcBase
 	{
 		private IfcExternalReferenceRelationship[] HasExternalReferences;
+	}
+	
+
+	public class IfcSimpleProperty extends IfcProperty
+	{
+	}
+	
+
+	public class IfcPhysicalQuantity extends IfcBase
+	{
+		private string Name;
+		private string Description;
+		private IfcExternalReferenceRelationship[] HasExternalReferences;
+		private IfcPhysicalComplexQuantity[] PartOfComplex;
 	}
 	
 

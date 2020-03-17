@@ -11,7 +11,7 @@
     <title>IfcMaterialLayerSet</title>
 
     <style type="text/css">
-      body { counter-reset: index1 8 index2 5 index3 3 index4 5 index5 0; }
+      body { counter-reset: index1 8 index2 8 index3 3 index4 5 index5 0; }
     </style>
   </head>
 
@@ -20,7 +20,7 @@
 
 <script type="text/javascript">
 <!--
-    parent.index.location.replace("../../toc-8.html#8.5.3.6");
+    parent.index.location.replace("../../toc-8.html#8.8.3.6");
 //-->
 </script>
 
@@ -44,8 +44,8 @@
 <h5 class="num">Semantic definitions at the entity</h5>
 <details open="open"><summary>Entity definition</summary><p>The <span class="self-ref">IfcMaterialLayerSet</span> is a designation by which materials of an element constructed of a number of material layers is known and through which the relative positioning of individual layers can be expressed.</p>
 <p>The Material Layer Set Base (MlsBase) describes the imaginary axis along which the material layers are positioned.</p>
-<p>\\\\\\\\\\\\\\\* In case of assigning the <span class="self-ref">IfcMaterialLayerSet</span> directly to an element or element type, the individual layers are stacked according to their position within the list of <i>MaterialLayers</i> without providing information on how to spatially relate the material layer information to the shape representation of the element or element type.
-\\\\\\\\\\\\\\\* In case of assigning the <span class="self-ref">IfcMaterialLayerSet</span> through an <i>IfcMaterialLayerSetUsage</i> to an element, the MlsBase is positioned along the reference axis or reference plane of the element. An offset from the reference axis or plane to MlsBase is supported by <i>IfcMaterialLayerSetUsage</i> which combines layers and an offset. Offsets from element edges are supported by the subtype <i>IfcMaterialLayerWithOffsets</i>. The positive <i>LayerSetDirection</i> (MlsDirection) describes the direction by which the individual material layers are stacked. The <a href="../../ifcmaterialresource/lexical/ifcmateriallayer.html">IfcMaterialLayer</a>'s are stacked with no gap. Gaps within a material layer set are expressed as layers by themselves.</p>
+<p>\\\\\\\\\\\\\\\\\* In case of assigning the <span class="self-ref">IfcMaterialLayerSet</span> directly to an element or element type, the individual layers are stacked according to their position within the list of <i>MaterialLayers</i> without providing information on how to spatially relate the material layer information to the shape representation of the element or element type.
+\\\\\\\\\\\\\\\\\* In case of assigning the <span class="self-ref">IfcMaterialLayerSet</span> through an <i>IfcMaterialLayerSetUsage</i> to an element, the MlsBase is positioned along the reference axis or reference plane of the element. An offset from the reference axis or plane to MlsBase is supported by <i>IfcMaterialLayerSetUsage</i> which combines layers and an offset. Offsets from element edges are supported by the subtype <i>IfcMaterialLayerWithOffsets</i>. The positive <i>LayerSetDirection</i> (MlsDirection) describes the direction by which the individual material layers are stacked. The <a href="../../ifcmaterialresource/lexical/ifcmateriallayer.html">IfcMaterialLayer</a>'s are stacked with no gap. Gaps within a material layer set are expressed as layers by themselves.</p>
 <blockquote class="example">
 <p>EXAMPLE A cavity brick wall would be modeled as <span class="self-ref">IfcMaterialLayerSet</span> consisting of three <a href="../../ifcmaterialresource/lexical/ifcmateriallayer.html">IfcMaterialLayer</a>'s: brick, air cavity and brick. The air gap is identified by the <i>IsVentilated</i> flag at <a href="../../ifcmaterialresource/lexical/ifcmateriallayer.html">IfcMaterialLayer</a>.</p>
 </blockquote>
@@ -53,8 +53,8 @@
 
 <p class="use-head">
 Attribute use definition</p>
-<p>As shown in Figure 15, each <span class="self-ref">IfcMaterialLayerSet</span> implicitly defines a material layer set base line (MlsBase), to which the start of the first <a href="../../ifcmaterialresource/lexical/ifcmateriallayer.html">IfcMaterialLayer</a> is aligned. The total thickness of a layer set is calculated from the individual layer thicknesses, the first layer starting from the MlsBase and following layers being placed on top of the previous (no gaps or overlaps).</p>
-<p><table><tr><td style="width: 600px"><img src="../../../figures/ifcmateriallayerset-01.png" alt="&quot;material layer set&quot;" title="Figure 15 &mdash; Material layer set"></td></tr><tr><td><p class="figure">Figure 15 &mdash; Material layer set</p></td></tr></table></p>
+<p>As shown in Figure 25, each <span class="self-ref">IfcMaterialLayerSet</span> implicitly defines a material layer set base line (MlsBase), to which the start of the first <a href="../../ifcmaterialresource/lexical/ifcmateriallayer.html">IfcMaterialLayer</a> is aligned. The total thickness of a layer set is calculated from the individual layer thicknesses, the first layer starting from the MlsBase and following layers being placed on top of the previous (no gaps or overlaps).</p>
+<p><table><tr><td style="width: 600px"><img src="../../../figures/ifcmateriallayerset-01.png" alt="&quot;material layer set&quot;" title="Figure 25 &mdash; Material layer set"></td></tr><tr><td><p class="figure">Figure 25 &mdash; Material layer set</p></td></tr></table></p>
 </details>
 <details open="open"><summary>Attribute definitions</summary><table class="attributes">
 <tr><th>#</th><th>Attribute</th><th>Type</th><th>Cardinality</th><th>Description</th>
@@ -86,6 +86,10 @@ Identification of the <a href="../../ifcmaterialresource/lexical/ifcmateriallaye
 
 
 </td><td>X</td></tr>
+<tr><td></td><td><i>HasExternalReferences</i></td><td><a href="../../ifcexternalreferenceresource/lexical/ifcexternalreferencerelationship.html">IfcExternalReferenceRelationship</a><br/>@RelatedResourceObjects</td><td>S[0:?]</td><td>Reference to external references, e.g. library, classification, or document information, that are associated to the material.
+
+
+</td><td></td></tr>
 <tr><td></td><td><i>HasProperties</i></td><td><a href="../../ifcmaterialresource/lexical/ifcmaterialproperties.html">IfcMaterialProperties</a><br/>@Material</td><td>S[0:?]</td><td>Material properties assigned to instances of subtypes of <span class="self-ref">IfcMaterialDefinition</span>.
 
 

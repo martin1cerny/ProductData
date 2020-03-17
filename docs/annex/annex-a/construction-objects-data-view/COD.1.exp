@@ -19,13 +19,19 @@ for incidental consequential damages in connection with the furnishing, performa
 of the material. The information contained in this document is subject to change without notice.
 
 Issue date:
-10 March 2020
+17 March 2020
 
 *)
 
 SCHEMA IFC4;
 
 TYPE IfcStrippedOptional = BOOLEAN;
+END_TYPE;
+
+TYPE IfcDate = STRING;
+END_TYPE;
+
+TYPE IfcDateTime = STRING;
 END_TYPE;
 
 TYPE IfcGloballyUniqueId = STRING(22) FIXED;
@@ -54,9 +60,167 @@ END_TYPE;
 TYPE IfcURIReference = STRING;
 END_TYPE;
 
+TYPE IfcConstraintEnum = ENUMERATION OF
+	(HARD
+	,SOFT
+	,ADVISORY
+	,USERDEFINED
+	,NOTDEFINED);
+END_TYPE;
+
+TYPE IfcDataOriginEnum = ENUMERATION OF
+	(MEASURED
+	,PREDICTED
+	,SIMULATED
+	,USERDEFINED
+	,NOTDEFINED);
+END_TYPE;
+
+TYPE IfcDerivedUnitEnum = ENUMERATION OF
+	(ANGULARVELOCITYUNIT
+	,AREADENSITYUNIT
+	,COMPOUNDPLANEANGLEUNIT
+	,DYNAMICVISCOSITYUNIT
+	,HEATFLUXDENSITYUNIT
+	,INTEGERCOUNTRATEUNIT
+	,ISOTHERMALMOISTURECAPACITYUNIT
+	,KINEMATICVISCOSITYUNIT
+	,LINEARVELOCITYUNIT
+	,MASSDENSITYUNIT
+	,MASSFLOWRATEUNIT
+	,MOISTUREDIFFUSIVITYUNIT
+	,MOLECULARWEIGHTUNIT
+	,SPECIFICHEATCAPACITYUNIT
+	,THERMALADMITTANCEUNIT
+	,THERMALCONDUCTANCEUNIT
+	,THERMALRESISTANCEUNIT
+	,THERMALTRANSMITTANCEUNIT
+	,VAPORPERMEABILITYUNIT
+	,VOLUMETRICFLOWRATEUNIT
+	,ROTATIONALFREQUENCYUNIT
+	,TORQUEUNIT
+	,MOMENTOFINERTIAUNIT
+	,LINEARMOMENTUNIT
+	,LINEARFORCEUNIT
+	,PLANARFORCEUNIT
+	,MODULUSOFELASTICITYUNIT
+	,SHEARMODULUSUNIT
+	,LINEARSTIFFNESSUNIT
+	,ROTATIONALSTIFFNESSUNIT
+	,MODULUSOFSUBGRADEREACTIONUNIT
+	,ACCELERATIONUNIT
+	,CURVATUREUNIT
+	,HEATINGVALUEUNIT
+	,IONCONCENTRATIONUNIT
+	,LUMINOUSINTENSITYDISTRIBUTIONUNIT
+	,MASSPERLENGTHUNIT
+	,MODULUSOFLINEARSUBGRADEREACTIONUNIT
+	,MODULUSOFROTATIONALSUBGRADEREACTIONUNIT
+	,PHUNIT
+	,ROTATIONALMASSUNIT
+	,SECTIONAREAINTEGRALUNIT
+	,SECTIONMODULUSUNIT
+	,SOUNDPOWERLEVELUNIT
+	,SOUNDPOWERUNIT
+	,SOUNDPRESSURELEVELUNIT
+	,SOUNDPRESSUREUNIT
+	,TEMPERATUREGRADIENTUNIT
+	,TEMPERATURERATEOFCHANGEUNIT
+	,THERMALEXPANSIONCOEFFICIENTUNIT
+	,WARPINGCONSTANTUNIT
+	,WARPINGMOMENTUNIT
+	,USERDEFINED);
+END_TYPE;
+
+TYPE IfcDocumentConfidentialityEnum = ENUMERATION OF
+	(PUBLIC
+	,RESTRICTED
+	,CONFIDENTIAL
+	,PERSONAL
+	,USERDEFINED
+	,NOTDEFINED);
+END_TYPE;
+
+TYPE IfcDocumentStatusEnum = ENUMERATION OF
+	(DRAFT
+	,FINALDRAFT
+	,FINAL
+	,REVISION
+	,NOTDEFINED);
+END_TYPE;
+
 TYPE IfcProfileTypeEnum = ENUMERATION OF
 	(CURVE
 	,AREA);
+END_TYPE;
+
+TYPE IfcRoleEnum = ENUMERATION OF
+	(SUPPLIER
+	,MANUFACTURER
+	,CONTRACTOR
+	,SUBCONTRACTOR
+	,ARCHITECT
+	,STRUCTURALENGINEER
+	,COSTENGINEER
+	,CLIENT
+	,BUILDINGOWNER
+	,BUILDINGOPERATOR
+	,MECHANICALENGINEER
+	,ELECTRICALENGINEER
+	,PROJECTMANAGER
+	,FACILITIESMANAGER
+	,CIVILENGINEER
+	,COMMISSIONINGENGINEER
+	,ENGINEER
+	,OWNER
+	,CONSULTANT
+	,CONSTRUCTIONMANAGER
+	,FIELDCONSTRUCTIONMANAGER
+	,RESELLER
+	,USERDEFINED);
+END_TYPE;
+
+TYPE IfcTimeSeriesDataTypeEnum = ENUMERATION OF
+	(CONTINUOUS
+	,DISCRETE
+	,DISCRETEBINARY
+	,PIECEWISEBINARY
+	,PIECEWISECONSTANT
+	,PIECEWISECONTINUOUS
+	,NOTDEFINED);
+END_TYPE;
+
+TYPE IfcUnitEnum = ENUMERATION OF
+	(ABSORBEDDOSEUNIT
+	,AMOUNTOFSUBSTANCEUNIT
+	,AREAUNIT
+	,DOSEEQUIVALENTUNIT
+	,ELECTRICCAPACITANCEUNIT
+	,ELECTRICCHARGEUNIT
+	,ELECTRICCONDUCTANCEUNIT
+	,ELECTRICCURRENTUNIT
+	,ELECTRICRESISTANCEUNIT
+	,ELECTRICVOLTAGEUNIT
+	,ENERGYUNIT
+	,FORCEUNIT
+	,FREQUENCYUNIT
+	,ILLUMINANCEUNIT
+	,INDUCTANCEUNIT
+	,LENGTHUNIT
+	,LUMINOUSFLUXUNIT
+	,LUMINOUSINTENSITYUNIT
+	,MAGNETICFLUXDENSITYUNIT
+	,MAGNETICFLUXUNIT
+	,MASSUNIT
+	,PLANEANGLEUNIT
+	,POWERUNIT
+	,PRESSUREUNIT
+	,RADIOACTIVITYUNIT
+	,SOLIDANGLEUNIT
+	,THERMODYNAMICTEMPERATUREUNIT
+	,TIMEUNIT
+	,VOLUMEUNIT
+	,USERDEFINED);
 END_TYPE;
 
 TYPE IfcActorSelect = SELECT
@@ -73,6 +237,11 @@ END_TYPE;
 TYPE IfcDefinitionSelect = SELECT
 	(IfcObjectDefinition
 	,IfcPropertyDefinition);
+END_TYPE;
+
+TYPE IfcDocumentSelect = SELECT
+	(IfcDocumentInformation
+	,IfcDocumentReference);
 END_TYPE;
 
 TYPE IfcLibrarySelect = SELECT
@@ -95,16 +264,55 @@ TYPE IfcPropertySetDefinitionSelect = SELECT
 	(IfcPropertySetDefinition);
 END_TYPE;
 
+TYPE IfcResourceObjectSelect = SELECT
+	(IfcActorRole
+	,IfcAppliedValue
+	,IfcApproval
+	,IfcConstraint
+	,IfcContextDependentUnit
+	,IfcConversionBasedUnit
+	,IfcExternalInformation
+	,IfcExternalReference
+	,IfcMaterialDefinition
+	,IfcOrganization
+	,IfcPerson
+	,IfcPersonAndOrganization
+	,IfcPhysicalQuantity
+	,IfcProfileDef
+	,IfcPropertyAbstraction
+	,IfcTimeSeries);
+END_TYPE;
+
 TYPE IfcSimpleValue = SELECT
-	(IfcIdentifier
+	(IfcDate
+	,IfcDateTime
+	,IfcIdentifier
 	,IfcLabel
 	,IfcText
 	,IfcTimeStamp);
 END_TYPE;
 
+TYPE IfcUnit = SELECT
+	(IfcDerivedUnit
+	,IfcMonetaryUnit
+	,IfcNamedUnit);
+END_TYPE;
+
 TYPE IfcValue = SELECT
 	(IfcSimpleValue);
 END_TYPE;
+
+ENTITY IfcActorRole;
+	Role : IfcRoleEnum;
+	UserDefinedRole : OPTIONAL IfcStrippedOptional;
+	Description : OPTIONAL IfcStrippedOptional;
+ INVERSE
+	HasExternalReference : SET [0:?] OF IfcExternalReferenceRelationship FOR RelatedResourceObjects;
+ WHERE
+	WR1 : (Role <> IfcRoleEnum.USERDEFINED) OR
+((Role = IfcRoleEnum.USERDEFINED) AND
+  EXISTS(SELF.UserDefinedRole));
+END_ENTITY;
 
 ENTITY IfcApplication;
 	ApplicationDeveloper : IfcOrganization;
@@ -114,6 +322,37 @@ ENTITY IfcApplication;
  UNIQUE
 	UR1 : ApplicationIdentifier;
 	UR2 : ApplicationFullName, Version;
+END_ENTITY;
+
+ENTITY IfcAppliedValue;
+	Name : OPTIONAL IfcStrippedOptional;
+	Description : OPTIONAL IfcStrippedOptional;
+	AppliedValue : OPTIONAL IfcStrippedOptional;
+	UnitBasis : OPTIONAL IfcStrippedOptional;
+	ApplicableDate : OPTIONAL IfcStrippedOptional;
+	FixedUntilDate : OPTIONAL IfcStrippedOptional;
+	Category : OPTIONAL IfcStrippedOptional;
+	Condition : OPTIONAL IfcStrippedOptional;
+	ArithmeticOperator : OPTIONAL IfcStrippedOptional;
+	Components : OPTIONAL LIST [1:?] OF IfcStrippedOptional;
+ INVERSE
+	HasExternalReference : SET [0:?] OF IfcExternalReferenceRelationship FOR RelatedResourceObjects;
+END_ENTITY;
+
+ENTITY IfcApproval;
+	Identifier : OPTIONAL IfcStrippedOptional;
+	Name : OPTIONAL IfcStrippedOptional;
+	Description : OPTIONAL IfcStrippedOptional;
+	TimeOfApproval : OPTIONAL IfcStrippedOptional;
+	Status : OPTIONAL IfcStrippedOptional;
+	Level : OPTIONAL IfcStrippedOptional;
+	Qualifier : OPTIONAL IfcStrippedOptional;
+	RequestingApproval : OPTIONAL IfcStrippedOptional;
+	GivingApproval : OPTIONAL IfcStrippedOptional;
+ INVERSE
+	HasExternalReferences : SET [0:?] OF IfcExternalReferenceRelationship FOR RelatedResourceObjects;
+ WHERE
+	HasIdentifierOrName : EXISTS (Identifier) OR EXISTS (Name);
 END_ENTITY;
 
 ENTITY IfcClassification
@@ -140,6 +379,41 @@ ENTITY IfcClassificationReference
 	HasReferences : SET [0:?] OF IfcClassificationReference FOR ReferencedSource;
 END_ENTITY;
 
+ENTITY IfcComplexProperty
+ SUBTYPE OF (IfcProperty);
+	UsageName : IfcIdentifier;
+	HasProperties : SET [1:?] OF IfcProperty;
+ WHERE
+	WR21 : SIZEOF(QUERY(temp <* HasProperties | SELF :=: temp)) = 0;
+	WR22 : IfcUniquePropertyName(HasProperties);
+END_ENTITY;
+
+ENTITY IfcComplexPropertyTemplate
+ SUBTYPE OF (IfcPropertyTemplate);
+	UsageName : OPTIONAL IfcStrippedOptional;
+	TemplateType : OPTIONAL IfcStrippedOptional;
+	HasPropertyTemplates : OPTIONAL SET [1:?] OF IfcPropertyTemplate;
+ WHERE
+	UniquePropertyNames : IfcUniquePropertyTemplateNames(HasPropertyTemplates);
+	NoSelfReference : SIZEOF(QUERY(temp <* HasPropertyTemplates | SELF :=: temp)) = 0;
+END_ENTITY;
+
+ENTITY IfcConstraint
+ ABSTRACT;
+	Name : IfcLabel;
+	Description : OPTIONAL IfcStrippedOptional;
+	ConstraintGrade : IfcConstraintEnum;
+	ConstraintSource : OPTIONAL IfcStrippedOptional;
+	CreatingActor : OPTIONAL IfcStrippedOptional;
+	CreationTime : OPTIONAL IfcStrippedOptional;
+	UserDefinedGrade : OPTIONAL IfcStrippedOptional;
+ INVERSE
+	HasExternalReferences : SET [0:?] OF IfcExternalReferenceRelationship FOR RelatedResourceObjects;
+ WHERE
+	WR11 : (ConstraintGrade <> IfcConstraintEnum.USERDEFINED) OR
+((ConstraintGrade = IfcConstraintEnum.USERDEFINED) AND EXISTS(SELF\IfcConstraint.UserDefinedGrade));
+END_ENTITY;
+
 ENTITY IfcContext
  ABSTRACT SUPERTYPE OF (ONEOF
     (IfcProjectLibrary))
@@ -154,6 +428,83 @@ ENTITY IfcContext
 	Declares : SET [0:?] OF IfcRelDeclares FOR RelatingContext;
 END_ENTITY;
 
+ENTITY IfcContextDependentUnit
+ SUBTYPE OF (IfcNamedUnit);
+	Name : IfcLabel;
+ INVERSE
+	HasExternalReference : SET [0:?] OF IfcExternalReferenceRelationship FOR RelatedResourceObjects;
+END_ENTITY;
+
+ENTITY IfcConversionBasedUnit
+ SUBTYPE OF (IfcNamedUnit);
+	Name : IfcLabel;
+	ConversionFactor : IfcMeasureWithUnit;
+ INVERSE
+	HasExternalReference : SET [0:?] OF IfcExternalReferenceRelationship FOR RelatedResourceObjects;
+END_ENTITY;
+
+ENTITY IfcDerivedUnit;
+	Elements : SET [1:?] OF IfcDerivedUnitElement;
+	UnitType : IfcDerivedUnitEnum;
+	UserDefinedType : OPTIONAL IfcStrippedOptional;
+ DERIVE
+	Dimensions : IfcDimensionalExponents := IfcDeriveDimensionalExponents(Elements);
+ WHERE
+	WR1 : (SIZEOF (Elements) > 1) OR ((SIZEOF (Elements) = 1) AND (Elements[1].Exponent <> 1 ));
+	WR2 : (UnitType <> IfcDerivedUnitEnum.USERDEFINED) OR
+((UnitType = IfcDerivedUnitEnum.USERDEFINED) AND 
+ (EXISTS(SELF.UserDefinedType)));
+END_ENTITY;
+
+ENTITY IfcDerivedUnitElement;
+	Unit : IfcNamedUnit;
+	Exponent : INTEGER;
+END_ENTITY;
+
+ENTITY IfcDimensionalExponents;
+	LengthExponent : INTEGER;
+	MassExponent : INTEGER;
+	TimeExponent : INTEGER;
+	ElectricCurrentExponent : INTEGER;
+	ThermodynamicTemperatureExponent : INTEGER;
+	AmountOfSubstanceExponent : INTEGER;
+	LuminousIntensityExponent : INTEGER;
+END_ENTITY;
+
+ENTITY IfcDocumentInformation
+ SUBTYPE OF (IfcExternalInformation);
+	Identification : IfcIdentifier;
+	Name : IfcLabel;
+	Description : OPTIONAL IfcText;
+	Location : OPTIONAL IfcURIReference;
+	Purpose : OPTIONAL IfcText;
+	IntendedUse : OPTIONAL IfcText;
+	Scope : OPTIONAL IfcText;
+	Revision : OPTIONAL IfcLabel;
+	DocumentOwner : OPTIONAL IfcActorSelect;
+	Editors : OPTIONAL SET [1:?] OF IfcActorSelect;
+	CreationTime : OPTIONAL IfcDateTime;
+	LastRevisionTime : OPTIONAL IfcDateTime;
+	ElectronicFormat : OPTIONAL IfcIdentifier;
+	ValidFrom : OPTIONAL IfcDate;
+	ValidUntil : OPTIONAL IfcDate;
+	Confidentiality : OPTIONAL IfcDocumentConfidentialityEnum;
+	Status : OPTIONAL IfcDocumentStatusEnum;
+ INVERSE
+	DocumentInfoForObjects : SET [0:?] OF IfcRelAssociatesDocument FOR RelatingDocument;
+	HasDocumentReferences : SET [0:?] OF IfcDocumentReference FOR ReferencedDocument;
+END_ENTITY;
+
+ENTITY IfcDocumentReference
+ SUBTYPE OF (IfcExternalReference);
+	Description : OPTIONAL IfcStrippedOptional;
+	ReferencedDocument : OPTIONAL IfcDocumentInformation;
+ INVERSE
+	DocumentRefForObjects : SET [0:?] OF IfcRelAssociatesDocument FOR RelatingDocument;
+ WHERE
+	WR1 : EXISTS(Name) XOR EXISTS(ReferencedDocument);
+END_ENTITY;
+
 ENTITY IfcExtendedProperties
  ABSTRACT SUPERTYPE OF (ONEOF
     (IfcMaterialProperties))
@@ -166,18 +517,28 @@ END_ENTITY;
 ENTITY IfcExternalInformation
  ABSTRACT SUPERTYPE OF (ONEOF
     (IfcClassification
+    ,IfcDocumentInformation
     ,IfcLibraryInformation));
 END_ENTITY;
 
 ENTITY IfcExternalReference
  ABSTRACT SUPERTYPE OF (ONEOF
     (IfcClassificationReference
+    ,IfcDocumentReference
     ,IfcLibraryReference));
 	Location : OPTIONAL IfcStrippedOptional;
 	Identification : OPTIONAL IfcStrippedOptional;
 	Name : OPTIONAL IfcStrippedOptional;
+ INVERSE
+	ExternalReferenceForResources : SET [0:?] OF IfcExternalReferenceRelationship FOR RelatingReference;
  WHERE
 	WR1 : EXISTS(Identification) OR EXISTS(Location) OR EXISTS(Name);
+END_ENTITY;
+
+ENTITY IfcExternalReferenceRelationship
+ SUBTYPE OF (IfcResourceLevelRelationship);
+	RelatingReference : IfcExternalReference;
+	RelatedResourceObjects : SET [1:?] OF IfcResourceObjectSelect;
 END_ENTITY;
 
 ENTITY IfcGroup
@@ -246,6 +607,7 @@ ENTITY IfcMaterialDefinition
     ,IfcMaterialProfileSet));
  INVERSE
 	AssociatedTo : SET [0:?] OF IfcRelAssociatesMaterial FOR RelatingMaterial;
+	HasExternalReferences : SET [0:?] OF IfcExternalReferenceRelationship FOR RelatedResourceObjects;
 	HasProperties : SET [0:?] OF IfcMaterialProperties FOR Material;
 END_ENTITY;
 
@@ -308,6 +670,25 @@ ENTITY IfcMaterialUsageDefinition
  ABSTRACT;
  INVERSE
 	AssociatedTo : SET [1:?] OF IfcRelAssociatesMaterial FOR RelatingMaterial;
+END_ENTITY;
+
+ENTITY IfcMeasureWithUnit;
+	ValueComponent : IfcValue;
+	UnitComponent : IfcUnit;
+END_ENTITY;
+
+ENTITY IfcMonetaryUnit;
+	Currency : IfcLabel;
+END_ENTITY;
+
+ENTITY IfcNamedUnit
+ ABSTRACT SUPERTYPE OF (ONEOF
+    (IfcContextDependentUnit
+    ,IfcConversionBasedUnit));
+	Dimensions : IfcDimensionalExponents;
+	UnitType : IfcUnitEnum;
+ WHERE
+	WR1 : IfcCorrectDimensions (SELF.UnitType, SELF.Dimensions);
 END_ENTITY;
 
 ENTITY IfcObject
@@ -388,6 +769,14 @@ ENTITY IfcPersonAndOrganization;
 	Roles : OPTIONAL LIST [1:?] OF IfcStrippedOptional;
 END_ENTITY;
 
+ENTITY IfcPhysicalQuantity
+ ABSTRACT;
+	Name : IfcLabel;
+	Description : OPTIONAL IfcStrippedOptional;
+ INVERSE
+	HasExternalReferences : SET [0:?] OF IfcExternalReferenceRelationship FOR RelatedResourceObjects;
+END_ENTITY;
+
 ENTITY IfcProduct
  ABSTRACT
  SUBTYPE OF (IfcObject);
@@ -405,6 +794,8 @@ END_ENTITY;
 ENTITY IfcProfileDef;
 	ProfileType : IfcProfileTypeEnum;
 	ProfileName : OPTIONAL IfcStrippedOptional;
+ INVERSE
+	HasExternalReference : SET [0:?] OF IfcExternalReferenceRelationship FOR RelatedResourceObjects;
 END_ENTITY;
 
 ENTITY IfcProjectLibrary
@@ -412,16 +803,23 @@ ENTITY IfcProjectLibrary
 END_ENTITY;
 
 ENTITY IfcProperty
- ABSTRACT
+ ABSTRACT SUPERTYPE OF (ONEOF
+    (IfcComplexProperty
+    ,IfcSimpleProperty))
  SUBTYPE OF (IfcPropertyAbstraction);
 	Name : IfcIdentifier;
 	Description : OPTIONAL IfcStrippedOptional;
+ INVERSE
+	PartOfPset : SET [0:?] OF IfcPropertySet FOR HasProperties;
+	PartOfComplex : SET [0:?] OF IfcComplexProperty FOR HasProperties;
 END_ENTITY;
 
 ENTITY IfcPropertyAbstraction
  ABSTRACT SUPERTYPE OF (ONEOF
     (IfcExtendedProperties
     ,IfcProperty));
+ INVERSE
+	HasExternalReferences : SET [0:?] OF IfcExternalReferenceRelationship FOR RelatedResourceObjects;
 END_ENTITY;
 
 ENTITY IfcPropertyDefinition
@@ -434,8 +832,17 @@ ENTITY IfcPropertyDefinition
 	HasAssociations : SET [0:?] OF IfcRelAssociates FOR RelatedObjects;
 END_ENTITY;
 
+ENTITY IfcPropertySet
+ SUBTYPE OF (IfcPropertySetDefinition);
+	HasProperties : SET [1:?] OF IfcProperty;
+ WHERE
+	ExistsName : EXISTS(SELF\IfcRoot.Name);
+	UniquePropertyNames : IfcUniquePropertyName(HasProperties);
+END_ENTITY;
+
 ENTITY IfcPropertySetDefinition
- ABSTRACT
+ ABSTRACT SUPERTYPE OF (ONEOF
+    (IfcPropertySet))
  SUBTYPE OF (IfcPropertyDefinition);
  INVERSE
 	DefinesType : SET [0:?] OF IfcTypeObject FOR HasPropertySets;
@@ -453,9 +860,12 @@ ENTITY IfcPropertySetTemplate
 END_ENTITY;
 
 ENTITY IfcPropertyTemplate
- ABSTRACT
+ ABSTRACT SUPERTYPE OF (ONEOF
+    (IfcComplexPropertyTemplate
+    ,IfcSimplePropertyTemplate))
  SUBTYPE OF (IfcPropertyTemplateDefinition);
  INVERSE
+	PartOfComplexTemplate : SET [0:?] OF IfcComplexPropertyTemplate FOR HasPropertyTemplates;
 	PartOfPsetTemplate : SET [0:?] OF IfcPropertySetTemplate FOR HasPropertyTemplates;
 END_ENTITY;
 
@@ -494,6 +904,7 @@ END_ENTITY;
 ENTITY IfcRelAssociates
  ABSTRACT SUPERTYPE OF (ONEOF
     (IfcRelAssociatesClassification
+    ,IfcRelAssociatesDocument
     ,IfcRelAssociatesLibrary
     ,IfcRelAssociatesMaterial))
  SUBTYPE OF (IfcRelationship);
@@ -503,6 +914,11 @@ END_ENTITY;
 ENTITY IfcRelAssociatesClassification
  SUBTYPE OF (IfcRelAssociates);
 	RelatingClassification : IfcClassificationSelect;
+END_ENTITY;
+
+ENTITY IfcRelAssociatesDocument
+ SUBTYPE OF (IfcRelAssociates);
+	RelatingDocument : IfcDocumentSelect;
 END_ENTITY;
 
 ENTITY IfcRelAssociatesLibrary
@@ -567,6 +983,13 @@ ENTITY IfcRelationship
  SUBTYPE OF (IfcRoot);
 END_ENTITY;
 
+ENTITY IfcResourceLevelRelationship
+ ABSTRACT SUPERTYPE OF (ONEOF
+    (IfcExternalReferenceRelationship));
+	Name : OPTIONAL IfcStrippedOptional;
+	Description : OPTIONAL IfcStrippedOptional;
+END_ENTITY;
+
 ENTITY IfcRoot
  ABSTRACT SUPERTYPE OF (ONEOF
     (IfcObjectDefinition
@@ -580,8 +1003,39 @@ ENTITY IfcRoot
 	UR1 : GlobalId;
 END_ENTITY;
 
+ENTITY IfcSimpleProperty
+ ABSTRACT
+ SUBTYPE OF (IfcProperty);
+END_ENTITY;
+
+ENTITY IfcSimplePropertyTemplate
+ SUBTYPE OF (IfcPropertyTemplate);
+	TemplateType : OPTIONAL IfcStrippedOptional;
+	PrimaryMeasureType : OPTIONAL IfcStrippedOptional;
+	SecondaryMeasureType : OPTIONAL IfcStrippedOptional;
+	Enumerators : OPTIONAL IfcStrippedOptional;
+	PrimaryUnit : OPTIONAL IfcStrippedOptional;
+	SecondaryUnit : OPTIONAL IfcStrippedOptional;
+	Expression : OPTIONAL IfcStrippedOptional;
+	AccessState : OPTIONAL IfcStrippedOptional;
+END_ENTITY;
+
 ENTITY IfcSystem
  SUBTYPE OF (IfcGroup);
+END_ENTITY;
+
+ENTITY IfcTimeSeries
+ ABSTRACT;
+	Name : IfcLabel;
+	Description : OPTIONAL IfcStrippedOptional;
+	StartTime : IfcDateTime;
+	EndTime : IfcDateTime;
+	TimeSeriesDataType : IfcTimeSeriesDataTypeEnum;
+	DataOrigin : IfcDataOriginEnum;
+	UserDefinedDataOrigin : OPTIONAL IfcStrippedOptional;
+	Unit : OPTIONAL IfcStrippedOptional;
+ INVERSE
+	HasExternalReference : SET [1:?] OF IfcExternalReferenceRelationship FOR RelatedResourceObjects;
 END_ENTITY;
 
 ENTITY IfcTypeObject
@@ -609,6 +1063,161 @@ ENTITY IfcTypeProduct
   NOT('IFC4.IFCPRODUCT' IN TYPEOF(temp)))
 ) = 0);
 END_ENTITY;
+
+FUNCTION IfcCorrectDimensions
+(m   : IfcUnitEnum; Dim : IfcDimensionalExponents) : LOGICAL;  
+CASE m OF
+  LENGTHUNIT : IF
+    Dim = (IfcDimensionalExponents (1, 0, 0, 0, 0, 0, 0))
+      THEN RETURN(TRUE);
+      ELSE RETURN(FALSE);
+    END_IF;
+  MASSUNIT : IF
+    Dim = (IfcDimensionalExponents (0, 1, 0, 0, 0, 0, 0))
+      THEN RETURN(TRUE);
+      ELSE RETURN(FALSE);
+    END_IF;
+  TIMEUNIT : IF
+    Dim = (IfcDimensionalExponents (0, 0, 1, 0, 0, 0, 0))
+      THEN RETURN(TRUE);
+      ELSE RETURN(FALSE);
+    END_IF;
+  ELECTRICCURRENTUNIT : IF
+    Dim = (IfcDimensionalExponents (0, 0, 0, 1, 0, 0, 0))
+      THEN RETURN(TRUE);
+      ELSE RETURN(FALSE);
+    END_IF;
+  THERMODYNAMICTEMPERATUREUNIT : IF
+    Dim = (IfcDimensionalExponents (0, 0, 0, 0, 1, 0, 0))
+      THEN RETURN(TRUE);
+      ELSE RETURN(FALSE);
+    END_IF;
+  AMOUNTOFSUBSTANCEUNIT : IF
+    Dim = (IfcDimensionalExponents (0, 0, 0, 0, 0, 1, 0))
+      THEN RETURN(TRUE);
+      ELSE RETURN(FALSE);
+    END_IF;
+  LUMINOUSINTENSITYUNIT : IF
+    Dim = (IfcDimensionalExponents (0, 0, 0, 0, 0, 0, 1))
+      THEN RETURN(TRUE);
+      ELSE RETURN(FALSE);
+    END_IF;
+  PLANEANGLEUNIT : IF
+    Dim = (IfcDimensionalExponents (0, 0, 0, 0, 0, 0, 0))
+      THEN RETURN(TRUE);
+      ELSE RETURN(FALSE);
+    END_IF;
+  SOLIDANGLEUNIT : IF
+    Dim = (IfcDimensionalExponents (0, 0, 0, 0, 0, 0, 0))
+      THEN RETURN(TRUE);
+      ELSE RETURN(FALSE);
+    END_IF;
+  AREAUNIT : IF
+    Dim = (IfcDimensionalExponents (2, 0, 0, 0, 0, 0, 0))
+      THEN RETURN(TRUE);
+      ELSE RETURN(FALSE);
+    END_IF;
+  VOLUMEUNIT : IF
+    Dim = (IfcDimensionalExponents (3, 0, 0, 0, 0, 0, 0))
+      THEN RETURN(TRUE);
+      ELSE RETURN(FALSE);
+    END_IF;
+
+  ABSORBEDDOSEUNIT : IF
+    Dim = (IfcDimensionalExponents (2, 0, -2, 0, 0, 0, 0))
+      THEN RETURN(TRUE);
+      ELSE RETURN(FALSE);
+    END_IF;
+  RADIOACTIVITYUNIT : IF
+    Dim = (IfcDimensionalExponents (0, 0, -1, 0, 0, 0, 0))
+      THEN RETURN(TRUE);
+      ELSE RETURN(FALSE);
+    END_IF;
+  ELECTRICCAPACITANCEUNIT : IF
+    Dim = (IfcDimensionalExponents (-2, -1, 4, 2, 0, 0, 0))
+      THEN RETURN(TRUE);
+      ELSE RETURN(FALSE);
+    END_IF;
+  DOSEEQUIVALENTUNIT : IF
+    Dim = (IfcDimensionalExponents (2, 0, -2, 0, 0, 0, 0))
+      THEN RETURN(TRUE);
+      ELSE RETURN(FALSE);
+    END_IF;
+  ELECTRICCHARGEUNIT : IF
+    Dim = (IfcDimensionalExponents (0, 0, 1, 1, 0, 0, 0))
+      THEN RETURN(TRUE);
+      ELSE RETURN(FALSE);
+    END_IF;
+  ELECTRICCONDUCTANCEUNIT : IF
+    Dim = (IfcDimensionalExponents (-2, -1, 3, 2, 0, 0, 0))
+      THEN RETURN(TRUE);
+      ELSE RETURN(FALSE);
+    END_IF;
+  ELECTRICVOLTAGEUNIT : IF
+    Dim = (IfcDimensionalExponents (2, 1, -3, -1, 0, 0, 0))
+      THEN RETURN(TRUE);
+      ELSE RETURN(FALSE);
+    END_IF;
+  ELECTRICRESISTANCEUNIT : IF
+    Dim = (IfcDimensionalExponents (2, 1, -3, -2, 0, 0, 0))
+      THEN RETURN(TRUE);
+      ELSE RETURN(FALSE);
+    END_IF;
+  ENERGYUNIT : IF
+    Dim = (IfcDimensionalExponents (2, 1, -2, 0, 0, 0, 0))
+      THEN RETURN(TRUE);
+      ELSE RETURN(FALSE);
+    END_IF;
+  FORCEUNIT : IF
+    Dim = (IfcDimensionalExponents (1, 1, -2, 0, 0, 0, 0))
+      THEN RETURN(TRUE);
+      ELSE RETURN(FALSE);
+    END_IF;
+  FREQUENCYUNIT : IF
+    Dim = (IfcDimensionalExponents (0, 0, -1, 0, 0, 0, 0))
+      THEN RETURN(TRUE);
+      ELSE RETURN(FALSE);
+    END_IF;
+  INDUCTANCEUNIT : IF
+    Dim = (IfcDimensionalExponents (2, 1, -2, -2, 0, 0, 0))
+      THEN RETURN(TRUE);
+      ELSE RETURN(FALSE);
+    END_IF;
+  ILLUMINANCEUNIT : IF
+    Dim = (IfcDimensionalExponents (-2, 0, 0, 0, 0, 0, 1))
+      THEN RETURN(TRUE);
+      ELSE RETURN(FALSE);
+    END_IF;
+  LUMINOUSFLUXUNIT : IF
+    Dim = (IfcDimensionalExponents (0, 0, 0, 0, 0, 0, 1))
+      THEN RETURN(TRUE);
+      ELSE RETURN(FALSE);
+    END_IF;
+  MAGNETICFLUXUNIT : IF
+    Dim = (IfcDimensionalExponents (2, 1, -2, -1, 0, 0, 0))
+      THEN RETURN(TRUE);
+      ELSE RETURN(FALSE);
+    END_IF;
+  MAGNETICFLUXDENSITYUNIT : IF
+    Dim = (IfcDimensionalExponents (0, 1, -2, -1, 0, 0, 0))
+      THEN RETURN(TRUE);
+      ELSE RETURN(FALSE);
+    END_IF;
+  POWERUNIT : IF
+    Dim = (IfcDimensionalExponents (2, 1, -3, 0, 0, 0, 0))
+      THEN RETURN(TRUE);
+      ELSE RETURN(FALSE);
+    END_IF;
+  PRESSUREUNIT : IF
+    Dim = (IfcDimensionalExponents (-1, 1, -2, 0, 0, 0, 0))
+      THEN RETURN(TRUE);
+      ELSE RETURN(FALSE);
+    END_IF;
+
+  OTHERWISE :
+    RETURN (UNKNOWN);
+END_CASE;
+END_FUNCTION;
 
 FUNCTION IfcCorrectObjectAssignment
 (Constraint: IfcObjectTypeEnum; Objects : SET[1:?] OF IfcObjectDefinition)
@@ -696,6 +1305,21 @@ END_REPEAT;
 
 Result := IfcUniquePropertySetNames(Properties);
 RETURN (Result);
+END_FUNCTION;
+
+FUNCTION IfcUniquePropertyName
+(Properties : SET [1:?] OF IfcProperty)
+ :LOGICAL;
+
+ LOCAL
+   Names : SET OF IfcIdentifier := [];
+ END_LOCAL;
+
+ REPEAT i:=1 TO HIINDEX(Properties);
+   Names := Names + Properties[i].Name;
+ END_REPEAT;
+
+ RETURN (SIZEOF(Names) = SIZEOF(Properties));
 END_FUNCTION;
 
 FUNCTION IfcUniquePropertySetNames

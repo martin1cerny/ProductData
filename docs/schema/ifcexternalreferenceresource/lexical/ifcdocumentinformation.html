@@ -11,7 +11,7 @@
     <title>IfcDocumentInformation</title>
 
     <style type="text/css">
-      body { counter-reset: index1 8 index2 3 index3 3 index4 2 index5 0; }
+      body { counter-reset: index1 8 index2 6 index3 3 index4 2 index5 0; }
     </style>
   </head>
 
@@ -20,7 +20,7 @@
 
 <script type="text/javascript">
 <!--
-    parent.index.location.replace("../../toc-8.html#8.3.3.3");
+    parent.index.location.replace("../../toc-8.html#8.6.3.3");
 //-->
 </script>
 
@@ -64,42 +64,80 @@ Identifier that uniquely identifies a document.
 <tr><td>2</td><td>Name</td><td><a href="../../ifcmeasureresource/lexical/ifclabel.html">IfcLabel</a></td><td></td><td>
 File name or document name assigned by owner.
 </td><td>X</td></tr>
-<tr><td>3</td><td>Description</td><td><span class="self-ref">-</span></td><td></td><td>
-<i>This attribute is out of scope for this model view definition and shall not be set.</i></td><td></td></tr>
-<tr><td>4</td><td>Location</td><td><span class="self-ref">-</span></td><td></td><td>
-<i>This attribute is out of scope for this model view definition and shall not be set.</i></td><td></td></tr>
-<tr><td>5</td><td>Purpose</td><td><span class="self-ref">-</span></td><td></td><td>
-<i>This attribute is out of scope for this model view definition and shall not be set.</i></td><td></td></tr>
-<tr><td>6</td><td>IntendedUse</td><td><span class="self-ref">-</span></td><td></td><td>
-<i>This attribute is out of scope for this model view definition and shall not be set.</i></td><td></td></tr>
-<tr><td>7</td><td>Scope</td><td><span class="self-ref">-</span></td><td></td><td>
-<i>This attribute is out of scope for this model view definition and shall not be set.</i></td><td></td></tr>
-<tr><td>8</td><td>Revision</td><td><span class="self-ref">-</span></td><td></td><td>
-<i>This attribute is out of scope for this model view definition and shall not be set.</i></td><td></td></tr>
-<tr><td>9</td><td>DocumentOwner</td><td><span class="self-ref">-</span></td><td></td><td>
-<i>This attribute is out of scope for this model view definition and shall not be set.</i></td><td></td></tr>
-<tr><td>10</td><td>Editors</td><td><span class="self-ref">-</span></td><td></td><td>
-<i>This attribute is out of scope for this model view definition and shall not be set.</i></td><td></td></tr>
-<tr><td>11</td><td>CreationTime</td><td><span class="self-ref">-</span></td><td></td><td>
-<i>This attribute is out of scope for this model view definition and shall not be set.</i></td><td></td></tr>
-<tr><td>12</td><td>LastRevisionTime</td><td><span class="self-ref">-</span></td><td></td><td>
-<i>This attribute is out of scope for this model view definition and shall not be set.</i></td><td></td></tr>
-<tr><td>13</td><td>ElectronicFormat</td><td><span class="self-ref">-</span></td><td></td><td>
-<i>This attribute is out of scope for this model view definition and shall not be set.</i></td><td></td></tr>
-<tr><td>14</td><td>ValidFrom</td><td><span class="self-ref">-</span></td><td></td><td>
-<i>This attribute is out of scope for this model view definition and shall not be set.</i></td><td></td></tr>
-<tr><td>15</td><td>ValidUntil</td><td><span class="self-ref">-</span></td><td></td><td>
-<i>This attribute is out of scope for this model view definition and shall not be set.</i></td><td></td></tr>
-<tr><td>16</td><td>Confidentiality</td><td><span class="self-ref">-</span></td><td></td><td>
-<i>This attribute is out of scope for this model view definition and shall not be set.</i></td><td></td></tr>
-<tr><td>17</td><td>Status</td><td><span class="self-ref">-</span></td><td></td><td>
-<i>This attribute is out of scope for this model view definition and shall not be set.</i></td><td></td></tr>
+<tr><td>3</td><td>Description</td><td><a href="../../ifcmeasureresource/lexical/ifctext.html">IfcText</a></td><td>? </td><td>
+Description of document and its content.
+</td><td>X</td></tr>
+<tr><td>4</td><td>Location</td><td><a href="../../ifcexternalreferenceresource/lexical/ifcurireference.html">IfcURIReference</a></td><td>? </td><td>
+Resource identifier or locator, provided as URI, URN or URL, of the document information for online references.
+
+
+</td><td>X</td></tr>
+<tr><td>5</td><td>Purpose</td><td><a href="../../ifcmeasureresource/lexical/ifctext.html">IfcText</a></td><td>? </td><td>
+Purpose for this document.
+</td><td>X</td></tr>
+<tr><td>6</td><td>IntendedUse</td><td><a href="../../ifcmeasureresource/lexical/ifctext.html">IfcText</a></td><td>? </td><td>
+Intended use for this document.
+</td><td>X</td></tr>
+<tr><td>7</td><td>Scope</td><td><a href="../../ifcmeasureresource/lexical/ifctext.html">IfcText</a></td><td>? </td><td>
+Scope for this document.
+</td><td>X</td></tr>
+<tr><td>8</td><td>Revision</td><td><a href="../../ifcmeasureresource/lexical/ifclabel.html">IfcLabel</a></td><td>? </td><td>
+Document revision designation.
+</td><td>X</td></tr>
+<tr><td>9</td><td>DocumentOwner</td><td><a href="../../ifcactorresource/lexical/ifcactorselect.html">IfcActorSelect</a></td><td>? </td><td>
+Information about the person and/or organization acknowledged as the 'owner' of this document. In some contexts, the document owner determines who has access to or editing right to the document.
+</td><td>X</td></tr>
+<tr><td>10</td><td>Editors</td><td><a href="../../ifcactorresource/lexical/ifcactorselect.html">IfcActorSelect</a></td><td>? S[1:?]</td><td>
+The persons and/or organizations who have created this document or contributed to it.
+</td><td>X</td></tr>
+<tr><td>11</td><td>CreationTime</td><td><a href="../../ifcdatetimeresource/lexical/ifcdatetime.html">IfcDateTime</a></td><td>? </td><td>
+Date and time stamp when the document was originally created.
+
+
+</td><td>X</td></tr>
+<tr><td>12</td><td>LastRevisionTime</td><td><a href="../../ifcdatetimeresource/lexical/ifcdatetime.html">IfcDateTime</a></td><td>? </td><td>
+Date and time stamp when this document version was created.
+
+
+</td><td>X</td></tr>
+<tr><td>13</td><td>ElectronicFormat</td><td><a href="../../ifcmeasureresource/lexical/ifcidentifier.html">IfcIdentifier</a></td><td>? </td><td>
+Describes the media type used in various internet protocols, also referred to as &quot;Content-type&quot;, or &quot;MIME-type (Multipurpose Internet Mail Extension), of the document being referenced. It is composed of (at least) two parts, a type and a subtype.
+<blockquote class="note">
+NOTE  The iana (Internet Assigned Numbers Authority) published the media types.
+</blockquote>
+<blockquote class="example">
+EXAMPLE  'image/png' denotes an image type of png (Portable Network Graphics) subtype, 'application/pdf' denotes an application specific type of pdf (Portable Document Format) subtype
+</blockquote>
+
+</td><td>X</td></tr>
+<tr><td>14</td><td>ValidFrom</td><td><a href="../../ifcdatetimeresource/lexical/ifcdate.html">IfcDate</a></td><td>? </td><td>
+Date when the document becomes valid.
+
+
+</td><td>X</td></tr>
+<tr><td>15</td><td>ValidUntil</td><td><a href="../../ifcdatetimeresource/lexical/ifcdate.html">IfcDate</a></td><td>? </td><td>
+Date until which the document remains valid.
+
+
+</td><td>X</td></tr>
+<tr><td>16</td><td>Confidentiality</td><td><a href="../../ifcexternalreferenceresource/lexical/ifcdocumentconfidentialityenum.html">IfcDocumentConfidentialityEnum</a></td><td>? </td><td>
+The level of confidentiality of the document.
+</td><td>X</td></tr>
+<tr><td>17</td><td>Status</td><td><a href="../../ifcexternalreferenceresource/lexical/ifcdocumentstatusenum.html">IfcDocumentStatusEnum</a></td><td>? </td><td>
+The current status of the document. Examples of status values that might be used for a document information status include:
+<ul>
+<li>DRAFT</li>
+<li>FINAL DRAFT</li>
+<li>FINAL</li>
+<li>REVISION</li>
+</ul>
+</td><td>X</td></tr>
 <tr><td></td><td><i>DocumentInfoForObjects</i></td><td><a href="../../ifckernel/lexical/ifcrelassociatesdocument.html">IfcRelAssociatesDocument</a><br/>@RelatingDocument</td><td>S[0:?]</td><td>The document information with which objects are associated.
 
 
-</td><td></td></tr>
+</td><td>X</td></tr>
 <tr><td></td><td><i>HasDocumentReferences</i></td><td><a href="../../ifcexternalreferenceresource/lexical/ifcdocumentreference.html">IfcDocumentReference</a><br/>@ReferencedDocument</td><td>S[0:?]</td><td>The document references to which the document applies
-</td><td></td></tr>
+</td><td>X</td></tr>
 </table>
 </details>
 </section>
@@ -122,42 +160,80 @@ Identifier that uniquely identifies a document.
 <tr><td>2</td><td>Name</td><td><a href="../../ifcmeasureresource/lexical/ifclabel.html">IfcLabel</a></td><td></td><td>
 File name or document name assigned by owner.
 </td><td>X</td></tr>
-<tr><td>3</td><td>Description</td><td><span class="self-ref">-</span></td><td></td><td>
-<i>This attribute is out of scope for this model view definition and shall not be set.</i></td><td></td></tr>
-<tr><td>4</td><td>Location</td><td><span class="self-ref">-</span></td><td></td><td>
-<i>This attribute is out of scope for this model view definition and shall not be set.</i></td><td></td></tr>
-<tr><td>5</td><td>Purpose</td><td><span class="self-ref">-</span></td><td></td><td>
-<i>This attribute is out of scope for this model view definition and shall not be set.</i></td><td></td></tr>
-<tr><td>6</td><td>IntendedUse</td><td><span class="self-ref">-</span></td><td></td><td>
-<i>This attribute is out of scope for this model view definition and shall not be set.</i></td><td></td></tr>
-<tr><td>7</td><td>Scope</td><td><span class="self-ref">-</span></td><td></td><td>
-<i>This attribute is out of scope for this model view definition and shall not be set.</i></td><td></td></tr>
-<tr><td>8</td><td>Revision</td><td><span class="self-ref">-</span></td><td></td><td>
-<i>This attribute is out of scope for this model view definition and shall not be set.</i></td><td></td></tr>
-<tr><td>9</td><td>DocumentOwner</td><td><span class="self-ref">-</span></td><td></td><td>
-<i>This attribute is out of scope for this model view definition and shall not be set.</i></td><td></td></tr>
-<tr><td>10</td><td>Editors</td><td><span class="self-ref">-</span></td><td></td><td>
-<i>This attribute is out of scope for this model view definition and shall not be set.</i></td><td></td></tr>
-<tr><td>11</td><td>CreationTime</td><td><span class="self-ref">-</span></td><td></td><td>
-<i>This attribute is out of scope for this model view definition and shall not be set.</i></td><td></td></tr>
-<tr><td>12</td><td>LastRevisionTime</td><td><span class="self-ref">-</span></td><td></td><td>
-<i>This attribute is out of scope for this model view definition and shall not be set.</i></td><td></td></tr>
-<tr><td>13</td><td>ElectronicFormat</td><td><span class="self-ref">-</span></td><td></td><td>
-<i>This attribute is out of scope for this model view definition and shall not be set.</i></td><td></td></tr>
-<tr><td>14</td><td>ValidFrom</td><td><span class="self-ref">-</span></td><td></td><td>
-<i>This attribute is out of scope for this model view definition and shall not be set.</i></td><td></td></tr>
-<tr><td>15</td><td>ValidUntil</td><td><span class="self-ref">-</span></td><td></td><td>
-<i>This attribute is out of scope for this model view definition and shall not be set.</i></td><td></td></tr>
-<tr><td>16</td><td>Confidentiality</td><td><span class="self-ref">-</span></td><td></td><td>
-<i>This attribute is out of scope for this model view definition and shall not be set.</i></td><td></td></tr>
-<tr><td>17</td><td>Status</td><td><span class="self-ref">-</span></td><td></td><td>
-<i>This attribute is out of scope for this model view definition and shall not be set.</i></td><td></td></tr>
+<tr><td>3</td><td>Description</td><td><a href="../../ifcmeasureresource/lexical/ifctext.html">IfcText</a></td><td>? </td><td>
+Description of document and its content.
+</td><td>X</td></tr>
+<tr><td>4</td><td>Location</td><td><a href="../../ifcexternalreferenceresource/lexical/ifcurireference.html">IfcURIReference</a></td><td>? </td><td>
+Resource identifier or locator, provided as URI, URN or URL, of the document information for online references.
+
+
+</td><td>X</td></tr>
+<tr><td>5</td><td>Purpose</td><td><a href="../../ifcmeasureresource/lexical/ifctext.html">IfcText</a></td><td>? </td><td>
+Purpose for this document.
+</td><td>X</td></tr>
+<tr><td>6</td><td>IntendedUse</td><td><a href="../../ifcmeasureresource/lexical/ifctext.html">IfcText</a></td><td>? </td><td>
+Intended use for this document.
+</td><td>X</td></tr>
+<tr><td>7</td><td>Scope</td><td><a href="../../ifcmeasureresource/lexical/ifctext.html">IfcText</a></td><td>? </td><td>
+Scope for this document.
+</td><td>X</td></tr>
+<tr><td>8</td><td>Revision</td><td><a href="../../ifcmeasureresource/lexical/ifclabel.html">IfcLabel</a></td><td>? </td><td>
+Document revision designation.
+</td><td>X</td></tr>
+<tr><td>9</td><td>DocumentOwner</td><td><a href="../../ifcactorresource/lexical/ifcactorselect.html">IfcActorSelect</a></td><td>? </td><td>
+Information about the person and/or organization acknowledged as the 'owner' of this document. In some contexts, the document owner determines who has access to or editing right to the document.
+</td><td>X</td></tr>
+<tr><td>10</td><td>Editors</td><td><a href="../../ifcactorresource/lexical/ifcactorselect.html">IfcActorSelect</a></td><td>? S[1:?]</td><td>
+The persons and/or organizations who have created this document or contributed to it.
+</td><td>X</td></tr>
+<tr><td>11</td><td>CreationTime</td><td><a href="../../ifcdatetimeresource/lexical/ifcdatetime.html">IfcDateTime</a></td><td>? </td><td>
+Date and time stamp when the document was originally created.
+
+
+</td><td>X</td></tr>
+<tr><td>12</td><td>LastRevisionTime</td><td><a href="../../ifcdatetimeresource/lexical/ifcdatetime.html">IfcDateTime</a></td><td>? </td><td>
+Date and time stamp when this document version was created.
+
+
+</td><td>X</td></tr>
+<tr><td>13</td><td>ElectronicFormat</td><td><a href="../../ifcmeasureresource/lexical/ifcidentifier.html">IfcIdentifier</a></td><td>? </td><td>
+Describes the media type used in various internet protocols, also referred to as &quot;Content-type&quot;, or &quot;MIME-type (Multipurpose Internet Mail Extension), of the document being referenced. It is composed of (at least) two parts, a type and a subtype.
+<blockquote class="note">
+NOTE  The iana (Internet Assigned Numbers Authority) published the media types.
+</blockquote>
+<blockquote class="example">
+EXAMPLE  'image/png' denotes an image type of png (Portable Network Graphics) subtype, 'application/pdf' denotes an application specific type of pdf (Portable Document Format) subtype
+</blockquote>
+
+</td><td>X</td></tr>
+<tr><td>14</td><td>ValidFrom</td><td><a href="../../ifcdatetimeresource/lexical/ifcdate.html">IfcDate</a></td><td>? </td><td>
+Date when the document becomes valid.
+
+
+</td><td>X</td></tr>
+<tr><td>15</td><td>ValidUntil</td><td><a href="../../ifcdatetimeresource/lexical/ifcdate.html">IfcDate</a></td><td>? </td><td>
+Date until which the document remains valid.
+
+
+</td><td>X</td></tr>
+<tr><td>16</td><td>Confidentiality</td><td><a href="../../ifcexternalreferenceresource/lexical/ifcdocumentconfidentialityenum.html">IfcDocumentConfidentialityEnum</a></td><td>? </td><td>
+The level of confidentiality of the document.
+</td><td>X</td></tr>
+<tr><td>17</td><td>Status</td><td><a href="../../ifcexternalreferenceresource/lexical/ifcdocumentstatusenum.html">IfcDocumentStatusEnum</a></td><td>? </td><td>
+The current status of the document. Examples of status values that might be used for a document information status include:
+<ul>
+<li>DRAFT</li>
+<li>FINAL DRAFT</li>
+<li>FINAL</li>
+<li>REVISION</li>
+</ul>
+</td><td>X</td></tr>
 <tr><td></td><td><i>DocumentInfoForObjects</i></td><td><a href="../../ifckernel/lexical/ifcrelassociatesdocument.html">IfcRelAssociatesDocument</a><br/>@RelatingDocument</td><td>S[0:?]</td><td>The document information with which objects are associated.
 
 
-</td><td></td></tr>
+</td><td>X</td></tr>
 <tr><td></td><td><i>HasDocumentReferences</i></td><td><a href="../../ifcexternalreferenceresource/lexical/ifcdocumentreference.html">IfcDocumentReference</a><br/>@ReferencedDocument</td><td>S[0:?]</td><td>The document references to which the document applies
-</td><td></td></tr>
+</td><td>X</td></tr>
 </table>
 </details>
 </section>
@@ -167,8 +243,36 @@ File name or document name assigned by owner.
 &nbsp;&lt;xs:complexType name=&quot;<a href="../../ifcexternalreferenceresource/lexical/ifcdocumentinformation.html">IfcDocumentInformation</a>&quot;&gt;<br/>
 &nbsp;&nbsp;&lt;xs:complexContent&gt;<br/>
 &nbsp;&nbsp;&nbsp;&lt;xs:extension base=&quot;ifc:<a href="../../ifcexternalreferenceresource/lexical/ifcexternalinformation.html">IfcExternalInformation</a>&quot;&gt;<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&lt;xs:sequence&gt;<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xs:element name=&quot;DocumentOwner&quot; nillable=&quot;true&quot; minOccurs=&quot;0&quot;&gt;<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xs:complexType&gt;<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xs:group ref=&quot;ifc:<a href="../../ifcactorresource/lexical/ifcactorselect.html">IfcActorSelect</a>&quot;/&gt;<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/xs:complexType&gt;<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/xs:element&gt;<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xs:element name=&quot;Editors&quot; nillable=&quot;true&quot; minOccurs=&quot;0&quot;&gt;<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xs:complexType&gt;<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xs:group ref=&quot;ifc:<a href="../../ifcactorresource/lexical/ifcactorselect.html">IfcActorSelect</a>&quot; maxOccurs=&quot;unbounded&quot;/&gt;<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xs:attribute ref=&quot;ifc:itemType&quot; fixed=&quot;ifc:<a href="../../ifcactorresource/lexical/ifcactorselect.html">IfcActorSelect</a>&quot;/&gt;<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xs:attribute ref=&quot;ifc:cType&quot; fixed=&quot;set&quot;/&gt;<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xs:attribute ref=&quot;ifc:arraySize&quot; use=&quot;optional&quot;/&gt;<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/xs:complexType&gt;<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/xs:element&gt;<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&lt;/xs:sequence&gt;<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;&lt;xs:attribute name=&quot;Identification&quot; type=&quot;ifc:<a href="../../ifcmeasureresource/lexical/ifcidentifier.html">IfcIdentifier</a>&quot; use=&quot;optional&quot;/&gt;<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;&lt;xs:attribute name=&quot;Name&quot; type=&quot;ifc:<a href="../../ifcmeasureresource/lexical/ifclabel.html">IfcLabel</a>&quot; use=&quot;optional&quot;/&gt;<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&lt;xs:attribute name=&quot;Description&quot; type=&quot;ifc:<a href="../../ifcmeasureresource/lexical/ifctext.html">IfcText</a>&quot; use=&quot;optional&quot;/&gt;<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&lt;xs:attribute name=&quot;Location&quot; type=&quot;ifc:<a href="../../ifcexternalreferenceresource/lexical/ifcurireference.html">IfcURIReference</a>&quot; use=&quot;optional&quot;/&gt;<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&lt;xs:attribute name=&quot;Purpose&quot; type=&quot;ifc:<a href="../../ifcmeasureresource/lexical/ifctext.html">IfcText</a>&quot; use=&quot;optional&quot;/&gt;<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&lt;xs:attribute name=&quot;IntendedUse&quot; type=&quot;ifc:<a href="../../ifcmeasureresource/lexical/ifctext.html">IfcText</a>&quot; use=&quot;optional&quot;/&gt;<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&lt;xs:attribute name=&quot;Scope&quot; type=&quot;ifc:<a href="../../ifcmeasureresource/lexical/ifctext.html">IfcText</a>&quot; use=&quot;optional&quot;/&gt;<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&lt;xs:attribute name=&quot;Revision&quot; type=&quot;ifc:<a href="../../ifcmeasureresource/lexical/ifclabel.html">IfcLabel</a>&quot; use=&quot;optional&quot;/&gt;<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&lt;xs:attribute name=&quot;CreationTime&quot; type=&quot;ifc:<a href="../../ifcdatetimeresource/lexical/ifcdatetime.html">IfcDateTime</a>&quot; use=&quot;optional&quot;/&gt;<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&lt;xs:attribute name=&quot;LastRevisionTime&quot; type=&quot;ifc:<a href="../../ifcdatetimeresource/lexical/ifcdatetime.html">IfcDateTime</a>&quot; use=&quot;optional&quot;/&gt;<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&lt;xs:attribute name=&quot;ElectronicFormat&quot; type=&quot;ifc:<a href="../../ifcmeasureresource/lexical/ifcidentifier.html">IfcIdentifier</a>&quot; use=&quot;optional&quot;/&gt;<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&lt;xs:attribute name=&quot;ValidFrom&quot; type=&quot;ifc:<a href="../../ifcdatetimeresource/lexical/ifcdate.html">IfcDate</a>&quot; use=&quot;optional&quot;/&gt;<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&lt;xs:attribute name=&quot;ValidUntil&quot; type=&quot;ifc:<a href="../../ifcdatetimeresource/lexical/ifcdate.html">IfcDate</a>&quot; use=&quot;optional&quot;/&gt;<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&lt;xs:attribute name=&quot;Confidentiality&quot; type=&quot;ifc:<a href="../../ifcexternalreferenceresource/lexical/ifcdocumentconfidentialityenum.html">IfcDocumentConfidentialityEnum</a>&quot; use=&quot;optional&quot;/&gt;<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&lt;xs:attribute name=&quot;Status&quot; type=&quot;ifc:<a href="../../ifcexternalreferenceresource/lexical/ifcdocumentstatusenum.html">IfcDocumentStatusEnum</a>&quot; use=&quot;optional&quot;/&gt;<br/>
 &nbsp;&nbsp;&nbsp;&lt;/xs:extension&gt;<br/>
 &nbsp;&nbsp;&lt;/xs:complexContent&gt;<br/>
 &nbsp;&lt;/xs:complexType&gt;<br/>
@@ -178,26 +282,26 @@ File name or document name assigned by owner.
 &nbsp;<span class="keyword">SUBTYPE OF</span> (<a href="../../ifcexternalreferenceresource/lexical/ifcexternalinformation.html">IfcExternalInformation</a>)<b>;</b><br/>
 &nbsp;&nbsp;Identification : <a href="../../ifcmeasureresource/lexical/ifcidentifier.html">IfcIdentifier</a>;<br/>
 &nbsp;&nbsp;Name : <a href="../../ifcmeasureresource/lexical/ifclabel.html">IfcLabel</a>;<br/>
-&nbsp;&nbsp;Description : <span class="keyword">OPTIONAL</span> <span class="self-ref">IfcStrippedOptional</span>;<br/>
-&nbsp;&nbsp;Location : <span class="keyword">OPTIONAL</span> <span class="self-ref">IfcStrippedOptional</span>;<br/>
-&nbsp;&nbsp;Purpose : <span class="keyword">OPTIONAL</span> <span class="self-ref">IfcStrippedOptional</span>;<br/>
-&nbsp;&nbsp;IntendedUse : <span class="keyword">OPTIONAL</span> <span class="self-ref">IfcStrippedOptional</span>;<br/>
-&nbsp;&nbsp;Scope : <span class="keyword">OPTIONAL</span> <span class="self-ref">IfcStrippedOptional</span>;<br/>
-&nbsp;&nbsp;Revision : <span class="keyword">OPTIONAL</span> <span class="self-ref">IfcStrippedOptional</span>;<br/>
-&nbsp;&nbsp;DocumentOwner : <span class="keyword">OPTIONAL</span> <span class="self-ref">IfcStrippedOptional</span>;<br/>
-&nbsp;&nbsp;Editors : <span class="keyword">OPTIONAL</span> <span class="keyword">SET</span> [1:?] <span class="keyword">OF</span> <span class="self-ref">IfcStrippedOptional</span>;<br/>
-&nbsp;&nbsp;CreationTime : <span class="keyword">OPTIONAL</span> <span class="self-ref">IfcStrippedOptional</span>;<br/>
-&nbsp;&nbsp;LastRevisionTime : <span class="keyword">OPTIONAL</span> <span class="self-ref">IfcStrippedOptional</span>;<br/>
-&nbsp;&nbsp;ElectronicFormat : <span class="keyword">OPTIONAL</span> <span class="self-ref">IfcStrippedOptional</span>;<br/>
-&nbsp;&nbsp;ValidFrom : <span class="keyword">OPTIONAL</span> <span class="self-ref">IfcStrippedOptional</span>;<br/>
-&nbsp;&nbsp;ValidUntil : <span class="keyword">OPTIONAL</span> <span class="self-ref">IfcStrippedOptional</span>;<br/>
-&nbsp;&nbsp;Confidentiality : <span class="keyword">OPTIONAL</span> <span class="self-ref">IfcStrippedOptional</span>;<br/>
-&nbsp;&nbsp;Status : <span class="keyword">OPTIONAL</span> <span class="self-ref">IfcStrippedOptional</span>;<br/>
+&nbsp;&nbsp;Description : <span class="keyword">OPTIONAL</span> <a href="../../ifcmeasureresource/lexical/ifctext.html">IfcText</a>;<br/>
+&nbsp;&nbsp;Location : <span class="keyword">OPTIONAL</span> <a href="../../ifcexternalreferenceresource/lexical/ifcurireference.html">IfcURIReference</a>;<br/>
+&nbsp;&nbsp;Purpose : <span class="keyword">OPTIONAL</span> <a href="../../ifcmeasureresource/lexical/ifctext.html">IfcText</a>;<br/>
+&nbsp;&nbsp;IntendedUse : <span class="keyword">OPTIONAL</span> <a href="../../ifcmeasureresource/lexical/ifctext.html">IfcText</a>;<br/>
+&nbsp;&nbsp;Scope : <span class="keyword">OPTIONAL</span> <a href="../../ifcmeasureresource/lexical/ifctext.html">IfcText</a>;<br/>
+&nbsp;&nbsp;Revision : <span class="keyword">OPTIONAL</span> <a href="../../ifcmeasureresource/lexical/ifclabel.html">IfcLabel</a>;<br/>
+&nbsp;&nbsp;DocumentOwner : <span class="keyword">OPTIONAL</span> <a href="../../ifcactorresource/lexical/ifcactorselect.html">IfcActorSelect</a>;<br/>
+&nbsp;&nbsp;Editors : <span class="keyword">OPTIONAL</span> <span class="keyword">SET</span> [1:?] <span class="keyword">OF</span> <a href="../../ifcactorresource/lexical/ifcactorselect.html">IfcActorSelect</a>;<br/>
+&nbsp;&nbsp;CreationTime : <span class="keyword">OPTIONAL</span> <a href="../../ifcdatetimeresource/lexical/ifcdatetime.html">IfcDateTime</a>;<br/>
+&nbsp;&nbsp;LastRevisionTime : <span class="keyword">OPTIONAL</span> <a href="../../ifcdatetimeresource/lexical/ifcdatetime.html">IfcDateTime</a>;<br/>
+&nbsp;&nbsp;ElectronicFormat : <span class="keyword">OPTIONAL</span> <a href="../../ifcmeasureresource/lexical/ifcidentifier.html">IfcIdentifier</a>;<br/>
+&nbsp;&nbsp;ValidFrom : <span class="keyword">OPTIONAL</span> <a href="../../ifcdatetimeresource/lexical/ifcdate.html">IfcDate</a>;<br/>
+&nbsp;&nbsp;ValidUntil : <span class="keyword">OPTIONAL</span> <a href="../../ifcdatetimeresource/lexical/ifcdate.html">IfcDate</a>;<br/>
+&nbsp;&nbsp;Confidentiality : <span class="keyword">OPTIONAL</span> <a href="../../ifcexternalreferenceresource/lexical/ifcdocumentconfidentialityenum.html">IfcDocumentConfidentialityEnum</a>;<br/>
+&nbsp;&nbsp;Status : <span class="keyword">OPTIONAL</span> <a href="../../ifcexternalreferenceresource/lexical/ifcdocumentstatusenum.html">IfcDocumentStatusEnum</a>;<br/>
 &nbsp;<span class="keyword">INVERSE</span><br/>
 &nbsp;&nbsp;DocumentInfoForObjects : <span class="keyword">SET</span> [0:?] OF <a href="../../ifckernel/lexical/ifcrelassociatesdocument.html">IfcRelAssociatesDocument</a> <span class="keyword">FOR</span> RelatingDocument;<br/>
 &nbsp;&nbsp;HasDocumentReferences : <span class="keyword">SET</span> [0:?] OF <a href="../../ifcexternalreferenceresource/lexical/ifcdocumentreference.html">IfcDocumentReference</a> <span class="keyword">FOR</span> ReferencedDocument;<br/>
 <span class="keyword">END_ENTITY;</span><br/>
-<p class="std"><a href="../../../annex/annex-d/ifcexternalreferenceresource/diagram_0003.html" ><img src="../../../img/diagram.png" style="border: 0px" title="Link to EXPRESS-G diagram" alt="Link to EXPRESS-G diagram">&nbsp;EXPRESS-G diagram</a></p>
+<p class="std"><a href="../../../annex/annex-d/ifcexternalreferenceresource/diagram_0000.html" ><img src="../../../img/diagram.png" style="border: 0px" title="Link to EXPRESS-G diagram" alt="Link to EXPRESS-G diagram">&nbsp;EXPRESS-G diagram</a></p>
 </code></div>
 </details>
 <details><summary>JSON Specification</summary><div class="xsd"><code class="xsd">public class <a href="../../ifcexternalreferenceresource/lexical/ifcdocumentinformation.html">IfcDocumentInformation</a> extends <a href="../../ifcexternalreferenceresource/lexical/ifcexternalinformation.html">IfcExternalInformation</a><br/>
@@ -210,15 +314,15 @@ File name or document name assigned by owner.
 &nbsp;private string IntendedUse;<br/>
 &nbsp;private string Scope;<br/>
 &nbsp;private string Revision;<br/>
-&nbsp;private <span class="self-ref">IfcStrippedOptional</span> DocumentOwner;<br/>
-&nbsp;private <span class="self-ref">IfcStrippedOptional</span>[] Editors;<br/>
+&nbsp;private <a href="../../ifcactorresource/lexical/ifcactorselect.html">IfcActorSelect</a> DocumentOwner;<br/>
+&nbsp;private <a href="../../ifcactorresource/lexical/ifcactorselect.html">IfcActorSelect</a>[] Editors;<br/>
 &nbsp;private string CreationTime;<br/>
 &nbsp;private string LastRevisionTime;<br/>
 &nbsp;private string ElectronicFormat;<br/>
 &nbsp;private string ValidFrom;<br/>
 &nbsp;private string ValidUntil;<br/>
-&nbsp;private <span class="self-ref">IfcStrippedOptional</span> Confidentiality;<br/>
-&nbsp;private <span class="self-ref">IfcStrippedOptional</span> Status;<br/>
+&nbsp;private <a href="../../ifcexternalreferenceresource/lexical/ifcdocumentconfidentialityenum.html">IfcDocumentConfidentialityEnum</a> Confidentiality;<br/>
+&nbsp;private <a href="../../ifcexternalreferenceresource/lexical/ifcdocumentstatusenum.html">IfcDocumentStatusEnum</a> Status;<br/>
 &nbsp;private <a href="../../ifckernel/lexical/ifcrelassociatesdocument.html">IfcRelAssociatesDocument</a>[] DocumentInfoForObjects;<br/>
 &nbsp;private <a href="../../ifcexternalreferenceresource/lexical/ifcdocumentreference.html">IfcDocumentReference</a>[] HasDocumentReferences;<br/>
 &nbsp;private <span class="self-ref">IfcStrippedOptional</span>[] IsPointedTo;<br/>
@@ -231,6 +335,5 @@ File name or document name assigned by owner.
 </p>
 <p><a href="https://github.com/buildingSMART/ProductData/issues/new?&title=ifcdocumentinformation:%22" target="_blank" ><img src="../../../img/external.png" style="border: 0px" title="Report issue" alt="Report issue"/>&nbsp; Report an issue</a></p>
 <p><a href="../../../link/ifcdocumentinformation.html" target="_blank" ><img src="../../../img/permlink.png" style="border: 0px" title="Link to this page" alt="Link to this page"/>&nbsp; Link to this page</a></p>
-<p></p>
   </body>
 </html>

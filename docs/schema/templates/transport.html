@@ -20,25 +20,24 @@
 
 <script type="text/javascript">
 <!--
-    parent.index.location.replace("../toc-4.html#4.5");
+    parent.index.location.replace("../toc-4.html#4.8");
 //-->
 </script>
 
-<h2 class="std">4.5 Transport</h2>
+<h2 class="std">4.8 Transport</h2>
 <p>All exchanges can be transported over these protocols:</p>
 <ol>
-<li>As a physical file with manual exchange via eMail, Harddrives, oder similar</li>
+<li>As a physical file with manual exchange via eMail, Harddrives, CDE's or similar</li>
 <li>As a data structure in the payload of an online exchange, eg. an API, a BCF message, a messaging system or similar.</li>
 </ol>
-<p>This standard does not define how exactly the exchange is done. It defines the standard for the structure of the file or the payload. The file or the payload can be stored in a compressd format according to the specification. The file extension is then *.ifczip. The specifications for ifczip can be found here:</p>
+<p>This standard does not define how exactly the exchange is done. It defines the standard for the structure of the file or the payload. The file or the payload can be stored in a compressd format according to the specification. The file extension is then .ifczip. The specifications for ifczip can be found here:</p>
 <ul>
-<li>http://www.buildingsmart-tech.org/specifications/ifc-overview/ifc-overview-summary</li>
-<li>http://www.buildingsmart-tech.org/implementation/ifc-implementation/ifc-impl-agreements/cv-2x3-154</li>
+<li>https://technical.buildingsmart.org/standards/ifc</li>
+<li>https://technical.buildingsmart.org/standards/ifc/ifc-formats/</li>
 </ul>
-<p>It is explicitly allowed to embed an IFC file in Step format (.ifc) or in XML format Format (.ifcxml) in an ifczip file.
-The specification contains the following principles:</p>
+<p>It is explicitly allowed to embed an IFC file in Step format (.ifc) or in XML format Format (.ifcxml) in an ifczip file.The specification contains the following principles:</p>
 <ol>
-<li>The ifczip file contains exactly one model file (.ifc or .ifcxml). The file extension is *.ifczip</li>
+<li>The ifczip file contains exactly one model file (.ifc or .ifcxml). The file extension is \*.ifczip</li>
 <li>According to this rule, it is allowed to embed additional other files in an ifczip file. Therefore, an ifczip file can be a container, which can transport many additional files in itself.</li>
 <li>Such a container offers several advantages, such as transport of photo documentations, transport of plant documentation,  transport of permits and notifications, transport of operating documents, e.g. test and maintenance reports</li>
 </ol>

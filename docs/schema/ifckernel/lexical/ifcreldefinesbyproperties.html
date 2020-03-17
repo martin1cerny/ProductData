@@ -11,7 +11,7 @@
     <title>IfcRelDefinesByProperties</title>
 
     <style type="text/css">
-      body { counter-reset: index1 5 index2 1 index3 3 index4 20 index5 0; }
+      body { counter-reset: index1 5 index2 1 index3 3 index4 23 index5 0; }
     </style>
   </head>
 
@@ -20,7 +20,7 @@
 
 <script type="text/javascript">
 <!--
-    parent.index.location.replace("../../toc-5.html#5.1.3.21");
+    parent.index.location.replace("../../toc-5.html#5.1.3.24");
 //-->
 </script>
 
@@ -44,7 +44,7 @@
 </details>
 <section>
 <h5 class="num">Semantic definitions at the entity</h5>
-<details open="open"><summary>Entity definition</summary><p>The objectified relationship <span class="self-ref">IfcRelDefinesByProperties</span> defines the relationships between property set definitions and objects. Properties are aggregated in property sets. Property sets can be either directly assigned to occurrence objects using this relationship, or assigned to an object type and assigned via that type to occurrence objects. The assignment of an <i>IfcPropertySet</i> to an <a href="../../ifckernel/lexical/ifctypeobject.html">IfcTypeObject</a> is not handled via this objectified relationship, but through the direct relationship <i>HasPropertySets</i> at <a href="../../ifckernel/lexical/ifctypeobject.html">IfcTypeObject</a>.</p>
+<details open="open"><summary>Entity definition</summary><p>The objectified relationship <span class="self-ref">IfcRelDefinesByProperties</span> defines the relationships between property set definitions and objects. Properties are aggregated in property sets. Property sets can be either directly assigned to occurrence objects using this relationship, or assigned to an object type and assigned via that type to occurrence objects. The assignment of an <a href="../../ifckernel/lexical/ifcpropertyset.html">IfcPropertySet</a> to an <a href="../../ifckernel/lexical/ifctypeobject.html">IfcTypeObject</a> is not handled via this objectified relationship, but through the direct relationship <i>HasPropertySets</i> at <a href="../../ifckernel/lexical/ifctypeobject.html">IfcTypeObject</a>.</p>
 <p>The <span class="self-ref">IfcRelDefinesByProperties</span> is an N-to-N relationship, as it allows for the assignment of one or more property sets to one or more objects. Those objects then share the same property definition.</p>
 
 
@@ -66,7 +66,7 @@ Reference to the property set definition for that object or set of objects.
 <tr><th>Rule</th><th>Description</th></tr>
 <tr><td>NoRelatedTypeObject</td><td>There shall be no related object being of typy <a href="../../ifckernel/lexical/ifctypeobject.html">IfcTypeObject</a>.
 <blockquote class="note">
-NOTE  The relationship between a <a href="../../ifckernel/lexical/ifctypeobject.html">IfcTypeObject</a> and a <i>IfcPropertySet</i> is handled through the direct relationship <i>HasPropertySets</i> at <a href="../../ifckernel/lexical/ifctypeobject.html">IfcTypeObject</a>.
+NOTE  The relationship between a <a href="../../ifckernel/lexical/ifctypeobject.html">IfcTypeObject</a> and a <a href="../../ifckernel/lexical/ifcpropertyset.html">IfcPropertySet</a> is handled through the direct relationship <i>HasPropertySets</i> at <a href="../../ifckernel/lexical/ifctypeobject.html">IfcTypeObject</a>.
 </blockquote>
 </td></tr>
 </table>

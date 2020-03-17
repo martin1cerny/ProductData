@@ -11,7 +11,7 @@
     <title>IfcUniquePropertySetNames</title>
 
     <style type="text/css">
-      body { counter-reset: index1 5 index2 1 index3 4 index4 2 index5 0; }
+      body { counter-reset: index1 5 index2 1 index3 4 index4 3 index5 0; }
     </style>
   </head>
 
@@ -20,7 +20,7 @@
 
 <script type="text/javascript">
 <!--
-    parent.index.location.replace("../../toc-5.html#5.1.4.3");
+    parent.index.location.replace("../../toc-5.html#5.1.4.4");
 //-->
 </script>
 
@@ -30,7 +30,7 @@
 <section>
 <h5 class="num">Semantic definitions at the function</h5>
 <details open="open"><summary>Function Definition</summary><p>
-<p>The function gets the set of <a href="../../ifckernel/lexical/ifcpropertysetdefinition.html">IfcPropertySetDefinition</a>'s. It iterates through the <i>Name</i> attibute of the <i>IfcPropertySet</i>'s
+<p>The function gets the set of <a href="../../ifckernel/lexical/ifcpropertysetdefinition.html">IfcPropertySetDefinition</a>'s. It iterates through the <i>Name</i> attibute of the <a href="../../ifckernel/lexical/ifcpropertyset.html">IfcPropertySet</a>'s
 and verifies that no <i>Name</i> appears twice. It is called from within the function <a href="../../ifckernel/lexical/ifcuniquedefinitionnames.html">IfcUniqueDefinitionNames</a>.</p>
 
 </p>
@@ -41,7 +41,7 @@ and verifies that no <i>Name</i> appears twice. It is called from within the fun
 <details open="open"><summary>EXPRESS Specification</summary><div class="xsd"><code class="xsd"><p>
 <span class="keyword">FUNCTION</span> IfcUniquePropertySetNames<br/>
 
-(Properties : SET [1:?] OF <a href="../../ifckernel/lexical/ifcpropertysetdefinition.html">IfcPropertySetDefinition</a>)<br/>:LOGICAL;<br/><br/>LOCAL<br/>&nbsp;&nbsp;Names : SET OF <a href="../../ifcmeasureresource/lexical/ifclabel.html">IfcLabel</a> := [];<br/>&nbsp;&nbsp;Unnamed : INTEGER := 0;<br/>END_LOCAL;<br/><br/>REPEAT i:=1 TO HIINDEX(Properties);<br/>&nbsp;&nbsp;IF 'IFC4.<span class="self-ref">IfcStrippedOptional</span>' IN TYPEOF(Properties[i]) THEN<br/>&nbsp;&nbsp;&nbsp;&nbsp;Names := Names + Properties[i]\<a href="../../ifckernel/lexical/ifcroot.html">IfcRoot</a>.Name;<br/>&nbsp;&nbsp;ELSE<br/>&nbsp;&nbsp;&nbsp;&nbsp;Unnamed := Unnamed + 1;<br/>&nbsp;&nbsp;END_IF;<br/>END_REPEAT;<br/><br/>RETURN (SIZEOF(Names) + Unnamed = SIZEOF(Properties));
+(Properties : SET [1:?] OF <a href="../../ifckernel/lexical/ifcpropertysetdefinition.html">IfcPropertySetDefinition</a>)<br/>:LOGICAL;<br/><br/>LOCAL<br/>&nbsp;&nbsp;Names : SET OF <a href="../../ifcmeasureresource/lexical/ifclabel.html">IfcLabel</a> := [];<br/>&nbsp;&nbsp;Unnamed : INTEGER := 0;<br/>END_LOCAL;<br/><br/>REPEAT i:=1 TO HIINDEX(Properties);<br/>&nbsp;&nbsp;IF 'IFC4.<a href="../../ifckernel/lexical/ifcpropertyset.html">IfcPropertySet</a>' IN TYPEOF(Properties[i]) THEN<br/>&nbsp;&nbsp;&nbsp;&nbsp;Names := Names + Properties[i]\<a href="../../ifckernel/lexical/ifcroot.html">IfcRoot</a>.Name;<br/>&nbsp;&nbsp;ELSE<br/>&nbsp;&nbsp;&nbsp;&nbsp;Unnamed := Unnamed + 1;<br/>&nbsp;&nbsp;END_IF;<br/>END_REPEAT;<br/><br/>RETURN (SIZEOF(Names) + Unnamed = SIZEOF(Properties));
 <br/>
 
 <span class="keyword">END_FUNCTION</span>;

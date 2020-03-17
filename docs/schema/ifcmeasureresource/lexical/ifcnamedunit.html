@@ -11,7 +11,7 @@
     <title>IfcNamedUnit</title>
 
     <style type="text/css">
-      body { counter-reset: index1 8 index2 4 index3 3 index4 5 index5 0; }
+      body { counter-reset: index1 8 index2 9 index3 3 index4 7 index5 0; }
     </style>
   </head>
 
@@ -20,7 +20,7 @@
 
 <script type="text/javascript">
 <!--
-    parent.index.location.replace("../../toc-8.html#8.4.3.6");
+    parent.index.location.replace("../../toc-8.html#8.9.3.8");
 //-->
 </script>
 
@@ -64,6 +64,8 @@ The type of the unit.
 <h5 class="num">Inherited definitions from supertypes</h5>
 <details open="open"><summary>Entity inheritance</summary><img src="../../../diagrams/ifcnamedunit.png" usemap="#f"/>
 <map name="f">
+<area shape="rect" coords="18,30,206,42" href="../../../schema/ifcmeasureresource/lexical/ifccontextdependentunit.html" alt="IfcContextDependentUnit" />
+<area shape="rect" coords="18,54,206,66" href="../../../schema/ifcmeasureresource/lexical/ifcconversionbasedunit.html" alt="IfcConversionBasedUnit" />
 </map>
 </details>
 <details><summary>Attribute inheritance</summary><table class="attributes">
@@ -94,11 +96,12 @@ The type of the unit.
 </code></div></details>
 <details><summary>EXPRESS Specification</summary><div class="express"><code class="express">
 <span class="keyword">ENTITY</span> IfcNamedUnit<br/>
+&nbsp;<span class="keyword">ABSTRACT</span> <span class="keyword">SUPERTYPE OF</span>(<span class="keyword">ONEOF</span>(<a href="../../ifcmeasureresource/lexical/ifccontextdependentunit.html">IfcContextDependentUnit</a>, <a href="../../ifcmeasureresource/lexical/ifcconversionbasedunit.html">IfcConversionBasedUnit</a>))<b>;</b><br/>
 &nbsp;&nbsp;Dimensions : <a href="../../ifcmeasureresource/lexical/ifcdimensionalexponents.html">IfcDimensionalExponents</a>;<br/>
 &nbsp;&nbsp;UnitType : <a href="../../ifcmeasureresource/lexical/ifcunitenum.html">IfcUnitEnum</a>;<br/>
 &nbsp;<span class="keyword">WHERE</span><br/>
-&nbsp;&nbsp;WR1 : <span class="self-ref">IfcStrippedOptional</span> (SELF.UnitType, SELF.Dimensions);<br/><span class="keyword">END_ENTITY;</span><br/>
-<p class="std"><a href="../../../annex/annex-d/ifcmeasureresource/diagram_0001.html" ><img src="../../../img/diagram.png" style="border: 0px" title="Link to EXPRESS-G diagram" alt="Link to EXPRESS-G diagram">&nbsp;EXPRESS-G diagram</a></p>
+&nbsp;&nbsp;WR1 : <a href="../../ifcmeasureresource/lexical/ifccorrectdimensions.html">IfcCorrectDimensions</a> (SELF.UnitType, SELF.Dimensions);<br/><span class="keyword">END_ENTITY;</span><br/>
+<p class="std"><a href="../../../annex/annex-d/ifcmeasureresource/diagram_0000.html" ><img src="../../../img/diagram.png" style="border: 0px" title="Link to EXPRESS-G diagram" alt="Link to EXPRESS-G diagram">&nbsp;EXPRESS-G diagram</a></p>
 </code></div>
 </details>
 <details><summary>JSON Specification</summary><div class="xsd"><code class="xsd">public class <a href="../../ifcmeasureresource/lexical/ifcnamedunit.html">IfcNamedUnit</a> extends IfcBase<br/>
@@ -113,6 +116,5 @@ The type of the unit.
 </p>
 <p><a href="https://github.com/buildingSMART/ProductData/issues/new?&title=ifcnamedunit:%22" target="_blank" ><img src="../../../img/external.png" style="border: 0px" title="Report issue" alt="Report issue"/>&nbsp; Report an issue</a></p>
 <p><a href="../../../link/ifcnamedunit.html" target="_blank" ><img src="../../../img/permlink.png" style="border: 0px" title="Link to this page" alt="Link to this page"/>&nbsp; Link to this page</a></p>
-<p></p>
   </body>
 </html>

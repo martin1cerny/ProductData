@@ -11,7 +11,7 @@
     <title>IfcMaterialResource</title>
 
     <style type="text/css">
-      body { counter-reset: index1 8 index2 5 index3 0 index4 -1 index5 0; }
+      body { counter-reset: index1 8 index2 8 index3 0 index4 -1 index5 0; }
     </style>
   </head>
 
@@ -20,12 +20,12 @@
 
 <script type="text/javascript">
 <!--
-    parent.index.location.replace("../toc-8.html#8.5");
+    parent.index.location.replace("../toc-8.html#8.8");
 //-->
 </script>
 
-<h2 class="std">8.5 IfcMaterialResource</h2>
-<h3 class="std">8.5.1 Schema Definition</h3>
+<h2 class="std">8.8 IfcMaterialResource</h2>
+<h3 class="std">8.8.1 Schema Definition</h3>
 <p>The schema <i>IfcMaterialResource</i> contains the types and entities that are used to define materials (substances, of which products are made of). Materials are defined generically.</p>
 <blockquote class="note">
 <p>NOTE  The references to the usage of materials is made from the relevant elements through the objectified relationship <a href="../ifcproductextension/lexical/ifcrelassociatesmaterial.html">IfcRelAssociatesMaterial</a>.</p>
@@ -48,14 +48,14 @@
 </ol>
 <p>These options are exposed for association with <i>IfcElement</i> or <i>IfcElementType</i> and their subtypes through a select type <a href="../ifcmaterialresource/lexical/ifcmaterialselect.html">IfcMaterialSelect</a>. The association is realized by the objectified relationship <a href="../ifcproductextension/lexical/ifcrelassociatesmaterial.html">IfcRelAssociatesMaterial</a>, accessible by the inverse relationship <i>AssociatedTo</i>. Some associations to specific material entities may be restricted as not being appropriate within the specialized element or element type definitions.</p>
 <p>The following material properties and information sets can be assigned to an <a href="../ifcmaterialresource/lexical/ifcmaterialdefinition.html">IfcMaterialDefinition</a>, or only to a single <a href="../ifcmaterialresource/lexical/ifcmaterial.html">IfcMaterial</a>.</p>
-<p>\\\\\\\\\\\\\\\* Material properties;
-\\\\\\\\\\\\\\\* Material classification and material library reference;
-\\\\\\\\\\\\\\\* Material presentation in shape models (e.g. by color, hatching, rendering);
-\\\\\\\\\\\\\\\* Relation to the ingredients of a material composite.</p>
+<p>\\\\\\\\\\\\\\\\\* Material properties;
+\\\\\\\\\\\\\\\\\* Material classification and material library reference;
+\\\\\\\\\\\\\\\\\* Material presentation in shape models (e.g. by color, hatching, rendering);
+\\\\\\\\\\\\\\\\\* Relation to the ingredients of a material composite.</p>
 
 
 <blockquote class="deprecated">
-<p>DEPRECATION  Material designation by using <a href="../ifcmaterialresource/lexical/ifcmateriallist.html">IfcMaterialList</a> is deprecated and should not be used. The classification of materials should not be done using <i>IfcMaterialClassificationRelationship</i> anymore (entity type deprecated); the <i>IfcExternalReferenceRelationship</i> in <i>IfcExternalReferenceResource</i> schema should be used instead.</p>
+<p>DEPRECATION  Material designation by using <a href="../ifcmaterialresource/lexical/ifcmateriallist.html">IfcMaterialList</a> is deprecated and should not be used. The classification of materials should not be done using <i>IfcMaterialClassificationRelationship</i> anymore (entity type deprecated); the <a href="../ifcexternalreferenceresource/lexical/ifcexternalreferencerelationship.html">IfcExternalReferenceRelationship</a> in <i>IfcExternalReferenceResource</i> schema should be used instead.</p>
 </blockquote>
 <p><a href="../../annex/annex-d/ifcmaterialresource/index.html" ><img src="../../img/diagram.png" style="border: 0px" title="Link to EXPRESS-G diagram" alt="Link to EXPRESS-G diagram">&nbsp;EXPRESS-G diagram</a></p>
 </p>

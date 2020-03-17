@@ -11,7 +11,7 @@
     <title>IfcMaterial</title>
 
     <style type="text/css">
-      body { counter-reset: index1 8 index2 5 index3 3 index4 0 index5 0; }
+      body { counter-reset: index1 8 index2 8 index3 3 index4 0 index5 0; }
     </style>
   </head>
 
@@ -20,7 +20,7 @@
 
 <script type="text/javascript">
 <!--
-    parent.index.location.replace("../../toc-8.html#8.5.3.1");
+    parent.index.location.replace("../../toc-8.html#8.8.3.1");
 //-->
 </script>
 
@@ -45,9 +45,9 @@
 <h5 class="num">Semantic definitions at the entity</h5>
 <details open="open"><summary>Entity definition</summary><p><span class="self-ref">IfcMaterial</span> is a homogeneous or inhomogeneous substance that can be used to form elements (physical products or their components).</p>
 <p><span class="self-ref">IfcMaterial</span> is the basic entity for material designation and definition; this includes identification by name and classification (via reference to an external classification), as well as association of material properties (isotropic or anisotropic) defined by (subtypes of) <a href="../../ifcmaterialresource/lexical/ifcmaterialproperties.html">IfcMaterialProperties</a>. An instance of <span class="self-ref">IfcMaterial</span> may be associated to an element or element type using the <a href="../../ifcproductextension/lexical/ifcrelassociatesmaterial.html">IfcRelAssociatesMaterial</a> relationship. The assignment might either be direct as a single material information, or via</p>
-<p>\\\\\\\\\\\\\\\* a material layer set
-\\\\\\\\\\\\\\\* a material profile set
-\\\\\\\\\\\\\\\* a material constituent set</p>
+<p>\\\\\\\\\\\\\\\\\* a material layer set
+\\\\\\\\\\\\\\\\\* a material profile set
+\\\\\\\\\\\\\\\\\* a material constituent set</p>
 <p>An <span class="self-ref">IfcMaterial</span> may also have presentation information associated. Such presentation information is provided by <i>IfcMaterialDefinitionRepresentation</i>, associating curve styles, hatching definitions or surface colouring/rendering information to a material.</p>
 
 
@@ -85,6 +85,10 @@ NOTE  Material grade may have different meaning in different view definitions, 
 
 
 </td><td>X</td></tr>
+<tr><td></td><td><i>HasExternalReferences</i></td><td><a href="../../ifcexternalreferenceresource/lexical/ifcexternalreferencerelationship.html">IfcExternalReferenceRelationship</a><br/>@RelatedResourceObjects</td><td>S[0:?]</td><td>Reference to external references, e.g. library, classification, or document information, that are associated to the material.
+
+
+</td><td></td></tr>
 <tr><td></td><td><i>HasProperties</i></td><td><a href="../../ifcmaterialresource/lexical/ifcmaterialproperties.html">IfcMaterialProperties</a><br/>@Material</td><td>S[0:?]</td><td>Material properties assigned to instances of subtypes of <span class="self-ref">IfcMaterialDefinition</span>.
 
 

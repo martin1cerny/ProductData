@@ -11,7 +11,7 @@
     <title>IfcRelAssociates</title>
 
     <style type="text/css">
-      body { counter-reset: index1 5 index2 1 index3 3 index4 14 index5 0; }
+      body { counter-reset: index1 5 index2 1 index3 3 index4 16 index5 0; }
     </style>
   </head>
 
@@ -20,7 +20,7 @@
 
 <script type="text/javascript">
 <!--
-    parent.index.location.replace("../../toc-5.html#5.1.3.15");
+    parent.index.location.replace("../../toc-5.html#5.1.3.17");
 //-->
 </script>
 
@@ -72,8 +72,9 @@ Set of object or property definitions to which the external references or inform
 <details open="open"><summary>Entity inheritance</summary><img src="../../../diagrams/ifcrelassociates.png" usemap="#f"/>
 <map name="f">
 <area shape="rect" coords="42,78,230,90" href="../../../schema/ifckernel/lexical/ifcrelassociatesclassification.html" alt="IfcRelAssociatesClassification" />
-<area shape="rect" coords="42,102,230,114" href="../../../schema/ifckernel/lexical/ifcrelassociateslibrary.html" alt="IfcRelAssociatesLibrary" />
-<area shape="rect" coords="42,126,230,138" href="../../../schema/ifcproductextension/lexical/ifcrelassociatesmaterial.html" alt="IfcRelAssociatesMaterial" />
+<area shape="rect" coords="42,102,230,114" href="../../../schema/ifckernel/lexical/ifcrelassociatesdocument.html" alt="IfcRelAssociatesDocument" />
+<area shape="rect" coords="42,126,230,138" href="../../../schema/ifckernel/lexical/ifcrelassociateslibrary.html" alt="IfcRelAssociatesLibrary" />
+<area shape="rect" coords="42,150,230,162" href="../../../schema/ifcproductextension/lexical/ifcrelassociatesmaterial.html" alt="IfcRelAssociatesMaterial" />
 <area shape="rect" coords="18,30,254,42" href="../../../schema/ifckernel/lexical/ifcrelationship.html" alt="IfcRelationship" />
 <area shape="rect" coords="6,6,266,18" href="../../../schema/ifckernel/lexical/ifcroot.html" alt="IfcRoot" />
 </map>
@@ -129,7 +130,7 @@ Set of object or property definitions to which the external references or inform
 </code></div></details>
 <details><summary>EXPRESS Specification</summary><div class="express"><code class="express">
 <span class="keyword">ENTITY</span> IfcRelAssociates<br/>
-&nbsp;<span class="keyword">ABSTRACT</span> <span class="keyword">SUPERTYPE OF</span>(<span class="keyword">ONEOF</span>(<a href="../../ifckernel/lexical/ifcrelassociatesclassification.html">IfcRelAssociatesClassification</a>, <a href="../../ifckernel/lexical/ifcrelassociateslibrary.html">IfcRelAssociatesLibrary</a>, <a href="../../ifcproductextension/lexical/ifcrelassociatesmaterial.html">IfcRelAssociatesMaterial</a>))<br/>
+&nbsp;<span class="keyword">ABSTRACT</span> <span class="keyword">SUPERTYPE OF</span>(<span class="keyword">ONEOF</span>(<a href="../../ifckernel/lexical/ifcrelassociatesclassification.html">IfcRelAssociatesClassification</a>, <a href="../../ifckernel/lexical/ifcrelassociatesdocument.html">IfcRelAssociatesDocument</a>, <a href="../../ifckernel/lexical/ifcrelassociateslibrary.html">IfcRelAssociatesLibrary</a>, <a href="../../ifcproductextension/lexical/ifcrelassociatesmaterial.html">IfcRelAssociatesMaterial</a>))<br/>
 &nbsp;<span class="keyword">SUBTYPE OF</span> (<a href="../../ifckernel/lexical/ifcrelationship.html">IfcRelationship</a>)<b>;</b><br/>
 &nbsp;&nbsp;RelatedObjects : <span class="keyword">SET</span> [1:?] <span class="keyword">OF</span> <a href="../../ifckernel/lexical/ifcdefinitionselect.html">IfcDefinitionSelect</a>;<br/>
 <span class="keyword">END_ENTITY;</span><br/>

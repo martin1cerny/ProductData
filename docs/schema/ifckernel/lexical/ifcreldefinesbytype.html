@@ -11,7 +11,7 @@
     <title>IfcRelDefinesByType</title>
 
     <style type="text/css">
-      body { counter-reset: index1 5 index2 1 index3 3 index4 21 index5 0; }
+      body { counter-reset: index1 5 index2 1 index3 3 index4 24 index5 0; }
     </style>
   </head>
 
@@ -20,7 +20,7 @@
 
 <script type="text/javascript">
 <!--
-    parent.index.location.replace("../../toc-5.html#5.1.3.22");
+    parent.index.location.replace("../../toc-5.html#5.1.3.25");
 //-->
 </script>
 
@@ -46,18 +46,18 @@
 <section>
 <h5 class="num">Semantic definitions at the entity</h5>
 <details open="open"><summary>Entity definition</summary><p>The objectified relationship <span class="self-ref">IfcRelDefinesByType</span> defines the relationship between an object type and object occurrences. The <span class="self-ref">IfcRelDefinesByType</span> is a 1-to-N relationship, as it allows for the assignment of one type information to a single or to many objects. Those objects then share the same object type, and the property sets and properties assigned to the object type.</p>
-<p>The <span class="self-ref">IfcRelDefinesByType</span> links the object type definition with the object occurrence. Both may define properties by assigning an <i>IfcPropertySet</i>, including one or many subtypes of <a href="../../ifcpropertyresource/lexical/ifcproperty.html">IfcProperty</a> to either the object type or object occurrence, as shown in Figure 14.</p>
+<p>The <span class="self-ref">IfcRelDefinesByType</span> links the object type definition with the object occurrence. Both may define properties by assigning an <a href="../../ifckernel/lexical/ifcpropertyset.html">IfcPropertySet</a>, including one or many subtypes of <a href="../../ifcpropertyresource/lexical/ifcproperty.html">IfcProperty</a> to either the object type or object occurrence, as shown in Figure 23.</p>
 <p>There are several scenarios to define the same property set on the object type definition and object occurrence side:</p>
 <ol>
 <li>All properties for all object occurrences of a common object type have the same value - then only the object type definition has a property set assigned.</li>
 <li>All properties for all object occurrences are different, that is there are no common property values for the object type definition - then each of the object occurrence has a property set assigned.</li>
 <li>Some properties within the same property set have common values and are assigned to the object type definition and some are occurrence specific and assigned (with potentially different values) to the object occurrences - then:
-\\\\\\\\\\\\\\\* The sum of all properties within a given property set applicable to an object occurrence is the union of properties assigned to the object type definition plus the properties assigned to the object occurrence.
-\\\\\\\\\\\\\\\* If the object occurrence has a property with the same <i>IfcProperty.Name</i> in an <i>IfcPropertySet</i>, as the corresponding object type definition, then the occurrence property value overrides the type property value.</li>
+\\\\\\\\\\\\\\\\\* The sum of all properties within a given property set applicable to an object occurrence is the union of properties assigned to the object type definition plus the properties assigned to the object occurrence.
+\\\\\\\\\\\\\\\\\* If the object occurrence has a property with the same <i>IfcProperty.Name</i> in an <a href="../../ifckernel/lexical/ifcpropertyset.html">IfcPropertySet</a>, as the corresponding object type definition, then the occurrence property value overrides the type property value.</li>
 </ol>
 <table border="0" cellpadding="0" cellspacing="0" summary="relationship usage">
 <tr><td valign="top"><img src="../../../figures/ifcreldefinesbytype_fig-1.png" alt="instance diagram" border="0"></td></tr>
-<td valign="top"><p class="figure">Figure 14 &mdash; Type definition relationships</p></td>
+<td valign="top"><p class="figure">Figure 23 &mdash; Type definition relationships</p></td>
 </table>
 <p>The following table provides an example of assigning</p>
 <table border="1" cellpadding="2" cellspacing="2" summary="example for property assignment">

@@ -28,9 +28,9 @@
 <p>The smart transport of product data needs a clear and common understanding of the format to express the data of the products itself. The product data can be transferred in several ways, e.g. via direct database connect, or via webservices or file transfer. In all cases, the sender and the receiver of the product data need a basic standard to implement the data transfer.</p>
 <p>Normally an IFC files is known as a structure to transport a data model of a construction like a building (or a bridge). This model contains the geometrical and alphanumeric information of the complete building. The model contains also the information about the products that should be used to build up the building. The IFC language is capable to store the information of this “built-in” products properly.</p>
 <p>This standard uses the IFC language to store and transport product data on the way from the manufacturers to their customers.</p>
-<p>To store product data in an IFC file only some parts of the existing IFC namespace is needed, since many aspects of the BIM data are not needed to express product data. The subset of IFC structures for storing and transporting product data is described in the Model View Definition (MVD) *Product Data View” (PDV).</p>
+<p>To store product data in an IFC file only some parts of the existing IFC namespace is needed, since many aspects of the BIM data are not needed to express product data. The subset of IFC structures for storing and transporting product data is described in the Model View Definition (MVD) \\*Product Data View” (PDV).</p>
 <p>The following sections focusses on a definition of a file format. This file can be the foundation to transfer data over different transport channels.</p>
-<p>The file is based on IFC (Industry Foundation Classes). IFC was developed by the worldwide organization buildingSMART. IFC is standardized as *EN ISO 16739-1.2018*.</p>
+<p>The file is based on IFC (Industry Foundation Classes). IFC was developed by the worldwide organization buildingSMART. IFC is standardized as \\<i>EN ISO 16739-1.2018\\</i>.</p>
 <p>Product data contains three types of data:</p>
 <ol>
 <li>Alphanumeric Information (Lists)</li>
@@ -39,6 +39,8 @@
 </ol>
 <p>The existing proposals for new work items in CEN/TC442-WG4 describe the needs for transporting alphanumeric information. We propose to consider also the transport of Files. The transport of geometric information can be realized by including existing files with the geometric representation as a file in the IFCZIP-Container. With IFC this could be extended in a next step to an intelligent connected geometric representation.</p>
 <p>The product data file is specified as follows:</p>
+<p class="gridtable">
+</p>
 <table class="gridtable">
   <tbody>
     <tr>
@@ -64,7 +66,7 @@
   </tbody>
 </table>
 <p>The IFC language contains hundreds of entities to provide a standardizes data exchange for the whole construction industry. For exchanging product data based on the specification of this paper, only some of these entities are needed. These entities are defined in this specification. The IFC specification is located here: <a href="https://technical.buildingsmart.org/" target="_top">https://technical.buildingsmart.org/</a> . All elements are well documented there. In this paper, we describe the use of the elements and attributes for the use case of transporting data templates (DT), coatalogue of configured construction objects (CCCO) and corresponding data sheets (DS).</p>
-<p>The *Construction Objects Data View* contains the classes from the parts IfcKernel, IfcProductExtension, and IfcExternalreferenceResource. In the following table, the main classes are described, that all together define the *Construction Objects Data View*.</p>
+<p>The \\<i>Construction Objects Data View\\</i> contains the classes from the parts IfcKernel, IfcProductExtension, and IfcExternalreferenceResource. In the following table, the main classes are described, that all together define the \\<i>Construction Objects Data View\\</i>.</p>
 <details open="open"><summary>Concept templates</summary><table class="gridtable">
 <tr><th>Template</th>
 <th>Construction Objects Data View</th>
@@ -105,6 +107,40 @@
 <td>X</td>
 </tr>
 <tr><td>
+<a href="../schema/templates/data-sheets.html">Data sheets</a>
+</td>
+<td>X</td>
+</tr>
+<tr><td>
+&nbsp;
+<a href="../schema/templates/complex-data-sheet.html">Complex data sheet</a>
+</td>
+<td>X</td>
+</tr>
+<tr><td>
+&nbsp;
+<a href="../schema/templates/simple-data-sheet.html">Simple data sheet</a>
+</td>
+<td>X</td>
+</tr>
+<tr><td>
+<a href="../schema/templates/data-templates.html">Data templates</a>
+</td>
+<td>X</td>
+</tr>
+<tr><td>
+&nbsp;
+<a href="../schema/templates/complex-data-template.html">Complex data template</a>
+</td>
+<td>X</td>
+</tr>
+<tr><td>
+&nbsp;
+<a href="../schema/templates/simple-data-template.html">Simple data template</a>
+</td>
+<td>X</td>
+</tr>
+<tr><td>
 <a href="../schema/templates/declarations.html">Declarations</a>
 </td>
 <td>X</td>
@@ -118,6 +154,35 @@
 <tr><td>
 &nbsp;
 <a href="../schema/templates/declaration-for-data-template-exchange.html">Declaration for data template exchange</a>
+</td>
+<td>X</td>
+</tr>
+<tr><td>
+<a href="../schema/templates/documents.html">Documents</a>
+</td>
+<td>X</td>
+</tr>
+<tr><td>
+&nbsp;
+<a href="../schema/templates/document-association-to-construction-object-types.html">Document association to construction object types</a>
+</td>
+<td>X</td>
+</tr>
+<tr><td>
+&nbsp;
+<a href="../schema/templates/document-association-to-construction-objects.html">Document association to construction objects</a>
+</td>
+<td>X</td>
+</tr>
+<tr><td>
+&nbsp;
+<a href="../schema/templates/document-classification.html">Document classification</a>
+</td>
+<td>X</td>
+</tr>
+<tr><td>
+&nbsp;
+<a href="../schema/templates/document-information.html">Document information</a>
 </td>
 <td>X</td>
 </tr>

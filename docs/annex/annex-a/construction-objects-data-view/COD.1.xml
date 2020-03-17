@@ -11,6 +11,9 @@
   <cnf:entity select="IfcApplication">
     <cnf:attribute select="ApplicationDeveloper" exp-attribute="attribute-tag" />
   </cnf:entity>
+  <cnf:entity select="IfcAppliedValue">
+    <cnf:attribute select="UnitBasis" exp-attribute="attribute-tag" />
+  </cnf:entity>
   <cnf:entity select="IfcClassification">
     <cnf:attribute select="ReferenceTokens" exp-attribute="double-tag" />
     <cnf:inverse select="HasReferences" exp-attribute="double-tag" />
@@ -23,6 +26,18 @@
     <cnf:attribute select="UnitsInContext" exp-attribute="attribute-tag" />
     <cnf:inverse select="IsDefinedBy" exp-attribute="double-tag" />
     <cnf:inverse select="Declares" exp-attribute="double-tag" />
+  </cnf:entity>
+  <cnf:entity select="IfcConversionBasedUnit">
+    <cnf:attribute select="ConversionFactor" exp-attribute="attribute-tag" />
+  </cnf:entity>
+  <cnf:entity select="IfcDerivedUnitElement">
+    <cnf:attribute select="Unit" exp-attribute="attribute-tag" />
+  </cnf:entity>
+  <cnf:entity select="IfcDocumentReference">
+    <cnf:attribute select="ReferencedDocument" exp-attribute="attribute-tag" />
+  </cnf:entity>
+  <cnf:entity select="IfcExternalReferenceRelationship">
+    <cnf:attribute select="RelatingReference" exp-attribute="attribute-tag" />
   </cnf:entity>
   <cnf:entity select="IfcLibraryReference">
     <cnf:attribute select="ReferencedLibrary" exp-attribute="attribute-tag" />
@@ -48,6 +63,9 @@
   </cnf:entity>
   <cnf:entity select="IfcMaterialProperties">
     <cnf:attribute select="Material" keep="false" />
+  </cnf:entity>
+  <cnf:entity select="IfcNamedUnit">
+    <cnf:attribute select="Dimensions" exp-attribute="attribute-tag" />
   </cnf:entity>
   <cnf:entity select="IfcObject">
     <cnf:inverse select="IsDeclaredBy" exp-attribute="attribute-tag" />
@@ -95,5 +113,8 @@
   </cnf:entity>
   <cnf:entity select="IfcRoot">
     <cnf:attribute select="OwnerHistory" exp-attribute="attribute-tag" />
+  </cnf:entity>
+  <cnf:entity select="IfcSimplePropertyTemplate">
+    <cnf:attribute select="Enumerators" exp-attribute="attribute-tag" />
   </cnf:entity>
 </cnf:configuration>
