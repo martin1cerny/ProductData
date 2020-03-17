@@ -69,6 +69,11 @@
 	}
 	
 
+	public class IfcProject extends IfcContext
+	{
+	}
+	
+
 	public class IfcProjectLibrary extends IfcContext
 	{
 	}
@@ -570,13 +575,6 @@
 	{
 		private string Name;
 		private string Description;
-	}
-	
-
-	public class IfcObjectPlacement extends IfcBase
-	{
-		private IfcProduct[] PlacesObject;
-		private IfcLocalPlacement[] ReferencedByPlacements;
 	}
 	
 

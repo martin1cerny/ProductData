@@ -416,9 +416,10 @@ END_ENTITY;
 
 ENTITY IfcContext
  ABSTRACT SUPERTYPE OF (ONEOF
-    (IfcProjectLibrary))
+    (IfcProject
+    ,IfcProjectLibrary))
  SUBTYPE OF (IfcObjectDefinition);
-	ObjectType : OPTIONAL IfcStrippedOptional;
+	ObjectType : OPTIONAL IfcLabel;
 	LongName : OPTIONAL IfcStrippedOptional;
 	Phase : OPTIONAL IfcLabel;
 	RepresentationContexts : OPTIONAL SET [1:?] OF IfcStrippedOptional;
@@ -696,7 +697,7 @@ ENTITY IfcObject
     (IfcGroup
     ,IfcProduct))
  SUBTYPE OF (IfcObjectDefinition);
-	ObjectType : OPTIONAL IfcLabel;
+	ObjectType : OPTIONAL IfcStrippedOptional;
  INVERSE
 	IsTypedBy : SET [0:1] OF IfcRelDefinesByType FOR RelatedObjects;
 	IsDefinedBy : SET [0:?] OF IfcRelDefinesByProperties FOR RelatedObjects;
@@ -714,12 +715,6 @@ ENTITY IfcObjectDefinition
 	HasAssignments : SET [0:?] OF IfcRelAssigns FOR RelatedObjects;
 	HasContext : SET [0:1] OF IfcRelDeclares FOR RelatedDefinitions;
 	HasAssociations : SET [0:?] OF IfcRelAssociates FOR RelatedObjects;
-END_ENTITY;
-
-ENTITY IfcObjectPlacement
- ABSTRACT;
- INVERSE
-	PlacesObject : SET [0:?] OF IfcProduct FOR ObjectPlacement;
 END_ENTITY;
 
 ENTITY IfcOrganization;
@@ -780,7 +775,7 @@ END_ENTITY;
 ENTITY IfcProduct
  ABSTRACT
  SUBTYPE OF (IfcObject);
-	ObjectPlacement : OPTIONAL IfcObjectPlacement;
+	ObjectPlacement : OPTIONAL IfcStrippedOptional;
 	Representation : OPTIONAL IfcStrippedOptional;
  INVERSE
 	ReferencedBy : SET [0:?] OF IfcRelAssignsToProduct FOR RelatingProduct;
@@ -796,6 +791,17 @@ ENTITY IfcProfileDef;
 	ProfileName : OPTIONAL IfcStrippedOptional;
  INVERSE
 	HasExternalReference : SET [0:?] OF IfcExternalReferenceRelationship FOR RelatedResourceObjects;
+END_ENTITY;
+
+ENTITY IfcProject
+ SUBTYPE OF (IfcContext);
+ WHERE
+	HasName : EXISTS(SELF\IfcRoot.Name);
+	CorrectContext : NOT(EXISTS(SELF\IfcContext.RepresentationContexts)) OR
+(SIZEOF(QUERY(Temp <* SELF\IfcContext.RepresentationContexts |
+ 'IFC4.IFCGEOMETRICREPRESENTATIONSUBCONTEXT' IN TYPEOF(Temp)
+  )) = 0);
+	NoDecomposition : SIZEOF(SELF\IfcObjectDefinition.Decomposes) = 0;
 END_ENTITY;
 
 ENTITY IfcProjectLibrary
@@ -1043,7 +1049,7 @@ ENTITY IfcTypeObject
     (IfcTypeProduct))
  SUBTYPE OF (IfcObjectDefinition);
 	ApplicableOccurrence : OPTIONAL IfcStrippedOptional;
-	HasPropertySets : OPTIONAL SET [1:?] OF IfcStrippedOptional;
+	HasPropertySets : OPTIONAL SET [1:?] OF IfcPropertySetDefinition;
  INVERSE
 	Types : SET [0:1] OF IfcRelDefinesByType FOR RelatingType;
  WHERE

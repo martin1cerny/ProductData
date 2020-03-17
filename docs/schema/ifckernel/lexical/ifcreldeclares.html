@@ -11,7 +11,7 @@
     <title>IfcRelDeclares</title>
 
     <style type="text/css">
-      body { counter-reset: index1 5 index2 1 index3 3 index4 21 index5 0; }
+      body { counter-reset: index1 5 index2 1 index3 3 index4 22 index5 0; }
     </style>
   </head>
 
@@ -20,7 +20,7 @@
 
 <script type="text/javascript">
 <!--
-    parent.index.location.replace("../../toc-5.html#5.1.3.22");
+    parent.index.location.replace("../../toc-5.html#5.1.3.23");
 //-->
 </script>
 
@@ -40,22 +40,22 @@
 </details>
 <section>
 <h5 class="num">Semantic definitions at the entity</h5>
-<details open="open"><summary>Entity definition</summary><p>The objectified relationship <span class="self-ref">IfcRelDeclares</span> handles the declaration of objects (subtypes of <a href="../../ifckernel/lexical/ifcobject.html">IfcObject</a>) or properties (subtypes of <a href="../../ifckernel/lexical/ifcpropertydefinition.html">IfcPropertyDefinition</a>) to a project or project library (represented by <i>IfcProject</i>, or <a href="../../ifckernel/lexical/ifcprojectlibrary.html">IfcProjectLibrary</a>).</p>
+<details open="open"><summary>Entity definition</summary><p>The objectified relationship <span class="self-ref">IfcRelDeclares</span> handles the declaration of objects (subtypes of <a href="../../ifckernel/lexical/ifcobject.html">IfcObject</a>) or properties (subtypes of <a href="../../ifckernel/lexical/ifcpropertydefinition.html">IfcPropertyDefinition</a>) to a project or project library (represented by <a href="../../ifckernel/lexical/ifcproject.html">IfcProject</a>, or <a href="../../ifckernel/lexical/ifcprojectlibrary.html">IfcProjectLibrary</a>).</p>
 <p>The relationship handles the assignment of other objects, like <i>IfcActor</i>, or <a href="../../ifckernel/lexical/ifctypeobject.html">IfcTypeObject</a> to the project, or project libary. The attribute <i>RelatedDefinitions</i> provides the references to the first level objects, that are the elements within the context. All other objects that relate to the first level objects are also defined in the context.</p>
 <blockquote class="note">
-<p>NOTE  Every object (as subtype of <a href="../../ifckernel/lexical/ifcobject.html">IfcObject</a>) has to be declared within the context of a single <i>IfcProject</i>, or of a <a href="../../ifckernel/lexical/ifcprojectlibrary.html">IfcProjectLibrary</a> assigned to a single <i>IfcProject</i>. This declaration is transitive. For example: the <i>IfcWorkPlan</i> as first level object is declared within the context of <i>IfcProject</i> via <span class="self-ref">IfcRelDeclares</span>, all related <i>IfcWorkSchedule</i>'s are related to the context in a transitive way through <i>IfcWorkPlan</i>.</p>
+<p>NOTE  Every object (as subtype of <a href="../../ifckernel/lexical/ifcobject.html">IfcObject</a>) has to be declared within the context of a single <a href="../../ifckernel/lexical/ifcproject.html">IfcProject</a>, or of a <a href="../../ifckernel/lexical/ifcprojectlibrary.html">IfcProjectLibrary</a> assigned to a single <a href="../../ifckernel/lexical/ifcproject.html">IfcProject</a>. This declaration is transitive. For example: the <i>IfcWorkPlan</i> as first level object is declared within the context of <a href="../../ifckernel/lexical/ifcproject.html">IfcProject</a> via <span class="self-ref">IfcRelDeclares</span>, all related <i>IfcWorkSchedule</i>'s are related to the context in a transitive way through <i>IfcWorkPlan</i>.</p>
 </blockquote>
 <blockquote class="note">
-<p>NOTE  The assignment excludes subtypes of <a href="../../ifckernel/lexical/ifcproduct.html">IfcProduct</a>'s, these are assigned to the <i>IfcProject</i> using the spatial structure approach through <i>IfcSpatialStructureElement</i>(s), where the outer container element such as <i>IfcSite</i> or <i>IfcBuilding</i> has an <i>IfcRelAggregates</i> relationship with the <i>IfcProject</i>.</p>
+<p>NOTE  The assignment excludes subtypes of <a href="../../ifckernel/lexical/ifcproduct.html">IfcProduct</a>'s, these are assigned to the <a href="../../ifckernel/lexical/ifcproject.html">IfcProject</a> using the spatial structure approach through <i>IfcSpatialStructureElement</i>(s), where the outer container element such as <i>IfcSite</i> or <i>IfcBuilding</i> has an <i>IfcRelAggregates</i> relationship with the <a href="../../ifckernel/lexical/ifcproject.html">IfcProject</a>.</p>
 </blockquote>
-<p>The <i>RelatingContext</i> is the project, or project library that comprises all elements. The unit assignments and the presentation contexts defined at <i>IfcProject</i> or <a href="../../ifckernel/lexical/ifcprojectlibrary.html">IfcProjectLibrary</a> apply to all these elements.</p>
+<p>The <i>RelatingContext</i> is the project, or project library that comprises all elements. The unit assignments and the presentation contexts defined at <a href="../../ifckernel/lexical/ifcproject.html">IfcProject</a> or <a href="../../ifckernel/lexical/ifcprojectlibrary.html">IfcProjectLibrary</a> apply to all these elements.</p>
 
 </details>
 <details open="open"><summary>Attribute definitions</summary><table class="attributes">
 <tr><th>#</th><th>Attribute</th><th>Type</th><th>Cardinality</th><th>Description</th>
 <th>C</th></tr>
 <tr><td>5</td><td>RelatingContext</td><td><a href="../../ifckernel/lexical/ifccontext.html">IfcContext</a></td><td></td><td>
-Reference to the <i>IfcProject</i> to which additional information is assigned.
+Reference to the <a href="../../ifckernel/lexical/ifcproject.html">IfcProject</a> to which additional information is assigned.
 </td><td>X</td></tr>
 <tr><td>6</td><td>RelatedDefinitions</td><td><a href="../../ifckernel/lexical/ifcdefinitionselect.html">IfcDefinitionSelect</a></td><td>S[1:?]</td><td>
 Set of object or property definitions that are assigned to a context and to which the unit and representation context definitions of that context apply.
@@ -100,7 +100,7 @@ Optional description, provided for exchanging informative comments.
 <tr><td colspan="6"><i><a href="../../ifckernel/lexical/ifcrelationship.html">IfcRelationship</a></i></td></tr>
 <tr><td colspan="6"><a href="../../ifckernel/lexical/ifcreldeclares.html">IfcRelDeclares</a></td></tr>
 <tr><td>5</td><td>RelatingContext</td><td><a href="../../ifckernel/lexical/ifccontext.html">IfcContext</a></td><td></td><td>
-Reference to the <i>IfcProject</i> to which additional information is assigned.
+Reference to the <a href="../../ifckernel/lexical/ifcproject.html">IfcProject</a> to which additional information is assigned.
 </td><td>X</td></tr>
 <tr><td>6</td><td>RelatedDefinitions</td><td><a href="../../ifckernel/lexical/ifcdefinitionselect.html">IfcDefinitionSelect</a></td><td>S[1:?]</td><td>
 Set of object or property definitions that are assigned to a context and to which the unit and representation context definitions of that context apply.

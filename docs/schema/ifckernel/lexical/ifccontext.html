@@ -41,7 +41,7 @@
 </details>
 <section>
 <h5 class="num">Semantic definitions at the entity</h5>
-<details open="open"><summary>Entity definition</summary><p><span class="self-ref">IfcContext</span> is the generalization of a project context in which objects, type objects, property sets, and properties are defined. The <i>IfcProject</i> as subtype of <span class="self-ref">IfcContext</span> provides the context for all information on a construction project, it may include one or several <a href="../../ifckernel/lexical/ifcprojectlibrary.html">IfcProjectLibrary</a>'s as subtype of <span class="self-ref">IfcContext</span> to register the included libraries for the project. A library of products that is referenced is declared within the <a href="../../ifckernel/lexical/ifcprojectlibrary.html">IfcProjectLibrary</a> as the context of that library.</p>
+<details open="open"><summary>Entity definition</summary><p><span class="self-ref">IfcContext</span> is the generalization of a project context in which objects, type objects, property sets, and properties are defined. The <a href="../../ifckernel/lexical/ifcproject.html">IfcProject</a> as subtype of <span class="self-ref">IfcContext</span> provides the context for all information on a construction project, it may include one or several <a href="../../ifckernel/lexical/ifcprojectlibrary.html">IfcProjectLibrary</a>'s as subtype of <span class="self-ref">IfcContext</span> to register the included libraries for the project. A library of products that is referenced is declared within the <a href="../../ifckernel/lexical/ifcprojectlibrary.html">IfcProjectLibrary</a> as the context of that library.</p>
 <p>Context definitions can be named, using the inherited <i>Name</i> attribute, which should be a user recognizable key or number for the context. The <i>LongName</i> can add a full name. Further explanations to the context can be given using the inherited <i>Description</i> attribute.</p>
 <p>A Context is declared by the relationship object <a href="../../ifckernel/lexical/ifcreldeclares.html">IfcRelDeclares</a> that refers to the corresponding objects within the context. More specific relationships are introduced at the level of subtypes.</p>
 
@@ -49,8 +49,12 @@
 <details open="open"><summary>Attribute definitions</summary><table class="attributes">
 <tr><th>#</th><th>Attribute</th><th>Type</th><th>Cardinality</th><th>Description</th>
 <th>C</th></tr>
-<tr><td>5</td><td>ObjectType</td><td><span class="self-ref">-</span></td><td></td><td>
-<i>This attribute is out of scope for this model view definition and shall not be set.</i></td><td></td></tr>
+<tr><td>5</td><td>ObjectType</td><td><a href="../../ifcmeasureresource/lexical/ifclabel.html">IfcLabel</a></td><td>? </td><td>
+The object type denotes a particular type that indicates the object further. The use has to be established at the level of instantiable subtypes.
+<blockquote class="note">
+NOTE  Subtypes of <span class="self-ref">IfcContext</span> do not introduce a <i>PredefinedType</i> attribute, therefore the usage of <i>ObjectType</i> is not bound to the selection of USERDEFINED within the <i>PredefinedType</i> enumaration.
+</blockquote>
+</td><td>X</td></tr>
 <tr><td>6</td><td>LongName</td><td><span class="self-ref">-</span></td><td></td><td>
 <i>This attribute is out of scope for this model view definition and shall not be set.</i></td><td></td></tr>
 <tr><td>7</td><td>Phase</td><td><a href="../../ifcmeasureresource/lexical/ifclabel.html">IfcLabel</a></td><td>? </td><td>
@@ -63,10 +67,10 @@ Current project phase, or life-cycle phase of this project. Applicable values ha
 <tr><td></td><td><i>IsDefinedBy</i></td><td><a href="../../ifckernel/lexical/ifcreldefinesbyproperties.html">IfcRelDefinesByProperties</a><br/>@RelatedObjects</td><td>S[0:?]</td><td>Set of relationships to property set definitions attached to this context. Those statically or dynamically defined properties contain alphanumeric information content that further defines the context.
 
 
-</td><td></td></tr>
+</td><td>X</td></tr>
 <tr><td></td><td><i>Declares</i></td><td><a href="../../ifckernel/lexical/ifcreldeclares.html">IfcRelDeclares</a><br/>@RelatingContext</td><td>S[0:?]</td><td>Reference to the <a href="../../ifckernel/lexical/ifcreldeclares.html">IfcRelDeclares</a> relationship that assigns the uppermost entities of includes hierarchies to this context instance.
 <blockquote class="note">
-NOTE  The spatial hiearchy is assigned to <i>IfcProject</i> using the <i>IfcRelAggregates</i> relationship. This is a single exception due to compatibility reasons with earlier releases.
+NOTE  The spatial hiearchy is assigned to <a href="../../ifckernel/lexical/ifcproject.html">IfcProject</a> using the <i>IfcRelAggregates</i> relationship. This is a single exception due to compatibility reasons with earlier releases.
 </blockquote>
 </td><td>X</td></tr>
 </table>
@@ -76,9 +80,10 @@ NOTE  The spatial hiearchy is assigned to <i>IfcProject</i> using the <i>IfcRel
 <h5 class="num">Inherited definitions from supertypes</h5>
 <details open="open"><summary>Entity inheritance</summary><img src="../../../diagrams/ifccontext.png" usemap="#f"/>
 <map name="f">
-<area shape="rect" coords="42,78,230,90" href="../../../schema/ifckernel/lexical/ifcprojectlibrary.html" alt="IfcProjectLibrary" />
-<area shape="rect" coords="18,30,254,42" href="../../../schema/ifckernel/lexical/ifcobjectdefinition.html" alt="IfcObjectDefinition" />
-<area shape="rect" coords="6,6,266,18" href="../../../schema/ifckernel/lexical/ifcroot.html" alt="IfcRoot" />
+<area shape="rect" coords="42,78,230,90" href="../../../schema/ifckernel/lexical/ifcproject.html" alt="IfcProject" />
+<area shape="rect" coords="302,78,490,90" href="../../../schema/ifckernel/lexical/ifcprojectlibrary.html" alt="IfcProjectLibrary" />
+<area shape="rect" coords="18,30,514,42" href="../../../schema/ifckernel/lexical/ifcobjectdefinition.html" alt="IfcObjectDefinition" />
+<area shape="rect" coords="6,6,526,18" href="../../../schema/ifckernel/lexical/ifcroot.html" alt="IfcRoot" />
 </map>
 </details>
 <details><summary>Attribute inheritance</summary><table class="attributes">
@@ -109,8 +114,12 @@ Optional description, provided for exchanging informative comments.
 <tr><td></td><td><i>HasAssociations</i></td><td><a href="../../ifckernel/lexical/ifcrelassociates.html">IfcRelAssociates</a><br/>@RelatedObjects</td><td>S[0:?]</td><td>Reference to the relationship objects, that associates external references or other resource definitions to the object.. Examples are the association to library, documentation or classification.
 </td><td>X</td></tr>
 <tr><td colspan="6"><i><a href="../../ifckernel/lexical/ifccontext.html">IfcContext</a></i></td></tr>
-<tr><td>5</td><td>ObjectType</td><td><span class="self-ref">-</span></td><td></td><td>
-<i>This attribute is out of scope for this model view definition and shall not be set.</i></td><td></td></tr>
+<tr><td>5</td><td>ObjectType</td><td><a href="../../ifcmeasureresource/lexical/ifclabel.html">IfcLabel</a></td><td>? </td><td>
+The object type denotes a particular type that indicates the object further. The use has to be established at the level of instantiable subtypes.
+<blockquote class="note">
+NOTE  Subtypes of <span class="self-ref">IfcContext</span> do not introduce a <i>PredefinedType</i> attribute, therefore the usage of <i>ObjectType</i> is not bound to the selection of USERDEFINED within the <i>PredefinedType</i> enumaration.
+</blockquote>
+</td><td>X</td></tr>
 <tr><td>6</td><td>LongName</td><td><span class="self-ref">-</span></td><td></td><td>
 <i>This attribute is out of scope for this model view definition and shall not be set.</i></td><td></td></tr>
 <tr><td>7</td><td>Phase</td><td><a href="../../ifcmeasureresource/lexical/ifclabel.html">IfcLabel</a></td><td>? </td><td>
@@ -123,10 +132,10 @@ Current project phase, or life-cycle phase of this project. Applicable values ha
 <tr><td></td><td><i>IsDefinedBy</i></td><td><a href="../../ifckernel/lexical/ifcreldefinesbyproperties.html">IfcRelDefinesByProperties</a><br/>@RelatedObjects</td><td>S[0:?]</td><td>Set of relationships to property set definitions attached to this context. Those statically or dynamically defined properties contain alphanumeric information content that further defines the context.
 
 
-</td><td></td></tr>
+</td><td>X</td></tr>
 <tr><td></td><td><i>Declares</i></td><td><a href="../../ifckernel/lexical/ifcreldeclares.html">IfcRelDeclares</a><br/>@RelatingContext</td><td>S[0:?]</td><td>Reference to the <a href="../../ifckernel/lexical/ifcreldeclares.html">IfcRelDeclares</a> relationship that assigns the uppermost entities of includes hierarchies to this context instance.
 <blockquote class="note">
-NOTE  The spatial hiearchy is assigned to <i>IfcProject</i> using the <i>IfcRelAggregates</i> relationship. This is a single exception due to compatibility reasons with earlier releases.
+NOTE  The spatial hiearchy is assigned to <a href="../../ifckernel/lexical/ifcproject.html">IfcProject</a> using the <i>IfcRelAggregates</i> relationship. This is a single exception due to compatibility reasons with earlier releases.
 </blockquote>
 </td><td>X</td></tr>
 </table>
@@ -139,6 +148,16 @@ NOTE  The spatial hiearchy is assigned to <i>IfcProject</i> using the <i>IfcRel
 &nbsp;&nbsp;&lt;xs:complexContent&gt;<br/>
 &nbsp;&nbsp;&nbsp;&lt;xs:extension base=&quot;ifc:<a href="../../ifckernel/lexical/ifcobjectdefinition.html">IfcObjectDefinition</a>&quot;&gt;<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;&lt;xs:sequence&gt;<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xs:element name=&quot;IsDefinedBy&quot; nillable=&quot;true&quot; minOccurs=&quot;0&quot;&gt;<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xs:complexType&gt;<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xs:sequence&gt;<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xs:element ref=&quot;ifc:<a href="../../ifckernel/lexical/ifcreldefinesbyproperties.html">IfcRelDefinesByProperties</a>&quot; minOccurs=&quot;0&quot; maxOccurs=&quot;unbounded&quot;/&gt;<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/xs:sequence&gt;<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xs:attribute ref=&quot;ifc:itemType&quot; fixed=&quot;ifc:<a href="../../ifckernel/lexical/ifcreldefinesbyproperties.html">IfcRelDefinesByProperties</a>&quot;/&gt;<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xs:attribute ref=&quot;ifc:cType&quot; fixed=&quot;set&quot;/&gt;<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xs:attribute ref=&quot;ifc:arraySize&quot; use=&quot;optional&quot;/&gt;<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/xs:complexType&gt;<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/xs:element&gt;<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xs:element name=&quot;Declares&quot; nillable=&quot;true&quot; minOccurs=&quot;0&quot;&gt;<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xs:complexType&gt;<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xs:sequence&gt;<br/>
@@ -150,6 +169,7 @@ NOTE  The spatial hiearchy is assigned to <i>IfcProject</i> using the <i>IfcRel
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/xs:complexType&gt;<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/xs:element&gt;<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;&lt;/xs:sequence&gt;<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&lt;xs:attribute name=&quot;ObjectType&quot; type=&quot;ifc:<a href="../../ifcmeasureresource/lexical/ifclabel.html">IfcLabel</a>&quot; use=&quot;optional&quot;/&gt;<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;&lt;xs:attribute name=&quot;Phase&quot; type=&quot;ifc:<a href="../../ifcmeasureresource/lexical/ifclabel.html">IfcLabel</a>&quot; use=&quot;optional&quot;/&gt;<br/>
 &nbsp;&nbsp;&nbsp;&lt;/xs:extension&gt;<br/>
 &nbsp;&nbsp;&lt;/xs:complexContent&gt;<br/>
@@ -157,9 +177,9 @@ NOTE  The spatial hiearchy is assigned to <i>IfcProject</i> using the <i>IfcRel
 </code></div></details>
 <details><summary>EXPRESS Specification</summary><div class="express"><code class="express">
 <span class="keyword">ENTITY</span> IfcContext<br/>
-&nbsp;<span class="keyword">ABSTRACT</span> <span class="keyword">SUPERTYPE OF</span>(<a href="../../ifckernel/lexical/ifcprojectlibrary.html">IfcProjectLibrary</a>)<br/>
+&nbsp;<span class="keyword">ABSTRACT</span> <span class="keyword">SUPERTYPE OF</span>(<span class="keyword">ONEOF</span>(<a href="../../ifckernel/lexical/ifcproject.html">IfcProject</a>, <a href="../../ifckernel/lexical/ifcprojectlibrary.html">IfcProjectLibrary</a>))<br/>
 &nbsp;<span class="keyword">SUBTYPE OF</span> (<a href="../../ifckernel/lexical/ifcobjectdefinition.html">IfcObjectDefinition</a>)<b>;</b><br/>
-&nbsp;&nbsp;ObjectType : <span class="keyword">OPTIONAL</span> <span class="self-ref">IfcStrippedOptional</span>;<br/>
+&nbsp;&nbsp;ObjectType : <span class="keyword">OPTIONAL</span> <a href="../../ifcmeasureresource/lexical/ifclabel.html">IfcLabel</a>;<br/>
 &nbsp;&nbsp;LongName : <span class="keyword">OPTIONAL</span> <span class="self-ref">IfcStrippedOptional</span>;<br/>
 &nbsp;&nbsp;Phase : <span class="keyword">OPTIONAL</span> <a href="../../ifcmeasureresource/lexical/ifclabel.html">IfcLabel</a>;<br/>
 &nbsp;&nbsp;RepresentationContexts : <span class="keyword">OPTIONAL</span> <span class="keyword">SET</span> [1:?] <span class="keyword">OF</span> <span class="self-ref">IfcStrippedOptional</span>;<br/>

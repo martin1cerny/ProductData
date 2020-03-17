@@ -249,9 +249,9 @@ SCHEMA IFC4;
 <br/>
 <a name="ifccontext" />
 <span class="keyword">ENTITY</span> IfcContext<br/>
-&nbsp;<span class="keyword">ABSTRACT</span> <span class="keyword">SUPERTYPE OF</span>(<a href="#ifcprojectlibrary">IfcProjectLibrary</a>)<br/>
+&nbsp;<span class="keyword">ABSTRACT</span> <span class="keyword">SUPERTYPE OF</span>(<span class="keyword">ONEOF</span>(<a href="#ifcproject">IfcProject</a>, <a href="#ifcprojectlibrary">IfcProjectLibrary</a>))<br/>
 &nbsp;<span class="keyword">SUBTYPE OF</span> (<a href="#ifcobjectdefinition">IfcObjectDefinition</a>)<b>;</b><br/>
-&nbsp;&nbsp;ObjectType : <span class="keyword">OPTIONAL</span> <span class="self-ref">IfcStrippedOptional</span>;<br/>
+&nbsp;&nbsp;ObjectType : <span class="keyword">OPTIONAL</span> <a href="#ifclabel">IfcLabel</a>;<br/>
 &nbsp;&nbsp;LongName : <span class="keyword">OPTIONAL</span> <span class="self-ref">IfcStrippedOptional</span>;<br/>
 &nbsp;&nbsp;Phase : <span class="keyword">OPTIONAL</span> <a href="#ifclabel">IfcLabel</a>;<br/>
 &nbsp;&nbsp;RepresentationContexts : <span class="keyword">OPTIONAL</span> <span class="keyword">SET</span> [1:?] <span class="keyword">OF</span> <span class="self-ref">IfcStrippedOptional</span>;<br/>
@@ -532,7 +532,7 @@ SCHEMA IFC4;
 <span class="keyword">ENTITY</span> IfcObject<br/>
 &nbsp;<span class="keyword">ABSTRACT</span> <span class="keyword">SUPERTYPE OF</span>(<span class="keyword">ONEOF</span>(<a href="#ifcgroup">IfcGroup</a>, <a href="#ifcproduct">IfcProduct</a>))<br/>
 &nbsp;<span class="keyword">SUBTYPE OF</span> (<a href="#ifcobjectdefinition">IfcObjectDefinition</a>)<b>;</b><br/>
-&nbsp;&nbsp;ObjectType : <span class="keyword">OPTIONAL</span> <a href="#ifclabel">IfcLabel</a>;<br/>
+&nbsp;&nbsp;ObjectType : <span class="keyword">OPTIONAL</span> <span class="self-ref">IfcStrippedOptional</span>;<br/>
 &nbsp;<span class="keyword">INVERSE</span><br/>
 &nbsp;&nbsp;IsTypedBy : <span class="keyword">SET</span> [0:1] OF <a href="#ifcreldefinesbytype">IfcRelDefinesByType</a> <span class="keyword">FOR</span> RelatedObjects;<br/>
 &nbsp;&nbsp;IsDefinedBy : <span class="keyword">SET</span> [0:?] OF <a href="#ifcreldefinesbyproperties">IfcRelDefinesByProperties</a> <span class="keyword">FOR</span> RelatedObjects;<br/>
@@ -547,12 +547,6 @@ SCHEMA IFC4;
 &nbsp;&nbsp;HasAssignments : <span class="keyword">SET</span> [0:?] OF <a href="#ifcrelassigns">IfcRelAssigns</a> <span class="keyword">FOR</span> RelatedObjects;<br/>
 &nbsp;&nbsp;HasContext : <span class="keyword">SET</span> [0:1] OF <a href="#ifcreldeclares">IfcRelDeclares</a> <span class="keyword">FOR</span> RelatedDefinitions;<br/>
 &nbsp;&nbsp;HasAssociations : <span class="keyword">SET</span> [0:?] OF <a href="#ifcrelassociates">IfcRelAssociates</a> <span class="keyword">FOR</span> RelatedObjects;<br/>
-<span class="keyword">END_ENTITY;</span><br/>
-<br/>
-<a name="ifcobjectplacement" />
-<span class="keyword">ENTITY</span> IfcObjectPlacement<br/>
-&nbsp;<span class="keyword">INVERSE</span><br/>
-&nbsp;&nbsp;PlacesObject : <span class="keyword">SET</span> [0:?] <span class="keyword">OF</span> <a href="#ifcproduct">IfcProduct</a> <span class="keyword">FOR</span> ObjectPlacement;<br/>
 <span class="keyword">END_ENTITY;</span><br/>
 <br/>
 <a name="ifcorganization" />
@@ -614,7 +608,7 @@ SCHEMA IFC4;
 <a name="ifcproduct" />
 <span class="keyword">ENTITY</span> IfcProduct<br/>
 &nbsp;<span class="keyword">SUBTYPE OF</span> (<a href="#ifcobject">IfcObject</a>)<b>;</b><br/>
-&nbsp;&nbsp;ObjectPlacement : <span class="keyword">OPTIONAL</span> <a href="#ifcobjectplacement">IfcObjectPlacement</a>;<br/>
+&nbsp;&nbsp;ObjectPlacement : <span class="keyword">OPTIONAL</span> <span class="self-ref">IfcStrippedOptional</span>;<br/>
 &nbsp;&nbsp;Representation : <span class="keyword">OPTIONAL</span> <span class="self-ref">IfcStrippedOptional</span>;<br/>
 &nbsp;<span class="keyword">INVERSE</span><br/>
 &nbsp;&nbsp;ReferencedBy : <span class="keyword">SET</span> [0:?] OF <a href="#ifcrelassignstoproduct">IfcRelAssignsToProduct</a> <span class="keyword">FOR</span> RelatingProduct;<br/>
@@ -631,6 +625,15 @@ SCHEMA IFC4;
 &nbsp;<span class="keyword">INVERSE</span><br/>
 &nbsp;&nbsp;HasExternalReference : <span class="keyword">SET</span> [0:?] OF <a href="#ifcexternalreferencerelationship">IfcExternalReferenceRelationship</a> <span class="keyword">FOR</span> RelatedResourceObjects;<br/>
 <span class="keyword">END_ENTITY;</span><br/>
+<br/>
+<a name="ifcproject" />
+<span class="keyword">ENTITY</span> IfcProject<br/>
+&nbsp;<span class="keyword">SUBTYPE OF</span> (<a href="#ifccontext">IfcContext</a>)<b>;</b><br/>
+&nbsp;<span class="keyword">WHERE</span><br/>
+&nbsp;&nbsp;HasName : EXISTS(SELF\<a href="#ifcroot">IfcRoot</a>.Name);<br/>&nbsp;&nbsp;CorrectContext : NOT(EXISTS(SELF\<a href="#ifccontext">IfcContext</a>.RepresentationContexts)) OR<br/>
+(SIZEOF(QUERY(Temp &lt;* SELF\<a href="#ifccontext">IfcContext</a>.RepresentationContexts |<br/>
+ &#39;IFCREPRESENTATIONRESOURCE.<span class="self-ref">IfcStrippedOptional</span>&#39; IN TYPEOF(Temp)<br/>
+  )) = 0);<br/>&nbsp;&nbsp;NoDecomposition : SIZEOF(SELF\<a href="#ifcobjectdefinition">IfcObjectDefinition</a>.Decomposes) = 0;<br/><span class="keyword">END_ENTITY;</span><br/>
 <br/>
 <a name="ifcprojectlibrary" />
 <span class="keyword">ENTITY</span> IfcProjectLibrary<br/>
@@ -866,7 +869,7 @@ SCHEMA IFC4;
 &nbsp;<span class="keyword">SUPERTYPE OF</span>(<a href="#ifctypeproduct">IfcTypeProduct</a>)<br/>
 &nbsp;<span class="keyword">SUBTYPE OF</span> (<a href="#ifcobjectdefinition">IfcObjectDefinition</a>)<b>;</b><br/>
 &nbsp;&nbsp;ApplicableOccurrence : <span class="keyword">OPTIONAL</span> <span class="self-ref">IfcStrippedOptional</span>;<br/>
-&nbsp;&nbsp;HasPropertySets : <span class="keyword">OPTIONAL</span> <span class="keyword">SET</span> [1:?] <span class="keyword">OF</span> <span class="self-ref">IfcStrippedOptional</span>;<br/>
+&nbsp;&nbsp;HasPropertySets : <span class="keyword">OPTIONAL</span> <span class="keyword">SET</span> [1:?] <span class="keyword">OF</span> <a href="#ifcpropertysetdefinition">IfcPropertySetDefinition</a>;<br/>
 &nbsp;<span class="keyword">INVERSE</span><br/>
 &nbsp;&nbsp;Types : <span class="keyword">SET</span> [0:1] OF <a href="#ifcreldefinesbytype">IfcRelDefinesByType</a> <span class="keyword">FOR</span> RelatingType;<br/>
 &nbsp;<span class="keyword">WHERE</span><br/>
@@ -901,7 +904,7 @@ SCHEMA IFC4;
 <p>
 <span class="keyword">FUNCTION</span> IfcCorrectObjectAssignment<br/>
 
-&nbsp;&nbsp;(Constraint: <span class="self-ref">IfcStrippedOptional</span>; Objects : SET[1:?] OF <a href="#ifcobjectdefinition">IfcObjectDefinition</a>)<br/>&nbsp;&nbsp;: LOGICAL ;<br/>&nbsp;&nbsp;<br/>LOCAL<br/>&nbsp;&nbsp;Count : INTEGER := 0;<br/>END_LOCAL;<br/><br/>&nbsp;&nbsp;&nbsp;&nbsp;IF NOT(EXISTS(Constraint)) THEN <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;RETURN(TRUE);<br/>&nbsp;&nbsp;&nbsp;&nbsp;END_IF;<br/>&nbsp;&nbsp;<br/>&nbsp;&nbsp;&nbsp;&nbsp;CASE Constraint OF<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="self-ref">IfcStrippedOptional</span>.NOTDEFINED : RETURN(TRUE);<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="self-ref">IfcStrippedOptional</span>.PRODUCT :<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;BEGIN<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Count := SIZEOF(QUERY(temp &lt;* Objects | NOT('IFCKERNEL.<a href="#ifcproduct">IfcProduct</a>' IN TYPEOF(temp))));<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;RETURN(Count = 0);<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;END;<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="self-ref">IfcStrippedOptional</span>.PROCESS :<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;BEGIN<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Count := SIZEOF(QUERY(temp &lt;* Objects | NOT('IFCKERNEL.<span class="self-ref">IfcStrippedOptional</span>' IN TYPEOF(temp))));<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;RETURN(Count = 0);<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;END;<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="self-ref">IfcStrippedOptional</span>.CONTROL :<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;BEGIN<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Count := SIZEOF(QUERY(temp &lt;* Objects | NOT('IFCKERNEL.<span class="self-ref">IfcStrippedOptional</span>' IN TYPEOF(temp))));<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;RETURN(Count = 0);<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;END;<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="self-ref">IfcStrippedOptional</span>.RESOURCE :<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;BEGIN<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Count := SIZEOF(QUERY(temp &lt;* Objects | NOT('IFCKERNEL.<span class="self-ref">IfcStrippedOptional</span>' IN TYPEOF(temp))));<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;RETURN(Count = 0);<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;END;<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="self-ref">IfcStrippedOptional</span>.ACTOR :<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;BEGIN<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Count := SIZEOF(QUERY(temp &lt;* Objects | NOT('IFCKERNEL.<span class="self-ref">IfcStrippedOptional</span>' IN TYPEOF(temp))));<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;RETURN(Count = 0);<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;END;<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="self-ref">IfcStrippedOptional</span>.GROUP :<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;BEGIN<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Count := SIZEOF(QUERY(temp &lt;* Objects | NOT('IFCKERNEL.<a href="#ifcgroup">IfcGroup</a>' IN TYPEOF(temp))));<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;RETURN(Count = 0);<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;END;<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="self-ref">IfcStrippedOptional</span>.PROJECT :<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;BEGIN<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Count := SIZEOF(QUERY(temp &lt;* Objects | NOT('IFCKERNEL.<span class="self-ref">IfcStrippedOptional</span>' IN TYPEOF(temp))));<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;RETURN(Count = 0);<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;END;<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;OTHERWISE : RETURN(?);<br/>&nbsp;&nbsp;&nbsp;&nbsp;END_CASE;<br/>
+&nbsp;&nbsp;(Constraint: <span class="self-ref">IfcStrippedOptional</span>; Objects : SET[1:?] OF <a href="#ifcobjectdefinition">IfcObjectDefinition</a>)<br/>&nbsp;&nbsp;: LOGICAL ;<br/>&nbsp;&nbsp;<br/>LOCAL<br/>&nbsp;&nbsp;Count : INTEGER := 0;<br/>END_LOCAL;<br/><br/>&nbsp;&nbsp;&nbsp;&nbsp;IF NOT(EXISTS(Constraint)) THEN <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;RETURN(TRUE);<br/>&nbsp;&nbsp;&nbsp;&nbsp;END_IF;<br/>&nbsp;&nbsp;<br/>&nbsp;&nbsp;&nbsp;&nbsp;CASE Constraint OF<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="self-ref">IfcStrippedOptional</span>.NOTDEFINED : RETURN(TRUE);<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="self-ref">IfcStrippedOptional</span>.PRODUCT :<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;BEGIN<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Count := SIZEOF(QUERY(temp &lt;* Objects | NOT('IFCKERNEL.<a href="#ifcproduct">IfcProduct</a>' IN TYPEOF(temp))));<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;RETURN(Count = 0);<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;END;<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="self-ref">IfcStrippedOptional</span>.PROCESS :<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;BEGIN<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Count := SIZEOF(QUERY(temp &lt;* Objects | NOT('IFCKERNEL.<span class="self-ref">IfcStrippedOptional</span>' IN TYPEOF(temp))));<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;RETURN(Count = 0);<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;END;<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="self-ref">IfcStrippedOptional</span>.CONTROL :<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;BEGIN<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Count := SIZEOF(QUERY(temp &lt;* Objects | NOT('IFCKERNEL.<span class="self-ref">IfcStrippedOptional</span>' IN TYPEOF(temp))));<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;RETURN(Count = 0);<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;END;<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="self-ref">IfcStrippedOptional</span>.RESOURCE :<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;BEGIN<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Count := SIZEOF(QUERY(temp &lt;* Objects | NOT('IFCKERNEL.<span class="self-ref">IfcStrippedOptional</span>' IN TYPEOF(temp))));<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;RETURN(Count = 0);<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;END;<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="self-ref">IfcStrippedOptional</span>.ACTOR :<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;BEGIN<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Count := SIZEOF(QUERY(temp &lt;* Objects | NOT('IFCKERNEL.<span class="self-ref">IfcStrippedOptional</span>' IN TYPEOF(temp))));<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;RETURN(Count = 0);<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;END;<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="self-ref">IfcStrippedOptional</span>.GROUP :<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;BEGIN<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Count := SIZEOF(QUERY(temp &lt;* Objects | NOT('IFCKERNEL.<a href="#ifcgroup">IfcGroup</a>' IN TYPEOF(temp))));<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;RETURN(Count = 0);<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;END;<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="self-ref">IfcStrippedOptional</span>.PROJECT :<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;BEGIN<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Count := SIZEOF(QUERY(temp &lt;* Objects | NOT('IFCKERNEL.<a href="#ifcproject">IfcProject</a>' IN TYPEOF(temp))));<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;RETURN(Count = 0);<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;END;<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;OTHERWISE : RETURN(?);<br/>&nbsp;&nbsp;&nbsp;&nbsp;END_CASE;<br/>
 <br/>
 
 <span class="keyword">END_FUNCTION</span>;
@@ -960,7 +963,7 @@ SCHEMA IFC4;
 <a name="ifcsingleprojectinstance" />
 <p>
 <span class="keyword">RULE</span> IfcSingleProjectInstance <b>FOR</b> (
-<span class="self-ref">IfcStrippedOptional</span>
+<a href="#ifcproject">IfcProject</a>
 );<br/>
 
 &nbsp;&nbsp;&nbsp;&nbsp;<span class="keyword">WHERE</span><br/>

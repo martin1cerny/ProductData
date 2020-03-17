@@ -11,7 +11,7 @@
     <title>IfcTypeObject</title>
 
     <style type="text/css">
-      body { counter-reset: index1 5 index2 1 index3 3 index4 27 index5 0; }
+      body { counter-reset: index1 5 index2 1 index3 3 index4 28 index5 0; }
     </style>
   </head>
 
@@ -20,7 +20,7 @@
 
 <script type="text/javascript">
 <!--
-    parent.index.location.replace("../../toc-5.html#5.1.3.28");
+    parent.index.location.replace("../../toc-5.html#5.1.3.29");
 //-->
 </script>
 
@@ -61,10 +61,13 @@
 <th>C</th></tr>
 <tr><td>5</td><td>ApplicableOccurrence</td><td><span class="self-ref">-</span></td><td></td><td>
 <i>This attribute is out of scope for this model view definition and shall not be set.</i></td><td></td></tr>
-<tr><td>6</td><td>HasPropertySets</td><td><span class="self-ref">-</span></td><td></td><td>
-<i>This attribute is out of scope for this model view definition and shall not be set.</i></td><td></td></tr>
+<tr><td>6</td><td>HasPropertySets</td><td><a href="../../ifckernel/lexical/ifcpropertysetdefinition.html">IfcPropertySetDefinition</a></td><td>? S[1:?]</td><td>
+Set \\\\\\\\\\\\\\\\\~\\\\\\\\\\\\\\\\\~list\\\\\\\\\\\\\\\\\~\\\\\\\\\\\\\\\\\~ of unique property sets, that are associated with the object type and are common to all object occurrences referring to this object type.
+
+
+</td><td>X</td></tr>
 <tr><td></td><td><i>Types</i></td><td><a href="../../ifckernel/lexical/ifcreldefinesbytype.html">IfcRelDefinesByType</a><br/>@RelatingType</td><td>S[0:1]</td><td>Reference to the relationship IfcRelDefinedByType and thus to those occurrence objects, which are defined by this type.
-</td><td></td></tr>
+</td><td>X</td></tr>
 </table>
 </details>
 <details open="open"><summary>Formal Propositions</summary><table class="propositions">
@@ -115,10 +118,13 @@ Optional description, provided for exchanging informative comments.
 <tr><td colspan="6"><a href="../../ifckernel/lexical/ifctypeobject.html">IfcTypeObject</a></td></tr>
 <tr><td>5</td><td>ApplicableOccurrence</td><td><span class="self-ref">-</span></td><td></td><td>
 <i>This attribute is out of scope for this model view definition and shall not be set.</i></td><td></td></tr>
-<tr><td>6</td><td>HasPropertySets</td><td><span class="self-ref">-</span></td><td></td><td>
-<i>This attribute is out of scope for this model view definition and shall not be set.</i></td><td></td></tr>
+<tr><td>6</td><td>HasPropertySets</td><td><a href="../../ifckernel/lexical/ifcpropertysetdefinition.html">IfcPropertySetDefinition</a></td><td>? S[1:?]</td><td>
+Set \\\\\\\\\\\\\\\\\~\\\\\\\\\\\\\\\\\~list\\\\\\\\\\\\\\\\\~\\\\\\\\\\\\\\\\\~ of unique property sets, that are associated with the object type and are common to all object occurrences referring to this object type.
+
+
+</td><td>X</td></tr>
 <tr><td></td><td><i>Types</i></td><td><a href="../../ifckernel/lexical/ifcreldefinesbytype.html">IfcRelDefinesByType</a><br/>@RelatingType</td><td>S[0:1]</td><td>Reference to the relationship IfcRelDefinedByType and thus to those occurrence objects, which are defined by this type.
-</td><td></td></tr>
+</td><td>X</td></tr>
 </table>
 </details>
 </section>
@@ -127,7 +133,20 @@ Optional description, provided for exchanging informative comments.
 <details><summary>XML Specification</summary><div class="xsd"><code class="xsd">&nbsp;&lt;xs:element name=&quot;<a href="../../ifckernel/lexical/ifctypeobject.html">IfcTypeObject</a>&quot; type=&quot;ifc:<a href="../../ifckernel/lexical/ifctypeobject.html">IfcTypeObject</a>&quot; substitutionGroup=&quot;ifc:<a href="../../ifckernel/lexical/ifcobjectdefinition.html">IfcObjectDefinition</a>&quot; nillable=&quot;true&quot;/&gt;<br/>
 &nbsp;&lt;xs:complexType name=&quot;<a href="../../ifckernel/lexical/ifctypeobject.html">IfcTypeObject</a>&quot;&gt;<br/>
 &nbsp;&nbsp;&lt;xs:complexContent&gt;<br/>
-&nbsp;&nbsp;&nbsp;&lt;xs:extension base=&quot;ifc:<a href="../../ifckernel/lexical/ifcobjectdefinition.html">IfcObjectDefinition</a>&quot;/&gt;<br/>
+&nbsp;&nbsp;&nbsp;&lt;xs:extension base=&quot;ifc:<a href="../../ifckernel/lexical/ifcobjectdefinition.html">IfcObjectDefinition</a>&quot;&gt;<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&lt;xs:sequence&gt;<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xs:element name=&quot;HasPropertySets&quot; nillable=&quot;true&quot; minOccurs=&quot;0&quot;&gt;<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xs:complexType&gt;<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xs:sequence&gt;<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xs:element ref=&quot;ifc:<a href="../../ifckernel/lexical/ifcpropertysetdefinition.html">IfcPropertySetDefinition</a>&quot; maxOccurs=&quot;unbounded&quot;/&gt;<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/xs:sequence&gt;<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xs:attribute ref=&quot;ifc:itemType&quot; fixed=&quot;ifc:<a href="../../ifckernel/lexical/ifcpropertysetdefinition.html">IfcPropertySetDefinition</a>&quot;/&gt;<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xs:attribute ref=&quot;ifc:cType&quot; fixed=&quot;set&quot;/&gt;<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xs:attribute ref=&quot;ifc:arraySize&quot; use=&quot;optional&quot;/&gt;<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/xs:complexType&gt;<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/xs:element&gt;<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&lt;/xs:sequence&gt;<br/>
+&nbsp;&nbsp;&nbsp;&lt;/xs:extension&gt;<br/>
 &nbsp;&nbsp;&lt;/xs:complexContent&gt;<br/>
 &nbsp;&lt;/xs:complexType&gt;<br/>
 </code></div></details>
@@ -136,7 +155,7 @@ Optional description, provided for exchanging informative comments.
 &nbsp;<span class="keyword">SUPERTYPE OF</span>(<a href="../../ifckernel/lexical/ifctypeproduct.html">IfcTypeProduct</a>)<br/>
 &nbsp;<span class="keyword">SUBTYPE OF</span> (<a href="../../ifckernel/lexical/ifcobjectdefinition.html">IfcObjectDefinition</a>)<b>;</b><br/>
 &nbsp;&nbsp;ApplicableOccurrence : <span class="keyword">OPTIONAL</span> <span class="self-ref">IfcStrippedOptional</span>;<br/>
-&nbsp;&nbsp;HasPropertySets : <span class="keyword">OPTIONAL</span> <span class="keyword">SET</span> [1:?] <span class="keyword">OF</span> <span class="self-ref">IfcStrippedOptional</span>;<br/>
+&nbsp;&nbsp;HasPropertySets : <span class="keyword">OPTIONAL</span> <span class="keyword">SET</span> [1:?] <span class="keyword">OF</span> <a href="../../ifckernel/lexical/ifcpropertysetdefinition.html">IfcPropertySetDefinition</a>;<br/>
 &nbsp;<span class="keyword">INVERSE</span><br/>
 &nbsp;&nbsp;Types : <span class="keyword">SET</span> [0:1] OF <a href="../../ifckernel/lexical/ifcreldefinesbytype.html">IfcRelDefinesByType</a> <span class="keyword">FOR</span> RelatingType;<br/>
 &nbsp;<span class="keyword">WHERE</span><br/>

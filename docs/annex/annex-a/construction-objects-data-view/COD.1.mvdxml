@@ -1,5 +1,5 @@
 <?xml version="1.0"?>
-<mvdXML xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" uuid="6b7eb6c2-938f-49ba-85f8-8f95ffbe9a76" name="" xsi:schemaLocation="http://standards.buildingsmart.org/MVD/RELEASE/mvdXML/v1-1/mvdXML_V1.1.xsd" xmlns="http://buildingsmart-tech.org/mvd/XML/1.1">
+<mvdXML xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" uuid="b775e8ac-5794-4fad-a556-165daf35108c" name="" xsi:schemaLocation="http://standards.buildingsmart.org/MVD/RELEASE/mvdXML/v1-1/mvdXML_V1.1.xsd" xmlns="http://buildingsmart-tech.org/mvd/XML/1.1">
   <Templates>
     <ConceptTemplate uuid="bf7206d4-80c6-469d-93a5-336283a2a935" name="Classification" status="draft" applicableSchema="IFC4" applicableEntity="IfcContext">
       <Definitions>
@@ -168,9 +168,9 @@
         </ConceptTemplate>
       </SubTemplates>
     </ConceptTemplate>
-    <ConceptTemplate uuid="c1ef97fe-f47a-49a1-9e32-ce841d73ade2" name="Construction objects" status="candidate" applicableSchema="IFC4">
+    <ConceptTemplate uuid="c1ef97fe-f47a-49a1-9e32-ce841d73ade2" name="Construction objects" status="candidate" applicableSchema="IFC4" applicableEntity="IfcContext">
       <SubTemplates>
-        <ConceptTemplate uuid="cc9148e8-6891-449a-81f9-d17f51308fec" name="Instances" status="candidate" applicableSchema="IFC4" applicableEntity="IfcObject">
+        <ConceptTemplate uuid="cc9148e8-6891-449a-81f9-d17f51308fec" name="Instances" status="candidate" applicableSchema="IFC4" applicableEntity="IfcProject">
           <Definitions>
             <Definition>
               <Body><![CDATA[In the case, a delivered product has an individual information (e.g. a serial number), the product shall to be stored as an instance object. Every instance object in the construction objects data structure shall be stored in a class of EN ISO 16739 that is derived from IfcObject (e.g. an IfcDoor or an IfcPump). Every instance object has to be related to its corresponding type object.
@@ -216,6 +216,122 @@ Create an example figure that illustrates a system of construction objects (Heat
                     <AttributeRule AttributeName="RelatingType">
                       <EntityRules>
                         <EntityRule EntityName="IfcTypeObject" />
+                      </EntityRules>
+                    </AttributeRule>
+                  </AttributeRules>
+                </EntityRule>
+              </EntityRules>
+            </AttributeRule>
+            <AttributeRule AttributeName="Declares">
+              <EntityRules>
+                <EntityRule EntityName="IfcRelDeclares">
+                  <AttributeRules>
+                    <AttributeRule AttributeName="RelatedDefinitions">
+                      <EntityRules>
+                        <EntityRule EntityName="IfcObject">
+                          <AttributeRules>
+                            <AttributeRule AttributeName="IsTypedBy">
+                              <EntityRules>
+                                <EntityRule EntityName="IfcRelDefinesByType">
+                                  <AttributeRules>
+                                    <AttributeRule AttributeName="RelatingType">
+                                      <EntityRules>
+                                        <EntityRule EntityName="IfcTypeObject">
+                                          <AttributeRules>
+                                            <AttributeRule AttributeName="HasPropertySets" />
+                                            <AttributeRule AttributeName="Types" />
+                                          </AttributeRules>
+                                        </EntityRule>
+                                      </EntityRules>
+                                    </AttributeRule>
+                                  </AttributeRules>
+                                </EntityRule>
+                              </EntityRules>
+                            </AttributeRule>
+                            <AttributeRule AttributeName="Description">
+                              <EntityRules>
+                                <EntityRule EntityName="IfcText" />
+                              </EntityRules>
+                            </AttributeRule>
+                            <AttributeRule AttributeName="Name">
+                              <EntityRules>
+                                <EntityRule EntityName="IfcLabel" />
+                              </EntityRules>
+                            </AttributeRule>
+                            <AttributeRule AttributeName="IsDefinedBy">
+                              <EntityRules>
+                                <EntityRule EntityName="IfcRelDefinesByProperties">
+                                  <AttributeRules>
+                                    <AttributeRule AttributeName="RelatingPropertyDefinition">
+                                      <EntityRules>
+                                        <EntityRule EntityName="IfcPropertySetDefinition" />
+                                      </EntityRules>
+                                    </AttributeRule>
+                                  </AttributeRules>
+                                </EntityRule>
+                              </EntityRules>
+                            </AttributeRule>
+                          </AttributeRules>
+                        </EntityRule>
+                      </EntityRules>
+                    </AttributeRule>
+                  </AttributeRules>
+                </EntityRule>
+              </EntityRules>
+            </AttributeRule>
+          </Rules>
+        </ConceptTemplate>
+        <ConceptTemplate uuid="a0056aa3-1206-4173-be06-205b84880e46" name="Types" status="candidate" applicableSchema="IFC4" applicableEntity="IfcProjectLibrary">
+          <Definitions>
+            <Definition>
+              <Body><![CDATA[Every construction object in the file shall be stored in a class inherited from IfcTypeObject of EN ISO 16739, e.g. IfcWallType or IfcWindowType. The product shall be further specified with the concepts of classification and properties.
+If the EN ISO 16739 does not provide an appropriate derived class under IfcTypeObject, the product shall be stored in IfcBuildingElementProxyType and shall be further specified with an appropriate value in ElementType.
+In addition to the documentation of IfcTypeObject and derived classes in the official documentation of ISO 16739, the following information shall be provided in the context of this standard for each product:]]></Body>
+            </Definition>
+          </Definitions>
+          <Rules>
+            <AttributeRule AttributeName="Name">
+              <EntityRules>
+                <EntityRule EntityName="IfcLabel" />
+              </EntityRules>
+            </AttributeRule>
+            <AttributeRule AttributeName="Description">
+              <EntityRules>
+                <EntityRule EntityName="IfcText" />
+              </EntityRules>
+            </AttributeRule>
+            <AttributeRule AttributeName="HasPropertySets">
+              <EntityRules>
+                <EntityRule EntityName="IfcPropertySetDefinition" />
+              </EntityRules>
+            </AttributeRule>
+            <AttributeRule AttributeName="Types" />
+            <AttributeRule AttributeName="Declares">
+              <EntityRules>
+                <EntityRule EntityName="IfcRelDeclares">
+                  <AttributeRules>
+                    <AttributeRule AttributeName="RelatedDefinitions">
+                      <EntityRules>
+                        <EntityRule EntityName="IfcTypeObject">
+                          <AttributeRules>
+                            <AttributeRule AttributeName="HasPropertySets">
+                              <EntityRules>
+                                <EntityRule EntityName="IfcPropertySetDefinition" />
+                              </EntityRules>
+                            </AttributeRule>
+                            <AttributeRule AttributeName="Name">
+                              <EntityRules>
+                                <EntityRule EntityName="IfcLabel" />
+                              </EntityRules>
+                            </AttributeRule>
+                            <AttributeRule AttributeName="Description">
+                              <EntityRules>
+                                <EntityRule EntityName="IfcText" />
+                              </EntityRules>
+                            </AttributeRule>
+                            <AttributeRule AttributeName="Types" />
+                          </AttributeRules>
+                        </EntityRule>
                       </EntityRules>
                     </AttributeRule>
                   </AttributeRules>
@@ -340,6 +456,7 @@ The cardinality  of the classes shall be as following:
 { .tg}
 { .tg}
 { .tg}
+{ .tg}
 <table class="tg">
   <tr>
     <th class="tg-w2dt"><br>&nbsp;&nbsp;Type of exchange<br>&nbsp;&nbsp;</th>
@@ -358,6 +475,8 @@ The cardinality  of the classes shall be as following:
   </tr>
 <caption align"bottom"="">Table 2: Cardinality of declarations</caption>
 </table>
+
+
 
 
 
@@ -1054,7 +1173,7 @@ This standard does not define how exactly the exchange is done. It defines the s
 
 It is explicitly allowed to embed an IFC file in Step format (.ifc) or in XML format Format (.ifcxml) in an ifczip file.The specification contains the following principles:
 
-1. The ifczip file contains exactly one model file (.ifc or .ifcxml). The file extension is \\*.ifczip
+1. The ifczip file contains exactly one model file (.ifc or .ifcxml). The file extension is \\\*.ifczip
 2. According to this rule, it is allowed to embed additional other files in an ifczip file. Therefore, an ifczip file can be a container, which can transport many additional files in itself.
 3. Such a container offers several advantages, such as transport of photo documentations, transport of plant documentation,  transport of permits and notifications, transport of operating documents, e.g. test and maintenance reports
 
@@ -1116,6 +1235,7 @@ Since the current specification of the ifczip format provides exactly one model 
             </AttributeRule>
           </Rules>
         </ConceptTemplate>
+        <ConceptTemplate uuid="35e8b4b3-cd50-4db4-825f-5c1ad22a0491" name="NOTDEFINED" applicableSchema="IFC4" applicableEntity="IfcContext" />
         <ConceptTemplate uuid="0790a05d-73f8-4525-a3f6-fb6f3378fc00" name="NOTDEFINED" applicableSchema="IFC4" applicableEntity="IfcPropertySet" />
         <ConceptTemplate uuid="e9fee12d-eb64-48bc-9636-b8048b4b4e34" name="NOTDEFINED" applicableSchema="IFC4" applicableEntity="IfcPropertySetTemplate" />
       </SubTemplates>
@@ -1176,6 +1296,7 @@ The product data file is specified as follows:
 { .tg}
 { .tg}
 { .tg}
+{ .tg}
 <table class="tg">
   <tr>
     <th class="tg-rykj"><br>&nbsp;&nbsp;Standard<br>&nbsp;&nbsp;</th>
@@ -1198,6 +1319,8 @@ The product data file is specified as follows:
     <td class="tg-rykj"><br>&nbsp;&nbsp;ifcZIP<br>&nbsp;&nbsp;</td>
   </tr>
 </table>
+
+
 
 
 
@@ -1408,6 +1531,41 @@ The content of the Data Templates shall be loadable from digital templates based
             </Concept>
           </Concepts>
         </ConceptRoot>
+        <ConceptRoot uuid="dcdc70e7-54b8-4103-9456-2085078c9c66" name="Construction objects" applicableRootEntity="IfcContext">
+          <Applicability>
+            <Template ref="35e8b4b3-cd50-4db4-825f-5c1ad22a0491" />
+            <TemplateRules operator="and" />
+          </Applicability>
+          <Concepts>
+            <Concept uuid="b4135eee-0162-4937-8227-c88b7f3f5518" name="Types" status="candidate" override="false">
+              <Template ref="a0056aa3-1206-4173-be06-205b84880e46" />
+              <Requirements>
+                <Requirement applicability="import" requirement="mandatory" exchangeRequirement="e4d15dda-78aa-4713-83be-aa79730fc9a4" />
+                <Requirement applicability="export" requirement="mandatory" exchangeRequirement="e4d15dda-78aa-4713-83be-aa79730fc9a4" />
+                <Requirement applicability="export" requirement="mandatory" exchangeRequirement="c0115c7f-1284-40d7-9644-1d2b022eb5a5" />
+                <Requirement applicability="import" requirement="mandatory" exchangeRequirement="c0115c7f-1284-40d7-9644-1d2b022eb5a5" />
+              </Requirements>
+              <TemplateRules operator="and">
+                <TemplateRule />
+                <TemplateRule />
+                <TemplateRule />
+                <TemplateRule />
+              </TemplateRules>
+            </Concept>
+            <Concept uuid="a1443926-75f8-478b-bc3b-7030b643187a" name="Instances" status="candidate" override="false">
+              <Template ref="cc9148e8-6891-449a-81f9-d17f51308fec" />
+              <Requirements>
+                <Requirement applicability="export" requirement="excluded" exchangeRequirement="e4d15dda-78aa-4713-83be-aa79730fc9a4" />
+                <Requirement applicability="import" requirement="excluded" exchangeRequirement="e4d15dda-78aa-4713-83be-aa79730fc9a4" />
+                <Requirement applicability="import" requirement="mandatory" exchangeRequirement="c0115c7f-1284-40d7-9644-1d2b022eb5a5" />
+                <Requirement applicability="export" requirement="mandatory" exchangeRequirement="c0115c7f-1284-40d7-9644-1d2b022eb5a5" />
+              </Requirements>
+              <TemplateRules operator="and">
+                <TemplateRule />
+              </TemplateRules>
+            </Concept>
+          </Concepts>
+        </ConceptRoot>
         <ConceptRoot uuid="717d7093-a400-440d-ab87-9a50510c6405" name="Documents" applicableRootEntity="IfcDocumentInformation">
           <Applicability>
             <Template ref="514113f3-ba4b-4c3f-a18e-0250b612b84d" />
@@ -1456,7 +1614,7 @@ The content of the Data Templates shall be loadable from digital templates based
 1.	As a physical file with manual exchange via eMail, Harddrives, oder similar
 2.	As a data structure in the payload of an online exchange, eg. an API, a messaging system or similar.
 
-This standard does not define how exactly the exchange is done. It defines the standard for the structure of the file or the payload. The file or the payload can be stored in a compressd format according to the specification. The file extension is then \\\\\\\\\\\\\\\*.ifczip. The specifications for ifczip can be found here:
+This standard does not define how exactly the exchange is done. It defines the standard for the structure of the file or the payload. The file or the payload can be stored in a compressd format according to the specification. The file extension is then \\\\\\\\\\\\\\\\*.ifczip. The specifications for ifczip can be found here:
 
 •	http://www.buildingsmart-tech.org/specifications/ifc-overview/ifc-overview-summary
 •	http://www.buildingsmart-tech.org/implementation/ifc-implementation/ifc-impl-agreements/cv-2x3-154
@@ -1464,7 +1622,7 @@ This standard does not define how exactly the exchange is done. It defines the s
 It is explicitly allowed to embed an IFC file in Step format (.ifc) or in XML format Format (.ifcxml) in an ifczip file.
 The specification contains the following principles:
 
-1.	The ifczip file contains exactly one model file (.ifc or .ifcxml). The file extension is \\\\\\\\\\\\\\\*.ifczip
+1.	The ifczip file contains exactly one model file (.ifc or .ifcxml). The file extension is \\\\\\\\\\\\\\\\*.ifczip
 2.	According to this rule, it is allowed to embed additional other files in an ifczip file. Therefore, an ifczip file can be a container, which can transport many additional files in itself.
 3.	Such a container offers several advantages, such as
 •	transport of photo documentations

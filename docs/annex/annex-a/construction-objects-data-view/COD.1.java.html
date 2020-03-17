@@ -82,9 +82,14 @@
 <br/>
 &nbsp;public class <a href="../../../schema/ifckernel/lexical/ifcproduct.html">IfcProduct</a> extends <a href="../../../schema/ifckernel/lexical/ifcobject.html">IfcObject</a><br/>
 &nbsp;{<br/>
-&nbsp;&nbsp;private <a href="../../../schema/ifcgeometricconstraintresource/lexical/ifcobjectplacement.html">IfcObjectPlacement</a> ObjectPlacement;<br/>
+&nbsp;&nbsp;private <span class="self-ref">IfcStrippedOptional</span> ObjectPlacement;<br/>
 &nbsp;&nbsp;private <span class="self-ref">IfcStrippedOptional</span> Representation;<br/>
 &nbsp;&nbsp;private <a href="../../../schema/ifckernel/lexical/ifcrelassignstoproduct.html">IfcRelAssignsToProduct</a>[] ReferencedBy;<br/>
+&nbsp;}<br/>
+&nbsp;<br/>
+<br/>
+&nbsp;public class <a href="../../../schema/ifckernel/lexical/ifcproject.html">IfcProject</a> extends <a href="../../../schema/ifckernel/lexical/ifccontext.html">IfcContext</a><br/>
+&nbsp;{<br/>
 &nbsp;}<br/>
 &nbsp;<br/>
 <br/>
@@ -589,13 +594,6 @@
 &nbsp;{<br/>
 &nbsp;&nbsp;private string Name;<br/>
 &nbsp;&nbsp;private string Description;<br/>
-&nbsp;}<br/>
-&nbsp;<br/>
-<br/>
-&nbsp;public class <a href="../../../schema/ifcgeometricconstraintresource/lexical/ifcobjectplacement.html">IfcObjectPlacement</a> extends IfcBase<br/>
-&nbsp;{<br/>
-&nbsp;&nbsp;private <a href="../../../schema/ifckernel/lexical/ifcproduct.html">IfcProduct</a>[] PlacesObject;<br/>
-&nbsp;&nbsp;private <span class="self-ref">IfcStrippedOptional</span>[] ReferencedByPlacements;<br/>
 &nbsp;}<br/>
 &nbsp;<br/>
 <br/>

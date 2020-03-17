@@ -11,7 +11,7 @@
     <title>IfcProject</title>
 
     <style type="text/css">
-      body { counter-reset: index1 5 index2 1 index3 3 index4 5 index5 0; }
+      body { counter-reset: index1 5 index2 1 index3 3 index4 6 index5 0; }
     </style>
   </head>
 
@@ -20,7 +20,7 @@
 
 <script type="text/javascript">
 <!--
-    parent.index.location.replace("../../toc-5.html#5.1.3.6");
+    parent.index.location.replace("../../toc-5.html#5.1.3.7");
 //-->
 </script>
 
@@ -46,13 +46,13 @@
 <h5 class="num">Semantic definitions at the entity</h5>
 <details open="open"><summary>Entity definition</summary><p><span class="self-ref">IfcProject</span> indicates the undertaking of some design, engineering, construction, or maintenance activities leading towards a product. The project establishes the context for information to be exchanged or shared, and it may represent a construction project but does not have to. The <span class="self-ref">IfcProject</span>'s main purpose in an exchange structure is to provide the root instance and the context for all other information items included.</p>
 <p>The context provided by the <span class="self-ref">IfcProject</span> includes:</p>
-<p>\\\\\\\\\\\\\\* the default units
-\\\\\\\\\\\\\\* the geometric representation context for exchange structures including shape representations
-\\\\\\\\\\\\\\* the project coordinate system
-\\\\\\\\\\\\\\* the coordinate space dimension
-\\\\\\\\\\\\\\* the precision used within the geometric representations
-\\\\\\\\\\\\\\* optionally the indication of the true north
-\\\\\\\\\\\\\\* optionally the map conversion between the project coordinate system and the geospatial coordinate reference system.</p>
+<p>\\\\\\\\\\\\\\\\\* the default units
+\\\\\\\\\\\\\\\\\* the geometric representation context for exchange structures including shape representations
+\\\\\\\\\\\\\\\\\* the project coordinate system
+\\\\\\\\\\\\\\\\\* the coordinate space dimension
+\\\\\\\\\\\\\\\\\* the precision used within the geometric representations
+\\\\\\\\\\\\\\\\\* optionally the indication of the true north
+\\\\\\\\\\\\\\\\\* optionally the map conversion between the project coordinate system and the geospatial coordinate reference system.</p>
 
 
 <p class="spec-head">
@@ -110,8 +110,12 @@ Optional description, provided for exchanging informative comments.
 <tr><td></td><td><i>HasAssociations</i></td><td><a href="../../ifckernel/lexical/ifcrelassociates.html">IfcRelAssociates</a><br/>@RelatedObjects</td><td>S[0:?]</td><td>Reference to the relationship objects, that associates external references or other resource definitions to the object.. Examples are the association to library, documentation or classification.
 </td><td>X</td></tr>
 <tr><td colspan="6"><i><a href="../../ifckernel/lexical/ifccontext.html">IfcContext</a></i></td></tr>
-<tr><td>5</td><td>ObjectType</td><td><span class="self-ref">-</span></td><td></td><td>
-<i>This attribute is out of scope for this model view definition and shall not be set.</i></td><td></td></tr>
+<tr><td>5</td><td>ObjectType</td><td><a href="../../ifcmeasureresource/lexical/ifclabel.html">IfcLabel</a></td><td>? </td><td>
+The object type denotes a particular type that indicates the object further. The use has to be established at the level of instantiable subtypes.
+<blockquote class="note">
+NOTE  Subtypes of <span class="self-ref">IfcContext</span> do not introduce a <i>PredefinedType</i> attribute, therefore the usage of <i>ObjectType</i> is not bound to the selection of USERDEFINED within the <i>PredefinedType</i> enumaration.
+</blockquote>
+</td><td>X</td></tr>
 <tr><td>6</td><td>LongName</td><td><span class="self-ref">-</span></td><td></td><td>
 <i>This attribute is out of scope for this model view definition and shall not be set.</i></td><td></td></tr>
 <tr><td>7</td><td>Phase</td><td><a href="../../ifcmeasureresource/lexical/ifclabel.html">IfcLabel</a></td><td>? </td><td>
@@ -124,7 +128,7 @@ Current project phase, or life-cycle phase of this project. Applicable values ha
 <tr><td></td><td><i>IsDefinedBy</i></td><td><a href="../../ifckernel/lexical/ifcreldefinesbyproperties.html">IfcRelDefinesByProperties</a><br/>@RelatedObjects</td><td>S[0:?]</td><td>Set of relationships to property set definitions attached to this context. Those statically or dynamically defined properties contain alphanumeric information content that further defines the context.
 
 
-</td><td></td></tr>
+</td><td>X</td></tr>
 <tr><td></td><td><i>Declares</i></td><td><a href="../../ifckernel/lexical/ifcreldeclares.html">IfcRelDeclares</a><br/>@RelatingContext</td><td>S[0:?]</td><td>Reference to the <a href="../../ifckernel/lexical/ifcreldeclares.html">IfcRelDeclares</a> relationship that assigns the uppermost entities of includes hierarchies to this context instance.
 <blockquote class="note">
 NOTE  The spatial hiearchy is assigned to <a href="../../ifckernel/lexical/ifcproject.html">IfcProject</a> using the <i>IfcRelAggregates</i> relationship. This is a single exception due to compatibility reasons with earlier releases.
