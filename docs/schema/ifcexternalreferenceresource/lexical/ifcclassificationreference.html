@@ -48,9 +48,9 @@
 <h5 class="num">Semantic definitions at the entity</h5>
 <details open="open"><summary>Entity definition</summary><p>An <span class="self-ref">IfcClassificationReference</span> is a reference into a classification system or source (see <a href="../../ifcexternalreferenceresource/lexical/ifcclassification.html">IfcClassification</a>) for a specific classification key (or notation).</p>
 <p>The inherited attributes have the following meaning:</p>
-<p>\\\\\\\\\\\\\\\\\* <i>Identification</i>: holds the key provided for a specific references to classification items (or tables).
-\\\\\\\\\\\\\\\\\* <i>Name</i>: allows for a human interpretable designation of a classification notation.
-\\\\\\\\\\\\\\\\\* <i>Location</i>: optionally holds a direct URI link into the classification system (or source) to hyperlink the classification key.</p>
+<p>\\\\\\\\\\\\\\\\\\\\* <i>Identification</i>: holds the key provided for a specific references to classification items (or tables).
+\\\\\\\\\\\\\\\\\\\\* <i>Name</i>: allows for a human interpretable designation of a classification notation.
+\\\\\\\\\\\\\\\\\\\\* <i>Location</i>: optionally holds a direct URI link into the classification system (or source) to hyperlink the classification key.</p>
 <p>The <span class="self-ref">IfcClassificationReference</span> can either be assigned directly to the <a href="../../ifcexternalreferenceresource/lexical/ifcclassification.html">IfcClassification</a>, such as if no classification hierarchy has to be included, or it references the parent classification notation, if the fully classification hierarchy is included in the data set. The first is refered to as &quot;lightweight classification&quot;, and the second as &quot;full classification&quot;. The attribute <i>ReferencedSource</i> then holds the following information (choice by <i>IfcClassificationReferenceSelect</i>):</p>
 <ol>
 <li>being of type <a href="../../ifcexternalreferenceresource/lexical/ifcclassification.html">IfcClassification</a>: direct reference to the classification system (with meta information provided);</li>

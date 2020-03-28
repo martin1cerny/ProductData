@@ -46,8 +46,8 @@
 <p>NOTE  By convention an <span class="self-ref">IfcPropertySetTemplate</span> can also be used as a template for an <i>IfcElementQuantity</i>, being a particular type of a property set definition.</p>
 </blockquote>
 <p>Property set templates can form part of a property library used and declared within a project. Depending on the <i>TemplateType</i> the <span class="self-ref">IfcPropertySetTemplate</span> defines a template for:</p>
-<p>\\\\\\\\\\\\\\\\\* &quot;Pset_&quot; - occurrences of <a href="../../ifckernel/lexical/ifcpropertyset.html">IfcPropertySet</a>
-\\\\\\\\\\\\\\\\\* &quot;QTO_&quot; - occurrences of <i>IfcElementQuantity</i></p>
+<p>\\\\\\\\\\\\\\\\\\\\* &quot;Pset_&quot; - occurrences of <a href="../../ifckernel/lexical/ifcpropertyset.html">IfcPropertySet</a>
+\\\\\\\\\\\\\\\\\\\\* &quot;QTO_&quot; - occurrences of <i>IfcElementQuantity</i></p>
 <p>The inherited <i>HasContext</i> inverse relation to <a href="../../ifckernel/lexical/ifcreldeclares.html">IfcRelDeclares</a> is used to declare the <span class="self-ref">IfcPropertySetTemplate</span> within a project library. If included in an exchange data set it can then be traversed through the <a href="../../ifckernel/lexical/ifcprojectlibrary.html">IfcProjectLibrary</a>. The <i>Defines</i> inverse relation to <i>IfcRelDefinesByTemplate</i> is provided to keep the definition relationship between the <span class="self-ref">IfcPropertySetTemplate</span> and the one to many <a href="../../ifckernel/lexical/ifcpropertyset.html">IfcPropertySet</a>'s, for which it provides the template. Figure 23 illustrates relationships used for property set templates.</p>
 <p> </p>
 <p><table><tr><td style="width: 600px"><img src="../../../figures/ifcpropertysettemplate_fig-1.png" alt="&quot;property set template&quot;" title="Figure 23 &mdash; Property set template relationships"></td></tr><tr><td><p class="figure">Figure 23 &mdash; Property set template relationships</p></td></tr></table></p>

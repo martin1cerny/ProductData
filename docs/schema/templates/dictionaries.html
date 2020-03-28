@@ -1,0 +1,333 @@
+﻿<!DOCTYPE HTML>
+
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+    <link rel="stylesheet" type="text/css" href="../../ifc-styles.css">
+
+    <link rel="stylesheet" type="text/css" href="../../details-shim.css">
+    <script type="text/javascript" src="../../details-shim.js"></script>
+    <title>Dictionaries</title>
+
+    <style type="text/css">
+      body { counter-reset: index1 0 index2 0 index3 0 index4 -1 index5 0; }
+    </style>
+  </head>
+
+  <body>
+
+
+<script type="text/javascript">
+<!--
+    parent.index.location.replace("../toc-4.html#4.6");
+//-->
+</script>
+
+<h2 class="std">4.6 Dictionaries</h2>
+<p>The EN ISO 23387 defines a standardized way to express construction data with the concept of data templates. Such data templates can be used to structure the information, based on external standards. The data templates in EN ISO 23387 make use of the data structure, defined in ISO 12006-3. Data templates include well defined properties according to EN ISO 23386.
+The properties and the data template can be stored in central dictionaries, from where they can be retrieved and used in projects.</p>
+<figure>
+  <img src="../../../../figures/figure7_datatemplates.png" width="650" alt="Use data templates and data to create combinded construction objects data">
+  <figcaption>Figure 7: Use data templates and data to create combinded construction objects data
+  </figcaption>
+</figure>
+<p>To use the data templates from (Online-)Dictionaries in the construction objects data view, the data templates have to be mapped from the structure ISO 12006-3 to the structure of EN ISO 16739.1:2018.</p>
+<p>The following table defines, how the entities from pr EN ISO 23387 shall be mapped to this standard.</p>
+<style type="text/css">
+.tg  {border-collapse:collapse;border-spacing:0;}
+.tg td{font-family:Arial, sans-serif;font-size:14px;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;border-color:black;}
+.tg th{font-family:Arial, sans-serif;font-size:14px;font-weight:normal;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;border-color:black;}
+.tg .tg-p68j{font-size:12px;font-family:Arial, Helvetica, sans-serif !important;;background-color:#efefef;border-color:#000000;text-align:left;vertical-align:middle}
+.tg .tg-as4r{font-size:12px;font-family:Arial, Helvetica, sans-serif !important;;background-color:#efefef;border-color:inherit;text-align:left;vertical-align:middle}
+.tg .tg-2sae{font-weight:bold;font-size:12px;font-family:Arial, Helvetica, sans-serif !important;;background-color:#c0c0c0;border-color:inherit;text-align:left;vertical-align:middle}
+.tg .tg-l1gd{font-size:12px;font-family:Arial, Helvetica, sans-serif !important;;border-color:inherit;text-align:left;vertical-align:middle}
+</style>{ .tg}
+<table class="tg" style="undefined;table-layout: fixed; width: 844px">
+<colgroup>
+<col style="width: 242px">
+<col style="width: 242px">
+<col style="width: 230px">
+<col style="width: 130px">
+</colgroup>
+  <tr>
+    <th class="tg-2sae" colspan="2">Template definition in pr EN ISO 23387, based on property definitions in pr EN ISO 23386 (ISO 12006-3)<br></th>
+    <th class="tg-2sae" colspan="2">Template definition in this standard based on EN ISO 16739</th>
+  </tr>
+  <tr>
+    <td class="tg-as4r" colspan="2">Template name<br></td>
+    <td class="tg-as4r" colspan="2"></td>
+  </tr>
+  <tr>
+    <td class="tg-l1gd" colspan="2">Template Guid<br></td>
+    <td class="tg-l1gd" colspan="2"></td>
+  </tr>
+  <tr>
+    <td class="tg-as4r" colspan="2">Template technical specification<br></td>
+    <td class="tg-as4r" colspan="2"></td>
+  </tr>
+  <tr>
+    <td class="tg-l1gd" colspan="2">Construction object<br></td>
+    <td class="tg-l1gd" colspan="2"></td>
+  </tr>
+  <tr>
+    <td class="tg-as4r" colspan="2">Construction object technical specification<br></td>
+    <td class="tg-as4r" colspan="2"></td>
+  </tr>
+  <tr>
+    <td class="tg-l1gd" colspan="2">Classifications<br></td>
+    <td class="tg-l1gd" colspan="2"></td>
+  </tr>
+  <tr>
+    <td class="tg-2sae" colspan="4">Per property:<br></td>
+  </tr>
+  <tr>
+    <td class="tg-p68j" rowspan="3">Essential Characteristic<br></td>
+    <td class="tg-p68j">Name<br></td>
+    <td class="tg-p68j" rowspan="3">IfcPropertySet<br></td>
+    <td class="tg-p68j"></td>
+  </tr>
+  <tr>
+    <td class="tg-p68j">Definition</td>
+    <td class="tg-p68j"></td>
+  </tr>
+  <tr>
+    <td class="tg-p68j">GUID</td>
+    <td class="tg-p68j">IfcGlobalID</td>
+  </tr>
+  <tr>
+    <td class="tg-l1gd" rowspan="3">Group of properties</td>
+    <td class="tg-l1gd">Name</td>
+    <td class="tg-l1gd" rowspan="3">IfcComplexPropertyTemplate</td>
+    <td class="tg-l1gd"></td>
+  </tr>
+  <tr>
+    <td class="tg-l1gd">Definition</td>
+    <td class="tg-l1gd"></td>
+  </tr>
+  <tr>
+    <td class="tg-l1gd">GUID</td>
+    <td class="tg-l1gd"></td>
+  </tr>
+  <tr>
+    <td class="tg-as4r">Document</td>
+    <td class="tg-as4r">DocumentReference</td>
+    <td class="tg-as4r">IfcDocumentInformation</td>
+    <td class="tg-as4r"></td>
+  </tr>
+  <tr>
+    <td class="tg-l1gd">GUID<br></td>
+    <td class="tg-l1gd"></td>
+    <td class="tg-l1gd"></td>
+    <td class="tg-l1gd"></td>
+  </tr>
+  <tr>
+    <td class="tg-as4r" rowspan="3">Generic property</td>
+    <td class="tg-as4r">Name<br></td>
+    <td class="tg-as4r" rowspan="3">IfcComplexPropertyTemplate<br></td>
+    <td class="tg-as4r"></td>
+  </tr>
+  <tr>
+    <td class="tg-as4r">Definition</td>
+    <td class="tg-as4r"></td>
+  </tr>
+  <tr>
+    <td class="tg-as4r">GUID</td>
+    <td class="tg-as4r"></td>
+  </tr>
+  <tr>
+    <td class="tg-l1gd" rowspan="4">Property<br></td>
+    <td class="tg-l1gd">Name<br></td>
+    <td class="tg-l1gd" rowspan="4">IfcSimplePropertyTemplate<br></td>
+    <td class="tg-l1gd">Name<br></td>
+  </tr>
+  <tr>
+    <td class="tg-l1gd">Short name</td>
+    <td class="tg-l1gd">-</td>
+  </tr>
+  <tr>
+    <td class="tg-l1gd">Definition</td>
+    <td class="tg-l1gd">Description</td>
+  </tr>
+  <tr>
+    <td class="tg-l1gd">GUID</td>
+    <td class="tg-l1gd">GlobalID</td>
+  </tr>
+  <tr>
+    <td class="tg-as4r" rowspan="4">Dependency<br></td>
+    <td class="tg-as4r">Name<br></td>
+    <td class="tg-as4r"></td>
+    <td class="tg-as4r"></td>
+  </tr>
+  <tr>
+    <td class="tg-as4r">Short name</td>
+    <td class="tg-as4r"></td>
+    <td class="tg-as4r"></td>
+  </tr>
+  <tr>
+    <td class="tg-as4r">Definition</td>
+    <td class="tg-as4r"></td>
+    <td class="tg-as4r"></td>
+  </tr>
+  <tr>
+    <td class="tg-as4r">GUID</td>
+    <td class="tg-as4r"></td>
+    <td class="tg-as4r"></td>
+  </tr>
+  <tr>
+    <td class="tg-l1gd">Document<br></td>
+    <td class="tg-l1gd">Reference<br></td>
+    <td class="tg-l1gd"></td>
+    <td class="tg-l1gd"></td>
+  </tr>
+  <tr>
+    <td class="tg-as4r" rowspan="3">Quantity (Measure with Unit)<br></td>
+    <td class="tg-as4r">Name<br></td>
+    <td class="tg-as4r" rowspan="3">Measure Unit<br></td>
+    <td class="tg-as4r"></td>
+  </tr>
+  <tr>
+    <td class="tg-as4r">Definition</td>
+    <td class="tg-as4r"></td>
+  </tr>
+  <tr>
+    <td class="tg-as4r">GUID</td>
+    <td class="tg-as4r"></td>
+  </tr>
+  <tr>
+    <td class="tg-l1gd" rowspan="4">Unit<br></td>
+    <td class="tg-l1gd">Name<br></td>
+    <td class="tg-l1gd">Unit / SiUnit<br></td>
+    <td class="tg-l1gd"></td>
+  </tr>
+  <tr>
+    <td class="tg-l1gd">Short name</td>
+    <td class="tg-l1gd"></td>
+    <td class="tg-l1gd"></td>
+  </tr>
+  <tr>
+    <td class="tg-l1gd">Definition</td>
+    <td class="tg-l1gd"></td>
+    <td class="tg-l1gd"></td>
+  </tr>
+  <tr>
+    <td class="tg-l1gd">GUID</td>
+    <td class="tg-l1gd"></td>
+    <td class="tg-l1gd"></td>
+  </tr>
+  <tr>
+    <td class="tg-as4r">Value<br></td>
+    <td class="tg-as4r">Reference<br></td>
+    <td class="tg-as4r"></td>
+    <td class="tg-as4r"></td>
+  </tr>
+  <tr>
+    <td class="tg-l1gd" rowspan="4">Valid Values<br></td>
+    <td class="tg-l1gd">GUID<br></td>
+    <td class="tg-l1gd"></td>
+    <td class="tg-l1gd"></td>
+  </tr>
+  <tr>
+    <td class="tg-l1gd">Full name</td>
+    <td class="tg-l1gd"></td>
+    <td class="tg-l1gd"></td>
+  </tr>
+  <tr>
+    <td class="tg-l1gd">Short name</td>
+    <td class="tg-l1gd"></td>
+    <td class="tg-l1gd"></td>
+  </tr>
+  <tr>
+    <td class="tg-l1gd">Definition</td>
+    <td class="tg-l1gd"></td>
+    <td class="tg-l1gd"></td>
+  </tr>
+  <tr>
+    <td class="tg-as4r" rowspan="4">Document Reference<br></td>
+    <td class="tg-as4r">GUID<br></td>
+    <td class="tg-as4r"></td>
+    <td class="tg-as4r"></td>
+  </tr>
+  <tr>
+    <td class="tg-as4r">Full name</td>
+    <td class="tg-as4r"></td>
+    <td class="tg-as4r"></td>
+  </tr>
+  <tr>
+    <td class="tg-as4r">Short name</td>
+    <td class="tg-as4r"></td>
+    <td class="tg-as4r"></td>
+  </tr>
+  <tr>
+    <td class="tg-as4r">Definition</td>
+    <td class="tg-as4r"></td>
+    <td class="tg-as4r"></td>
+  </tr>
+</table>
+<p>The following table defines, how the entities from IFD (EN ISO 12006-3:2007) shall be mapped to this standard.</p>
+<style type="text/css">
+.tg  {border-collapse:collapse;border-spacing:0;}
+.tg td{font-family:Arial, sans-serif;font-size:14px;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;border-color:black;}
+.tg th{font-family:Arial, sans-serif;font-size:14px;font-weight:normal;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;border-color:black;}
+.tg .tg-rzut{font-weight:bold;font-size:12px;font-family:Arial, Helvetica, sans-serif !important;;background-color:#c0c0c0;text-align:left;vertical-align:middle}
+.tg .tg-1llc{font-size:12px;font-family:Arial, Helvetica, sans-serif !important;;background-color:#efefef;text-align:left;vertical-align:middle}
+.tg .tg-w7pk{font-size:12px;font-family:Arial, Helvetica, sans-serif !important;;text-align:left;vertical-align:middle}
+</style>{ .tg}
+<table class="tg">
+  <tr>
+    <th class="tg-rzut">ISO 12006-3<br></th>
+    <th class="tg-rzut">IFC entity <br>ISO 16739<br></th>
+    <th class="tg-rzut">Description of integration<br></th>
+  </tr>
+  <tr>
+    <td class="tg-1llc">Classification<br><span style="color:rgb(254, 0, 0)">Change to XTD notation of ISO 12006-3</span><br></td>
+    <td class="tg-1llc">IfcClassification<br>IfcClassificationReference<br></td>
+    <td class="tg-1llc">Classification systems and classification nodes based on a simple hierarchical classification as described in ISO 12006-2<br></td>
+  </tr>
+  <tr>
+    <td class="tg-w7pk">subject<br></td>
+    <td class="tg-w7pk">IfcRelAssociatesClassification<br>IfcElementXX<br>IfcElementTypeXX<br></td>
+    <td class="tg-w7pk">Description of a single subject in a catalogue system and in an instance file<br></td>
+  </tr>
+  <tr>
+    <td class="tg-1llc">nest<br></td>
+    <td class="tg-1llc">IfcPropertySetTemplate<br></td>
+    <td class="tg-1llc">A group of properties<br></td>
+  </tr>
+  <tr>
+    <td class="tg-w7pk">property<br></td>
+    <td class="tg-w7pk">IfcPropertyTemplate<br></td>
+    <td class="tg-w7pk">A single property<br></td>
+  </tr>
+  <tr>
+    <td class="tg-1llc">measure<br></td>
+    <td class="tg-1llc">EnumerationValues<br></td>
+    <td class="tg-1llc">Information about the value of the property<br></td>
+  </tr>
+  <tr>
+    <td class="tg-w7pk">Unit*<br></td>
+    <td class="tg-w7pk">UnitsInContext / IfcSIUnit<br></td>
+    <td class="tg-w7pk">Technical definition of the unit, in which the value of the property should be interpreted<br></td>
+  </tr>
+</table>
+<hr/>
+<h4>Construction Objects Data View</h4>
+<table class="exchange">
+<tr><th>Entity</th><th style="text-align: center"><a href="../views/construction-objects-data-view/catalogue-of-configured-construction-objects-exchange.html"><img width="16" src="../../img/mvd-catalogue-of-configured-construction-objects-exchange.png" title="Catalogue of configured construction objects exchange"/></a><br>Catalogue of configured construction objects exchange</th>
+<th style="text-align: center"><a href="../views/construction-objects-data-view/data-sheet-exchange.html"><img width="16" src="../../img/mvd-data-sheet-exchange.png" title="Data sheet exchange"/></a><br>Data sheet exchange</th>
+<th style="text-align: center"><a href="../views/construction-objects-data-view/data-template-exchange.html"><img width="16" src="../../img/mvd-data-template-exchange.png" title="Data template exchange"/></a><br>Data template exchange</th>
+</tr><tr><td><a href="../ifckernel/lexical/ifcprojectlibrary.html">IfcProjectLibrary</a></td><td style="text-align:center">required on import<br/>required on export</td>
+<td style="text-align:center">required on import<br/>required on export</td>
+<td style="text-align:center">required on import<br/>required on export</td>
+</tr>
+</table>
+<details><summary>mvdXML Specification</summary><div class="xsd"><code class="xsd">
+&lt;?xml version=&quot;1.0&quot;?&gt;<br/>
+&lt;ConceptTemplate xmlns:xsi=&quot;http://www.w3.org/2001/XMLSchema-instance&quot; xmlns:xsd=&quot;http://www.w3.org/2001/XMLSchema&quot; uuid=&quot;7556808d-2437-46b6-85a3-7090cbd84381&quot; name=&quot;Dictionaries&quot; status=&quot;draft&quot; applicableSchema=&quot;IFC4&quot; applicableEntity=&quot;<a href="../ifckernel/lexical/ifcprojectlibrary.html">IfcProjectLibrary</a>&quot; /&gt;<br/>
+</code></div>
+</details>
+</p>
+<p><a href="https://github.com/buildingSMART/ProductData/issues/new?&title=dictionaries:%22" target="_blank" ><img src="../../img/external.png" style="border: 0px" title="Report issue" alt="Report issue"/>&nbsp; Report an issue</a></p>
+<p><a href="../../link/dictionaries.html" target="_blank" ><img src="../../img/permlink.png" style="border: 0px" title="Link to this page" alt="Link to this page"/>&nbsp; Link to this page</a></p>
+  </body>
+</html>

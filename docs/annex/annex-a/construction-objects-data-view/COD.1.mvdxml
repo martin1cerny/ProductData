@@ -1,5 +1,5 @@
 <?xml version="1.0"?>
-<mvdXML xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" uuid="b775e8ac-5794-4fad-a556-165daf35108c" name="" xsi:schemaLocation="http://standards.buildingsmart.org/MVD/RELEASE/mvdXML/v1-1/mvdXML_V1.1.xsd" xmlns="http://buildingsmart-tech.org/mvd/XML/1.1">
+<mvdXML xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" uuid="d8fcb61e-c90d-4152-abd4-43ba2615db84" name="" xsi:schemaLocation="http://standards.buildingsmart.org/MVD/RELEASE/mvdXML/v1-1/mvdXML_V1.1.xsd" xmlns="http://buildingsmart-tech.org/mvd/XML/1.1">
   <Templates>
     <ConceptTemplate uuid="bf7206d4-80c6-469d-93a5-336283a2a935" name="Classification" status="draft" applicableSchema="IFC4" applicableEntity="IfcContext">
       <Definitions>
@@ -162,6 +162,42 @@
                     </AttributeRule>
                   </AttributeRules>
                 </EntityRule>
+              </EntityRules>
+            </AttributeRule>
+          </Rules>
+        </ConceptTemplate>
+      </SubTemplates>
+    </ConceptTemplate>
+    <ConceptTemplate uuid="c22794e2-900f-4781-8bf6-045f78a83aae" name="Construction objects data" applicableSchema="IFC4" applicableEntity="IfcPropertySet">
+      <Definitions>
+        <Definition>
+          <Body><![CDATA[Construction object data represents structured, simple or complex information for any construction objects. 
+Construction object data shall be related to specific data templates. It can be exchanged either as a complex structure or a simple data sheet.]]></Body>
+        </Definition>
+      </Definitions>
+      <SubTemplates>
+        <ConceptTemplate uuid="c0b45389-7ad7-4abd-9264-f3dfcd37b81f" name="Complex data sheet [Complex data sheet]" applicableSchema="IFC4" applicableEntity="IfcPropertySet">
+          <Rules>
+            <AttributeRule AttributeName="HasProperties">
+              <EntityRules>
+                <EntityRule EntityName="IfcComplexProperty">
+                  <AttributeRules>
+                    <AttributeRule AttributeName="HasProperties">
+                      <EntityRules>
+                        <EntityRule EntityName="IfcSimpleProperty" />
+                      </EntityRules>
+                    </AttributeRule>
+                  </AttributeRules>
+                </EntityRule>
+              </EntityRules>
+            </AttributeRule>
+          </Rules>
+        </ConceptTemplate>
+        <ConceptTemplate uuid="503c555c-215d-41c5-8fd0-1bd4f1933c6f" name="Simple data sheet [Simple data sheet]" applicableSchema="IFC4" applicableEntity="IfcPropertySet">
+          <Rules>
+            <AttributeRule AttributeName="HasProperties">
+              <EntityRules>
+                <EntityRule EntityName="IfcSimpleProperty" />
               </EntityRules>
             </AttributeRule>
           </Rules>
@@ -342,36 +378,6 @@ In addition to the documentation of IfcTypeObject and derived classes in the off
         </ConceptTemplate>
       </SubTemplates>
     </ConceptTemplate>
-    <ConceptTemplate uuid="c22794e2-900f-4781-8bf6-045f78a83aae" name="Data sheets" applicableSchema="IFC4" applicableEntity="IfcPropertySet">
-      <SubTemplates>
-        <ConceptTemplate uuid="c0b45389-7ad7-4abd-9264-f3dfcd37b81f" name="Complex data sheet" applicableSchema="IFC4" applicableEntity="IfcPropertySet">
-          <Rules>
-            <AttributeRule AttributeName="HasProperties">
-              <EntityRules>
-                <EntityRule EntityName="IfcComplexProperty">
-                  <AttributeRules>
-                    <AttributeRule AttributeName="HasProperties">
-                      <EntityRules>
-                        <EntityRule EntityName="IfcSimpleProperty" />
-                      </EntityRules>
-                    </AttributeRule>
-                  </AttributeRules>
-                </EntityRule>
-              </EntityRules>
-            </AttributeRule>
-          </Rules>
-        </ConceptTemplate>
-        <ConceptTemplate uuid="503c555c-215d-41c5-8fd0-1bd4f1933c6f" name="Simple data sheet" applicableSchema="IFC4" applicableEntity="IfcPropertySet">
-          <Rules>
-            <AttributeRule AttributeName="HasProperties">
-              <EntityRules>
-                <EntityRule EntityName="IfcSimpleProperty" />
-              </EntityRules>
-            </AttributeRule>
-          </Rules>
-        </ConceptTemplate>
-      </SubTemplates>
-    </ConceptTemplate>
     <ConceptTemplate uuid="6fbc308a-1184-4c4b-9d4b-68cf5992591e" name="Data templates" status="draft" applicableSchema="IFC4" applicableEntity="IfcPropertySetTemplate">
       <SubTemplates>
         <ConceptTemplate uuid="af08c875-d4ab-4ff8-8bac-c1001e78829a" name="Complex data template" status="draft" applicableSchema="IFC4" applicableEntity="IfcPropertySetTemplate">
@@ -457,6 +463,12 @@ The cardinality  of the classes shall be as following:
 { .tg}
 { .tg}
 { .tg}
+{ .tg}
+{ .tg}
+{ .tg}
+{ .tg}
+{ .tg}
+{ .tg}
 <table class="tg">
   <tr>
     <th class="tg-w2dt"><br>&nbsp;&nbsp;Type of exchange<br>&nbsp;&nbsp;</th>
@@ -475,6 +487,18 @@ The cardinality  of the classes shall be as following:
   </tr>
 <caption align"bottom"="">Table 2: Cardinality of declarations</caption>
 </table>
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -572,6 +596,310 @@ This ensures that the data sheets stay interpretable over a long time, even if t
           </Rules>
         </ConceptTemplate>
       </SubTemplates>
+    </ConceptTemplate>
+    <ConceptTemplate uuid="7556808d-2437-46b6-85a3-7090cbd84381" name="Dictionaries" status="draft" applicableSchema="IFC4" applicableEntity="IfcProjectLibrary">
+      <Definitions>
+        <Definition>
+          <Body><![CDATA[The EN ISO 23387 defines a standardized way to express construction data with the concept of data templates. Such data templates can be used to structure the information, based on external standards. The data templates in EN ISO 23387 make use of the data structure, defined in ISO 12006-3. Data templates include well defined properties according to EN ISO 23386. 
+The properties and the data template can be stored in central dictionaries, from where they can be retrieved and used in projects.
+
+
+<figure>
+  <img src="../../../../figures/figure7_datatemplates.png" width="650" alt="Use data templates and data to create combinded construction objects data">
+  <figcaption>Figure 7: Use data templates and data to create combinded construction objects data
+  </figcaption>
+</figure>
+
+
+To use the data templates from (Online-)Dictionaries in the construction objects data view, the data templates have to be mapped from the structure ISO 12006-3 to the structure of EN ISO 16739.1:2018.
+
+The following table defines, how the entities from pr EN ISO 23387 shall be mapped to this standard.
+  
+<style type="text/css">
+.tg  {border-collapse:collapse;border-spacing:0;}
+.tg td{font-family:Arial, sans-serif;font-size:14px;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;border-color:black;}
+.tg th{font-family:Arial, sans-serif;font-size:14px;font-weight:normal;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;border-color:black;}
+.tg .tg-p68j{font-size:12px;font-family:Arial, Helvetica, sans-serif !important;;background-color:#efefef;border-color:#000000;text-align:left;vertical-align:middle}
+.tg .tg-as4r{font-size:12px;font-family:Arial, Helvetica, sans-serif !important;;background-color:#efefef;border-color:inherit;text-align:left;vertical-align:middle}
+.tg .tg-2sae{font-weight:bold;font-size:12px;font-family:Arial, Helvetica, sans-serif !important;;background-color:#c0c0c0;border-color:inherit;text-align:left;vertical-align:middle}
+.tg .tg-l1gd{font-size:12px;font-family:Arial, Helvetica, sans-serif !important;;border-color:inherit;text-align:left;vertical-align:middle}
+</style>{ .tg}
+{ .tg}
+<table class="tg" style="undefined;table-layout: fixed; width: 844px">
+<colgroup>
+<col style="width: 242px">
+<col style="width: 242px">
+<col style="width: 230px">
+<col style="width: 130px">
+</colgroup>
+  <tr>
+    <th class="tg-2sae" colspan="2">Template definition in pr EN ISO 23387, based on property definitions in pr EN ISO 23386 (ISO 12006-3)<br></th>
+    <th class="tg-2sae" colspan="2">Template definition in this standard based on EN ISO 16739</th>
+  </tr>
+  <tr>
+    <td class="tg-as4r" colspan="2">Template name<br></td>
+    <td class="tg-as4r" colspan="2"></td>
+  </tr>
+  <tr>
+    <td class="tg-l1gd" colspan="2">Template Guid<br></td>
+    <td class="tg-l1gd" colspan="2"></td>
+  </tr>
+  <tr>
+    <td class="tg-as4r" colspan="2">Template technical specification<br></td>
+    <td class="tg-as4r" colspan="2"></td>
+  </tr>
+  <tr>
+    <td class="tg-l1gd" colspan="2">Construction object<br></td>
+    <td class="tg-l1gd" colspan="2"></td>
+  </tr>
+  <tr>
+    <td class="tg-as4r" colspan="2">Construction object technical specification<br></td>
+    <td class="tg-as4r" colspan="2"></td>
+  </tr>
+  <tr>
+    <td class="tg-l1gd" colspan="2">Classifications<br></td>
+    <td class="tg-l1gd" colspan="2"></td>
+  </tr>
+  <tr>
+    <td class="tg-2sae" colspan="4">Per property:<br></td>
+  </tr>
+  <tr>
+    <td class="tg-p68j" rowspan="3">Essential Characteristic<br></td>
+    <td class="tg-p68j">Name<br></td>
+    <td class="tg-p68j" rowspan="3">IfcPropertySet<br></td>
+    <td class="tg-p68j"></td>
+  </tr>
+  <tr>
+    <td class="tg-p68j">Definition</td>
+    <td class="tg-p68j"></td>
+  </tr>
+  <tr>
+    <td class="tg-p68j">GUID</td>
+    <td class="tg-p68j">IfcGlobalID</td>
+  </tr>
+  <tr>
+    <td class="tg-l1gd" rowspan="3">Group of properties</td>
+    <td class="tg-l1gd">Name</td>
+    <td class="tg-l1gd" rowspan="3">IfcComplexPropertyTemplate</td>
+    <td class="tg-l1gd"></td>
+  </tr>
+  <tr>
+    <td class="tg-l1gd">Definition</td>
+    <td class="tg-l1gd"></td>
+  </tr>
+  <tr>
+    <td class="tg-l1gd">GUID</td>
+    <td class="tg-l1gd"></td>
+  </tr>
+  <tr>
+    <td class="tg-as4r">Document</td>
+    <td class="tg-as4r">DocumentReference</td>
+    <td class="tg-as4r">IfcDocumentInformation</td>
+    <td class="tg-as4r"></td>
+  </tr>
+  <tr>
+    <td class="tg-l1gd">GUID<br></td>
+    <td class="tg-l1gd"></td>
+    <td class="tg-l1gd"></td>
+    <td class="tg-l1gd"></td>
+  </tr>
+  <tr>
+    <td class="tg-as4r" rowspan="3">Generic property</td>
+    <td class="tg-as4r">Name<br></td>
+    <td class="tg-as4r" rowspan="3">IfcComplexPropertyTemplate<br></td>
+    <td class="tg-as4r"></td>
+  </tr>
+  <tr>
+    <td class="tg-as4r">Definition</td>
+    <td class="tg-as4r"></td>
+  </tr>
+  <tr>
+    <td class="tg-as4r">GUID</td>
+    <td class="tg-as4r"></td>
+  </tr>
+  <tr>
+    <td class="tg-l1gd" rowspan="4">Property<br></td>
+    <td class="tg-l1gd">Name<br></td>
+    <td class="tg-l1gd" rowspan="4">IfcSimplePropertyTemplate<br></td>
+    <td class="tg-l1gd">Name<br></td>
+  </tr>
+  <tr>
+    <td class="tg-l1gd">Short name</td>
+    <td class="tg-l1gd">-</td>
+  </tr>
+  <tr>
+    <td class="tg-l1gd">Definition</td>
+    <td class="tg-l1gd">Description</td>
+  </tr>
+  <tr>
+    <td class="tg-l1gd">GUID</td>
+    <td class="tg-l1gd">GlobalID</td>
+  </tr>
+  <tr>
+    <td class="tg-as4r" rowspan="4">Dependency<br></td>
+    <td class="tg-as4r">Name<br></td>
+    <td class="tg-as4r"></td>
+    <td class="tg-as4r"></td>
+  </tr>
+  <tr>
+    <td class="tg-as4r">Short name</td>
+    <td class="tg-as4r"></td>
+    <td class="tg-as4r"></td>
+  </tr>
+  <tr>
+    <td class="tg-as4r">Definition</td>
+    <td class="tg-as4r"></td>
+    <td class="tg-as4r"></td>
+  </tr>
+  <tr>
+    <td class="tg-as4r">GUID</td>
+    <td class="tg-as4r"></td>
+    <td class="tg-as4r"></td>
+  </tr>
+  <tr>
+    <td class="tg-l1gd">Document<br></td>
+    <td class="tg-l1gd">Reference<br></td>
+    <td class="tg-l1gd"></td>
+    <td class="tg-l1gd"></td>
+  </tr>
+  <tr>
+    <td class="tg-as4r" rowspan="3">Quantity (Measure with Unit)<br></td>
+    <td class="tg-as4r">Name<br></td>
+    <td class="tg-as4r" rowspan="3">Measure Unit<br></td>
+    <td class="tg-as4r"></td>
+  </tr>
+  <tr>
+    <td class="tg-as4r">Definition</td>
+    <td class="tg-as4r"></td>
+  </tr>
+  <tr>
+    <td class="tg-as4r">GUID</td>
+    <td class="tg-as4r"></td>
+  </tr>
+  <tr>
+    <td class="tg-l1gd" rowspan="4">Unit<br></td>
+    <td class="tg-l1gd">Name<br></td>
+    <td class="tg-l1gd">Unit / SiUnit<br></td>
+    <td class="tg-l1gd"></td>
+  </tr>
+  <tr>
+    <td class="tg-l1gd">Short name</td>
+    <td class="tg-l1gd"></td>
+    <td class="tg-l1gd"></td>
+  </tr>
+  <tr>
+    <td class="tg-l1gd">Definition</td>
+    <td class="tg-l1gd"></td>
+    <td class="tg-l1gd"></td>
+  </tr>
+  <tr>
+    <td class="tg-l1gd">GUID</td>
+    <td class="tg-l1gd"></td>
+    <td class="tg-l1gd"></td>
+  </tr>
+  <tr>
+    <td class="tg-as4r">Value<br></td>
+    <td class="tg-as4r">Reference<br></td>
+    <td class="tg-as4r"></td>
+    <td class="tg-as4r"></td>
+  </tr>
+  <tr>
+    <td class="tg-l1gd" rowspan="4">Valid Values<br></td>
+    <td class="tg-l1gd">GUID<br></td>
+    <td class="tg-l1gd"></td>
+    <td class="tg-l1gd"></td>
+  </tr>
+  <tr>
+    <td class="tg-l1gd">Full name</td>
+    <td class="tg-l1gd"></td>
+    <td class="tg-l1gd"></td>
+  </tr>
+  <tr>
+    <td class="tg-l1gd">Short name</td>
+    <td class="tg-l1gd"></td>
+    <td class="tg-l1gd"></td>
+  </tr>
+  <tr>
+    <td class="tg-l1gd">Definition</td>
+    <td class="tg-l1gd"></td>
+    <td class="tg-l1gd"></td>
+  </tr>
+  <tr>
+    <td class="tg-as4r" rowspan="4">Document Reference<br></td>
+    <td class="tg-as4r">GUID<br></td>
+    <td class="tg-as4r"></td>
+    <td class="tg-as4r"></td>
+  </tr>
+  <tr>
+    <td class="tg-as4r">Full name</td>
+    <td class="tg-as4r"></td>
+    <td class="tg-as4r"></td>
+  </tr>
+  <tr>
+    <td class="tg-as4r">Short name</td>
+    <td class="tg-as4r"></td>
+    <td class="tg-as4r"></td>
+  </tr>
+  <tr>
+    <td class="tg-as4r">Definition</td>
+    <td class="tg-as4r"></td>
+    <td class="tg-as4r"></td>
+  </tr>
+</table>
+
+
+
+  
+The following table defines, how the entities from IFD (EN ISO 12006-3:2007) shall be mapped to this standard.
+  
+<style type="text/css">
+.tg  {border-collapse:collapse;border-spacing:0;}
+.tg td{font-family:Arial, sans-serif;font-size:14px;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;border-color:black;}
+.tg th{font-family:Arial, sans-serif;font-size:14px;font-weight:normal;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;border-color:black;}
+.tg .tg-rzut{font-weight:bold;font-size:12px;font-family:Arial, Helvetica, sans-serif !important;;background-color:#c0c0c0;text-align:left;vertical-align:middle}
+.tg .tg-1llc{font-size:12px;font-family:Arial, Helvetica, sans-serif !important;;background-color:#efefef;text-align:left;vertical-align:middle}
+.tg .tg-w7pk{font-size:12px;font-family:Arial, Helvetica, sans-serif !important;;text-align:left;vertical-align:middle}
+</style>{ .tg}
+{ .tg}
+<table class="tg">
+  <tr>
+    <th class="tg-rzut">ISO 12006-3<br></th>
+    <th class="tg-rzut">IFC entity <br>ISO 16739<br></th>
+    <th class="tg-rzut">Description of integration<br></th>
+  </tr>
+  <tr>
+    <td class="tg-1llc">Classification<br><span style="color:rgb(254, 0, 0)">Change to XTD notation of ISO 12006-3</span><br></td>
+    <td class="tg-1llc">IfcClassification<br>IfcClassificationReference<br></td>
+    <td class="tg-1llc">Classification systems and classification nodes based on a simple hierarchical classification as described in ISO 12006-2<br></td>
+  </tr>
+  <tr>
+    <td class="tg-w7pk">subject<br></td>
+    <td class="tg-w7pk">IfcRelAssociatesClassification<br>IfcElementXX<br>IfcElementTypeXX<br></td>
+    <td class="tg-w7pk">Description of a single subject in a catalogue system and in an instance file<br></td>
+  </tr>
+  <tr>
+    <td class="tg-1llc">nest<br></td>
+    <td class="tg-1llc">IfcPropertySetTemplate<br></td>
+    <td class="tg-1llc">A group of properties<br></td>
+  </tr>
+  <tr>
+    <td class="tg-w7pk">property<br></td>
+    <td class="tg-w7pk">IfcPropertyTemplate<br></td>
+    <td class="tg-w7pk">A single property<br></td>
+  </tr>
+  <tr>
+    <td class="tg-1llc">measure<br></td>
+    <td class="tg-1llc">EnumerationValues<br></td>
+    <td class="tg-1llc">Information about the value of the property<br></td>
+  </tr>
+  <tr>
+    <td class="tg-w7pk">Unit*<br></td>
+    <td class="tg-w7pk">UnitsInContext / IfcSIUnit<br></td>
+    <td class="tg-w7pk">Technical definition of the unit, in which the value of the property should be interpreted<br></td>
+  </tr>
+</table>]]></Body>
+        </Definition>
+      </Definitions>
     </ConceptTemplate>
     <ConceptTemplate uuid="514113f3-ba4b-4c3f-a18e-0250b612b84d" name="Documents" status="draft" applicableSchema="IFC4" applicableEntity="IfcDocumentInformation">
       <Rules>
@@ -847,6 +1175,19 @@ The table below resume IfcDocumentInformation’s attributes and their optional/
                                                                     <AttributeRule AttributeName="Properties">
                                                                       <EntityRules>
                                                                         <EntityRule EntityName="IfcProperty" />
+                                                                      </EntityRules>
+                                                                    </AttributeRule>
+                                                                  </AttributeRules>
+                                                                </EntityRule>
+                                                              </EntityRules>
+                                                            </AttributeRule>
+                                                            <AttributeRule AttributeName="HasExternalReferences">
+                                                              <EntityRules>
+                                                                <EntityRule EntityName="IfcExternalReferenceRelationship">
+                                                                  <AttributeRules>
+                                                                    <AttributeRule AttributeName="RelatingReference">
+                                                                      <EntityRules>
+                                                                        <EntityRule EntityName="IfcClassificationReference" />
                                                                       </EntityRules>
                                                                     </AttributeRule>
                                                                   </AttributeRules>
@@ -1173,7 +1514,7 @@ This standard does not define how exactly the exchange is done. It defines the s
 
 It is explicitly allowed to embed an IFC file in Step format (.ifc) or in XML format Format (.ifcxml) in an ifczip file.The specification contains the following principles:
 
-1. The ifczip file contains exactly one model file (.ifc or .ifcxml). The file extension is \\\*.ifczip
+1. The ifczip file contains exactly one model file (.ifc or .ifcxml). The file extension is \\\\\\\\\*.ifczip
 2. According to this rule, it is allowed to embed additional other files in an ifczip file. Therefore, an ifczip file can be a container, which can transport many additional files in itself.
 3. Such a container offers several advantages, such as transport of photo documentations, transport of plant documentation,  transport of permits and notifications, transport of operating documents, e.g. test and maintenance reports
 
@@ -1236,6 +1577,7 @@ Since the current specification of the ifczip format provides exactly one model 
           </Rules>
         </ConceptTemplate>
         <ConceptTemplate uuid="35e8b4b3-cd50-4db4-825f-5c1ad22a0491" name="NOTDEFINED" applicableSchema="IFC4" applicableEntity="IfcContext" />
+        <ConceptTemplate uuid="b6997d32-24a8-428a-a88f-27ed099f03ab" name="NOTDEFINED" applicableSchema="IFC4" applicableEntity="IfcProjectLibrary" />
         <ConceptTemplate uuid="0790a05d-73f8-4525-a3f6-fb6f3378fc00" name="NOTDEFINED" applicableSchema="IFC4" applicableEntity="IfcPropertySet" />
         <ConceptTemplate uuid="e9fee12d-eb64-48bc-9636-b8048b4b4e34" name="NOTDEFINED" applicableSchema="IFC4" applicableEntity="IfcPropertySetTemplate" />
       </SubTemplates>
@@ -1297,6 +1639,12 @@ The product data file is specified as follows:
 { .tg}
 { .tg}
 { .tg}
+{ .tg}
+{ .tg}
+{ .tg}
+{ .tg}
+{ .tg}
+{ .tg}
 <table class="tg">
   <tr>
     <th class="tg-rykj"><br>&nbsp;&nbsp;Standard<br>&nbsp;&nbsp;</th>
@@ -1319,6 +1667,18 @@ The product data file is specified as follows:
     <td class="tg-rykj"><br>&nbsp;&nbsp;ifcZIP<br>&nbsp;&nbsp;</td>
   </tr>
 </table>
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -1360,7 +1720,7 @@ The standard contains three definitions of information exchange requirements.  E
         </Definition>
       </Definitions>
       <ExchangeRequirements>
-        <ExchangeRequirement uuid="4539261a-5a79-4274-ac72-3b6053e00cee" name="Catalogue of configured construction objects" code="COD.1.CCCO" version="0.9" status="candidate" author="CEN-TC442-WG2-TG3" owner="CEN-TC442-WG2" copyright="CEN - European Committee for Standardization" applicability="both">
+        <ExchangeRequirement uuid="4539261a-5a79-4274-ac72-3b6053e00cee" name="Catalogue of configured construction objects exchange" code="COD.1.CCCO" version="0.9" status="candidate" author="CEN-TC442-WG2-TG3" owner="CEN-TC442-WG2" copyright="CEN - European Committee for Standardization" applicability="both">
           <Definitions>
             <Definition>
               <Body><![CDATA[The exchange of catalogues of configured construction objects enabled manufacturers and other stakeholder to exchange list of completely configured construction objects, often related to products. 
@@ -1408,30 +1768,70 @@ The content of the Data Templates shall be loadable from digital templates based
           <Concepts>
             <Concept uuid="c7703053-da7f-4010-95c9-f26fa0c2b29d" name="Material constituent definition" status="draft" override="false">
               <Template ref="a1b77971-e1dd-4bed-8a15-f92485e2c7b6" />
+              <Requirements>
+                <Requirement applicability="import" requirement="recommended" exchangeRequirement="4539261a-5a79-4274-ac72-3b6053e00cee" />
+                <Requirement applicability="import" requirement="recommended" exchangeRequirement="c0115c7f-1284-40d7-9644-1d2b022eb5a5" />
+                <Requirement applicability="import" requirement="recommended" exchangeRequirement="e4d15dda-78aa-4713-83be-aa79730fc9a4" />
+                <Requirement applicability="export" requirement="recommended" exchangeRequirement="4539261a-5a79-4274-ac72-3b6053e00cee" />
+                <Requirement applicability="export" requirement="recommended" exchangeRequirement="c0115c7f-1284-40d7-9644-1d2b022eb5a5" />
+                <Requirement applicability="export" requirement="recommended" exchangeRequirement="e4d15dda-78aa-4713-83be-aa79730fc9a4" />
+              </Requirements>
               <TemplateRules operator="and">
                 <TemplateRule />
               </TemplateRules>
             </Concept>
             <Concept uuid="a68042c6-c2b6-4718-8426-a6d8615cc980" name="Material layer definition" override="false">
               <Template ref="94e9cae4-5d06-40cc-be8a-4a9cddd79325" />
+              <Requirements>
+                <Requirement applicability="import" requirement="recommended" exchangeRequirement="4539261a-5a79-4274-ac72-3b6053e00cee" />
+                <Requirement applicability="import" requirement="recommended" exchangeRequirement="c0115c7f-1284-40d7-9644-1d2b022eb5a5" />
+                <Requirement applicability="import" requirement="recommended" exchangeRequirement="e4d15dda-78aa-4713-83be-aa79730fc9a4" />
+                <Requirement applicability="export" requirement="recommended" exchangeRequirement="4539261a-5a79-4274-ac72-3b6053e00cee" />
+                <Requirement applicability="export" requirement="recommended" exchangeRequirement="c0115c7f-1284-40d7-9644-1d2b022eb5a5" />
+                <Requirement applicability="export" requirement="recommended" exchangeRequirement="e4d15dda-78aa-4713-83be-aa79730fc9a4" />
+              </Requirements>
               <TemplateRules operator="and">
                 <TemplateRule />
               </TemplateRules>
             </Concept>
             <Concept uuid="fb030e0c-987f-4f4a-9e74-24ce75c58966" name="Material of construction object types" override="false">
               <Template ref="509461ca-f24f-41ff-8cc8-cc98c52c3c18" />
+              <Requirements>
+                <Requirement applicability="import" requirement="recommended" exchangeRequirement="4539261a-5a79-4274-ac72-3b6053e00cee" />
+                <Requirement applicability="import" requirement="recommended" exchangeRequirement="c0115c7f-1284-40d7-9644-1d2b022eb5a5" />
+                <Requirement applicability="import" requirement="recommended" exchangeRequirement="e4d15dda-78aa-4713-83be-aa79730fc9a4" />
+                <Requirement applicability="export" requirement="recommended" exchangeRequirement="4539261a-5a79-4274-ac72-3b6053e00cee" />
+                <Requirement applicability="export" requirement="recommended" exchangeRequirement="c0115c7f-1284-40d7-9644-1d2b022eb5a5" />
+                <Requirement applicability="export" requirement="recommended" exchangeRequirement="e4d15dda-78aa-4713-83be-aa79730fc9a4" />
+              </Requirements>
               <TemplateRules operator="and">
                 <TemplateRule />
               </TemplateRules>
             </Concept>
             <Concept uuid="eff5d768-abfb-4054-930d-9a47a1fc6ea0" name="Material of construction objects" status="draft" override="false">
               <Template ref="252580ef-fa1c-420d-97cf-c81c3be33e94" />
+              <Requirements>
+                <Requirement applicability="import" requirement="recommended" exchangeRequirement="c0115c7f-1284-40d7-9644-1d2b022eb5a5" />
+                <Requirement applicability="import" requirement="recommended" exchangeRequirement="e4d15dda-78aa-4713-83be-aa79730fc9a4" />
+                <Requirement applicability="export" requirement="recommended" exchangeRequirement="4539261a-5a79-4274-ac72-3b6053e00cee" />
+                <Requirement applicability="export" requirement="recommended" exchangeRequirement="c0115c7f-1284-40d7-9644-1d2b022eb5a5" />
+                <Requirement applicability="export" requirement="recommended" exchangeRequirement="e4d15dda-78aa-4713-83be-aa79730fc9a4" />
+                <Requirement applicability="import" requirement="recommended" exchangeRequirement="4539261a-5a79-4274-ac72-3b6053e00cee" />
+              </Requirements>
               <TemplateRules operator="and">
                 <TemplateRule />
               </TemplateRules>
             </Concept>
             <Concept uuid="2dd69a28-c69c-4438-9d16-72a673f43118" name="Material profile definition" override="false">
               <Template ref="44f330b4-61fe-4927-98a9-850e03d63f7d" />
+              <Requirements>
+                <Requirement applicability="import" requirement="recommended" exchangeRequirement="4539261a-5a79-4274-ac72-3b6053e00cee" />
+                <Requirement applicability="import" requirement="recommended" exchangeRequirement="c0115c7f-1284-40d7-9644-1d2b022eb5a5" />
+                <Requirement applicability="import" requirement="recommended" exchangeRequirement="e4d15dda-78aa-4713-83be-aa79730fc9a4" />
+                <Requirement applicability="export" requirement="recommended" exchangeRequirement="4539261a-5a79-4274-ac72-3b6053e00cee" />
+                <Requirement applicability="export" requirement="recommended" exchangeRequirement="c0115c7f-1284-40d7-9644-1d2b022eb5a5" />
+                <Requirement applicability="export" requirement="recommended" exchangeRequirement="e4d15dda-78aa-4713-83be-aa79730fc9a4" />
+              </Requirements>
               <TemplateRules operator="and">
                 <TemplateRule />
               </TemplateRules>
@@ -1451,6 +1851,8 @@ The content of the Data Templates shall be loadable from digital templates based
                 <Requirement applicability="export" requirement="mandatory" exchangeRequirement="c0115c7f-1284-40d7-9644-1d2b022eb5a5" />
                 <Requirement applicability="export" requirement="excluded" exchangeRequirement="e4d15dda-78aa-4713-83be-aa79730fc9a4" />
                 <Requirement applicability="import" requirement="excluded" exchangeRequirement="e4d15dda-78aa-4713-83be-aa79730fc9a4" />
+                <Requirement applicability="import" requirement="excluded" exchangeRequirement="4539261a-5a79-4274-ac72-3b6053e00cee" />
+                <Requirement applicability="export" requirement="excluded" exchangeRequirement="4539261a-5a79-4274-ac72-3b6053e00cee" />
               </Requirements>
               <TemplateRules operator="and">
                 <TemplateRule />
@@ -1464,6 +1866,8 @@ The content of the Data Templates shall be loadable from digital templates based
                 <Requirement applicability="import" requirement="mandatory" exchangeRequirement="c0115c7f-1284-40d7-9644-1d2b022eb5a5" />
                 <Requirement applicability="export" requirement="mandatory" exchangeRequirement="c0115c7f-1284-40d7-9644-1d2b022eb5a5" />
                 <Requirement applicability="export" requirement="mandatory" exchangeRequirement="e4d15dda-78aa-4713-83be-aa79730fc9a4" />
+                <Requirement applicability="import" requirement="mandatory" exchangeRequirement="4539261a-5a79-4274-ac72-3b6053e00cee" />
+                <Requirement applicability="export" requirement="mandatory" exchangeRequirement="4539261a-5a79-4274-ac72-3b6053e00cee" />
               </Requirements>
               <TemplateRules operator="and">
                 <TemplateRule />
@@ -1476,6 +1880,8 @@ The content of the Data Templates shall be loadable from digital templates based
                 <Requirement applicability="export" requirement="mandatory" exchangeRequirement="e4d15dda-78aa-4713-83be-aa79730fc9a4" />
                 <Requirement applicability="import" requirement="mandatory" exchangeRequirement="c0115c7f-1284-40d7-9644-1d2b022eb5a5" />
                 <Requirement applicability="export" requirement="mandatory" exchangeRequirement="c0115c7f-1284-40d7-9644-1d2b022eb5a5" />
+                <Requirement applicability="import" requirement="mandatory" exchangeRequirement="4539261a-5a79-4274-ac72-3b6053e00cee" />
+                <Requirement applicability="export" requirement="mandatory" exchangeRequirement="4539261a-5a79-4274-ac72-3b6053e00cee" />
               </Requirements>
               <TemplateRules operator="and">
                 <TemplateRule />
@@ -1492,6 +1898,14 @@ The content of the Data Templates shall be loadable from digital templates based
           <Concepts>
             <Concept uuid="fed42f40-742f-43a0-bdb6-9e0dd3f65a10" name="Classification declaration" override="false">
               <Template ref="fb699395-46b5-4eb8-ae96-b94012380099" />
+              <Requirements>
+                <Requirement applicability="import" requirement="mandatory" exchangeRequirement="4539261a-5a79-4274-ac72-3b6053e00cee" />
+                <Requirement applicability="import" requirement="mandatory" exchangeRequirement="c0115c7f-1284-40d7-9644-1d2b022eb5a5" />
+                <Requirement applicability="import" requirement="mandatory" exchangeRequirement="e4d15dda-78aa-4713-83be-aa79730fc9a4" />
+                <Requirement applicability="export" requirement="mandatory" exchangeRequirement="4539261a-5a79-4274-ac72-3b6053e00cee" />
+                <Requirement applicability="export" requirement="mandatory" exchangeRequirement="c0115c7f-1284-40d7-9644-1d2b022eb5a5" />
+                <Requirement applicability="export" requirement="mandatory" exchangeRequirement="e4d15dda-78aa-4713-83be-aa79730fc9a4" />
+              </Requirements>
               <TemplateRules operator="and">
                 <TemplateRule />
                 <TemplateRule />
@@ -1504,30 +1918,70 @@ The content of the Data Templates shall be loadable from digital templates based
             </Concept>
             <Concept uuid="2417e76f-bcc7-4f1c-b2cd-f9cb248fcac3" name="Classification of data templates" override="false">
               <Template ref="f26b428b-d38a-47b3-a60d-d2ba54a6c764" />
+              <Requirements>
+                <Requirement applicability="import" requirement="mandatory" exchangeRequirement="4539261a-5a79-4274-ac72-3b6053e00cee" />
+                <Requirement applicability="import" requirement="mandatory" exchangeRequirement="c0115c7f-1284-40d7-9644-1d2b022eb5a5" />
+                <Requirement applicability="import" requirement="mandatory" exchangeRequirement="e4d15dda-78aa-4713-83be-aa79730fc9a4" />
+                <Requirement applicability="export" requirement="mandatory" exchangeRequirement="4539261a-5a79-4274-ac72-3b6053e00cee" />
+                <Requirement applicability="export" requirement="mandatory" exchangeRequirement="c0115c7f-1284-40d7-9644-1d2b022eb5a5" />
+                <Requirement applicability="export" requirement="mandatory" exchangeRequirement="e4d15dda-78aa-4713-83be-aa79730fc9a4" />
+              </Requirements>
               <TemplateRules operator="and">
                 <TemplateRule />
               </TemplateRules>
             </Concept>
             <Concept uuid="290ef775-9c4b-444f-9f36-338aee25e531" name="Classification of construction object types" override="false">
               <Template ref="221e03e4-b661-4f7a-82fe-2d0baff62915" />
+              <Requirements>
+                <Requirement applicability="import" requirement="mandatory" exchangeRequirement="4539261a-5a79-4274-ac72-3b6053e00cee" />
+                <Requirement applicability="import" requirement="mandatory" exchangeRequirement="c0115c7f-1284-40d7-9644-1d2b022eb5a5" />
+                <Requirement applicability="import" requirement="mandatory" exchangeRequirement="e4d15dda-78aa-4713-83be-aa79730fc9a4" />
+                <Requirement applicability="export" requirement="mandatory" exchangeRequirement="4539261a-5a79-4274-ac72-3b6053e00cee" />
+                <Requirement applicability="export" requirement="mandatory" exchangeRequirement="c0115c7f-1284-40d7-9644-1d2b022eb5a5" />
+                <Requirement applicability="export" requirement="mandatory" exchangeRequirement="e4d15dda-78aa-4713-83be-aa79730fc9a4" />
+              </Requirements>
               <TemplateRules operator="and">
                 <TemplateRule />
               </TemplateRules>
             </Concept>
             <Concept uuid="e34186f1-77a8-4ef9-8a0e-a6d3b5f431aa" name="Classification of construction objects" override="false">
               <Template ref="82ec3852-f1bf-4bdf-b096-1f762812270d" />
+              <Requirements>
+                <Requirement applicability="import" requirement="excluded" exchangeRequirement="4539261a-5a79-4274-ac72-3b6053e00cee" />
+                <Requirement applicability="export" requirement="excluded" exchangeRequirement="4539261a-5a79-4274-ac72-3b6053e00cee" />
+                <Requirement applicability="import" requirement="mandatory" exchangeRequirement="c0115c7f-1284-40d7-9644-1d2b022eb5a5" />
+                <Requirement applicability="export" requirement="mandatory" exchangeRequirement="c0115c7f-1284-40d7-9644-1d2b022eb5a5" />
+                <Requirement applicability="import" requirement="excluded" exchangeRequirement="e4d15dda-78aa-4713-83be-aa79730fc9a4" />
+                <Requirement applicability="export" requirement="mandatory" exchangeRequirement="e4d15dda-78aa-4713-83be-aa79730fc9a4" />
+              </Requirements>
               <TemplateRules operator="and">
                 <TemplateRule />
               </TemplateRules>
             </Concept>
             <Concept uuid="1559f79d-37f3-49e6-b750-5f7e4f739ca7" name="Classification of construction systems" override="false">
               <Template ref="53b2705b-f492-48bf-9b2c-e23ec01c9acc" />
+              <Requirements>
+                <Requirement applicability="import" requirement="recommended" exchangeRequirement="c0115c7f-1284-40d7-9644-1d2b022eb5a5" />
+                <Requirement applicability="import" requirement="excluded" exchangeRequirement="4539261a-5a79-4274-ac72-3b6053e00cee" />
+                <Requirement applicability="import" requirement="excluded" exchangeRequirement="e4d15dda-78aa-4713-83be-aa79730fc9a4" />
+                <Requirement applicability="export" requirement="excluded" exchangeRequirement="4539261a-5a79-4274-ac72-3b6053e00cee" />
+                <Requirement applicability="export" requirement="recommended" exchangeRequirement="c0115c7f-1284-40d7-9644-1d2b022eb5a5" />
+                <Requirement applicability="export" requirement="excluded" exchangeRequirement="e4d15dda-78aa-4713-83be-aa79730fc9a4" />
+              </Requirements>
               <TemplateRules operator="and">
                 <TemplateRule />
               </TemplateRules>
             </Concept>
             <Concept uuid="7b9933b0-71a5-4683-898b-4acc4bc55a52" name="Classification of documents" override="false">
               <Template ref="8fa32805-1d56-4030-959a-316e4fb4660b" />
+              <Requirements>
+                <Requirement applicability="import" requirement="recommended" exchangeRequirement="4539261a-5a79-4274-ac72-3b6053e00cee" />
+                <Requirement applicability="import" requirement="recommended" exchangeRequirement="c0115c7f-1284-40d7-9644-1d2b022eb5a5" />
+                <Requirement applicability="import" requirement="recommended" exchangeRequirement="e4d15dda-78aa-4713-83be-aa79730fc9a4" />
+                <Requirement applicability="export" requirement="recommended" exchangeRequirement="4539261a-5a79-4274-ac72-3b6053e00cee" />
+                <Requirement applicability="export" requirement="recommended" exchangeRequirement="c0115c7f-1284-40d7-9644-1d2b022eb5a5" />
+                <Requirement applicability="export" requirement="recommended" exchangeRequirement="e4d15dda-78aa-4713-83be-aa79730fc9a4" />
+              </Requirements>
             </Concept>
           </Concepts>
         </ConceptRoot>
@@ -1540,10 +1994,12 @@ The content of the Data Templates shall be loadable from digital templates based
             <Concept uuid="b4135eee-0162-4937-8227-c88b7f3f5518" name="Types" status="candidate" override="false">
               <Template ref="a0056aa3-1206-4173-be06-205b84880e46" />
               <Requirements>
+                <Requirement applicability="export" requirement="excluded" exchangeRequirement="c0115c7f-1284-40d7-9644-1d2b022eb5a5" />
+                <Requirement applicability="import" requirement="excluded" exchangeRequirement="c0115c7f-1284-40d7-9644-1d2b022eb5a5" />
+                <Requirement applicability="import" requirement="mandatory" exchangeRequirement="4539261a-5a79-4274-ac72-3b6053e00cee" />
                 <Requirement applicability="import" requirement="mandatory" exchangeRequirement="e4d15dda-78aa-4713-83be-aa79730fc9a4" />
+                <Requirement applicability="export" requirement="mandatory" exchangeRequirement="4539261a-5a79-4274-ac72-3b6053e00cee" />
                 <Requirement applicability="export" requirement="mandatory" exchangeRequirement="e4d15dda-78aa-4713-83be-aa79730fc9a4" />
-                <Requirement applicability="export" requirement="mandatory" exchangeRequirement="c0115c7f-1284-40d7-9644-1d2b022eb5a5" />
-                <Requirement applicability="import" requirement="mandatory" exchangeRequirement="c0115c7f-1284-40d7-9644-1d2b022eb5a5" />
               </Requirements>
               <TemplateRules operator="and">
                 <TemplateRule />
@@ -1556,9 +2012,11 @@ The content of the Data Templates shall be loadable from digital templates based
               <Template ref="cc9148e8-6891-449a-81f9-d17f51308fec" />
               <Requirements>
                 <Requirement applicability="export" requirement="excluded" exchangeRequirement="e4d15dda-78aa-4713-83be-aa79730fc9a4" />
-                <Requirement applicability="import" requirement="excluded" exchangeRequirement="e4d15dda-78aa-4713-83be-aa79730fc9a4" />
                 <Requirement applicability="import" requirement="mandatory" exchangeRequirement="c0115c7f-1284-40d7-9644-1d2b022eb5a5" />
                 <Requirement applicability="export" requirement="mandatory" exchangeRequirement="c0115c7f-1284-40d7-9644-1d2b022eb5a5" />
+                <Requirement applicability="import" requirement="excluded" exchangeRequirement="4539261a-5a79-4274-ac72-3b6053e00cee" />
+                <Requirement applicability="export" requirement="excluded" exchangeRequirement="4539261a-5a79-4274-ac72-3b6053e00cee" />
+                <Requirement applicability="import" requirement="excluded" exchangeRequirement="e4d15dda-78aa-4713-83be-aa79730fc9a4" />
               </Requirements>
               <TemplateRules operator="and">
                 <TemplateRule />
@@ -1574,18 +2032,42 @@ The content of the Data Templates shall be loadable from digital templates based
           <Concepts>
             <Concept uuid="304b0b4d-1861-4c94-8e5a-a6e4539563f3" name="Document information" override="false">
               <Template ref="e90de9f1-fd96-48bd-8f4c-16d1a991d91b" />
+              <Requirements>
+                <Requirement applicability="import" requirement="recommended" exchangeRequirement="4539261a-5a79-4274-ac72-3b6053e00cee" />
+                <Requirement applicability="import" requirement="recommended" exchangeRequirement="c0115c7f-1284-40d7-9644-1d2b022eb5a5" />
+                <Requirement applicability="import" requirement="recommended" exchangeRequirement="e4d15dda-78aa-4713-83be-aa79730fc9a4" />
+                <Requirement applicability="export" requirement="recommended" exchangeRequirement="4539261a-5a79-4274-ac72-3b6053e00cee" />
+                <Requirement applicability="export" requirement="recommended" exchangeRequirement="c0115c7f-1284-40d7-9644-1d2b022eb5a5" />
+                <Requirement applicability="export" requirement="recommended" exchangeRequirement="e4d15dda-78aa-4713-83be-aa79730fc9a4" />
+              </Requirements>
               <TemplateRules operator="and">
                 <TemplateRule />
               </TemplateRules>
             </Concept>
             <Concept uuid="77832358-777c-4ef2-ba87-7a919c1b8eba" name="Document association to construction object types" status="draft" override="false">
               <Template ref="fd0463cf-d563-41e3-b51b-efd14d6d0c3f" />
+              <Requirements>
+                <Requirement applicability="import" requirement="recommended" exchangeRequirement="4539261a-5a79-4274-ac72-3b6053e00cee" />
+                <Requirement applicability="import" requirement="recommended" exchangeRequirement="c0115c7f-1284-40d7-9644-1d2b022eb5a5" />
+                <Requirement applicability="import" requirement="recommended" exchangeRequirement="e4d15dda-78aa-4713-83be-aa79730fc9a4" />
+                <Requirement applicability="export" requirement="recommended" exchangeRequirement="4539261a-5a79-4274-ac72-3b6053e00cee" />
+                <Requirement applicability="export" requirement="recommended" exchangeRequirement="c0115c7f-1284-40d7-9644-1d2b022eb5a5" />
+                <Requirement applicability="export" requirement="recommended" exchangeRequirement="e4d15dda-78aa-4713-83be-aa79730fc9a4" />
+              </Requirements>
               <TemplateRules operator="and">
                 <TemplateRule />
               </TemplateRules>
             </Concept>
             <Concept uuid="223ef9b5-edfd-403a-a741-fb97debdb61b" name="Document association to construction objects" status="draft" override="false">
               <Template ref="97d00f10-217a-4c2f-803b-32054373054b" />
+              <Requirements>
+                <Requirement applicability="import" requirement="excluded" exchangeRequirement="4539261a-5a79-4274-ac72-3b6053e00cee" />
+                <Requirement applicability="import" requirement="excluded" exchangeRequirement="c0115c7f-1284-40d7-9644-1d2b022eb5a5" />
+                <Requirement applicability="import" requirement="recommended" exchangeRequirement="e4d15dda-78aa-4713-83be-aa79730fc9a4" />
+                <Requirement applicability="export" requirement="excluded" exchangeRequirement="4539261a-5a79-4274-ac72-3b6053e00cee" />
+                <Requirement applicability="export" requirement="excluded" exchangeRequirement="c0115c7f-1284-40d7-9644-1d2b022eb5a5" />
+                <Requirement applicability="export" requirement="recommended" exchangeRequirement="e4d15dda-78aa-4713-83be-aa79730fc9a4" />
+              </Requirements>
               <TemplateRules operator="and">
                 <TemplateRule />
                 <TemplateRule />
@@ -1594,6 +2076,36 @@ The content of the Data Templates shall be loadable from digital templates based
             </Concept>
             <Concept uuid="69d9951e-ada7-42d5-a573-b514ddb4e6f6" name="Document classfication" status="draft" override="false">
               <Template ref="b3ca6650-0d9e-4679-8b31-080c3b82f9a1" />
+              <Requirements>
+                <Requirement applicability="import" requirement="recommended" exchangeRequirement="4539261a-5a79-4274-ac72-3b6053e00cee" />
+                <Requirement applicability="import" requirement="recommended" exchangeRequirement="c0115c7f-1284-40d7-9644-1d2b022eb5a5" />
+                <Requirement applicability="import" requirement="recommended" exchangeRequirement="e4d15dda-78aa-4713-83be-aa79730fc9a4" />
+                <Requirement applicability="export" requirement="recommended" exchangeRequirement="4539261a-5a79-4274-ac72-3b6053e00cee" />
+                <Requirement applicability="export" requirement="recommended" exchangeRequirement="c0115c7f-1284-40d7-9644-1d2b022eb5a5" />
+                <Requirement applicability="export" requirement="recommended" exchangeRequirement="e4d15dda-78aa-4713-83be-aa79730fc9a4" />
+              </Requirements>
+              <TemplateRules operator="and">
+                <TemplateRule />
+              </TemplateRules>
+            </Concept>
+          </Concepts>
+        </ConceptRoot>
+        <ConceptRoot uuid="57e78c86-933b-4736-89a1-3b6f8183b279" name="Dictionaries" applicableRootEntity="IfcProjectLibrary">
+          <Applicability>
+            <Template ref="b6997d32-24a8-428a-a88f-27ed099f03ab" />
+            <TemplateRules operator="and" />
+          </Applicability>
+          <Concepts>
+            <Concept uuid="a6d8ffd6-3caf-4a6d-aba2-1ea931702556" name="Dictionaries" override="false">
+              <Template ref="7556808d-2437-46b6-85a3-7090cbd84381" />
+              <Requirements>
+                <Requirement applicability="import" requirement="mandatory" exchangeRequirement="4539261a-5a79-4274-ac72-3b6053e00cee" />
+                <Requirement applicability="import" requirement="mandatory" exchangeRequirement="c0115c7f-1284-40d7-9644-1d2b022eb5a5" />
+                <Requirement applicability="import" requirement="mandatory" exchangeRequirement="e4d15dda-78aa-4713-83be-aa79730fc9a4" />
+                <Requirement applicability="export" requirement="mandatory" exchangeRequirement="4539261a-5a79-4274-ac72-3b6053e00cee" />
+                <Requirement applicability="export" requirement="mandatory" exchangeRequirement="c0115c7f-1284-40d7-9644-1d2b022eb5a5" />
+                <Requirement applicability="export" requirement="mandatory" exchangeRequirement="e4d15dda-78aa-4713-83be-aa79730fc9a4" />
+              </Requirements>
               <TemplateRules operator="and">
                 <TemplateRule />
               </TemplateRules>
@@ -1602,80 +2114,57 @@ The content of the Data Templates shall be loadable from digital templates based
         </ConceptRoot>
         <ConceptRoot uuid="c5ff2e6c-976f-49a1-986f-259398a342e8" name="Transport" applicableRootEntity="IfcProjectLibrary">
           <Applicability>
-            <Template ref="bf7206d4-80c6-469d-93a5-336283a2a935" />
+            <Template ref="9f63432b-cdc8-4438-8bbf-035ee92c5842" />
             <TemplateRules operator="and" />
           </Applicability>
           <Concepts>
-            <Concept uuid="7ed50688-edce-429f-a6b4-1edf0245eeba" name="Transport" status="candidate" override="false">
-              <Definitions>
-                <Definition>
-                  <Body><![CDATA[All exchanges can be transported over these protocols:
-
-1.	As a physical file with manual exchange via eMail, Harddrives, oder similar
-2.	As a data structure in the payload of an online exchange, eg. an API, a messaging system or similar.
-
-This standard does not define how exactly the exchange is done. It defines the standard for the structure of the file or the payload. The file or the payload can be stored in a compressd format according to the specification. The file extension is then \\\\\\\\\\\\\\\\*.ifczip. The specifications for ifczip can be found here:
-
-•	http://www.buildingsmart-tech.org/specifications/ifc-overview/ifc-overview-summary
-•	http://www.buildingsmart-tech.org/implementation/ifc-implementation/ifc-impl-agreements/cv-2x3-154
-
-It is explicitly allowed to embed an IFC file in Step format (.ifc) or in XML format Format (.ifcxml) in an ifczip file.
-The specification contains the following principles:
-
-1.	The ifczip file contains exactly one model file (.ifc or .ifcxml). The file extension is \\\\\\\\\\\\\\\\*.ifczip
-2.	According to this rule, it is allowed to embed additional other files in an ifczip file. Therefore, an ifczip file can be a container, which can transport many additional files in itself.
-3.	Such a container offers several advantages, such as
-•	transport of photo documentations
-•	transport of plant documentation
-•	transport of permits and notifications
-•	transport of operating documents, e.g. test and maintenance reports
-
-In the BIM context, such a transport is particularly useful if the documents have a reference to the structure.
-
-In order to be able to exchange data without consultation, each transported document should be registered in a structured, electronic table of contents. The recipient of the container can first read the table of contents and then select and remove the files.
-
-For this purpose, two things must be specified for the sender and receiver of such a container file:
-•	syntax of the table of contents
-•	specifications for the semantic identification of documents
-Since the current specification of the ifczip format provides exactly one model file in the root folder of the ifczip file, it makes sense to save the table of contents and the catalogue of document types in this model file.
-For this purpose, the IFC data model (based on IFC4) provides the entity IfcDocumentInformation. For each file transported in the container, an element of type IfcDocumentInformation is written.]]></Body>
-                </Definition>
-              </Definitions>
+            <Concept uuid="39482a04-7e94-4c1a-8a5e-e095ad39c38d" name="Transport" override="false">
               <Template ref="9f63432b-cdc8-4438-8bbf-035ee92c5842" />
               <Requirements>
-                <Requirement applicability="export" requirement="mandatory" exchangeRequirement="e4d15dda-78aa-4713-83be-aa79730fc9a4" />
-                <Requirement applicability="import" requirement="mandatory" exchangeRequirement="e4d15dda-78aa-4713-83be-aa79730fc9a4" />
-                <Requirement applicability="import" requirement="mandatory" exchangeRequirement="c0115c7f-1284-40d7-9644-1d2b022eb5a5" />
-                <Requirement applicability="export" requirement="mandatory" exchangeRequirement="c0115c7f-1284-40d7-9644-1d2b022eb5a5" />
                 <Requirement applicability="import" requirement="mandatory" exchangeRequirement="4539261a-5a79-4274-ac72-3b6053e00cee" />
+                <Requirement applicability="import" requirement="mandatory" exchangeRequirement="c0115c7f-1284-40d7-9644-1d2b022eb5a5" />
+                <Requirement applicability="import" requirement="mandatory" exchangeRequirement="e4d15dda-78aa-4713-83be-aa79730fc9a4" />
                 <Requirement applicability="export" requirement="mandatory" exchangeRequirement="4539261a-5a79-4274-ac72-3b6053e00cee" />
+                <Requirement applicability="export" requirement="mandatory" exchangeRequirement="c0115c7f-1284-40d7-9644-1d2b022eb5a5" />
+                <Requirement applicability="export" requirement="mandatory" exchangeRequirement="e4d15dda-78aa-4713-83be-aa79730fc9a4" />
               </Requirements>
               <TemplateRules operator="and">
-                <TemplateRule />
-                <TemplateRule />
-                <TemplateRule />
-                <TemplateRule />
-                <TemplateRule />
                 <TemplateRule />
               </TemplateRules>
             </Concept>
           </Concepts>
         </ConceptRoot>
-        <ConceptRoot uuid="eb89b35c-958e-42cb-8788-0fc2640a40a6" name="Data sheets" applicableRootEntity="IfcPropertySet">
+        <ConceptRoot uuid="eb89b35c-958e-42cb-8788-0fc2640a40a6" name="Construction objects data [IfcPropertySet]" applicableRootEntity="IfcPropertySet">
           <Applicability>
             <Template ref="0790a05d-73f8-4525-a3f6-fb6f3378fc00" />
             <TemplateRules operator="and" />
           </Applicability>
           <Concepts>
-            <Concept uuid="daf4523e-40b7-4bbe-b081-caecafd6fa1d" name="Simple data sheets" override="false">
+            <Concept uuid="daf4523e-40b7-4bbe-b081-caecafd6fa1d" name="Simple data sheet [Simple data sheet]" override="false">
               <Template ref="503c555c-215d-41c5-8fd0-1bd4f1933c6f" />
+              <Requirements>
+                <Requirement applicability="import" requirement="excluded" exchangeRequirement="4539261a-5a79-4274-ac72-3b6053e00cee" />
+                <Requirement applicability="import" requirement="excluded" exchangeRequirement="e4d15dda-78aa-4713-83be-aa79730fc9a4" />
+                <Requirement applicability="export" requirement="excluded" exchangeRequirement="4539261a-5a79-4274-ac72-3b6053e00cee" />
+                <Requirement applicability="export" requirement="excluded" exchangeRequirement="e4d15dda-78aa-4713-83be-aa79730fc9a4" />
+                <Requirement applicability="export" requirement="mandatory" exchangeRequirement="c0115c7f-1284-40d7-9644-1d2b022eb5a5" />
+                <Requirement applicability="import" requirement="mandatory" exchangeRequirement="c0115c7f-1284-40d7-9644-1d2b022eb5a5" />
+              </Requirements>
               <TemplateRules operator="and">
                 <TemplateRule />
                 <TemplateRule />
               </TemplateRules>
             </Concept>
-            <Concept uuid="9ce154f8-8006-4c78-869f-e4d47088b961" name="Complex data sheets" override="false">
+            <Concept uuid="9ce154f8-8006-4c78-869f-e4d47088b961" name="Complex data sheet [Complex data sheet]" override="false">
               <Template ref="c0b45389-7ad7-4abd-9264-f3dfcd37b81f" />
+              <Requirements>
+                <Requirement applicability="import" requirement="excluded" exchangeRequirement="4539261a-5a79-4274-ac72-3b6053e00cee" />
+                <Requirement applicability="import" requirement="excluded" exchangeRequirement="e4d15dda-78aa-4713-83be-aa79730fc9a4" />
+                <Requirement applicability="export" requirement="excluded" exchangeRequirement="4539261a-5a79-4274-ac72-3b6053e00cee" />
+                <Requirement applicability="export" requirement="excluded" exchangeRequirement="e4d15dda-78aa-4713-83be-aa79730fc9a4" />
+                <Requirement applicability="import" requirement="mandatory" exchangeRequirement="c0115c7f-1284-40d7-9644-1d2b022eb5a5" />
+                <Requirement applicability="export" requirement="mandatory" exchangeRequirement="c0115c7f-1284-40d7-9644-1d2b022eb5a5" />
+              </Requirements>
               <TemplateRules operator="and">
                 <TemplateRule />
               </TemplateRules>
@@ -1690,6 +2179,14 @@ For this purpose, the IFC data model (based on IFC4) provides the entity IfcDocu
           <Concepts>
             <Concept uuid="c713ca65-3099-488c-82ab-ae8d548ca53c" name="Simple data template" status="draft" override="false">
               <Template ref="07b757ba-cd72-49e0-86d7-23d34066c4a9" />
+              <Requirements>
+                <Requirement applicability="import" requirement="mandatory" exchangeRequirement="4539261a-5a79-4274-ac72-3b6053e00cee" />
+                <Requirement applicability="import" requirement="mandatory" exchangeRequirement="e4d15dda-78aa-4713-83be-aa79730fc9a4" />
+                <Requirement applicability="import" requirement="mandatory" exchangeRequirement="c0115c7f-1284-40d7-9644-1d2b022eb5a5" />
+                <Requirement applicability="export" requirement="mandatory" exchangeRequirement="4539261a-5a79-4274-ac72-3b6053e00cee" />
+                <Requirement applicability="export" requirement="mandatory" exchangeRequirement="e4d15dda-78aa-4713-83be-aa79730fc9a4" />
+                <Requirement applicability="export" requirement="mandatory" exchangeRequirement="c0115c7f-1284-40d7-9644-1d2b022eb5a5" />
+              </Requirements>
               <TemplateRules operator="and">
                 <TemplateRule />
                 <TemplateRule />
@@ -1701,6 +2198,14 @@ For this purpose, the IFC data model (based on IFC4) provides the entity IfcDocu
             </Concept>
             <Concept uuid="bfbb8e17-b759-4679-8588-8af3d25ae621" name="Complex data template" status="draft" override="false">
               <Template ref="af08c875-d4ab-4ff8-8bac-c1001e78829a" />
+              <Requirements>
+                <Requirement applicability="import" requirement="recommended" exchangeRequirement="4539261a-5a79-4274-ac72-3b6053e00cee" />
+                <Requirement applicability="import" requirement="recommended" exchangeRequirement="e4d15dda-78aa-4713-83be-aa79730fc9a4" />
+                <Requirement applicability="import" requirement="recommended" exchangeRequirement="c0115c7f-1284-40d7-9644-1d2b022eb5a5" />
+                <Requirement applicability="export" requirement="recommended" exchangeRequirement="4539261a-5a79-4274-ac72-3b6053e00cee" />
+                <Requirement applicability="export" requirement="recommended" exchangeRequirement="c0115c7f-1284-40d7-9644-1d2b022eb5a5" />
+                <Requirement applicability="export" requirement="recommended" exchangeRequirement="e4d15dda-78aa-4713-83be-aa79730fc9a4" />
+              </Requirements>
               <TemplateRules operator="and">
                 <TemplateRule />
                 <TemplateRule />

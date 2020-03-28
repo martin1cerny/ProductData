@@ -42,10 +42,10 @@
 <section>
 <h5 class="num">Semantic definitions at the entity</h5>
 <details open="open"><summary>Entity definition</summary><p>The <span class="self-ref">IfcSimplePropertyTemplate</span> defines the template for all dynamically extensible properties, either the subtypes of <a href="../../ifcpropertyresource/lexical/ifcsimpleproperty.html">IfcSimpleProperty</a>, or the subtypes of <i>IfcPhysicalSimpleQuantity</i>. The individual property templates are interpreted according to their <i>Name</i> attribute and may have a predefined template type, property units, and property measure types. The correct interpretation of the attributes:</p>
-<p>\\\\\\\\\\\\\\\\\* <i>PrimaryUnit</i>
-\\\\\\\\\\\\\\\\\* <i>SecondaryUnit</i>
-\\\\\\\\\\\\\\\\\* <i>PrimaryMeasureType</i>
-\\\\\\\\\\\\\\\\\* <i>SecondaryMeasureType</i></p>
+<p>\\\\\\\\\\\\\\\\\\\\* <i>PrimaryUnit</i>
+\\\\\\\\\\\\\\\\\\\\* <i>SecondaryUnit</i>
+\\\\\\\\\\\\\\\\\\\\* <i>PrimaryMeasureType</i>
+\\\\\\\\\\\\\\\\\\\\* <i>SecondaryMeasureType</i></p>
 <p>is determined by the <i>TemplateType</i>. The attributes Enumerators and Expression only apply to instances of <span class="self-ref">IfcSimplePropertyTemplate</span> having a particular <i>TemplateType</i>. The <i>TemplateType</i> also controls, which subtype of either <a href="../../ifcpropertyresource/lexical/ifcsimpleproperty.html">IfcSimpleProperty</a> or <i>IfcPhysicalSimpleQuantity</i> shall be used for property occurrences corresponding to this template.</p>
 <p>The <span class="self-ref">IfcSimplePropertyTemplate</span> is part of the set of templates included in the <a href="../../ifckernel/lexical/ifcpropertysettemplate.html">IfcPropertySetTemplate</a>. The template can be accessed throught the inverse attribute <i>PartOfPsetTemplate</i> The <a href="../../ifckernel/lexical/ifcpropertysettemplate.html">IfcPropertySetTemplate</a> may define one or several instances of <a href="../../ifckernel/lexical/ifcpropertyset.html">IfcPropertySet</a> (or <i>IfcElementQuantity</i>). The definition assignment is established by the objectified relationship <i>IfcRelDefinesByTemplate</i> as shown in Figure 25. There is no direct link between an <span class="self-ref">IfcSimplePropertyTemplate</span> and a subtype of either <a href="../../ifcpropertyresource/lexical/ifcsimpleproperty.html">IfcSimpleProperty</a> or <i>IfcPhysicalSimpleQuantity</i>. The definition relationship between the template and the individual properties (or quantities) is established by the <i>Name</i> attributes.</p>
 <blockquote class="note">

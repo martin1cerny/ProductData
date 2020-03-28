@@ -20,26 +20,26 @@
 
 <script type="text/javascript">
 <!--
-    parent.index.location.replace("../toc-4.html#4.2.2");
+    parent.index.location.replace("../toc-4.html#4.3.2");
 //-->
 </script>
 
-<h3 class="std">4.2.2 Types</h3>
+<h3 class="std">4.3.2 Types</h3>
 <p>Every construction object in the file shall be stored in a class inherited from IfcTypeObject of EN ISO 16739, e.g. IfcWallType or IfcWindowType. The product shall be further specified with the concepts of classification and properties.
 If the EN ISO 16739 does not provide an appropriate derived class under IfcTypeObject, the product shall be stored in IfcBuildingElementProxyType and shall be further specified with an appropriate value in ElementType.
 In addition to the documentation of IfcTypeObject and derived classes in the official documentation of ISO 16739, the following information shall be provided in the context of this standard for each product:</p>
-<p class="fig-ref">Figure 7 illustrates an instance diagram.</p>
-<table><tr><td><img alt="Types" src="./diagrams/types.png" usemap="#f7"><map name="f7"><area shape="rect" coords="8,8,176,236" href="../ifckernel/lexical/ifcprojectlibrary.html" alt="IfcProjectLibrary" /><area shape="rect" coords="208,8,376,20" href="../ifcmeasureresource/lexical/ifclabel.html" alt="IfcLabel" /><area shape="rect" coords="208,40,376,52" href="../ifcmeasureresource/lexical/ifctext.html" alt="IfcText" /><area shape="rect" coords="208,72,376,156" href="../ifckernel/lexical/ifcreldeclares.html" alt="IfcRelDeclares" /><area shape="rect" coords="408,8,576,188" href="../ifckernel/lexical/ifctypeobject.html" alt="IfcTypeObject" /><area shape="rect" coords="608,8,776,20" href="../ifcmeasureresource/lexical/ifclabel.html" alt="IfcLabel" /><area shape="rect" coords="608,40,776,52" href="../ifcmeasureresource/lexical/ifctext.html" alt="IfcText" /><area shape="rect" coords="608,72,776,192" href="../ifckernel/lexical/ifcpropertysetdefinition.html" alt="IfcPropertySetDefinition" /></map></td></tr><tr><td><p class="figure">Figure 7 &mdash; Types</p></td></tr></table>
+<p class="fig-ref">Figure 9 illustrates an instance diagram.</p>
+<table><tr><td><img alt="Types" src="./diagrams/types.png" usemap="#f9"><map name="f9"><area shape="rect" coords="8,8,176,236" href="../ifckernel/lexical/ifcprojectlibrary.html" alt="IfcProjectLibrary" /><area shape="rect" coords="208,8,376,20" href="../ifcmeasureresource/lexical/ifclabel.html" alt="IfcLabel" /><area shape="rect" coords="208,40,376,52" href="../ifcmeasureresource/lexical/ifctext.html" alt="IfcText" /><area shape="rect" coords="208,72,376,156" href="../ifckernel/lexical/ifcreldeclares.html" alt="IfcRelDeclares" /><area shape="rect" coords="408,8,576,188" href="../ifckernel/lexical/ifctypeobject.html" alt="IfcTypeObject" /><area shape="rect" coords="608,8,776,20" href="../ifcmeasureresource/lexical/ifclabel.html" alt="IfcLabel" /><area shape="rect" coords="608,40,776,52" href="../ifcmeasureresource/lexical/ifctext.html" alt="IfcText" /><area shape="rect" coords="608,72,776,192" href="../ifckernel/lexical/ifcpropertysetdefinition.html" alt="IfcPropertySetDefinition" /></map></td></tr><tr><td><p class="figure">Figure 9 &mdash; Types</p></td></tr></table>
 
 <hr/>
 <h4>Construction Objects Data View</h4>
 <table class="exchange">
-<tr><th>Entity</th><th><a href="../views/construction-objects-data-view/catalogue-of-configured-construction-objects.html"><img width="16" src="../../img/mvd-catalogue-of-configured-construction-objects.png" title="Catalogue of configured construction objects"/></a></th>
-<th><a href="../views/construction-objects-data-view/data-sheet-exchange.html"><img width="16" src="../../img/mvd-data-sheet-exchange.png" title="Data sheet exchange"/></a></th>
-<th><a href="../views/construction-objects-data-view/data-template-exchange.html"><img width="16" src="../../img/mvd-data-template-exchange.png" title="Data template exchange"/></a></th>
-</tr><tr><td><a href="../ifckernel/lexical/ifccontext.html">IfcContext</a></td><td>-<br/>-</td>
-<td>R<br/>R</td>
-<td>R<br/>R</td>
+<tr><th>Entity</th><th style="text-align: center"><a href="../views/construction-objects-data-view/catalogue-of-configured-construction-objects-exchange.html"><img width="16" src="../../img/mvd-catalogue-of-configured-construction-objects-exchange.png" title="Catalogue of configured construction objects exchange"/></a><br>Catalogue of configured construction objects exchange</th>
+<th style="text-align: center"><a href="../views/construction-objects-data-view/data-sheet-exchange.html"><img width="16" src="../../img/mvd-data-sheet-exchange.png" title="Data sheet exchange"/></a><br>Data sheet exchange</th>
+<th style="text-align: center"><a href="../views/construction-objects-data-view/data-template-exchange.html"><img width="16" src="../../img/mvd-data-template-exchange.png" title="Data template exchange"/></a><br>Data template exchange</th>
+</tr><tr><td><a href="../ifckernel/lexical/ifccontext.html">IfcContext</a></td><td style="text-align:center">required on import<br/>required on export</td>
+<td style="text-align:center">excluded on import<br/>excluded on export</td>
+<td style="text-align:center">required on import<br/>required on export</td>
 </tr>
 </table>
 <details><summary>mvdXML Specification</summary><div class="xsd"><code class="xsd">
