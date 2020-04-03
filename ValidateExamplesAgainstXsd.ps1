@@ -72,17 +72,17 @@ $BaseFolder = "C:\Development\GitHub\buildingSMART\ProductData"
 #wget https://standards.buildingsmart.org/IFC/RELEASE/IFC4/ADD2_TC1/XML/IFC4.xsd -OutFile IFC4_ADD2.xsd
 
  # Validate
-ValidateXmlFile "$BaseFolder/SampleFiles/bSDD product room sample/bSDD product room sample.ifcXML" 
-#ValidateXmlFile "$BaseFolder/SampleFiles/CAFM-Connect-ProductsSample/CAFM-Connect-ProductsSample.ifcXML" --schema IFC4_ADD2.xsd --noout
-#ValidateXmlFile "$BaseFolder/SampleFiles/CE180_RED_06.17_Nextrema_G3_HFS_LLWC/CE180_RED_06.17_Nextrema_G3_HFS_LLWC.ifcXML" --schema IFC4_ADD2.xsd --noout
-#ValidateXmlFile "$BaseFolder/SampleFiles/EN ISO 10077/EN ISO 10077.ifcXML" --schema IFC4_ADD2.xsd --noout
-#ValidateXmlFile "$BaseFolder/SampleFiles/EULUMDAT_PDT_RH180508/EULUMDAT_PDT_RH180508.ifcXML" --schema IFC4_ADD2.xsd --noout
-#ValidateXmlFile "$BaseFolder/SampleFiles/Fireray 50100RV Linear Smoke Detectors/Fireray 50100RV Linear Smoke Detectors.ifcXML" --schema IFC4_ADD2.xsd --noout
-#ValidateXmlFile "$BaseFolder/SampleFiles/HC (Italy)/Sample PDT (ifcXML)/Brick_Sample_SchemaValidator.ifcXML" --schema IFC4_ADD2.xsd --noout  
-#ValidateXmlFile "$BaseFolder/SampleFiles/HC (Italy)/Bricks Catalogue/bricks catalogue sample.ifcXML" --schema IFC4_ADD2.xsd --noout  
-#ValidateXmlFile "$BaseFolder/SampleFiles/HC (Italy)/Bricks Catalogue/bricks catalogue sample including request.ifcXML" --schema IFC4_ADD2.xsd --noout  
-#ValidateXmlFile "$BaseFolder/SampleFiles/HC (Italy)/Bricks Catalogue/ProductDataGenerated.ifcXML" --schema IFC4_ADD1.xsd --noout  
-#ValidateXmlFile "$BaseFolder/SampleFiles/CatalogExample/catalogExample.ifcXML" --schema IFC4_ADD2.xsd --noout   
-#ValidateXmlFile "$BaseFolder/SampleFiles/ConstraintExample/constraintExample.ifcXML" --schema IFC4_ADD1.xsd --noout   
-#ValidateXmlFile "$BaseFolder/SampleFiles/NisbetSample/Example1.ifcXML" --schema IFC4_ADD1.xsd --noout    
+ValidateXmlFile "$BaseFolder/Examples/bSDD product room sample/bSDD product room sample.ifcXML" 
+#ValidateXmlFile "$BaseFolder/Examples/CAFM-Connect-ProductsSample/CAFM-Connect-ProductsSample.ifcXML" --schema IFC4_ADD2.xsd --noout
+#ValidateXmlFile "$BaseFolder/Examples/CE180_RED_06.17_Nextrema_G3_HFS_LLWC/CE180_RED_06.17_Nextrema_G3_HFS_LLWC.ifcXML" --schema IFC4_ADD2.xsd --noout
+#ValidateXmlFile "$BaseFolder/Examples/EN ISO 10077/EN ISO 10077.ifcXML" --schema IFC4_ADD2.xsd --noout
+#ValidateXmlFile "$BaseFolder/Examples/EULUMDAT_PDT_RH180508/EULUMDAT_PDT_RH180508.ifcXML" --schema IFC4_ADD2.xsd --noout
+#ValidateXmlFile "$BaseFolder/Examples/Fireray 50100RV Linear Smoke Detectors/Fireray 50100RV Linear Smoke Detectors.ifcXML" --schema IFC4_ADD2.xsd --noout
+#ValidateXmlFile "$BaseFolder/Examples/HC (Italy)/Sample PDT (ifcXML)/Brick_Sample_SchemaValidator.ifcXML" --schema IFC4_ADD2.xsd --noout  
+#ValidateXmlFile "$BaseFolder/Examples/HC (Italy)/Bricks Catalogue/bricks catalogue sample.ifcXML" --schema IFC4_ADD2.xsd --noout  
+#ValidateXmlFile "$BaseFolder/Examples/HC (Italy)/Bricks Catalogue/bricks catalogue sample including request.ifcXML" --schema IFC4_ADD2.xsd --noout  
+#ValidateXmlFile "$BaseFolder/Examples/HC (Italy)/Bricks Catalogue/ProductDataGenerated.ifcXML" --schema IFC4_ADD1.xsd --noout  
+#ValidateXmlFile "$BaseFolder/Examples/CatalogExample/catalogExample.ifcXML" --schema IFC4_ADD2.xsd --noout   
+#ValidateXmlFile "$BaseFolder/Examples/ConstraintExample/constraintExample.ifcXML" --schema IFC4_ADD1.xsd --noout   
+#ValidateXmlFile "$BaseFolder/Examples/NisbetSample/Example1.ifcXML" --schema IFC4_ADD1.xsd --noout    
 #ValidateXmlFile "$BaseFolder/IFC4 Library/IkeaKitchenCabinets.ifcXML" --schema IFC4_ADD2.xsd --noout    

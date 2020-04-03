@@ -17,19 +17,19 @@ script:
   #- wget http://www.buildingsmart-tech.org/downloads/ifcxml/ifcxml4/cnf.xsd
   
   # Validate
-  - xmllint "${TRAVIS_BUILD_DIR}/SampleFiles/bSDD product room sample/bSDD product room sample.ifcXML" --schema IFC4_ADD2.xsd --noout
-  - xmllint "${TRAVIS_BUILD_DIR}/SampleFiles/CAFM-Connect-ProductsSample/CAFM-Connect-ProductsSample.ifcXML" --schema IFC4_ADD2.xsd --noout
-  - xmllint "${TRAVIS_BUILD_DIR}/SampleFiles/CE180_RED_06.17_Nextrema_G3_HFS_LLWC/CE180_RED_06.17_Nextrema_G3_HFS_LLWC.ifcXML" --schema IFC4_ADD2.xsd --noout
-  - xmllint "${TRAVIS_BUILD_DIR}/SampleFiles/EN ISO 10077/EN ISO 10077.ifcXML" --schema IFC4_ADD2.xsd --noout
-  - xmllint "${TRAVIS_BUILD_DIR}/SampleFiles/EULUMDAT_PDT_RH180508/EULUMDAT_PDT_RH180508.ifcXML" --schema IFC4_ADD2.xsd --noout
-  - xmllint "${TRAVIS_BUILD_DIR}/SampleFiles/Fireray 50100RV Linear Smoke Detectors/Fireray 50100RV Linear Smoke Detectors.ifcXML" --schema IFC4_ADD2.xsd --noout
-  - xmllint "${TRAVIS_BUILD_DIR}/SampleFiles/HC (Italy)/Sample PDT (ifcXML)/Brick_Sample_SchemaValidator.ifcXML" --schema IFC4_ADD2.xsd --noout  
-  - xmllint "${TRAVIS_BUILD_DIR}/SampleFiles/HC (Italy)/Bricks Catalogue/bricks catalogue sample.ifcXML" --schema IFC4_ADD2.xsd --noout  
-  - xmllint "${TRAVIS_BUILD_DIR}/SampleFiles/HC (Italy)/Bricks Catalogue/bricks catalogue sample including request.ifcXML" --schema IFC4_ADD2.xsd --noout  
-  - xmllint "${TRAVIS_BUILD_DIR}/SampleFiles/HC (Italy)/Bricks Catalogue/ProductDataGenerated.ifcXML" --schema IFC4_ADD1.xsd --noout  
-  - xmllint "${TRAVIS_BUILD_DIR}/SampleFiles/CatalogExample/catalogExample.ifcXML" --schema IFC4_ADD2.xsd --noout   
-  - xmllint "${TRAVIS_BUILD_DIR}/SampleFiles/ConstraintExample/constraintExample.ifcXML" --schema IFC4_ADD1.xsd --noout   
-  - xmllint "${TRAVIS_BUILD_DIR}/SampleFiles/NisbetSample/Example1.ifcXML" --schema IFC4_ADD1.xsd --noout    
+  - xmllint "${TRAVIS_BUILD_DIR}/Examples/bSDD product room sample/bSDD product room sample.ifcXML" --schema IFC4_ADD2.xsd --noout
+  - xmllint "${TRAVIS_BUILD_DIR}/Examples/CAFM-Connect-ProductsSample/CAFM-Connect-ProductsSample.ifcXML" --schema IFC4_ADD2.xsd --noout
+  - xmllint "${TRAVIS_BUILD_DIR}/Examples/CE180_RED_06.17_Nextrema_G3_HFS_LLWC/CE180_RED_06.17_Nextrema_G3_HFS_LLWC.ifcXML" --schema IFC4_ADD2.xsd --noout
+  - xmllint "${TRAVIS_BUILD_DIR}/Examples/EN ISO 10077/EN ISO 10077.ifcXML" --schema IFC4_ADD2.xsd --noout
+  - xmllint "${TRAVIS_BUILD_DIR}/Examples/EULUMDAT_PDT_RH180508/EULUMDAT_PDT_RH180508.ifcXML" --schema IFC4_ADD2.xsd --noout
+  - xmllint "${TRAVIS_BUILD_DIR}/Examples/Fireray 50100RV Linear Smoke Detectors/Fireray 50100RV Linear Smoke Detectors.ifcXML" --schema IFC4_ADD2.xsd --noout
+  - xmllint "${TRAVIS_BUILD_DIR}/Examples/HC (Italy)/Sample PDT (ifcXML)/Brick_Sample_SchemaValidator.ifcXML" --schema IFC4_ADD2.xsd --noout  
+  - xmllint "${TRAVIS_BUILD_DIR}/Examples/HC (Italy)/Bricks Catalogue/bricks catalogue sample.ifcXML" --schema IFC4_ADD2.xsd --noout  
+  - xmllint "${TRAVIS_BUILD_DIR}/Examples/HC (Italy)/Bricks Catalogue/bricks catalogue sample including request.ifcXML" --schema IFC4_ADD2.xsd --noout  
+  - xmllint "${TRAVIS_BUILD_DIR}/Examples/HC (Italy)/Bricks Catalogue/ProductDataGenerated.ifcXML" --schema IFC4_ADD1.xsd --noout  
+  - xmllint "${TRAVIS_BUILD_DIR}/Examples/CatalogExample/catalogExample.ifcXML" --schema IFC4_ADD2.xsd --noout   
+  - xmllint "${TRAVIS_BUILD_DIR}/Examples/ConstraintExample/constraintExample.ifcXML" --schema IFC4_ADD1.xsd --noout   
+  - xmllint "${TRAVIS_BUILD_DIR}/Examples/NisbetSample/Example1.ifcXML" --schema IFC4_ADD1.xsd --noout    
   - xmllint "${TRAVIS_BUILD_DIR}/IFC4 Library/IkeaKitchenCabinets.ifcXML" --schema IFC4_ADD2.xsd --noout    
 
   
