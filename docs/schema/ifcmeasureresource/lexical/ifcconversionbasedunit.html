@@ -75,14 +75,14 @@
 	<tr><td>'btu'</td>		<td>Energy measure equal to 1055.056 J, British Thermal Unit</td></tr>
 </table>
 </td></tr>
-<tr><td><p class="table">Table 2 &mdash; Standard unit names</p></td></tr>
+<tr><td><p class="table">Table 1 &mdash; Standard unit names</p></td></tr>
 </table>
 <blockquote class="example">
-<p>EXAMPLE  An inch is a converted unit. It is from the Imperial system, its name is &quot;inch&quot; and it can be related to the SI unit, millimetre, through a measure with unit whose value is 25.4 millimetre. A foot is also a converted unit. It is from the Imperial system, its name is &quot;foot&quot; and it can be related to an <i>IfcSIUnit</i>, millimetre, either directly or through the unit called &quot;inch&quot;. Note that several US customary units differ from Imperial units (nonmetric English units) of the same name.</p>
+<p>EXAMPLE  An inch is a converted unit. It is from the Imperial system, its name is &quot;inch&quot; and it can be related to the SI unit, millimetre, through a measure with unit whose value is 25.4 millimetre. A foot is also a converted unit. It is from the Imperial system, its name is &quot;foot&quot; and it can be related to an <a href="../../ifcmeasureresource/lexical/ifcsiunit.html">IfcSIUnit</a>, millimetre, either directly or through the unit called &quot;inch&quot;. Note that several US customary units differ from Imperial units (nonmetric English units) of the same name.</p>
 </blockquote>
 
 <blockquote class="note">
-<p>NOTE  Entity adapted from \\\\\\\\\\\\\\\\\\\\*\\\\\\\\\\\\\\\\\\\\*conversion_based_unit\\\\\\\\\\\\\\\\\\\\*\\\\\\\\\\\\\\\\\\\\* defined in ISO 10303-41.</p>
+<p>NOTE  Entity adapted from \<i>conversion_based_unit\</i> defined in ISO 10303-41.</p>
 </blockquote>
 
 
@@ -108,7 +108,8 @@ The physical quantity from which the converted unit is derived.
 <h5 class="num">Inherited definitions from supertypes</h5>
 <details open="open"><summary>Entity inheritance</summary><img src="../../../diagrams/ifcconversionbasedunit.png" usemap="#f"/>
 <map name="f">
-<area shape="rect" coords="6,6,218,18" href="../../../schema/ifcmeasureresource/lexical/ifcnamedunit.html" alt="IfcNamedUnit" />
+<area shape="rect" coords="30,54,218,66" href="../../../schema/ifcmeasureresource/lexical/ifcconversionbasedunitwithoffset.html" alt="IfcConversionBasedUnitWithOffset" />
+<area shape="rect" coords="6,6,242,18" href="../../../schema/ifcmeasureresource/lexical/ifcnamedunit.html" alt="IfcNamedUnit" />
 </map>
 </details>
 <details><summary>Attribute inheritance</summary><table class="attributes">
@@ -150,6 +151,7 @@ The physical quantity from which the converted unit is derived.
 </code></div></details>
 <details><summary>EXPRESS Specification</summary><div class="express"><code class="express">
 <span class="keyword">ENTITY</span> IfcConversionBasedUnit<br/>
+&nbsp;<span class="keyword">SUPERTYPE OF</span>(<a href="../../ifcmeasureresource/lexical/ifcconversionbasedunitwithoffset.html">IfcConversionBasedUnitWithOffset</a>)<br/>
 &nbsp;<span class="keyword">SUBTYPE OF</span> (<a href="../../ifcmeasureresource/lexical/ifcnamedunit.html">IfcNamedUnit</a>)<b>;</b><br/>
 &nbsp;&nbsp;Name : <a href="../../ifcmeasureresource/lexical/ifclabel.html">IfcLabel</a>;<br/>
 &nbsp;&nbsp;ConversionFactor : <a href="../../ifcmeasureresource/lexical/ifcmeasurewithunit.html">IfcMeasureWithUnit</a>;<br/>

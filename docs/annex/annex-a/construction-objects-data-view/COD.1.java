@@ -694,6 +694,9 @@
 	/* IfcNonNegativeLengthMeasure : IfcLengthMeasure (Java does not support structures, so usage of defined types are inline for efficiency.) */
 	
 
+	/* IfcReal : REAL (Java does not support structures, so usage of defined types are inline for efficiency.) */
+	
+
 	/* IfcText : STRING (Java does not support structures, so usage of defined types are inline for efficiency.) */
 	
 
@@ -752,6 +755,62 @@
 		WARPINGCONSTANTUNIT,
 		WARPINGMOMENTUNIT,
 		USERDEFINED,
+	}
+	
+
+	public enum IfcSIPrefix
+	{
+		EXA,
+		PETA,
+		TERA,
+		GIGA,
+		MEGA,
+		KILO,
+		HECTO,
+		DECA,
+		DECI,
+		CENTI,
+		MILLI,
+		MICRO,
+		NANO,
+		PICO,
+		FEMTO,
+		ATTO,
+	}
+	
+
+	public enum IfcSIUnitName
+	{
+		AMPERE,
+		BECQUEREL,
+		CANDELA,
+		COULOMB,
+		CUBIC_METRE,
+		DEGREE_CELSIUS,
+		FARAD,
+		GRAM,
+		GRAY,
+		HENRY,
+		HERTZ,
+		JOULE,
+		KELVIN,
+		LUMEN,
+		LUX,
+		METRE,
+		MOLE,
+		NEWTON,
+		OHM,
+		PASCAL,
+		RADIAN,
+		SECOND,
+		SIEMENS,
+		SIEVERT,
+		SQUARE_METRE,
+		STERADIAN,
+		TESLA,
+		VOLT,
+		WATT,
+		WEBER,
 	}
 	
 
@@ -820,6 +879,12 @@
 	}
 	
 
+	public class IfcConversionBasedUnitWithOffset extends IfcConversionBasedUnit
+	{
+		private double ConversionOffset;
+	}
+	
+
 	public class IfcDerivedUnit extends IfcBase
 	{
 		private IfcDerivedUnitElement[] Elements;
@@ -865,6 +930,20 @@
 	{
 		private IfcDimensionalExponents Dimensions;
 		private IfcUnitEnum UnitType;
+	}
+	
+
+	public class IfcSIUnit extends IfcNamedUnit
+	{
+		private IfcSIPrefix Prefix;
+		private IfcSIUnitName Name;
+		private IfcDimensionalExponents Dimensions;
+	}
+	
+
+	public class IfcUnitAssignment extends IfcBase
+	{
+		private IfcUnit[] Units;
 	}
 	
 
@@ -915,6 +994,55 @@
 	public class IfcPropertyAbstraction extends IfcBase
 	{
 		private IfcExternalReferenceRelationship[] HasExternalReferences;
+	}
+	
+
+	public class IfcPropertyBoundedValue extends IfcSimpleProperty
+	{
+		private IfcValue UpperBoundValue;
+		private IfcValue LowerBoundValue;
+		private IfcUnit Unit;
+		private IfcValue SetPointValue;
+	}
+	
+
+	public class IfcPropertyEnumeratedValue extends IfcSimpleProperty
+	{
+		private IfcValue[] EnumerationValues;
+		private IfcPropertyEnumeration EnumerationReference;
+	}
+	
+
+	public class IfcPropertyEnumeration extends IfcPropertyAbstraction
+	{
+		private string Name;
+		private IfcValue[] EnumerationValues;
+		private IfcUnit Unit;
+	}
+	
+
+	public class IfcPropertyListValue extends IfcSimpleProperty
+	{
+		private IfcValue[] ListValues;
+		private IfcUnit Unit;
+	}
+	
+
+	public class IfcPropertySingleValue extends IfcSimpleProperty
+	{
+		private IfcValue NominalValue;
+		private IfcUnit Unit;
+	}
+	
+
+	public class IfcPropertyTableValue extends IfcSimpleProperty
+	{
+		private IfcValue[] DefiningValues;
+		private IfcValue[] DefinedValues;
+		private string Expression;
+		private IfcUnit DefiningUnit;
+		private IfcUnit DefinedUnit;
+		private IfcCurveInterpolationEnum CurveInterpolation;
 	}
 	
 

@@ -29,87 +29,49 @@
 <tr><th>Code</th><th>Version</th><th>Status</th><th>Author</th><th>Copyright</th></tr>
 <tr><td>COD.1</td><td>0.9</td><td>Candidate</td><td>CEN-TC442-WG2-TG3</td><td>CEN - European Committee for Standardization</td></tr>
 </table>
-<p>The scope of this standard is to define the syntactic characteristics of a generic document produced to carry data and information basing on EN ISO 16739, EN ISO 23386 and EN ISO 23387 standards. The work has been also designed in accordance with other ongoing CEN TC442 WG4 works such as N17_NWIP 1: Properties - Part 1 Description methodology for BIM and other digital processes, N19_NWIP 3: Part 1 General structure of a product data template, N20_NWIP 4: Part 2 Framework for product data templates under CPR.</p>
-<p>The application of such standards will allow manufacturers to structure, govern, update, maintain and transport their product information through a machine-readable format. In addition, several stakeholders of the process will be able to take the most out from their software technologies, avoiding data replication as well as saving time and improving both quality and transparency. The scenario within which this standard will apply will affects in fact a wide spectrum of professionalism: from producers to designers, from constructors to facility and property managers.</p>
-<p>The syntactic approach considers as primary objective the ability to re-use specifications given in the international standard EN ISO 16739. This specific goal is going to be reached by the delivery of a new Model View Definition, as intended at buildingSMART.org, named “Construction Objects Data View” which will be made available alongside the others MVD already issued. Software houses and software application developers will find this work use and implementation simple and profitable because based on a widely accepted standard like EN ISO 16739.</p>
-<p>Because digital data transmittal needs agreed structured data, predefined schemas and agreed property definitions, this standard conceptually splits between Data Template and a Data Sheet. Data Template is going to be defined as the demanded data schema, still missing data but possibly including limitations or required ranges, while Data Sheet represents rather the answer including completed or partially filled data. The first might represent level of information need requirements and definitions, general requests, while the second might represent catalogs, offering of products, selected or filtered data, approved data and so on. Data Sheet may be used as the input to be added into informative modeling storages as well as information to be saved in related repositories as Common Data Environments or Asset Information Models.</p>
-<p>The work aims above all the scope of filling the technological gap still today preventing an effective digital dialogue between production and construction chains. Unfortunately, such a dialog is traditionally based on documentation, no matter if printed or digital, which for the most cases is not digitally computable. A secondary work objective is to constitute itself as a syntax suitable for the digital management of the contents requested by the Construction Products Regulation (CPR) which lays down harmonized rules for the distribution of construction products in the EU market, particularly covering demand of comparison of products performance, characteristics, certification, CE marking and conformity declarations. </p>
-<p>The smart transport of product data needs a clear and common understanding of the format to express the data of the products itself. The product data can be transferred in several ways, e.g. via direct database connect, or via webservices or file transfer. In all cases, the sender and the receiver of the product data need a basic standard to implement the data transfer.</p>
-<p>Normally an IFC files is known as a structure to transport a data model of a construction like a building (or a bridge). This model contains the geometrical and alphanumeric information of the complete building. The model contains also the information about the products that should be used to build up the building. The IFC language is capable to store the information of this “built-in” products properly.</p>
-<p>This standard uses the IFC language to store and transport product data on the way from the manufacturers to their customers.</p>
-<p>To store product data in an IFC file only some parts of the existing IFC namespace is needed, since many aspects of the BIM data are not needed to express product data. The subset of IFC structures for storing and transporting product data is described in the Construction Objects Data View (COD).</p>
-<p>The following sections focusses on a definition of a file format. This file can be the foundation to transfer data over different transport channels.</p>
-<p>The file is based on IFC (Industry Foundation Classes). IFC was developed by the worldwide organization buildingSMART. IFC is standardized as EN ISO 16739.1:2018.</p>
-<p>Product data contains three types of data:</p>
+<p>The view is based on EN ISO 16739.1:2018 where the Industry Foundation Classes (IFC) ared defined. IFC is a structure to transport data models of a construction like a building or a bridge. The models contain the geometrical and alphanumeric information of the complete building.</p>
+<p>The “Construction Objects Data View” (COD) defines subsets of IFC that can be used to store construction objects data in an IFC file. Construction objects data contains three types of data:</p>
 <ol>
 <li>Alphanumeric Information (Lists)</li>
 <li>Information in Documents (Files)</li>
 <li>Geometric Information (Visual Representation)</li>
 </ol>
-<p>The existing proposals for new work items in CEN/TC442-WG4 describe the needs for transporting alphanumeric information. We propose to consider also the transport of Files. The transport of geometric information can be realized by including existing files with the geometric representation as a file in the IFCZIP-Container. With IFC this could be extended in a next step to an intelligent connected geometric representation.</p>
-<p>The product data file is specified as follows:</p>
-<style type="text/css">
-.tg  {border-collapse:collapse;border-spacing:0;}
-.tg td{font-family:Arial, sans-serif;font-size:14px;padding:2px 2px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;border-color:black;}
-.tg th{font-family:Arial, sans-serif;font-size:14px;font-weight:normal;padding:2px 2px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;border-color:black;}
-.tg .tg-rykj{font-size:12px;text-align:left;vertical-align:middle}
-</style>{ .tg}
-<p class="tg">
-</p>
-<table class="tg">
-  <tr>
-    <th class="tg-rykj"><br>&nbsp;&nbsp;Standard<br>&nbsp;&nbsp;</th>
-    <th class="tg-rykj"><br>&nbsp;&nbsp;EN ISO 16739<br>&nbsp;&nbsp;</th>
-  </tr>
-  <tr>
-    <td class="tg-rykj"><br>&nbsp;&nbsp;Language <br>&nbsp;&nbsp;</td>
-    <td class="tg-rykj"><br>&nbsp;&nbsp;IFC (Industry Foundation Classes)<br>&nbsp;&nbsp;</td>
-  </tr>
-  <tr>
-    <td class="tg-rykj"><br>&nbsp;&nbsp;Language Version<br>&nbsp;&nbsp;</td>
-    <td class="tg-rykj"><br>&nbsp;&nbsp;IFC 4, ADD 2<br>&nbsp;&nbsp;</td>
-  </tr>
-  <tr>
-    <td class="tg-rykj"><br>&nbsp;&nbsp;Language Type<br>&nbsp;&nbsp;</td>
-    <td class="tg-rykj"><br>&nbsp;&nbsp;ifcXML<br>&nbsp;&nbsp;</td>
-  </tr>
-  <tr>
-    <td class="tg-rykj"><br>&nbsp;&nbsp;File Type<br>&nbsp;&nbsp;</td>
-    <td class="tg-rykj"><br>&nbsp;&nbsp;ifcZIP<br>&nbsp;&nbsp;</td>
-  </tr>
-</table>
-<p>The IFC language contains hundreds of entities to provide a standardizes data exchange for the whole construction industry. For exchanging product data based on the specification of this paper, only some of these entities are needed. These entities are defined in this specification. The IFC specification is located here: https://technical.buildingsmart.org . All elements are well documented there. In this paper, we describe the use of the elements and attributes for the use case of transporting construction objects data templates (DT) and corresponding construction objects data (PD).</p>
-<p>The product data shall be transportable from the sender (e.g. the manufacturer) to the receiver (e.g. customer). The construction objects data templates (DT) is an empty form. The receiver can hand the empty form over to the sender, to make clear, which information shall be delivered. The sender then fills the information into the form and gives it back to the receiver.</p>
-<h2 id="purpose" class="num">Generic Process for construction objects data and Exchange requirements</h2>
 <p>Based on the identified purposes, the standard supports different exchanges within the life cycle of a construction object. The following figure describes the main stages of the construction objects, from the requirements expressed as objects in a design model to the registration as products in an AsBuilt model.</p>
 <figure>
-  <img src="../../../figures/figure2_genericprinciplesforselection.png" width="650" alt="Generic Principles for Selection">
-  <figcaption>Figure 2 : Generic principles for a selection process of construction objects (e.g. products)
+  <img src="../../../figures/figure2_genericprinciplesforselection.png" width="650" alt="Generic principles for a selection process of construction objects">
+  <figcaption>Figure 2: Generic principles for a selection process of construction objects (e.g. products)
   </figcaption>
 </figure>
-<p>The digital information exchange of data for construction objects can be realized using following kinds of exchanges:</p>
+<p>The standard contains the following three definitions of information exchange requirements.</p>
 <table class="gridtable">
 <thead>
 <tr>
-<th>Exchange code</th>
+<th>Exchange</th>
 <th>Exchange name</th>
 <th>Exchange description</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td>DT</td>
-<td>Data template</td>
+<td>COD1.DT</td>
+<td>Data template exchange</td>
 <td>Definition of the structures of data templates for construction objects, retrieved from dictionaries.</td>
 </tr>
 <tr>
-<td>DS</td>
-<td>Data sheet</td>
-<td>Information about instances of configured construction objects that are selected for ordering, delivery and installation without any further configuration options</td>
+<td>COD1.CCCO</td>
+<td>Catalogue of configured construction objects exchange</td>
+<td></td>
+</tr>
+<tr>
+<td>COD1.DS</td>
+<td>Data sheet exchange</td>
+<td>Information about instances of configured construction objects that are selected for ordering, delivery and installation without any further configuration options.</td>
 </tr>
 </tbody>
 </table>
-<p>The standard contains three definitions of information exchange requirements.  Each element of the exchange requirements corresponds to an element in EN ISO 16739.1:2018. The documentation of EN ISO 16739.1:2018 (IFC 4, ADD 2, TC 1, Version 4.0.2.1) will not be repeated in this document. The elements from ISO EN 16739.1:2018 that are applicable for the exchange requirements are defined in detail in the chapter Technical specification in the included HTML documentation.</p>
+<p>Each element in the exchange requirements corresponds to an element in EN ISO 16739.1:2018.
+The elements from EN ISO 16739.1:2018 that are applicable for the exchange requirements are defined in detail in the chapters “Fundamental concepts and assumptions”. All inherited elements are part of the standard.
+The documentation of EN ISO 16739.1:2018 (IFC 4, ADD 2, TC 1, Version 4.0.2.1) will not be repeated in this document.</p>
 <h5>Material</h5>
 <table class="gridtable">
 <tr><th>Field</th><th>Mapping</th><th>Definition</th>
@@ -123,7 +85,7 @@
 <th>Catalogue of configured construction objects exchange</th><th>Data sheet exchange</th><th>Data template exchange</th></tr>
 <tr><th>(Query)</th><th>\<a href="../../ifckernel/lexical/ifccontext.html">IfcContext</a><br>
 </th><th></th><th></th><th></th><th></th></tr>
-<tr><td>Declaration for sheets</td><td></td><td></td><td><img width="16" src="../../../img/attr-excluded.png" title="Excluded" /><img width="16" src="../../../img/attr-excluded.png" title="Excluded" /></td><td><img width="16" src="../../../img/attr-mandatory.png" title="Mandatory" /><img width="16" src="../../../img/attr-mandatory.png" title="Mandatory" /></td><td><img width="16" src="../../../img/attr-excluded.png" title="Excluded" /><img width="16" src="../../../img/attr-excluded.png" title="Excluded" /></td></tr><tr><td>Declaration for templates</td><td>\<a href="../../ifckernel/lexical/ifcprojectlibrary.html">IfcProjectLibrary</a>.GlobalId<br>\<a href="../../ifcutilityresource/lexical/ifcgloballyuniqueid.html">IfcGloballyUniqueId</a><br></td><td>Assignment of a globally unique identifier within the entire software world.</td><td><img width="16" src="../../../img/attr-mandatory.png" title="Mandatory" /><img width="16" src="../../../img/attr-mandatory.png" title="Mandatory" /></td><td><img width="16" src="../../../img/attr-mandatory.png" title="Mandatory" /><img width="16" src="../../../img/attr-mandatory.png" title="Mandatory" /></td><td><img width="16" src="../../../img/attr-mandatory.png" title="Mandatory" /><img width="16" src="../../../img/attr-mandatory.png" title="Mandatory" /></td></tr><tr><td>Declaration for units</td><td>\<a href="../../ifckernel/lexical/ifcproject.html">IfcProject</a>.Name<br>\<a href="../../ifcmeasureresource/lexical/ifclabel.html">IfcLabel</a><br></td><td>Optional name for use by the participating software systems or users. For some subtypes of IfcRoot the insertion of the Name attribute may be required. This would be enforced by a where rule.</td><td><img width="16" src="../../../img/attr-mandatory.png" title="Mandatory" /><img width="16" src="../../../img/attr-mandatory.png" title="Mandatory" /></td><td><img width="16" src="../../../img/attr-mandatory.png" title="Mandatory" /><img width="16" src="../../../img/attr-mandatory.png" title="Mandatory" /></td><td><img width="16" src="../../../img/attr-mandatory.png" title="Mandatory" /><img width="16" src="../../../img/attr-mandatory.png" title="Mandatory" /></td></tr></table>
+<tr><td>Declaration for sheets</td><td></td><td></td><td><img width="16" src="../../../img/attr-excluded.png" title="Excluded" /><img width="16" src="../../../img/attr-excluded.png" title="Excluded" /></td><td><img width="16" src="../../../img/attr-mandatory.png" title="Mandatory" /><img width="16" src="../../../img/attr-mandatory.png" title="Mandatory" /></td><td><img width="16" src="../../../img/attr-excluded.png" title="Excluded" /><img width="16" src="../../../img/attr-excluded.png" title="Excluded" /></td></tr><tr><td>Declaration for templates</td><td>\<a href="../../ifckernel/lexical/ifcprojectlibrary.html">IfcProjectLibrary</a>.GlobalId<br>\<a href="../../ifcutilityresource/lexical/ifcgloballyuniqueid.html">IfcGloballyUniqueId</a><br></td><td>Assignment of a globally unique identifier within the entire software world.</td><td><img width="16" src="../../../img/attr-mandatory.png" title="Mandatory" /><img width="16" src="../../../img/attr-mandatory.png" title="Mandatory" /></td><td><img width="16" src="../../../img/attr-mandatory.png" title="Mandatory" /><img width="16" src="../../../img/attr-mandatory.png" title="Mandatory" /></td><td><img width="16" src="../../../img/attr-mandatory.png" title="Mandatory" /><img width="16" src="../../../img/attr-mandatory.png" title="Mandatory" /></td></tr><tr><td>Measures and units</td><td>\<a href="../../ifckernel/lexical/ifccontext.html">IfcContext</a>.UnitsInContext<br>\<a href="../../ifcmeasureresource/lexical/ifcunitassignment.html">IfcUnitAssignment</a>.Units[*]<br>\<a href="../../ifcmeasureresource/lexical/ifcderivedunit.html">IfcDerivedUnit</a>.UnitType<br>\<a href="../../ifcmeasureresource/lexical/ifcderivedunitenum.html">IfcDerivedUnitEnum</a><br></td><td>Name of the derived unit chosen from an enumeration of derived unit types for use in IFC models.</td><td><img width="16" src="../../../img/attr-mandatory.png" title="Mandatory" /><img width="16" src="../../../img/attr-mandatory.png" title="Mandatory" /></td><td><img width="16" src="../../../img/attr-mandatory.png" title="Mandatory" /><img width="16" src="../../../img/attr-mandatory.png" title="Mandatory" /></td><td><img width="16" src="../../../img/attr-mandatory.png" title="Mandatory" /><img width="16" src="../../../img/attr-mandatory.png" title="Mandatory" /></td></tr></table>
 <h5>Classification</h5>
 <table class="gridtable">
 <tr><th>Field</th><th>Mapping</th><th>Definition</th>
@@ -159,6 +121,13 @@
 <tr><th>(Query)</th><th>\<a href="../../ifckernel/lexical/ifcprojectlibrary.html">IfcProjectLibrary</a><br>
 </th><th></th><th></th><th></th><th></th></tr>
 <tr><td>Dictionaries</td><td></td><td></td><td><img width="16" src="../../../img/attr-mandatory.png" title="Mandatory" /><img width="16" src="../../../img/attr-mandatory.png" title="Mandatory" /></td><td><img width="16" src="../../../img/attr-mandatory.png" title="Mandatory" /><img width="16" src="../../../img/attr-mandatory.png" title="Mandatory" /></td><td><img width="16" src="../../../img/attr-mandatory.png" title="Mandatory" /><img width="16" src="../../../img/attr-mandatory.png" title="Mandatory" /></td></tr></table>
+<h5>Shapes</h5>
+<table class="gridtable">
+<tr><th>Field</th><th>Mapping</th><th>Definition</th>
+<th>Catalogue of configured construction objects exchange</th><th>Data sheet exchange</th><th>Data template exchange</th></tr>
+<tr><th>(Query)</th><th>\<a href="../../ifckernel/lexical/ifcprojectlibrary.html">IfcProjectLibrary</a><br>
+</th><th></th><th></th><th></th><th></th></tr>
+<tr><td>Shapes</td><td></td><td></td><td><img width="16" src="../../../img/attr-optional.png" title="Optional" /><img width="16" src="../../../img/attr-optional.png" title="Optional" /></td><td><img width="16" src="../../../img/attr-optional.png" title="Optional" /><img width="16" src="../../../img/attr-optional.png" title="Optional" /></td><td><img width="16" src="../../../img/attr-excluded.png" title="Excluded" /><img width="16" src="../../../img/attr-excluded.png" title="Excluded" /></td></tr></table>
 <h5>Transport</h5>
 <table class="gridtable">
 <tr><th>Field</th><th>Mapping</th><th>Definition</th>
@@ -172,13 +141,13 @@
 <th>Catalogue of configured construction objects exchange</th><th>Data sheet exchange</th><th>Data template exchange</th></tr>
 <tr><th>(Query)</th><th>\<a href="../../ifckernel/lexical/ifcpropertyset.html">IfcPropertySet</a><br>
 </th><th></th><th></th><th></th><th></th></tr>
-<tr><td>Simple data sheet [Simple data sheet]</td><td>\<a href="../../ifckernel/lexical/ifcpropertyset.html">IfcPropertySet</a>.HasProperties[*]<br>\<a href="../../ifcpropertyresource/lexical/ifcsimpleproperty.html">IfcSimpleProperty</a><br></td><td>Contained set of properties. For property sets defined as part of the IFC Object model, the property objects within a property set are defined as part of the standard. If a property is not contained within the set of predefined properties, its value has not been set at this time.</td><td><img width="16" src="../../../img/attr-excluded.png" title="Excluded" /><img width="16" src="../../../img/attr-excluded.png" title="Excluded" /></td><td><img width="16" src="../../../img/attr-mandatory.png" title="Mandatory" /><img width="16" src="../../../img/attr-mandatory.png" title="Mandatory" /></td><td><img width="16" src="../../../img/attr-excluded.png" title="Excluded" /><img width="16" src="../../../img/attr-excluded.png" title="Excluded" /></td></tr><tr><td>Complex data sheet [Complex data sheet]</td><td>\<a href="../../ifckernel/lexical/ifcpropertyset.html">IfcPropertySet</a>.HasProperties[*]<br>\<a href="../../ifcpropertyresource/lexical/ifccomplexproperty.html">IfcComplexProperty</a>.HasProperties[*]<br>\<a href="../../ifcpropertyresource/lexical/ifcsimpleproperty.html">IfcSimpleProperty</a><br></td><td>Set of properties that can be used within this complex property (may include other complex properties).</td><td><img width="16" src="../../../img/attr-excluded.png" title="Excluded" /><img width="16" src="../../../img/attr-excluded.png" title="Excluded" /></td><td><img width="16" src="../../../img/attr-mandatory.png" title="Mandatory" /><img width="16" src="../../../img/attr-mandatory.png" title="Mandatory" /></td><td><img width="16" src="../../../img/attr-excluded.png" title="Excluded" /><img width="16" src="../../../img/attr-excluded.png" title="Excluded" /></td></tr></table>
+<tr><td>Simple data sheet [Simple data sheet]</td><td>\<a href="../../ifckernel/lexical/ifcpropertyset.html">IfcPropertySet</a>.HasProperties[*]<br>\<a href="../../ifcpropertyresource/lexical/ifcsimpleproperty.html">IfcSimpleProperty</a><br></td><td>Contained set of properties. For property sets defined as part of the IFC Object model, the property objects within a property set are defined as part of the standard. If a property is not contained within the set of predefined properties, its value has not been set at this time.</td><td><img width="16" src="../../../img/attr-excluded.png" title="Excluded" /><img width="16" src="../../../img/attr-excluded.png" title="Excluded" /></td><td><img width="16" src="../../../img/attr-mandatory.png" title="Mandatory" /><img width="16" src="../../../img/attr-mandatory.png" title="Mandatory" /></td><td><img width="16" src="../../../img/attr-excluded.png" title="Excluded" /><img width="16" src="../../../img/attr-excluded.png" title="Excluded" /></td></tr><tr><td>Complex data sheet [Complex data sheet]</td><td>\<a href="../../ifckernel/lexical/ifcpropertyset.html">IfcPropertySet</a>.HasProperties[*]<br>\<a href="../../ifcpropertyresource/lexical/ifccomplexproperty.html">IfcComplexProperty</a>.HasProperties[*]<br>\<a href="../../ifcpropertyresource/lexical/ifcsimpleproperty.html">IfcSimpleProperty</a><br></td><td>Set of properties that can be used within this complex property (may include other complex properties).</td><td><img width="16" src="../../../img/attr-excluded.png" title="Excluded" /><img width="16" src="../../../img/attr-excluded.png" title="Excluded" /></td><td><img width="16" src="../../../img/attr-mandatory.png" title="Mandatory" /><img width="16" src="../../../img/attr-mandatory.png" title="Mandatory" /></td><td><img width="16" src="../../../img/attr-excluded.png" title="Excluded" /><img width="16" src="../../../img/attr-excluded.png" title="Excluded" /></td></tr><tr><td>Explicit property units</td><td>\<a href="../../ifckernel/lexical/ifcpropertyset.html">IfcPropertySet</a>.HasProperties[*]<br>\<a href="../../ifcpropertyresource/lexical/ifcpropertysinglevalue.html">IfcPropertySingleValue</a>.Unit<br>\<a href="../../ifcmeasureresource/lexical/ifcunit.html">IfcUnit</a><br></td><td>Unit for the nominal value, if not given, the default value for the measure type (given by the TYPE of nominal value) is used as defined by the global unit assignment at IfcProject.</td><td><img width="16" src="../../../img/attr-optional.png" title="Optional" /><img width="16" src="../../../img/attr-optional.png" title="Optional" /></td><td><img width="16" src="../../../img/attr-optional.png" title="Optional" /><img width="16" src="../../../img/attr-optional.png" title="Optional" /></td><td></td></tr></table>
 <h5>Data templates</h5>
 <table class="gridtable">
 <tr><th>Field</th><th>Mapping</th><th>Definition</th>
 <th>Catalogue of configured construction objects exchange</th><th>Data sheet exchange</th><th>Data template exchange</th></tr>
 <tr><th>(Query)</th><th>\<a href="../../ifckernel/lexical/ifcpropertysettemplate.html">IfcPropertySetTemplate</a><br>
 </th><th></th><th></th><th></th><th></th></tr>
-<tr><td>Simple data template</td><td>\<a href="../../ifckernel/lexical/ifcpropertysettemplate.html">IfcPropertySetTemplate</a><br></td><td>The IFC class identifier indicating the subtype of object.</td><td><img width="16" src="../../../img/attr-mandatory.png" title="Mandatory" /><img width="16" src="../../../img/attr-mandatory.png" title="Mandatory" /></td><td><img width="16" src="../../../img/attr-mandatory.png" title="Mandatory" /><img width="16" src="../../../img/attr-mandatory.png" title="Mandatory" /></td><td><img width="16" src="../../../img/attr-mandatory.png" title="Mandatory" /><img width="16" src="../../../img/attr-mandatory.png" title="Mandatory" /></td></tr><tr><td>Complex data template</td><td>\<a href="../../ifckernel/lexical/ifcpropertysettemplate.html">IfcPropertySetTemplate</a><br></td><td>Set of properties that can be used within this complex property (may include other complex properties).</td><td><img width="16" src="../../../img/attr-optional.png" title="Optional" /><img width="16" src="../../../img/attr-optional.png" title="Optional" /></td><td><img width="16" src="../../../img/attr-optional.png" title="Optional" /><img width="16" src="../../../img/attr-optional.png" title="Optional" /></td><td><img width="16" src="../../../img/attr-optional.png" title="Optional" /><img width="16" src="../../../img/attr-optional.png" title="Optional" /></td></tr></table>
+<tr><td>Simple data template</td><td>\<a href="../../ifckernel/lexical/ifcpropertysettemplate.html">IfcPropertySetTemplate</a><br></td><td>The IFC class identifier indicating the subtype of object.</td><td><img width="16" src="../../../img/attr-mandatory.png" title="Mandatory" /><img width="16" src="../../../img/attr-mandatory.png" title="Mandatory" /></td><td><img width="16" src="../../../img/attr-mandatory.png" title="Mandatory" /><img width="16" src="../../../img/attr-mandatory.png" title="Mandatory" /></td><td><img width="16" src="../../../img/attr-mandatory.png" title="Mandatory" /><img width="16" src="../../../img/attr-mandatory.png" title="Mandatory" /></td></tr><tr><td>Complex data template</td><td>\<a href="../../ifckernel/lexical/ifcpropertysettemplate.html">IfcPropertySetTemplate</a><br></td><td>Set of properties that can be used within this complex property (may include other complex properties).</td><td><img width="16" src="../../../img/attr-optional.png" title="Optional" /><img width="16" src="../../../img/attr-optional.png" title="Optional" /></td><td><img width="16" src="../../../img/attr-optional.png" title="Optional" /><img width="16" src="../../../img/attr-optional.png" title="Optional" /></td><td><img width="16" src="../../../img/attr-optional.png" title="Optional" /><img width="16" src="../../../img/attr-optional.png" title="Optional" /></td></tr><tr><td>Explicit property template units</td><td>\<a href="../../ifckernel/lexical/ifcpropertysettemplate.html">IfcPropertySetTemplate</a>.HasPropertyTemplates[*]<br>\<a href="../../ifckernel/lexical/ifcsimplepropertytemplate.html">IfcSimplePropertyTemplate</a>.PrimaryUnit<br>\<a href="../../ifcmeasureresource/lexical/ifcunit.html">IfcUnit</a><br></td><td>Primary unit assigned to the definition of the property. It should be provided, if the _PropertyType_ is set to:</td><td><img width="16" src="../../../img/attr-mandatory.png" title="Mandatory" /><img width="16" src="../../../img/attr-mandatory.png" title="Mandatory" /></td><td><img width="16" src="../../../img/attr-mandatory.png" title="Mandatory" /><img width="16" src="../../../img/attr-mandatory.png" title="Mandatory" /></td><td><img width="16" src="../../../img/attr-mandatory.png" title="Mandatory" /><img width="16" src="../../../img/attr-mandatory.png" title="Mandatory" /></td></tr></table>
   </body>
 </html>

@@ -46,20 +46,10 @@
 <h5 class="num">Semantic definitions at the entity</h5>
 <details open="open"><summary>Entity definition</summary><p><span class="self-ref">IfcProject</span> indicates the undertaking of some design, engineering, construction, or maintenance activities leading towards a product. The project establishes the context for information to be exchanged or shared, and it may represent a construction project but does not have to. The <span class="self-ref">IfcProject</span>'s main purpose in an exchange structure is to provide the root instance and the context for all other information items included.</p>
 <p>The context provided by the <span class="self-ref">IfcProject</span> includes:</p>
-<p>\\\\\\\\\\\\\\\\\\\\* the default units
-\\\\\\\\\\\\\\\\\\\\* the geometric representation context for exchange structures including shape representations
-\\\\\\\\\\\\\\\\\\\\* the project coordinate system
-\\\\\\\\\\\\\\\\\\\\* the coordinate space dimension
-\\\\\\\\\\\\\\\\\\\\* the precision used within the geometric representations
-\\\\\\\\\\\\\\\\\\\\* optionally the indication of the true north
-\\\\\\\\\\\\\\\\\\\\* optionally the map conversion between the project coordinate system and the geospatial coordinate reference system.</p>
-
-
-<p class="spec-head">
-Informal Propositions:</p>
-<ol>
-<li>There shall only be one project within the exchange context. This is enforced by the global rule <a href="../../ifckernel/lexical/ifcsingleprojectinstance.html">IfcSingleProjectInstance</a>.</li>
-</ol>
+<p>\X\X\* the geometric representation context for exchange structures including shape representations
+\X\X\* the coordinate space dimension
+\X\X\* optionally the indication of the true north
+\X\X\X\XØ\X\X\X\X\X\X\X\X\X\X\X</p>
 </details>
 <details open="open"><summary>Formal Propositions</summary><table class="propositions">
 <tr><th>Rule</th><th>Description</th></tr>
@@ -116,15 +106,19 @@ The object type denotes a particular type that indicates the object further. The
 NOTE  Subtypes of <span class="self-ref">IfcContext</span> do not introduce a <i>PredefinedType</i> attribute, therefore the usage of <i>ObjectType</i> is not bound to the selection of USERDEFINED within the <i>PredefinedType</i> enumaration.
 </blockquote>
 </td><td>X</td></tr>
-<tr><td>6</td><td>LongName</td><td><span class="self-ref">-</span></td><td></td><td>
-<i>This attribute is out of scope for this model view definition and shall not be set.</i></td><td></td></tr>
+<tr><td>6</td><td>LongName</td><td><a href="../../ifcmeasureresource/lexical/ifclabel.html">IfcLabel</a></td><td>? </td><td>
+Long name for the context as used for reference purposes.
+</td><td>X</td></tr>
 <tr><td>7</td><td>Phase</td><td><a href="../../ifcmeasureresource/lexical/ifclabel.html">IfcLabel</a></td><td>? </td><td>
 Current project phase, or life-cycle phase of this project. Applicable values have to be agreed upon by view definitions or implementer agreements.
 </td><td>X</td></tr>
 <tr><td>8</td><td>RepresentationContexts</td><td><span class="self-ref">-</span></td><td></td><td>
 <i>This attribute is out of scope for this model view definition and shall not be set.</i></td><td></td></tr>
-<tr><td>9</td><td>UnitsInContext</td><td><span class="self-ref">-</span></td><td></td><td>
-<i>This attribute is out of scope for this model view definition and shall not be set.</i></td><td></td></tr>
+<tr><td>9</td><td>UnitsInContext</td><td><a href="../../ifcmeasureresource/lexical/ifcunitassignment.html">IfcUnitAssignment</a></td><td>? </td><td>
+Units globally assigned to measure types used within the context.
+
+
+</td><td>X</td></tr>
 <tr><td></td><td><i>IsDefinedBy</i></td><td><a href="../../ifckernel/lexical/ifcreldefinesbyproperties.html">IfcRelDefinesByProperties</a><br/>@RelatedObjects</td><td>S[0:?]</td><td>Set of relationships to property set definitions attached to this context. Those statically or dynamically defined properties contain alphanumeric information content that further defines the context.
 
 

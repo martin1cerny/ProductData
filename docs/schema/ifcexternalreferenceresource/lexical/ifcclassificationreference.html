@@ -46,22 +46,7 @@
 </details>
 <section>
 <h5 class="num">Semantic definitions at the entity</h5>
-<details open="open"><summary>Entity definition</summary><p>An <span class="self-ref">IfcClassificationReference</span> is a reference into a classification system or source (see <a href="../../ifcexternalreferenceresource/lexical/ifcclassification.html">IfcClassification</a>) for a specific classification key (or notation).</p>
-<p>The inherited attributes have the following meaning:</p>
-<p>\\\\\\\\\\\\\\\\\\\\* <i>Identification</i>: holds the key provided for a specific references to classification items (or tables).
-\\\\\\\\\\\\\\\\\\\\* <i>Name</i>: allows for a human interpretable designation of a classification notation.
-\\\\\\\\\\\\\\\\\\\\* <i>Location</i>: optionally holds a direct URI link into the classification system (or source) to hyperlink the classification key.</p>
-<p>The <span class="self-ref">IfcClassificationReference</span> can either be assigned directly to the <a href="../../ifcexternalreferenceresource/lexical/ifcclassification.html">IfcClassification</a>, such as if no classification hierarchy has to be included, or it references the parent classification notation, if the fully classification hierarchy is included in the data set. The first is refered to as &quot;lightweight classification&quot;, and the second as &quot;full classification&quot;. The attribute <i>ReferencedSource</i> then holds the following information (choice by <i>IfcClassificationReferenceSelect</i>):</p>
-<ol>
-<li>being of type <a href="../../ifcexternalreferenceresource/lexical/ifcclassification.html">IfcClassification</a>: direct reference to the classification system (with meta information provided);</li>
-<li>being of type <span class="self-ref">IfcClassificationReference</span>: reference to the parent classification notation within the classification hierarchy.</li>
-</ol>
-<blockquote class="example">
-<p>EXAMPLE  The <span class="self-ref">IfcClassificationReference</span> can be used as a form of 'lightweight' classification through the '<i>Identification</i>' attribute inherited from the abstract <a href="../../ifcexternalreferenceresource/lexical/ifcexternalreference.html">IfcExternalReference</a> class. In this case, the '<i>Identification</i>' could take (for instance) the Uniclass notation &quot;L6814&quot; which, if the classification was well understood by all parties and was known to be taken from a particular classification source, would be sufficient. The <i>Name</i> attribute could be the title &quot;Tanking&quot;. This would remove the need for the overhead of the more complete classification structure of the model.</p>
-</blockquote>
-
-
-</details>
+<details open="open"><summary>Entity definition</summary></details>
 <details open="open"><summary>Attribute definitions</summary><table class="attributes">
 <tr><th>#</th><th>Attribute</th><th>Type</th><th>Cardinality</th><th>Description</th>
 <th>C</th></tr>

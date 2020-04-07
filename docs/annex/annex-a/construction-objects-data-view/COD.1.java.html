@@ -46,7 +46,7 @@
 &nbsp;&nbsp;private string LongName;<br/>
 &nbsp;&nbsp;private string Phase;<br/>
 &nbsp;&nbsp;private <span class="self-ref">IfcStrippedOptional</span>[] RepresentationContexts;<br/>
-&nbsp;&nbsp;private <span class="self-ref">IfcStrippedOptional</span> UnitsInContext;<br/>
+&nbsp;&nbsp;private <a href="../../../schema/ifcmeasureresource/lexical/ifcunitassignment.html">IfcUnitAssignment</a> UnitsInContext;<br/>
 &nbsp;&nbsp;private <a href="../../../schema/ifckernel/lexical/ifcreldefinesbyproperties.html">IfcRelDefinesByProperties</a>[] IsDefinedBy;<br/>
 &nbsp;&nbsp;private <a href="../../../schema/ifckernel/lexical/ifcreldeclares.html">IfcRelDeclares</a>[] Declares;<br/>
 &nbsp;}<br/>
@@ -228,7 +228,7 @@
 &nbsp;&nbsp;private <span class="self-ref">IfcStrippedOptional</span> TemplateType;<br/>
 &nbsp;&nbsp;private string PrimaryMeasureType;<br/>
 &nbsp;&nbsp;private string SecondaryMeasureType;<br/>
-&nbsp;&nbsp;private <span class="self-ref">IfcStrippedOptional</span> Enumerators;<br/>
+&nbsp;&nbsp;private <a href="../../../schema/ifcpropertyresource/lexical/ifcpropertyenumeration.html">IfcPropertyEnumeration</a> Enumerators;<br/>
 &nbsp;&nbsp;private <a href="../../../schema/ifcmeasureresource/lexical/ifcunit.html">IfcUnit</a> PrimaryUnit;<br/>
 &nbsp;&nbsp;private <a href="../../../schema/ifcmeasureresource/lexical/ifcunit.html">IfcUnit</a> SecondaryUnit;<br/>
 &nbsp;&nbsp;private string Expression;<br/>
@@ -713,6 +713,9 @@
 &nbsp;/* <a href="../../../schema/ifcmeasureresource/lexical/ifcnonnegativelengthmeasure.html">IfcNonNegativeLengthMeasure</a> : <a href="../../../schema/ifcmeasureresource/lexical/ifclengthmeasure.html">IfcLengthMeasure</a> (Java does not support structures, so usage of defined types are inline for efficiency.) */<br/>
 &nbsp;<br/>
 <br/>
+&nbsp;/* <a href="../../../schema/ifcmeasureresource/lexical/ifcreal.html">IfcReal</a> : REAL (Java does not support structures, so usage of defined types are inline for efficiency.) */<br/>
+&nbsp;<br/>
+<br/>
 &nbsp;/* <a href="../../../schema/ifcmeasureresource/lexical/ifctext.html">IfcText</a> : STRING (Java does not support structures, so usage of defined types are inline for efficiency.) */<br/>
 &nbsp;<br/>
 <br/>
@@ -771,6 +774,62 @@
 &nbsp;&nbsp;WARPINGCONSTANTUNIT,<br/>
 &nbsp;&nbsp;WARPINGMOMENTUNIT,<br/>
 &nbsp;&nbsp;USERDEFINED,<br/>
+&nbsp;}<br/>
+&nbsp;<br/>
+<br/>
+&nbsp;public enum <a href="../../../schema/ifcmeasureresource/lexical/ifcsiprefix.html">IfcSIPrefix</a><br/>
+&nbsp;{<br/>
+&nbsp;&nbsp;EXA,<br/>
+&nbsp;&nbsp;PETA,<br/>
+&nbsp;&nbsp;TERA,<br/>
+&nbsp;&nbsp;GIGA,<br/>
+&nbsp;&nbsp;MEGA,<br/>
+&nbsp;&nbsp;KILO,<br/>
+&nbsp;&nbsp;HECTO,<br/>
+&nbsp;&nbsp;DECA,<br/>
+&nbsp;&nbsp;DECI,<br/>
+&nbsp;&nbsp;CENTI,<br/>
+&nbsp;&nbsp;MILLI,<br/>
+&nbsp;&nbsp;MICRO,<br/>
+&nbsp;&nbsp;NANO,<br/>
+&nbsp;&nbsp;PICO,<br/>
+&nbsp;&nbsp;FEMTO,<br/>
+&nbsp;&nbsp;ATTO,<br/>
+&nbsp;}<br/>
+&nbsp;<br/>
+<br/>
+&nbsp;public enum <a href="../../../schema/ifcmeasureresource/lexical/ifcsiunitname.html">IfcSIUnitName</a><br/>
+&nbsp;{<br/>
+&nbsp;&nbsp;AMPERE,<br/>
+&nbsp;&nbsp;BECQUEREL,<br/>
+&nbsp;&nbsp;CANDELA,<br/>
+&nbsp;&nbsp;COULOMB,<br/>
+&nbsp;&nbsp;CUBIC_METRE,<br/>
+&nbsp;&nbsp;DEGREE_CELSIUS,<br/>
+&nbsp;&nbsp;FARAD,<br/>
+&nbsp;&nbsp;GRAM,<br/>
+&nbsp;&nbsp;GRAY,<br/>
+&nbsp;&nbsp;HENRY,<br/>
+&nbsp;&nbsp;HERTZ,<br/>
+&nbsp;&nbsp;JOULE,<br/>
+&nbsp;&nbsp;KELVIN,<br/>
+&nbsp;&nbsp;LUMEN,<br/>
+&nbsp;&nbsp;LUX,<br/>
+&nbsp;&nbsp;METRE,<br/>
+&nbsp;&nbsp;MOLE,<br/>
+&nbsp;&nbsp;NEWTON,<br/>
+&nbsp;&nbsp;OHM,<br/>
+&nbsp;&nbsp;PASCAL,<br/>
+&nbsp;&nbsp;RADIAN,<br/>
+&nbsp;&nbsp;SECOND,<br/>
+&nbsp;&nbsp;SIEMENS,<br/>
+&nbsp;&nbsp;SIEVERT,<br/>
+&nbsp;&nbsp;SQUARE_METRE,<br/>
+&nbsp;&nbsp;STERADIAN,<br/>
+&nbsp;&nbsp;TESLA,<br/>
+&nbsp;&nbsp;VOLT,<br/>
+&nbsp;&nbsp;WATT,<br/>
+&nbsp;&nbsp;WEBER,<br/>
 &nbsp;}<br/>
 &nbsp;<br/>
 <br/>
@@ -839,6 +898,12 @@
 &nbsp;}<br/>
 &nbsp;<br/>
 <br/>
+&nbsp;public class <a href="../../../schema/ifcmeasureresource/lexical/ifcconversionbasedunitwithoffset.html">IfcConversionBasedUnitWithOffset</a> extends <a href="../../../schema/ifcmeasureresource/lexical/ifcconversionbasedunit.html">IfcConversionBasedUnit</a><br/>
+&nbsp;{<br/>
+&nbsp;&nbsp;private double ConversionOffset;<br/>
+&nbsp;}<br/>
+&nbsp;<br/>
+<br/>
 &nbsp;public class <a href="../../../schema/ifcmeasureresource/lexical/ifcderivedunit.html">IfcDerivedUnit</a> extends IfcBase<br/>
 &nbsp;{<br/>
 &nbsp;&nbsp;private <a href="../../../schema/ifcmeasureresource/lexical/ifcderivedunitelement.html">IfcDerivedUnitElement</a>[] Elements;<br/>
@@ -884,6 +949,20 @@
 &nbsp;{<br/>
 &nbsp;&nbsp;private <a href="../../../schema/ifcmeasureresource/lexical/ifcdimensionalexponents.html">IfcDimensionalExponents</a> Dimensions;<br/>
 &nbsp;&nbsp;private <a href="../../../schema/ifcmeasureresource/lexical/ifcunitenum.html">IfcUnitEnum</a> UnitType;<br/>
+&nbsp;}<br/>
+&nbsp;<br/>
+<br/>
+&nbsp;public class <a href="../../../schema/ifcmeasureresource/lexical/ifcsiunit.html">IfcSIUnit</a> extends <a href="../../../schema/ifcmeasureresource/lexical/ifcnamedunit.html">IfcNamedUnit</a><br/>
+&nbsp;{<br/>
+&nbsp;&nbsp;private <a href="../../../schema/ifcmeasureresource/lexical/ifcsiprefix.html">IfcSIPrefix</a> Prefix;<br/>
+&nbsp;&nbsp;private <a href="../../../schema/ifcmeasureresource/lexical/ifcsiunitname.html">IfcSIUnitName</a> Name;<br/>
+&nbsp;&nbsp;private <a href="../../../schema/ifcmeasureresource/lexical/ifcdimensionalexponents.html">IfcDimensionalExponents</a> Dimensions;<br/>
+&nbsp;}<br/>
+&nbsp;<br/>
+<br/>
+&nbsp;public class <a href="../../../schema/ifcmeasureresource/lexical/ifcunitassignment.html">IfcUnitAssignment</a> extends IfcBase<br/>
+&nbsp;{<br/>
+&nbsp;&nbsp;private <a href="../../../schema/ifcmeasureresource/lexical/ifcunit.html">IfcUnit</a>[] Units;<br/>
 &nbsp;}<br/>
 &nbsp;<br/>
 <br/>
@@ -934,6 +1013,55 @@
 &nbsp;public class <a href="../../../schema/ifcpropertyresource/lexical/ifcpropertyabstraction.html">IfcPropertyAbstraction</a> extends IfcBase<br/>
 &nbsp;{<br/>
 &nbsp;&nbsp;private <a href="../../../schema/ifcexternalreferenceresource/lexical/ifcexternalreferencerelationship.html">IfcExternalReferenceRelationship</a>[] HasExternalReferences;<br/>
+&nbsp;}<br/>
+&nbsp;<br/>
+<br/>
+&nbsp;public class <a href="../../../schema/ifcpropertyresource/lexical/ifcpropertyboundedvalue.html">IfcPropertyBoundedValue</a> extends <a href="../../../schema/ifcpropertyresource/lexical/ifcsimpleproperty.html">IfcSimpleProperty</a><br/>
+&nbsp;{<br/>
+&nbsp;&nbsp;private <a href="../../../schema/ifcmeasureresource/lexical/ifcvalue.html">IfcValue</a> UpperBoundValue;<br/>
+&nbsp;&nbsp;private <a href="../../../schema/ifcmeasureresource/lexical/ifcvalue.html">IfcValue</a> LowerBoundValue;<br/>
+&nbsp;&nbsp;private <a href="../../../schema/ifcmeasureresource/lexical/ifcunit.html">IfcUnit</a> Unit;<br/>
+&nbsp;&nbsp;private <a href="../../../schema/ifcmeasureresource/lexical/ifcvalue.html">IfcValue</a> SetPointValue;<br/>
+&nbsp;}<br/>
+&nbsp;<br/>
+<br/>
+&nbsp;public class <a href="../../../schema/ifcpropertyresource/lexical/ifcpropertyenumeratedvalue.html">IfcPropertyEnumeratedValue</a> extends <a href="../../../schema/ifcpropertyresource/lexical/ifcsimpleproperty.html">IfcSimpleProperty</a><br/>
+&nbsp;{<br/>
+&nbsp;&nbsp;private <a href="../../../schema/ifcmeasureresource/lexical/ifcvalue.html">IfcValue</a>[] EnumerationValues;<br/>
+&nbsp;&nbsp;private <a href="../../../schema/ifcpropertyresource/lexical/ifcpropertyenumeration.html">IfcPropertyEnumeration</a> EnumerationReference;<br/>
+&nbsp;}<br/>
+&nbsp;<br/>
+<br/>
+&nbsp;public class <a href="../../../schema/ifcpropertyresource/lexical/ifcpropertyenumeration.html">IfcPropertyEnumeration</a> extends <a href="../../../schema/ifcpropertyresource/lexical/ifcpropertyabstraction.html">IfcPropertyAbstraction</a><br/>
+&nbsp;{<br/>
+&nbsp;&nbsp;private string Name;<br/>
+&nbsp;&nbsp;private <a href="../../../schema/ifcmeasureresource/lexical/ifcvalue.html">IfcValue</a>[] EnumerationValues;<br/>
+&nbsp;&nbsp;private <a href="../../../schema/ifcmeasureresource/lexical/ifcunit.html">IfcUnit</a> Unit;<br/>
+&nbsp;}<br/>
+&nbsp;<br/>
+<br/>
+&nbsp;public class <a href="../../../schema/ifcpropertyresource/lexical/ifcpropertylistvalue.html">IfcPropertyListValue</a> extends <a href="../../../schema/ifcpropertyresource/lexical/ifcsimpleproperty.html">IfcSimpleProperty</a><br/>
+&nbsp;{<br/>
+&nbsp;&nbsp;private <a href="../../../schema/ifcmeasureresource/lexical/ifcvalue.html">IfcValue</a>[] ListValues;<br/>
+&nbsp;&nbsp;private <a href="../../../schema/ifcmeasureresource/lexical/ifcunit.html">IfcUnit</a> Unit;<br/>
+&nbsp;}<br/>
+&nbsp;<br/>
+<br/>
+&nbsp;public class <a href="../../../schema/ifcpropertyresource/lexical/ifcpropertysinglevalue.html">IfcPropertySingleValue</a> extends <a href="../../../schema/ifcpropertyresource/lexical/ifcsimpleproperty.html">IfcSimpleProperty</a><br/>
+&nbsp;{<br/>
+&nbsp;&nbsp;private <a href="../../../schema/ifcmeasureresource/lexical/ifcvalue.html">IfcValue</a> NominalValue;<br/>
+&nbsp;&nbsp;private <a href="../../../schema/ifcmeasureresource/lexical/ifcunit.html">IfcUnit</a> Unit;<br/>
+&nbsp;}<br/>
+&nbsp;<br/>
+<br/>
+&nbsp;public class <a href="../../../schema/ifcpropertyresource/lexical/ifcpropertytablevalue.html">IfcPropertyTableValue</a> extends <a href="../../../schema/ifcpropertyresource/lexical/ifcsimpleproperty.html">IfcSimpleProperty</a><br/>
+&nbsp;{<br/>
+&nbsp;&nbsp;private <a href="../../../schema/ifcmeasureresource/lexical/ifcvalue.html">IfcValue</a>[] DefiningValues;<br/>
+&nbsp;&nbsp;private <a href="../../../schema/ifcmeasureresource/lexical/ifcvalue.html">IfcValue</a>[] DefinedValues;<br/>
+&nbsp;&nbsp;private string Expression;<br/>
+&nbsp;&nbsp;private <a href="../../../schema/ifcmeasureresource/lexical/ifcunit.html">IfcUnit</a> DefiningUnit;<br/>
+&nbsp;&nbsp;private <a href="../../../schema/ifcmeasureresource/lexical/ifcunit.html">IfcUnit</a> DefinedUnit;<br/>
+&nbsp;&nbsp;private <span class="self-ref">IfcStrippedOptional</span> CurveInterpolation;<br/>
 &nbsp;}<br/>
 &nbsp;<br/>
 <br/>

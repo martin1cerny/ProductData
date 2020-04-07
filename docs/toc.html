@@ -43,13 +43,15 @@
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="schema/templates/classification-of-data-templates.html">4.1.5 Classification of data templates</a><br />
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="schema/templates/construction-objects-data.html">4.2 Construction objects data</a><br />
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="schema/templates/complex-data-sheet-complex-data-sheet.html">4.2.1 Complex data sheet [Complex data sheet]</a><br />
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="schema/templates/simple-data-sheet-simple-data-sheet.html">4.2.2 Simple data sheet [Simple data sheet]</a><br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="schema/templates/explicit-property-units.html">4.2.2 Explicit property units</a><br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="schema/templates/simple-data-sheet-simple-data-sheet.html">4.2.3 Simple data sheet [Simple data sheet]</a><br />
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="schema/templates/construction-objects.html">4.3 Construction objects</a><br />
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="schema/templates/instances.html">4.3.1 Instances</a><br />
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="schema/templates/types.html">4.3.2 Types</a><br />
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="schema/templates/data-templates.html">4.4 Data templates</a><br />
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="schema/templates/complex-data-template.html">4.4.1 Complex data template</a><br />
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="schema/templates/simple-data-template.html">4.4.2 Simple data template</a><br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="schema/templates/explicit-property-template-units.html">4.4.2 Explicit property template units</a><br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="schema/templates/simple-data-template.html">4.4.3 Simple data template</a><br />
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="schema/templates/declarations.html">4.5 Declarations</a><br />
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="schema/templates/declaration-for-data-sheet-exchange.html">4.5.1 Declaration for data sheet exchange</a><br />
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="schema/templates/declaration-for-data-template-exchange.html">4.5.2 Declaration for data template exchange</a><br />
@@ -65,7 +67,10 @@
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="schema/templates/material-of-construction-object-types.html">4.8.3 Material of construction object types</a><br />
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="schema/templates/material-of-construction-objects.html">4.8.4 Material of construction objects</a><br />
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="schema/templates/material-profile-definition.html">4.8.5 Material profile definition</a><br />
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="schema/templates/transport.html">4.9 Transport</a><br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="schema/templates/project-context.html">4.9 Project Context</a><br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="schema/templates/measures-and-units.html">4.9.1 Measures and units</a><br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="schema/templates/shapes.html">4.10 Shapes</a><br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="schema/templates/transport.html">4.11 Transport</a><br />
 <a class="listing-link" href="schema/chapter-5.html">5. Core data schemas</a><br />
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a class="listing-link" href="schema/ifckernel/content.html">5.1 IfcKernel</a><br />
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;5.1.1 Schema Definition<br />
@@ -205,23 +210,30 @@
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a class="listing-link" href="schema/ifcmeasureresource/lexical/ifclabel.html">8.8.2.2 IfcLabel</a><br />
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a class="listing-link" href="schema/ifcmeasureresource/lexical/ifclengthmeasure.html">8.8.2.3 IfcLengthMeasure</a><br />
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a class="listing-link" href="schema/ifcmeasureresource/lexical/ifcnonnegativelengthmeasure.html">8.8.2.4 IfcNonNegativeLengthMeasure</a><br />
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a class="listing-link" href="schema/ifcmeasureresource/lexical/ifctext.html">8.8.2.5 IfcText</a><br />
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a class="listing-link" href="schema/ifcmeasureresource/lexical/ifcderivedunitenum.html">8.8.2.6 IfcDerivedUnitEnum</a><br />
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a class="listing-link" href="schema/ifcmeasureresource/lexical/ifcunitenum.html">8.8.2.7 IfcUnitEnum</a><br />
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a class="listing-link" href="schema/ifcmeasureresource/lexical/ifcsimplevalue.html">8.8.2.8 IfcSimpleValue</a><br />
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a class="listing-link" href="schema/ifcmeasureresource/lexical/ifcunit.html">8.8.2.9 IfcUnit</a><br />
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a class="listing-link" href="schema/ifcmeasureresource/lexical/ifcvalue.html">8.8.2.10 IfcValue</a><br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a class="listing-link" href="schema/ifcmeasureresource/lexical/ifcreal.html">8.8.2.5 IfcReal</a><br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a class="listing-link" href="schema/ifcmeasureresource/lexical/ifctext.html">8.8.2.6 IfcText</a><br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a class="listing-link" href="schema/ifcmeasureresource/lexical/ifcderivedunitenum.html">8.8.2.7 IfcDerivedUnitEnum</a><br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a class="listing-link" href="schema/ifcmeasureresource/lexical/ifcsiprefix.html">8.8.2.8 IfcSIPrefix</a><br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a class="listing-link" href="schema/ifcmeasureresource/lexical/ifcsiunitname.html">8.8.2.9 IfcSIUnitName</a><br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a class="listing-link" href="schema/ifcmeasureresource/lexical/ifcunitenum.html">8.8.2.10 IfcUnitEnum</a><br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a class="listing-link" href="schema/ifcmeasureresource/lexical/ifcsimplevalue.html">8.8.2.11 IfcSimpleValue</a><br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a class="listing-link" href="schema/ifcmeasureresource/lexical/ifcunit.html">8.8.2.12 IfcUnit</a><br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a class="listing-link" href="schema/ifcmeasureresource/lexical/ifcvalue.html">8.8.2.13 IfcValue</a><br />
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;8.8.3 Entities<br />
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a class="listing-link" href="schema/ifcmeasureresource/lexical/ifccontextdependentunit.html">8.8.3.1 IfcContextDependentUnit</a><br />
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a class="listing-link" href="schema/ifcmeasureresource/lexical/ifcconversionbasedunit.html">8.8.3.2 IfcConversionBasedUnit</a><br />
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a class="listing-link" href="schema/ifcmeasureresource/lexical/ifcderivedunit.html">8.8.3.3 IfcDerivedUnit</a><br />
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a class="listing-link" href="schema/ifcmeasureresource/lexical/ifcderivedunitelement.html">8.8.3.4 IfcDerivedUnitElement</a><br />
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a class="listing-link" href="schema/ifcmeasureresource/lexical/ifcdimensionalexponents.html">8.8.3.5 IfcDimensionalExponents</a><br />
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a class="listing-link" href="schema/ifcmeasureresource/lexical/ifcmeasurewithunit.html">8.8.3.6 IfcMeasureWithUnit</a><br />
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a class="listing-link" href="schema/ifcmeasureresource/lexical/ifcmonetaryunit.html">8.8.3.7 IfcMonetaryUnit</a><br />
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a class="listing-link" href="schema/ifcmeasureresource/lexical/ifcnamedunit.html">8.8.3.8 IfcNamedUnit</a><br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a class="listing-link" href="schema/ifcmeasureresource/lexical/ifcconversionbasedunitwithoffset.html">8.8.3.3 IfcConversionBasedUnitWithOffset</a><br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a class="listing-link" href="schema/ifcmeasureresource/lexical/ifcderivedunit.html">8.8.3.4 IfcDerivedUnit</a><br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a class="listing-link" href="schema/ifcmeasureresource/lexical/ifcderivedunitelement.html">8.8.3.5 IfcDerivedUnitElement</a><br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a class="listing-link" href="schema/ifcmeasureresource/lexical/ifcdimensionalexponents.html">8.8.3.6 IfcDimensionalExponents</a><br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a class="listing-link" href="schema/ifcmeasureresource/lexical/ifcmeasurewithunit.html">8.8.3.7 IfcMeasureWithUnit</a><br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a class="listing-link" href="schema/ifcmeasureresource/lexical/ifcmonetaryunit.html">8.8.3.8 IfcMonetaryUnit</a><br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a class="listing-link" href="schema/ifcmeasureresource/lexical/ifcnamedunit.html">8.8.3.9 IfcNamedUnit</a><br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a class="listing-link" href="schema/ifcmeasureresource/lexical/ifcsiunit.html">8.8.3.10 IfcSIUnit</a><br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a class="listing-link" href="schema/ifcmeasureresource/lexical/ifcunitassignment.html">8.8.3.11 IfcUnitAssignment</a><br />
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;8.8.4 Functions<br />
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a class="listing-link" href="schema/ifcmeasureresource/lexical/ifccorrectdimensions.html">8.8.4.1 IfcCorrectDimensions</a><br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a class="listing-link" href="schema/ifcmeasureresource/lexical/ifccorrectunitassignment.html">8.8.4.2 IfcCorrectUnitAssignment</a><br />
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a class="listing-link" href="schema/ifcprofileresource/content.html">8.9 IfcProfileResource</a><br />
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;8.9.1 Schema Definition<br />
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;8.9.2 Types<br />
@@ -237,7 +249,13 @@
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a class="listing-link" href="schema/ifcpropertyresource/lexical/ifcextendedproperties.html">8.10.3.2 IfcExtendedProperties</a><br />
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a class="listing-link" href="schema/ifcpropertyresource/lexical/ifcproperty.html">8.10.3.3 IfcProperty</a><br />
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a class="listing-link" href="schema/ifcpropertyresource/lexical/ifcpropertyabstraction.html">8.10.3.4 IfcPropertyAbstraction</a><br />
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a class="listing-link" href="schema/ifcpropertyresource/lexical/ifcsimpleproperty.html">8.10.3.5 IfcSimpleProperty</a><br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a class="listing-link" href="schema/ifcpropertyresource/lexical/ifcpropertyboundedvalue.html">8.10.3.5 IfcPropertyBoundedValue</a><br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a class="listing-link" href="schema/ifcpropertyresource/lexical/ifcpropertyenumeratedvalue.html">8.10.3.6 IfcPropertyEnumeratedValue</a><br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a class="listing-link" href="schema/ifcpropertyresource/lexical/ifcpropertyenumeration.html">8.10.3.7 IfcPropertyEnumeration</a><br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a class="listing-link" href="schema/ifcpropertyresource/lexical/ifcpropertylistvalue.html">8.10.3.8 IfcPropertyListValue</a><br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a class="listing-link" href="schema/ifcpropertyresource/lexical/ifcpropertysinglevalue.html">8.10.3.9 IfcPropertySingleValue</a><br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a class="listing-link" href="schema/ifcpropertyresource/lexical/ifcpropertytablevalue.html">8.10.3.10 IfcPropertyTableValue</a><br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a class="listing-link" href="schema/ifcpropertyresource/lexical/ifcsimpleproperty.html">8.10.3.11 IfcSimpleProperty</a><br />
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;8.10.4 Functions<br />
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a class="listing-link" href="schema/ifcquantityresource/content.html">8.11 IfcQuantityResource</a><br />
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;8.11.1 Schema Definition<br />
@@ -358,35 +376,33 @@
 <a class="listing-link" href="schema/templates/classification-of-construction-systems.html">Figure 4 &mdash; Classification of construction systems instance diagram</a><br />
 <a class="listing-link" href="schema/templates/classification-of-data-templates.html">Figure 5 &mdash; Classification of data templates instance diagram</a><br />
 <a class="listing-link" href="schema/templates/complex-data-sheet-complex-data-sheet.html">Figure 6 &mdash; Complex data sheet [Complex data sheet] instance diagram</a><br />
-<a class="listing-link" href="schema/templates/simple-data-sheet-simple-data-sheet.html">Figure 7 &mdash; Simple data sheet [Simple data sheet] instance diagram</a><br />
-<a class="listing-link" href="schema/templates/instances.html">Figure 8 &mdash; Instances instance diagram</a><br />
-<a class="listing-link" href="schema/templates/types.html">Figure 9 &mdash; Types instance diagram</a><br />
-<a class="listing-link" href="schema/templates/complex-data-template.html">Figure 10 &mdash; Complex data template instance diagram</a><br />
-<a class="listing-link" href="schema/templates/simple-data-template.html">Figure 11 &mdash; Simple data template instance diagram</a><br />
-<a class="listing-link" href="schema/templates/declaration-for-data-template-exchange.html">Figure 12 &mdash; Declaration for data template exchange instance diagram</a><br />
-<a class="listing-link" href="schema/templates/documents.html">Figure 13 &mdash; Documents instance diagram</a><br />
-<a class="listing-link" href="schema/templates/document-association-to-construction-object-types.html">Figure 14 &mdash; Document association to construction object types instance diagram</a><br />
-<a class="listing-link" href="schema/templates/document-association-to-construction-objects.html">Figure 15 &mdash; Document association to construction objects instance diagram</a><br />
-<a class="listing-link" href="schema/templates/document-classification.html">Figure 16 &mdash; Document classification instance diagram</a><br />
-<a class="listing-link" href="schema/templates/document-information.html">Figure 17 &mdash; Document information instance diagram</a><br />
-<a class="listing-link" href="schema/templates/material-constituent-definition.html">Figure 18 &mdash; Material constituent definition instance diagram</a><br />
-<a class="listing-link" href="schema/templates/material-layer-definition.html">Figure 19 &mdash; Material layer definition instance diagram</a><br />
-<a class="listing-link" href="schema/templates/material-of-construction-object-types.html">Figure 20 &mdash; Material of construction object types instance diagram</a><br />
-<a class="listing-link" href="schema/templates/material-of-construction-objects.html">Figure 21 &mdash; Material of construction objects instance diagram</a><br />
-<a class="listing-link" href="schema/templates/material-profile-definition.html">Figure 22 &mdash; Material profile definition instance diagram</a><br />
-<a class="listing-link" href="schema/ifckernel/lexical/ifcpropertysettemplate.html">Figure 23 &mdash; Property set template relationships</a><br />
-<a class="listing-link" href="schema/ifckernel/lexical/ifcreldefinesbytype.html">Figure 24 &mdash; Type definition relationships</a><br />
-<a class="listing-link" href="schema/ifckernel/lexical/ifcsimplepropertytemplate.html">Figure 25 &mdash; Property template relationships</a><br />
-<a class="listing-link" href="schema/ifcmaterialresource/lexical/ifcmateriallayerset.html">Figure 26 &mdash; Material layer set</a><br />
-<a class="listing-link" href="schema/ifcprofileresource/content.html">Figure 27 &mdash; Profile coordinate system</a><br />
-<a class="listing-link" href="schema/ifcprofileresource/lexical/ifcprofiledef.html">Figure 28 &mdash; Profile sweeping</a><br />
-<a class="listing-link" href="schema/ifcprofileresource/lexical/ifcprofiledef.html">Figure 29 &mdash; Profile types</a><br />
+<a class="listing-link" href="schema/templates/explicit-property-units.html">Figure 7 &mdash; Explicit property units instance diagram</a><br />
+<a class="listing-link" href="schema/templates/simple-data-sheet-simple-data-sheet.html">Figure 8 &mdash; Simple data sheet [Simple data sheet] instance diagram</a><br />
+<a class="listing-link" href="schema/templates/instances.html">Figure 9 &mdash; Instances instance diagram</a><br />
+<a class="listing-link" href="schema/templates/types.html">Figure 10 &mdash; Types instance diagram</a><br />
+<a class="listing-link" href="schema/templates/complex-data-template.html">Figure 11 &mdash; Complex data template instance diagram</a><br />
+<a class="listing-link" href="schema/templates/explicit-property-template-units.html">Figure 12 &mdash; Explicit property template units instance diagram</a><br />
+<a class="listing-link" href="schema/templates/simple-data-template.html">Figure 13 &mdash; Simple data template instance diagram</a><br />
+<a class="listing-link" href="schema/templates/declaration-for-data-template-exchange.html">Figure 14 &mdash; Declaration for data template exchange instance diagram</a><br />
+<a class="listing-link" href="schema/templates/documents.html">Figure 15 &mdash; Documents instance diagram</a><br />
+<a class="listing-link" href="schema/templates/document-association-to-construction-object-types.html">Figure 16 &mdash; Document association to construction object types instance diagram</a><br />
+<a class="listing-link" href="schema/templates/document-association-to-construction-objects.html">Figure 17 &mdash; Document association to construction objects instance diagram</a><br />
+<a class="listing-link" href="schema/templates/document-classification.html">Figure 18 &mdash; Document classification instance diagram</a><br />
+<a class="listing-link" href="schema/templates/document-information.html">Figure 19 &mdash; Document information instance diagram</a><br />
+<a class="listing-link" href="schema/templates/material-constituent-definition.html">Figure 20 &mdash; Material constituent definition instance diagram</a><br />
+<a class="listing-link" href="schema/templates/material-layer-definition.html">Figure 21 &mdash; Material layer definition instance diagram</a><br />
+<a class="listing-link" href="schema/templates/material-of-construction-object-types.html">Figure 22 &mdash; Material of construction object types instance diagram</a><br />
+<a class="listing-link" href="schema/templates/material-of-construction-objects.html">Figure 23 &mdash; Material of construction objects instance diagram</a><br />
+<a class="listing-link" href="schema/templates/material-profile-definition.html">Figure 24 &mdash; Material profile definition instance diagram</a><br />
+<a class="listing-link" href="schema/templates/project-context.html">Figure 25 &mdash; Project Context instance diagram</a><br />
+<a class="listing-link" href="schema/templates/measures-and-units.html">Figure 26 &mdash; Measures and units instance diagram</a><br />
+<a class="listing-link" href="schema/ifckernel/lexical/ifcreldefinesbytype.html">Figure 27 &mdash; Type definition relationships</a><br />
+<a class="listing-link" href="schema/ifcmaterialresource/lexical/ifcmateriallayerset.html">Figure 28 &mdash; Material layer set</a><br />
 </p>
 <p></p>
 <h1 class="std">Tables</h1>
 <p>
-<a class="listing-link" href="schema/ifcmeasureresource/content.html">Table 1 &mdash; Measures and units</a><br />
-<a class="listing-link" href="schema/ifcmeasureresource/lexical/ifcconversionbasedunit.html">Table 2 &mdash; Standard unit names</a><br />
+<a class="listing-link" href="schema/ifcmeasureresource/lexical/ifcconversionbasedunit.html">Table 1 &mdash; Standard unit names</a><br />
 </p>
   </body>
 </html>

@@ -11,7 +11,7 @@
     <title>IfcSimpleValue</title>
 
     <style type="text/css">
-      body { counter-reset: index1 8 index2 8 index3 2 index4 7 index5 0; }
+      body { counter-reset: index1 8 index2 8 index3 2 index4 10 index5 0; }
     </style>
   </head>
 
@@ -20,7 +20,7 @@
 
 <script type="text/javascript">
 <!--
-    parent.index.location.replace("../../toc-8.html#8.8.2.8");
+    parent.index.location.replace("../../toc-8.html#8.8.2.11");
 //-->
 </script>
 
@@ -54,24 +54,19 @@
 <h5 class="num">Semantic definitions at the type</h5>
 <details open="open"><summary>Type definition</summary><p><span class="self-ref">IfcSimpleValue</span> is a select type for selecting between simple value types.</p>
 <p>SELECT</p>
-<p>\\\\\\\\\\\\\\\\\\\\*  <i>IfcInteger</i>: Defined type of simple type INTEGER.
-\\\\\\\\\\\\\\\\\\\\*  <i>IfcReal</i>: Defined type of simple type REAL.
-\\\\\\\\\\\\\\\\\\\\*  <i>IfcBoolean</i>: Defined type of simple type BOOLEAN.
-\\\\\\\\\\\\\\\\\\\\*  <i>IfcLogical</i>: Defined type of simple type LOGICAL.
-\\\\\\\\\\\\\\\\\\\\*  <a href="../../ifcmeasureresource/lexical/ifcidentifier.html">IfcIdentifier</a>: Defined type of simple type STRING for identification purposes.
-\\\\\\\\\\\\\\\\\\\\* IfcLabel: Defined type of simple type STRING for naming purposes.
-\\\\\\\\\\\\\\\\\\\\*  <a href="../../ifcmeasureresource/lexical/ifctext.html">IfcText</a>: Defined type of simple type STRING for descriptive purposes.
-\\\\\\\\\\\\\\\\\\\\*  <a href="../../ifcdatetimeresource/lexical/ifcdatetime.html">IfcDateTime</a>: Defined type of simple type STRING to represent a date and time.
-\\\\\\\\\\\\\\\\\\\\*  <a href="../../ifcdatetimeresource/lexical/ifcdate.html">IfcDate</a>: Defined type of simple type STRING to represent a date.
-\\\\\\\\\\\\\\\\\\\\*  <i>IfcTime</i>: Defined type of simple type STRING to represent a time.
-\\\\\\\\\\\\\\\\\\\\*  <i>IfcDuration</i>: Defined type of simple type STRING to represent a duration.
-\\\\\\\\\\\\\\\\\\\\*  <a href="../../ifcdatetimeresource/lexical/ifctimestamp.html">IfcTimeStamp</a>: Defined type of simple type INTEGER to represent a point in time by seconds elapsed since 1970.</p>
+<p>\X\X\*  <a href="../../ifcmeasureresource/lexical/ifcreal.html">IfcReal</a>: Defined type of simple type REAL.
+\X\X\*  <i>IfcLogical</i>: Defined type of simple type LOGICAL.
+Ø\X\* IfcLabel: Defined type of simple type STRING for naming purposes.
+Ø\X\*  <a href="../../ifcdatetimeresource/lexical/ifcdatetime.html">IfcDateTime</a>: Defined type of simple type STRING to represent a date and time.
+Ø\X\*  <i>IfcTime</i>: Defined type of simple type STRING to represent a time.
+Ø\X\*  <a href="../../ifcdatetimeresource/lexical/ifctimestamp.html">IfcTimeStamp</a>: Defined type of simple type INTEGER to represent a point in time by seconds elapsed since 1970.</p>
 
 
 </details>
 <details open="open"><summary>Select definition</summary><table class="attributes">
 <tr><th>Type</th><th>Description</th></tr>
-<tr><td><a href="../../ifcmeasureresource/lexical/ifcidentifier.html">IfcIdentifier</a>
+<tr><td><a href="../../ifcmeasureresource/lexical/ifcreal.html">IfcReal</a>
+</td><td></td></tr><tr><td><a href="../../ifcmeasureresource/lexical/ifcidentifier.html">IfcIdentifier</a>
 </td><td></td></tr><tr><td><a href="../../ifcmeasureresource/lexical/ifctext.html">IfcText</a>
 </td><td></td></tr><tr><td><a href="../../ifcmeasureresource/lexical/ifclabel.html">IfcLabel</a>
 </td><td></td></tr><tr><td><a href="../../ifcdatetimeresource/lexical/ifcdatetime.html">IfcDateTime</a>
@@ -88,6 +83,7 @@
 &nbsp;&nbsp;&nbsp;&lt;xs:element ref=&quot;ifc:<a href="../../ifcdatetimeresource/lexical/ifcdatetime.html">IfcDateTime</a>-wrapper&quot;/&gt;<br/>
 &nbsp;&nbsp;&nbsp;&lt;xs:element ref=&quot;ifc:<a href="../../ifcmeasureresource/lexical/ifcidentifier.html">IfcIdentifier</a>-wrapper&quot;/&gt;<br/>
 &nbsp;&nbsp;&nbsp;&lt;xs:element ref=&quot;ifc:<a href="../../ifcmeasureresource/lexical/ifclabel.html">IfcLabel</a>-wrapper&quot;/&gt;<br/>
+&nbsp;&nbsp;&nbsp;&lt;xs:element ref=&quot;ifc:<a href="../../ifcmeasureresource/lexical/ifcreal.html">IfcReal</a>-wrapper&quot;/&gt;<br/>
 &nbsp;&nbsp;&nbsp;&lt;xs:element ref=&quot;ifc:<a href="../../ifcmeasureresource/lexical/ifctext.html">IfcText</a>-wrapper&quot;/&gt;<br/>
 &nbsp;&nbsp;&nbsp;&lt;xs:element ref=&quot;ifc:<a href="../../ifcdatetimeresource/lexical/ifctimestamp.html">IfcTimeStamp</a>-wrapper&quot;/&gt;<br/>
 &nbsp;&nbsp;&lt;/xs:choice&gt;<br/>
@@ -95,7 +91,7 @@
 </code></div></details>
 <details><summary>EXPRESS Specification</summary><div class="express"><code class="express">
 <span class="keyword">TYPE</span> IfcSimpleValue = <span class="keyword">SELECT</span> (<br/>
-&nbsp;<a href="../../ifcmeasureresource/lexical/ifcidentifier.html">IfcIdentifier</a>, <br/>&nbsp;<a href="../../ifcmeasureresource/lexical/ifctext.html">IfcText</a>, <br/>&nbsp;<a href="../../ifcmeasureresource/lexical/ifclabel.html">IfcLabel</a>, <br/>&nbsp;<a href="../../ifcdatetimeresource/lexical/ifcdatetime.html">IfcDateTime</a>, <br/>&nbsp;<a href="../../ifcdatetimeresource/lexical/ifcdate.html">IfcDate</a>, <br/>&nbsp;<a href="../../ifcdatetimeresource/lexical/ifctimestamp.html">IfcTimeStamp</a>);<br/><span class="keyword">END_TYPE;</span><br/>
+&nbsp;<a href="../../ifcmeasureresource/lexical/ifcreal.html">IfcReal</a>, <br/>&nbsp;<a href="../../ifcmeasureresource/lexical/ifcidentifier.html">IfcIdentifier</a>, <br/>&nbsp;<a href="../../ifcmeasureresource/lexical/ifctext.html">IfcText</a>, <br/>&nbsp;<a href="../../ifcmeasureresource/lexical/ifclabel.html">IfcLabel</a>, <br/>&nbsp;<a href="../../ifcdatetimeresource/lexical/ifcdatetime.html">IfcDateTime</a>, <br/>&nbsp;<a href="../../ifcdatetimeresource/lexical/ifcdate.html">IfcDate</a>, <br/>&nbsp;<a href="../../ifcdatetimeresource/lexical/ifctimestamp.html">IfcTimeStamp</a>);<br/><span class="keyword">END_TYPE;</span><br/>
 </p>
 <p class="std"><a href="../../../annex/annex-d/ifcmeasureresource/diagram_0000.html" ><img src="../../../img/diagram.png" style="border: 0px" title="Link to EXPRESS-G diagram" alt="Link to EXPRESS-G diagram">&nbsp;EXPRESS-G diagram</a></p>
 </code></div>

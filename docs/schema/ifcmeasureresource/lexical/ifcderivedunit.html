@@ -11,7 +11,7 @@
     <title>IfcDerivedUnit</title>
 
     <style type="text/css">
-      body { counter-reset: index1 8 index2 8 index3 3 index4 2 index5 0; }
+      body { counter-reset: index1 8 index2 8 index3 3 index4 3 index5 0; }
     </style>
   </head>
 
@@ -20,7 +20,7 @@
 
 <script type="text/javascript">
 <!--
-    parent.index.location.replace("../../toc-8.html#8.8.3.3");
+    parent.index.location.replace("../../toc-8.html#8.8.3.4");
 //-->
 </script>
 
@@ -53,8 +53,8 @@ The group of units and their exponents that define the derived unit.
 <tr><td>2</td><td>UnitType</td><td><a href="../../ifcmeasureresource/lexical/ifcderivedunitenum.html">IfcDerivedUnitEnum</a></td><td></td><td>
 Name of the derived unit chosen from an enumeration of derived unit types for use in IFC models.
 </td><td>X</td></tr>
-<tr><td>3</td><td>UserDefinedType</td><td><span class="self-ref">-</span></td><td></td><td>
-<i>This attribute is out of scope for this model view definition and shall not be set.</i></td><td></td></tr>
+<tr><td>3</td><td>UserDefinedType</td><td><a href="../../ifcmeasureresource/lexical/ifclabel.html">IfcLabel</a></td><td>? </td><td>
+</td><td>X</td></tr>
 <tr><td></td><td>Dimensions<br/>:=IfcDeriveDimensionalExponents(Elements)</td><td><a href="../../ifcmeasureresource/lexical/ifcdimensionalexponents.html">IfcDimensionalExponents</a></td><td></td><td>Dimensional exponents derived using the function IfcDerivedDimensionalExponents using (SELF) as the input value.
 </td>
 <td>X</td></tr>
@@ -86,8 +86,8 @@ The group of units and their exponents that define the derived unit.
 <tr><td>2</td><td>UnitType</td><td><a href="../../ifcmeasureresource/lexical/ifcderivedunitenum.html">IfcDerivedUnitEnum</a></td><td></td><td>
 Name of the derived unit chosen from an enumeration of derived unit types for use in IFC models.
 </td><td>X</td></tr>
-<tr><td>3</td><td>UserDefinedType</td><td><span class="self-ref">-</span></td><td></td><td>
-<i>This attribute is out of scope for this model view definition and shall not be set.</i></td><td></td></tr>
+<tr><td>3</td><td>UserDefinedType</td><td><a href="../../ifcmeasureresource/lexical/ifclabel.html">IfcLabel</a></td><td>? </td><td>
+</td><td>X</td></tr>
 <tr><td></td><td>Dimensions<br/>:=IfcDeriveDimensionalExponents(Elements)</td><td><a href="../../ifcmeasureresource/lexical/ifcdimensionalexponents.html">IfcDimensionalExponents</a></td><td></td><td>Dimensional exponents derived using the function IfcDerivedDimensionalExponents using (SELF) as the input value.
 </td>
 <td>X</td></tr>
@@ -113,6 +113,7 @@ Name of the derived unit chosen from an enumeration of derived unit types for us
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/xs:element&gt;<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;&lt;/xs:sequence&gt;<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;&lt;xs:attribute name=&quot;UnitType&quot; type=&quot;ifc:<a href="../../ifcmeasureresource/lexical/ifcderivedunitenum.html">IfcDerivedUnitEnum</a>&quot; use=&quot;optional&quot;/&gt;<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&lt;xs:attribute name=&quot;UserDefinedType&quot; type=&quot;ifc:<a href="../../ifcmeasureresource/lexical/ifclabel.html">IfcLabel</a>&quot; use=&quot;optional&quot;/&gt;<br/>
 &nbsp;&nbsp;&nbsp;&lt;/xs:extension&gt;<br/>
 &nbsp;&nbsp;&lt;/xs:complexContent&gt;<br/>
 &nbsp;&lt;/xs:complexType&gt;<br/>
@@ -121,7 +122,7 @@ Name of the derived unit chosen from an enumeration of derived unit types for us
 <span class="keyword">ENTITY</span> IfcDerivedUnit<b>;</b><br/>
 &nbsp;&nbsp;Elements : <span class="keyword">SET</span> [1:?] <span class="keyword">OF</span> <a href="../../ifcmeasureresource/lexical/ifcderivedunitelement.html">IfcDerivedUnitElement</a>;<br/>
 &nbsp;&nbsp;UnitType : <a href="../../ifcmeasureresource/lexical/ifcderivedunitenum.html">IfcDerivedUnitEnum</a>;<br/>
-&nbsp;&nbsp;UserDefinedType : <span class="keyword">OPTIONAL</span> <span class="self-ref">IfcStrippedOptional</span>;<br/>
+&nbsp;&nbsp;UserDefinedType : <span class="keyword">OPTIONAL</span> <a href="../../ifcmeasureresource/lexical/ifclabel.html">IfcLabel</a>;<br/>
 &nbsp;<span class="keyword">DERIVE</span><br/>
 &nbsp;&nbsp;Dimensions : <a href="../../ifcmeasureresource/lexical/ifcdimensionalexponents.html">IfcDimensionalExponents</a> := IfcDeriveDimensionalExponents(Elements);<br/>
 &nbsp;<span class="keyword">WHERE</span><br/>

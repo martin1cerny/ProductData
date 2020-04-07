@@ -55,15 +55,19 @@ The object type denotes a particular type that indicates the object further. The
 NOTE  Subtypes of <span class="self-ref">IfcContext</span> do not introduce a <i>PredefinedType</i> attribute, therefore the usage of <i>ObjectType</i> is not bound to the selection of USERDEFINED within the <i>PredefinedType</i> enumaration.
 </blockquote>
 </td><td>X</td></tr>
-<tr><td>6</td><td>LongName</td><td><span class="self-ref">-</span></td><td></td><td>
-<i>This attribute is out of scope for this model view definition and shall not be set.</i></td><td></td></tr>
+<tr><td>6</td><td>LongName</td><td><a href="../../ifcmeasureresource/lexical/ifclabel.html">IfcLabel</a></td><td>? </td><td>
+Long name for the context as used for reference purposes.
+</td><td>X</td></tr>
 <tr><td>7</td><td>Phase</td><td><a href="../../ifcmeasureresource/lexical/ifclabel.html">IfcLabel</a></td><td>? </td><td>
 Current project phase, or life-cycle phase of this project. Applicable values have to be agreed upon by view definitions or implementer agreements.
 </td><td>X</td></tr>
 <tr><td>8</td><td>RepresentationContexts</td><td><span class="self-ref">-</span></td><td></td><td>
 <i>This attribute is out of scope for this model view definition and shall not be set.</i></td><td></td></tr>
-<tr><td>9</td><td>UnitsInContext</td><td><span class="self-ref">-</span></td><td></td><td>
-<i>This attribute is out of scope for this model view definition and shall not be set.</i></td><td></td></tr>
+<tr><td>9</td><td>UnitsInContext</td><td><a href="../../ifcmeasureresource/lexical/ifcunitassignment.html">IfcUnitAssignment</a></td><td>? </td><td>
+Units globally assigned to measure types used within the context.
+
+
+</td><td>X</td></tr>
 <tr><td></td><td><i>IsDefinedBy</i></td><td><a href="../../ifckernel/lexical/ifcreldefinesbyproperties.html">IfcRelDefinesByProperties</a><br/>@RelatedObjects</td><td>S[0:?]</td><td>Set of relationships to property set definitions attached to this context. Those statically or dynamically defined properties contain alphanumeric information content that further defines the context.
 
 
@@ -120,15 +124,19 @@ The object type denotes a particular type that indicates the object further. The
 NOTE  Subtypes of <span class="self-ref">IfcContext</span> do not introduce a <i>PredefinedType</i> attribute, therefore the usage of <i>ObjectType</i> is not bound to the selection of USERDEFINED within the <i>PredefinedType</i> enumaration.
 </blockquote>
 </td><td>X</td></tr>
-<tr><td>6</td><td>LongName</td><td><span class="self-ref">-</span></td><td></td><td>
-<i>This attribute is out of scope for this model view definition and shall not be set.</i></td><td></td></tr>
+<tr><td>6</td><td>LongName</td><td><a href="../../ifcmeasureresource/lexical/ifclabel.html">IfcLabel</a></td><td>? </td><td>
+Long name for the context as used for reference purposes.
+</td><td>X</td></tr>
 <tr><td>7</td><td>Phase</td><td><a href="../../ifcmeasureresource/lexical/ifclabel.html">IfcLabel</a></td><td>? </td><td>
 Current project phase, or life-cycle phase of this project. Applicable values have to be agreed upon by view definitions or implementer agreements.
 </td><td>X</td></tr>
 <tr><td>8</td><td>RepresentationContexts</td><td><span class="self-ref">-</span></td><td></td><td>
 <i>This attribute is out of scope for this model view definition and shall not be set.</i></td><td></td></tr>
-<tr><td>9</td><td>UnitsInContext</td><td><span class="self-ref">-</span></td><td></td><td>
-<i>This attribute is out of scope for this model view definition and shall not be set.</i></td><td></td></tr>
+<tr><td>9</td><td>UnitsInContext</td><td><a href="../../ifcmeasureresource/lexical/ifcunitassignment.html">IfcUnitAssignment</a></td><td>? </td><td>
+Units globally assigned to measure types used within the context.
+
+
+</td><td>X</td></tr>
 <tr><td></td><td><i>IsDefinedBy</i></td><td><a href="../../ifckernel/lexical/ifcreldefinesbyproperties.html">IfcRelDefinesByProperties</a><br/>@RelatedObjects</td><td>S[0:?]</td><td>Set of relationships to property set definitions attached to this context. Those statically or dynamically defined properties contain alphanumeric information content that further defines the context.
 
 
@@ -148,6 +156,7 @@ NOTE  The spatial hiearchy is assigned to <a href="../../ifckernel/lexical/ifcp
 &nbsp;&nbsp;&lt;xs:complexContent&gt;<br/>
 &nbsp;&nbsp;&nbsp;&lt;xs:extension base=&quot;ifc:<a href="../../ifckernel/lexical/ifcobjectdefinition.html">IfcObjectDefinition</a>&quot;&gt;<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;&lt;xs:sequence&gt;<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xs:element name=&quot;UnitsInContext&quot; type=&quot;ifc:<a href="../../ifcmeasureresource/lexical/ifcunitassignment.html">IfcUnitAssignment</a>&quot; nillable=&quot;true&quot; minOccurs=&quot;0&quot;/&gt;<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xs:element name=&quot;IsDefinedBy&quot; nillable=&quot;true&quot; minOccurs=&quot;0&quot;&gt;<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xs:complexType&gt;<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xs:sequence&gt;<br/>
@@ -170,6 +179,7 @@ NOTE  The spatial hiearchy is assigned to <a href="../../ifckernel/lexical/ifcp
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/xs:element&gt;<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;&lt;/xs:sequence&gt;<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;&lt;xs:attribute name=&quot;ObjectType&quot; type=&quot;ifc:<a href="../../ifcmeasureresource/lexical/ifclabel.html">IfcLabel</a>&quot; use=&quot;optional&quot;/&gt;<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&lt;xs:attribute name=&quot;LongName&quot; type=&quot;ifc:<a href="../../ifcmeasureresource/lexical/ifclabel.html">IfcLabel</a>&quot; use=&quot;optional&quot;/&gt;<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;&lt;xs:attribute name=&quot;Phase&quot; type=&quot;ifc:<a href="../../ifcmeasureresource/lexical/ifclabel.html">IfcLabel</a>&quot; use=&quot;optional&quot;/&gt;<br/>
 &nbsp;&nbsp;&nbsp;&lt;/xs:extension&gt;<br/>
 &nbsp;&nbsp;&lt;/xs:complexContent&gt;<br/>
@@ -180,10 +190,10 @@ NOTE  The spatial hiearchy is assigned to <a href="../../ifckernel/lexical/ifcp
 &nbsp;<span class="keyword">ABSTRACT</span> <span class="keyword">SUPERTYPE OF</span>(<span class="keyword">ONEOF</span>(<a href="../../ifckernel/lexical/ifcproject.html">IfcProject</a>, <a href="../../ifckernel/lexical/ifcprojectlibrary.html">IfcProjectLibrary</a>))<br/>
 &nbsp;<span class="keyword">SUBTYPE OF</span> (<a href="../../ifckernel/lexical/ifcobjectdefinition.html">IfcObjectDefinition</a>)<b>;</b><br/>
 &nbsp;&nbsp;ObjectType : <span class="keyword">OPTIONAL</span> <a href="../../ifcmeasureresource/lexical/ifclabel.html">IfcLabel</a>;<br/>
-&nbsp;&nbsp;LongName : <span class="keyword">OPTIONAL</span> <span class="self-ref">IfcStrippedOptional</span>;<br/>
+&nbsp;&nbsp;LongName : <span class="keyword">OPTIONAL</span> <a href="../../ifcmeasureresource/lexical/ifclabel.html">IfcLabel</a>;<br/>
 &nbsp;&nbsp;Phase : <span class="keyword">OPTIONAL</span> <a href="../../ifcmeasureresource/lexical/ifclabel.html">IfcLabel</a>;<br/>
 &nbsp;&nbsp;RepresentationContexts : <span class="keyword">OPTIONAL</span> <span class="keyword">SET</span> [1:?] <span class="keyword">OF</span> <span class="self-ref">IfcStrippedOptional</span>;<br/>
-&nbsp;&nbsp;UnitsInContext : <span class="keyword">OPTIONAL</span> <span class="self-ref">IfcStrippedOptional</span>;<br/>
+&nbsp;&nbsp;UnitsInContext : <span class="keyword">OPTIONAL</span> <a href="../../ifcmeasureresource/lexical/ifcunitassignment.html">IfcUnitAssignment</a>;<br/>
 &nbsp;<span class="keyword">INVERSE</span><br/>
 &nbsp;&nbsp;IsDefinedBy : <span class="keyword">SET</span> [0:?] <span class="keyword">OF</span> <a href="../../ifckernel/lexical/ifcreldefinesbyproperties.html">IfcRelDefinesByProperties</a> <span class="keyword">FOR</span> RelatedObjects;<br/>
 &nbsp;&nbsp;Declares : <span class="keyword">SET</span> [0:?] OF <a href="../../ifckernel/lexical/ifcreldeclares.html">IfcRelDeclares</a> <span class="keyword">FOR</span> RelatingContext;<br/>
@@ -197,7 +207,7 @@ NOTE  The spatial hiearchy is assigned to <a href="../../ifckernel/lexical/ifcp
 &nbsp;private string LongName;<br/>
 &nbsp;private string Phase;<br/>
 &nbsp;private <span class="self-ref">IfcStrippedOptional</span>[] RepresentationContexts;<br/>
-&nbsp;private <span class="self-ref">IfcStrippedOptional</span> UnitsInContext;<br/>
+&nbsp;private <a href="../../ifcmeasureresource/lexical/ifcunitassignment.html">IfcUnitAssignment</a> UnitsInContext;<br/>
 &nbsp;private <a href="../../ifckernel/lexical/ifcreldefinesbyproperties.html">IfcRelDefinesByProperties</a>[] IsDefinedBy;<br/>
 &nbsp;private <a href="../../ifckernel/lexical/ifcreldeclares.html">IfcRelDeclares</a>[] Declares;<br/>
 }<br/>

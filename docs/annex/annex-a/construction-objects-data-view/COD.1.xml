@@ -98,6 +98,9 @@
   <cnf:entity select="IfcProfileDef">
     <cnf:inverse select="HasProperties" exp-attribute="double-tag" />
   </cnf:entity>
+  <cnf:entity select="IfcPropertyEnumeratedValue">
+    <cnf:attribute select="EnumerationReference" exp-attribute="attribute-tag" />
+  </cnf:entity>
   <cnf:entity select="IfcRelAssignsToGroup">
     <cnf:attribute select="RelatingGroup" exp-attribute="attribute-tag" />
   </cnf:entity>

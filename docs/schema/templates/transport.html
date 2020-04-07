@@ -20,11 +20,11 @@
 
 <script type="text/javascript">
 <!--
-    parent.index.location.replace("../toc-4.html#4.9");
+    parent.index.location.replace("../toc-4.html#4.11");
 //-->
 </script>
 
-<h2 class="std">4.9 Transport</h2>
+<h2 class="std">4.11 Transport</h2>
 <p>All exchanges can be transported over these protocols:</p>
 <ol>
 <li>As a physical file with manual exchange via eMail, Harddrives, CDE's or similar</li>
@@ -37,18 +37,8 @@
 </ul>
 <p>It is explicitly allowed to embed an IFC file in Step format (.ifc) or in XML format Format (.ifcxml) in an ifczip file.The specification contains the following principles:</p>
 <ol>
-<li>The ifczip file contains exactly one model file (.ifc or .ifcxml). The file extension is \\\\*.ifczip</li>
-<li>According to this rule, it is allowed to embed additional other files in an ifczip file. Therefore, an ifczip file can be a container, which can transport many additional files in itself.</li>
-<li>Such a container offers several advantages, such as transport of photo documentations, transport of plant documentation,  transport of permits and notifications, transport of operating documents, e.g. test and maintenance reports</li>
+<li>The ifczip file contains exactly one model file (.ifc or .ifcxml). The file extension is \X\X\X\XØ\X\X\X\X\X\X\X\X\X\X\X\X\X\X\X\X\X\X\X\X\X</li>
 </ol>
-<p>In the BIM context, such a transport is particularly useful if the documents have a reference to the structure.</p>
-<p>In order to be able to exchange data without consultation, each transported document should be registered in a structured, electronic table of contents. The recipient of the container can first read the table of contents and then select and remove the files.</p>
-<p>For this purpose, two things must be specified for the sender and receiver of such a container file:</p>
-<ul>
-<li>syntax of the table of contents</li>
-<li>specifications for the semantic identification of documents</li>
-</ul>
-<p>Since the current specification of the ifczip format provides exactly one model file in the root folder of the ifczip file, it makes sense to save the table of contents and the catalogue of document types in this model file. For this purpose, the IFC data model (based on IFC4) provides the entity IfcDocumentInformation. For each file transported in the container, an element of type IfcDocumentInformation is written.</p>
 <hr/>
 <h4>Construction Objects Data View</h4>
 <table class="exchange">

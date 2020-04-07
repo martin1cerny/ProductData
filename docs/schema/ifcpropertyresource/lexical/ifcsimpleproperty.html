@@ -11,7 +11,7 @@
     <title>IfcSimpleProperty</title>
 
     <style type="text/css">
-      body { counter-reset: index1 8 index2 10 index3 3 index4 4 index5 0; }
+      body { counter-reset: index1 8 index2 10 index3 3 index4 10 index5 0; }
     </style>
   </head>
 
@@ -20,7 +20,7 @@
 
 <script type="text/javascript">
 <!--
-    parent.index.location.replace("../../toc-8.html#8.10.3.5");
+    parent.index.location.replace("../../toc-8.html#8.10.3.11");
 //-->
 </script>
 
@@ -43,8 +43,13 @@
 <h5 class="num">Inherited definitions from supertypes</h5>
 <details open="open"><summary>Entity inheritance</summary><img src="../../../diagrams/ifcsimpleproperty.png" usemap="#f"/>
 <map name="f">
-<area shape="rect" coords="18,30,230,42" href="../../../schema/ifcpropertyresource/lexical/ifcproperty.html" alt="IfcProperty" />
-<area shape="rect" coords="6,6,242,18" href="../../../schema/ifcpropertyresource/lexical/ifcpropertyabstraction.html" alt="IfcPropertyAbstraction" />
+<area shape="rect" coords="42,78,230,90" href="../../../schema/ifcpropertyresource/lexical/ifcpropertyboundedvalue.html" alt="IfcPropertyBoundedValue" />
+<area shape="rect" coords="42,102,230,114" href="../../../schema/ifcpropertyresource/lexical/ifcpropertyenumeratedvalue.html" alt="IfcPropertyEnumeratedValue" />
+<area shape="rect" coords="42,126,230,138" href="../../../schema/ifcpropertyresource/lexical/ifcpropertylistvalue.html" alt="IfcPropertyListValue" />
+<area shape="rect" coords="42,150,230,162" href="../../../schema/ifcpropertyresource/lexical/ifcpropertysinglevalue.html" alt="IfcPropertySingleValue" />
+<area shape="rect" coords="42,174,230,186" href="../../../schema/ifcpropertyresource/lexical/ifcpropertytablevalue.html" alt="IfcPropertyTableValue" />
+<area shape="rect" coords="18,30,254,42" href="../../../schema/ifcpropertyresource/lexical/ifcproperty.html" alt="IfcProperty" />
+<area shape="rect" coords="6,6,266,18" href="../../../schema/ifcpropertyresource/lexical/ifcpropertyabstraction.html" alt="IfcPropertyAbstraction" />
 </map>
 </details>
 <details><summary>Attribute inheritance</summary><table class="attributes">
@@ -83,6 +88,7 @@ Name for this property. This label is the significant name string that defines t
 </code></div></details>
 <details><summary>EXPRESS Specification</summary><div class="express"><code class="express">
 <span class="keyword">ENTITY</span> IfcSimpleProperty<br/>
+&nbsp;<span class="keyword">ABSTRACT</span> <span class="keyword">SUPERTYPE OF</span>(<span class="keyword">ONEOF</span>(<a href="../../ifcpropertyresource/lexical/ifcpropertyboundedvalue.html">IfcPropertyBoundedValue</a>, <a href="../../ifcpropertyresource/lexical/ifcpropertyenumeratedvalue.html">IfcPropertyEnumeratedValue</a>, <a href="../../ifcpropertyresource/lexical/ifcpropertylistvalue.html">IfcPropertyListValue</a>, <a href="../../ifcpropertyresource/lexical/ifcpropertysinglevalue.html">IfcPropertySingleValue</a>, <a href="../../ifcpropertyresource/lexical/ifcpropertytablevalue.html">IfcPropertyTableValue</a>))<br/>
 &nbsp;<span class="keyword">SUBTYPE OF</span> (<a href="../../ifcpropertyresource/lexical/ifcproperty.html">IfcProperty</a>)<b>;</b><br/>
 <span class="keyword">END_ENTITY;</span><br/>
 <p class="std"><a href="../../../annex/annex-d/ifcpropertyresource/diagram_0000.html" ><img src="../../../img/diagram.png" style="border: 0px" title="Link to EXPRESS-G diagram" alt="Link to EXPRESS-G diagram">&nbsp;EXPRESS-G diagram</a></p>
