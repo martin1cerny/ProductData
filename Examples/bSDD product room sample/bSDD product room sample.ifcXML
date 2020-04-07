@@ -1,0 +1,543 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ifcXML xmlns:ifc="http://www.buildingsmart-tech.org/ifc/IFC4/Add2TC1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" id="ifcXML" xmlns="http://www.buildingsmart-tech.org/ifc/IFC4/Add2TC1" xsi:schemaLocation="http://www.buildingsmart-tech.org/ifc/IFC4/Add2TC1 https://standards.buildingsmart.org/IFC/RELEASE/IFC4/ADD2_TC1/XML/IFC4.xsd">
+	<header>
+		<name>Comparison of different approaches for a generic product data container</name>
+		<time_stamp>2017-03-24T09:45:03</time_stamp>
+		<author>Klaus Aengenvoort</author>
+		<organization>www.etask.de</organization>
+		<preprocessor_version>Altova XML Spy</preprocessor_version>
+		<originating_system>Altova XML Spy</originating_system>
+		<documentation>https://github.com/CAFM-Connect/CafmConnectProductData</documentation>
+	</header>
+	<IfcProject id="i100" GlobalId="1fbJ0AXVj7qQIdiMHqoMyK" Name="bSDD product room sample" Description="Product Library bSDD product room sample">
+		<OwnerHistory id="i1001" CreationDate="12345" LastModifiedDate="12345" ChangeAction="nochange" State="readonly" path="api.myPreferredDictServer.org">
+			<OwningUser>
+				<ThePerson id="i1002" FamilyName="Aengenvoort" GivenName="Klaus"/>
+				<TheOrganization id="i1003" Identification="bSIPR" Name="buildingSMART product room" Description="A group of specialists for BIM products"/>
+			</OwningUser>
+			<OwningApplication id="i1004" ApplicationFullName="" ApplicationIdentifier="" Version="">
+				<ApplicationDeveloper Identification="myPreferredDictServer" Name="" Description="My preferred Dictionary running according to CEN-TC442" path="api.myPreferredDictServer.org"/>
+			</OwningApplication>
+		</OwnerHistory>
+		<UnitsInContext>
+			<Units>
+				<!-- m - Meter -->
+				<IfcSIUnit id="i101" UnitType="lengthunit" Name="metre"/>
+				<!-- cm - Zentimeter -->
+				<IfcSIUnit id="i102" UnitType="lengthunit" Prefix="centi" Name="metre"/>
+				<!-- mm - Millimeter -->
+				<IfcSIUnit id="i103" UnitType="lengthunit" Prefix="milli" Name="metre"/>
+				<!-- m² - Quadratmeter -->
+				<IfcSIUnit id="i104" UnitType="areaunit" Name="square_metre"/>
+				<!-- m³ - Kubikmeter -->
+				<IfcSIUnit id="i105" UnitType="volumeunit" Name="cubic_metre"/>
+				<!-- V - Volt -->
+				<IfcSIUnit id="i106" UnitType="electricvoltageunit" Name="volt"/>
+				<!-- °C - Grad Celsius -->
+				<IfcSIUnit id="i107" UnitType="thermodynamictemperatureunit" Name="degree_celsius"/>
+				<!-- A - Ampere -->
+				<IfcSIUnit id="i108" UnitType="electriccurrentunit" Name="ampere"/>
+				<!--  Ah - Amperstunde -->
+				<IfcDerivedUnit id="i109" UnitType="heatfluxdensityunit">
+					<Elements>
+						<IfcDerivedUnitElement id="i110" Exponent="1">
+							<Unit xsi:type="IfcSIUnit" UnitType="electriccurrentunit" Name="ampere"/>
+						</IfcDerivedUnitElement>
+						<IfcDerivedUnitElement id="i111" Exponent="-1">
+							<Unit xsi:type="IfcConversionBasedUnit" Name="Hour" UnitType="timeunit">
+								<Dimensions TimeExponent="1"/>
+								<ConversionFactor>
+									<ValueComponent>
+										<IfcTimeMeasure-wrapper>3600.</IfcTimeMeasure-wrapper>
+									</ValueComponent>
+									<UnitComponent>
+										<IfcSIUnit id="i1119" UnitType="timeunit" Name="second"/>
+									</UnitComponent>
+								</ConversionFactor>
+							</Unit>
+						</IfcDerivedUnitElement>
+					</Elements>
+				</IfcDerivedUnit>
+				<!-- Hz - Frequenz -->
+				<IfcSIUnit id="i112" UnitType="frequencyunit" Name="hertz"/>
+				<!-- kg - Kilogramm -->
+				<IfcSIUnit id="i113" UnitType="massunit" Prefix="kilo" Name="gram"/>
+				<!-- m³/h - Volumenstrom -->
+				<IfcDerivedUnit id="i114" UnitType="volumetricflowrateunit">
+					<Elements>
+						<IfcDerivedUnitElement id="i115" Exponent="3">
+							<Unit xsi:type="IfcSIUnit" UnitType="lengthunit" Name="metre"/>
+						</IfcDerivedUnitElement>
+						<IfcDerivedUnitElement id="i116" Exponent="-1">
+							<Unit xsi:type="IfcConversionBasedUnit" Name="Hour" UnitType="timeunit">
+								<Dimensions TimeExponent="1"/>
+								<ConversionFactor>
+									<ValueComponent>
+										<IfcTimeMeasure-wrapper>3600.</IfcTimeMeasure-wrapper>
+									</ValueComponent>
+									<UnitComponent>
+										<IfcSIUnit id="i1148" UnitType="timeunit" Name="second"/>
+									</UnitComponent>
+								</ConversionFactor>
+							</Unit>
+						</IfcDerivedUnitElement>
+					</Elements>
+				</IfcDerivedUnit>
+				<!-- kg/m³ - Dichte -->
+				<IfcDerivedUnit id="i117" UnitType="massdensityunit">
+					<Elements>
+						<IfcDerivedUnitElement id="i118" Exponent="1">
+							<Unit xsi:type="IfcSIUnit" UnitType="massunit" Name="gram"/>
+						</IfcDerivedUnitElement>
+						<IfcDerivedUnitElement id="i119" Exponent="-3">
+							<Unit xsi:type="IfcSIUnit" UnitType="lengthunit" Name="metre"/>
+						</IfcDerivedUnitElement>
+					</Elements>
+				</IfcDerivedUnit>
+				<!-- W - Leistung -->
+				<IfcSIUnit id="i120" UnitType="powerunit" Name="watt"/>
+				<!-- kW - Kilowatt -->
+				<IfcSIUnit id="i121" UnitType="powerunit" Prefix="kilo" Name="watt"/>
+				<!-- Pa - Druck -->
+				<IfcSIUnit id="i122" UnitType="pressureunit" Name="pascal"/>
+				<!-- db - Dezibel -->
+				<IfcDerivedUnit id="i123" UnitType="soundpowerlevelunit">
+					<Elements>
+						<IfcDerivedUnitElement id="i124" Exponent="1">
+							<Unit xsi:type="IfcSIUnit" id="i1257" UnitType="powerunit" Name="watt"/>
+						</IfcDerivedUnitElement>
+						<IfcDerivedUnitElement id="i125" Exponent="-1">
+							<Unit xsi:type="IfcSIUnit" id="i1258" UnitType="timeunit" Name="second"/>
+						</IfcDerivedUnitElement>
+					</Elements>
+				</IfcDerivedUnit>
+				<IfcDerivedUnit id="i12560" UnitType="soundpowerlevelunit">
+					<Elements>
+						<IfcDerivedUnitElement Exponent="1">
+							<Unit xsi:type="IfcSIUnit" id="i1259" UnitType="pressureunit" Name="pascal"/>
+						</IfcDerivedUnitElement>
+						<IfcDerivedUnitElement Exponent="-1">
+							<Unit xsi:type="IfcSIUnit" id="i1250" UnitType="pressureunit" Name="pascal"/>
+						</IfcDerivedUnitElement>
+					</Elements>
+				</IfcDerivedUnit>
+			</Units>
+		</UnitsInContext>
+	</IfcProject>
+	<IfcProjectLibrary id="i126" GlobalId="3W_wCy4R58hgkAO0WsiUkm">
+		<Declares>
+			<IfcRelDeclares GlobalId="3W_wCy4R58hgkAO0WsiUkn">
+				<RelatedDefinitions>
+					<IfcAlarmType id="i9999876" GlobalId="1fbJ0AXVj7QQIdiMHqoMyK" PredefinedType="bell" ElementType="SystemNameOfMySpecialBellAlarm" Name="User name of my special bell alarm" Description="Definition of my special bell alarm"/>
+					<!-- Step 2: Define a PropertySetTemplate , That can be generated/imported from a PSet, the bSDD, IfcDoc or elsewhere - -->
+					<IfcPropertySetTemplate id="i33467" GlobalId="2e_rZByaj3v9TmNwzXRpFy" Name="Unique Product identification code" Description="Sample Property for a Unique Product identification code" ApplicableEntity="IfcPipeSegment" TemplateType="pset_typedrivenonly" pos="1">
+						<HasPropertyTemplates>
+							<IfcSimplePropertyTemplate id="i33668" GlobalId="26JruP9Sj6_QQl9T2nuNCN" Name="Unique Product identification code" Description="Description of Property" TemplateType="p_singlevalue" PrimaryMeasureType="IfcText" pos="1"/>
+							<IfcSimplePropertyTemplate id="i33669" GlobalId="26JruP9Sj6_QQl9T2nuNCQ" Name="Type according Article 11-4" Description="Description of Property" TemplateType="p_singlevalue" PrimaryMeasureType="IfcText" pos="2"/>
+							<IfcSimplePropertyTemplate id="i33670" GlobalId="2gWUvQ3HT2FfUkpq4QgzE3" Name="Name of Property3" Description="Description of Property3" TemplateType="p_enumeratedvalue" PrimaryMeasureType="IfcText" pos="3">
+								<Enumerators Name="">
+									<EnumerationValues>
+										<IfcLabel-wrapper pos="0">EnumValue1</IfcLabel-wrapper>
+										<IfcLabel-wrapper pos="1">EnumValue2</IfcLabel-wrapper>
+									</EnumerationValues>
+								</Enumerators>
+							</IfcSimplePropertyTemplate>
+							<IfcSimplePropertyTemplate id="i33672" GlobalId="23KsS0qS4HuO00025QrE$V" Name="Name of Property4" Description="Description of Property4 with a datatype real and a complex unit" TemplateType="p_singlevalue" PrimaryMeasureType="IfcVolumeMeasure" SecondaryMeasureType="What comes in here? Can this also be useful?" AccessState="readonly" Expression="The expression used to store additional information for the property template depending on the PropertyType." path="What is this for" pos="4">
+								<PrimaryUnit>
+									<IfcDerivedUnit id="i21114" UnitType="volumetricflowrateunit">
+										<Elements>
+											<IfcDerivedUnitElement id="i21115" Exponent="3">
+												<Unit xsi:type="IfcSIUnit" UnitType="lengthunit" Name="metre"/>
+											</IfcDerivedUnitElement>
+											<IfcDerivedUnitElement id="i21116" Exponent="-1">
+												<Unit xsi:type="IfcConversionBasedUnit" Name="Hour" UnitType="timeunit">
+													<Dimensions TimeExponent="1"/>
+													<ConversionFactor>
+														<ValueComponent>
+															<IfcTimeMeasure-wrapper>3600.</IfcTimeMeasure-wrapper>
+														</ValueComponent>
+														<UnitComponent>
+															<IfcSIUnit id="i1149" UnitType="timeunit" Name="second"/>
+														</UnitComponent>
+													</ConversionFactor>
+												</Unit>
+											</IfcDerivedUnitElement>
+										</Elements>
+									</IfcDerivedUnit>
+								</PrimaryUnit>
+							</IfcSimplePropertyTemplate>
+							<IfcSimplePropertyTemplate id="i33673" GlobalId="3_JUGwsmP7GhDPKN50ZDn6" Name="Name of Property5" Description="Description of Property5" TemplateType="p_singlevalue" PrimaryMeasureType="IfcText" pos="5"/>
+						</HasPropertyTemplates>
+					</IfcPropertySetTemplate>
+					<IfcPropertySetTemplate id="i999910" GlobalId="1cbJaB0Uf0f8QbEnIhzd8b" Name="Basic Properties" Description="This PropertySetTemplate can be reused in different product types" ApplicableEntity="">
+						<HasPropertyTemplates>
+							<IfcSimplePropertyTemplate id="i999911" GlobalId="10x58_dMjCtv6QMVLNUbj0" Name="DoP number" Description="DoP number" TemplateType="p_singlevalue" PrimaryMeasureType="IfcText" pos="0"/>
+							<IfcSimplePropertyTemplate id="i999912" GlobalId="10x58_dMjCtv6QMVLNUbjA" Name="Unique identification code of the product-type" Description="" TemplateType="p_singlevalue" PrimaryMeasureType="IfcText" pos="1"/>
+							<IfcSimplePropertyTemplate id="i999913" GlobalId="10x58_dMjCtv6QMVLNUbjB" Name="Intended use" Description="" TemplateType="p_singlevalue" PrimaryMeasureType="IfcText" pos="2"/>
+							<IfcSimplePropertyTemplate id="i999914" GlobalId="10x58_dMjCtv6QMVLNUbjC" Name="Manufacturer name" Description="" TemplateType="p_singlevalue" PrimaryMeasureType="IfcText" pos="3"/>
+							<IfcSimplePropertyTemplate id="i999915" GlobalId="10x58_dMjCtv6QMVLNUbjD" Name="Manufacturer address" Description="perhaps separate into postalcode, city and street?" TemplateType="p_singlevalue" PrimaryMeasureType="IfcText" pos="4"/>
+							<IfcSimplePropertyTemplate id="i999916" GlobalId="10x58_dMjCtv6QMVLNUbjE" Name="Authorised representative" Description="" TemplateType="p_singlevalue" PrimaryMeasureType="IfcText" pos="5"/>
+							<IfcSimplePropertyTemplate id="i999917" GlobalId="10x58_dMjCtv6QMVLNUbjF" Name="System/s of AVCP" Description="" TemplateType="p_enumeratedvalue" PrimaryMeasureType="IfcText" pos="6">
+								<Enumerators Name="">
+									<EnumerationValues>
+										<IfcLabel-wrapper pos="0">2+</IfcLabel-wrapper>
+										<IfcLabel-wrapper pos="1">4</IfcLabel-wrapper>
+									</EnumerationValues>
+								</Enumerators>
+							</IfcSimplePropertyTemplate>
+							<IfcSimplePropertyTemplate id="i999918" GlobalId="10x58_dMjCtv6QMVLNUbjG" Name="Harmonised standard" Description="Empty,If System/s of AVCP was 4;to be filled by manufactuer if System/s of AVCP was not 4" TemplateType="p_singlevalue" PrimaryMeasureType="IfcText" pos="7"/>
+							<IfcSimplePropertyTemplate id="i999919" GlobalId="10x58_dMjCtv6QMVLNUbjH" Name="Notified bodies" Description="" TemplateType="p_singlevalue" PrimaryMeasureType="IfcText" pos="8"/>
+						</HasPropertyTemplates>
+					</IfcPropertySetTemplate>
+					<IfcPropertySetTemplate id="i999920" GlobalId="1cbJaB0Uf0f8QbEnIhzd8b" Name="Declared performance" Description="" ApplicableEntity="IfcWall">
+						<HasPropertyTemplates>
+							<IfcSimplePropertyTemplate id="i999921" GlobalId="10x58_dMjCtv6QMVLNUbj0" Name="Dimensions length" Description="" TemplateType="p_singlevalue" PrimaryMeasureType="IfcLengthMeasure" pos="10">
+								<PrimaryUnit>
+									<IfcSIUnit id="i999958" UnitType="lengthunit" Prefix="milli" Name="metre"/>
+								</PrimaryUnit>
+							</IfcSimplePropertyTemplate>
+							<IfcSimplePropertyTemplate id="i999922" GlobalId="10x58_dMjCtv6QMVLNUbjA" Name="Dimensions width" Description="" TemplateType="p_singlevalue" PrimaryMeasureType="IfcLengthMeasure" pos="11">
+								<PrimaryUnit>
+									<IfcSIUnit id="i999959" UnitType="lengthunit" Prefix="milli" Name="metre"/>
+								</PrimaryUnit>
+							</IfcSimplePropertyTemplate>
+							<IfcSimplePropertyTemplate id="i999923" GlobalId="10x58_dMjCtv6QMVLNUbjB" Name="Dimensions height " Description="" TemplateType="p_singlevalue" PrimaryMeasureType="IfcLengthMeasure" pos="12">
+								<PrimaryUnit>
+									<IfcSIUnit id="i999960" UnitType="lengthunit" Prefix="milli" Name="metre"/>
+								</PrimaryUnit>
+							</IfcSimplePropertyTemplate>
+							<IfcSimplePropertyTemplate id="i999924" GlobalId="10x58_dMjCtv6QMVLNUbjC" Name="Tolerance category" Description="" TemplateType="p_enumeratedvalue" PrimaryMeasureType="IfcText" pos="3">
+								<Enumerators Name="">
+									<EnumerationValues>
+										<IfcLabel-wrapper pos="0">T1</IfcLabel-wrapper>
+										<IfcLabel-wrapper pos="1">T1+</IfcLabel-wrapper>
+										<IfcLabel-wrapper pos="1">T2</IfcLabel-wrapper>
+										<IfcLabel-wrapper pos="1">T2+</IfcLabel-wrapper>
+										<IfcLabel-wrapper pos="1">Tm</IfcLabel-wrapper>
+									</EnumerationValues>
+								</Enumerators>
+							</IfcSimplePropertyTemplate>
+							<IfcSimplePropertyTemplate id="i999925" GlobalId="10x58_dMjCtv6QMVLNUbjD" Name="Tolerance – work size tolerance regarding length" Description="" TemplateType="p_singlevalue" PrimaryMeasureType="IfcLengthMeasure" pos="4">
+								<PrimaryUnit>
+									<IfcSIUnit id="i999961" UnitType="lengthunit" Prefix="milli" Name="metre"/>
+								</PrimaryUnit>
+							</IfcSimplePropertyTemplate>
+							<IfcSimplePropertyTemplate id="i999926" GlobalId="10x58_dMjCtv6QMVLNUbjE" Name="Tolerance – work size tolerance regarding width " Description="" TemplateType="p_singlevalue" PrimaryMeasureType="IfcLengthMeasure" pos="5">
+								<PrimaryUnit>
+									<IfcSIUnit id="i999962" UnitType="lengthunit" Prefix="milli" Name="metre"/>
+								</PrimaryUnit>
+							</IfcSimplePropertyTemplate>
+							<IfcSimplePropertyTemplate id="i999927" GlobalId="10x58_dMjCtv6QMVLNUbjF" Name="Tolerance – work size tolerance regarding height " Description="" TemplateType="p_singlevalue" PrimaryMeasureType="IfcLengthMeasure" pos="6">
+								<PrimaryUnit>
+									<IfcSIUnit id="i999963" UnitType="lengthunit" Prefix="milli" Name="metre"/>
+								</PrimaryUnit>
+							</IfcSimplePropertyTemplate>
+							<IfcSimplePropertyTemplate id="i999928" GlobalId="10x58_dMjCtv6QMVLNUbjG" Name="Range category" Description="" TemplateType="p_enumeratedvalue" PrimaryMeasureType="IfcText" pos="7">
+								<Enumerators Name="">
+									<EnumerationValues>
+										<IfcLabel-wrapper pos="0">T1</IfcLabel-wrapper>
+										<IfcLabel-wrapper pos="1">T1+</IfcLabel-wrapper>
+										<IfcLabel-wrapper pos="1">T2</IfcLabel-wrapper>
+										<IfcLabel-wrapper pos="1">T2+</IfcLabel-wrapper>
+										<IfcLabel-wrapper pos="1">Tm</IfcLabel-wrapper>
+									</EnumerationValues>
+								</Enumerators>
+							</IfcSimplePropertyTemplate>
+							<IfcSimplePropertyTemplate id="i999929" GlobalId="10x58_dMjCtv6QMVLNUbjH" Name="Group" Description="" TemplateType="p_enumeratedvalue" PrimaryMeasureType="IfcText" pos="8">
+								<Enumerators Name="">
+									<EnumerationValues>
+										<IfcLabel-wrapper pos="0">T1</IfcLabel-wrapper>
+										<IfcLabel-wrapper pos="1">T1+</IfcLabel-wrapper>
+										<IfcLabel-wrapper pos="2">T2</IfcLabel-wrapper>
+										<IfcLabel-wrapper pos="3">T2+</IfcLabel-wrapper>
+										<IfcLabel-wrapper pos="4">Tm</IfcLabel-wrapper>
+									</EnumerationValues>
+								</Enumerators>
+							</IfcSimplePropertyTemplate>
+							<IfcSimplePropertyTemplate id="i999930" GlobalId="10x58_dMjCtv6QMVLNUbjH" Name="Configuration – flatness of bed faces" Description="" TemplateType="p_singlevalue" PrimaryMeasureType="IfcLengthMeasure" pos="8">
+								<PrimaryUnit>
+									<IfcSIUnit id="i99996" UnitType="lengthunit" Prefix="milli" Name="metre"/>
+								</PrimaryUnit>
+							</IfcSimplePropertyTemplate>
+							<IfcSimplePropertyTemplate id="i999931" GlobalId="10x58_dMjCtv6QMVLNUbjH" Name="Configuration – plane parallelism of bed faces" Description="" TemplateType="p_singlevalue" PrimaryMeasureType="IfcLengthMeasure" pos="8">
+								<PrimaryUnit>
+									<IfcSIUnit id="i999965" UnitType="lengthunit" Prefix="milli" Name="metre"/>
+								</PrimaryUnit>
+							</IfcSimplePropertyTemplate>
+							<IfcSimplePropertyTemplate id="i999932" GlobalId="1RZil0BwT6h9ViGC$Bdb1L" Name="Density – mean gross dry density" Description="" TemplateType="p_singlevalue" PrimaryMeasureType="IfcMassDensityMeasure" pos="7">
+								<PrimaryUnit>
+									<IfcDerivedUnit id="i999966" UnitType="massdensityunit">
+										<Elements>
+											<IfcDerivedUnitElement id="i999967" Exponent="1">
+												<Unit xsi:type="IfcSIUnit" UnitType="massunit" Prefix="kilo" Name="gram"/>
+											</IfcDerivedUnitElement>
+											<IfcDerivedUnitElement id="i999968" Exponent="-3">
+												<Unit xsi:type="IfcSIUnit" UnitType="lengthunit" Name="metre"/>
+											</IfcDerivedUnitElement>
+										</Elements>
+									</IfcDerivedUnit>
+								</PrimaryUnit>
+							</IfcSimplePropertyTemplate>
+							<IfcSimplePropertyTemplate id="i999933" GlobalId="1RZil0BwT6h9ViGC$Bdb1L" Name="Density – minimum value of gross dry density " Description="" TemplateType="p_singlevalue" PrimaryMeasureType="IfcMassDensityMeasure" pos="7">
+								<PrimaryUnit>
+									<IfcDerivedUnit id="i999969" UnitType="massdensityunit">
+										<Elements>
+											<IfcDerivedUnitElement id="i999970" Exponent="1">
+												<Unit xsi:type="IfcSIUnit" id="i899989" UnitType="massunit" Prefix="kilo" Name="gram"/>
+											</IfcDerivedUnitElement>
+											<IfcDerivedUnitElement id="i999971" Exponent="-3">
+												<Unit xsi:type="IfcSIUnit" id="i899988" UnitType="lengthunit" Name="metre"/>
+											</IfcDerivedUnitElement>
+										</Elements>
+									</IfcDerivedUnit>
+								</PrimaryUnit>
+							</IfcSimplePropertyTemplate>
+							<IfcSimplePropertyTemplate id="i999934" GlobalId="1RZil0BwT6h9ViGC$Bdb1L" Name="Density – maximum value of gross dry density " Description="" TemplateType="p_singlevalue" PrimaryMeasureType="IfcMassDensityMeasure" pos="7">
+								<PrimaryUnit>
+									<IfcDerivedUnit id="i999972" UnitType="massdensityunit">
+										<Elements>
+											<IfcDerivedUnitElement id="i999973" Exponent="1">
+												<Unit xsi:type="IfcSIUnit" id="i899987" UnitType="massunit" Prefix="kilo" Name="gram"/>
+											</IfcDerivedUnitElement>
+											<IfcDerivedUnitElement id="i999974" Exponent="-3">
+												<Unit xsi:type="IfcSIUnit" id="i899986" UnitType="lengthunit" Name="metre"/>
+											</IfcDerivedUnitElement>
+										</Elements>
+									</IfcDerivedUnit>
+								</PrimaryUnit>
+							</IfcSimplePropertyTemplate>
+							<IfcSimplePropertyTemplate id="i999935" GlobalId="1RZil0BwT6h9ViGC$Bdb1L" Name="Density – mean net dry density" Description="" TemplateType="p_singlevalue" PrimaryMeasureType="IfcMassDensityMeasure" pos="7">
+								<PrimaryUnit>
+									<IfcDerivedUnit id="i999975" UnitType="massdensityunit">
+										<Elements>
+											<IfcDerivedUnitElement id="i999976" Exponent="1">
+												<Unit xsi:type="IfcSIUnit" id="i899984" UnitType="massunit" Prefix="kilo" Name="gram"/>
+											</IfcDerivedUnitElement>
+											<IfcDerivedUnitElement id="i999977" Exponent="-3">
+												<Unit xsi:type="IfcSIUnit" id="i899985" UnitType="lengthunit" Name="metre"/>
+											</IfcDerivedUnitElement>
+										</Elements>
+									</IfcDerivedUnit>
+								</PrimaryUnit>
+							</IfcSimplePropertyTemplate>
+							<IfcSimplePropertyTemplate id="i999936" GlobalId="10x58_dMjCtv6QMVLNUbjH" Name="Density – tolerance category" Description="" TemplateType="p_enumeratedvalue" PrimaryMeasureType="IfcText" pos="8">
+								<Enumerators Name="">
+									<EnumerationValues>
+										<IfcLabel-wrapper pos="0">D2</IfcLabel-wrapper>
+										<IfcLabel-wrapper pos="1">D2</IfcLabel-wrapper>
+										<IfcLabel-wrapper pos="2">Dm</IfcLabel-wrapper>
+									</EnumerationValues>
+								</Enumerators>
+							</IfcSimplePropertyTemplate>
+							<IfcSimplePropertyTemplate id="i999937" GlobalId="10x58_dMjCtv6QMVLNUbjH" Name="Density – deviation in %" Description="" TemplateType="p_singlevalue" PrimaryMeasureType="" pos="8"/>
+							<IfcSimplePropertyTemplate id="i999938" GlobalId="10x58_dMjCtv6QMVLNUbjH" Name="Compressive strength perpendicular to bed face – category" Description="" TemplateType="p_enumeratedvalue" PrimaryMeasureType="IfcText" pos="8">
+								<Enumerators Name="">
+									<EnumerationValues>
+										<IfcLabel-wrapper pos="0">I</IfcLabel-wrapper>
+										<IfcLabel-wrapper pos="1">II</IfcLabel-wrapper>
+									</EnumerationValues>
+								</Enumerators>
+							</IfcSimplePropertyTemplate>
+							<IfcSimplePropertyTemplate id="i999939" GlobalId="1RZil0BwT6h9ViGC$Bdb1L" Name="Compressive strength perpendicular to bed face – mean compressive strength" Description="" TemplateType="p_singlevalue" pos="7">
+								<PrimaryUnit>
+									<IfcDerivedUnit id="i999978" UnitType="areadensityunit">
+										<Elements>
+											<IfcDerivedUnitElement id="i999979" Exponent="1">
+												<Unit xsi:type="IfcSIUnit" id="i899980" UnitType="massunit" Prefix="kilo" Name="gram"/>
+											</IfcDerivedUnitElement>
+											<IfcDerivedUnitElement id="i999980" Exponent="-2">
+												<Unit xsi:type="IfcSIUnit" id="i899981" UnitType="lengthunit" Prefix="milli" Name="metre"/>
+											</IfcDerivedUnitElement>
+										</Elements>
+									</IfcDerivedUnit>
+								</PrimaryUnit>
+							</IfcSimplePropertyTemplate>
+							<IfcSimplePropertyTemplate id="i999940" GlobalId="1RZil0BwT6h9ViGC$Bdb1L" Name="Compressive strength perpendicular to bed face – normalised compressive strength" Description="" TemplateType="p_singlevalue" pos="7">
+								<PrimaryUnit>
+									<IfcDerivedUnit id="i999981" UnitType="areadensityunit">
+										<Elements>
+											<IfcDerivedUnitElement id="i999982" Exponent="1">
+												<Unit xsi:type="IfcSIUnit" id="i899982" UnitType="massunit" Prefix="kilo" Name="gram"/>
+											</IfcDerivedUnitElement>
+											<IfcDerivedUnitElement id="i999983" Exponent="-2">
+												<Unit xsi:type="IfcSIUnit" id="i899983" UnitType="lengthunit" Prefix="milli" Name="metre"/>
+											</IfcDerivedUnitElement>
+										</Elements>
+									</IfcDerivedUnit>
+								</PrimaryUnit>
+							</IfcSimplePropertyTemplate>
+							<IfcSimplePropertyTemplate id="i999941" GlobalId="10x58_dMjCtv6QMVLNUbjH" Name="Compressive strength perpendicular to header – category" Description="" TemplateType="p_enumeratedvalue" PrimaryMeasureType="IfcText" pos="8">
+								<Enumerators Name="">
+									<EnumerationValues>
+										<IfcLabel-wrapper pos="0">I</IfcLabel-wrapper>
+										<IfcLabel-wrapper pos="1">II</IfcLabel-wrapper>
+									</EnumerationValues>
+								</Enumerators>
+							</IfcSimplePropertyTemplate>
+						</HasPropertyTemplates>
+					</IfcPropertySetTemplate>
+					<IfcPropertySetTemplate id="i999949" GlobalId="2e_rZByaj3v9xmNwzXRpFy" Name="Sample PropertySet template EN1371 - Approach #1" Description="" ApplicableEntity="IfcBuildingElementProxy" TemplateType="pset_typedrivenonly" pos="1">
+						<HasPropertyTemplates>
+							<IfcSimplePropertyTemplate id="i999950" GlobalId="26JruP9Sj6_QQl9T2nuNCN" Name="ReactionToFire" Description="This is a property with a neutral name" TemplateType="p_singlevalue" PrimaryMeasureType="IfcText" pos="0"/>
+							<IfcSimplePropertyTemplate id="i999951" GlobalId="26JruP9Sj6_QQl8T1nuNCN" Name="ReactionToFire-EN1371:2012+A1:2012" Description="Description of Property" TemplateType="p_singlevalue" PrimaryMeasureType="IfcText" pos="1"/>
+						</HasPropertyTemplates>
+					</IfcPropertySetTemplate>
+					<IfcPropertySetTemplate id="i999952" GlobalId="2e_rZByaj3v9xmNwzXRpFs" Name="Sample PropertySet template EN1371 - Approach #2" Description="" ApplicableEntity="IfcBuildingElementProxy" TemplateType="pset_typedrivenonly" pos="1">
+						<HasPropertyTemplates>
+							<IfcSimplePropertyTemplate id="i999954" GlobalId="26JruP9Sj6_QQl8T4nuNCN" Name="ReactionToFire" Description="property value according to EN1371:2012+A1:2012" TemplateType="p_singlevalue" PrimaryMeasureType="IfcText" pos="1"/>
+						</HasPropertyTemplates>
+					</IfcPropertySetTemplate>
+				</RelatedDefinitions>
+			</IfcRelDeclares>
+		</Declares>
+	</IfcProjectLibrary>
+	<!-- CPR - SAMPLE - CPR - SAMPLE - CPR - SAMPLE - CPR - SAMPLE - CPR - SAMPLE - CPR - SAMPLE -CPR - SAMPLE - CPR - SAMPLE - -->
+	<!-- Step 1: Define a classification of all Testmethods in a one dimensinal hierarchy as IfcClassification -That can be generated/imported from a PSet, the bSDD, IfcDoc or elsewhere - -->
+	<IfcClassification id="i9698765" Edition="Version 2.5.6" EditionDate="2016-12-11T12:21:03" Name="Catalogue of EU CPR Rules" Description="Catalogue of EU CPR Rules" Source="bSDD" Location="http://bsdd.buildingsmart.org/#concept/browse/{GlobalId}">
+		<HasReferences>
+			<IfcClassificationReference id="i96987669" Identification="R" Name="Catalogue of EU CPR Rules" Sort="0">
+				<HasReferences>
+					<IfcClassificationReference id="i9698770" Identification="R3" Name="EN1371:2012+A1:2012" Description="Liquid penetrant testing - Part 1: Sand, gravity die and low pressure die castings" Sort="3">
+						<HasReferences>
+							<IfcClassificationReference id="i9698771" Identification="R3.MoM1" Name="Methods of Liquid penetrant testing" Sort="1">
+								<HasReferences>
+									<IfcClassificationReference id="i9698772" Identification="R3.MoM1" Name="the test standard EN1371:2012+A1:2012" Description="Description of the test standard" Sort="0"/>
+								</HasReferences>
+							</IfcClassificationReference>
+						</HasReferences>
+					</IfcClassificationReference>
+					<IfcClassificationReference id="i9698773" Identification="R1" Name="Rule 1 in hamonized european rules" Sort="0">
+						<HasReferences>
+							<IfcClassificationReference id="i9698774" Identification="R1.T1" Name="Testmethod 1" Description="Description of Testmethod 1" Sort="0"/>
+							<IfcClassificationReference id="i9698775" Identification="R1.TC" Name="Testmethod for CPR-Masonry" Description="Description of Testmethod 1" Sort="1"/>
+						</HasReferences>
+					</IfcClassificationReference>
+					<IfcClassificationReference id="i9698776" Identification="R2" Name="Rule 2 Concrete" Sort="0">
+						<HasReferences>
+							<IfcClassificationReference id="i9698777" Identification="R2.MoM1" Name="Methods of measurement for Compressive strength of concrete" Sort="1">
+								<HasReferences>
+									<IfcClassificationReference id="i9698778" Identification="R2.MoM1.1" Name="Measuring cubes" Description="Description of Measuring cubes (MoM 1), " Sort="0"/>
+									<IfcClassificationReference id="i9698779" Identification="R2.MoM1.2" Name="Measuring cylinders" Description="Description of measuring cylinders (MoM 2)" Sort="1"/>
+								</HasReferences>
+							</IfcClassificationReference>
+							<IfcClassificationReference id="i9698780" Identification="R2.MoM2" Name="Methods of measurement for Heat transmission (U-Value)" Sort="2">
+								<HasReferences>
+									<IfcClassificationReference id="i9698781" Identification="R2.MoM2.TBM" Name="the temperature based method" Description="Description of the temperature based method (TBM)" Sort="0"/>
+									<IfcClassificationReference id="i9698782" Identification="R2.MoM2.HFM" Name="heat flux method" Description="Description of heat flux method (HFM)" Sort="1"/>
+								</HasReferences>
+							</IfcClassificationReference>
+						</HasReferences>
+					</IfcClassificationReference>
+				</HasReferences>
+			</IfcClassificationReference>
+		</HasReferences>
+	</IfcClassification>
+	<IfcRelAssociatesClassification id="i9698766" GlobalId="1fbJ0AXVj7qQIdiMHqoMyI">
+		<RelatedObjects>
+			<IfcProject ref="i100" xsi:nil="true"/>
+		</RelatedObjects>
+		<RelatingClassification>
+			<IfcClassification ref="i9698765" xsi:nil="true"/>
+		</RelatingClassification>
+	</IfcRelAssociatesClassification>
+	<!-- Step 3: Relate the PropertySetTemplate to  the classification node, that specifies the test method for all Properties in this PropertySet- -->
+	<!-- If there is no thestmethod for this propertyset, do not insert this reference  -->
+	<IfcRelAssociatesClassification id="i33520" GlobalId="2mVNBe4$L75ejegqXTQllf" Name="Set a reference  from a PropertySetTemplate to Testmethod 1">
+		<RelatedObjects>
+			<IfcPropertySetTemplate ref="i33670" xsi:nil="true"/>
+		</RelatedObjects>
+		<RelatingClassification>
+			<IfcClassificationReference ref="i9698774" xsi:nil="true"/>
+		</RelatingClassification>
+	</IfcRelAssociatesClassification>
+	<IfcRelAssociatesClassification id="i99999" GlobalId="000000000r40691_r40182">
+		<RelatedObjects>
+			<IfcPropertySetTemplate ref="i999910" xsi:nil="true"/>
+			<IfcPropertySetTemplate ref="i999920" xsi:nil="true"/>
+		</RelatedObjects>
+		<RelatingClassification>
+			<IfcClassificationReference ref="i9698774" xsi:nil="true"/>
+		</RelatingClassification>
+	</IfcRelAssociatesClassification>
+	<!-- Step 4: Or Relate the individual PropertyTemplate to  the classification node, that specifies the test method , this could be more flexible if the testmethods differ for a single product -->
+	<!-- If there is no thestmethod for this property, do not insert this reference  -->
+	<IfcRelAssociatesClassification id="i33521" GlobalId="2mVNBe4$L75ejegqXTQllf" Name="Set a reference  from a PropertyTemplate to Testmethod 1">
+		<RelatedObjects>
+			<IfcSimplePropertyTemplate ref="i33672" xsi:nil="true"/>
+		</RelatedObjects>
+		<RelatingClassification>
+			<IfcClassificationReference ref="i9698774" xsi:nil="true"/>
+		</RelatingClassification>
+	</IfcRelAssociatesClassification>
+	<!--  Step 5: Go to "Start DATA" at the end of the file and insert the instances - the data itself based on this product data template-->
+	<!--  People can chose, if they transport the template every time alongside with the data to ensure, that the data stays valid according to the snapshot of the template at the time of creation (template embedding)-->
+	<!--  or if they transport the template and the data in separate files -->
+	<!--  The data must rely on a template, the template can rely on a dictionary; if the template relies on a dictionary the template shoul make clear on which dictionary it relies on; -->
+	<!--  and if the template relies on a dictionary, all GUID's from the dictionry must be stored also in the template to ensure the updatability of the template and the migratability of the data -->
+	<!-- See http://jira.buildingsmart.org/browse/IFR-1072 for the last remark -->
+	<!-- CPR - SAMPLE - CPR - SAMPLE - CPR - SAMPLE - CPR - SAMPLE - CPR - SAMPLE - CPR - SAMPLE -CPR - SAMPLE - CPR - SAMPLE - -->
+	<!--  Start DATA-->
+	<!--  Sample element with included propertyset-->
+	<IfcAlarm id="i6886" GlobalId="26JruP9Sj6_QQl9T2nuNCN" Tag="78463" PredefinedType="userdefined" ObjectType="SystemNameOfMySpecialBellAlarm" Name="430.41" Description="Bosch Fireray 50/100RV Linear Smoke Detectors">
+		<IsDefinedBy>
+			<IfcRelDefinesByProperties GlobalId="3mVNBe4$L75ejegqXTQllf">
+				<RelatingPropertyDefinition>
+					<IfcPropertySet id="i6887" GlobalId="4mVNBe4$L75ejegqXTQllf" Name="">
+						<HasProperties>
+							<IfcComplexProperty id="i33468" Name="My Complex Property (Essential Characteristics)" Description="The description of my ComplexProperty" UsageName="What is the UsageName?" pos="0">
+								<HasProperties>
+									<IfcPropertySingleValue id="i71301" Name="Unique Product identification code" Description="Description of my Single value property" pos="0">
+										<NominalValue>
+											<IfcLabel-wrapper id="i33469" pos="1">Fireray50/100RV</IfcLabel-wrapper>
+										</NominalValue>
+									</IfcPropertySingleValue>
+									<IfcPropertySingleValue id="i71302" Name="Type according Article 11-4" Description="Description of my Single value property" pos="1">
+										<NominalValue>
+											<IfcLabel-wrapper id="i33470">Fireray 50 RV and Fireray 100RV</IfcLabel-wrapper>
+										</NominalValue>
+									</IfcPropertySingleValue>
+									<IfcPropertySingleValue id="i71303" Name="Name of Property3" Description="Description of my Single value property" pos="2">
+										<NominalValue>
+											<IfcLabel-wrapper id="i33471">3456</IfcLabel-wrapper>
+										</NominalValue>
+									</IfcPropertySingleValue>
+									<IfcComplexProperty Name="My sub group of properties" UsageName="">
+										<HasProperties>
+											<IfcPropertySingleValue Name="sub prop1"/>
+											<IfcPropertySingleValue Name="sub prop2"/>
+										</HasProperties>
+									</IfcComplexProperty>
+								</HasProperties>
+							</IfcComplexProperty>
+						</HasProperties>
+					</IfcPropertySet>
+				</RelatingPropertyDefinition>
+			</IfcRelDefinesByProperties>
+		</IsDefinedBy>
+	</IfcAlarm>
+	<IfcRelDefinesByTemplate GlobalId="3EGlhekFT4z96nW7gmGyfJ">
+		<RelatedPropertySets>
+			<IfcPropertySet ref="i6887" pos="0" xsi:nil="true"/>
+		</RelatedPropertySets>
+		<RelatingTemplate ref="i33467" xsi:type="IfcPropertySetTemplate" xsi:nil="true"/>
+	</IfcRelDefinesByTemplate>
+	<IfcDocumentInformation id="i6690" Identification="d96295cf779240e9a204105627ec00be" Name="Data_sheet_enUS_1281214987.pdf" Location="Documents\Data_sheet_enUS_1281214987.pdf" CreationTime="25.10.2016 09:47:48" LastRevisionTime="25.10.2016 09:47:52" ElectronicFormat="application/pdf"/>
+	<IfcRelAssociatesDocument GlobalId="3EGlhekFT4z96nW7gmGyfS">
+		<RelatedObjects>
+			<IfcAlarm xsi:nil="true" ref="i6886"/>
+		</RelatedObjects>
+		<RelatingDocument>
+			<IfcDocumentInformation xsi:nil="true" ref="i6690"/>
+		</RelatingDocument>
+	</IfcRelAssociatesDocument>
+	<IfcDocumentInformation id="i6691" Identification="d96295cf779241e9a204105627ec00be" Name="Fireray_50_100RV_Declaration_of_Performance_enUS_12448966539.pdf" Location="Documents\Fireray_50_100RV_Declaration_of_Performance_enUS_12448966539.pdf" CreationTime="25.10.2016 09:47:48" LastRevisionTime="25.10.2016 09:47:52" ElectronicFormat="application/pdf"/>
+	<IfcRelAssociatesDocument GlobalId="3EGlhekFT4z96nW7gmGyfS">
+		<RelatedObjects>
+			<IfcAlarm xsi:nil="true" ref="i6886"/>
+		</RelatedObjects>
+		<RelatingDocument>
+			<IfcDocumentInformation xsi:nil="true" ref="i6690"/>
+		</RelatingDocument>
+	</IfcRelAssociatesDocument>
+	<!--  End DATA-->
+</ifcXML>

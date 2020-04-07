@@ -1,0 +1,424 @@
+/****************************************************************
+ * This is an IFC product library that contains configured lighting products from the manufacturer Trilux.
+ * 
+ * Created: 2019-10-09T15:40:51 (UTC)
+ ****************************************************************/
+ISO-10303-21;
+HEADER;
+FILE_DESCRIPTION ((''), '2;1');
+FILE_NAME ('', '2019-10-09T17:40:51', (''), (''), 'Processor version 5.0.0.0', 'Xbim.IO.MemoryModel', '');
+FILE_SCHEMA (('IFC4'));
+ENDSEC;
+DATA;
+#1=IFCPROJECT('2UCttHZa90O88kAZT5Mm$H',#2,'TriluxLightingProducts',$,$,$,$,$,$);
+#2=IFCOWNERHISTORY(#5,#6,$,.ADDED.,1570642851,$,$,0);
+#3=IFCPERSON($,'Klaus','Aengenvoort',$,$,$,$,$);
+#4=IFCORGANIZATION($,'CEN-TC442-WG2-TG3',$,$,$);
+#5=IFCPERSONANDORGANIZATION(#3,#4,$);
+#6=IFCAPPLICATION(#4,'4.0','xBIM Toolkit','xBIM');
+#7=IFCUNITASSIGNMENT((#8,#9));
+#8=IFCSIUNIT(*,.LENGTHUNIT.,.MILLI.,.METRE.);
+#9=IFCSIUNIT(*,.MASSUNIT.,.KILO.,.GRAM.);
+#10=IFCCLASSIFICATION($,'1.0','2018-12-27T00:00:00.0000000','Omniclass','The OmniClass Construction Classification System (known as OmniClass\X2\2122\X0\ or OCCS) is a classification system for the construction industry. OmniClass is useful for many applications, from organizing library materials, product literature, and project information, to providing a classification structure for electronic databases. It incorporates other extant systems currently in use as the basis of many of its Tables \X2\2013\X0\ MasterFormat\X2\2122\X0\ for work results, UniFormat for elements, and EPIC (Electronic Product Information Cooperation) for structuring products.','http://www.omniclass.org/',$);
+#11=IFCCLASSIFICATIONREFERENCE($,'23-35-47','Electrical Lighting',#10,'',$);
+#12=IFCRELASSOCIATESCLASSIFICATION('3Zykd4_czFtvm6TMDysCb9',#2,$,$,(#87,#145,#201,#257,#313),#11);
+#13=IFCCLASSIFICATION($,'2015','01.01.2015','Uniclass','Uniclass is a voluntary classification system for the construction industry that can be used for structuring project information, such as building information models (BIM).','https://www.thenbs.com/our-tools/introducing-uniclass-2015',$);
+#14=IFCCLASSIFICATIONREFERENCE($,'CA-70-10-30','Site lighting equipment',#13,'',$);
+#15=IFCRELASSOCIATESCLASSIFICATION('2dItRgU0L9LQzATKTgwl$w',#2,$,$,(#87,#145,#201,#257,#313),#14);
+
+/* * *
+ * Root element of this file. Because this doesn't define a specific instance in the building it is a library. It can be used to declare elements, properties, property templates and other library objects which can be later used in the actual design.
+ * IFCPROJECTLIBRARY(GlobalId, OwnerHistory, Name, Description, ObjectType, LongName, Phase, RepresentationContexts, UnitsInContext) */
+#16=IFCPROJECTLIBRARY('1DbshdzGD71ejurQqQcxbw',#23,'TriluxLightingProductsLibrary','Library for Trilux light fixtures product data templates based on the ZVEI European core properties',$,$,'Design,Build,Operate',$,$);
+#17=IFCOWNERHISTORY(#18,#21,$,$,$,$,$,1570642851);
+#18=IFCPERSONANDORGANIZATION(#20,#19,$);
+#19=IFCORGANIZATION($,'TRILUX GmbH & Co. KG',$,$,$);
+#20=IFCPERSON($,'Heinze','Robert',$,$,$,$,$);
+#21=IFCAPPLICATION(#22,'1.0','My Product Information System (PIM)','ID_OF_PIM-SYSTEM');
+#22=IFCORGANIZATION($,'The software company, that developed the PIM system',$,$,$);
+
+/* * *
+ * Owner history is used to define ownership of the information.
+ * IFCOWNERHISTORY(OwningUser, OwningApplication, State, ChangeAction, LastModifiedDate, LastModifyingUser, LastModifyingApplication, CreationDate) */
+#23=IFCOWNERHISTORY(#5,#6,$,.MODIFIED.,1570642851,$,$,0);
+
+/* * *
+ * This relation points to all definitions declared within the scope of the library. These can be elements, element types, properties or property templates
+ * IFCRELDECLARES(GlobalId, OwnerHistory, Name, Description, RelatingContext, RelatedDefinitions) */
+#24=IFCRELDECLARES('2zSNAzlz16GPPLaqByGYyd',#2,$,$,#16,(#25,#75,#87,#145,#201,#257,#313));
+
+/* * *
+ * Declaration of 'IfcPropertySetTemplate' within the library for lighting product data templates.
+ * Insert property templates; they should be loaded from the publishing dictionary
+ * IFCPROPERTYSETTEMPLATE(GlobalId, OwnerHistory, Name, Description, TemplateType, ApplicableEntity, HasPropertyTemplates) */
+#25=IFCPROPERTYSETTEMPLATE('0qLVefY19DJwDCMSlGGffQ',#2,'DoP data template according to EN 771-4','Data Template by Baustoffindustrie',.PSET_TYPEDRIVENONLY.,'IfcBuildingElementProxy/USERDEFINED',(#26,#27,#28,#29,#31,#32,#33,#34,#35,#36,#37,#38,#39,#40,#41,#42,#43,#44,#45,#46,#47,#48,#51,#58,#59,#60,#61,#62,#63,#64,#65,#66,#67,#68,#69,#70,#71,#72,#73,#74));
+#26=IFCSIMPLEPROPERTYTEMPLATE('2aWYLOcEn6kAShkBJ9AEll',#2,'Nr./Kennung','Definition shall be inserted',.P_SINGLEVALUE.,'IfcLabel',$,$,$,$,'',.LOCKED.);
+#27=IFCSIMPLEPROPERTYTEMPLATE('2bLVazhRr47wohrosoMLLL',#2,'Eindeutiger Kenncode des Produkttyps','Definition shall be inserted',.P_SINGLEVALUE.,'IfcLabel',$,$,$,$,'',.LOCKED.);
+#28=IFCSIMPLEPROPERTYTEMPLATE('2EizVgre5AAhGb87zONFLG',#2,'Typen-, Chargen- oder Seriennummer oder ein anderes Kennzeichen','Definition shall be inserted',.P_SINGLEVALUE.,'IfcLabel',$,$,$,$,'',.LOCKED.);
+#29=IFCSIMPLEPROPERTYTEMPLATE('0E0Z0PQLP0dumVPrCW2TQa',#2,'Verwendungszweck','Definition shall be inserted',.P_ENUMERATEDVALUE.,'IfcText',$,#30,$,$,'',.LOCKED.);
+#30=IFCPROPERTYENUMERATION('Allowed values of Verwendungszweck',(IFCLABEL('Value1'),IFCLABEL('Value2'),IFCLABEL('Value3'),IFCLABEL('NPD')),$);
+#31=IFCSIMPLEPROPERTYTEMPLATE('3k6z0I99vF1x3MzYxANy7t',#2,'Eingetragender Handelsname/Marke und Kontaktanschrift','Definition shall be inserted',.P_SINGLEVALUE.,'IfcText',$,$,$,$,'',.LOCKED.);
+#32=IFCSIMPLEPROPERTYTEMPLATE('1Ad5wM6TTFGvzyN01c6JvL',#2,'Bevollm\X\E4chtigter','Definition shall be inserted',.P_SINGLEVALUE.,'IfcLabel',$,$,$,$,'',.LOCKED.);
+#33=IFCSIMPLEPROPERTYTEMPLATE('1zPU_tTDL7bwVfNZF2QA6S',#2,'System1','Definition shall be inserted',.P_SINGLEVALUE.,'IfcLabel',$,$,$,$,'',.LOCKED.);
+#34=IFCSIMPLEPROPERTYTEMPLATE('2xkRvy9pP6XgIYR9pkepra',#2,'Notifizierende Stelle','Definition shall be inserted',.P_SINGLEVALUE.,'IfcLabel',$,$,$,$,'',.LOCKED.);
+#35=IFCSIMPLEPROPERTYTEMPLATE('0yFUM3eDz2hvuDNDnXIuc0',#2,'Aufgaben Dritter1','Definition shall be inserted',.P_SINGLEVALUE.,'IfcText',$,$,$,$,'',.LOCKED.);
+#36=IFCSIMPLEPROPERTYTEMPLATE('2sZVxX$kXB$hrowHO$uuJw',#2,'System2','Definition shall be inserted',.P_SINGLEVALUE.,'IfcLabel',$,$,$,$,'',.LOCKED.);
+#37=IFCSIMPLEPROPERTYTEMPLATE('10R1yLtVr9HuF4Is_Zk_bi',#2,'Ausgestelltes Dokument2','Definition shall be inserted',.P_SINGLEVALUE.,'IfcLabel',$,$,$,$,'',.LOCKED.);
+#38=IFCSIMPLEPROPERTYTEMPLATE('1xhjYVH1j3Z9AZysR32V7Z',#2,'Technische Bewertungsstelle','Definition shall be inserted',.P_SINGLEVALUE.,'IfcLabel',$,$,$,$,'',.LOCKED.);
+#39=IFCSIMPLEPROPERTYTEMPLATE('0_GEbtiB9D8PjZP9OUOh6q',#2,'Referenznummer des Europ\X\E4ischen Bewertungsdokuments','Definition shall be inserted',.P_SINGLEVALUE.,'IfcLabel',$,$,$,$,'',.LOCKED.);
+#40=IFCSIMPLEPROPERTYTEMPLATE('1I$sTbG4zEPBabps6i7luI',#2,'Referenznummer der Europ\X\E4ischen Technischen Bewertung','Definition shall be inserted',.P_SINGLEVALUE.,'IfcLabel',$,$,$,$,'',.LOCKED.);
+#41=IFCSIMPLEPROPERTYTEMPLATE('2ilfB0IcfDxuk_qCd79dyQ',#2,'Aufgaben Dritter3','Definition shall be inserted',.P_SINGLEVALUE.,'IfcText',$,$,$,$,'',.LOCKED.);
+#42=IFCSIMPLEPROPERTYTEMPLATE('1wO7gTYDDDfQuHPX2xpn6r',#2,'System3','Definition shall be inserted',.P_SINGLEVALUE.,'IfcLabel',$,$,$,$,'',.LOCKED.);
+#43=IFCSIMPLEPROPERTYTEMPLATE('2UJcOEbZz63vbxXQJVW6EA',#2,'Ausgestelltes Dokument3','Definition shall be inserted',.P_SINGLEVALUE.,'IfcLabel',$,$,$,$,'',.LOCKED.);
+#44=IFCSIMPLEPROPERTYTEMPLATE('2hq74dqQDCShf4wtOq4KW2',#2,'Wesentliches Merkmal o. hEN 1: Brandverhalte','Definition shall be inserted',.P_SINGLEVALUE.,'IfcLabel',$,$,$,$,'',.LOCKED.);
+#45=IFCSIMPLEPROPERTYTEMPLATE('1nUxgadl90R91g3hZ9BowP',#2,'Wesentliches Merkmal o. hEN 2: Feuerbest\X\E4ndigkeit','Definition shall be inserted',.P_SINGLEVALUE.,'IfcLabel',$,$,$,$,'',.LOCKED.);
+#46=IFCSIMPLEPROPERTYTEMPLATE('39AR9Niff6Ihvg3fZx5$AI',#2,'Wesentliches Merkmal o. hEN 3: Verhalten bei einem Brand von au\X\DFen','Definition shall be inserted',.P_SINGLEVALUE.,'IfcLabel',$,$,$,$,'',.LOCKED.);
+#47=IFCSIMPLEPROPERTYTEMPLATE('0mVYlqDyD5lRCaDZV0pWna',#2,'Wesentliches Merkmal o. hEN 4: Ger\X\E4uschabsorption','Definition shall be inserted',.P_SINGLEVALUE.,'IfcLabel',$,$,$,$,'',.LOCKED.);
+#48=IFCSIMPLEPROPERTYTEMPLATE('0fd12S319BmeAQzs5q8X3Y',#2,'Wesentliches Merkmal o. hEN 5: Emission von gef\X\E4hrlichen Stoffen','Definition shall be inserted',.P_SINGLEVALUE.,'IfcLabel',$,$,$,$,'',.LOCKED.);
+#49=IFCSIMPLEPROPERTYTEMPLATE('3Mo_83XvL21RdP7sT5lTsr',#2,'Gesamtlochquerschnitt AL bezogen auf die Lagerfl\X\E4che','Definition shall be inserted',.P_ENUMERATEDVALUE.,'IfcLabel',$,#50,$,$,'',.LOCKED.);
+#50=IFCPROPERTYENUMERATION('Allowed values of Gesamtlochquerschnitt AL bezogen auf die Lagerfl\X\E4che',(IFCLABEL('Value1'),IFCLABEL('Value2'),IFCLABEL('Value3'),IFCLABEL('NPD')),$);
+#51=IFCCOMPLEXPROPERTYTEMPLATE('2bWD4KKmjAPfa8J_LcuqgL',#2,'Druckfestigkeit','Beschreibung der Druckfestigkeit',$,$,(#49,#52,#54,#56));
+#52=IFCSIMPLEPROPERTYTEMPLATE('368Q359KH5yxXGYAn3z5Xa',#2,'Mittlere Druckfestigkeit','Definition shall be inserted',.P_ENUMERATEDVALUE.,'IfcLabel',$,#53,$,$,'',.LOCKED.);
+#53=IFCPROPERTYENUMERATION('Allowed values of Mittlere Druckfestigkeit',(IFCLABEL('Value1'),IFCLABEL('Value2'),IFCLABEL('Value3'),IFCLABEL('NPD')),$);
+#54=IFCSIMPLEPROPERTYTEMPLATE('1wsaqZRTj5DuPq6t7_arva',#2,'Normierte Druckfestigkeit','Definition shall be inserted',.P_ENUMERATEDVALUE.,'IfcLabel',$,#55,$,$,'',.LOCKED.);
+#55=IFCPROPERTYENUMERATION('Allowed values of Normierte Druckfestigkeit',(IFCLABEL('Value1'),IFCLABEL('Value2'),IFCLABEL('Value3'),IFCLABEL('NPD')),$);
+#56=IFCSIMPLEPROPERTYTEMPLATE('3$faz5Dwj5quI5jxhXRNSd',#2,'Charakteristische Druckfestigkeit','Definition shall be inserted',.P_ENUMERATEDVALUE.,'IfcLabel',$,#57,$,$,'',.LOCKED.);
+#57=IFCPROPERTYENUMERATION('Allowed values of Charakteristische Druckfestigkeit',(IFCLABEL('Value1'),IFCLABEL('Value2'),IFCLABEL('Value3'),IFCLABEL('NPD')),$);
+#58=IFCSIMPLEPROPERTYTEMPLATE('2IuoYPHkf0xQtiR79jROBc',#2,'Wesentliches Merkmal 2','Definition shall be inserted',.P_SINGLEVALUE.,'IfcLabel',$,$,$,$,'',.LOCKED.);
+#59=IFCSIMPLEPROPERTYTEMPLATE('2HmM9_rarD3g2R1Zz0ThOW',#2,'Wesentliches Merkmal 3','Definition shall be inserted',.P_SINGLEVALUE.,'IfcLabel',$,$,$,$,'',.LOCKED.);
+#60=IFCSIMPLEPROPERTYTEMPLATE('0TZkTMSaP5Yulc2xFhbYkR',#2,'Wesentliches Merkmal 4','Definition shall be inserted',.P_SINGLEVALUE.,'IfcLabel',$,$,$,$,'',.LOCKED.);
+#61=IFCSIMPLEPROPERTYTEMPLATE('0L3ZYWmHn0gPRPTrQPegIl',#2,'Wesentliches Merkmal 5','Definition shall be inserted',.P_SINGLEVALUE.,'IfcLabel',$,$,$,$,'',.LOCKED.);
+#62=IFCSIMPLEPROPERTYTEMPLATE('3yDf8$l5TA5uzwMAYPo9ND',#2,'Wesentliches Merkmal 6','Definition shall be inserted',.P_SINGLEVALUE.,'IfcLabel',$,$,$,$,'',.LOCKED.);
+#63=IFCSIMPLEPROPERTYTEMPLATE('1VdE2lUev0wBFak_Tcux8v',#2,'Wesentliches Merkmal 7','Definition shall be inserted',.P_SINGLEVALUE.,'IfcLabel',$,$,$,$,'',.LOCKED.);
+#64=IFCSIMPLEPROPERTYTEMPLATE('17gL5iIyH11vW_3yjK8hag',#2,'Wesentliches Merkmal 8','Definition shall be inserted',.P_SINGLEVALUE.,'IfcLabel',$,$,$,$,'',.LOCKED.);
+#65=IFCSIMPLEPROPERTYTEMPLATE('154ZpO9pr3WfSEW4E$WcjN',#2,'Wesentliches Merkmal 9','Definition shall be inserted',.P_SINGLEVALUE.,'IfcLabel',$,$,$,$,'',.LOCKED.);
+#66=IFCSIMPLEPROPERTYTEMPLATE('0P7XZ7hsT7pPD_l9V45OD0',#2,'Wesentliches Merkmal 10','Definition shall be inserted',.P_SINGLEVALUE.,'IfcLabel',$,$,$,$,'',.LOCKED.);
+#67=IFCSIMPLEPROPERTYTEMPLATE('2UpWkvMWf5Ux6SH4tmDqrR',#2,'Wesentliches Merkmal 11','Definition shall be inserted',.P_SINGLEVALUE.,'IfcLabel',$,$,$,$,'',.LOCKED.);
+#68=IFCSIMPLEPROPERTYTEMPLATE('15ZiadeInCHRoQuhF5UydK',#2,'Harmonisierte technische Spezifikation','Definition shall be inserted',.P_SINGLEVALUE.,'IfcLabel',$,$,$,$,'',.LOCKED.);
+#69=IFCSIMPLEPROPERTYTEMPLATE('3w6BRn4Pr838oEqsjYgtxc',#2,'Name, Funktion','Definition shall be inserted',.P_SINGLEVALUE.,'IfcLabel',$,$,$,$,'',.LOCKED.);
+#70=IFCSIMPLEPROPERTYTEMPLATE('2jdWyqBuHC5AUaQotq4Tob',#2,'Ort und Datum','Definition shall be inserted',.P_SINGLEVALUE.,'IfcLabel',$,$,$,$,'',.LOCKED.);
+#71=IFCSIMPLEPROPERTYTEMPLATE('1sEIviU0HDSRYmEXdVzcLZ',#2,'Unterschrift','Definition shall be inserted',.P_SINGLEVALUE.,'IfcLabel',$,$,$,$,'',.LOCKED.);
+#72=IFCSIMPLEPROPERTYTEMPLATE('02mrkQ9YLBv9c6QVQtdz9R',#2,'Dokumentenreferenzierung/ProductDataSheet','Definition shall be inserted',.P_SINGLEVALUE.,'IfcLabel',$,$,$,$,'',.LOCKED.);
+#73=IFCSIMPLEPROPERTYTEMPLATE('3Kuiu1YOH1$AzkZ8sxCquD',#2,'Omniclass','',.P_SINGLEVALUE.,'IfcLabel',$,$,$,$,'',.LOCKED.);
+#74=IFCSIMPLEPROPERTYTEMPLATE('2qF6oLarvFRxl$sTNP_Vfj',#2,'Uniclass','',.P_SINGLEVALUE.,'IfcLabel',$,$,$,$,'',.LOCKED.);
+
+/* * *
+ * Declaration of 'IfcPropertySetTemplate' within the library for lighting product data templates.
+ * Insert property templates; they should be loaded from the publishing dictionary
+ * IFCPROPERTYSETTEMPLATE(GlobalId, OwnerHistory, Name, Description, TemplateType, ApplicableEntity, HasPropertyTemplates) */
+#75=IFCPROPERTYSETTEMPLATE('2xuESqeTL7R8DmJBLphNge',#2,'DoP data template according to EN 771-5 (Test)','Data Template by Baustoffindustrie',.PSET_TYPEDRIVENONLY.,'IfcBuildingElementProxy/USERDEFINED',(#76,#77,#78,#79,#80,#81,#82,#83,#84,#85,#86));
+#76=IFCSIMPLEPROPERTYTEMPLATE('03QHT2qOn6fws6GwFyKrXo',#2,'Leistung zu 9.101','Definition shall be inserted',.P_SINGLEVALUE.,'IfcLabel',$,$,$,$,'',.LOCKED.);
+#77=IFCSIMPLEPROPERTYTEMPLATE('26GMAWO4r6ku3euzB8K9$A',#2,'Leistung zu 9.102','Definition shall be inserted',.P_SINGLEVALUE.,'IfcLabel',$,$,$,$,'',.LOCKED.);
+#78=IFCSIMPLEPROPERTYTEMPLATE('1ienqyQ5H5ehSxUnrrS4eJ',#2,'Leistung zu 9.103','Definition shall be inserted',.P_SINGLEVALUE.,'IfcLabel',$,$,$,$,'',.LOCKED.);
+#79=IFCSIMPLEPROPERTYTEMPLATE('11dH3CPU17aODdBMkOCMBm',#2,'Leistung zu 9.104','Definition shall be inserted',.P_SINGLEVALUE.,'IfcLabel',$,$,$,$,'',.LOCKED.);
+#80=IFCSIMPLEPROPERTYTEMPLATE('2Zj_YivpP8exef5D6$Rmja',#2,'Leistung zu 9.105','Definition shall be inserted',.P_SINGLEVALUE.,'IfcLabel',$,$,$,$,'',.LOCKED.);
+#81=IFCSIMPLEPROPERTYTEMPLATE('1vDzjng9n3wgvuRcgcQNzZ',#2,'Leistung zu 9.106','Definition shall be inserted',.P_SINGLEVALUE.,'IfcLabel',$,$,$,$,'',.LOCKED.);
+#82=IFCSIMPLEPROPERTYTEMPLATE('3_KLUWcNb6IBmANQMoYXF1',#2,'Leistung zu 9.107','Definition shall be inserted',.P_SINGLEVALUE.,'IfcLabel',$,$,$,$,'',.LOCKED.);
+#83=IFCSIMPLEPROPERTYTEMPLATE('2OJkfTnbL1SB20aX2kwgeX',#2,'Leistung zu 9.108','Definition shall be inserted',.P_SINGLEVALUE.,'IfcLabel',$,$,$,$,'',.LOCKED.);
+#84=IFCSIMPLEPROPERTYTEMPLATE('3AXRzWrqf3FA3g12EU645q',#2,'Leistung zu 9.109','Definition shall be inserted',.P_SINGLEVALUE.,'IfcLabel',$,$,$,$,'',.LOCKED.);
+#85=IFCSIMPLEPROPERTYTEMPLATE('2MkmNcW418JwbqDu1D8eXi',#2,'Leistung zu 9.110','Definition shall be inserted',.P_SINGLEVALUE.,'IfcLabel',$,$,$,$,'',.LOCKED.);
+#86=IFCSIMPLEPROPERTYTEMPLATE('3C26Krbg9Fa8LJ86Qoo0bL',#2,'Leistung zu 9.111','Definition shall be inserted',.P_SINGLEVALUE.,'IfcLabel',$,$,$,$,'',.LOCKED.);
+
+/* * *
+ * Declaration of 'IfcTypeProduct' within the library for a ligthing product.
+ * IFCTYPEPRODUCT(GlobalId, OwnerHistory, Name, Description, ApplicableOccurrence, HasPropertySets, RepresentationMaps, Tag) */
+#87=IFCTYPEPRODUCT('2Tq$JaB5nFlvkulEbj7lmL',#2,'Kleber','Description of Kleber','IfcLightFixture',(#88,#90),$,$);
+#88=IFCPROPERTYSET('0KsTA1UVXAn98VE7_P$cO8',#2,'DoP data template according to EN 771-4','Data Template by Baustoffindustrie',(#92,#93,#94,#95,#96,#97,#98,#99,#100,#101,#102,#103,#104,#105,#106,#107,#108,#109,#110,#111,#112,#113,#115,#119,#120,#121,#122,#123,#124,#125,#126,#127,#128,#140,#141,#142,#143,#144));
+#89=IFCRELDEFINESBYTEMPLATE('37WlkDo3HFSv5Aj03AqDc2',#2,$,$,(#88,#146,#202,#258,#314),#25);
+#90=IFCPROPERTYSET('05HGGeQAL3TQ9vs158kzoP',#2,'DoP data template according to EN 771-5 (Test)','Data Template by Baustoffindustrie',(#129,#130,#131,#132,#133,#134,#135,#136,#137,#138,#139));
+#91=IFCRELDEFINESBYTEMPLATE('0R3dcfdGfCaPiGARUjJaqW',#2,$,$,(#90,#147,#203,#259,#315),#75);
+#92=IFCPROPERTYSINGLEVALUE('Nr./Kennung','',IFCLABEL('0314DE.Kleber.CW.90_2013-05-01'),$);
+#93=IFCPROPERTYSINGLEVALUE('Eindeutiger Kenncode des Produkttyps','',IFCLABEL('EN 12860 Gipskleber'),$);
+#94=IFCPROPERTYSINGLEVALUE('Typen-, Chargen- oder Seriennummer oder ein anderes Kennzeichen','',IFCLABEL('MultiGips Kleber ClassicWeiss 90'),$);
+#95=IFCPROPERTYSINGLEVALUE('Verwendungszweck','',IFCLABEL('Gipskleber fu\X2\0308\X0\r Gips-Wandbauplatten'),$);
+#96=IFCPROPERTYSINGLEVALUE('Eingetragender Handelsname/Marke und Kontaktanschrift','',IFCLABEL('VG-ORTH GmbH & Co KG\X\0AHoleburgweg 24\X\0AD-37627 Stadtoldendorf\X\0ATel. +495532-505-0\X\0AFax +495532 505-550\X\0AE-Mail info@multigips.de'),$);
+#97=IFCPROPERTYSINGLEVALUE('Bevollm\X\E4chtigter','',IFCLABEL(''),$);
+#98=IFCPROPERTYSINGLEVALUE('System1','',IFCLABEL('3'),$);
+#99=IFCPROPERTYSINGLEVALUE('Notifizierende Stelle','',IFCLABEL('Nicht relevant - weil das Produkt weniger als 1% Massen- oder Volumenanteile organische Stoffe enthalten.\X\0AErstpru\X2\0308\X0\fung des Produktes und werkseigene Produktionskontrolle durch den Hersteller.'),$);
+#100=IFCPROPERTYSINGLEVALUE('Aufgaben Dritter1','',IFCLABEL('Nicht relevant - weil das Produkt weniger als 1% Massen- oder Volumenanteile organische Stoffe enthalten.\X\0AErstpru\X2\0308\X0\fung des Produktes und werkseigene Produktionskontrolle durch den Hersteller.'),$);
+#101=IFCPROPERTYSINGLEVALUE('System2','',IFCLABEL('Nicht relevant - weil das Produkt weniger als 1% Massen- oder Volumenanteile organische Stoffe enthalten.\X\0AErstpru\X2\0308\X0\fung des Produktes und werkseigene Produktionskontrolle durch den Hersteller.'),$);
+#102=IFCPROPERTYSINGLEVALUE('Ausgestelltes Dokument2','',IFCLABEL('Nicht relevant - weil das Produkt weniger als 1% Massen- oder Volumenanteile organische Stoffe enthalten.\X\0AErstpru\X2\0308\X0\fung des Produktes und werkseigene Produktionskontrolle durch den Hersteller.'),$);
+#103=IFCPROPERTYSINGLEVALUE('Technische Bewertungsstelle','',IFCLABEL('0'),$);
+#104=IFCPROPERTYSINGLEVALUE('Referenznummer des Europ\X\E4ischen Bewertungsdokuments','',IFCLABEL('0'),$);
+#105=IFCPROPERTYSINGLEVALUE('Referenznummer der Europ\X\E4ischen Technischen Bewertung','',IFCLABEL('0'),$);
+#106=IFCPROPERTYSINGLEVALUE('Aufgaben Dritter3','',IFCLABEL('0'),$);
+#107=IFCPROPERTYSINGLEVALUE('System3','',IFCLABEL(''),$);
+#108=IFCPROPERTYSINGLEVALUE('Ausgestelltes Dokument3','',IFCLABEL('0'),$);
+#109=IFCPROPERTYSINGLEVALUE('Wesentliches Merkmal o. hEN 1: Brandverhalte','',IFCLABEL('0'),$);
+#110=IFCPROPERTYSINGLEVALUE('Wesentliches Merkmal o. hEN 2: Feuerbest\X\E4ndigkeit','',IFCLABEL('0'),$);
+#111=IFCPROPERTYSINGLEVALUE('Wesentliches Merkmal o. hEN 3: Verhalten bei einem Brand von au\X\DFen','',IFCLABEL('0'),$);
+#112=IFCPROPERTYSINGLEVALUE('Wesentliches Merkmal o. hEN 4: Ger\X\E4uschabsorption','',IFCLABEL('0'),$);
+#113=IFCPROPERTYSINGLEVALUE('Wesentliches Merkmal o. hEN 5: Emission von gef\X\E4hrlichen Stoffen','',IFCLABEL('0'),$);
+#114=IFCPROPERTYSINGLEVALUE('Gesamtlochquerschnitt AL bezogen auf die Lagerfl\X\E4che','',IFCLABEL('Brandverhalten'),$);
+#115=IFCCOMPLEXPROPERTY('Druckfestigkeit','Beschreibung der Druckfestigkeit','Kleber',(#114,#116,#117,#118));
+#116=IFCPROPERTYSINGLEVALUE('Mittlere Druckfestigkeit','',IFCLABEL('Freisetzung von Gefahrstoffen'),$);
+#117=IFCPROPERTYSINGLEVALUE('Normierte Druckfestigkeit','',IFCLABEL('0'),$);
+#118=IFCPROPERTYSINGLEVALUE('Charakteristische Druckfestigkeit','',IFCLABEL('0'),$);
+#119=IFCPROPERTYSINGLEVALUE('Wesentliches Merkmal 2','',IFCLABEL('0'),$);
+#120=IFCPROPERTYSINGLEVALUE('Wesentliches Merkmal 3','',IFCLABEL('0'),$);
+#121=IFCPROPERTYSINGLEVALUE('Wesentliches Merkmal 4','',IFCLABEL('0'),$);
+#122=IFCPROPERTYSINGLEVALUE('Wesentliches Merkmal 5','',IFCLABEL('0'),$);
+#123=IFCPROPERTYSINGLEVALUE('Wesentliches Merkmal 6','',IFCLABEL('0'),$);
+#124=IFCPROPERTYSINGLEVALUE('Wesentliches Merkmal 7','',IFCLABEL('0'),$);
+#125=IFCPROPERTYSINGLEVALUE('Wesentliches Merkmal 8','',IFCLABEL('0'),$);
+#126=IFCPROPERTYSINGLEVALUE('Wesentliches Merkmal 9','',IFCLABEL('A1'),$);
+#127=IFCPROPERTYSINGLEVALUE('Wesentliches Merkmal 10','',IFCLABEL('NPD'),$);
+#128=IFCPROPERTYSINGLEVALUE('Wesentliches Merkmal 11','',IFCLABEL('0'),$);
+#129=IFCPROPERTYSINGLEVALUE('Leistung zu 9.101','',IFCLABEL('0'),$);
+#130=IFCPROPERTYSINGLEVALUE('Leistung zu 9.102','',IFCLABEL('0'),$);
+#131=IFCPROPERTYSINGLEVALUE('Leistung zu 9.103','',IFCLABEL('0'),$);
+#132=IFCPROPERTYSINGLEVALUE('Leistung zu 9.104','',IFCLABEL('0'),$);
+#133=IFCPROPERTYSINGLEVALUE('Leistung zu 9.105','',IFCLABEL('0'),$);
+#134=IFCPROPERTYSINGLEVALUE('Leistung zu 9.106','',IFCLABEL('0'),$);
+#135=IFCPROPERTYSINGLEVALUE('Leistung zu 9.107','',IFCLABEL('0'),$);
+#136=IFCPROPERTYSINGLEVALUE('Leistung zu 9.108','',IFCLABEL('0'),$);
+#137=IFCPROPERTYSINGLEVALUE('Leistung zu 9.109','',IFCLABEL('0'),$);
+#138=IFCPROPERTYSINGLEVALUE('Leistung zu 9.110','',IFCLABEL('0'),$);
+#139=IFCPROPERTYSINGLEVALUE('Leistung zu 9.111','',IFCLABEL(''),$);
+#140=IFCPROPERTYSINGLEVALUE('Harmonisierte technische Spezifikation','',IFCLABEL('EN 12860:2001-12'),$);
+#141=IFCPROPERTYSINGLEVALUE('Name, Funktion','',IFCLABEL('Thomas Bremer, Gesch\X\E4ftsf\X\FChrer'),$);
+#142=IFCPROPERTYSINGLEVALUE('Ort und Datum','',IFCLABEL('Stadtoldendorf, 01.06.2013'),$);
+#143=IFCPROPERTYSINGLEVALUE('Unterschrift','',IFCLABEL(''),$);
+#144=IFCPROPERTYSINGLEVALUE('Dokumentenreferenzierung/ProductDataSheet','',IFCLABEL('LE_Kleber_CW90.pdf'),$);
+
+/* * *
+ * Declaration of 'IfcTypeProduct' within the library for a ligthing product.
+ * IFCTYPEPRODUCT(GlobalId, OwnerHistory, Name, Description, ApplicableOccurrence, HasPropertySets, RepresentationMaps, Tag) */
+#145=IFCTYPEPRODUCT('0csOrsFNTD$hqTtdG9LjHw',#2,'Wandbauplatten','Description of Wandbauplatten','IfcLightFixture',(#146,#147),$,$);
+#146=IFCPROPERTYSET('3KsE53ICD70PjgbbXveKQh',#2,'DoP data template according to EN 771-4','Data Template by Baustoffindustrie',(#148,#149,#150,#151,#152,#153,#154,#155,#156,#157,#158,#159,#160,#161,#162,#163,#164,#165,#166,#167,#168,#169,#171,#175,#176,#177,#178,#179,#180,#181,#182,#183,#184,#196,#197,#198,#199,#200));
+#147=IFCPROPERTYSET('1ypdN1rcT2bfU1k2zazNZC',#2,'DoP data template according to EN 771-5 (Test)','Data Template by Baustoffindustrie',(#185,#186,#187,#188,#189,#190,#191,#192,#193,#194,#195));
+#148=IFCPROPERTYSINGLEVALUE('Nr./Kennung','',IFCLABEL('0314DE.M.100_2013-06-01'),$);
+#149=IFCPROPERTYSINGLEVALUE('Eindeutiger Kenncode des Produkttyps','',IFCLABEL('EN 12859 \X2\2013\X0\ Typ A/M/H3'),$);
+#150=IFCPROPERTYSINGLEVALUE('Typen-, Chargen- oder Seriennummer oder ein anderes Kennzeichen','',IFCLABEL('MultiGips M 100'),$);
+#151=IFCPROPERTYSINGLEVALUE('Verwendungszweck','',IFCLABEL('Herstellung nicht tragender Trennw\X\E4nde'),$);
+#152=IFCPROPERTYSINGLEVALUE('Eingetragender Handelsname/Marke und Kontaktanschrift','',IFCLABEL('VG-ORTH GmbH & Co KG\X\0AHoleburgweg 24\X\0AD-37627 Stadtoldendorf\X\0ATel. +495532-505-0\X\0AFax +495532 505-550\X\0AE-Mail info@multigips.de'),$);
+#153=IFCPROPERTYSINGLEVALUE('Bevollm\X\E4chtigter','',IFCLABEL(''),$);
+#154=IFCPROPERTYSINGLEVALUE('System1','',IFCLABEL('3'),$);
+#155=IFCPROPERTYSINGLEVALUE('Notifizierende Stelle','',IFCLABEL('Nicht relevant - weil das Produkt weniger als 1% Massen- oder Volumenanteile organische Stoffe enthalten.\X\0AErstpru\X2\0308\X0\fung des Produktes und werkseigene Produktionskontrolle durch den Hersteller.'),$);
+#156=IFCPROPERTYSINGLEVALUE('Aufgaben Dritter1','',IFCLABEL('Nicht relevant - weil das Produkt weniger als 1% Massen- oder Volumenanteile organische Stoffe enthalten.\X\0AErstpru\X2\0308\X0\fung des Produktes und werkseigene Produktionskontrolle durch den Hersteller.'),$);
+#157=IFCPROPERTYSINGLEVALUE('System2','',IFCLABEL('Nicht relevant - weil das Produkt weniger als 1% Massen- oder Volumenanteile organische Stoffe enthalten.\X\0AErstpru\X2\0308\X0\fung des Produktes und werkseigene Produktionskontrolle durch den Hersteller.'),$);
+#158=IFCPROPERTYSINGLEVALUE('Ausgestelltes Dokument2','',IFCLABEL('Nicht relevant - weil das Produkt weniger als 1% Massen- oder Volumenanteile organische Stoffe enthalten.\X\0AErstpru\X2\0308\X0\fung des Produktes und werkseigene Produktionskontrolle durch den Hersteller.'),$);
+#159=IFCPROPERTYSINGLEVALUE('Technische Bewertungsstelle','',IFCLABEL('0'),$);
+#160=IFCPROPERTYSINGLEVALUE('Referenznummer des Europ\X\E4ischen Bewertungsdokuments','',IFCLABEL('0'),$);
+#161=IFCPROPERTYSINGLEVALUE('Referenznummer der Europ\X\E4ischen Technischen Bewertung','',IFCLABEL('0'),$);
+#162=IFCPROPERTYSINGLEVALUE('Aufgaben Dritter3','',IFCLABEL('0'),$);
+#163=IFCPROPERTYSINGLEVALUE('System3','',IFCLABEL(''),$);
+#164=IFCPROPERTYSINGLEVALUE('Ausgestelltes Dokument3','',IFCLABEL('0'),$);
+#165=IFCPROPERTYSINGLEVALUE('Wesentliches Merkmal o. hEN 1: Brandverhalte','',IFCLABEL('0'),$);
+#166=IFCPROPERTYSINGLEVALUE('Wesentliches Merkmal o. hEN 2: Feuerbest\X\E4ndigkeit','',IFCLABEL('0'),$);
+#167=IFCPROPERTYSINGLEVALUE('Wesentliches Merkmal o. hEN 3: Verhalten bei einem Brand von au\X\DFen','',IFCLABEL('0'),$);
+#168=IFCPROPERTYSINGLEVALUE('Wesentliches Merkmal o. hEN 4: Ger\X\E4uschabsorption','',IFCLABEL('0'),$);
+#169=IFCPROPERTYSINGLEVALUE('Wesentliches Merkmal o. hEN 5: Emission von gef\X\E4hrlichen Stoffen','',IFCLABEL('0'),$);
+#170=IFCPROPERTYSINGLEVALUE('Gesamtlochquerschnitt AL bezogen auf die Lagerfl\X\E4che','',IFCLABEL('Brandverhalten'),$);
+#171=IFCCOMPLEXPROPERTY('Druckfestigkeit','Beschreibung der Druckfestigkeit','Wandbauplatten',(#170,#172,#173,#174));
+#172=IFCPROPERTYSINGLEVALUE('Mittlere Druckfestigkeit','',IFCLABEL('W\X\E4rmedurchlasswiderstand'),$);
+#173=IFCPROPERTYSINGLEVALUE('Normierte Druckfestigkeit','',IFCLABEL('Gef\X\E4hrliche Stoffe'),$);
+#174=IFCPROPERTYSINGLEVALUE('Charakteristische Druckfestigkeit','',IFCLABEL('Luftschalld\X\E4mmung'),$);
+#175=IFCPROPERTYSINGLEVALUE('Wesentliches Merkmal 2','',IFCLABEL('Feuerwiderstand'),$);
+#176=IFCPROPERTYSINGLEVALUE('Wesentliches Merkmal 3','',IFCLABEL('0'),$);
+#177=IFCPROPERTYSINGLEVALUE('Wesentliches Merkmal 4','',IFCLABEL('0'),$);
+#178=IFCPROPERTYSINGLEVALUE('Wesentliches Merkmal 5','',IFCLABEL('0'),$);
+#179=IFCPROPERTYSINGLEVALUE('Wesentliches Merkmal 6','',IFCLABEL('0'),$);
+#180=IFCPROPERTYSINGLEVALUE('Wesentliches Merkmal 7','',IFCLABEL('0'),$);
+#181=IFCPROPERTYSINGLEVALUE('Wesentliches Merkmal 8','',IFCLABEL('0'),$);
+#182=IFCPROPERTYSINGLEVALUE('Wesentliches Merkmal 9','',IFCLABEL('A1'),$);
+#183=IFCPROPERTYSINGLEVALUE('Wesentliches Merkmal 10','',IFCLABEL('NPD'),$);
+#184=IFCPROPERTYSINGLEVALUE('Wesentliches Merkmal 11','',IFCLABEL('NPD'),$);
+#185=IFCPROPERTYSINGLEVALUE('Leistung zu 9.101','',IFCLABEL('Siehe Dokumentation des Herstellers'),$);
+#186=IFCPROPERTYSINGLEVALUE('Leistung zu 9.102','',IFCLABEL('Siehe Dokumentation des Herstellers'),$);
+#187=IFCPROPERTYSINGLEVALUE('Leistung zu 9.103','',IFCLABEL('0'),$);
+#188=IFCPROPERTYSINGLEVALUE('Leistung zu 9.104','',IFCLABEL('0'),$);
+#189=IFCPROPERTYSINGLEVALUE('Leistung zu 9.105','',IFCLABEL('0'),$);
+#190=IFCPROPERTYSINGLEVALUE('Leistung zu 9.106','',IFCLABEL('0'),$);
+#191=IFCPROPERTYSINGLEVALUE('Leistung zu 9.107','',IFCLABEL('0'),$);
+#192=IFCPROPERTYSINGLEVALUE('Leistung zu 9.108','',IFCLABEL('0'),$);
+#193=IFCPROPERTYSINGLEVALUE('Leistung zu 9.109','',IFCLABEL('0'),$);
+#194=IFCPROPERTYSINGLEVALUE('Leistung zu 9.110','',IFCLABEL('0'),$);
+#195=IFCPROPERTYSINGLEVALUE('Leistung zu 9.111','',IFCLABEL(''),$);
+#196=IFCPROPERTYSINGLEVALUE('Harmonisierte technische Spezifikation','',IFCLABEL('EN 12859:2011-02'),$);
+#197=IFCPROPERTYSINGLEVALUE('Name, Funktion','',IFCLABEL('Thomas Bremer, Gesch\X\E4ftsf\X\FChrer'),$);
+#198=IFCPROPERTYSINGLEVALUE('Ort und Datum','',IFCLABEL('Stadtoldendorf, 01.06.2013'),$);
+#199=IFCPROPERTYSINGLEVALUE('Unterschrift','',IFCLABEL(''),$);
+#200=IFCPROPERTYSINGLEVALUE('Dokumentenreferenzierung/ProductDataSheet','',IFCLABEL('LE_M100.pdf'),$);
+
+/* * *
+ * Declaration of 'IfcTypeProduct' within the library for a ligthing product.
+ * IFCTYPEPRODUCT(GlobalId, OwnerHistory, Name, Description, ApplicableOccurrence, HasPropertySets, RepresentationMaps, Tag) */
+#201=IFCTYPEPRODUCT('0eEr8ZnSv2TPRQKjuwglEh',#2,'Fl\X\E4chenspachtel','Description of Fl\X\E4chenspachtel','IfcLightFixture',(#202,#203),$,$);
+#202=IFCPROPERTYSET('2VGutWC_z0XgXiKrHksHf4',#2,'DoP data template according to EN 771-4','Data Template by Baustoffindustrie',(#204,#205,#206,#207,#208,#209,#210,#211,#212,#213,#214,#215,#216,#217,#218,#219,#220,#221,#222,#223,#224,#225,#227,#231,#232,#233,#234,#235,#236,#237,#238,#239,#240,#252,#253,#254,#255,#256));
+#203=IFCPROPERTYSET('0VgV02Ga1E7hoCQoMT4gS3',#2,'DoP data template according to EN 771-5 (Test)','Data Template by Baustoffindustrie',(#241,#242,#243,#244,#245,#246,#247,#248,#249,#250,#251));
+#204=IFCPROPERTYSINGLEVALUE('Nr./Kennung','',IFCLABEL('0314DE.SG90.UNI_2013-06-01'),$);
+#205=IFCPROPERTYSINGLEVALUE('Eindeutiger Kenncode des Produkttyps','',IFCLABEL('EN 13279-1 \X2\2013\X0\ C7/20/2'),$);
+#206=IFCPROPERTYSINGLEVALUE('Typen-, Chargen- oder Seriennummer oder ein anderes Kennzeichen','',IFCLABEL('MultiGips SG 90 Uni Fl\X\E4chenspachtel'),$);
+#207=IFCPROPERTYSINGLEVALUE('Verwendungszweck','',IFCLABEL('Verputz von Decken und W\X\E4nden innerhalb von Geb\X\E4uden'),$);
+#208=IFCPROPERTYSINGLEVALUE('Eingetragender Handelsname/Marke und Kontaktanschrift','',IFCLABEL('VG-ORTH GmbH & Co KG\X\0AHoleburgweg 24\X\0AD-37627 Stadtoldendorf\X\0ATel. +495532-505-0\X\0AFax +495532 505-550\X\0AE-Mail info@multigips.de'),$);
+#209=IFCPROPERTYSINGLEVALUE('Bevollm\X\E4chtigter','',IFCLABEL(''),$);
+#210=IFCPROPERTYSINGLEVALUE('System1','',IFCLABEL('3'),$);
+#211=IFCPROPERTYSINGLEVALUE('Notifizierende Stelle','',IFCLABEL('MFPA Leipzig GmbH, Kenn.-Nr. NB 0800'),$);
+#212=IFCPROPERTYSINGLEVALUE('Aufgaben Dritter1','',IFCLABEL('0'),$);
+#213=IFCPROPERTYSINGLEVALUE('System2','',IFCLABEL('Brandverhaltens nach System 3'),$);
+#214=IFCPROPERTYSINGLEVALUE('Ausgestelltes Dokument2','',IFCLABEL('KB 3.1/13-034-6'),$);
+#215=IFCPROPERTYSINGLEVALUE('Technische Bewertungsstelle','',IFCLABEL('0'),$);
+#216=IFCPROPERTYSINGLEVALUE('Referenznummer des Europ\X\E4ischen Bewertungsdokuments','',IFCLABEL('0'),$);
+#217=IFCPROPERTYSINGLEVALUE('Referenznummer der Europ\X\E4ischen Technischen Bewertung','',IFCLABEL('0'),$);
+#218=IFCPROPERTYSINGLEVALUE('Aufgaben Dritter3','',IFCLABEL('0'),$);
+#219=IFCPROPERTYSINGLEVALUE('System3','',IFCLABEL(''),$);
+#220=IFCPROPERTYSINGLEVALUE('Ausgestelltes Dokument3','',IFCLABEL('0'),$);
+#221=IFCPROPERTYSINGLEVALUE('Wesentliches Merkmal o. hEN 1: Brandverhalte','',IFCLABEL('0'),$);
+#222=IFCPROPERTYSINGLEVALUE('Wesentliches Merkmal o. hEN 2: Feuerbest\X\E4ndigkeit','',IFCLABEL('0'),$);
+#223=IFCPROPERTYSINGLEVALUE('Wesentliches Merkmal o. hEN 3: Verhalten bei einem Brand von au\X\DFen','',IFCLABEL('0'),$);
+#224=IFCPROPERTYSINGLEVALUE('Wesentliches Merkmal o. hEN 4: Ger\X\E4uschabsorption','',IFCLABEL('0'),$);
+#225=IFCPROPERTYSINGLEVALUE('Wesentliches Merkmal o. hEN 5: Emission von gef\X\E4hrlichen Stoffen','',IFCLABEL('0'),$);
+#226=IFCPROPERTYSINGLEVALUE('Gesamtlochquerschnitt AL bezogen auf die Lagerfl\X\E4che','',IFCLABEL('Brandverhalten'),$);
+#227=IFCCOMPLEXPROPERTY('Druckfestigkeit','Beschreibung der Druckfestigkeit','Fl\X\E4chenspachtel',(#226,#228,#229,#230));
+#228=IFCPROPERTYSINGLEVALUE('Mittlere Druckfestigkeit','',IFCLABEL('Luftschalld\X\E4mmung'),$);
+#229=IFCPROPERTYSINGLEVALUE('Normierte Druckfestigkeit','',IFCLABEL('W\X\E4rmedurchlasswiderstand'),$);
+#230=IFCPROPERTYSINGLEVALUE('Charakteristische Druckfestigkeit','',IFCLABEL('Gef\X\E4hrliche Stoffe'),$);
+#231=IFCPROPERTYSINGLEVALUE('Wesentliches Merkmal 2','',IFCLABEL('0'),$);
+#232=IFCPROPERTYSINGLEVALUE('Wesentliches Merkmal 3','',IFCLABEL('0'),$);
+#233=IFCPROPERTYSINGLEVALUE('Wesentliches Merkmal 4','',IFCLABEL('0'),$);
+#234=IFCPROPERTYSINGLEVALUE('Wesentliches Merkmal 5','',IFCLABEL('0'),$);
+#235=IFCPROPERTYSINGLEVALUE('Wesentliches Merkmal 6','',IFCLABEL('0'),$);
+#236=IFCPROPERTYSINGLEVALUE('Wesentliches Merkmal 7','',IFCLABEL('0'),$);
+#237=IFCPROPERTYSINGLEVALUE('Wesentliches Merkmal 8','',IFCLABEL('0'),$);
+#238=IFCPROPERTYSINGLEVALUE('Wesentliches Merkmal 9','',IFCLABEL('A1'),$);
+#239=IFCPROPERTYSINGLEVALUE('Wesentliches Merkmal 10','',IFCLABEL('NPD'),$);
+#240=IFCPROPERTYSINGLEVALUE('Wesentliches Merkmal 11','',IFCLABEL('NPD'),$);
+#241=IFCPROPERTYSINGLEVALUE('Leistung zu 9.101','',IFCLABEL('NPD'),$);
+#242=IFCPROPERTYSINGLEVALUE('Leistung zu 9.102','',IFCLABEL('0'),$);
+#243=IFCPROPERTYSINGLEVALUE('Leistung zu 9.103','',IFCLABEL('0'),$);
+#244=IFCPROPERTYSINGLEVALUE('Leistung zu 9.104','',IFCLABEL('0'),$);
+#245=IFCPROPERTYSINGLEVALUE('Leistung zu 9.105','',IFCLABEL('0'),$);
+#246=IFCPROPERTYSINGLEVALUE('Leistung zu 9.106','',IFCLABEL('0'),$);
+#247=IFCPROPERTYSINGLEVALUE('Leistung zu 9.107','',IFCLABEL('0'),$);
+#248=IFCPROPERTYSINGLEVALUE('Leistung zu 9.108','',IFCLABEL('0'),$);
+#249=IFCPROPERTYSINGLEVALUE('Leistung zu 9.109','',IFCLABEL('0'),$);
+#250=IFCPROPERTYSINGLEVALUE('Leistung zu 9.110','',IFCLABEL('0'),$);
+#251=IFCPROPERTYSINGLEVALUE('Leistung zu 9.111','',IFCLABEL(''),$);
+#252=IFCPROPERTYSINGLEVALUE('Harmonisierte technische Spezifikation','',IFCLABEL('EN 13279-1:2008-08'),$);
+#253=IFCPROPERTYSINGLEVALUE('Name, Funktion','',IFCLABEL('Thomas Bremer, Gesch\X\E4ftsf\X\FChrer'),$);
+#254=IFCPROPERTYSINGLEVALUE('Ort und Datum','',IFCLABEL('Stadtoldendorf, 01.06.2013'),$);
+#255=IFCPROPERTYSINGLEVALUE('Unterschrift','',IFCLABEL(''),$);
+#256=IFCPROPERTYSINGLEVALUE('Dokumentenreferenzierung/ProductDataSheet','',IFCLABEL('LE_SG90_Uni.pdf'),$);
+
+/* * *
+ * Declaration of 'IfcTypeProduct' within the library for a ligthing product.
+ * IFCTYPEPRODUCT(GlobalId, OwnerHistory, Name, Description, ApplicableOccurrence, HasPropertySets, RepresentationMaps, Tag) */
+#257=IFCTYPEPRODUCT('0zI$o$8Ln9Thl_wjl$lzQE',#2,'Normalzement','Description of Normalzement','IfcLightFixture',(#258,#259),$,$);
+#258=IFCPROPERTYSET('2a1guDLTjABOHUuwoBu_pK',#2,'DoP data template according to EN 771-4','Data Template by Baustoffindustrie',(#260,#261,#262,#263,#264,#265,#266,#267,#268,#269,#270,#271,#272,#273,#274,#275,#276,#277,#278,#279,#280,#281,#283,#287,#288,#289,#290,#291,#292,#293,#294,#295,#296,#308,#309,#310,#311,#312));
+#259=IFCPROPERTYSET('2Bomn98D15hA2lzeIQYPct',#2,'DoP data template according to EN 771-5 (Test)','Data Template by Baustoffindustrie',(#297,#298,#299,#300,#301,#302,#303,#304,#305,#306,#307));
+#260=IFCPROPERTYSINGLEVALUE('Nr./Kennung','',IFCLABEL('0840-CPR-3510-120033-02'),$);
+#261=IFCPROPERTYSINGLEVALUE('Eindeutiger Kenncode des Produkttyps','',IFCLABEL('CEM | 52,5 N (tu)'),$);
+#262=IFCPROPERTYSINGLEVALUE('Typen-, Chargen- oder Seriennummer oder ein anderes Kennzeichen','',IFCLABEL(''),$);
+#263=IFCPROPERTYSINGLEVALUE('Verwendungszweck','',IFCLABEL('Herstellung von Beton, Mortel, Einpressmortel etc.'),$);
+#264=IFCPROPERTYSINGLEVALUE('Eingetragender Handelsname/Marke und Kontaktanschrift','',IFCLABEL('Soenner GmbH & Co. KG\X\0ABahnhofstrafe 20\X\0A59597 Erwitte'),$);
+#265=IFCPROPERTYSINGLEVALUE('Bevollm\X\E4chtigter','',IFCLABEL(''),$);
+#266=IFCPROPERTYSINGLEVALUE('System1','',IFCLABEL('1+'),$);
+#267=IFCPROPERTYSINGLEVALUE('Notifizierende Stelle','',IFCLABEL('Forschungsinstitut der Zementindustrie GmbH'),$);
+#268=IFCPROPERTYSINGLEVALUE('Aufgaben Dritter1','',IFCLABEL('0'),$);
+#269=IFCPROPERTYSINGLEVALUE('System2','',IFCLABEL('0'),$);
+#270=IFCPROPERTYSINGLEVALUE('Ausgestelltes Dokument2','',IFCLABEL('NB 0840'),$);
+#271=IFCPROPERTYSINGLEVALUE('Technische Bewertungsstelle','',IFCLABEL('0'),$);
+#272=IFCPROPERTYSINGLEVALUE('Referenznummer des Europ\X\E4ischen Bewertungsdokuments','',IFCLABEL('0'),$);
+#273=IFCPROPERTYSINGLEVALUE('Referenznummer der Europ\X\E4ischen Technischen Bewertung','',IFCLABEL('0'),$);
+#274=IFCPROPERTYSINGLEVALUE('Aufgaben Dritter3','',IFCLABEL('0'),$);
+#275=IFCPROPERTYSINGLEVALUE('System3','',IFCLABEL(''),$);
+#276=IFCPROPERTYSINGLEVALUE('Ausgestelltes Dokument3','',IFCLABEL('0'),$);
+#277=IFCPROPERTYSINGLEVALUE('Wesentliches Merkmal o. hEN 1: Brandverhalte','',IFCLABEL('0'),$);
+#278=IFCPROPERTYSINGLEVALUE('Wesentliches Merkmal o. hEN 2: Feuerbest\X\E4ndigkeit','',IFCLABEL('0'),$);
+#279=IFCPROPERTYSINGLEVALUE('Wesentliches Merkmal o. hEN 3: Verhalten bei einem Brand von au\X\DFen','',IFCLABEL('0'),$);
+#280=IFCPROPERTYSINGLEVALUE('Wesentliches Merkmal o. hEN 4: Ger\X\E4uschabsorption','',IFCLABEL('0'),$);
+#281=IFCPROPERTYSINGLEVALUE('Wesentliches Merkmal o. hEN 5: Emission von gef\X\E4hrlichen Stoffen','',IFCLABEL('0'),$);
+#282=IFCPROPERTYSINGLEVALUE('Gesamtlochquerschnitt AL bezogen auf die Lagerfl\X\E4che','',IFCLABEL('Normalzemente (Unterfamilien) Bestandteile und Zusammensetzung'),$);
+#283=IFCCOMPLEXPROPERTY('Druckfestigkeit','Beschreibung der Druckfestigkeit','Normalzement',(#282,#284,#285,#286));
+#284=IFCPROPERTYSINGLEVALUE('Mittlere Druckfestigkeit','',IFCLABEL('Druckfestigkeit(Anfangs- und Normfestigkeit)'),$);
+#285=IFCPROPERTYSINGLEVALUE('Normierte Druckfestigkeit','',IFCLABEL('Erstarrungsbeginn'),$);
+#286=IFCPROPERTYSINGLEVALUE('Charakteristische Druckfestigkeit','',IFCLABEL('Unl\X\F6slicher R\X\FCckstand'),$);
+#287=IFCPROPERTYSINGLEVALUE('Wesentliches Merkmal 2','',IFCLABEL('Gl\X\FChverlust'),$);
+#288=IFCPROPERTYSINGLEVALUE('Wesentliches Merkmal 3','',IFCLABEL('Raumbest\X\E4ndigkeit'),$);
+#289=IFCPROPERTYSINGLEVALUE('Wesentliches Merkmal 4','',IFCLABEL(' -Dehnungsma\X\DF'),$);
+#290=IFCPROPERTYSINGLEVALUE('Wesentliches Merkmal 5','',IFCLABEL(' -Sulfatgehalt'),$);
+#291=IFCPROPERTYSINGLEVALUE('Wesentliches Merkmal 6','',IFCLABEL('Chloridgehalt'),$);
+#292=IFCPROPERTYSINGLEVALUE('Wesentliches Merkmal 7','',IFCLABEL('0'),$);
+#293=IFCPROPERTYSINGLEVALUE('Wesentliches Merkmal 8','',IFCLABEL('0'),$);
+#294=IFCPROPERTYSINGLEVALUE('Wesentliches Merkmal 9','',IFCLABEL('CEM I'),$);
+#295=IFCPROPERTYSINGLEVALUE('Wesentliches Merkmal 10','',IFCLABEL('52,5 N (tu)'),$);
+#296=IFCPROPERTYSINGLEVALUE('Wesentliches Merkmal 11','',IFCLABEL('bestanden'),$);
+#297=IFCPROPERTYSINGLEVALUE('Leistung zu 9.101','',IFCLABEL('bestanden'),$);
+#298=IFCPROPERTYSINGLEVALUE('Leistung zu 9.102','',IFCLABEL('bestanden'),$);
+#299=IFCPROPERTYSINGLEVALUE('Leistung zu 9.103','',IFCLABEL('bestanden'),$);
+#300=IFCPROPERTYSINGLEVALUE('Leistung zu 9.104','',IFCLABEL('bestanden'),$);
+#301=IFCPROPERTYSINGLEVALUE('Leistung zu 9.105','',IFCLABEL('bestanden'),$);
+#302=IFCPROPERTYSINGLEVALUE('Leistung zu 9.106','',IFCLABEL('bestanden'),$);
+#303=IFCPROPERTYSINGLEVALUE('Leistung zu 9.107','',IFCLABEL('0'),$);
+#304=IFCPROPERTYSINGLEVALUE('Leistung zu 9.108','',IFCLABEL('0'),$);
+#305=IFCPROPERTYSINGLEVALUE('Leistung zu 9.109','',IFCLABEL('0'),$);
+#306=IFCPROPERTYSINGLEVALUE('Leistung zu 9.110','',IFCLABEL('0'),$);
+#307=IFCPROPERTYSINGLEVALUE('Leistung zu 9.111','',IFCLABEL(''),$);
+#308=IFCPROPERTYSINGLEVALUE('Harmonisierte technische Spezifikation','',IFCLABEL('EN 197-1:2011'),$);
+#309=IFCPROPERTYSINGLEVALUE('Name, Funktion','',IFCLABEL('Georg Weber, Vertriebsleiter/Prokurist'),$);
+#310=IFCPROPERTYSINGLEVALUE('Ort und Datum','',IFCLABEL('Erwitte, 01.03.2017'),$);
+#311=IFCPROPERTYSINGLEVALUE('Unterschrift','',IFCLABEL(''),$);
+#312=IFCPROPERTYSINGLEVALUE('Dokumentenreferenzierung/ProductDataSheet','',IFCLABEL('LE-CEM-I-525-N-tu_2017.pdf'),$);
+
+/* * *
+ * Declaration of 'IfcTypeProduct' within the library for a ligthing product.
+ * IFCTYPEPRODUCT(GlobalId, OwnerHistory, Name, Description, ApplicableOccurrence, HasPropertySets, RepresentationMaps, Tag) */
+#313=IFCTYPEPRODUCT('32HtNPWKnDHfWh2cvpnXyR',#2,'Einblasb\X\E4mmung','Description of Einblasb\X\E4mmung','IfcLightFixture',(#314,#315),$,$);
+#314=IFCPROPERTYSET('01BsTGsob4IeGvaXFYXvpe',#2,'DoP data template according to EN 771-4','Data Template by Baustoffindustrie',(#316,#317,#318,#319,#320,#321,#322,#323,#324,#325,#326,#327,#328,#329,#330,#331,#332,#333,#334,#335,#336,#337,#339,#343,#344,#345,#346,#347,#348,#349,#350,#351,#352,#364,#365,#366,#367,#368));
+#315=IFCPROPERTYSET('1yNWf4LGv1ZeUtFhuVVnCd',#2,'DoP data template according to EN 771-5 (Test)','Data Template by Baustoffindustrie',(#353,#354,#355,#356,#357,#358,#359,#360,#361,#362,#363));
+#316=IFCPROPERTYSINGLEVALUE('Nr./Kennung','',IFCLABEL('DE0755041701'),$);
+#317=IFCPROPERTYSINGLEVALUE('Eindeutiger Kenncode des Produkttyps','',IFCLABEL('MW-EN 14064-1-S1-WS'),$);
+#318=IFCPROPERTYSINGLEVALUE('Typen-, Chargen- oder Seriennummer oder ein anderes Kennzeichen','',IFCLABEL('Fillrock KD'),$);
+#319=IFCPROPERTYSINGLEVALUE('Verwendungszweck','',IFCLABEL('W\X\E4rmed\X\E4mmung f\X\FCr Geb\X\E4ude'),$);
+#320=IFCPROPERTYSINGLEVALUE('Eingetragender Handelsname/Marke und Kontaktanschrift','',IFCLABEL('DEUTSCHE ROCKWOOL GmbH & Co. KG\X\0ARockwool Stra\X\DFe 37-41\X\0A45966 Gladbeck\X\0ADeutschland'),$);
+#321=IFCPROPERTYSINGLEVALUE('Bevollm\X\E4chtigter','',IFCLABEL('ROCKWOOL International A/S \X\0AHovedgaden 584 \X\0A2640 Hedehusene D\X\E4nemark'),$);
+#322=IFCPROPERTYSINGLEVALUE('System1','',IFCLABEL('1;3'),$);
+#323=IFCPROPERTYSINGLEVALUE('Notifizierende Stelle','',IFCLABEL('MPA-NRW (0432)'),$);
+#324=IFCPROPERTYSINGLEVALUE('Aufgaben Dritter1','',IFCLABEL('0'),$);
+#325=IFCPROPERTYSINGLEVALUE('System2','',IFCLABEL('0'),$);
+#326=IFCPROPERTYSINGLEVALUE('Ausgestelltes Dokument2','',IFCLABEL('0'),$);
+#327=IFCPROPERTYSINGLEVALUE('Technische Bewertungsstelle','',IFCLABEL('0'),$);
+#328=IFCPROPERTYSINGLEVALUE('Referenznummer des Europ\X\E4ischen Bewertungsdokuments','',IFCLABEL('0'),$);
+#329=IFCPROPERTYSINGLEVALUE('Referenznummer der Europ\X\E4ischen Technischen Bewertung','',IFCLABEL('0'),$);
+#330=IFCPROPERTYSINGLEVALUE('Aufgaben Dritter3','',IFCLABEL('0'),$);
+#331=IFCPROPERTYSINGLEVALUE('System3','',IFCLABEL(''),$);
+#332=IFCPROPERTYSINGLEVALUE('Ausgestelltes Dokument3','',IFCLABEL('0'),$);
+#333=IFCPROPERTYSINGLEVALUE('Wesentliches Merkmal o. hEN 1: Brandverhalte','',IFCLABEL('0'),$);
+#334=IFCPROPERTYSINGLEVALUE('Wesentliches Merkmal o. hEN 2: Feuerbest\X\E4ndigkeit','',IFCLABEL('0'),$);
+#335=IFCPROPERTYSINGLEVALUE('Wesentliches Merkmal o. hEN 3: Verhalten bei einem Brand von au\X\DFen','',IFCLABEL('0'),$);
+#336=IFCPROPERTYSINGLEVALUE('Wesentliches Merkmal o. hEN 4: Ger\X\E4uschabsorption','',IFCLABEL('0'),$);
+#337=IFCPROPERTYSINGLEVALUE('Wesentliches Merkmal o. hEN 5: Emission von gef\X\E4hrlichen Stoffen','',IFCLABEL('0'),$);
+#338=IFCPROPERTYSINGLEVALUE('Gesamtlochquerschnitt AL bezogen auf die Lagerfl\X\E4che','',IFCLABEL('Brandverhalten, Euroklassen-Merkmale'),$);
+#339=IFCCOMPLEXPROPERTY('Druckfestigkeit','Beschreibung der Druckfestigkeit','Einblasb\X\E4mmung',(#338,#340,#341,#342));
+#340=IFCPROPERTYSINGLEVALUE('Mittlere Druckfestigkeit','',IFCLABEL('Wasserdurchl\X\E4ssigkeit'),$);
+#341=IFCPROPERTYSINGLEVALUE('Normierte Druckfestigkeit','',IFCLABEL('Freisetzung gef\X\E4hrlicher Stoffe in Innenr\X\E4umen'),$);
+#342=IFCPROPERTYSINGLEVALUE('Charakteristische Druckfestigkeit','',IFCLABEL('W\X\E4rmedurchlasswiderstand (W\X\E4rmeleitf\X\E4higkeit \X2\03BB\X0\D; D\X\E4mmdicke)'),$);
+#343=IFCPROPERTYSINGLEVALUE('Wesentliches Merkmal 2','',IFCLABEL('Wasserdampfdurchl\X\E4ssigkeit '),$);
+#344=IFCPROPERTYSINGLEVALUE('Wesentliches Merkmal 3','',IFCLABEL('Dauerglimmen'),$);
+#345=IFCPROPERTYSINGLEVALUE('Wesentliches Merkmal 4','',IFCLABEL('Dauerhaftigkeit des Brandverhaltens in Bezug auf Alterung/Qualit\X\E4tsverlust'),$);
+#346=IFCPROPERTYSINGLEVALUE('Wesentliches Merkmal 5','',IFCLABEL('Dauerhaftigkeit des W\X\E4rmedurchlasswiderstands in Bezug auf Alterung/Qualit\X\E4tsverlust (W\X\E4rmedurchlasswiderstand RD;W\X\E4rmeleitf\X\E4higkeit  \X2\03BB\X0\D; Setzma\X\DF)'),$);
+#347=IFCPROPERTYSINGLEVALUE('Wesentliches Merkmal 6','',IFCLABEL('0'),$);
+#348=IFCPROPERTYSINGLEVALUE('Wesentliches Merkmal 7','',IFCLABEL('0'),$);
+#349=IFCPROPERTYSINGLEVALUE('Wesentliches Merkmal 8','',IFCLABEL('0'),$);
+#350=IFCPROPERTYSINGLEVALUE('Wesentliches Merkmal 9','',IFCLABEL('A1'),$);
+#351=IFCPROPERTYSINGLEVALUE('Wesentliches Merkmal 10','',IFCLABEL('WS'),$);
+#352=IFCPROPERTYSINGLEVALUE('Wesentliches Merkmal 11','',IFCLABEL('NPD'),$);
+#353=IFCPROPERTYSINGLEVALUE('Leistung zu 9.101','',IFCLABEL('\X2\03BB\X0\D 0,037; siehe Tab. 2'),$);
+#354=IFCPROPERTYSINGLEVALUE('Leistung zu 9.102','',IFCLABEL('NPD'),$);
+#355=IFCPROPERTYSINGLEVALUE('Leistung zu 9.103','',IFCLABEL('nicht glimmend'),$);
+#356=IFCPROPERTYSINGLEVALUE('Leistung zu 9.104','',IFCLABEL('-'),$);
+#357=IFCPROPERTYSINGLEVALUE('Leistung zu 9.105','',IFCLABEL('siehe Tab.2; \X2\03BB\X0\D 0,037; S1'),$);
+#358=IFCPROPERTYSINGLEVALUE('Leistung zu 9.106','',IFCLABEL('0'),$);
+#359=IFCPROPERTYSINGLEVALUE('Leistung zu 9.107','',IFCLABEL('0'),$);
+#360=IFCPROPERTYSINGLEVALUE('Leistung zu 9.108','',IFCLABEL('0'),$);
+#361=IFCPROPERTYSINGLEVALUE('Leistung zu 9.109','',IFCLABEL('0'),$);
+#362=IFCPROPERTYSINGLEVALUE('Leistung zu 9.110','',IFCLABEL('0'),$);
+#363=IFCPROPERTYSINGLEVALUE('Leistung zu 9.111','',IFCLABEL(''),$);
+#364=IFCPROPERTYSINGLEVALUE('Harmonisierte technische Spezifikation','',IFCLABEL('EN 14064-1:2010'),$);
+#365=IFCPROPERTYSINGLEVALUE('Name, Funktion','',IFCLABEL('Volker Christmann,Gesch\X\E4ftsf\X\FChrer (Vors.); Rob Meevis,Gesch\X\E4ftsf\X\FChrer'),$);
+#366=IFCPROPERTYSINGLEVALUE('Ort und Datum','',IFCLABEL('Gladbeck, 01.04.2017'),$);
+#367=IFCPROPERTYSINGLEVALUE('Unterschrift','',IFCLABEL(''),$);
+#368=IFCPROPERTYSINGLEVALUE('Dokumentenreferenzierung/ProductDataSheet','',IFCLABEL('fillrock einblasdaemmung DE0755041701_deutsch.pdf'),$);
+ENDSEC;
+END-ISO-10303-21;

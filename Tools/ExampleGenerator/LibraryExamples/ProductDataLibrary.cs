@@ -298,7 +298,6 @@ namespace ExampleGenerator.LibraryExamples
 
                             ifcComplexPropertyTemplate.HasPropertyTemplates.Add(ifcSimplePropertyTemplate);                           
                         }
-
                     }
 
                     ifcProductDataLibraryDeclarations.Add(ifcPropertySetTemplate);
@@ -319,7 +318,7 @@ namespace ExampleGenerator.LibraryExamples
                     ifcTypeProduct.Description = "Description of " + ifcTypeProduct.Name;
                     ifcTypeProduct.ApplicableOccurrence = "IfcLightFixture";
 
-                    //Create the property sets, and relate them to the templates
+                    //Create the property sets, and relate them to their templates
                     foreach (IfcPropertySetTemplate ifcPropertySetTemplate in model.Instances.OfType<IfcPropertySetTemplate>().ToList())
                     { 
                         IfcPropertySet ifcPropertySet = model.Instances.New<IfcPropertySet>(pset =>
@@ -347,26 +346,28 @@ namespace ExampleGenerator.LibraryExamples
                     }
 
                     //loop through the properties of the product, based on the data template
-                    foreach (DataRow property in dtTemplates.Rows)
+                    foreach (DataRow propertyTemplate in dtTemplates.Rows)
                     {
-                        //Identify the correct IfcPropertySet for this property
+
+                        //Load the correct IfcPropertySet for this property, that was created above
                         IfcPropertySet ifcPropertySet = (IfcPropertySet)ifcTypeProduct.HasPropertySets
-                                                                       .Where(x => x.Name == property["DataTemplate"].ToString())
+                                                                       .Where(x => x.Name == propertyTemplate["DataTemplate"].ToString())
                                                                        .FirstOrDefault();
 
-                        switch (property["PrimaryMeasureType"].ToString())
+                        //Check, which measure type the property is based on
+                        switch (propertyTemplate["PrimaryMeasureType"].ToString())
                         {
                             case "IfcGloballyUniqueId":
                                 //Insert the unique number for the product type
-                                ifcTypeProduct.GlobalId = GetGuid(product[property["SystemName"].ToString()].ToString());                             
+                                ifcTypeProduct.GlobalId = GetGuid(product[propertyTemplate["SystemName"].ToString()].ToString());
                                 break;
 
                             case "IfcDocumentInformation":
                                 //Insert the product information that are in documents
-                                string folderName = property["SystemName"].ToString();
-                                string docName = product[property["SystemName"].ToString()].ToString();
+                                string folderName = propertyTemplate["SystemName"].ToString();
+                                string docName = product[propertyTemplate["SystemName"].ToString()].ToString();
                                 if (docName.Length > 0)
-                                { 
+                                {
                                     string fileLocation = $"{folderName}/{docName}";
 
                                     IfcDocumentInformation ifcDocumentInformation;
@@ -427,11 +428,11 @@ namespace ExampleGenerator.LibraryExamples
 
                             case "IfcClassificationReference":
 
-                                switch (property["SystemName"].ToString())
+                                switch (propertyTemplate["SystemName"].ToString())
                                 {
                                     case "Omniclass":
                                         var classificationReference = model.Instances.OfType<IfcClassificationReference>()
-                                                                                .Where(x => x.Identification == product[property["SystemName"].ToString()].ToString()).FirstOrDefault();
+                                                                                .Where(x => x.Identification == product[propertyTemplate["SystemName"].ToString()].ToString()).FirstOrDefault();
 
                                         ifcRelAssociatesClassificationOmniClass.RelatedObjects.Add(ifcTypeProduct);
                                         break;
@@ -439,36 +440,69 @@ namespace ExampleGenerator.LibraryExamples
 
                                         ifcRelAssociatesClassificationUniClass.RelatedObjects.Add(ifcTypeProduct);
                                         break;
-                                }                                                                
-                                    
+                                }
+
                                 break;
 
                             default:
-                                //Insert the product information into the property set
-                                ifcPropertySet.HasProperties.AddRange(new[]
-                                {
-                                    model.Instances.New<IfcPropertySingleValue>(p =>
+
+                                IfcPropertySingleValue ifcPropertySingleValue
+                                    = model.Instances.New<IfcPropertySingleValue>(p =>
                                     {
-                                        string propertyName = property["SystemName"].ToString();
+                                        string propertyName = propertyTemplate["SystemName"].ToString();
                                         var dataValue = product[propertyName];
 
                                         p.Name = propertyName;
                                         p.Description = "";
 
-                                        string primaryMeasureType = property["PrimaryMeasureType"].ToString();
-                                        if (primaryMeasureType==typeof(IfcLengthMeasure).Name)
+                                        string primaryMeasureType = propertyTemplate["PrimaryMeasureType"].ToString();
+                                        if (primaryMeasureType == typeof(IfcLengthMeasure).Name)
                                             p.NominalValue = new IfcMassMeasure(Double.Parse(dataValue.ToString()));
-                                        else if (primaryMeasureType==typeof(IfcMassMeasure).Name)
+                                        else if (primaryMeasureType == typeof(IfcMassMeasure).Name)
                                             p.NominalValue = new IfcMassMeasure(Double.Parse(dataValue.ToString()));
-                                        else if (primaryMeasureType==typeof(IfcPlaneAngleMeasure).Name)
+                                        else if (primaryMeasureType == typeof(IfcPlaneAngleMeasure).Name)
                                             p.NominalValue = new IfcPlaneAngleMeasure(Double.Parse(dataValue.ToString()));
                                         else
                                             p.NominalValue = new IfcLabel(dataValue.ToString());
-                                    })
-                                });
-                                 
+                                    });
+
+
+                                // Check, if the template of this property is part of a complex property
+                                if (propertyTemplate["ComplexGroupName"].ToString().Length > 0)
+                                {
+                                    string complexPropertyName = propertyTemplate["ComplexGroupName"].ToString();
+                                    string complexPropertyDescription = propertyTemplate["ComplexGroupDescription"].ToString();
+                                    string complexPropertyGlobalId = GetGuid(propertyTemplate["ComplexGroupGuid"].ToString());
+                                   
+                                    IfcComplexProperty ifcComplexProperty = model.Instances
+                                                                        .OfType<IfcComplexProperty>()
+                                                                        .Where(n => n.Name == complexPropertyName)
+                                                                        .Where(u=> u.UsageName == ifcTypeProduct.Name.ToString())
+                                                                        .FirstOrDefault();
+
+                                    if (ifcComplexProperty == null)
+                                    {                                    
+                                        ifcComplexProperty = model.Instances.New<IfcComplexProperty>(p =>
+                                            {
+                                                p.Name = complexPropertyName;
+                                                p.Description = complexPropertyDescription;
+                                                p.UsageName = ifcTypeProduct.Name.ToString();
+                                            });
+                                        ifcPropertySet.HasProperties.Add(ifcComplexProperty);
+                                    }
+
+                                    //Insert the product information into the complex property and then into the property set
+                                    ifcComplexProperty.HasProperties.Add(ifcPropertySingleValue);
+                                    
+                                }
+                                else
+                                { 
+                                    //Insert the product information directly into the property set
+                                    ifcPropertySet.HasProperties.Add(ifcPropertySingleValue);
+                                }
+
                                 break;
-                        }                                             
+                        }                                     
                     };
 
                     ifcProductDataLibraryDeclarations.Add(ifcTypeProduct);
